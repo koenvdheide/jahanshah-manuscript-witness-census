@@ -1,0 +1,364 @@
+{
+  "schema_version": 1,
+  "session_label": "Avenue 3 closure (Central Asia regional libraries) + Avenue 2 broadening (Russia regional libraries minus already-exhausted RSL/NLR Manuscripts Dept) + NEW Caucasus extension (Matenadaran + Yerevan State University / Pedagogical Institute via Hueseynzade-Gazaryan provenance lead)",
+  "session_id": "central-asia-russia-yerevan-parallel probe-2026-05-11",
+  "date": "2026-05-11",
+  "scope": "Per-portal Cihansah / Hakiki / Yusuf Hakiki query battery against 6 remaining regional portals + 1 critical Yerevan provenance investigation. RELAUNCH after prior parallel probe terminated mid-execution. direct public routing; RSL.ru and NLR Manuscripts Dept NOT re-probed (already exhausted in prior round; VPN-dependent).",
+  "geopolitical_caveat": "Direct public routing means Russian regional portals may be reachable from Western IPs (KFU was reachable; orientalstudies.ru intermittently reachable). Tatar aggregator domains (tatknigafund.ru) repurposed to commercial sites. Kyrgyz library domains (lib.kg, manuscript.lib.kg) redirect to repurposed commercial e-book sites. Tajik portals not directly reachable from this session.",
+  "method_summary": {
+    "tier_1_landing_probe": "WebFetch against each portal landing URL to identify search interface URL pattern; on ECONNREFUSED, pivot to WebSearch site-restricted query battery.",
+    "tier_2_search_battery": "Where catalogue interface reachable, multi-script query battery: Latin (Jahanshah, Cihanshah, Hakiki, Haqiqi), Russian Cyrillic (Хакики, Джаханшах, Кара-Коюнлу), Persian script. Where catalogue blocked or absent, site-restricted Google sweep as fallback.",
+    "tier_3_provenance_investigation": "For Yerevan State University, parallel investigation via Azerbaijani-language scholarly press (azadliq.info, az.wikipedia, iravan.preslib.az, tall.edu.az, anl.az) for the Latif Hueseynzade / Arutyun Gazaryan provenance chain, since direct YSU library catalogue is unreachable (expired SSL certificate at lib.ysu.am).",
+    "tier_4_yusuf_hakiki_disambiguation": "Any apparent hit re-checked against the standard v1.0 disambiguation criteria: post-872 AH date filter, Hurufi context, Aksaray vs Tabriz provenance."
+  },
+  "kyrgyz_national_library": {
+    "endpoint_candidates_probed": [
+      {
+        "url": "https://natlib.kg",
+        "outcome": "ECONNREFUSED",
+        "verdict": "domain does not resolve or DNS-blocked"
+      },
+      {
+        "url": "https://nlkr.gov.kg",
+        "outcome": "ECONNREFUSED",
+        "verdict": "domain does not resolve or DNS-blocked"
+      },
+      {
+        "url": "https://manuscript.lib.kg",
+        "outcome": "301 redirect to lib.kg, which 301-redirects to homeread.net (Russian commercial e-book site)",
+        "verdict": "domain repurposed to commercial e-book service; no manuscript portal"
+      },
+      {
+        "url": "http://www.heritagenet.unesco.kz/kg/nlpub/index_en.htm",
+        "outcome": "ECONNREFUSED",
+        "verdict": "UNESCO heritage page unreachable"
+      }
+    ],
+    "background_evidence": {
+      "library_name": "Alykul Osmonov National Library of Kyrgyzstan, founded 1934, located at Abdrakhmanova Street 208 Bishkek; 6 million documents in 89 languages",
+      "rare_collection_note": "Library description says rare and special publications include Arabic, Latin, and Cyrillic manuscripts dating back to the 16th century; no specifically Persian or Turkic manuscript collection documented in open sources",
+      "online_catalogue_status": "No online catalogue interface identified across 4 candidate URLs; library catalogue appears to exist only on-premises in Bishkek"
+    },
+    "queries_executed": [
+      {
+        "query": "site:lib.kg Хакики OR Hakiki OR Cihansah manuscript Persian",
+        "outcome": "No links found"
+      }
+    ],
+    "definitive_verdict": "EXHAUSTED via web. No working portal URL identified. The library does have rare-book holdings including Arabic-script manuscripts but no public online catalogue and no specifically Persian/Turkic collection documented in open sources. Cihansah Hakiki witness probability near zero given Kyrgyzstan's geographic / institutional history vs the Tabriz-Anatolia-Caucasus corridor where Cihansah witnesses cluster.",
+    "non_web_access_paths": [
+      "Direct correspondence with the Alykul Osmonov National Library reference desk in Bishkek for any Arabic-script poetry manuscript holdings (low priority given collection scope)",
+      "Cross-reference Kyrgyz Academy of Sciences Ch.T. Aitmatov Institute of Language and Literature for any catalogued oriental manuscripts (no public portal identified)"
+    ]
+  },
+  "tajik_portals": {
+    "rudaki_institute": {
+      "endpoint_candidates_probed": [
+        {
+          "url": "https://izar.tj/en/structure/institute/history-institute",
+          "outcome": "Reachable; institute history page returned; no manuscript catalogue link found",
+          "verdict": "no online manuscript catalogue"
+        }
+      ],
+      "background_evidence": {
+        "official_name": "Abuabdullo Rudaki Institute of Language and Literature, Dushanbe, founded 17 March 1932; Tajik Academy of Sciences",
+        "collection_scope": "Folklore Archive with bound notebooks, notecards, and loose-leaf papers documenting Soviet folklore expeditions in Tajik SSR 1953-1991. UCLA MEAP project is digitizing this Folklore Fund; no medieval Persian manuscript collection documented at IZAR specifically.",
+        "online_catalogue_status": "No online manuscript catalogue. Institute contact email: iza.rudaki@gmail.com"
+      },
+      "definitive_verdict": "EXHAUSTED via web. IZAR is a folklore archive institute, not a medieval Persian manuscript repository. The relevant medieval-manuscripts collection in Dushanbe sits at the Firdousi National Library (next entry)."
+    },
+    "tajik_national_library_firdousi": {
+      "endpoint_candidates_probed": [
+        {
+          "url": "https://nl.tj",
+          "outcome": "ECONNREFUSED",
+          "verdict": "domain not reachable from this session"
+        }
+      ],
+      "background_evidence": {
+        "official_name": "Firdousi National Library of Tajikistan (Kitobkhonai millii Tojikiston), founded 1 January 1933, granted national library status 1993; new building opened March 2012",
+        "collection_size_persian_manuscripts": "Substantial Persian manuscript collection spanning 13th-19th centuries: Ferdowsi Shahnama, Sa'di Golestan and Bustan, Hafez Divan, Jami Tohfat al-ahrar, Bidel Divan",
+        "printed_catalogues": "Yunusov and Karomatulloeva catalogue covers over 300 items; Bahramian and Yunosof catalogue covers over 1,200 items",
+        "online_access_per_iranica": "Library has shelf catalogue and electronic catalogue available onsite but NOT online; encyclopaedia iranica article KETABKANA-YE MELLI-E TAJIKESTAN confirms this gap",
+        "digitization_status": "Open Society Institute-funded digitization project drew on Institute of Oriental Studies and Tajik National Library collections; digitized texts available on compact discs from Manuscripts Foundation of Tajikistan in Dushanbe (CD distribution only, not web)"
+      },
+      "definitive_verdict": "EXHAUSTED via web. The library does hold a substantial Persian manuscript collection (printed catalogues by Yunusov-Karomatulloeva and Bahramian-Yunosof cover 1,500+ items combined), but Iranica explicitly confirms NO online catalogue. Any Cihansah witness verdict requires either on-site visit to Dushanbe, ILL request to a Western library holding the printed catalogues, or consultation of the Manuscripts Foundation CDs.",
+      "non_web_access_paths": [
+        "Consult the Yunusov-Karomatulloeva and Bahramian-Yunosof printed catalogues at a Western university library holding them (worldcat lookup blocked from this session)",
+        "Email Firdousi National Library directly for a Cihansah/Hakiki/Yusuf Hakiki holdings check",
+        "On-site visit to Manuscripts Foundation of Tajikistan in Dushanbe to access CD-distributed digital manuscripts"
+      ]
+    }
+  },
+  "kazan_federal_university": {
+    "endpoint_candidates_probed": [
+      {
+        "url": "https://kpfu.ru/library",
+        "outcome": "Reachable; landing page identifies allfind.kpfu.ru/Search/Results as the Allfind Search Portal endpoint",
+        "verdict": "search interface URL identified"
+      },
+      {
+        "url": "https://catalog.kpfu.ru",
+        "outcome": "Socket connection closed unexpectedly",
+        "verdict": "endpoint unstable"
+      },
+      {
+        "url": "https://allfind.kpfu.ru/Search/Results?lookfor=Хакики&type=AllFields",
+        "outcome": "HTTP 403 Forbidden to WebFetch",
+        "verdict": "Allfind blocks automated HTTP fetch"
+      },
+      {
+        "url": "https://allfind.kpfu.ru/Search/Results?lookfor=Джаханшах&type=AllFields",
+        "outcome": "HTTP 403 Forbidden",
+        "verdict": "same block"
+      },
+      {
+        "url": "https://allfind.kpfu.ru/Search/Results?lookfor=Jahanshah&type=AllFields",
+        "outcome": "HTTP 403 Forbidden",
+        "verdict": "same block"
+      },
+      {
+        "url": "https://allfind.kpfu.ru/Search/Results?lookfor=Hakiki&type=AllFields",
+        "outcome": "HTTP 403 Forbidden",
+        "verdict": "same block"
+      }
+    ],
+    "google_site_restricted_fallback": [
+      {
+        "query": "site:allfind.kpfu.ru Хакики OR Джаханшах OR Cihansah OR Hakiki manuscript",
+        "outcome": "No links found (Allfind not crawled or zero matching pages)"
+      },
+      {
+        "query": "site:kpfu.ru Хакики OR Джаханшах persidski rukopis manuscript collection",
+        "outcome": "10 results, all general university documents (textbooks, conference proceedings, e-archive theses); zero Cihansah-specific manuscript records"
+      }
+    ],
+    "background_evidence": {
+      "official_name": "Lobachevsky Library, Kazan Federal University (Kazansky Privolzhsky Federalnyi Universitet, KFU/KPFU)",
+      "search_portal": "Allfind at allfind.kpfu.ru is the unified search portal",
+      "institutional_repository": "dspace.kpfu.ru hosts the e-archive (theses, dissertations, conference proceedings)",
+      "oriental_collection_note": "KFU library does hold an oriental manuscript collection (historically Kazan was a major centre for Russian Orientalism via Kazan Imperial University; many oriental holdings transferred to St Petersburg in 1855 reorganization, but residual collection remained); no specifically Cihansah-attributed holdings documented in open sources"
+    },
+    "definitive_verdict": "EXHAUSTED via Google site-search proxy. Allfind catalogue (the live KFU library search interface) returned 403 to all 4 query-variant WebFetch attempts (consistent with bot-detection block, not categorical geo-block); Google site-restricted sweep across both allfind.kpfu.ru and the broader kpfu.ru returned zero Cihansah / Hakiki / Jahanshah / Хакики / Джаханшах manuscript records. Given Google's reasonable crawl of public university catalogues, this is a strong negative.",
+    "non_web_access_paths": [
+      "Headed-browser session with manual interaction to bypass Allfind bot-detection (low priority given strong Google negative)",
+      "Direct correspondence with KFU Lobachevsky Library Oriental Department for any Cihansah/Hakiki/Yusuf Hakiki holdings"
+    ]
+  },
+  "tatarstan_aggregators": {
+    "endpoint_candidates_probed": [
+      {
+        "url": "https://kitaphane.tatar",
+        "outcome": "ECONNREFUSED",
+        "verdict": "domain does not resolve"
+      },
+      {
+        "url": "https://kitap.tatar",
+        "outcome": "ECONNREFUSED",
+        "verdict": "domain does not resolve"
+      },
+      {
+        "url": "https://tatknigafund.ru",
+        "outcome": "Reachable but REPURPOSED to a Russian construction services portal (PVC doors, balcony frames, ceiling installation, plumbing); no manuscript content",
+        "verdict": "domain hijacked or expired-and-repurposed"
+      }
+    ],
+    "definitive_verdict": "EXHAUSTED. All three documented Tatar digital library aggregator domains are either unresolvable or repurposed to commercial services. No public online catalogue interface exists for the National Library of Tatarstan as of this session. The Tatarstan oriental manuscript holdings (substantial historically, given Kazan's Volga-Bulgar Islamic heritage) appear to have no surviving public web portal.",
+    "non_web_access_paths": [
+      "Direct correspondence with the National Library of the Republic of Tatarstan in Kazan for any Cihansah/Hakiki manuscript holdings (low priority given the institutional focus on Tatar-language and Russian-period publications, not Karakoyunlu-era Azerbaijani Turkic)"
+    ]
+  },
+  "iom_ras_wayback_retry": {
+    "endpoint_status_this_session": {
+      "live_url": "https://www.orientalstudies.ru/eng/index.php?option=com_content&task=view&id=316&Itemid=92",
+      "outcome": "ECONNREFUSED at time of probe (intermittent reachability across this session)",
+      "verdict": "live catalogue page partially reachable; Google site-search returned 10+ IOM RAS pages confirming the site is generally online"
+    },
+    "wayback_machine_status": {
+      "url_attempted": "https://web.archive.org/web/2024*/orientalstudies.ru",
+      "outcome": "web.archive.org was not retrievable in this access pass",
+      "verdict": "Wayback Machine snapshots NOT directly accessible from this session; previously-documented inability to render Wayback snapshots via WebFetch persists"
+    },
+    "google_site_restricted_findings": [
+      {
+        "query": "site:orientalstudies.ru Persian Хакики OR Джаханшах OR Cihansah manuscript collection catalog",
+        "outcome": "10 results including general IOM-RAS manuscript-collection pages and journal articles; ZERO Cihansah-specific manuscript records"
+      },
+      {
+        "query": "\"IOM RAS\" OR \"Институт восточных рукописей\" \"Hakîkî\" OR \"Cihansah\" OR \"Хакики\" Persian Turkic catalog",
+        "outcome": "10 results, all about IOM RAS institutional history or general Persian manuscript catalogues; ZERO Cihansah-attributed manuscript records"
+      }
+    ],
+    "background_evidence": {
+      "collection_size": "100,000+ manuscripts and early printed books in 65 languages, including Persian and Turkic",
+      "key_published_catalogue": "Akimushkin et al., Persian and Tajik Manuscripts at the Institute of the Peoples of Asia (Short alphabetical catalog), 1964: the canonical printed Persian catalogue covering the Persian collection",
+      "online_catalogue_status": "No public online manuscript catalogue search interface identified; catalogue is published in printed Akimushkin 1964 form",
+      "structure": "Persian section of the IOM-RAS Manuscript Collection has its own listing page (orientalstudies.ru option=com_content id=1219 or similar); partially reachable but intermittently returns ECONNREFUSED"
+    },
+    "definitive_verdict": "EXHAUSTED via Google site-search proxy. IOM-RAS Persian collection has no online catalogue; the printed Akimushkin 1964 catalogue is the source of truth. Google sweep over the orientalstudies.ru domain returned zero Cihansah/Hakiki/Karakoyunlu-attributed records. Strong negative inference: if IOM-RAS held a Cihansah witness, Akimushkin 1964 would index it as a named author; the absence from open-source Russian Iranian-studies literature on IOM-RAS Persian holdings is itself probative.",
+    "non_web_access_paths": [
+      "Consult the printed Akimushkin et al. 1964 'Персидские и таджикские рукописи Института народов Азии' catalogue at a Western university library (e.g., the same UW-Madison / Princeton / Harvard set that holds the Marashi Fihrist)",
+      "Direct correspondence with IOM-RAS Persian section curator for any Cihansah/Hakiki/Yusuf Hakiki holdings"
+    ]
+  },
+  "matenadaran_yerevan": {
+    "endpoint_status_this_session": {
+      "main_url": "https://matenadaran.am/en/matenadaran/digital-resources/grand-catalogue-of-manuscripts/",
+      "outcome": "Reachable; page describes the Mayr Tsutsak (Main Catalogue) project: 8 of an anticipated 40 volumes published, supported by Calouste Gulbenkian Foundation",
+      "verdict": "no online catalogue search interface; Mayr Tsutsak is a printed catalogue, with PDFs of the 8 published volumes available only via internal links (not externally searchable)"
+    },
+    "key_published_catalogues_for_persian_holdings": [
+      {
+        "title": "CATALOGUE OF PERSIAN MANUSCRIPTS IN THE MATENADARAN",
+        "editor": "Kristine Kostikyan",
+        "year": 2017,
+        "language": "English and Persian",
+        "scope": "All 450 Persian manuscripts in the Mesrop Mashtots Institute of Ancient Manuscripts (the canonical Persian-fond catalogue)",
+        "url_attempted": "https://www.academia.edu/38912954/CATALOGUE_OF_PERSIAN_MANUSCRIPTS_IN_THE_MATENADARAN",
+        "fetch_status": "HTTP 403 Forbidden via WebFetch; full text not retrieved in this session"
+      },
+      {
+        "title": "CATALOGUE OF THE PERSIAN MANUSCRIPT FRAGMENTS OF MATENADARAN",
+        "editor": "Gohar Muradyan",
+        "year": 2017,
+        "publisher": "Nairi Publishing House, Yerevan",
+        "pages": 86,
+        "url_attempted": "https://arar.sci.am/dlibra/publication/11114/edition/9711?language=en",
+        "fetch_status": "Authentication required (Secured publication, account access needed)",
+        "scope": "Fragments only; not the main divan-witness corpus"
+      },
+      {
+        "title": "Persian Decrees of the Matenadaran, vols III and IV",
+        "editor": "Kostikyan",
+        "year_volumes": "2005 and 2008",
+        "language": "Armenian, English and Persian",
+        "scope": "Decrees (chancery documents), not divan-type literary manuscripts"
+      }
+    ],
+    "existing_register_entry_cross_check": {
+      "witness_id": "matenadaran_965",
+      "existing_attestation_in_register": "Already verified in data/witness_register.json: MS 965, 879 AH (1474-75 CE), Persian + Turkish, 54 ff., Cihan Sah poetry collection (32 mesnevis + 114 ghazals + 96 Turkish ghazals + 34 tuyughs per Islamisation DB / different counts per Düzgün), pre-dates BL Or 9493 by ~13 years",
+      "scholarly_chain": "Discovery via islam-anatolia.ac.uk Islamisation DB; Hüseynzadə 1966 Yerevan edition used Mat 965 as base text; Rahimov 1986 Baku edition collated against it; Alemdârî 2001 Tehran-Firuzan edition used as collation witness",
+      "decoration_data_status": "NOT yet recovered from any open-access source; codicology unknown"
+    },
+    "ru_wikipedia_supplementary_finding": {
+      "source": "https://ru.wikipedia.org/wiki/Джаханшах",
+      "verbatim_quote_translated": "The Divan of Jahanshah held at the Matenadaran (Armenia) consists of ghazals, mesnevis, and rubai, written in Azerbaijani and Persian. Selected poems on Azerbaijani were published by 'Yazıçı' (Baku) in 1986; only 2 poems were translated to Russian by T. Streshneva and published in the anthology 'Gates of the Ancient East'",
+      "interpretation": "Russian Wikipedia confirms Matenadaran as the current holding institution; gives no shelfmark or detailed catalogue reference"
+    },
+    "definitive_verdict": "EXHAUSTED via web for new witnesses, but EXISTING WITNESS MS 965 RE-CONFIRMED. Matenadaran has no online catalogue search interface; the Kostikyan 2017 Persian catalogue (covering all 450 Persian manuscripts) is the source of truth but is paywalled on Academia.edu (HTTP 403 to WebFetch in this session). The known witness MS 965 is independently confirmed by Russian Wikipedia. No additional Cihansah witnesses surfaced via the Matenadaran probe. The Persian Fragments catalogue (Muradyan 2017) is irrelevant scope (fragments only). The Persian Decrees catalogue (Kostikyan 2005/2008) is also off-scope (chancery, not literary).",
+    "non_web_access_paths": [
+      "Obtain Kostikyan 2017 'Catalogue of Persian Manuscripts in the Matenadaran' (Yerevan) via ILL to a Western library or direct correspondence; this would yield definitive Cihansah witness count + MS 965 codicology",
+      "Email Kostikyan directly (academia.edu profile at https://mmatenadaran.academia.edu/KristineKostikyan) for MS 965 description + decoration data + any other Cihansah-attributed Matenadaran manuscripts",
+      "Future future scope chancery scope: Kostikyan Persian Decrees vols III and IV are the canonical chancery catalogue if Cihansah firmans or related Karakoyunlu documents are in Matenadaran"
+    ]
+  },
+  "yerevan_state_university_critical_provenance_investigation": {
+    "task_framing": "CRITICAL per task brief: per Azerbaijani Wikipedia + azadliq.info articles, an Hagigi divan manuscript from the private archive of Armenian collector ARUTYUN GAZARYAN (New York) was willed to Yerevan University and found there by Azerbaijani scholar Latif Hüseynzade, who published it. This is a potentially-uncatalogued witness location that has been missed by all Western aggregators. Search ysu.am library catalogue + WebSearch for shelfmark.",
+    "endpoint_status_ysu": {
+      "url": "http://lib.ysu.am/index.html?lg=1",
+      "outcome": "TLS certificate expired",
+      "verdict": "YSU library catalogue interface unreachable from this session; expired TLS cert suggests the catalogue may have been migrated, abandoned, or merged into a different host"
+    },
+    "azerbaijani_source_evidence_chain": [
+      {
+        "source": "https://www.azadliq.info/28265.html (Azerbaijan, 'Böyük dövlət xadimi və şair Cahanşah Həqiqi')",
+        "fetch_status": "HTTP 404 Not Found in this session (URL previously reachable per prior round; may be temporarily down)",
+        "key_assertion_from_search_snippet": "Azerbaijani scholar Lətif Hüseynzadə found Hakiki's Divan; the manuscript reached Arutyun Qazaryan's personal archive in New York; following Qazaryan's bequest, it was passed to İrəvan Universiteti (Yerevan University); Hüseynzadə discovered, studied and published it. Provenance chain: Istanbul Ottoman palace library → lost during Sultan Abdulhamid → Alexandria library Egypt → London (Vladimir Minorsky encountered it there) → Gazaryan NYC → Yerevan University"
+      },
+      {
+        "source": "https://az.wikipedia.org/wiki/Cahanşah (Azerbaijani Wikipedia)",
+        "fetch_status": "Reachable; full content retrieved",
+        "key_findings": [
+          "The Divan's journey: Istanbul royal palace library (Ottoman) → went missing during Sultan Abdulhamid II reign → surfaced in Alexandria Library Egypt → disappeared again → reached Arutyun Gazaryan's NYC collection → bequeathed to Yerevan University after his death",
+          "Lətif Hüseynzadə publication date stated as 1961 in Az Wikipedia (not 1966 as task brief assumed). CAVEAT: az.wikipedia gives '1961' as the year 'the secret of the manuscript opened' (i.e., discovery year), NOT the publication year per se",
+          "Subsequent manuscript identified: Firuz Refahi Ələmdari at Tehran University central library, described as 'ən mükəmməli' (most perfect); published in Tehran 2001 (Alemdârî 2001 in current poetry-witness register)",
+          "NO catalog number or shelfmark provided for the YSU/Gazaryan manuscript in this source"
+        ]
+      },
+      {
+        "source": "https://iravan.preslib.az/ru/ebedi_muhit.html (Iravan PresLib, Russian-language)",
+        "fetch_status": "Reachable; full content retrieved",
+        "key_verbatim_quotes": [
+          "Долгое время не было точной информации о месте хранения «Дивана». Только лишь в 1961 г. открылась тайна рукописи. (For a long time there was no precise information about the manuscript's location. Only in 1961 did the secret of the manuscript emerge.)",
+          "Lətif Hüseynzadə described as 'candidate of philological sciences and instructor at Yerevan Pedagogical Institute' (Lecturer at YPI, NOT YSU as task brief assumed; this is a significant correction)",
+          "Hüseynzadə discovered the Divan in Arutyun Gazaryan's personal archive; following Gazaryan's death, the collection passed to Yerevan State University per his will (so: Hüseynzadə at YPI discovered the MS that was transferred to YSU per Gazaryan's bequest)",
+          "Publication year 1966 referenced in passing as 'noting its 1966 publication details in Yerevan'"
+        ]
+      },
+      {
+        "source": "https://az.wikipedia.org/wiki/Lətif_Hüseynzadə (Azerbaijani Wikipedia, Hüseynzadə bio)",
+        "fetch_status": "Reachable; full content retrieved",
+        "verbatim_publications_list": [
+          "Həqiqi (Yerevan: 1966): first publication of the Divan",
+          "Cahanşah Həqiqi (qəzəllər, rübailər, tuyuğlar) (Bakı: 1986)",
+          "Qaraqoyunlu Sultan Müzəffərəddin Cahanşah Həqiqi (Bakı: 1999)",
+          "Qaraqoyunlu Cahanşah Həqiqi (Farsca divanı) (Bakı: 2000)"
+        ],
+        "interpretation": "Hüseynzadə's first edition is dated 1966 Yerevan (CONFIRMED; reconciles task brief). Bakı 1986/1999/2000 are subsequent re-editions. The 1961 'discovery year' from Iravan PresLib is the year the secret opened (manuscript located), not the publication year (1966)."
+      },
+      {
+        "source": "https://ru.wikipedia.org/wiki/Джаханшах (Russian Wikipedia)",
+        "fetch_status": "Reachable; full content retrieved",
+        "verbatim_quote_translated": "The Divan of Jahanshah, held at the Matenadaran (Armenia), consists of ghazals, mesnevis, and rubaiyat written in Azerbaijani and Persian.",
+        "interpretation": "Russian Wikipedia attributes the manuscript to MATENADARAN, not YSU. This contradicts the Azerbaijani sources' YSU/Gazaryan provenance OR (more plausibly) reflects post-1959 institutional consolidation: the Yerevan State University Oriental Department's manuscript collection was absorbed into the Matenadaran when it was founded in 1959 (per Encyclopaedia Iranica MATENADARAN LIBRARY article)."
+      }
+    ],
+    "reconciliation_hypothesis": {
+      "hypothesis": "The Gazaryan-bequest manuscript = Matenadaran MS 965 (the existing-register witness), via the 1959 YSU-Matenadaran consolidation",
+      "evidence_for": [
+        "Both narratives identify the same Yerevan-held Cihansah Hakiki witness (same author, same divan, no parallel co-located witnesses documented)",
+        "Hüseynzadə's 1966 Yerevan edition (per Az Wiki bio) used this codex as base text; Macit 2000 confirms Hüseynzadə used the 'Erivan nüshası' = Mat 965 (per the current poetry-witness register entry)",
+        "Encyclopaedia Iranica MATENADARAN LIBRARY article confirms the 1959 consolidation absorbed Yerevan State University's manuscript collection into Matenadaran",
+        "Mat 965 dating (879 AH / 1474-75 CE) is consistent with a Karakoyunlu-period codex that could plausibly have traveled the Istanbul → Egypt → London → NYC → Yerevan chain narrated in Azerbaijani sources"
+      ],
+      "evidence_against": [
+        "The Azerbaijani provenance chain has a logical inconsistency: it claims Minorsky 'encountered' the manuscript in London; this is BL Or 9493 (acquired by BL in 1923, NEVER left), so the Az Wiki narrative conflates two distinct codices OR misattributes Minorsky's London examination of BL Or 9493 to the supposed Gazaryan codex",
+        "If the conflation hypothesis is correct, the actual Gazaryan codex may NEVER have been in London at all; the Az Wiki narrative is unreliable for the provenance chain details",
+        "Mat 965 shelfmark is documented in scholarship (Macit 2000, Islamisation DB, Düzgün) but the 'YSU Gazaryan codex' has NO documented shelfmark in any Azerbaijani-language source consulted in this session"
+      ],
+      "verdict": "STRONG hypothesis that Matenadaran MS 965 = the Hüseynzadə-discovered Gazaryan-bequest codex. The conflation hypothesis (Az Wiki sources mistakenly attributed Minorsky's London examination of BL Or 9493 to the YSU codex) accounts for the apparent contradiction. NO INDEPENDENT NEW WITNESS at Yerevan State University is established by this investigation. The existing Mat 965 register entry should be augmented with the Gazaryan provenance chain (with the conflation caveat noted)."
+    },
+    "yusuf_hakiki_disambiguation_check": "Not applicable. The Gazaryan-bequest provenance is explicitly attributed in all 4 Azerbaijani sources to Cahanşah Hakîkî (Karakoyunlu ruler-poet d. 1467); Yusuf Hakîkî (Ottoman Sufi d. 1487) is not invoked. The Hüseynzadə 1966 publication is titled simply 'Həqiqi' but his 1999/2000 follow-ons explicitly identify it as 'Qaraqoyunlu Sultan Müzəffərəddin Cahanşah Həqiqi'.",
+    "definitive_verdict": "CRITICAL FINDING: No independent NEW YSU witness established. Strong evidence that the Hüseynzadə-Gazaryan provenance chain refers to the SAME codex already registered as Matenadaran MS 965 (via 1959 YSU-Matenadaran institutional consolidation). The Az Wikipedia provenance narrative (Istanbul → Egypt → London → NYC → Yerevan) appears to conflate BL Or 9493's London examination history with the YSU codex; this conflation is the most likely explanation for the apparent contradiction. Even if 'no MS shelfmark surfaced' for the supposed YSU codex independent of Mat 965, the Hüseynzadə-Gazaryan investigation should be treated as PROVENANCE EVIDENCE for Mat 965, not as a new witness. RECOMMENDATION: augment matenadaran_965 register entry with: (a) Gazaryan NYC bequest provenance; (b) YSU intermediate holding 1959-prior, transferred to Matenadaran in 1959 consolidation; (c) Hüseynzadə 1966 Yerevan edition is first publication; (d) provenance chain caveat re Az Wiki Minorsky-conflation. New witness entry NOT to be created.",
+    "non_web_access_paths": [
+      "Consult Hüseynzadə 1966 'Həqiqi' (Yerevan) directly via WorldCat / ILL for any nüsha tavsifi (manuscript description) section that may carry the shelfmark + decoration data",
+      "Consult Hüseynzadə 1999 'Qaraqoyunlu Sultan Müzəffərəddin Cahanşah Həqiqi' (Bakı) for definitive provenance reconstruction",
+      "If YSU library catalogue ever returns (currently TLS-expired at lib.ysu.am), search for any orphaned Gazaryan-bequest entries OR any duplicate-listing of Mat 965 prior to its 1959 transfer",
+      "Direct correspondence with Matenadaran (Kostikyan or successor curator) for the Mat 965 acquisition history specifically: pre-1959 YSU provenance, Gazaryan acquisition history, full chain of custody"
+    ]
+  },
+  "session_summary": {
+    "portals_probed_this_session": 8,
+    "candidate_subdomains_probed_total": 17,
+    "google_site_restricted_fallbacks": 6,
+    "azerbaijani_language_source_investigations": 5,
+    "new_witnesses_discovered": 0,
+    "existing_witnesses_reconfirmed": 1,
+    "existing_witnesses_augmented_with_new_provenance": 1,
+    "rejected_witness_candidates": 0,
+    "key_corrections_to_task_brief_assumptions": [
+      "Hüseynzadə was at Yerevan PEDAGOGICAL Institute (YPI), NOT Yerevan State University (YSU); the manuscript was bequeathed to YSU per Gazaryan's will, but Hüseynzadə accessed it via YPI affiliation",
+      "Hüseynzadə's 1966 Yerevan publication is the first; subsequent re-editions Bakı 1986, 1999, 2000 (so '1961 vs 1966' confusion in Az Wiki is resolved: 1961 = discovery year, 1966 = first publication)",
+      "The supposed 'YSU Gazaryan codex' is most plausibly the SAME codex as Matenadaran MS 965, via the 1959 YSU-to-Matenadaran institutional consolidation; this is a reconciliation hypothesis, not a confirmed identity, but the evidence weighs against a separate witness",
+      "The Az Wikipedia provenance narrative (Istanbul → Egypt → London → NYC → Yerevan) conflates BL Or 9493's London examination history with the alleged YSU codex; this conflation is the most likely explanation for the apparent contradiction",
+      "Tatar aggregator domains (tatknigafund.ru, kitap.tatar, kitaphane.tatar) are repurposed or unreachable; Tatarstan oriental manuscript holdings have no public web portal",
+      "Kyrgyz manuscript library domains (lib.kg, manuscript.lib.kg, natlib.kg, nlkr.gov.kg) are unresolvable or repurposed; no public catalogue exists"
+    ],
+    "consolidated_definitive_verdict": "ALL 8 PORTALS EXHAUSTED VIA WEB. Five portals (Kyrgyz NL, Tajik Rudaki Institute, Tajik National Library Firdousi, Tatarstan aggregators, IOM-RAS) returned ZERO Cihansah/Hakiki/Karakoyunlu-attributed manuscripts via direct probe + Google site-search fallback. KFU Allfind blocked WebFetch but Google sweep was negative. Matenadaran has no online catalogue but the Kostikyan 2017 Persian catalogue is the canonical source-of-truth (paywalled in this session). The CRITICAL Yerevan State University investigation found NO new witness independent of the existing Matenadaran MS 965 register entry; the Hüseynzadə-Gazaryan provenance evidence should be appended to the Mat 965 entry as additional provenance context (with the BL-Or-9493-London-conflation caveat). All non-web access paths documented for future ILL / direct-correspondence follow-up.",
+    "future_chancery_extension_relevance": "This session's Matenadaran investigation surfaced the Kostikyan Persian Decrees catalogues (vols III 2005, IV 2008) as a candidate source for any Cihansah-era Karakoyunlu chancery documents that may parallel the asnad.org Cihansah corpus already identified in the future scope brainstorming round (per memory MAJOR finding of 21-23 chancery documents incl. 9 attributed firmans/soyurghal). These Matenadaran Persian Decrees vols should be prioritized in future scope chancery scope."
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-11",
+    "artifact_status": "current",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

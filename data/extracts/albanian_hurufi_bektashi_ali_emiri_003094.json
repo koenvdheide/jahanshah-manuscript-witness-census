@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "extract_id": "albanian_hurufi_bektashi_ali_emiri_003094",
+  "date": "2026-05-20",
+  "classification": "physical_witness_candidate_requires_textual_verification",
+  "register_impact": "none",
+  "priority_assessment": {
+    "relative_priority_among_2026_05_20_alevi_candidates": "co_highest_with_dogan_kaya_conk_32",
+    "reason": "The manuscript is explicitly framed as Hurufi-Bektashi and co-locates Hakiki with Hatai and Nesimi, matching the strongest co-occurrence profile of the verified Diyarbakir/Ilkhchi Alevi Hakiki witnesses. It remains unverified because no Hakiki incipit, folio, image, or item count is published."
+  },
+  "source": {
+    "title": "Abdulla Rexhepi and Zeqije Xhafce, Exploring Hurufi-Bektashi Sufism in Albanian Literature. Insights from an Old Manuscript",
+    "publication": "Caesura 11.2 (2024)",
+    "url": "https://emanuel.ro/wp-content/uploads/2024/12/03AbdulaZeqije_Caesura-11.22024.pdf",
+    "sha256": "20427F00D31B4BC0F2D338A9EEC332B8172A57B628206CC1B63215F3286EC5B1",
+    "published_pdf_evidence_notes": [
+      "Article section describing the Millet Library / Ali Emiri manuscript identification, page extent, language distribution, and old/new registration numbers.",
+      "Article author-roster passage naming Hakiki together with Nesimi and Hatai in the Turkish/Persian section."
+    ]
+  },
+  "manuscript_identification_reported_by_source": {
+    "holding_library": "Millet Library, Ali Emiri collection, Istanbul",
+    "old_registration_number": "551",
+    "new_registration_number": "003094",
+    "format_term_used_by_article": "junk, glossed as Turkish conk",
+    "extent": "135 pages",
+    "language_distribution": "90 pages Albanian; remaining pages Turkish and Persian",
+    "condition": "incomplete; article reports discontinuity at page turn",
+    "copyist_or_author_note": "article infers from writing style that author and copyist may be the same person"
+  },
+  "hakiki_evidence_reported_by_source": {
+    "evidence_type": "author roster in Turkish/Persian section, not a transcribed poem",
+    "authors_named_in_relevant_roster": [
+      "Nesimi",
+      "Yunus Emre",
+      "Muhiti Efendi",
+      "Vahdeti",
+      "Abdall Efendi",
+      "Shams-i Tabrizi",
+      "Kizil Deli Dede",
+      "Arshi",
+      "Esrefoglu",
+      "Hakiki",
+      "Hatai"
+    ],
+    "published_hakiki_incipit_or_text": false,
+    "published_hakiki_folio": false,
+    "published_hakiki_item_count": false
+  },
+  "why_it_matters": "This is an open-web Balkan Hurufi-Bektashi cenk/conk lead with Hakiki co-listed with Hatai and Nesimi in a manuscript explicitly framed as Hurufi-Bektashi. It is outside the already-known Diyarbakir, Ilkhchi/Kirklar, and Sivas/Anatolia fieldwork cluster.",
+  "limits": [
+    "The article does not publish the Hakiki poem, incipit, explicit, folio, or image.",
+    "The unqualified Hakiki author name could be Cihan Shah, Yusuf Hakiki, Agazade Mehmed Dede, a local Bektashi/Hurufi namesake, or a catalogue/author-roster simplification.",
+    "Bektashi/Hurufi Albanian transmission is adjacent to Alevi-Bektashi ritual manuscript culture, but this article does not prove current Alevi cem use.",
+    "The Millet/Ali Emiri shelfmark and catalogue record still need direct library/YEK verification."
+  ],
+  "next_verification_steps": [
+    "Resolve the modern Millet Library catalogue record for old no. 551 / new no. 003094 and capture exact collection/shelfmark fields.",
+    "Request or inspect the Turkish/Persian section pages containing Hakiki.",
+    "Record folio/page, heading, incipit, explicit/mahlas line, meter, neighboring poems, and image status.",
+    "Collate any Hakiki text against Sohrabiabad-Akin 2019, Macit/Cihan Shah, Yusuf Hakiki, Agazade Mehmed Dede, and local Bektashi/Hurufi comparanda."
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "session_label": "Patna Madrasa Sulaimania MS no. 2 acquisition and intake packet",
+  "session_id": "patna-sulaimania-ms2-acquisition-intake-2026-05-18",
+  "date": "2026-05-18",
+  "status": "ACTION_PACKET_NOT_WITNESS_EVIDENCE",
+  "scope": "Operational packet for acquiring and evaluating the Patna Madrasa Sulaimania MS no. 2 / For Tomorrow no. 126 Divan-i Haqiqi lead. This file does not promote the item to data/witness_register.json and does not change witness counts.",
+  "candidate": {
+    "lead_id": "patna_madrasa_sulaimania_ms2_divan_i_haqiqi",
+    "current_classification": "new_witness_candidate_unverified",
+    "holding_reported": "Madrasa Sulaimania / Sulaymaniyah, Patna, India, manuscript no. 2",
+    "facsimile_series": "Majma-i Zakhair-i Islami For Tomorrow / Baray-i Farda no. 126",
+    "reported_title": "Divan-i Haqiqi",
+    "reported_language_subject": "Persian / poetry",
+    "reported_extent": "126 pages, color facsimile",
+    "critical_ambiguity": "The 126-page listing is not a folio count and does not identify the author. It cannot be treated as a Cihansah witness until the catalogue entry or facsimile gives author-heading, incipit/explicit, colophon, first lines, or other identity evidence."
+  },
+  "catalogue_identifiers": {
+    "catalogue_title": "Fihrist-i nuskha-ha-yi khatti-i kitabkhana-yi Madrasa-yi Sulaimania, Patna, Hindustan",
+    "author_compiler": "Tayebeh Hajj Baqerian",
+    "publisher": "Majma-i Zakhair-i Islami",
+    "publication_year": 2023,
+    "series": "Muarrifi-i Mirath-i makhtut",
+    "series_volume": 128,
+    "extent": "364 pages",
+    "isbn_13": "9786223041525",
+    "isbn_10": "6223041527",
+    "oclc": "1402253747"
+  },
+  "source_trail": [
+    {
+      "source": "Majma-i Zakhair-i Islami Blogfa facsimile-series list",
+      "url": "https://zakhair.blogfa.com/post/34",
+      "role": "load-bearing public lead for For Tomorrow no. 126 and Patna MS no. 2",
+      "observed": "For Tomorrow no. 126 lists Divan-i Haqiqi, manuscript no. 2, Madrasa Sulaimania/Sulaymaniyah, Patna, India; Persian / poetry; 126 pages; color.",
+      "stability": "Directly reachable on 2026-05-18, but automated Wayback availability/save attempts from this environment returned HTTP 429 or timed out."
+    },
+    {
+      "source": "Boroujerdi Library / Telegram mirror",
+      "url": "https://telegram.me/s/Boroujerdilib?before=4805",
+      "role": "catalogue publication and acquisition route",
+      "observed": "Notice reports launch of the Patna Madrasa Sulaimania manuscript catalogue on 7 Ordibehesht 1402 / 27 April 2023, prepared by Tayebeh Hajj Baqerian and published by Majma-i Zakhair-i Islami with Oriental Company."
+    },
+    {
+      "source": "Google Books",
+      "url": "https://books.google.com/books?id=hlJR0AEACAAJ",
+      "role": "catalogue identity metadata",
+      "observed": "Confirms title, compiler, publisher, 2023 date, 364-page extent, ISBNs, and series volume. No searchable/browsable entry text exposed."
+    },
+    {
+      "source": "WorldCat",
+      "url": "https://search.worldcat.org/title/1402253747",
+      "role": "library/ILL metadata",
+      "observed": "Confirms OCLC 1402253747, ISBN 9786223041525, Persian language, and 2023 catalogue metadata."
+    },
+    {
+      "source": "National Mission for Manuscripts repository directory",
+      "url": "https://www.namami.gov.in/sites/default/files/Manuscript_Repositories.pdf",
+      "role": "institution identity check",
+      "observed": "Lists Madrasa Sulaimania Library at Pachim Darwaza, Patna City, Bihar."
+    }
+  ],
+  "acquisition_routes": [
+    {
+      "route": "Majma-i Zakhair-i Islami / Alfehrest",
+      "priority": 1,
+      "ask": "Request the 2023 Patna catalogue entry for manuscript no. 2 and the For Tomorrow no. 126 facsimile pages, not just purchase metadata.",
+      "identifiers_to_quote": [
+        "For Tomorrow / Baray-i Farda no. 126",
+        "Divan-i Haqiqi",
+        "Madrasa Sulaimania Patna MS no. 2",
+        "ISBN 9786223041525",
+        "OCLC 1402253747"
+      ]
+    },
+    {
+      "route": "Boroujerdi Library / blib.ir publication channel",
+      "priority": 2,
+      "ask": "Ask whether the Boroujerdi Library can provide or broker the catalogue entry and facsimile pages for scholarly verification."
+    },
+    {
+      "route": "WorldCat / interlibrary loan",
+      "priority": 3,
+      "ask": "Use OCLC 1402253747 and ISBN 9786223041525 to locate a holding library or request scans of the entry for manuscript no. 2."
+    },
+    {
+      "route": "Local Patna / Indian manuscript contact",
+      "priority": 4,
+      "ask": "If publisher routes fail, contact Madrasa Sulaimania Library or a Patna/Bihar manuscript researcher for title-page, first-folio, final-folio, and catalogue-entry images."
+    }
+  ],
+  "minimum_evidence_request": [
+    "Catalogue entry for Madrasa Sulaimania Patna manuscript no. 2.",
+    "Facsimile title page or first page showing title and any author heading.",
+    "Incipit and explicit, preferably photographed or transcribed.",
+    "Foliation or page/leaf count, distinguishing printed facsimile pages from manuscript folios.",
+    "Colophon, date, scribe, ownership notes, and seals if present.",
+    "At least three poem opening lines or first bayts for comparison against known Cihansah witnesses.",
+    "Any catalogue note identifying the author as Cihansah/Jahanshah/Cahan Shah, Qaraqoyunlu/Karakoyunlu/Turkman, or another Haqiqi."
+  ],
+  "intake_decision_rules": {
+    "promote_to_register_candidate_if": [
+      "The entry or manuscript explicitly identifies the author as Cihansah/Jahanshah/Cahan Shah Haqiqi with Qaraqoyunlu/Karakoyunlu/Turkman lineage.",
+      "Or the first lines/contents match known Cihansah corpus witnesses closely enough to exclude a generic Haqiqi homonym."
+    ],
+    "hold_outside_register_if": [
+      "The only evidence remains the title Divan-i Haqiqi plus Patna MS no. 2.",
+      "The entry gives Persian-only poetry without author identity, first lines, date, or contextual markers.",
+      "The facsimile or catalogue title appears publisher-normalized and is not visible on the manuscript itself."
+    ],
+    "reject_as_non_cihansah_if": [
+      "The entry identifies another author using Haqiqi as takhallus.",
+      "The text is a Sufi treatise, prose work, or local Persian/Urdu corpus unrelated to Cihansah's Persian-Turkish divan.",
+      "First lines match another known Haqiqi or a non-Cihansah work."
+    ]
+  },
+  "contact_template": {
+    "subject": "Request for Patna Madrasa Sulaimania MS no. 2 / Baray-i Farda no. 126 verification images",
+    "body": [
+      "I am verifying a manuscript lead listed as Divan-i Haqiqi, manuscript no. 2, Madrasa Sulaimania, Patna, India, published as Baray-i Farda / For Tomorrow no. 126 by Majma-i Zakhair-i Islami.",
+      "Could you provide the catalogue entry for manuscript no. 2 from the 2023 catalogue Fihrist-i nuskha-ha-yi khatti-i kitabkhana-yi Madrasa-yi Sulaimania, Patna, Hindustan (ISBN 9786223041525; OCLC 1402253747), and, if possible, images from the For Tomorrow no. 126 facsimile?",
+      "The key verification points are: author heading, title as written on the manuscript, incipit, explicit, foliation/page count, colophon/date/scribe, and several poem opening lines. These details are needed only to determine whether this Haqiqi is Jahanshah/Cihansah Qaraqoyunlu or another Haqiqi."
+    ]
+  },
+  "register_impact": {
+    "new_witnesses_added": 0,
+    "new_candidates_added": 0,
+    "witness_count_change": "none"
+  },
+  "release_blocker": false,
+  "audit_metadata": {
+    "record_type": "targeted_followup",
+    "record_date": "2026-05-18",
+    "artifact_status": "current",
+    "source_layers": [
+      "edition_apparatus",
+      "project_classification",
+      "scholarly_description"
+    ],
+    "access_mode": "print_or_ill_only",
+    "disposition": "deferred_followup",
+    "follow_up_required": true,
+    "follow_up_type": "source_acquisition"
+  }
+}

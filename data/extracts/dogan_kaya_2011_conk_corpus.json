@@ -1,0 +1,815 @@
+{
+  "schema_version": 1,
+  "artifact_label": "Dogan Kaya 2011 Alevi conk corpus reconstruction",
+  "date": "2026-05-20",
+  "source": {
+    "citation": "Dogan Kaya, Alevi-Bektasi Edebiyatina Dair Bir Kaynak: Conkler, Alevilik Arastirmalari Dergisi 1/1 (2011).",
+    "url": "https://isamveri.org/pdfdrg/D04118/2011_1/2011_1_KAYAD.pdf",
+    "download_sha256": "049206E978CF249BAA8CF7A002A7EEBAC97C9E43B30C98913764348BC34CB23E",
+    "extraction": "Poppler pdftotext -raw -enc UTF-8; raw mode used because layout mode interleaves two columns."
+  },
+  "purpose": "Structured non-outreach reconstruction of all 35 conk descriptions, with flags for Hakiki and Alevi-Bektasi/Hurufi-neighbor poet clusters relevant to future Jahanshah witness triage.",
+  "summary": {
+    "total_conks_reconstructed": 35,
+    "hakiki_item_level_mentions": [
+      31,
+      32
+    ],
+    "highest_priority_hakiki_followups": [
+      32
+    ],
+    "low_priority_or_namesake_sensitive_hakiki_followups": [
+      31
+    ],
+    "contextual_route_conks_without_hakiki": [
+      20,
+      22,
+      23,
+      34,
+      35
+    ],
+    "register_impact": "none; descriptions contain unqualified Hakiki but no poem text, incipit, folio, or attribution evidence."
+  },
+  "aggregate_poet_index_notes": {
+    "hakiki_count": 1,
+    "hakiki_index_context": "The article aggregate index records Haki (1), Hakiki (1), Hakki (1), etc.; item-level descriptions mention Hakiki in conk nos. 31 and 32, so the source contains a count ambiguity requiring direct folio check.",
+    "strong_aggregate_counts_observed": {
+      "Hatayi_family": "multiple normalized forms; Sah Hatayi index count 117 and Hatayi-family cross-references present",
+      "Kul_Himmet_family": "Kul Himmet 80 plus Kul Himmet Ustadim 46 and related cross-references",
+      "Nesimi_family": "Nesimi 43, Nesimi cross-reference 26, Seyyid Nesimi cross-reference 7",
+      "Pir_Sultan_family": "Pir Sultan Abdal 63 plus Pir Sultan/Abdal Pir Sultan cross-references",
+      "Virani_family": "Virani 146 plus Viran Abdal 34 and related cross-references"
+    }
+  },
+  "entries": [
+    {
+      "conk_no": 1,
+      "source_raw_line_start": 252,
+      "source_raw_line_end": 270,
+      "dimensions_cm_raw": "11x17 cm",
+      "extent_raw": "toplam 68 yaprak",
+      "holder_or_owner_raw": "Cönkün aslı Divriği’nin Karakale köyündeki Hüseyin Demirtaş’tadır.",
+      "date_or_period_raw": "1 Numaralı Cönk: 11x17 cm.",
+      "poet_count_or_poem_count_raw": "Her şiirin sonuna alt alta üçgen oluşturan çizgiler çekilmiştir.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Pir Sultan",
+        "Virani"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "1 Numaralı Cönk: 11x17 cm. boyutundadır. Son sayfadaki “İmam Musa-yı Kâzım sultan-ı zîşan evladlarından lakabı Küçük Gariboğlu demekle meşhur kaza-yı Divriği 1296 (M. 1880)” ifadesinden anladığımıza göre cönkü, Divriğili Küçük Gariboğlu yazmıştır. Tamamında aynı yazı karakteri vardır. Yandan dikişli olup defter şeklinde açılmaktadır. Cönk toplam 68 yapraktır. Her şiirin sonuna alt alta üçgen oluşturan çizgiler çekilmiştir. Cönkün aslı Divriği’nin Karakale köyündeki Hüseyin Demirtaş’ta bulunmaktadır. Cönkte şu şairlerin 78 şiiri yer almaktadır: Aşıkî, Bende, Dedemoğlu, Dertli, Derviş Ali, Er Mustafa, Fedayî, Gevheri, Hayri, Hüseyin, İsmail, Kul Himmet, Kul Himmet Üstadım, Niyazî, Pir Sultan Abdal, Sadık, Sefilî, Sıtkı, Sultan Hatayî, Şah Hatayî, Veli, Viranî, Viranî Abdal."
+    },
+    {
+      "conk_no": 2,
+      "source_raw_line_start": 271,
+      "source_raw_line_end": 289,
+      "dimensions_cm_raw": "12x18 cm",
+      "extent_raw": "Toplam 62 yapraktan",
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "2 Numaralı Cönk: Boyutu 12x18 cm.’dir.",
+      "poet_count_or_poem_count_raw": "İçinde şu şairlerin 78 adet şiiri yer almaktadır: Abdal Pir Sultan, Âşıkî, Bâki, Bende, Cafer Oğlu, Celalî, Cemalî, Dedemoğlu, Dertli, Derviş Ali, Derviş Süleyman, Fevzi, Gulâm, Gulam Kul, Halil, Hasretî, Hatayî, Hilmî, Hüseyin, İsmail, Kalender, Kanberî, Kul Himmet, Kul Himmet Üstadım, Kul Mustafa, Nesimî, Niyazî, Noksanî, Sadık, Şah Hatayî, Sefil Ali, Sefil Mehmet, Sırrı, Sofi Oğlu, Sultan Hatayî, Teslim Abdal, Ülfetî, Veli, Viran Abdal, Virânî.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Pir Sultan",
+        "Virani",
+        "Teslim Abdal"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "2 Numaralı Cönk: Boyutu 12x18 cm.’dir. Toplam 62 yapraktan oluşmaktadır. Bazı mısraların üstü kırmızı renkli kalemle çizilmiştir. Yazıların mürekkebi aynı tonda değildir. Son yaprağında şöyle bir ibare vardır: “Üçpınar karyesinde Mansur oğlu Veli Efendi’nin mecmuasıdır. Sene 1335 (M. 1919)”. Oldukça yıpranmış olup cilt kapakları yoktur. İçinde şu şairlerin 78 adet şiiri yer almaktadır: Abdal Pir Sultan, Âşıkî, Bâki, Bende, Cafer Oğlu, Celalî, Cemalî, Dedemoğlu, Dertli, Derviş Ali, Derviş Süleyman, Fevzi, Gulâm, Gulam Kul, Halil, Hasretî, Hatayî, Hilmî, Hüseyin, İsmail, Kalender, Kanberî, Kul Himmet, Kul Himmet Üstadım, Kul Mustafa, Nesimî, Niyazî, Noksanî, Sadık, Şah Hatayî, Sefil Ali, Sefil Mehmet, Sırrı, Sofi Oğlu, Sultan Hatayî, Teslim Abdal, Ülfetî, Veli, Viran Abdal, Virânî."
+    },
+    {
+      "conk_no": 3,
+      "source_raw_line_start": 290,
+      "source_raw_line_end": 312,
+      "dimensions_cm_raw": "11x23,5 cm",
+      "extent_raw": "29 yaprak",
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "3 Numaralı Cönk: 11x23,5 cm.",
+      "poet_count_or_poem_count_raw": "Şiirlerin hepsi nefes nazım türüyle yazılmıştır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Pir Sultan",
+        "Kaygusuz",
+        "Abdal Musa",
+        "Teslim Abdal",
+        "Sersem Abdal",
+        "Baba Ibrahim"
+      ],
+      "alevi_bektasi_route_terms": [
+        "nefes"
+      ],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "3 Numaralı Cönk: 11x23,5 cm. boyutundadır. 29 yapraktır. Sayfaları lekelidir. XX. yüzyılın başlarında Divriği’de yazıldığı tahmin edilmektedir. Düzenleyen kişi ve düzenlendiği tarih hakkında herhangi bir bilgi yok. Şiirlerin hepsi nefes nazım türüyle yazılmıştır. Bazılarının şairi belli değildir. Alevî- Bektaşî şairleri çoğunluktadır. Başından sonuna kadar aynı yazı ile yazılmıştır. İçinde 26 âşığın 64 şiiri bulunmaktadır. Şiirlerine yer verilen başlıca âşıklar şunlardır:Abdal Musa, Abdal Pir Sultan, Ahi, Ali Dede, Baba İbrahim, Balım Sultan, Budala, Cafer Abdal, Deli Şükrü, Dertli Kemter, Derviş, Derviş Ali, Derviş Hüseyin, Geda Müslî, Hacı Recep, Hatayî, Herdemi, Hüseyni, Kaygusuz, Kemter, Kul Himmet, Meczub Abdal, Musa Dede, Pir Sultan, Pir Sultan Abdal, Rahmi, Sefil, Sefil Sersem, Seyyid, Seyyid Dede, Şah Hatayî, Teslim Abdal, Veli Dede."
+    },
+    {
+      "conk_no": 4,
+      "source_raw_line_start": 313,
+      "source_raw_line_end": 325,
+      "dimensions_cm_raw": "16x20 cm",
+      "extent_raw": "29 yaprak",
+      "holder_or_owner_raw": "4 Numaralı Cönk: Cönkün aslı Kangal’ın Karanlık köyündeki Ali Ekber Öztürk’tedir.",
+      "date_or_period_raw": "16x20 cm.",
+      "poet_count_or_poem_count_raw": "Cönkte 26 şaire ait 58 şiir bulunmaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Pir Sultan",
+        "Virani",
+        "Fuzuli"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "4 Numaralı Cönk: Cönkün aslı Kangal’ın Karanlık köyündeki Ali Ekber Öztürk’tedir. 16x20 cm. boyutunda olup 29 yapraktır. 1331 (M. 1915) yılında Kangal’ın Karanlık köyünde yazılmıştır. Cönkte 26 şaire ait 58 şiir bulunmaktadır. Şiirlerine yer verilen başlıca şairler şunlardır:Budala, Deli Boran, Fedaî, Feyzî, Fuzulî, Hasretî, Hatayî,Hulkî, İrfanî, Kemterî, Kul Himmet, Muradî, Mehemmed, Nesimî, Noksanî, Pehlül Divane, Pir Sultan Abdal, Sadık, Sefil Kul Himmet, Sefil Mehmet, Şi’rî, Veli, Viranî, Visalî."
+    },
+    {
+      "conk_no": 5,
+      "source_raw_line_start": 326,
+      "source_raw_line_end": 335,
+      "dimensions_cm_raw": "10 x20 cm",
+      "extent_raw": "29 yaprak ve",
+      "holder_or_owner_raw": "5 Numaralı Cönk: Cönkün aslı Divriği’nin Höbek köyündeki Veli Gökçe’dedir.",
+      "date_or_period_raw": "29 yaprak ve 10 x20 cm.",
+      "poet_count_or_poem_count_raw": "İçinde; Âşıkî, Dedemoglu, Dertli, Derviş Ali, Gani Baba, Gevherî, Hatayî, İsmail, Kemter Himmet, Kemter, Kul Himmet, Kul Sevindik, Nesimî, Niyazî, Öksüz, Seyyid Nesimî, Seyyid Seyfi, Türabî, Viranî gibi şairlerin 38 şiiri yer almaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Virani",
+        "Turabi"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "5 Numaralı Cönk: Cönkün aslı Divriği’nin Höbek köyündeki Veli Gökçe’dedir. 29 yaprak ve 10 x20 cm. boyutundadır. 1290 (M. 1874) yılında Divriği yöresinde yazılmıştır. İçinde; Âşıkî, Dedemoglu, Dertli, Derviş Ali, Gani Baba, Gevherî, Hatayî, İsmail, Kemter Himmet, Kemter, Kul Himmet, Kul Sevindik, Nesimî, Niyazî, Öksüz, Seyyid Nesimî, Seyyid Seyfi, Türabî, Viranî gibi şairlerin 38 şiiri yer almaktadır."
+    },
+    {
+      "conk_no": 6,
+      "source_raw_line_start": 336,
+      "source_raw_line_end": 347,
+      "dimensions_cm_raw": "16x22 cm",
+      "extent_raw": "18 yaprak ve",
+      "holder_or_owner_raw": "6 Numaralı Cönk: Divriği’nin Höbek köyünde tutulduğu sanılmaktadır.AslıDervişAslandoğan’dadır.",
+      "date_or_period_raw": "18 yaprak ve 16x22 cm.",
+      "poet_count_or_poem_count_raw": "İçinde on dokuz şairin 31 şiiri bulunmaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Pir Sultan",
+        "Teslim Abdal"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "6 Numaralı Cönk: Divriği’nin Höbek köyünde tutulduğu sanılmaktadır.AslıDervişAslandoğan’dadır. 18 yaprak ve 16x22 cm. boyutundadır. XIX. yüzyılın sonlarında yazıldığını tahmin edebiliriz. İçinde on dokuz şairin 31 şiiri bulunmaktadır. Sözkonusu şairler şunlardır: Abdal Pir Sultan, Budala, Dedemoğlu, Derviş Ali, Hatayî, Hilmi Dede, Hüseyin, İsmail, Kemter, Kul Himmet, Kul Himmet Üstadım, Behlül Divane, Rıza Tevfik, Sadık, Senem, Nesimî, Teslim Abdal."
+    },
+    {
+      "conk_no": 7,
+      "source_raw_line_start": 348,
+      "source_raw_line_end": 363,
+      "dimensions_cm_raw": "14,5 x 21,5 cm",
+      "extent_raw": "Toplam 123 yaprak",
+      "holder_or_owner_raw": "Aslı, Divriği’nin Karakale köyündeki Hüseyin Demirtaş’tadır.",
+      "date_or_period_raw": "yüzyılın ortalarında tutulmuştur.",
+      "poet_count_or_poem_count_raw": "İçinde 40 şairin 140 şiirine yer verilmiştir.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Pir Sultan",
+        "Virani",
+        "Teslim Abdal"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "7 Numaralı Cönk: İlk ve son sayfaları eksik olan bu cönk tahminimize göre XIX. yüzyılın ortalarında tutulmuştur. Aslı, Divriği’nin Karakale köyündeki Hüseyin Demirtaş’tadır. Cönk, 14,5 x 21,5 cm. boyutundadır. Toplam 123 yapraktır. İçinde 40 şairin 140 şiirine yer verilmiştir. Bu şairlerin başlıcaları alfabetik sıra ile şunlardır: Asrî, Arif, Âşık Umman, Budala, Cafer, Cefaî, Derviş Ali, Dertli, Dedemoğlu, Deli Boran, Fedaî, Feryadî, Gedaî, Gevherî, Gulamî, Hasretî, Hatayî, Hüseyin, İsmail, Kul Himmet, Kul Himmet Üstadım, Kul İsmail, Kul Sevindik, Miratî, Nesimî, Noksanî, Pir Sultan Abdal, Sadık, Sefil Ahmet, Sefil Ali, Sefil Edna, Sıtkı, Sırrı, Şem’î, Şi’rî, Teslim Abdal, Veli, Viranî,. Visalî."
+    },
+    {
+      "conk_no": 8,
+      "source_raw_line_start": 364,
+      "source_raw_line_end": 381,
+      "dimensions_cm_raw": "12x17 cm",
+      "extent_raw": null,
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "yüzyılın başlarında tutulduğunu tahmin edebiliriz.",
+      "poet_count_or_poem_count_raw": "Yazıldığı yıllara ait her hangi bir kayıt yoktur; ancak içinde yer alan şairlerden ve kâğıdın özelliğinden dolayı XX.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Virani"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "8 Numaralı Cönk: 79 sayfadan ibaret ve yandan dikişli olup boyutu 12x17 cm’dir. İki farklı yazı vardır. Yazıldığı yıllara ait her hangi bir kayıt yoktur; ancak içinde yer alan şairlerden ve kâğıdın özelliğinden dolayı XX. yüzyılın başlarında tutulduğunu tahmin edebiliriz. Cönkte yer alan şairlerin başlıcaları alfabetik sıra ile şöyledir: Âşık Muhammed, Dertli, Fakir Edna, Fedayî, Hüseyin, İbrahim, İsmail, Kemterî, Kul Fakir, Kul Himmet, Kul Pervane, Mahzunî, Muhammet Mehdî, Muhlisî, Nesimî, Noksanî, Sadık Musa, Sefil Ali, Sefil Sadık, Selmanî, Şah Hatayî, Veli, Viranî."
+    },
+    {
+      "conk_no": 9,
+      "source_raw_line_start": 382,
+      "source_raw_line_end": 404,
+      "dimensions_cm_raw": null,
+      "extent_raw": "135 yaprak",
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "9 Numaralı Cönk: Tokat kaynaklı olup Abdülfettah Mahallesi’nde oturan Deli Mehmetoğulları’ndan Mustafa oğlu Hasan Emirî Ahmet tarafından 1320 (1904) yılında tutulmuştur.",
+      "poet_count_or_poem_count_raw": "Cönkün tamamında; 135 yaprak içinde, 54 şairin 146 şiiri bulunmaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Pir Sultan",
+        "Kaygusuz",
+        "Turabi",
+        "Fuzuli"
+      ],
+      "alevi_bektasi_route_terms": [
+        "Alevi-Bektasi"
+      ],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "9 Numaralı Cönk: Tokat kaynaklı olup Abdülfettah Mahallesi’nde oturan Deli Mehmetoğulları’ndan Mustafa oğlu Hasan Emirî Ahmet tarafından 1320 (1904) yılında tutulmuştur. Cönkün tamamında; 135 yaprak içinde, 54 şairin 146 şiiri bulunmaktadır. Şairlerin pek çoğu Alevî-Bektaşî inanca sahiptir. Ayrıca mahlası belli olmayan 12 şiir kayıtlıdır. 2-15. yapraklarda maniler bulunmaktadır. Cönkün sonlarına “Geyik Destanı” yazılmıştır. Abdal, Ali Hubiyar, Âşık, Abdal Dede, Aşkî, Âşık Hasan, Âşık Garib, Azizî, Budala, Can Hatayî, Dehman, Deli Boran, Dertli Kerem, Dedemoğlu, Deruni Baba, Derviş Ahmed, Derviş Musa, Derviş Ena.ş, Derviş Ali, Em’rullah, Fuzulî, Hatayî, Hüseyin, Hüseyin Abdal, Kul Himmet,Kul Himmet Üstâd, Karacaoğlan, Kaygusuz, Kul Yusuf, Mir’ati Baba, Nihani Baba, Noksanî, Nutkî, Pir Sultan Abdal, Sefil Ahmed, Sefil Ali, Sefil Mehmed, Seyyid, Sefil Hasan, Sefil Öksüz, Sefîlî, Sefil Türabi, Sürûrî; cönkte şiirleri yer alan şairlerdir."
+    },
+    {
+      "conk_no": 10,
+      "source_raw_line_start": 405,
+      "source_raw_line_end": 423,
+      "dimensions_cm_raw": "13x16 cm",
+      "extent_raw": "54 yaprak",
+      "holder_or_owner_raw": "Divriği yöresinde tutulmuştur ve cönkün orijinali Divriği Anzağar köylü Garip Tuncer’de bulunmaktadır.",
+      "date_or_period_raw": "10 Numaralı Cönk: Adı geçen cönk 13x16 cm.",
+      "poet_count_or_poem_count_raw": "Cönkte 42 âşığa ait 87, söyleyeni bilinmeyen 10; toplam 97 şiir mevcuttur.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Pir Sultan",
+        "Virani",
+        "Teslim Abdal",
+        "Turabi"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "10 Numaralı Cönk: Adı geçen cönk 13x16 cm. boyutunda olup 54 yapraktır. Divriği yöresinde tutulmuştur ve cönkün orijinali Divriği Anzağar köylü Garip Tuncer’de bulunmaktadır. Cönkte 42 âşığa ait 87, söyleyeni bilinmeyen 10; toplam 97 şiir mevcuttur. Genellikle XIX. ve daha önceki yüzyılda yaşamış şairlerin şiirlerine yer verildiği göz önünde tutulursa, cönkün en geç XIX. yüzyılda tutulduğunu söyleyebiliriz. Cönkte şiiri yer alan âşıklar şunlardır: Âşıkî, Ârifoğlu, Abdal, Budala İsmail, Derviş Süleyman, Dertli, Dedemoğlu, Esirî, Eşrefoğlu, Fedayî, Gevherî, Hasretî, Hatayî, Hüseynî, Kusurî, Kul Sıtkı, Kul Mustafa, Kul Himmet Üstâd, Kul Fakir, Kemter, Noksanî, Pir Sultan Abdal, Sultan Muhammed, Sofioğlu, Sefil Öksüz, Sefilî, Sadıkî, Şîr’î, Türabî, Teslimoğlu, Teslim Abdal, Velî, Viran Abdal."
+    },
+    {
+      "conk_no": 11,
+      "source_raw_line_start": 424,
+      "source_raw_line_end": 431,
+      "dimensions_cm_raw": "11x17 cm",
+      "extent_raw": "11 yaprak",
+      "holder_or_owner_raw": "Aslı, Divriği Anzağar köyündeki Garip Tuncer’de bulunmaktadır.",
+      "date_or_period_raw": "11 Numaralı Cönk: 11x17 cm.",
+      "poet_count_or_poem_count_raw": "Cönkte, 8 âşığın 19 şiiri yer almaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "11 Numaralı Cönk: 11x17 cm. boyutunda ve 11 yapraktır. Divriği yöresinde tutulmuştur. Aslı, Divriği Anzağar köyündeki Garip Tuncer’de bulunmaktadır. Cönkte, 8 âşığın 19 şiiri yer almaktadır. Bu âşıklar;Dertli, Derviş Ali, Feyzî, Hatayî, Kul Himmet, Kuddusî, Kul Hüseyin, TeslimAbdal’dır."
+    },
+    {
+      "conk_no": 12,
+      "source_raw_line_start": 432,
+      "source_raw_line_end": 448,
+      "dimensions_cm_raw": "9x23 cm",
+      "extent_raw": "55 yaprak",
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "1316 (M.",
+      "poet_count_or_poem_count_raw": "55 yaprak olan cönkte, 30 şairin 99 şiir bulunmaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Pir Sultan",
+        "Virani",
+        "Teslim Abdal"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "12 Numaralı Cönk: R. 1316 (M. 1900) yılında Divriği’nin Venk köyünde tutulmuş olan bu cönk, 9x23 cm. boyutundadır. Orijinali Divriği’nin Mursal köyündeki Kalaycı Kamber’dedir. 55 yaprak olan cönkte, 30 şairin 99 şiir bulunmaktadır. Adı geçen şairler şunlardır. Ali, Dertli, Dertli Kemter, Deli Boran, Esirî Baba, Feyzî, Gevherî, Hasan Dede, Hasan Paşa, Hatayî, Hüseyin, İsmail, Kabulî Baba, Kalender Baba, Karacaoğlan, Kemter, Kul Himmet, Kul Himmet Üstadım, Kul Safi, Kusurî, Nesimî, Noksanî, Pir Mehmet, Pir Sultan Abdal, Sadık Baba, Şem’î, Teslim Abdal, Veli, Viranî, Zekâyî."
+    },
+    {
+      "conk_no": 13,
+      "source_raw_line_start": 449,
+      "source_raw_line_end": 458,
+      "dimensions_cm_raw": "5 x19 cm",
+      "extent_raw": null,
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "1325 (M.",
+      "poet_count_or_poem_count_raw": "İçinde 18 şairin 34 şiiri bulunmaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Virani"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "13 Numaralı Cönk: R. 1325 (M. 1909) tarihinde Divriği’de tutulmuştur. 11.5 x19 cm. boyutundadır. 37 varak olan bu cönkün aslı Kutlu Özen’de bulunmaktadır. İçinde 18 şairin 34 şiiri bulunmaktadır. Şairlerin adları şöyledir. Askerî, Can Hatayî, Fakirî, Gevherî, Hüseyin, Kul Himmet, Kul Himmet Üstadım, Noksanî, Nesimî, Pirî, Seyyid Süleyman, Sırrı, Viranî / Viranî Abdal, Zuhurî."
+    },
+    {
+      "conk_no": 14,
+      "source_raw_line_start": 459,
+      "source_raw_line_end": 468,
+      "dimensions_cm_raw": "8x12 cm",
+      "extent_raw": null,
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "14 Numaralı Cönk: Divriği yöresinde tutulmuştur 8x12 cm.",
+      "poet_count_or_poem_count_raw": "İçerisinde yer alan şairler şunlardır:Dedemoğlu, Derviş Ali, Derviş Süleyman, Hatayî, Hüseyin Kul Himmet, Muhammed, Şah Hatayî, Yemini, Zuldan Hatayî.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "14 Numaralı Cönk: Divriği yöresinde tutulmuştur 8x12 cm. boyutunda olup 59 sayfadan ibarettir. XIX. yüzyıl sonlarında yazıldığını tahmin etmekteyiz. İçerisinde yer alan şairler şunlardır:Dedemoğlu, Derviş Ali, Derviş Süleyman, Hatayî, Hüseyin Kul Himmet, Muhammed, Şah Hatayî, Yemini, Zuldan Hatayî. Şiirlerin çoğunun altında Arapça “temmet” kelimesi bulunmaktadır"
+    },
+    {
+      "conk_no": 15,
+      "source_raw_line_start": 469,
+      "source_raw_line_end": 476,
+      "dimensions_cm_raw": "12,5x28 cm",
+      "extent_raw": "15 yaprak ve",
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "15 yaprak ve 12,5x28 cm.",
+      "poet_count_or_poem_count_raw": "15 Numaralı Cönk: İçinde 13 şiir vardır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Turabi"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "15 Numaralı Cönk: İçinde 13 şiir vardır. 15 yaprak ve 12,5x28 cm. boyutundadır. Üç şiirin sahibi belli değildir. Cönkte şu şairlerin şiirleri bulunmaktadır: Abdi, Abdülkadir, Hafızî, Hüseynî, Hüsnî, Hüsnî Efendi, Kâzım, Rıza, Seyranî, Seyyitoğlu, Türabi. Ayrıca bir mani ve birçok müfret bulunmaktadır."
+    },
+    {
+      "conk_no": 16,
+      "source_raw_line_start": 477,
+      "source_raw_line_end": 489,
+      "dimensions_cm_raw": "11,5x22,5 cm",
+      "extent_raw": "Toplam 28 yaprak",
+      "holder_or_owner_raw": "Cönkün orijinali özel kitaplığımızda bulunmaktadır.",
+      "date_or_period_raw": "11,5x22,5 cm.",
+      "poet_count_or_poem_count_raw": "Ele alınan şairler göz önünde tutulursa, XIX.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Pir Sultan",
+        "Virani",
+        "Turabi"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "16 Numaralı Cönk: Toplam 28 yapraktır. 11,5x22,5 cm. boyutunda olup kim tarafından ne zaman yazıldığı hususunda herhangi bir bilgi yer almamaktadır. Ele alınan şairler göz önünde tutulursa, XIX. yüzyılda yazıldığı düşünülebilir. Cilt kapakları yoktur. Şiirler “tamam” ibaresi ile bitirilmiştir. Cönkün orijinali özel kitaplığımızda bulunmaktadır. Cönkte şiirleri bulunan şairler şunlardır: Azbî, Garîbî, Harâbî, Hasretî, Kalender Abdal, Kamberî, Pir Sultan Abdal, Selîmî, Seyfî, Şehîdî, Türâbî, Zâhir, Virânî."
+    },
+    {
+      "conk_no": 17,
+      "source_raw_line_start": 490,
+      "source_raw_line_end": 501,
+      "dimensions_cm_raw": "10x15 cm",
+      "extent_raw": "40 yaprak ve",
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "1354 (M.",
+      "poet_count_or_poem_count_raw": "Şiirlerin sonunda “temmet” bulunmaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Nesimi"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "17 Numaralı Cönk: R. 1354 (M. 1938) yılında düzenlenmiştir. 40 yaprak ve 10x15 cm. boyutundadır. Birkaç kişi tarafından kaleme alınmıştır ve bu kişilerin kim olduğu belli değildir. Şiirlerin sonunda “temmet” bulunmaktadır. Cönkte şu şairlerin şiirleri vardır: Âşık Ömer, Eşrefoğlu Rûmî, Zâifî, Yunus Emre, Tevruzî, Nûrî, Sûzî, Şemsî, Fazlî, Hâfızî, Muhibbî, Muhiddin, Nakşî, Nesîmî, Niyazî. Bu arada pek çok şiirin sahibi belli değildir ve çok sayıda da mani vardır."
+    },
+    {
+      "conk_no": 18,
+      "source_raw_line_start": 502,
+      "source_raw_line_end": 518,
+      "dimensions_cm_raw": "10,5x21 cm",
+      "extent_raw": null,
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "89 sayfadan ibaret olup 10,5x21 cm.",
+      "poet_count_or_poem_count_raw": "Birden fazla yazı tipi bulunması şiirlerin farklı kişiler tarafından kaleme alındığını göstermektedir.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "18 Numaralı Cönk: Yazıldığı tarih bili değildir. 89 sayfadan ibaret olup 10,5x21 cm. boyutundadır. Düzenleyen şahsiyet hakkında da bilgi içermemektedir. Birden fazla yazı tipi bulunması şiirlerin farklı kişiler tarafından kaleme alındığını göstermektedir. İçinde şiirleri bulunan şairler şunlardır: Âşık Ömer, Gevherî, Hüseyin, Kuddûsî, Ali, Mehmet, Derunî, Sürurî, Halil, Yunus, Kâtibî. Bunların yanında çok sayıda mahlassız şiir ile mâni, semaî, gazel, münacaat, şarkı ve müfretler de bulunmaktadır. 13, 14, 32, 33, 36, 47 ve 63. cönkün bazı sayfaları da boştur."
+    },
+    {
+      "conk_no": 19,
+      "source_raw_line_start": 519,
+      "source_raw_line_end": 536,
+      "dimensions_cm_raw": "5x19cm",
+      "extent_raw": "90 yaprak",
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": null,
+      "poet_count_or_poem_count_raw": "Cönkte aşağıda adlarını kaydettiğimiz şairlerin şiirlerinin yanında mahlassız şiirler, mâniler ve müfretler de yer almaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "19 Numaralı Cönk: 8.5x19cm boyutlarında ve 90 yapraktır. Kahramanmaraş ili civarında düzenlenmiştir. Cönkün tamamında tek tip yazının bulunması, cönkün bir kalemden yazıldığını göstermektedir; ancak düzenleyen kişi ve düzenleme tarihi hakkında herhangi bir kayıt yoktur. Cönkte aşağıda adlarını kaydettiğimiz şairlerin şiirlerinin yanında mahlassız şiirler, mâniler ve müfretler de yer almaktadır. Cönkte şiiri olan şairlerin başta gelenleri şunlardır: Ali Bey, Âşık, Beyoğlu Dertlî, Duran, Emrah, Fehmî, Fermânî, Garip Serhat, Gevherî, Gülşenî, Hâfız, Hamdî, İlbend, İlmî, İsmail, İzzet, Karacaoğlan, Kâtibî, Kerem, Kuloğlu, Leylâ, Mâhir, Mehmed, Mustafa, Nevruzî, Niyâzî, Nuzûli, Rıza, Sâidî, Süreyya, Şemî, Şevkî, Şirâzî, Yunus, Zâifî, Zârifî."
+    },
+    {
+      "conk_no": 20,
+      "source_raw_line_start": 537,
+      "source_raw_line_end": 557,
+      "dimensions_cm_raw": null,
+      "extent_raw": "117 yaprak",
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "yüzyılda tutulmuştur.",
+      "poet_count_or_poem_count_raw": "Şiirlerin dışında münacat, Hz.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Pir Sultan",
+        "Virani",
+        "Teslim Abdal",
+        "Fuzuli"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "contextual_route_without_hakiki",
+      "followup_rationale": "No Hakiki is named in the published description, but the item is a strong Alevi-Bektasi route or private-archive node that can point to related conk holders.",
+      "description_excerpt": "20 Numaralı Cönk: Gürün’ün Külahlı köyünden Cafer Kaplan’da bulunmakta olup 117 yapraktır. XIX. yüzyılda tutulmuştur. Yazısı okunaklı ve düzenlidir. Cönkte iki ayrı yazı karakteri vardır. Şiirlerin dışında münacat, Hz. Muhammed’den şefaat dileme, Kur’an-ı Kerim’den ayetler, Kerbela olayı, Miraç hadisesi ve öğütler yer almaktadır. Cönkte yer alan şairler ise şunlardır: Abdal Pir Sultan, Aşıkî, Âşık Muhammed, Âşık Hüseyin, Biçare Kalender, Can Hatayî, Dedemoğlu, Dertli, Derviş Ali, Fevziya, Fuzulî, Hakkı, Hatayî, Hatice Mihrap, Hulki Hüseyin, Hüseyin, İsmail, Kalender, Kemter, Kul Hasan, Kul Himmet, Kuddusî, Kusurî, Muhammed, Nesimî, Noksanî, Pir Sultan Abdal, Sadık, Sefil Abdal, SefilAli, Seyyid Budalam, Seyyid Nesimi, Seyyid Nizamoğlu, Sultan Hatayî, Şah Hatayı, Şekür, Nizamoğlu, Teslim Abdal, Veli, Viranî-Viranî Abdal-Viranî Derviş, Yeminî."
+    },
+    {
+      "conk_no": 21,
+      "source_raw_line_start": 558,
+      "source_raw_line_end": 568,
+      "dimensions_cm_raw": "12x24 cm",
+      "extent_raw": "23 yaprak ve",
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "23 yaprak ve 12x24 cm.",
+      "poet_count_or_poem_count_raw": "İçinde 29 şiir kayıtlıdır ve bunların sekizi mahlassızdır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "21 Numaralı Cönk: Düzenlendiği tarih ve yazan kişi hakkında herhangi bir bilgi yoktur. 23 yaprak ve 12x24 cm. boyutundadır. İçinde 29 şiir kayıtlıdır ve bunların sekizi mahlassızdır. Ayrıca müfret, mani ve türküler de bulunmaktadır. Yazı farklılıklarından birkaç kişinin kaleme aldığı anlaşılmaktadır. Cönkte şiirleri bulunan şairler şunlardır: Abdi, Âşık Mustafa, Âşık Ömer, Derviş Dede, Gevherî, Hilmi, Kul Mustafa, Mustafa, Ömer, Yunus, Yunus Emre."
+    },
+    {
+      "conk_no": 22,
+      "source_raw_line_start": 569,
+      "source_raw_line_end": 586,
+      "dimensions_cm_raw": "11,5x19 cm",
+      "extent_raw": "35 yaprak",
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": null,
+      "poet_count_or_poem_count_raw": "Daha çok Alevî-Bektaşî inancıyla söylenmiş şiirler yer almaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Pir Sultan",
+        "Virani",
+        "Turabi"
+      ],
+      "alevi_bektasi_route_terms": [
+        "Alevi-Bektasi"
+      ],
+      "priority_for_hakiki_followup": "contextual_route_without_hakiki",
+      "followup_rationale": "No Hakiki is named in the published description, but the item is a strong Alevi-Bektasi route or private-archive node that can point to related conk holders.",
+      "description_excerpt": "22 Numaralı Cönk: Hangi tarihte yazıldığı bilinmemektedir. 35 yapraktır. 11,5x19 cm boyutundadır. Kim tarafından yazıldığı belli değildir. Yazı karakterlerinin farklılıkları birkaç kişi tarafından yazıldığını göstermektedir. Daha çok Alevî-Bektaşî inancıyla söylenmiş şiirler yer almaktadır. İçinde 47 şiir yer almaktadır. Bunlardan altı tanesinin sahibi belli değildir. Bu cönkte şiirleri bulunan şairler şunlardır: Askerî, Can Hatayî, Fakiri, Gulam, Hatayî, Hüseynî, Kul Himmet, Nesimî, Noksanî, Pir Sultan Abdal, Selman, Seyyid, SeyyidNesimî, Sırrı, Şah Hatayî, Şem’î, Turâbî, Viranî, Virani Abdal."
+    },
+    {
+      "conk_no": 23,
+      "source_raw_line_start": 587,
+      "source_raw_line_end": 675,
+      "dimensions_cm_raw": "13x20 cm",
+      "extent_raw": "270 yaprak",
+      "holder_or_owner_raw": "Cönkün aslı Yrd. Doç. Dr. Mehmet YARDIMCI’dadır.",
+      "date_or_period_raw": "23 Numaralı Cönk: Oldukça hacimli bir cönk olup 13x20 cm.",
+      "poet_count_or_poem_count_raw": "İçinde daha çok 134 şairin 563 şiiri bulunmaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Pir Sultan",
+        "Virani",
+        "Kaygusuz",
+        "Teslim Abdal",
+        "Sersem Abdal",
+        "Turabi",
+        "Fuzuli"
+      ],
+      "alevi_bektasi_route_terms": [
+        "Dar-name"
+      ],
+      "priority_for_hakiki_followup": "contextual_route_without_hakiki",
+      "followup_rationale": "No Hakiki is named in the published description, but the item is a strong Alevi-Bektasi route or private-archive node that can point to related conk holders.",
+      "description_excerpt": "23 Numaralı Cönk: Oldukça hacimli bir cönk olup 13x20 cm. boyutlarında ve 270 yapraktır. Yaprakları incedir. XX. yüzyılın başlarında yazılmıştır. Cönkün aslı Yrd. Doç. Dr. Mehmet YARDIMCI’dadır. Arşivimizde bu cönkün fotokopisi bulunmaktadır. 14, 46 ve 267. yapraklarında cönkün yazılışı ile ilgili olarak muhtelif kayıtlar vardır. “Bu mecmua Zile’nin Âlâ Mescid Mahlesinden Kiranili Davulcuoğlu Mehmed’indir. Kimse dahil olamaz. Padişahdan ferman gelse kimse elimden alamaz efendim Rumi 1323 Milâdi 1907”. “Kaldı ki, şu mecmuaların meâlini anlamak isteyen efgendilere mâlum ola ki, başındaki altmış kanadı Zile kazası Minare-i Keyr Mahlesinden Kiranili Davulcuoğulları’ndan Kasım .... pederim Mehmet Efendi’nin yazdığı ve gayri kusuru burdan nihâyete kadar Mehmet Efendi’nin mahdumu Rıza Efendi’nin yazdıklarıdır. Bu bahse ma’lumuzun ola”. “El sahip Mehmet Efendi ve Rıza Efendi’nindir. Kimse dâhil edemez. Padişah’tan ferman gelse kimse elinden alamaz efendim”. “İş bu mecmuaları kimin yazdığını anlamak isteyenlere ma’lum olsun ki başından 60 kadarı Zile’nin Âla Mescid Mahlesinden Davulcuoğlulları’ndan Mehmet Efendi’ye, 60. kanattan 542. kanada kadar Mehmet Efendi’ninoğluRızaEfendi’ye,542.kanad"
+    },
+    {
+      "conk_no": 24,
+      "source_raw_line_start": 676,
+      "source_raw_line_end": 689,
+      "dimensions_cm_raw": "10,5x18 cm",
+      "extent_raw": "65 yaprak ve",
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "65 yaprak ve 10,5x18 cm.",
+      "poet_count_or_poem_count_raw": "Bazı sayfalarda boşluk vardır.Cönkte 37 şiir mevcuttur.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "24 Numaralı Cönk: Düzenlenen tarih ve düzenleyen kişi hakkında herhangi bir bilgi yoktur. 65 yaprak ve 10,5x18 cm. boyutundadır. Bazı sayfalarda boşluk vardır.Cönkte 37 şiir mevcuttur. Bunların dördünün sahibi bilinmemektedir. Farklı karakterleri kullanılmıştır. Yazıları okunaklıdır. Üveys ve İmam’ın “İki Şairin Demeleri” başlığında verilmiş şiiri dikkat çekicidir. Cönkte yer alan şiirlerin şairleri şunlardır: Arif, Âşık Ömer, Âşık Şenlik, Âşık Yunus, Bekir, Cihanî, Ruhsatî, Derviş, Derviş Yunus, Eşref, Refik, Sümmanî, Tabib, Vuslatî."
+    },
+    {
+      "conk_no": 25,
+      "source_raw_line_start": 690,
+      "source_raw_line_end": 700,
+      "dimensions_cm_raw": "9,5x19 cm",
+      "extent_raw": "19 yaprak",
+      "holder_or_owner_raw": "Aslı Kayseri’de Seyit Burhanettin Akbaş’tadır.",
+      "date_or_period_raw": "25 Numaralı Cönk: 9,5x19 cm.",
+      "poet_count_or_poem_count_raw": "Cönk’te Âşık Ömer (4), ÂşıkHasan, Karacaoğlan (4), Âşık Mehmet, Kul Mustafa, Âşık Mahmud, Köroğlu, Derdimend ve Gevherî’nin birer şiiri ve ayrıca 5 adet mahlassız şiir ile bir hutbe bulunmaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "25 Numaralı Cönk: 9,5x19 cm. ebadında ve 19 yapraktır. Aslı Kayseri’de Seyit Burhanettin Akbaş’tadır. Yazıldığı tarihle ilgili herhangi bir kayıt yoktur. Cönk’te Âşık Ömer (4), ÂşıkHasan, Karacaoğlan (4), Âşık Mehmet, Kul Mustafa, Âşık Mahmud, Köroğlu, Derdimend ve Gevherî’nin birer şiiri ve ayrıca 5 adet mahlassız şiir ile bir hutbe bulunmaktadır. Cönk nesih yazı ile yazılmış olup yazı karakterinden cönkün tek elden çıktığı anlaşılmaktadır."
+    },
+    {
+      "conk_no": 26,
+      "source_raw_line_start": 701,
+      "source_raw_line_end": 725,
+      "dimensions_cm_raw": "12x18 cm",
+      "extent_raw": "32 yaprak",
+      "holder_or_owner_raw": "Cönkün aslı Âşık Âlimî (Süleyman Erdinç)dedir.",
+      "date_or_period_raw": "1326 (M.",
+      "poet_count_or_poem_count_raw": "1910) yılında Şarkışla’da tutulmuş olan bu cönkün aslı Âşık Âlimî (Süleyman Erdinç)dedir.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Virani",
+        "Turabi"
+      ],
+      "alevi_bektasi_route_terms": [
+        "Alevi-Bektasi",
+        "Oniki Imam",
+        "Hz Ali/Hasan/Huseyin"
+      ],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "26 Numaralı Cönk: R. 1326 (M. 1910) yılında Şarkışla’da tutulmuş olan bu cönkün aslı Âşık Âlimî (Süleyman Erdinç)dedir. Cönk 12x18 cm. boyutunda ve 32 yapraktır. Sivas-Şarkışla kaynaklı olan bu cönkte; Zekâî, Viranî, Turabî, Hulûsî, Hatayî, Yusuf, Veli, Necmî, Hüseyin, Hilmi Dede Haydarî, Halimî, Halî, Fedayî, Dâmenî ve Budala İsmail’in birer şiiri bulunmaktadır. Sonunda; “Muharir-i Emlek nahiyesine tabi’ Orta Karyeli Kahvecizade Başçavuş Mehmed Efendi tarafından yadigâr olmak üzere Mehmed Ağa’ya yazılmıştır. 1326” sözleriyle cönkün kime kim tarafından yazıldığı kaydedilmiştir. Buna göre cönkün, 1910 yılında yazıldığı anlaşılmaktadır. Cönkte rik’a ve ta’lik olmak üzere iki yazı karakteri vardır. Mahlassız şiir yoktur. Mısra sayıları her sayfada farklıdır. Alevi-Bektaşi edebiyatına ait örneklerin bulunduğu cönkte; Kerbela olayı, Hz. Ali ve On iki İmam’a sevgi vb. konular işlenmektedir."
+    },
+    {
+      "conk_no": 27,
+      "source_raw_line_start": 726,
+      "source_raw_line_end": 738,
+      "dimensions_cm_raw": "10x20 cm",
+      "extent_raw": "51 yaprak",
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "10x20 cm.",
+      "poet_count_or_poem_count_raw": "Cönkte; Kerem (4), Âşık Ömer (2), Gevherî, Fuzulî, Yunus Emre, Tüccarî, Sadıkî veNiyazî’nin birer şiiri bulunmaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Fuzuli"
+      ],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "27 Numaralı Cönk: Adana kaynaklıdır. 10x20 cm. boyutlarında ve 51 yapraktır. Nesih yazı karakteri ile yazılmıştır. Birçok sayfası okunamayacak derecede tahrip olmuştur. Cönkte; Kerem (4), Âşık Ömer (2), Gevherî, Fuzulî, Yunus Emre, Tüccarî, Sadıkî veNiyazî’nin birer şiiri bulunmaktadır. 7 adet de mahlassız şiir kayıtlıdır. 28. yaprakta bir mektup vardır. Bazı sayfalarında kayıtlı bulunan 1253 (1837),l254 (1838), 1295 (1878) tarihlerinden hareketle cönkün miladi1837-1879 tarihleri arasında tutulduğunu söyleyebiliriz."
+    },
+    {
+      "conk_no": 28,
+      "source_raw_line_start": 739,
+      "source_raw_line_end": 757,
+      "dimensions_cm_raw": "11x23 cm",
+      "extent_raw": "63 yaprak",
+      "holder_or_owner_raw": "Aslı Sivas-Yıldızeli-Yukarı Çakmak köyünden Mehmet Korkmaz’dadır.",
+      "date_or_period_raw": "28 Numaralı Cönk: Aslı Sivas-Yıldızeli-Yukarı Çakmak köyünden Mehmet Korkmaz’da olan cönk, 11x23 cm.",
+      "poet_count_or_poem_count_raw": "Cönkte; Yunus Emre, Talibî, Niyazî, Kevserî, Karacaoğlan, Hicabî Pervane, Gevherî, Âşık Ömer, Zikrî, Zarurî, Şemsî, Suzî, Salih Efendi, Sailoğlu, Nurî, Anî, Mevzunî, Masumî, Kaddî, İrfanî, Hilmî, Derunî, Âşık İbrahim, Âşık Garip, Âşık Abdî ve Ahmedî’nin şiirleri bulunmaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "28 Numaralı Cönk: Aslı Sivas-Yıldızeli-Yukarı Çakmak köyünden Mehmet Korkmaz’da olan cönk, 11x23 cm. boyutunda ve 63 yapraktır. Cönkte; Yunus Emre, Talibî, Niyazî, Kevserî, Karacaoğlan, Hicabî Pervane, Gevherî, Âşık Ömer, Zikrî, Zarurî, Şemsî, Suzî, Salih Efendi, Sailoğlu, Nurî, Anî, Mevzunî, Masumî, Kaddî, İrfanî, Hilmî, Derunî, Âşık İbrahim, Âşık Garip, Âşık Abdî ve Ahmedî’nin şiirleri bulunmaktadır. Ayrıca yirmi tane de mahlassız şiir, ilaç tarifi, büyü, Gurre-name, fıkhî konular, dualar, cönk sahibini ilgilendiren doğum tarihleri, mani ve müfretler de vardır. Bazı sayfalarında kaydedilmiş olan 1244 (l828), 1264 (l847), 1274 (l857) tarihlerinden hareketle cönkün l828-1857 yılları arasında tutulduğu söylenebilir. Nesih ve rik’a yazı karakterleri kullanılmıştır."
+    },
+    {
+      "conk_no": 29,
+      "source_raw_line_start": 758,
+      "source_raw_line_end": 768,
+      "dimensions_cm_raw": "11,5x18 cm",
+      "extent_raw": "31 yaprak",
+      "holder_or_owner_raw": "29 Numaralı Cönk: Sivas-Suşehri kaynaklı olup aslı Murat Bozkurt’tadır.",
+      "date_or_period_raw": "11,5x18 cm.",
+      "poet_count_or_poem_count_raw": "Yunus Emre, Hamdî, Şems-i Tebrizî, Necatî, İsmail Hakkı, İbrahim Efendi, Hafız ve Gevherî’nin şiiri bulunmaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [],
+      "alevi_bektasi_route_terms": [],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "29 Numaralı Cönk: Sivas-Suşehri kaynaklı olup aslı Murat Bozkurt’tadır. 11,5x18 cm. boyutunda ve 31 yapraktır. Yunus Emre, Hamdî, Şems-i Tebrizî, Necatî, İsmail Hakkı, İbrahim Efendi, Hafız ve Gevherî’nin şiiri bulunmaktadır. Bir kişi tarafından rik’a yazı karakteriyle okunaklı bir şekilde yazılmıştır. Sayfalarda mısra sayıları farklı ve oldukça aralıklıdır. Yedinci yaprakta yer alan R. 1320 tarihi, cönkün 1904 yılında yazıldığını göstermektedir."
+    },
+    {
+      "conk_no": 30,
+      "source_raw_line_start": 769,
+      "source_raw_line_end": 800,
+      "dimensions_cm_raw": "12x20 cm",
+      "extent_raw": "98 yaprak",
+      "holder_or_owner_raw": "Cönkün aslı, Yrd. Doç. Dr. Abdülkadir EMEKSİZ’dedir.",
+      "date_or_period_raw": "30 Numaralı Cönk: 12x20 cm.",
+      "poet_count_or_poem_count_raw": "Cönkün sonunda, sekiz sayfalık şiirlerin isimleri ve sayfa numaralarını gösteren bir fihrist bölümü vardır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Pir Sultan",
+        "Virani",
+        "Kaygusuz",
+        "Abdal Musa",
+        "Turabi"
+      ],
+      "alevi_bektasi_route_terms": [
+        "nefes"
+      ],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "30 Numaralı Cönk: 12x20 cm. boyutlarında olup deri kaplamalıdır. Cönkün aslı, Yrd. Doç. Dr. Abdülkadir EMEKSİZ’dedir. Arşivimizde bu cönkün fotokopisi vardır. Kâğıdından dolayı XX. yüzyılın başlarında yazılmış olabileceğini tahmin etmekteyiz. 98 yaprak olan bu cönkün herhangi bir yerinde ne zaman ve nerede yazıldığına dair herhangi bir bilgi bulunmamaktadır. Cönkün sonunda, sekiz sayfalık şiirlerin isimleri ve sayfa numaralarını gösteren bir fihrist bölümü vardır. Cönkte çok sayıda nefes yazılı olmakla beraber kıtalar (3 adet) ve müfretler (9 adet) de vardır. Şiirlerin bazıları mahlassızdır (4 adet). Şiirlerine yer verilen şairlerin başta gelenleri şunlardır: Abdal Musa, Ahi Ali, Bosnavî, Derviş Ruhî (Ruhullah), Derviş Şevket, Edib Harabî, Gaybî, Genç Abdal, Hamdî, Hasan Dede, Şah Hatayî, Haşim, Hicâbî, Hilmi (Hilmi Dede, Hilmi Gedayî), İbrahim Ethem, Kalender, Kaygusuz Sultan, Kazak Abdal, Kazak Ahmed, Kemter, Kul Himmet, Lâmi, Mesrur Abdal, Mirâtî, Muhitî, Mustafa Aczî, Nedimî, Oğlan Şeyh İbrahim Aksarayî, Öksüz Abdal, Perişanî, Pir Gaib Abdal, Pir Sultan Abdal, Rıza, Rıza Tevfik, Selâmî, Sersem Ali, Seyfullah, Seyranî, Sırrî, Şahî, Şîri, Tûrabî, Vasfî, VeliDede, Virânî, Yeksânî."
+    },
+    {
+      "conk_no": 31,
+      "source_raw_line_start": 801,
+      "source_raw_line_end": 820,
+      "dimensions_cm_raw": "9x16,5 cm",
+      "extent_raw": "43 yaprak",
+      "holder_or_owner_raw": "Aslı M. Sabri Koz’dadır; Kaya archive holds a photocopy.",
+      "date_or_period_raw": "31 Numaralı Cönk: 43 yapraktır ve 9x16,5 cm.",
+      "poet_count_or_poem_count_raw": "İçinde nefesler, ilahiler, semailer, gazeller, kıt’alar, müfretler (115 adet), mahlassız şiirler (37 adet), şifahî nesir bilgileri, hadis-i şerifler, kıssadan hisse ve namazın kılınışını anlatan nesir yazıları mevcuttur.",
+      "has_hakiki": true,
+      "high_value_cluster_terms": [],
+      "alevi_bektasi_route_terms": [
+        "nefes"
+      ],
+      "priority_for_hakiki_followup": "low_hakiki_followup_non_alevi_mixed_tekke_namesake_risk",
+      "followup_rationale": "Hakiki is explicitly listed, but the roster lacks the core Alevi-Bektasi cluster (Hatayi, Pir Sultan Abdal, Kul Himmet, Teslim Abdal, Virani) and instead leans mixed Ottoman tekke/divan with Hudai, Uftade, Niyazi, Nesati, Baki, and many mufret. Direct folio work is still useful for namesake control, but this is not a strong Alevi-route lead.",
+      "description_excerpt": "31 Numaralı Cönk: 43 yapraktır ve 9x16,5 cm. boyutlarındadır. Aslı M. Sabri KOZ’dadır. Arşivimizde bu cönkün fotokopisi bulunmaktadır. Kırık nesih yazısıyla yazılmıştır. İçinde nefesler, ilahiler, semailer, gazeller, kıt’alar, müfretler (115 adet), mahlassız şiirler (37 adet), şifahî nesir bilgileri, hadis-i şerifler, kıssadan hisse ve namazın kılınışını anlatan nesir yazıları mevcuttur. Ayrıca bir de Farsça mektup vardır. Şiirleri bulunan başlıca şairler şunlardır: Abdî, Âşık Ahmed, Âşık Ömer, Âşık Yunus (Yunus Emre), Bahrî, Bakî, Dertli Hasan, Derûnî, Derviş Ahmed, Derviş Ali, Eşrefoğlu Rumî, Fahrî, Fedaî, Gevherî, Hakikî, Hicâbî, Hüdaî, Kâtibî, Keremî, Kuloğlu, Mansur, Meftunî, Mustafa, Müdamî, Neşâtî, Niyazî, Nurî, Öksüz Âşık, Râcî, Sâdî, Sâdikî, Santurî, Sâyid, Sevdaî, Seyyidî, Şeyh Cemalî, Şeyh Efendi, Tâlibî, Üftade, Vasıf."
+    },
+    {
+      "conk_no": 32,
+      "source_raw_line_start": 821,
+      "source_raw_line_end": 835,
+      "dimensions_cm_raw": "13x22,5 cm",
+      "extent_raw": "50 yaprak",
+      "holder_or_owner_raw": "32 Numaralı Cönk: Aslı Lütfü SEĞMEN’dedir.",
+      "date_or_period_raw": "13x22,5 cm.",
+      "poet_count_or_poem_count_raw": "7 mahlassız şiir ve karşılıklı yazılmış birer mektup vardır.",
+      "has_hakiki": true,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Pir Sultan",
+        "Virani",
+        "Kaygusuz",
+        "Teslim Abdal",
+        "Sersem Abdal",
+        "Turabi",
+        "Fuzuli",
+        "Baba Ibrahim"
+      ],
+      "alevi_bektasi_route_terms": [
+        "nefes"
+      ],
+      "priority_for_hakiki_followup": "highest_hakiki_followup",
+      "followup_rationale": "Hakiki appears in the strongest Alevi-Bektasi cluster of the corpus, with Hatayi, Kul Himmet, Kul Nesimi, Pir Sultan Abdal, Sersem Abdal, Teslim Abdal, Turabi, Virani Abdal, Kaygusuz Sultan, and Fuzuli nearby.",
+      "description_excerpt": "32 Numaralı Cönk: Aslı Lütfü SEĞMEN’dedir. 50 yapraktır. 13x22,5 cm. boyutlarındadır. İçinde nefes, divan, gazel ve beyitler kayıtlıdır. 7 mahlassız şiir ve karşılıklı yazılmış birer mektup vardır. Rik’a yazısıyla yazılmıştır. Cönkte yer alan şairlerin mahlasları şunlardır: Âsâf, Baba İbrahim, Behlül, Dertli, Fahrî, Fuzulî, Garib, Garibî, Hakikî, Hatayî, Hengamî, Hüseyin, Hüsni, Kaygusuz Sultan, Kemter, Kul Himmet, Kul Nesimî, Mahsunî, Mehdî, Mirâtî, Nakdî, Niyazî, Pir Sultan Abdal, Rahmî, Remzî, Resmî, Ruhî, Sâfi, Sersem Abdal, Sersem Ali, Şâfi, Şem’i, Şemsî, Teslim Abdal, Turâbî, Virânî Abdal, Yesarî, Zâhid, Zâtî, Zihî, Ziyâ."
+    },
+    {
+      "conk_no": 33,
+      "source_raw_line_start": 836,
+      "source_raw_line_end": 861,
+      "dimensions_cm_raw": null,
+      "extent_raw": "Toplam 62 yaprak",
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": null,
+      "poet_count_or_poem_count_raw": "Tek ayaklı şiirlerde sık sık “eyzan” kullanılmış ve çoğuna “temam, tamam olundu, hıtam, yadigârdır canlarım” gibi ibareler konulmuştur.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Pir Sultan",
+        "Virani",
+        "Teslim Abdal"
+      ],
+      "alevi_bektasi_route_terms": [
+        "Saki Duasi",
+        "Salavat-name"
+      ],
+      "priority_for_hakiki_followup": "background_corpus_context",
+      "followup_rationale": "Useful for corpus comparison and poet-cluster frequency, but no item-level Hakiki lead is stated.",
+      "description_excerpt": "33 Numaralı Cönk: Toplam 62 yapraktır. Sonunda Hz. Muhammed Mustafa’ya salâvat verilip okuyana, yazana ve dinleyene dua edilmesi kaydı ve Ali Efendi’den Bektaş Efendi’ye yadigâr olarak tahrir edildiği kaydı düşülmüştür. Tek ayaklı şiirlerde sık sık “eyzan” kullanılmış ve çoğuna “temam, tamam olundu, hıtam, yadigârdır canlarım” gibi ibareler konulmuştur. İçinde; Pir Sultan Abdal, İsmail, Veli, Kul Mustafa, Sadık, Nesimî, Noksanî, Derviş Ali, Şah Hatayî, Viranî, Kul Himmet Üstadım, Feyzî, Pir Sultan, Mehemmed, Kul Sevindik, Hasreti, Derviş Süleyman, Âşıkî, Derviş Ali, Kul Himmet, Teslim Abdal, Süleyman, Derviş Mehmet, Kul Mehmet, Karacaoğlan, Sürurî’nin şiirleri; “Yılan Duası”, “Saki Duası”, “Salâvat-name-i İmameyn”, “Sülâle-i Nebi Aleyhim ecmain” yer almaktadır. Ayrıca bazı sayfalarda basur, sarılık, baş ağrısı, öksürük, kulak ağrısı, kuduz, kuru yara gibi hastalıklarla ilgili olarak birtakım şifa bilgileri verilmiştir."
+    },
+    {
+      "conk_no": 34,
+      "source_raw_line_start": 862,
+      "source_raw_line_end": 888,
+      "dimensions_cm_raw": "12x19cm",
+      "extent_raw": null,
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "1906’da yazılmıştır.",
+      "poet_count_or_poem_count_raw": "İçinde;Delikanlı, Nazmî,Sadık, Noksanî, Kusurî, Kelamî, Kul Edna, Şah Hatayî, Derviş Ali, Hatayî, Sefil Ali, Ragıbî, Pir Sultan, Sıdkî, Viranî, Feyzî, Cemâleddin, İsmail, Cefalı, Pir Sultan Abdal, Kalender Abdal, Abdal Pir Sultan, Fakir Edna, Nesimî, Dertli, Veli, Budala, Kul Budala, Dedemoğlu, Kul Himmet Üstadım, Derviş Ali, Âşık Hüseyin, Kul, Duran Abdal, Kemterî, Kul Âşık, Arif, Sefil, Feryadî, Hasreti, İradî, Viranî Abdal, Hüsnî, Ziya, Kaygusuz, Deli Şükrü, Kul Mustafa, Pir Sultan’ın Kızı (Senem), İrşadî, Yunus Emre, Er Mustafa, Öksüz Hızır, Rahmi, Öksüz Abdal, Kul Hatayî, Turabî, Niyazî‘nin şiirleri bulunmaktadır.Ayrıca cönkte “Saki Duası”, “Salâvat ü Name-i İmameyn”, “Sülâle-i Nebi Aleyhim Ecmain”, “Salavatullahi Teâla Aleyhim Ecmain”, “Mualecat-ı Hükame” başlıklı metinler yer almaktadır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Pir Sultan",
+        "Virani",
+        "Kaygusuz",
+        "Turabi"
+      ],
+      "alevi_bektasi_route_terms": [
+        "Saki Duasi",
+        "Salavat-name",
+        "Hz Ali/Hasan/Huseyin",
+        "kelime-i tevhid"
+      ],
+      "priority_for_hakiki_followup": "contextual_route_without_hakiki",
+      "followup_rationale": "No Hakiki is named in the published description, but the item is a strong Alevi-Bektasi route or private-archive node that can point to related conk holders.",
+      "description_excerpt": "34 Numaralı Cönk: Divriği kaynaklıdır. 1906’da yazılmıştır. Sonunda Latin harfleriyle “Hasan Yalıncaklı DivriğiAydoğanKöyü1928”notudüşülmüştür.62yaprakve12x19cm.boyutundadır.İlk sayfasına bir insan yüzü figürü çizilmiştir. Cönke kelime-i tevhidle başlanılmış olup Hz Ali’ye, Hz. Hasan’a ve Hz. Hüseyin’e övgüler yapılmıştır. İçinde;Delikanlı, Nazmî,Sadık, Noksanî, Kusurî, Kelamî, Kul Edna, Şah Hatayî, Derviş Ali, Hatayî, Sefil Ali, Ragıbî, Pir Sultan, Sıdkî, Viranî, Feyzî, Cemâleddin, İsmail, Cefalı, Pir Sultan Abdal, Kalender Abdal, Abdal Pir Sultan, Fakir Edna, Nesimî, Dertli, Veli, Budala, Kul Budala, Dedemoğlu, Kul Himmet Üstadım, Derviş Ali, Âşık Hüseyin, Kul, Duran Abdal, Kemterî, Kul Âşık, Arif, Sefil, Feryadî, Hasreti, İradî, Viranî Abdal, Hüsnî, Ziya, Kaygusuz, Deli Şükrü, Kul Mustafa, Pir Sultan’ın Kızı (Senem), İrşadî, Yunus Emre, Er Mustafa, Öksüz Hızır, Rahmi, Öksüz Abdal, Kul Hatayî, Turabî, Niyazî‘nin şiirleri bulunmaktadır.Ayrıca cönkte “Saki Duası”, “Salâvat ü Name-i İmameyn”, “Sülâle-i Nebi Aleyhim Ecmain”, “Salavatullahi Teâla Aleyhim Ecmain”, “Mualecat-ı Hükame” başlıklı metinler yer almaktadır."
+    },
+    {
+      "conk_no": 35,
+      "source_raw_line_start": 889,
+      "source_raw_line_end": 928,
+      "dimensions_cm_raw": "15x32 cm",
+      "extent_raw": "98 yaprak",
+      "holder_or_owner_raw": null,
+      "date_or_period_raw": "15x32 cm.",
+      "poet_count_or_poem_count_raw": "Cönk içerisindeAlevî-Bektâşî şairlerinden; Abdâl Musa, Âhu Baba, Âşık-ı Gedâ, Âşık Veli, Âşık Yunus, Biçâre, Derviş Ali, Derviş İbrahim, Derviş Muhammed, Er Mustafa, Fuzulî, Hatayî, Hüseyin, İrşâdî, Kaygusuz Abdal, Kul Himmet, Kul Veli, Muhammed, Muhyî, Nakşî, Nesimî Sultan, Niyazî, Noksanî, Pîr Sultan Abdal, Sefil Ali, Ulvî, Veli, VirânîSultan’ın şiirleri kayıtlıdır.",
+      "has_hakiki": false,
+      "high_value_cluster_terms": [
+        "Hatayi",
+        "Kul Himmet",
+        "Nesimi",
+        "Pir Sultan",
+        "Virani",
+        "Kaygusuz",
+        "Abdal Musa",
+        "Fuzuli",
+        "Haci Bektas Veli"
+      ],
+      "alevi_bektasi_route_terms": [
+        "Alevi-Bektasi",
+        "Oniki Imam",
+        "Tarik-i Imam Cafer",
+        "Haci Bektas Veli",
+        "Vucudname",
+        "Budalaname",
+        "Kitab-i Miglate"
+      ],
+      "priority_for_hakiki_followup": "contextual_route_without_hakiki",
+      "followup_rationale": "No Hakiki is named in the published description, but the item is a strong Alevi-Bektasi route or private-archive node that can point to related conk holders.",
+      "description_excerpt": "35 Numaralı Cönk: Divriği’nin Aydoğan köyünde tutulmuştur. 15x32 cm. boyutunda ve 98 yapraktır. Rik’a yazı çeşidi ile yazılmıştır. Yazılar siyah mürekkeplidir, ancak ayetlerin yer aldığı kısımlar kırmızı renkli mürekkeple yazılmıştır. Muhteva itibarı ile çeşitlilik gösterir. Cönk içerisindeAlevî-Bektâşî şairlerinden; Abdâl Musa, Âhu Baba, Âşık-ı Gedâ, Âşık Veli, Âşık Yunus, Biçâre, Derviş Ali, Derviş İbrahim, Derviş Muhammed, Er Mustafa, Fuzulî, Hatayî, Hüseyin, İrşâdî, Kaygusuz Abdal, Kul Himmet, Kul Veli, Muhammed, Muhyî, Nakşî, Nesimî Sultan, Niyazî, Noksanî, Pîr Sultan Abdal, Sefil Ali, Ulvî, Veli, VirânîSultan’ın şiirleri kayıtlıdır. Üç tane de mahlassız şiir bulunmaktadır. Ayrıca Oniki İmam’ın isimleri, On dört Masum-ı pâk ve şehit edilişleri, tarîkat ve şeriat makamları,“Tarîk-ı İmam Caferü’s Sâdık” başlıklı bir bölüm, Kaygusuz Abdâl’ın“Vücûdnâme” “Budalanâme” ve “Kitâb-ı Miglâte” adlı mensur eserlerinden bölümler ile Hacı Bektaş Veli’nin manzum Vasiyetnâme’si de yer almaktadır. “Budalanâme” ve “Kitâb-ı Miglâte” adlı eserler cönkte “Hezâ Kitâb-ı Pendnâme Evliyâ-yı Bektâşî Gaygusuz Baba” başlığı altında verilmiştir. Cönk içerisinde Lâtin harfleriyle yazılmış iki sayfa bulunma"
+    }
+  ],
+  "triage_notes": [
+    "Conk 32 remains the highest-value Hakiki lead because Hakiki appears in a dense Alevi-Bektasi cluster: Hatayi, Kul Himmet, Kul Nesimi, Pir Sultan Abdal, Sersem Abdal, Teslim Abdal, Turabi, Virani Abdal, Kaygusuz Sultan, and Fuzuli.",
+    "Conk 31 is a real unqualified Hakiki hit, but the surrounding roster is mixed Ottoman tekke/divan rather than Alevi-Bektasi; direct folio work should treat it primarily as namesake control and determine whether Hakiki is a full poem or a single beyit/mufret.",
+    "Conks 20, 22, 23, 34, and 35 are high-value contextual Alevi/Bektasi manuscript routes even without Hakiki in the published description; they may help map related private archives and transmission families.",
+    "The artifact should not be used to count witnesses. It is a route/triage table for future text acquisition."
+  ]
+}

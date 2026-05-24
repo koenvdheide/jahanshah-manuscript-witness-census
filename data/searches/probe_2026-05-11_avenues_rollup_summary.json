@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "session_label": "Roll-up summary: 6 Gemini-recommended new-witness-discovery avenues + Digital Orientalist 2023 residual closure",
+  "session_id": "avenues-rollup-2026-05-11",
+  "date": "2026-05-11",
+  "current_status_note": "Partially superseded by later 2026-05-11 artifacts and the current witness_register.json. In particular, Nuruosmaniye 04281 was reclassified from candidate_probably_yusuf_hakiki_or_other_homonym to rejected, and later Ilkhchi access-evidence review moved one witness from verified to verified_with_attribution_caveat. Current by_verification in witness_register.json is verified=7, verified_with_attribution_caveat=2, candidate_probably_non_cihansah=1, candidate_probably_yusuf_hakiki_or_other_homonym=0, lost_witness_attested_only=1, rejected=3, pending=0. The Ottoman avenue was deepened by probe_2026-05-11_ottoman_chunks_synthesis.json.",
+  "scope": "Synthesis across the 5 per-avenue probe artifacts produced this round (Caucasus primary-session, South Asia parallel probe A, Central Asia/Russia/Yerevan parallel probe B, Ottoman provincial/Sufi primary-session replacing failed parallel probe C, DO 2023 residual closure parallel probe D). Documents total reach, witness yield, future scope scope additions, methodological findings, and 2026-05-11 follow-up pass release-candidate readiness.",
+  "parent_context": "Records the 2026-05-11 regional follow-up batch against the current poetry-witness register state; no old repository commit marker is part of this public package.",
+  "geopolitical_caveat": "Iranian wartime intermittent shutdowns affect Iranian portal reachability (NLAI, Tehran U utdlib, Astan-e Quds, Malek, Majles, lib.eshia.ir, ketab.ir). Az/Geo/Am Caucasus portals are not affected. This round used direct public routing; results reflect the routing available during the probe.",
+  "artifacts_produced": [
+    {
+      "avenue": "1 Caucasus",
+      "file": "data/searches/probe_2026-05-11_avenue_caucasus.json",
+      "portals": 6,
+      "method": "primary-session WebFetch + WebSearch + scholarly trail triangulation"
+    },
+    {
+      "avenue": "4 South Asia",
+      "file": "data/searches/probe_2026-05-11_avenue_south_asia.json",
+      "portals": 6,
+      "method": "parallel probe A with WebFetch + WebSearch + printed catalogue OCR grep on Internet Archive"
+    },
+    {
+      "avenue": "2+3 Central Asia/Russia/Yerevan",
+      "file": "data/searches/probe_2026-05-11_avenue_central_asia_russia_yerevan.json",
+      "portals": 8,
+      "method": "parallel probe B with WebFetch + WebSearch + scholarly trail triangulation"
+    },
+    {
+      "avenue": "5+6 Provincial Ottoman/Sufi tekke",
+      "file": "data/searches/probe_2026-05-11_avenue_provincial_ottoman_sufi.json",
+      "portals": 6,
+      "method": "primary-session WebFetch + site-restricted WebSearch (replaces failed Parallel probe C output)"
+    },
+    {
+      "avenue": "Digital Orientalist 2023 residual closure (cross-cutting)",
+      "file": "data/searches/probe_2026-05-11_do2023_residual_closure.json",
+      "portals": 4,
+      "method": "parallel probe D with WebFetch + site-restricted WebSearch; query endpoint discovery"
+    }
+  ],
+  "session_totals": {
+    "total_portals_probed_this_round": 30,
+    "total_queries_executed": "approximately 100+ across all artifacts (Caucasus ~10, South Asia ~25, Central Asia/Russia/Yerevan ~20, Ottoman ~10, DO 2023 ~33)",
+    "verified_cihansah_witness_hits_new": 0,
+    "verified_cihansah_chancery_v2_scope_hits_new": 1,
+    "future_chancery_leads_added": 2,
+    "current_register_impact": "ZERO new witnesses. 14-entry baseline unchanged. One augmentation recommended to matenadaran_965 (Gazaryan provenance + 1959 YSU-Matenadaran consolidation + Hüseyinzadə Pedagogical-Institute clarification)."
+  },
+  "key_findings_by_avenue": {
+    "1_caucasus": "All 5 Az/Geo/Am popular-history Hagigi MS locations map onto existing current poetry-witness register entries (bl_or_9493, suleymaniye_fatih_3808, matenadaran_965, tehran_university_8198). manuscript.az 'newly acquired from Süleymaniye' is a copy/microfilm of Fatih 3808. manuscript.ge LIVE under direct-route (was ECONNREFUSED under alternate-route); test-mode operation; Persian Afshar-period scope (EAP1526) confirms post-Cihanşah holdings only. Matenadaran has no online search.",
+    "4_south_asia": "All 6 portals EXHAUSTED-NEGATIVE or BLOCKED. 8 of 14 grepped printed catalogues delivered strong negatives with healthy OCR (Bankipore Persian Vols II/III/XIII via Khuda Bakhsh, Ivanow 1924 + Mirza Ashraf Ali via Asiatic Society Kolkata). Bonus future scope chancery finding: Bodleian MS Pers d. 84 (Vol III entry 2711) is an insha collection containing one Cihansah firman to Sultan Muhammad II ~1455. Residual gaps: Salar Jung Vol IV (highest-yield window, 500MB PDF not retrieved); NAMAMI/Kriti Sampada (Indian-IP needed).",
+    "2_3_central_asia_russia_yerevan": "All 8 portals EXHAUSTED-NEGATIVE via web. Major triangulation finding: Az Wikipedia 'NYC Gazaryan -> Yerevan University -> Hüseynzade publication' narrative CONFLATES BL Or 9493's London examination with the Yerevan-held codex. Hüseyinzadə was at Yerevan Pedagogical Institute (NOT YSU); discovery 1961; first publication Yerevan 1966. Gazaryan-bequest codex is most plausibly Matenadaran MS 965 itself, via 1959 YSU-to-Matenadaran institutional consolidation per Iranica MATENADARAN. Bonus future scope chancery lead: Kostikyan Persian Decrees vols III (2005) + IV (2008) parallel to asnad.org. Tatar/Kazan/Bashkort portals all unresolvable/defunct.",
+    "5_6_provincial_ottoman_sufi": "All 4 site-restricted Google sweeps returned ZERO Cihanşah / Hakîkî / Karakoyunlu hits on yazmalar.gov.tr, katalog.isam.org.tr, mkutup.gov.tr, yazmaeserler.diyanet.gov.tr. Consistent with v1.0's TEIS Yesevi 5-witness Cihanşah roster being saturated via Islamisation DB (islam-anatolia.ac.uk). Yusuf Hakîkî Bursavi homonym risk concentrated at Bursa + Bektaşi tekke (Konya Hacı Bektaş BY0000010729 already in v1.0 with disambiguation methodology). The initial Ottoman provincial/Sufi pass was superseded by later chunked direct probes; the remaining gap was a browser certificate-handling pass at yazmalar.gov.tr.",
+    "do2023_residual_closure": "4 portals (MENA-DOC, HathiTrust, DLME, OPenn) EXHAUSTED-NEGATIVE. Methodological yield: query endpoint discoveries (MENA-DOC backend at hallelit.gbv.de Ha:Lit SPA; DLME Blacklight URL signatures; OPenn = Google site-search relay; HathiTrust UA-/Cloudflare-walled). One new homonym FP class documented: Mughal Shah Jahan (r. 1628-1658) vs Cihanşah Qaraqoyunlu (d. 1467). All 28 DO 2023 article resources now formally closed."
+  },
+  "register_actions_recommended": {
+    "augmentations_no_count_change": [
+      {
+        "target_entry": "matenadaran_965",
+        "augmentation_type": "additive metadata",
+        "new_field": "gazaryan_provenance_and_institutional_consolidation",
+        "content": "Pre-1959 institutional history: Az-language popular-history accounts (Az Wikipedia + Azertag.az + Azadliq.info) describe the codex as bequeathed by NYC Armenian collector Arutyun Gazaryan to 'Yerevan University' and discovered there by Lətif Hüseynzadə (Yerevan Pedagogical Institute, not YSU). Discovery 1961; first publication Yerevan 1966. Per Iranica MATENADARAN article, in 1959 the manuscript holdings of multiple Yerevan institutions including YSU were consolidated into Matenadaran. The 'Yerevan University' attribution in popular-history accounts is the pre-1959 institutional location of the codex now held as Matenadaran MS 965. The Az Wiki narrative additionally conflates this provenance with BL Or 9493's separate London examination; these are two different codices.",
+        "by_verification_impact": "ZERO; existing verified status retained",
+        "rationale": "Adds documented institutional-history context to an existing register entry. Increases scholarly defensibility of the matenadaran_965 entry by clarifying the popular-history-to-institutional-record mapping."
+      }
+    ],
+    "no_new_witnesses": "Zero entries added to witnesses[]. Current by_verification after later Nuruosmaniye and Ilkhchi reclassifications: verified=7, verified_with_attribution_caveat=2, candidate_probably_non_cihansah=1, lost_witness_attested_only=1, candidate_probably_yusuf_hakiki_or_other_homonym=0, rejected=3, pending=0 [sum=14, unchanged].",
+    "future_scope_backlog_additions": [
+      {
+        "id": "v2-chancery-bodleian-pers-d-84",
+        "source": "parallel probe A South Asia probe",
+        "content": "Bodleian MS Pers d. 84 (Vol III entry 2711) is an insha collection containing one Cihansah firman to Sultan Muhammad II ~1455. Adds to asnad.org corpus (21-23 docs) for future scope chancery scope."
+      },
+      {
+        "id": "v2-chancery-kostikyan-persian-decrees",
+        "source": "parallel probe B Central Asia/Russia/Yerevan probe",
+        "content": "Kostikyan, Persian Decrees vol III (2005) + vol IV (2008). Yerevan-published. Parallel chancery-document corpus to asnad.org. Paywalled on Academia.edu; ILL or direct purchase needed."
+      },
+      {
+        "id": "v2-mecmua-diyanet-hurufi",
+        "source": "primary-session Ottoman probe",
+        "content": "Diyanet yazmaeserler.diyanet.gov.tr holds [er-Risâle fî esrâri'l-hurûf] (id=931, materialType=YE), a Hurufi text. Per v1.0 Nesîmî-adjacency mecmûʿa heuristic, Diyanet Hurufi-text holdings are a future scope mecmûʿa-mining surface."
+      },
+      {
+        "id": "v2-codicology-milli-kutuphane-papertypelist",
+        "source": "primary-session Ottoman probe",
+        "content": "Milli Kütüphane dijital-kutuphane.mkutup.gov.tr/authority/papertypelist endpoint enumerates paper-type metadata for the manuscript holdings. Useful for future scope codicology-augmentation work; integrates with project's separate decorated-paper corpus."
+      }
+    ]
+  },
+  "homonym_matrix_expansion_recommended": {
+    "purpose": "Document false-positive name-collision classes encountered across all 5 avenue probes. Goes into a future future scope / 'disambiguation_taxonomy.json' artifact or as an augmentation to data/search_keys.json.",
+    "new_homonyms_to_disambiguation_taxonomy": [
+      {
+        "name": "Cihanşah Barlas",
+        "context": "14th-c. Timurid emir (Türkmen Barlas tribe, administrative)",
+        "discrimination_signal": "Not a poet; Timurid administrative figure"
+      },
+      {
+        "name": "Mir Jahanshah of Lar",
+        "context": "South Asian",
+        "source": "parallel probe A South Asia probe"
+      },
+      {
+        "name": "Muhammad Beg Hakiki",
+        "context": "South Asian Persian/Urdu",
+        "source": "parallel probe A South Asia probe"
+      },
+      {
+        "name": "Hakiki Gujarati",
+        "context": "South Asian Gujarati Sufi",
+        "source": "parallel probe A South Asia probe"
+      },
+      {
+        "name": "Pir Muhammad Jahangir",
+        "context": "Mughal religious figure",
+        "source": "parallel probe A South Asia probe"
+      },
+      {
+        "name": "fHaqiqi in IO Two Collections",
+        "context": "Browne 1902, page 11 = Persian Mathematics; likely Yusuf Hakîkî Bursavi or other homonym",
+        "source": "parallel probe A South Asia probe"
+      },
+      {
+        "name": "Mughal Shah Jahan",
+        "context": "Mughal emperor r. 1037-1068 AH / 1628-1658 CE",
+        "discrimination_signal": "Date filter (Cihanşah d. 1467) resolves trivially; Latin transliteration 'Jahanshah' vs 'Shah Jahan' is reversible",
+        "source": "parallel probe D DO 2023 residual closure"
+      },
+      {
+        "name": "Hakîkî (Kurdish 18th-c.)",
+        "context": "NLR Курд. 26 Сборник газелей XVIII в.",
+        "source": "prior 2026-05-11 NLR probe; already documented in v1.0 follow-ups"
+      },
+      {
+        "name": "Yusuf Hakîkî Bursavi",
+        "context": "Ottoman, Bursa, Bektashi-Hurufi initiate, d. 893 AH / 1487 CE",
+        "discrimination_signal": "Bursa/Bektaşi/Hurufi context cluster; post-893 AH dating with Ottoman context",
+        "source": "v1.0 baseline + reaffirmed across all 2026-05-11 probes"
+      },
+      {
+        "name": "Hakîkî (Anatolian aşık tradition)",
+        "context": "Folk-poet tradition distinct from Cihanşah",
+        "source": "v1.0 follow-ups; Konya Hacı Bektaş BY0000010729 mecmûʿa-adjacency analysis"
+      }
+    ]
+  },
+  "methodological_findings_consolidated": [
+    "VPN routing affects portal reachability signatures: manuscript.az returned socket-closed under alternate-route, HTTP 200 under direct-route; manuscript.ge returned ECONNREFUSED under alternate-route, REACHABLE_TEST_MODE under direct-route. VPN-routed false-negatives are a documented hazard for Az/Geo/Am portal probing.",
+    "Site-restricted Google indexing is a Playwright substitute with a known false-negative class for JS-rendered SPA catalogues; suggestive but not definitive of 'no record exists'.",
+    "Parallel probe work should checkpoint findings incrementally so successful search evidence is not lost when final synthesis fails.",
+    "Popular-history Azerbaijani-language provenance accounts (Az Wikipedia + Azadliq + Azertag) conflate institutional consolidation events (1959 YSU-Matenadaran transfer) and can manufacture apparent 'multiple witnesses' from a single codex at different institutional moments. Cross-check against Iranica MATENADARAN before treating popular-history MS locations as distinct.",
+    "Islamisation DB (islam-anatolia.ac.uk) is the canonical Anatolian Cihanşah witness-discovery surface. Turkish public-facing portals (yazmalar, ISAM, Milli Kütüphane, Diyanet) appear to host the same records under different institutional fronts without adding new Cihanşah witnesses in site-restricted indexing.",
+    "Newly-acquired-manuscripts logs on institutional websites are an under-exploited probe surface: AMEA manuscript.az main page acquisition-table directly mentioned 'Jahanshah Hagigi (1405-1467)' obtained from Süleymaniye, providing a direct institutional-self-disclosure of a register-existing entry.",
+    "OCR quality as confidence modifier: parallel probe A's distinction between 'strong negative with healthy OCR' (Bankipore Vols II/III/XIII grep quality at 7-8/13 QA hits) and 'degraded OCR residual gap' (Rampur 0-1/14) is the right epistemic posture for printed-catalogue grep-mining."
+  ],
+  "release_readiness": {
+    "current_register_unchanged": true,
+    "by_verification_current_after_later_reclassification": "verified=7, verified_with_attribution_caveat=2, candidate_probably_non_cihansah=1, lost_witness_attested_only=1, candidate_probably_yusuf_hakiki_or_other_homonym=0, rejected=3, pending=0 [total=14]",
+    "artifacts_to_commit": [
+      "data/searches/probe_2026-05-11_avenue_caucasus.json",
+      "data/searches/probe_2026-05-11_avenue_south_asia.json",
+      "data/searches/probe_2026-05-11_avenue_central_asia_russia_yerevan.json",
+      "data/searches/probe_2026-05-11_avenue_provincial_ottoman_sufi.json",
+      "data/searches/probe_2026-05-11_do2023_residual_closure.json",
+      "data/searches/probe_2026-05-11_avenues_rollup_summary.json",
+      "data/search_keys.json (script_families block; Phase 0 artifact, merged from former data/search_keys_extended_2026-05-11.json)",
+      "data/witness_register.json (matenadaran_965 augmentation only)"
+    ],
+    "release_blocker_residual_gaps": [
+      "(yazmalar.gov.tr residual gap FALSIFIED post-rollup-write by 2026-05-11 Ottoman chunk C1; portal is DEFINITIVELY DEAD, not cert-walled; nginx 404 across all paths after TLS bypass; ZERO Wayback snapshots; operational catalogue is portal.yek.gov.tr already covered by v1.0 yek-search agent. See data/searches/probe_2026-05-11_ottoman_chunks_synthesis.json residual_gaps_revised block for current authoritative gap list.)"
+    ],
+    "ottoman_chunks_deep_probe_addendum": "After this rollup was written, the Ottoman avenue was DEEPENED via 4 chunked parallel parallel probes (data/searches/probe_2026-05-11_ottoman_chunk{1,2,3,4}_*.json + data/searches/probe_2026-05-11_ottoman_chunks_synthesis.json). Cumulative additions: 6 Yusuf Hakîkî MSS audit (Konya cluster + Süleymaniye Hacı Mahmud Efendi sub-collection); 2 new FP classes (Cihan Şah honorific-dedicatory-frame; Anatolian aşık-tradition Hakîkî re-classification); ISAM T811.225/T811.215 call-number disambiguation system; Google-false-negative-class-on-Yordam methodological finding; Değirmençay 2021 future scope edition; Diyanet Hurufi text id 931 future scope mecmûʿa-mining lead. Net Ottoman avenue Cihanşah witnesses: 0; v1.0 14-entry register impact: 0.",
+    "user_action_pending": "User performs final git push + Zenodo publish under the project public-publishing boundary Public-Facing Publishing rule. Per user prior direction: 'After avenue probes (batch into one release)' = batch all 2026-05-11 work as 2026-05-11 follow-up pass."
+  },
+  "audit_metadata": {
+    "record_type": "methodological_record",
+    "record_date": "2026-05-11",
+    "artifact_status": "superseded",
+    "source_layers": [
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "methodological_record",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

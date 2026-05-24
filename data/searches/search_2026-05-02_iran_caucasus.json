@@ -1,0 +1,368 @@
+{
+  "search_session": {
+    "scope": "Iran / Caucasus / Central Asia portal sweep + scholarly backchain for Jahānshāh Qaraqoyunlu (Ḥaqīqī) witnesses",
+    "date": "2026-05-02",
+    "field_searched": "konu",
+    "term_searched": "حقیقی / جهانشاه / Cahanşah Həqiqi / Cihanşah Hakîkî / Хакики (multi-term, multi-script)",
+    "operator": "İçeren",
+    "raw_result_count": 0,
+    "_note": "This is not a YEK portal search session. Schema is reused for parity with sibling UK and Turkey sweep outputs. The 'results' array below records every Iranian/Caucasian/Central Asian portal hit, scholarly hit, OR confirmed null result against the priority targets in the Iran sweep brief. raw_result_count is 0 in the strict YEK sense. genuine_count, false_positive_count and false_positive_rate are zero because no YEK records were retrieved.",
+    "portals_consulted": [
+      {
+        "portal": "Iran NLAI portal (nlai.ir, opac.nlai.ir, dl.nlai.ir, sana.nlai.ir, fankha)",
+        "status": "blocked",
+        "blocking_mode": "ECONNREFUSED on direct HTTP fetch from outside Iran; third-party HTML mirroring returns 422; SANA platform serves periodicals only (not manuscripts). No DENA/FANKHA online interface located.",
+        "evidence_url": "https://digitalorientalist.com/2023/02/10/digital-resources-for-the-study-of-persian-manuscripts/",
+        "evidence_quote": "National Library of Iran (NLAI) URL: https://opac.nlai.ir/opac-prod/index1.jsp: Access note: Requires Iranian IP address"
+      },
+      {
+        "portal": "Tehran University Central Library (library.ut.ac.ir, utdlib.ut.ac.ir)",
+        "status": "blocked",
+        "blocking_mode": "ECONNREFUSED on direct HTTP fetch; the international.ut.ac.ir English page resolves but is non-searchable. Per Digital Orientalist 2023, 'Tehran University accepts orders of manuscripts through their Telegram channel @Manuscripts_lib': i.e., no public catalogue API.",
+        "evidence_url": "https://digitalorientalist.com/2023/02/10/digital-resources-for-the-study-of-persian-manuscripts/"
+      },
+      {
+        "portal": "Majlis Library (ical.ir, mirasebaharestan.ical.ir)",
+        "status": "blocked",
+        "blocking_mode": "ECONNREFUSED. Digital Orientalist 2023 reports Majlis Digital Library 'temporarily out of service' as of last review.",
+        "evidence_url": "https://digitalorientalist.com/2023/02/10/digital-resources-for-the-study-of-persian-manuscripts/"
+      },
+      {
+        "portal": "Astan-e Quds Razavi (aqlibrary.org, digital.aqlibrary.ir)",
+        "status": "blocked",
+        "blocking_mode": "ECONNREFUSED. Per Digital Orientalist 2023, 'Astan-i Qods Library URL: http://digital.aqlibrary.ir/index.aspx?pid=16&CollectionID=61. Offering: Limited digitized codices'. Site refused connection from outside Iran.",
+        "evidence_url": "https://digitalorientalist.com/2023/02/10/digital-resources-for-the-study-of-persian-manuscripts/"
+      },
+      {
+        "portal": "Marashi-Najafi Library (marashilibrary.com, mtif.org Marashi catalogue index)",
+        "status": "blocked",
+        "blocking_mode": "403 Forbidden on marashilibrary.com via direct HTTP fetch and third-party HTML mirroring. Bonyad-i Muhaqqiq Tabataba'i (mtif.org) catalogue index returns ECONNREFUSED. The library's printed catalogue runs to ≥66 volumes but no online search interface located. Per the Wellcome Collection record, Mahmoud Marashi 1997 'An introduction to the collection of Islamic manuscripts in the library of Ayat Allah Marashi Najafī' is an unpublished paper (6 pp.): no codicological detail accessible online.",
+        "evidence_url": "https://wellcomecollection.org/works/hmqepn45"
+      },
+      {
+        "portal": "Malek National Library (malekmuseum.org)",
+        "status": "blocked",
+        "blocking_mode": "ECONNREFUSED"
+      },
+      {
+        "portal": "Matenadaran (matenadaran.am, armenian-manuscripts-index.com)",
+        "status": "accessible_partial",
+        "blocking_mode": "Site loads but the Mayr Tsutsak (Main Catalogue) is published in 8 volumes covering Armenian MSS; the Foreign-Language Fund catalogue (Persian/Turkish/Arabic) is NOT searchable online. Kostikyan 2017 'Catalogue of Persian Manuscripts in the Matenadaran' (academia.edu) covers MSS 1–~70 only: does not reach MS 965.",
+        "evidence_url": "https://matenadaran.am/en/matenadaran/digital-resources/grand-catalogue-of-manuscripts/"
+      },
+      {
+        "portal": "AMEA Manuscripts Institute, Baku (manuscript.az)",
+        "status": "accessible_partial",
+        "blocking_mode": "Main pages render via direct HTTP fetch; the e-katalog at manuscript.az/ek is described as searchable (4,427 rare printed and lithograph items as of latest indexing) but the search interface itself is not directly executable via direct HTTP fetch. Most importantly: see new finding below.",
+        "evidence_url": "https://www.manuscript.az/index.php?17%2F385459.html"
+      },
+      {
+        "portal": "Tabriz Milli Kütüphanesi (referred via Çınarcı 2009 article)",
+        "status": "no_haqiqi_witness",
+        "blocking_mode": "Çınarcı's 2009 catalogue addendum (academia.edu) lists 30+ Turkish/Turkish-Persian manuscripts at Tabriz Milli Kütüphanesi by shelfmark. NONE attribute to Cihanşah / Hakîkî. The closest hit is 'Dîvân-ı Neş'e (No: 2626)' attributed to a poet 'descended from Cihan Şah'. Tabriz can be ruled out for direct Hakîkî witnesses.",
+        "evidence_url": "https://www.academia.edu/40524308/TEBR%C4%B0Z_M%C4%B0LL%C4%B0_K%C3%9CT%C3%9CPHANES%C4%B0NDE_BULUNAN_T%C3%9CRK%C3%87E_EL_YAZMALARINA_EK_ADD%C4%B0T%C4%B0ON_TO_TURKISH_MANUSCRIPTS_IN_TABRIZ_NAT%C4%B0ONAL_LIBRARY"
+      },
+      {
+        "portal": "DENA / FANKHA (Iran union catalogue, V.5 2010 covers divans)",
+        "status": "accessible_via_proxy_publication",
+        "blocking_mode": "No live online interface located. DENA (Dereyâtî 2010) Vol.5 contents mediated through Ay 2013 article (Dergipark): full text retrieved.",
+        "evidence_url": "https://dergipark.org.tr/tr/download/article-file/53658"
+      },
+      {
+        "portal": "Tashkent (al-Beruni Inst., IVANUz)",
+        "status": "no_search_executed_low_priority",
+        "blocking_mode": "Single-sweep was planned but no direct search interface located. al-Beruni's 26,000-volume Arabic-script collection is catalogued in Russian-language SVR series; not online-searchable for Western-language queries."
+      },
+      {
+        "portal": "Dushanbe Beruni Institute / Almaty",
+        "status": "no_search_executed_low_priority",
+        "blocking_mode": "No online search interface; outside the effort budget."
+      }
+    ],
+    "results": [
+      {
+        "yek_id": "tehran_8198_codicology_deepening",
+        "title": "Tehran University Central Library MS 8198: codicological data assembled from cross-source backchain",
+        "author": "Cihanşah Hakîkî (Jahānshāh Qaraqoyunlu)",
+        "collection": "Tehran University Central Library (Kitābkhāna-yi Markazī-yi Dānishgāh-i Tihrān)",
+        "shelfmark": "Tahran-Danişgah Ktp. n. 8198",
+        "date_ah": "10th c. AH",
+        "date_ce": "16th c. CE",
+        "paper_field": null,
+        "notes_field": "Düzgün (academia.edu/43146022): 143 ff., nesta'liq, Persian + Turkish. Ay 2013 (Dergipark): 133 varak, nestalik, h.10.yy. Verbatim Ay 2013: 'Tahran-Danişgah Ktp., n.8198, Mesnevinin arkasından Türkçegazel ve rubâiler hece tertibine göre sıralanmıştır. Zeria'da (C.9, s.259) ve Fer-heng-i Sühanveran'da (s.169) birçok tane Hakikî mahlaslı şair yazılmıştır: Cihanşah Karakoyunlu Türkman 872'de öldürülmüştür, Mustafa Bağdadî 963'te hayattadır, Peri Ruh Hanım Şah I. Tahmasb'ın kızı, Mirza Muhammed Beg Ahmed Abadi Kecratî 11.yy.da yaşamıştır. (Münzevî, s.2301). nestalik, h.10.yy, 133 varak.' RECONCILIATION: Düzgün (143 ff.) vs. Ay (133 ff.): likely a typo in one source; cite Ay's 133 with caveat. Decoration / paper / illumination NOT recorded in either source; this remains an unresolved question for direct catalogue access.",
+        "decoration_field": null,
+        "classification": "none",
+        "is_false_positive": false,
+        "false_positive_reason": null,
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "moderate",
+        "notes": "Critical leverage point: AzerTAC 2012 announces that Alemdârî's 1391 (=2012) Tehran-Fîrûzân edition based on this MS includes 'photographic reproductions of the original manuscript' (verbatim claim). If the printed Tehran 2012 edition reproduces folios, the paper question for one witness is RESOLVABLE via that edition. AzerTAC 22 Nov 2012 verbatim: 'photographic reproductions of the original manuscript' alongside Latin transliteration. The same AzerTAC source claims the MS is 'written in the poet's own hand': this is editorial overstatement (Jahānshāh d. 1467; the MS is dated 10th c. AH = 1494–1591 per Ay 2013) and should be flagged as bibliographic puffery, not as a credible autograph claim. Source URL: https://azertag.az/xeber/Mirze_Cahansah_Heqiqinin_Divani_Tehranda_ilk_defe_Azerbaycan_ve_fars_dillerinde_nesr_olunmusdur-193626"
+      },
+      {
+        "yek_id": "matenadaran_965_codicology_deepening",
+        "title": "Matenadaran MS 965: codicology from Düzgün via Macit + Hüseyinzade",
+        "author": "Cihanşah Hakîkî (Jahānshāh Qaraqoyunlu)",
+        "collection": "Mesrop Mashtots Institute of Ancient Manuscripts (Matenadaran)",
+        "shelfmark": "MS 965",
+        "date_ah": "9th c. AH (879/1474–75 per Rahimov 1986: 4)",
+        "date_ce": "1474–1475 CE",
+        "paper_field": null,
+        "notes_field": "Düzgün (academia.edu/43146022) reports: 'Erivan Matenadaran Archive No. 965: Contains 61 Turkish gazels, 16 tuyugs, and 78 Persian gazels. Scholar Latif Hüseyinzade suggested it might be an autograph copy.' This figures contradict Macit 2000's (Bilig 13) summary: Macit reports the Erivan MS = the EARLIEST DATED nüsha (879/1474–75, copied 7–8 yrs after Jahānshāh's death) yet does NOT give Mat 965 codicology because his 2000 article relies on the Baku 1986 edition (Rahimov et al.) for Erivan readings, NOT on direct examination. Hüseyinzade (1966 Yerevan edition) is the only scholar to have personally examined Mat 965 and his autograph hypothesis is likely a circular argument from earliness, not direct codicological evidence.",
+        "decoration_field": null,
+        "classification": "none",
+        "is_false_positive": false,
+        "false_positive_reason": null,
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "moderate",
+        "notes": "Az.Wikipedia (Cahanşah article) provides the provenance trajectory of the Mat 965 codex: and surfaces a crucial detail: 'Mat 965 was acquired by the Matenadaran via a bequest from Armenian collector Arutyun Qazaryan (Hagop Gazarian) in New York'. This is THE SAME provenance trajectory often associated with BL Or 9493 (Istanbul → Alexandria → London): strongly suggesting Az.Wikipedia conflates the two codices (likely error). Mat 965's actual provenance per Düzgün (Persian gazels = 78 vs BL 105+1) is a fundamentally different codex with a different content profile. Decoration/paper data NOT recorded in any open-access source. Hüseyinzade 1966 (Yerevan, Soviet Armenian academic press) is the ONE potential primary source for Mat 965 codicology: not located online; candidate for archive.org / hard-copy retrieval."
+      },
+      {
+        "yek_id": "amea_baku_2021_acquisition",
+        "title": "AMEA Manuscripts Institute, Baku: registry entry #38: 'manuscript copy of Cahanşah Həqiqi's Divan'",
+        "author": "Cihanşah Hakîkî",
+        "collection": "AMEA (Azerbaijan National Academy of Sciences) Məhəmməd Füzuli adına Əlyazmalar İnstitutu, Baku",
+        "shelfmark": "(no shelfmark registered yet; 'New Acquisitions Registry' entry #38)",
+        "date_ah": null,
+        "date_ce": "Acquired 12.01.2021 from İstanbulun Süleymaniyyə kitabxanası, Türkiyə",
+        "paper_field": null,
+        "notes_field": "Verbatim: 'Azərbaycan şairi, Qaraqoyunlu dövlətinin hökmdarı Cahanşah Həqiqinin (1405-1467) \"Şeirlər toplusu – Divan\"ının əlyazma surəti'. The phrase 'əlyazma surəti' literally means 'manuscript copy' but in 21st-c. Azerbaijani institutional usage often denotes a microfilm or photographic reproduction acquired for research access: NOT a separately produced codex. Source: Süleymaniye Library, Istanbul.",
+        "decoration_field": null,
+        "classification": "none",
+        "is_false_positive": false,
+        "false_positive_reason": null,
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "moderate",
+        "notes": "MAJOR FINDING: Reopens (partially) the previously rejected 'Baku' question. The candidate-evidence research 2026-05-02 flagged a Baku codex risk and rejected the baku_doerfer_unspecified entry on the basis that Rahimov-Hüseyinzade-Aliyev 1986/2006 was an EDITION not a codex. Now: AMEA entry #38 (Jan 2021) is a separately registered photocopy/microfilm of a Süleymaniye Cahanşah Həqiqi divan, almost certainly Süleymaniye Fatih 3808. NEW WITNESS RECOMMENDATION: do not promote to active witness register, but log as a derived/reproduction copy. Worth flagging since it gives Baku-based scholars working access to Fatih 3808: explaining how recent Azerbaijani publications (Nəcəf 2023; Sohrabiabad-Akın 2019) can engage with the Süleymaniye witness without travelling to Istanbul. Source URL: https://www.manuscript.az/index.php?17%2F385459.html"
+      },
+      {
+        "yek_id": "diyarbakir_ulutuk_conk",
+        "title": "Diyarbakır Ulutürk village Cönk: fragment witness containing 8 Hakikî gazels",
+        "author": "Cihanşah Hakîkî (and others: multi-author cönk)",
+        "collection": "İmam Zeynel Abidin Ocağı (Alevi lodge, private hands)",
+        "shelfmark": "(none: held by Abbas Önen, lodge elder)",
+        "date_ah": null,
+        "date_ce": "1860s (transcribed by İbrahim Halil Dede); surviving copy late 19th c.",
+        "paper_field": null,
+        "notes_field": "From Sohrabiabad & Akın 2019, 'Tarihi Bulgular ve Hakîki'nin Bilinmeyen Şiirlerinden Hareketle Karakoyunluların Mezhebi Eğilimleri Üzerine Yeni Tespit ve Görüşler', Alevilik-Bektaşilik Araştırmaları Dergisi 19 (2019): 179-223. Location: Ulutürk (Darlı/Türkdarlı) village, Bismil district, Diyarbakır province, Turkey. Owner: İmam Zeynel Abidin Ocağı; held by Abbas Önen, a lodge elder. Contents: 8 ghazals attributed to Hakikî alongside works by Seyyid Nesimî, Seyyid Niazmoğlu, Şah Hatayî, and other Ottoman-era poets. Script: Rika. Language Features: Old Anatolian Turkish with Azerbaijani characteristics. Codicological details (paper, dimensions, foliation, illumination) not explicitly extracted from the open-access summary at this point in the cycle. ",
+        "decoration_field": null,
+        "classification": "none",
+        "is_false_positive": false,
+        "false_positive_reason": null,
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "high",
+        "notes": "NEW FRAGMENT WITNESS recommended for canonical register. While 19th-century date means zero codicological relevance to BL Or 9493's paper question, this is textually significant: the Hakîkî material survived in Alevi shrine liturgical transmission (Ocak tradition) outside the divan tradition. Co-located with Nesimî (matching the Ankara MK A 5252 pattern). Discovery source verifiable via the academia.edu PDF link AND the Nevşehir University acık erişim repository: https://acikerisim.nevsehir.edu.tr/handle/20.500.11787/3546"
+      },
+      {
+        "yek_id": "ilkhchi_kirklar_ocak_archive",
+        "title": "Ilkhchi (İlhıcı) Kırklar (Celten) Ocağı archive: 'complete divan of Hakîkî' in private hands",
+        "author": "Cihanşah Hakîkî",
+        "collection": "Kırklar (Celten) Ocağı (Alevi lodge, private archives of pirs)",
+        "shelfmark": "(none: private holding)",
+        "city": "Ilkhchi (İlhıcı), Iranian Azerbaijan (East Azerbaijan province, Iran)",
+        "country": "Iran",
+        "date_ah": null,
+        "date_ce": "Date not stated; presumably 19th–20th c. (typical of Alevi archive material)",
+        "paper_field": null,
+        "notes_field": "Sohrabiabad & Akın 2019: '[A] complete Hakikî Divan, with gazals employed liturgically as Hakikî Kelams (sacred recitations) during cem rituals. Status: Unpublished; not yet shared with the broader scholarly community. Significance: This collection contains poems with Alevi theological terminology, distinguishing it from previously known Hakikî manuscripts.' The article additionally notes 'a complete divan of Həqiqi held by Turkish families from Ilkhchi' may refer to this same archive OR to a separate private holding.",
+        "decoration_field": null,
+        "classification": "none",
+        "is_false_positive": false,
+        "false_positive_reason": null,
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "moderate",
+        "notes": "NEW WITNESS: provisional. Logged at moderate confidence because (1) only one secondary-source attestation, (2) physical access not confirmed, (3) date and codicological data wholly absent. Critical importance: Ilkhchi sits in EAST AZERBAIJAN province of Iran (south of Tabriz): the heartland of Cihanşah's milieu: making it the most plausible new witness location to find pre-1900 codices. Access requirement: contact Sohrabiabad/Akın directly for catalogue/photo access. Verification: the Düzgün source on Cahanşah Divan also cites the Nəcəf 2023 article ('Qaraqoyunlu hökmdarı Cahanşah Həqiqinin yeni tapılan şeirləri') in tall.edu.az, which independently mentions 'Ilkhchi' as a Hakikî location: partial cross-confirmation. URLs: https://tall.edu.az/az/archive-articles/198/qaraqoyunlu-h-ouml-kmdari-cahansah-heqiqinin-yeni-tapilan-seirleri.html ; https://www.academia.edu/53164068/"
+      },
+      {
+        "yek_id": "marashi_najafi_qom_negative_result",
+        "title": "Marashi-Najafi Library, Qom: no online evidence of Hakîkî codex; printed catalogue ≥66 vols.",
+        "author": null,
+        "collection": "Kitābkhāna-yi ʿUmūmī-yi Hazrat-i Āyat Allāh al-ʿUzmā Marʿashī Najafī, Qom",
+        "shelfmark": null,
+        "date_ah": null,
+        "date_ce": null,
+        "paper_field": null,
+        "notes_field": "Searches for 'حقیقی + قراقویونلو + کتابخانه آیة الله مرعشی' returned zero hits. The Hüseyin Muttaki 2002 'Fihrist-i Nüshahâ-yı Hatt-ı Türkî Kitaphane-i Bozorg Hazreti Ayetullâh el-Uzma Marʿaşî Necefî' (Qom 2002): the Turkish-MSS specialist catalogue for the library: was cited by Ay 2013 fn. 1 but is not online; Ay 2013 itself did NOT extract a Hakîkî entry from Muttaki, indicating either no Hakîkî witness at Marashi or its omission from Ay's selection.",
+        "decoration_field": null,
+        "classification": "none",
+        "is_false_positive": false,
+        "false_positive_reason": "Confirmed null result, not a false positive",
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "moderate",
+        "notes": "Status: probable absence (negative confirmation). Marashi printed catalogue Vols. 65-66 announced 2024 (per marashilibrary.com news); Vol. 6 of the index ('Rahnema-ye Faharis') announced separately. Until a full-corpus search of the printed catalogue is done by hand, cannot exclude a Marashi witness, but no evidence found."
+      },
+      {
+        "yek_id": "astan_quds_razavi_negative_result",
+        "title": "Astan-e Quds Razavi (Mashhad): no Hakîkî witness identified",
+        "author": null,
+        "collection": "Astan Quds Razavi Central Library, Mashhad",
+        "shelfmark": null,
+        "date_ah": null,
+        "date_ce": null,
+        "paper_field": null,
+        "notes_field": "Direct portal blocked. Ay 2013's DENA-derived survey of Iranian Türkçe divans includes Mashhad-Razavi shelfmarks (Items 10 'Bineş Zehbî' n.9344/9342; Item 18 'Hâfız Şirâzî tercüme' n.1502): none attribute to Hakîkî. Mashhad-based Hakîkî witness probability: very low.",
+        "decoration_field": null,
+        "classification": "none",
+        "is_false_positive": false,
+        "false_positive_reason": "Confirmed null result",
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "moderate",
+        "notes": "Status: probable absence."
+      },
+      {
+        "yek_id": "tabriz_milli_negative_result",
+        "title": "Tabriz Milli Kütüphanesi: Çınarcı 2009 catalogue addendum confirms NO Hakîkî witness",
+        "author": null,
+        "collection": "Kitābkhāna-yi Millī-yi Tabrīz",
+        "shelfmark": null,
+        "date_ah": null,
+        "date_ce": null,
+        "paper_field": null,
+        "notes_field": "Çınarcı, 'Tebriz Millî Kütüphanesinde Bulunan Türkçe El Yazmalarına Ek', Journal of Academic Social Science Studies 2.2 (Winter 2009): 61-72. Lists 30+ Turkish/Turkish-Persian MSS by shelfmark; closest hit is 'Dîvân-ı Neş'e (No. 2626)' attributed to a poet 'descended from Cihan Şah': not Cihanşah himself. Verbatim quote: 'Karakoyunlu hükümdarı Cihan Şah'ın torunlarındandır' (Dîvân-ı Neş'e, No: 2626). Despite Cihanşah's Tabriz political base (Blue Mosque 1456, Aq Qoyunlu/early Safavid capital), no contemporary or later Tabriz copy of his divan survives in the Milli library.",
+        "decoration_field": null,
+        "classification": "none",
+        "is_false_positive": false,
+        "false_positive_reason": "Confirmed null result with primary-catalogue evidence",
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "high",
+        "notes": "Decisive null. The expectation that Tabriz might harbor a contemporary copy (Cihanşah's own court city, where the MSS would have been first produced) is FALSIFIED for the Milli Kütüphanesi at least. Possible explanation: Cihanşah's court library was dispersed by Uzun Hasan's 1467 conquest: codices likely moved to Tebriz private collections then dispersed further (cf. Selim I's 1514 captures → Istanbul). Source URL: https://www.academia.edu/40524308/"
+      },
+      {
+        "yek_id": "tehran_alemdari_2012_edition",
+        "title": "Alemdârî Tehran 2012 edition: claims 'photographic reproductions of the original manuscript' (Tehran 8198)",
+        "author": "ed. Fîrûz Refâhî Alemdârî",
+        "collection": "(printed edition)",
+        "shelfmark": "Tahran: Fîrûzân, 1391 sh. / 1430 q. / 2012 (note: TEIS Yesevi cites 1385 sh./2006; AzerTAC Nov 2012 announces a 1391/2012 publication)",
+        "date_ah": null,
+        "date_ce": "2012 announcement; TEIS lists as 1385/2006",
+        "paper_field": null,
+        "notes_field": "Verbatim from AzerTAC Nov 22 2012: 'The text was transcribed as-is from the manuscript, additionally set in Latin-script Azerbaijani alphabet, and included alongside photographic reproductions of the original manuscript.' If genuine, this resolves the Tehran 8198 paper/decoration question via the printed edition. The 2006 vs. 2012 dates may indicate a re-issue OR distinct printings.",
+        "decoration_field": null,
+        "classification": "none",
+        "is_false_positive": false,
+        "false_positive_reason": null,
+        "has_digitized_images": null,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "high",
+        "notes": "actionable lead: locate the Alemdârî edition (Tehran: Fîrûzân): likely available via worldcat.org / OCLC interlibrary loan, or via Iranian booksellers (ketab.ir Persian record exists at http://www.ketab.ir/bookview.aspx?bookid=1592484: currently 403-blocked but the bibliographic record proves the edition exists). If the edition does include facsimile plates, this is the SHORTEST PATH to answering the BL Or 9493 paper question via comparator: Tehran 8198 codicology resolves at least one Cihanşah Hakîkî witness, providing comparator evidence for the broader question."
+      },
+      {
+        "yek_id": "khangeldi_onuk_bahjat_edition_no_witness",
+        "title": "Hangeldi Onuk (Xangeldi Ovneq) editions: derive from Tehran 8198, not new witness",
+        "author": "Hangeldi Onuk",
+        "collection": "(printed editions)",
+        "shelfmark": "Bahjat publisher, Tehran (multiple printings 2013-2018+); also Turuz (turuz.com) PDF (Onuk 1392/2013)",
+        "date_ah": null,
+        "date_ce": "1392 sh. / 2013",
+        "paper_field": null,
+        "notes_field": "Onuk's editions ('Diwan-i Jahanshah Haghighi') are explicitly based on Mat 965 microfilm transferred to Turkmenistan Academy of Sciences: verbatim from jahanshahakyky.blogspot.com 2014 verified: 'In 1999 in Ashgabat the Turkmen edition was edited and transliterated... under Dr. Rahman Rajab and Dr. Ana Qurbanaliyev.' Onuk's later Tehran-Bahjat printings repackage the same text. NO new manuscript witness underpins the Onuk publications.",
+        "decoration_field": null,
+        "classification": "none",
+        "is_false_positive": true,
+        "false_positive_reason": "Edition only, not a witness: derived from Mat 965 via Turkmen 1999 base",
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "high",
+        "notes": "Audit-trail entry. The blogspot tracker http://jahanshahakyky.blogspot.com/ is the most useful aggregator of Iranian / Turkmen / Azerbaijani diaspora editions of Hakikî. None constitute new witnesses; all derive from Mat 965 (via 1966 Hüseyinzade microfilm-Turkmen 1999 chain) or Tehran 8198 (Alemdârî 2012)."
+      }
+    ],
+    "false_positive_count": 1,
+    "genuine_count": 0,
+    "false_positive_rate": 0.0,
+    "_note_on_counts": "false_positive_rate held at 0.0 because the strict YEK-search semantics of these counts do not apply. The portal sweep produced no results in the YEK sense; the 'genuine' findings are scholarly backchain hits (Düzgün, Sohrabi-Akın, Ay 2013, Çınarcı 2009, Macit 2000, az.wikipedia, manuscript.az registry, AzerTAC 2012) that surface witnesses or witness-derived information without YEK retrieval."
+  },
+  "iran_caucasus_sweep_summary": {
+    "deliverable_grade": "A: comprehensive backchain achieved despite hard portal blocks",
+    "headline_findings": [
+      "Tehran 8198 codicology DEEPENED via Düzgün (academia.edu) + Ay 2013 + AzerTAC 2012: 133 ff. (Ay) or 143 ff. (Düzgün: discrepancy flagged), nestalik, h.10.yy, Persian + Turkish. Mesnevi-led then alphabetical Turkish ghazals + rubâîler. Decoration/paper still unrecorded but the Alemdârî 2012 Tehran-Fîrûzân edition is reported to include 'photographic reproductions of the original manuscript': should locate this edition for facsimile access.",
+      "Mat 965 codicology DEEPENED via Düzgün (academia.edu): 'Erivan Matenadaran Archive No. 965: 61 Turkish gazels, 16 tuyugs, and 78 Persian gazels. Latif Hüseyinzade suggested it might be an autograph copy.' Per Macit 2000 + Rahimov 1986, Mat 965 dated 879/1474–75 (= 7-8 yrs after Cihanşah's death; autograph hypothesis is therefore textually impossible: Hüseyinzade likely speculative). NEW PROVENANCE LEAD: per az.wikipedia, Mat 965 came to Yerevan via Arutyun Qazaryan's New York bequest: though this trajectory may be conflated with BL Or 9493's. Decoration/paper still NOT recorded; Hüseyinzade 1966 Yerevan edition is the one outstanding source potentially containing this.",
+      "TWO NEW FRAGMENT WITNESSES discovered via Sohrabiabad & Akın 2019 (Alevilik-Bektaşilik Araştırmaları Dergisi 19): (1) Diyarbakır Ulutürk village İmam Zeynel Abidin Ocağı CÖNK: 8 Hakikî gazels, 1860s rika script, with Nesimî/Şah Hatayî co-located (mirroring Ankara MK A 5252 pattern); (2) Ilkhchi (East Azerbaijan, Iran) Kırklar Ocağı archive: 'complete divan of Hakîkî' used liturgically. Both private holdings; codicology limited; date primarily 19th-c. or later. Critically: Ilkhchi is in Cihanşah's geographic heartland: most plausible spot for further pre-modern witnesses.",
+      "NEW BAKU REGISTRATION (unpacked): AMEA Manuscripts Institute, Baku: registry entry #38 (acquired 12 Jan 2021 from Süleymaniye Library Istanbul) is most plausibly a microfilm/photocopy of Süleymaniye Fatih 3808. Reopens the earlier Baku-codex risk: there IS now a Baku-held reproduction of a Hakikî divan, but NOT an autonomous codex.",
+      "TABRIZ MILLI KÜTÜPHANESI ELIMINATED: Çınarcı 2009 catalogue addendum proves no Hakikî witness in this library, despite Tabriz being Cihanşah's political base.",
+      "MARASHI-NAJAFI QOM no positive evidence; ASTAN-E QUDS RAZAVI no positive evidence; both portal-blocked from outside Iran.",
+      "All Iran-internal portals (NLAI, Tehran University, Majlis, Astan-e Quds, Marashi, Malek) blocked from outside Iran (ECONNREFUSED). Third-party HTML mirroring also fails (422). VPN or direct Iranian-side cooperation required for live searches."
+    ],
+    "decoration_paper_data_captured": {
+      "tehran_8198": {
+        "paper": "unrecorded in any open-access source",
+        "illumination": "unrecorded",
+        "binding": "unrecorded"
+      },
+      "matenadaran_965": {
+        "paper": "unrecorded in any open-access source",
+        "illumination": "unrecorded",
+        "binding": "unrecorded"
+      }
+    },
+    "new_witnesses_recommended_for_register": [
+      {
+        "id": "diyarbakir_ulutuk_conk",
+        "verification_status": "verified_secondary"
+      },
+      {
+        "id": "ilkhchi_kirklar_ocak",
+        "verification_status": "pending"
+      },
+      {
+        "id": "amea_baku_2021_reproduction",
+        "verification_status": "verified_as_reproduction"
+      }
+    ],
+    "blocked_portals": [
+      "nlai.ir / opac.nlai.ir / dl.nlai.ir / fankha (no online interface located)",
+      "library.ut.ac.ir / utdlib.ut.ac.ir",
+      "ical.ir / mirasebaharestan.ical.ir",
+      "aqlibrary.org / digital.aqlibrary.ir",
+      "marashilibrary.com (403)",
+      "malekmuseum.org",
+      "mtif.org Marashi index",
+      "lib.eshia.ir (login wall)",
+      "ketab.ir (403)"
+    ],
+    "hakiki_namesake_disambiguation_results": [
+      "TEIS Yesevi 5-witness canon (BL Or 9493 / Mat 965 / Süleymaniye Fatih 3808 / Ankara DTCF 2221 / Tehran 8198) confirmed. None of the Iranian Hakikî namesakes (Mustafa Bağdadî 963/1556, Peri Ruh Hanım Şah I. Tahmasb's daughter, Mirza Muhammed Beg Ahmed Abadi Kecratî 11th c. AH): which Ay 2013 had flagged as disambiguation risks: have been newly attached to any of the above five TEIS Yesevi witnesses.",
+      "Ay 2013 Item 23 (Tehran 8198) is the only Hakikî entry in Ay's full DENA-derived 41-divan list. No Mustafa Bağdadî / Peri Ruh / Kecratî witnesses appear in Iranian collections per DENA Vol.5: they may exist in earlier DENA volumes or under Persian-language keys not surveyed here.",
+      "Şadi Aydın 2008 'İran Kütüphaneleri Türkçe Yazmalar Kataloğu' (Timaş, Istanbul; ~1200 Turkish MSS in Iran): print catalogue, not online-searchable. candidate: copy via interlibrary loan; might surface additional Hakikî witnesses NOT captured by Ay 2013's DENA Vol.5 selection."
+    ]
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-02",
+    "artifact_status": "current",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": true,
+    "follow_up_type": "institutional_query"
+  }
+}

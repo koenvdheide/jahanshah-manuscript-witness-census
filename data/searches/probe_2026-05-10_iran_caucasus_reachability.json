@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "session_label": "Iranian portal reachability retry",
+  "session_id": "iran-reachability-retry-2026-05-10",
+  "date": "2026-05-10",
+  "scope": "9 Iranian portals previously documented as blocked in the 2026-05-02 Iran/Caucasus sweep. Reachability-only retest. Search execution deferred. Probes ran from a UK/EU baseline plus an Uzbekistan VPN route for the geo-IP-blocked subset.",
+  "geopolitical_caveat": "Iranian internet infrastructure is currently subject to wartime intermittent shutdowns (2026 conflict). Portal reachability documented here is point-in-time as of 2026-05-10; a portal blocked or reachable on this date may flip on subsequent days. Researchers replicating these probes should expect different results across attempts. The taxonomy entries 'still_blocked', 'reachable_*', etc. should be read as a single observation, not a durable property of the portal.",
+  "method_summary": {
+    "tier_1": "WebFetch direct HTTP from session baseline IP (UK/EU)",
+    "tier_2": "https://r.jina.ai/<URL> third-party HTML mirror",
+    "tier_3": "Playwright headless browser (executes JS redirects, follows DOM); ran from local machine routed through Uzbekistan VPN for the second pass on geo-IP-blocked targets, then re-tested without VPN to disambiguate JS-redirect failures from genuine geo-IP blocks",
+    "deferred": "Wayback Machine snapshots not collected this session; can be added in a follow-on if last-known-live evidence becomes useful for any portal"
+  },
+  "probes": [
+    {
+      "portal": "NLAI (National Library and Archives of Iran)",
+      "original_block_2026_05_02": "ECONNREFUSED on direct HTTP fetch from outside Iran; geo-IP-gated per Digital Orientalist 2023",
+      "probe_urls": [
+        "https://opac.nlai.ir/opac-prod/index1.jsp",
+        "https://nlai.ir"
+      ],
+      "probe_attempts": [
+        {
+          "method": "webfetch",
+          "url": "https://opac.nlai.ir/opac-prod/index1.jsp",
+          "outcome": "ECONNREFUSED"
+        },
+        {
+          "method": "webfetch",
+          "url": "https://nlai.ir",
+          "outcome": "ECONNREFUSED"
+        },
+        {
+          "method": "jina",
+          "url": "https://r.jina.ai/https://opac.nlai.ir/opac-prod/index1.jsp",
+          "status": 422,
+          "outcome": "jina mirror rejected with 422 Unprocessable Entity"
+        },
+        {
+          "method": "playwright_uzbekistan_vpn",
+          "url": "https://nlai.ir",
+          "outcome": "net::ERR_TIMED_OUT after 60s"
+        },
+        {
+          "method": "playwright_uzbekistan_vpn",
+          "url": "https://opac.nlai.ir/opac-prod/index1.jsp",
+          "outcome": "net::ERR_TIMED_OUT after 60s"
+        }
+      ],
+      "new_status": "still_blocked_geo_ip_strict",
+      "ready_for_search_execution": false,
+      "notes": "NLAI's geo-IP gate appears to whitelist Iranian IPs only. Uzbekistan VPN did not unlock access. Iran-resident collaborator or Iranian IP required for any future search execution."
+    },
+    {
+      "portal": "Tehran University Central Library",
+      "original_block_2026_05_02": "ECONNREFUSED on direct HTTP fetch; international.ut.ac.ir English page resolves but is non-searchable",
+      "probe_urls": [
+        "https://library.ut.ac.ir",
+        "https://utdlib.ut.ac.ir"
+      ],
+      "probe_attempts": [
+        {
+          "method": "webfetch",
+          "url": "https://library.ut.ac.ir",
+          "status": 200,
+          "outcome": "redirect screen 'Transferring to the website...' (Persian + English); body ~150 chars; JS redirect not executed by webfetch"
+        },
+        {
+          "method": "webfetch",
+          "url": "https://utdlib.ut.ac.ir",
+          "outcome": "ECONNREFUSED"
+        },
+        {
+          "method": "playwright_uzbekistan_vpn",
+          "url": "https://library.ut.ac.ir",
+          "outcome": "reachable; redirect executed; final URL https://library.ut.ac.ir/fa; page title 'کتابخانه مرکزی' (Central Library); navigation, news section, contentinfo with University of Tehran branding all rendered"
+        },
+        {
+          "method": "playwright_uzbekistan_vpn",
+          "url": "https://utdlib.ut.ac.ir",
+          "outcome": "net::ERR_TIMED_OUT after 60s"
+        },
+        {
+          "method": "playwright_no_vpn",
+          "url": "https://library.ut.ac.ir",
+          "outcome": "reachable; redirect executed; same final URL https://library.ut.ac.ir/fa and same rendered content as VPN route; confirms the portal does NOT enforce geo-IP gating on the main landing"
+        }
+      ],
+      "new_status": "reachable_landing_only",
+      "ready_for_search_execution": true,
+      "notes": "Major change: library.ut.ac.ir is now reachable via any JS-capable browser, with or without a VPN. The earlier WebFetch failure was specifically a JS-redirect-execution limitation in the lightweight HTML processor, not a geo-IP block; Playwright executes the redirect and renders the same Persian landing whether routed through Uzbekistan VPN or via the session baseline IP. This means a follow-on Cihanşah/Hakîkî search execution against the manuscript catalogue can be run from any IP using a headless browser. The utdlib.ut.ac.ir digital subdomain still times out (separate sub-resource, possibly retired)."
+    },
+    {
+      "portal": "Majlis Library",
+      "original_block_2026_05_02": "ECONNREFUSED + 'temporarily out of service' per Digital Orientalist 2023",
+      "probe_urls": [
+        "https://ical.ir",
+        "https://mirasebaharestan.ical.ir"
+      ],
+      "probe_attempts": [
+        {
+          "method": "webfetch",
+          "url": "https://ical.ir",
+          "status": 403,
+          "outcome": "HTTP 403 Forbidden (block mode changed from ECONNREFUSED to 403)"
+        },
+        {
+          "method": "webfetch",
+          "url": "https://mirasebaharestan.ical.ir",
+          "outcome": "ECONNREFUSED"
+        },
+        {
+          "method": "playwright_uzbekistan_vpn",
+          "url": "https://ical.ir",
+          "status": 403,
+          "outcome": "page title 'Error 403 | Access Denied'; same 403 from VPN route"
+        }
+      ],
+      "new_status": "now_403",
+      "ready_for_search_execution": false,
+      "notes": "Block mode shifted from ECONNREFUSED (server unreachable) to 403 (server reachable but actively rejecting). Server is alive and serving error pages; this is a behaviour change worth noting. The 'temporarily out of service' framing from 2023 no longer applies; the 403 is consistent across VPN routes, suggesting an explicit access-control rule rather than a network outage."
+    },
+    {
+      "portal": "Astan-e Quds Razavi Library (Mashhad)",
+      "original_block_2026_05_02": "ECONNREFUSED + geo-IP gated per Digital Orientalist 2023",
+      "probe_urls": [
+        "https://aqlibrary.org",
+        "http://digital.aqlibrary.ir/index.aspx?pid=16&CollectionID=61"
+      ],
+      "probe_attempts": [
+        {
+          "method": "webfetch",
+          "url": "https://aqlibrary.org",
+          "outcome": "loading-screen placeholder + domain-sale notice; ~80-100 chars of substantive text; not the library portal"
+        },
+        {
+          "method": "webfetch",
+          "url": "http://digital.aqlibrary.ir/index.aspx?pid=16&CollectionID=61",
+          "outcome": "ECONNREFUSED"
+        },
+        {
+          "method": "playwright_uzbekistan_vpn",
+          "url": "https://aqlibrary.org",
+          "outcome": "redirected to https://*.yoyanetaq.sbs/.../index.php?... 'Security Check' page; aqlibrary.org domain is parked / hijacked / redirected to clickbait infrastructure"
+        },
+        {
+          "method": "playwright_uzbekistan_vpn",
+          "url": "http://digital.aqlibrary.ir/index.aspx?pid=16&CollectionID=61",
+          "outcome": "net::ERR_NAME_NOT_RESOLVED; DNS does not resolve digital.aqlibrary.ir at all"
+        }
+      ],
+      "new_status": "now_dead_domain_hijacked",
+      "ready_for_search_execution": false,
+      "notes": "MAJOR CHANGE: aqlibrary.org no longer hosts the Astan-e Quds Razavi library. The domain redirects to a parked-domain / security-check chain (yoyanetaq.sbs). The digital subdomain digital.aqlibrary.ir does not resolve in DNS. The Razavi library has presumably moved to a different domain (candidates: aqr.ir, library.aqr.ir, or a sub-path of the larger Astan Quds Razavi institutional site). New URL discovery is out of scope for this reachability retry; flag for a follow-on rediscovery task."
+    },
+    {
+      "portal": "Marashi-Najafi Library (Qom)",
+      "original_block_2026_05_02": "HTTP 403 Forbidden on marashilibrary.com via direct HTTP fetch and third-party HTML mirroring",
+      "probe_urls": [
+        "https://marashilibrary.com"
+      ],
+      "probe_attempts": [
+        {
+          "method": "webfetch",
+          "url": "https://marashilibrary.com",
+          "status": 200,
+          "outcome": "page title 'کتابخانه آیت الله مرعشی نجفی (ره)' (Library of Ayatollah Marashi Najafi); search interface visible: 'جستجو از منابع این کتابخانه' (Search library resources) with manuscripts / lithograph / introductory categories; ~45,000-50,000 characters of content; no blocking markers"
+        }
+      ],
+      "new_status": "reachable_search_form_present",
+      "ready_for_search_execution": true,
+      "notes": "MAJOR CHANGE: Marashi-Najafi (one of Iran's largest Persian-MS collections, Qom) is fully reachable on the first WebFetch attempt with no VPN. The 2026-05-02 403 Forbidden has been lifted. The search interface explicitly offers a manuscripts category. This is the highest-value newly-reachable portal in the retry; direct candidate for a follow-on Cihanşah/Hakîkî search-execution session."
+    },
+    {
+      "portal": "Bonyad-i Muhaqqiq Tabataba'i (Marashi catalogue index)",
+      "original_block_2026_05_02": "ECONNREFUSED on mtif.org",
+      "probe_urls": [
+        "https://mtif.org"
+      ],
+      "probe_attempts": [
+        {
+          "method": "webfetch",
+          "url": "https://mtif.org",
+          "outcome": "ECONNREFUSED"
+        },
+        {
+          "method": "jina",
+          "url": "https://r.jina.ai/https://mtif.org",
+          "status": 422,
+          "outcome": "jina mirror rejected with 422 Unprocessable Entity"
+        },
+        {
+          "method": "playwright_uzbekistan_vpn",
+          "url": "https://mtif.org",
+          "outcome": "net::ERR_TIMED_OUT after 60s"
+        }
+      ],
+      "new_status": "still_blocked",
+      "ready_for_search_execution": false,
+      "notes": "mtif.org remains unreachable across direct HTTP, jina mirror, and Uzbekistan-routed Playwright. Same as 2026-05-02. The Marashi printed catalogue index hosted here remains inaccessible online; printed-volume access via library is still the only path."
+    },
+    {
+      "portal": "Malek National Library (Tehran)",
+      "original_block_2026_05_02": "ECONNREFUSED on malekmuseum.org",
+      "probe_urls": [
+        "https://malekmuseum.org"
+      ],
+      "probe_attempts": [
+        {
+          "method": "webfetch",
+          "url": "https://malekmuseum.org",
+          "outcome": "ECONNREFUSED"
+        },
+        {
+          "method": "jina",
+          "url": "https://r.jina.ai/https://malekmuseum.org",
+          "status": 422,
+          "outcome": "jina mirror rejected with 422 Unprocessable Entity"
+        },
+        {
+          "method": "playwright_uzbekistan_vpn",
+          "url": "https://malekmuseum.org",
+          "outcome": "net::ERR_TIMED_OUT after 60s"
+        }
+      ],
+      "new_status": "still_blocked",
+      "ready_for_search_execution": false,
+      "notes": "malekmuseum.org remains unreachable across all three tiers. The current Malek National Library may be on a different domain (malek.ir or similar); URL rediscovery is out of scope here."
+    },
+    {
+      "portal": "lib.eshia.ir (Feqahat School / Shi'i texts library)",
+      "original_block_2026_05_02": "login wall on direct access",
+      "probe_urls": [
+        "https://lib.eshia.ir"
+      ],
+      "probe_attempts": [
+        {
+          "method": "webfetch",
+          "url": "https://lib.eshia.ir",
+          "outcome": "ECONNREFUSED (block mode shifted from login-wall to network-level rejection)"
+        },
+        {
+          "method": "jina",
+          "url": "https://r.jina.ai/https://lib.eshia.ir",
+          "status": 200,
+          "outcome": "page title 'کتابخانه مدرسه فقاهت' (Feqahat School Library); content fully visible via mirror; navigation menus, library description ('7634 عنوان کتاب در 17691 جلد' = 7,634 titles in 17,691 volumes), category links (Jurisprudence, Quranic Studies, Hadith Sciences, Ethics, Theology, etc.)"
+        },
+        {
+          "method": "playwright_uzbekistan_vpn",
+          "url": "https://lib.eshia.ir",
+          "outcome": "TimeoutError after 60s on direct browser navigation"
+        }
+      ],
+      "new_status": "reachable_via_jina_only",
+      "ready_for_search_execution": true,
+      "notes": "Direct browser access (with or without VPN) is blocked, but the r.jina.ai third-party mirror successfully returns full content. Search execution via jina mirror is feasible for static catalogue browsing but interactive search forms may not work through the mirror; consider this caveat when planning a follow-on search session. Note this collection is Shi'i jurisprudence / hadith focused; relevance to Cihanşah Hakîkî is low (Hurufi-leaning Turkmen poetry sits outside this collection's scope), so probe execution priority is low."
+    },
+    {
+      "portal": "ketab.ir",
+      "original_block_2026_05_02": "HTTP 403 Forbidden",
+      "probe_urls": [
+        "https://ketab.ir"
+      ],
+      "probe_attempts": [
+        {
+          "method": "webfetch",
+          "url": "https://ketab.ir",
+          "outcome": "Too many redirects (exceeded 10); redirect-loop server config"
+        },
+        {
+          "method": "jina",
+          "url": "https://r.jina.ai/https://ketab.ir",
+          "status": 200,
+          "outcome": "page title 'Error 504 | Gateway Timeout'; mirror successfully fetched but the underlying ketab.ir server is returning 504"
+        },
+        {
+          "method": "playwright_uzbekistan_vpn",
+          "url": "https://ketab.ir",
+          "status": 504,
+          "outcome": "page title 'Error 504 | Gateway Timeout'; same 504 via VPN route; server-side issue independent of client IP"
+        }
+      ],
+      "new_status": "now_server_down_504",
+      "ready_for_search_execution": false,
+      "notes": "ketab.ir is currently returning 504 Gateway Timeout server-side (not a client-side block). The 2026-05-02 403 has shifted to a server outage. Worth re-probing at a future date in case the outage is transient. Note: ketab.ir is a national books portal, not a manuscripts portal, so relevance to the Hakîkî manuscript census is indirect."
+    }
+  ],
+  "summary": {
+    "total_portals_probed": 9,
+    "newly_reachable": 2,
+    "newly_reachable_portals": [
+      "Marashi-Najafi Library (marashilibrary.com): full search interface present, no blocking; direct WebFetch success",
+      "Tehran University Central Library (library.ut.ac.ir): landing page renders via Playwright with Uzbekistan VPN; deeper catalogue navigation pending"
+    ],
+    "reachable_via_jina_only": 1,
+    "reachable_via_jina_only_portals": [
+      "lib.eshia.ir: jina mirror returns full content; direct + VPN paths blocked"
+    ],
+    "still_blocked": 3,
+    "still_blocked_portals": [
+      "NLAI (opac.nlai.ir, nlai.ir): geo-IP strict; Uzbekistan VPN does not unlock",
+      "Bonyad-i Muhaqqiq Tabataba'i (mtif.org): timeout across all tiers",
+      "Malek National Library (malekmuseum.org): timeout across all tiers"
+    ],
+    "_note_tehran_u_digital_subdomain": "Tehran University's utdlib.ut.ac.ir digital subdomain timed out separately from the main library.ut.ac.ir landing; the latter is reachable so the portal as a whole is counted in newly_reachable, with the digital subdomain noted as a sub-block in the Tehran U probe entry.",
+    "now_dead_or_changed": 3,
+    "now_dead_or_changed_portals": [
+      "Astan-e Quds Razavi (aqlibrary.org): domain hijacked / parked / redirects to yoyanetaq.sbs Security Check; digital.aqlibrary.ir DNS does not resolve; library has likely migrated to a new domain (URL rediscovery needed)",
+      "Majlis (ical.ir): block mode shifted from ECONNREFUSED to 403 Forbidden",
+      "ketab.ir: block mode shifted from 403 to 504 Gateway Timeout (server-side outage)"
+    ],
+    "ready_for_search_execution": [
+      "marashilibrary.com (HIGH PRIORITY: large Persian-MS collection, reachable on first try)",
+      "library.ut.ac.ir (MEDIUM PRIORITY via Playwright, with or without VPN: Tehran 8198 codicology target; manuscript-catalogue navigation depth not yet probed)",
+      "lib.eshia.ir via jina mirror (LOW PRIORITY: collection scope is Shi'i jurisprudence, low Hakîkî relevance)"
+    ],
+    "follow_on_tasks_surfaced": [
+      "Astan-e Quds Razavi URL rediscovery: locate the library's current online catalogue domain (candidates: aqr.ir, library.aqr.ir, library.razavi.ir or similar)",
+      "Marashi-Najafi search-execution session: probe the manuscripts category for Cihanşah, Hakîkî, جهانشاه, حقیقی author/title queries",
+      "Tehran University manuscript-catalogue navigation: drill into library.ut.ac.ir/fa to locate the MS 8198 record and any digitised images / extended codicology",
+      "Wayback Machine evidence collection: capture last-known-live snapshots for now-dead aqlibrary.org / digital.aqlibrary.ir to document what was lost"
+    ]
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-10",
+    "artifact_status": "current",
+    "source_layers": [
+      "catalogue_record",
+      "institutional_access_status",
+      "project_classification"
+    ],
+    "access_mode": "blocked_or_down",
+    "disposition": "access_gap_logged",
+    "follow_up_required": true,
+    "follow_up_type": "repeat_access_check"
+  }
+}

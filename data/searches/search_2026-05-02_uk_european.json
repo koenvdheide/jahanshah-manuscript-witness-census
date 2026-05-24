@@ -1,0 +1,378 @@
+{
+  "search_session": {
+    "date": "2026-05-02",
+    "scope": "uk_european",
+    "family": "haqiqi_witness_census",
+    "status": "complete",
+    "schema_note": "Adapted from shared search-session schema by setting family='haqiqi_witness_census'. Per-portal search data captured in searches_completed[]; new witnesses (zero in this run) and supplementary data captured below.",
+    "searches_completed": [
+      {
+        "portal": "fihrist",
+        "url": "https://www.fihrist.org.uk/catalog/person_43402797",
+        "search_term": "person_43402797 (Ḣăgigi, Jaḣanshaḣ: VIAF 43402797 / LoC n88215419)",
+        "raw_count": 3,
+        "genuine_count": 1,
+        "fp_count": 2,
+        "notes": "Person record links 3 BL manuscripts: Or 9493 (manuscript_6481, GENUINE), Or 5327 (manuscript_5950, FP: contains Nuzhat al-Mulūk by Muḥammad al-Bulghārī, only mentioned in passing as being 'written in the reign of Jahānshāh Qaraqoyunlu'), Or 11846 (manuscript_5394, FP: Hāfiẓ Sa'd dīvān copied for Jahānshāh's son Pīr Būdāq in 864 AH; commissioner relationship, NOT authorship by Jahānshāh). Person record also lists work_8619 'Nuzhat al-Mulūk' as 'authored or contributed to' but this is incorrect: that work is by al-Bulghārī, not Jahānshāh."
+      },
+      {
+        "portal": "fihrist",
+        "url": "https://www.fihrist.org.uk/catalog/work_20697",
+        "search_term": "work_20697 (Dīvān, Jahānshāh Qaraqoyunlu)",
+        "raw_count": 1,
+        "genuine_count": 1,
+        "fp_count": 0,
+        "notes": "Work record lists exactly one witness: Or 9493 (manuscript_6481), 15th c. CE. No other Fihrist-indexed witnesses for this work."
+      },
+      {
+        "portal": "fihrist",
+        "url": "https://www.fihrist.org.uk/catalog?q=Haqiqi",
+        "search_term": "Haqiqi",
+        "raw_count": 7,
+        "genuine_count": 1,
+        "fp_count": 6,
+        "notes": "Hits: Or 9493 (genuine); RAS Ellis Persian 12 (Tabaqāt-i Akbarī by Niẓām al-Dīn Aḥmad: FP); CODRINGTON/READE NO 59 BOX 28 (same Tabaqāt-i Akbarī: FP); Or 16420 (Persian translation of Chaghnini astronomy treatise: FP, ḥaqīqī as adjective); IO Islamic 4055 (18th c. Indian miscellany of prose and poetry: FP, no Hakîkî mention); RSPA 14 (collection of scientific treatises: FP); plus the person record. Person-record name disambiguation: every modern indexer attaches multiple ḥaqīqī-named works to Cihanşah's authority record, but only Or 9493 is actually his."
+      },
+      {
+        "portal": "fihrist",
+        "url": "https://www.fihrist.org.uk/catalog?q=حقیقی",
+        "search_term": "حقیقی (Persian script)",
+        "raw_count": 11,
+        "genuine_count": 1,
+        "fp_count": 10,
+        "notes": "11 hits: all FPs except Or 9493. The remaining 10 use ḥaqīqī as the Sufi/philosophical adjective 'real, true' (in opposition to majāzī 'metaphorical') in mystical, philosophical, astronomical, or epistolary contexts. Notable FPs: SOAS ms. 24950 (Tabaqāt-i Akbar Shāhī); Wellcome MS Arabic 507 (Sharḥ-i ḥaz̤rat dar ʿilm-i nujūm by Naṣīr al-Dīn Ṭūsī); BL IO Islamic 4570 (mystical tracts); Wellcome MS Arabic 286 (Risālah fī ādāb al-baḥth); Cambridge UL L. 1 (52 letters by Rashīd al-Dīn); BL RSPA 14 (scientific treatises); JRRIL Persian MS 735 (Bāznāmah falconry); JRRIL Persian MS 961 (Sānval Singh translation); Wellcome MS Arabic 291 (al-Rusūm al-falsafīyah). Note: 4 of 10 codices have decoration recorded in Fihrist."
+      },
+      {
+        "portal": "fihrist",
+        "url": "https://www.fihrist.org.uk/catalog?q=Hakiki",
+        "search_term": "Hakiki",
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "Zero results: Fihrist cataloguing exclusively uses 'Haqiqi' transliteration (IJMES), not Turkish 'Hakiki'."
+      },
+      {
+        "portal": "fihrist",
+        "url": "https://www.fihrist.org.uk/catalog?q=Hakîkî",
+        "search_term": "Hakîkî",
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "Zero results."
+      },
+      {
+        "portal": "fihrist",
+        "url": "https://www.fihrist.org.uk/catalog?q=Cihanshah",
+        "search_term": "Cihanshah / Cihansah / Cihânşâh",
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "Zero results across all Turkish-orthography variants. Fihrist does not index the Turkish-orthography form of the name."
+      },
+      {
+        "portal": "fihrist",
+        "url": "https://www.fihrist.org.uk/catalog?q=%22Jahanshah+Qaraqoyunlu%22",
+        "search_term": "\"Jahanshah Qaraqoyunlu\" (exact phrase)",
+        "raw_count": 5,
+        "genuine_count": 1,
+        "fp_count": 4,
+        "notes": "5 hits: person record + work record + Or 9493 + Or 11846 + Or 5327. Same 3 BL codices documented above plus the person/work index entries."
+      },
+      {
+        "portal": "fihrist",
+        "url": "https://www.fihrist.org.uk/catalog?q=Jahan+Shah",
+        "search_term": "Jahan Shah (no quotes)",
+        "raw_count": 1704,
+        "genuine_count": 1,
+        "fp_count": 1703,
+        "notes": "Far too broad: matches Mughal Shah Jahan, Khan Jahan Lodi (d. 1631), and many other unrelated 'Shah' rulers. Only Or 9493 is the genuine Cihanşah Hakîkî witness; not feasible to triage 1703 FPs for this scope."
+      },
+      {
+        "portal": "fihrist",
+        "url": "https://www.fihrist.org.uk/catalog?q=Karakoyunlu",
+        "search_term": "Karakoyunlu",
+        "raw_count": 2,
+        "genuine_count": 0,
+        "fp_count": 2,
+        "notes": "2 hits: person record + Or 11846 (Hāfiẓ Sa'd dīvān copied for Pīr Būdāq, FP commissioner relation). Or 9493 not returned for this term: Fihrist uses 'Qaraqoyunlu' spelling exclusively."
+      },
+      {
+        "portal": "fihrist",
+        "url": "https://www.fihrist.org.uk/catalog?q=Qaraqoyunlu",
+        "search_term": "Qaraqoyunlu",
+        "raw_count": 5,
+        "genuine_count": 1,
+        "fp_count": 4,
+        "notes": "Same as Jahanshah Qaraqoyunlu phrase search."
+      },
+      {
+        "portal": "fihrist",
+        "url": "https://www.fihrist.org.uk/catalog?q=جهانشاه",
+        "search_term": "جهانشاه (Persian script)",
+        "raw_count": "see notes",
+        "genuine_count": 1,
+        "fp_count": "see notes",
+        "notes": "Returns multiple hits but only Or 9493 is the Cihanşah Hakîkî Dīvān; all others are matches in Mughal/Persian historical contexts (Shāh-Jahān etc.)."
+      },
+      {
+        "portal": "bnf_archives_et_manuscrits",
+        "url": "https://archivesetmanuscrits.bnf.fr/",
+        "search_term": "Hakiki / Hakîkî",
+        "raw_count": 1,
+        "genuine_count": 0,
+        "fp_count": 1,
+        "notes": "Single hit: Supplément turc 1497 (Divân-i Hakîkî). Per the BnF authority field 'Hakikizâde, Osman Efendi (....-1627)' this is the SON of a different Hakîkî (Hakîkî-zâde = 'son of Hakîkî'), Ottoman Bektaşi/Melamî poet, distinct from Cihanşah Qaraqoyunlu Hakîkî (d. 1467). Persistent ID ./ark:/12148/cc91114j."
+      },
+      {
+        "portal": "bnf_archives_et_manuscrits",
+        "url": "https://archivesetmanuscrits.bnf.fr/",
+        "search_term": "حقیقی (Persian script)",
+        "raw_count": 2,
+        "genuine_count": 0,
+        "fp_count": 2,
+        "notes": "Hits: (1) Persan 39, sub-component F.92v-94, ŠARḤ-i MUŠKIL-i ḤALL by Hamadānī (Mīr Sayyid ʿAlī b. Šihāb al-Dīn): FP, the explicit contains 'مطلوب حقیقی' as Sufi adjective. (2) Supplément persan 114 'Risāla fī bayān-i ʿishq-i majāzī va ḥaqīqī' (Treatise on real and metaphorical love): FP, ḥaqīqī as Sufi technical term."
+      },
+      {
+        "portal": "bnf_archives_et_manuscrits",
+        "url": "https://archivesetmanuscrits.bnf.fr/",
+        "search_term": "Cihansah / Cihanshah / Karakoyunlu / Kara-Koyounlou / Dschihan / Hakyky / Cahansah / Cahanşah / حقیقی، جهانشاه / جهانشاه قراقویونلو / جهانشاه (alone)",
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "All zero results. BnF Archives & Manuscrits indexes do not contain Cihanşah Hakîkî (or any of his name-variant spellings)."
+      },
+      {
+        "portal": "bnf_archives_et_manuscrits",
+        "url": "https://archivesetmanuscrits.bnf.fr/",
+        "search_term": "Djihan Chah / Djahan",
+        "raw_count": 4,
+        "genuine_count": 0,
+        "fp_count": 4,
+        "notes": "Djihan Chah=1 result (Smith-Lesouëf 246 'Recueil des portraits des empereurs moghols': FP, Mughal Shah Jahan). Djahan=3 results (Boulez correspondence, Arabe 4529 Taj Mahal Quranic inscriptions, Smith-Lesouëf 247 calligraphy collection: all FP)."
+      },
+      {
+        "portal": "bnf_gallica",
+        "url": "https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query=dc.creator+all+%22Hakiki%22+and+dc.type+all+%22manuscrit%22&maximumRecords=50",
+        "search_term": "Hakiki + dc.type=manuscrit (creator field)",
+        "raw_count": 3,
+        "genuine_count": 0,
+        "fp_count": 3,
+        "notes": "Hits: (1) Supplément turc 1455 'Ganîzâde Mehmed Nâdirî. Davhatü'l-inşâ': different Ottoman poet, FP. (2-3) Two copies (digitization + microfilm) of Turc 270 'Recueil de divans de poètes turcs': match is 'Hakki' (= Ismaʿil Hakki, d. 1725, NOT Cihanşah-Hakîkî). FP."
+      },
+      {
+        "portal": "bnf_archives_et_manuscrits",
+        "url": "https://archivesetmanuscrits.bnf.fr/ark:/12148/cc92790d",
+        "search_term": "Turc 270 full table-of-contents inspection (Blochet description)",
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "Inspected full Blochet description of Turc 270 (322 ff., 17th c., XVIIe siècle Turkish nestalik, Ottoman binding). Poets in main page block: Zati, Fighani, Sanʿi, Shemʿi, Receb Dede ʿAdeni, Hilali, Behishti, Oumidi Roumi Ahmed Çelebi, ʿAmravi, Mesihi, Ǧelili, Baki Çelebi, Enveri, Khayali, Soubouhi. Marginal poets: Sultan Bayezid II ʿAdli, Safi, Vaǧhi, Katibi, Tâliʿi, Mesihi (different), Hakki = Ismaʿil Hakki, Âhi (d. 1517), Amri Çelebi (d. 1580). NO Cihanşah Hakîkî in this anthology. The 'Hakki' is the 17th-c. Bursalı Ismaʿil Hakki: different person."
+      },
+      {
+        "portal": "bnf_catalogue_general",
+        "url": "`catalogue.bnf.fr/rechercher.do?motRecherche=<query>` (BnF query template)",
+        "search_term": "Hakiki / Cihanshah Hakiki / Karakoyunlu / Qara Qoyunlu / Djihan Chah / Djehan Schah / Cihansah / Jahanshah Qaraqoyunlu / Jahan Shah Qaraqoyunlu",
+        "raw_count": "various",
+        "genuine_count": 0,
+        "fp_count": "various",
+        "notes": "BnF Catalogue général (printed books + AV): zero codex hits. 'Hakiki' returns 2 modern academic hits (a 2009 medical physics textbook by Nour Eddine Hakiki; a 1988 UNESCO youth-employment study with Fatiha Hakiki-Talahite contributing). Karakoyunlu/Qara Qoyunlu both return Sandra Aube's 2016 PUPS book on Qaraqoyunlu/Aq Qoyunlu architectural ceramics (BnF cote 738.095 AUBE c). All other variants zero."
+      },
+      {
+        "portal": "ccfr_manuscrits",
+        "url": "https://ccfr.bnf.fr/portailccfr/jsp/query_direct.jsp?query=ccfr_menu_manuscripts&SOURCES=ead,eadbam,eadcgm,eadcalames",
+        "search_term": "Hakiki",
+        "raw_count": 1,
+        "genuine_count": 0,
+        "fp_count": 1,
+        "notes": "1 hit: Supplément turc 1497 (Hakîkî zâde Osman Efendi): same FP as BnF AeM."
+      },
+      {
+        "portal": "ccfr_manuscrits",
+        "url": "https://ccfr.bnf.fr/portailccfr/jsp/query_direct.jsp",
+        "search_term": "Cihanshah / Jahanshah / Qaraqoyunlu / Karakoyunlu / Djehan Schah",
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "All zero results. CCFR covers all French manuscript collections (BnF, Calames academic libraries, CGM municipal manuscripts, BnF-AM departmental archives). No Cihanşah Hakîkî codex anywhere in France."
+      },
+      {
+        "portal": "ccfr_manuscrits",
+        "url": "https://ccfr.bnf.fr/portailccfr/jsp/query_direct.jsp",
+        "search_term": "Djihan Chah",
+        "raw_count": 1,
+        "genuine_count": 0,
+        "fp_count": 1,
+        "notes": "Smith-Lesouëf 246 (Mughal portraits collection): same FP."
+      },
+      {
+        "portal": "qalamos",
+        "url": "https://www.qalamos.net/ (full-text search)",
+        "search_term": "Hakiki",
+        "raw_count": 9,
+        "genuine_count": 0,
+        "fp_count": 9,
+        "notes": "9 manuscripts found across 6 European institutions. KEY HIT IS A DISAMBIGUATION FALSE POSITIVE: DE-SBB Ms. or. oct. 2746 - 1 'İrşâdnâme by Ḥaḳîḳî' is by a HOMONYMOUS 17TH-CENTURY HAKÎKÎ (d. 1050/1640-41), a Melamî dervish per Gölpinarli 1931, *Melâmîlik ve Melâmîler*, Istanbul, p. 211: NOT Cihanşah Qaraqoyunlu. Qalamos person record https://www.qalamos.net/receive/MyMssPerson_agent_00014071 explicitly gives death date 1050/1640-41. Other 8 hits are: CH-BASUB UBH M VI 31 (anonymous Ottoman collective ms 1838); DE-SLUB Mscr.Dresd.Ea.124 (Tesnîm by Bābā Sinān); DE-TUEB Ma VII 104 (Kitâb-ı Cebbâr Kulu, anonymous, 1284/1868): multiple records for same shelfmark; ID-EHI Crb/EH/31/2012 (Javanese-Arabic miscellany); 2x ID-MUSALI Yemen records. NONE relate to Cihanşah Hakîkî."
+      },
+      {
+        "portal": "qalamos",
+        "url": "https://www.qalamos.net/",
+        "search_term": "Haqiqi / Jahanshah / Cihansah / حقیقی / جهانشاه",
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "All zero results across these variants."
+      },
+      {
+        "portal": "qalamos",
+        "url": "https://www.qalamos.net/",
+        "search_term": "Qaraqoyunlu",
+        "raw_count": 1,
+        "genuine_count": 0,
+        "fp_count": 1,
+        "notes": "DE-SBB Hs. or. 1063 'Künhü'l-aḫbâr by ʿÂlî, Muṣṭafâ bin Aḥmed': Ottoman historian's universal history mentioning Qaraqoyunlu in passing. FP."
+      },
+      {
+        "portal": "al_furqan",
+        "url": "https://digitallibrary.al-furqan.com/manuscripts",
+        "search_term": "Hakiki / Haqiqi (manuscript collection of 234,125 records)",
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "Search interface displays '0 of 234125' across all collections. The portal requires login for record-level inspection but the 0-match facet count confirms no Hakiki-attributed records in their manuscript bibliographic index. Note the index is largely Arabic and African collections (Burkina Faso, Mali, Niger, Bosnia, Saudi Arabia, Egyptian regional libraries) with limited Persian/Turkish poetry coverage."
+      },
+      {
+        "portal": "digivatlib",
+        "url": "https://digi.vatlib.it/",
+        "search_term": "Hakiki / Haqiqi / Jahanshah / Cihansah / Qaraqoyunlu / حقیقی",
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "All zero results. Vatican Library digitised holdings include zero Cihanşah Hakîkî witnesses. Confirmed via UI search: 'Your search for Hakiki returned 0 result.'"
+      },
+      {
+        "portal": "e_codices_ch",
+        "url": "https://www.e-codices.unifr.ch/en/search/",
+        "search_term": "Hakiki / Haqiqi / Jahanshah / Cihansah / Qaraqoyunlu / Karakoyunlu",
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "All zero results. Confirmed via 'Your query for X in Full text returned no documents'. e-codices is heavily Latin/medieval-European focused; minimal Islamic-MS coverage."
+      },
+      {
+        "portal": "manuscriptorium_cz",
+        "url": "https://www.manuscriptorium.com/",
+        "search_term": "Hakiki / Haqiqi / Jahanshah / Cihansah / Qaraqoyunlu",
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "All zero results ('0/0' across all variants via the catalogue search interface)."
+      },
+      {
+        "portal": "digital_bodleian_uk",
+        "url": "https://digital.bodleian.ox.ac.uk/search",
+        "search_term": "Hakiki / Haqiqi / Jahanshah / Cihansah / Qaraqoyunlu / Karakoyunlu",
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "All zero results: 'No items found' across all variants. Bodleian text records covered by Fihrist (Ms. Pers., Ms. Turk., etc.); Digital Bodleian focuses on imaged items only."
+      }
+    ],
+    "totals": {
+      "raw_searches": 31,
+      "genuine_unique_witnesses": 0,
+      "false_positives_total": "30+ unique false positives across all portals (excluding tally-only hit counts)",
+      "duplicates_with_register": 1,
+      "duplicate_note": "Or 9493 = bl_or_9493 in witness_register.json: already verified, not a new finding."
+    },
+    "new_witnesses": [],
+    "supplementary_data_for_existing_witnesses": [
+      {
+        "witness_id": "bl_or_9493",
+        "field": "fihrist_metadata_complete",
+        "value": "Title: Dīvān / دیوان; Author: Jahānshāh Qaraqoyunlu Ḥaqīqī (جهانشاه قره قویونلی حقیقی); Date: 893 AH (1488 CE); Languages: 'Persian and Turkish'; Folios: '85 ff'; Dimensions: '23 × 16 cm' (leaf); Form: Codex; Contents per Fihrist: 'Contains poems in Persian 1r-45v as well as Turkish'.",
+        "source": "https://www.fihrist.org.uk/catalog/manuscript_6481",
+        "confidence": "high",
+        "notes": "Confirms register data exactly. CRITICAL NEGATIVE FINDING: Fihrist record contains NO decoration/illumination/binding/paper/scribe data fields populated. The 'Decoration' facet on the Fihrist search page tags Or 9493 as 'No' (i.e., no decoration recorded). This means: (a) Meredith-Owens 1968 *Handlist of Persian Manuscripts* p. 57: the cited bibliography: likely did not record decoration either; (b) the BL has not yet uploaded extended metadata for this codex; (c) for the decoration question to be answered, direct examination or new high-resolution imaging is required. This is the strongest open-access evidence yet that Or 9493 has minimal-to-no significant illumination: but could still have decorated paper that wouldn't be captured under 'illumination' or by Meredith-Owens' brief listing."
+      },
+      {
+        "witness_id": "bl_or_9493",
+        "field": "fihrist_decoration_facet",
+        "value": "Decoration: No (per Fihrist facet)",
+        "source": "https://www.fihrist.org.uk/catalog?q=%22Jahanshah+Qaraqoyunlu%22 (facet panel)",
+        "confidence": "moderate",
+        "notes": "The Fihrist search facet 'Decoration: No 2 / Yes 1' over the 3 codices in the Jahanshah Qaraqoyunlu phrase search: and the corresponding facet 'Decoration: No' on Or 9493's individual record: indicates Or 9493 was catalogued WITHOUT decoration-positive metadata. The 'Yes' codex is Or 11846 (Pīr Būdāq Hāfiẓ dīvān, with 1 miniature). Caveat: Fihrist 'Decoration No' is a coarse cataloguer judgment derived from Meredith-Owens; absence of recorded decoration ≠ absence of decoration. Decorated paper (sprinkled gold, marbled, halkâr, etc.) would not necessarily register as 'decoration' in this scheme."
+      },
+      {
+        "witness_id": "bl_or_9493",
+        "field": "fihrist_external_identifiers",
+        "value": "Author authority: VIAF 43402797, LoC n88215419, Fihrist person_43402797. Work authority: Fihrist work_20697.",
+        "source": "https://www.fihrist.org.uk/catalog/person_43402797",
+        "confidence": "high",
+        "notes": "Confirms search_keys.json external_identifiers section. These are the only Fihrist-indexed manuscripts attributed to Jahānshāh Qaraqoyunlu's authority record."
+      }
+    ],
+    "rejected_candidates": [
+      {
+        "witness_id_tentative": "bl_or_5327",
+        "shelfmark": "Or 5327",
+        "collection": "British Library, Oriental Manuscripts",
+        "rejection_reason": "FALSE POSITIVE. Or 5327 contains 5 works including 'Nuzhat al-Mulūk' by Muḥammad al-Bulghārī (ff. 215v-263r), described as 'written in the reign of Jahānshāh Qaraqoyunlu': this is a HISTORICAL CONTEXT note, not authorship. Jahānshāh did not author the Nuzhat. The Fihrist person_43402797 record incorrectly lists Or 5327 as a 'manuscript' authored by Jahānshāh, which is metadata drift. 17-18th c. CE, 296 ff., 26.3 × 16.4 cm, all 5 works in Persian.",
+        "discovery_source": "https://www.fihrist.org.uk/catalog/manuscript_5950"
+      },
+      {
+        "witness_id_tentative": "bl_or_11846",
+        "shelfmark": "Or 11846",
+        "collection": "British Library, Oriental Manuscripts",
+        "rejection_reason": "FALSE POSITIVE for Haqiqi authorship. Or 11846 is a Dīvān by Hāfiẓ Sa'd (حافظ سعد), 864 AH (1460), 185 ff., 25.7 × 13 cm, COPIED FOR THE LIBRARY of Pīr Būdāq, son of Jahānshāh Qaraqoyunlu (commissioner relationship). Decoration: '1 miniature' on f. 148r depicting 'Pīr Būdāḳ, son of Jahānshāh Ḳarāḳoyunlu, reclining in a garden listening to a lute player'. NOT a witness to Haqiqi poetry, but VALUABLE AS COMPARATOR for contemporary Qaraqoyunlu codicology: copied 7 years before Jahānshāh's death (d. 1467) by a different scribe in his son's atelier.",
+        "discovery_source": "https://www.fihrist.org.uk/catalog/manuscript_5394",
+        "digital_surrogate_note": "Available via BL Digitised Manuscripts at http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Or_11846; reader's card required for access."
+      },
+      {
+        "witness_id_tentative": "de_sbb_ms_or_oct_2746",
+        "shelfmark": "Ms. or. oct. 2746 - 1",
+        "collection": "Staatsbibliothek zu Berlin – Preußischer Kulturbesitz",
+        "rejection_reason": "FALSE POSITIVE: DISAMBIGUATION CASE. Qalamos lists this as 'İrşâdnâme by Ḥaḳîḳî' (Ottoman-Turkish, text from collective manuscript). However the Qalamos agent record at https://www.qalamos.net/receive/MyMssPerson_agent_00014071 explicitly identifies this Ḥaḳîḳî as the Melamî dervish who DIED 1050/1640-41: citing Gölpinarli 1931, *Melâmîlik ve Melâmîler*, Istanbul, p. 211. This is a DIFFERENT POET from Cihanşah Qaraqoyunlu Hakîkî (d. 872/1467). Earlier 4-way ambiguity (later expanded to 7-way in the final register) and TEIS Yesevi caveat. unresolved question for future researcher: should this 17th-c. Hakîkî be added to a SEPARATE register of homonymous Hakîkîs to prevent future re-discovery? It's the second known Hakîkî (after the Hakîkîzâde Osman Efendi at BnF Supplément turc 1497).",
+        "discovery_source": "Qalamos full-text search at https://www.qalamos.net/"
+      },
+      {
+        "witness_id_tentative": "bnf_supplement_turc_1497",
+        "shelfmark": "Supplément turc 1497",
+        "collection": "BnF, Département des Manuscrits, Turc",
+        "rejection_reason": "FALSE POSITIVE: DISAMBIGUATION CASE. BnF authority field gives 'Hakikizâde, Osman Efendi (....-1627)': i.e., 'son of Hakîkî, Osman Efendi'. The pen-name suffix '-zâde' (son of) plus the 1627 death date confirm this is a different Ottoman Bektaşi/Melamî 17th-c. poet, not Cihanşah Qaraqoyunlu (d. 1467). ARK ./ark:/12148/cc91114j. Same homonymy pattern as the Berlin Hakîkî above; possibly the same Melamî 'family' tradition (-zâde would mean Osman Efendi was son of an earlier Hakîkî).",
+        "discovery_source": "https://archivesetmanuscrits.bnf.fr/ark:/12148/cc91114j"
+      }
+    ],
+    "false_positive_patterns": [
+      "Pen-name homonymy [later expanded to 7-way disambiguation]: AT LEAST FOUR distinct 'Hakîkî' poets were catalogued across European holdings during this UK/European sweep: (1) Cihanşah Qaraqoyunlu, d. 1467 (Or 9493 only: the target); (2) Hakîkîzâde Osman Efendi, d. 1627 (BnF Suppl. turc 1497); (3) the Melamî Ḥaḳîḳî, d. 1050/1640-41 (Berlin Ms. or. oct. 2746/1, İrşâdnâme; per Gölpinarli 1931); (4) probable others flagged in witness_register.json (Ay 2013 caveat) but not yet encountered in this UK/European scope. Any 'Hakîkî' identification with a date later than ~1500 should default to disambiguation pending; only Cihanşah is a Qaraqoyunlu witness.",
+      "Sufi adjective ḥaqīqī (real, true) vs majāzī (metaphorical): Persian-script searches return ~10 false positives where ḥaqīqī appears as a philosophical adjective in mystical, philosophical, astronomical, or epistolary contexts. These are NEVER witness-authorial usages. Disambiguate by checking whether the term occurs in colophon, title-page, or attributive byline context (= author) vs. body of text (= adjective).",
+      "Mughal Shah Jahan / Jihān-shāh confusion: 19th-c. Orientalist transliterations 'Djihan Chah', 'Djihân Châh', 'Schah Djahan' typically refer to the Mughal emperor Shah Jahan (r. 1628-58, builder of Taj Mahal), NOT Cihanşah Qaraqoyunlu. Smith-Lesouëf 246 (Mughal portraits) and Arabe 4529 (Taj Mahal Quran inscriptions) are diagnostic FPs.",
+      "Commissioner / dedicatee / historical-context conflations: BL Or 5327 (Nuzhat al-Mulūk 'written in the reign of Jahānshāh') and Or 11846 (Hāfiẓ dīvān 'copied for the library of Pīr Būdāq, son of Jahānshāh') are indexed under person_43402797 in Fihrist via their HISTORICAL relationship, not authorship. Distinguish: authorial witness vs. commissioner witness vs. contemporary-period witness: only the first qualifies for the Haqiqi register.",
+      "Ottoman 'Hakki' (Ismaʿil Hakki, d. 1725) is a distinct poet whose name is sometimes orthographically confused with 'Hakîkî' in older transliterations. BnF Turc 270 marginal divan section was indexed under 'Hakki' but is the 17th-18th c. Bursalı Ismaʿil Hakki: not a Hakîkî homonym."
+    ],
+    "blocked_or_inaccessible_portals": [
+      {
+        "portal": "cudl_cambridge",
+        "url": "https://cudl.lib.cam.ac.uk/",
+        "reason": "CloudFront 403 from this network. Search could not be completed through automated retrieval. Cambridge holdings are however well covered by Fihrist (Trinity College, Christ's, Newton, etc.)."
+      },
+      {
+        "portal": "al_furqan_full_record_view",
+        "url": "https://digitallibrary.al-furqan.com/",
+        "reason": "Login required for record-level inspection. Facet count of '0 of 234125' is observable without login and indicates no Hakiki-attributed records, but cannot verify by examining individual records. Note Al-Furqan's index is heavily Arabic/African collection-focused with limited Persian/Turkish poetry coverage anyway."
+      }
+    ]
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-02",
+    "artifact_status": "current",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

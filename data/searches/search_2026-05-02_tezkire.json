@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "search_session": {
+    "date": "2026-05-02",
+    "scope": "tezkire",
+    "family": "haqiqi_witness_census",
+    "purpose": "tezkire mining: capture biographical entries, sample verses, manuscript citations, and codicological/paper claims from biographical-dictionary literature on Cihanşah Hakîkî (Jahānshāh Qaraqoyunlu, d. 872/1467). Results inform witness verification, sample-verse cross-checking, and the BL Or 9493 decorated-paper synthesis.",
+    "method": {
+      "tools_used": [
+        "direct HTTP fetch (5 hits)",
+        "targeted web search (12 queries)",
+        "Direct HTTP fetch downloads (3 PDFs)",
+        "third-party HTML mirroring (4 attempts)",
+        "PyPDF2 / pypdf text extraction (2 PDFs)"
+      ],
+      "blocked_resources": [
+        "iranicaonline.org/articles/jahansah-qara-qoyunlu: HTTP 403 (jina.ai proxy returned only navigation, no article body); slug confirmed as Type:Cross-reference stub, body not present at any tested alternative slug",
+        "biyografya.com/biyografi/2243: HTTP 403; jina.ai proxy retrieved abbreviated text",
+        "ekitap.ktb.gov.tr (Macit 2002 Grafiker book PDF): connection forcibly closed during direct download",
+        "ekşisözluk.com/cihan-sah--2524105: HTTP 403"
+      ],
+      "successful_retrievals": [
+        "TEIS Yesevi 'HAKÎKÎ, Cihânşâh': full bio + 2 ghazals + 1 tuyug verbatim",
+        "MEB İslam Ansiklopedisi Cilt III (Yınanç 1945): full Cihan-Şah entry pp. 178-189 from Internet Archive PDF download (49.6 MB)",
+        "Macit Bilig 13 (2000): full PDF via Bilig open-access; 13 ghazals + 3 tuyughs reproduced + Câmî's Münşeât response in Hikmet 1991 Turkish translation",
+        "Devletşâh Lugal trans. 1977 Vol 1-3 silo.tips full-text mirror (image PDF on Turuz.com had no OCR layer)",
+        "Sam Mirza/Tuhfa-yi Sami structure: via dergipark + AIS associationforiranianstudies article (Cihanşah specific entry NOT yet retrieved)",
+        "Mecâlisü'n-Nefâyis structure + 8-meclis division: via Wikipedia + TKI Dergisi"
+      ]
+    },
+    "tezkires_consulted": [
+      {
+        "title": "TEIS Yesevi 'HAKÎKÎ, Cihânşâh' biographical entry",
+        "type": "modern_biographical_encyclopaedia (tezkire-derived)",
+        "author": "Yesevi University Türk Edebiyatı İsimler Sözlüğü editorial team",
+        "edition_used": "online entry, retrieved 2026-05-02",
+        "url": "https://teis.yesevi.edu.tr/madde-detay/hakiki-cihansah",
+        "access_method": "direct HTTP fetch",
+        "haqiqi_entry_present": true,
+        "extract_file": "tezkire_extracts/teis_yesevi_haqiqi.md",
+        "manuscripts_cited": [
+          "British Library Or. 9493 (London)",
+          "Matenadaran 965 (Yerevan)",
+          "Süleymaniye Fatih Kısmı 3808 (Istanbul)",
+          "Ankara DTCF İsmail Saib I/2221",
+          "Tehran University Central Library 8198"
+        ],
+        "sample_verses_count": 3,
+        "sample_verses_languages": [
+          "Turkish"
+        ],
+        "sample_verses_summary": "Two complete ghazals (Tâ ki hüsnün... + Gelgil ki senden ayru...) and one complete tuyug (Dil-berün la'lini handân isterem...). Both ghazals close with Hakîkî takhalluṣ; both contain Hallâcî/Mansurian iconography ('Mansûr oldı der-meydân-ı aşk', 'Mansûrvâr egerçi meni dâra çekeler').",
+        "codicological_claims": "INDIRECT: TEIS quotes Uluç 2006 (pp. 28, 66) on Pīr Budāq's patronage of nakış (illumination) and cilt (binding): establishes Turkmen-period book-arts patronage chain. NO direct claims about Cihanşah's Divan manuscripts.",
+        "biographical_evaluation_summary": "Cihanşah portrayed as legitimate ruler-poet contributor to Azerbaijani Turkic + Persian literature; Hurufi-influenced; bilingual; in continuum with Nesîmî and Mansurian mysticism. Patron of arts including book arts via son Pīr Budāq."
+      },
+      {
+        "title": "İslâm Ansiklopedisi (MEB) C. III, 'Cihan-Şah'",
+        "type": "modern_encyclopaedia (tezkire-bibliographic)",
+        "author": "Mükrimin H. Yınanç",
+        "edition_used": "MEB 1945, İstanbul, pp. 173-189 (= PDF pp. 89-96 of Cilt III)",
+        "url": "https://archive.org/details/meb-islam-ansiklopedisi_202308",
+        "access_method": "Direct HTTP fetch download → pypdf text extraction",
+        "haqiqi_entry_present": true,
+        "extract_file": "tezkire_extracts/yinanc_meb_islam_ansiklopedisi_cihansah.md",
+        "manuscripts_cited": [
+          "BnF Bibl. Nat. Suppl. Pers. 161-171, 208-209 (Cihanşah/Pir Budak letters to Mamluk sultans)",
+          "BnF Suppl. Pers. 1815 (Sultan Abu Sa'id letters to Cihanşah)",
+          "BnF Suppl. Pers. 190 + 301 (Kadı Nūr-Allah Mar'aşi, Majālis al-mu'minīn)",
+          "BnF Suppl. Pers. 1330 (Haydar Râzi, Macma' al-tavârih)",
+          "Esad Efendi 333 (Münşaât)",
+          "Esad Efendi 1280 (Mar'aşi, Majālis)",
+          "Esad Efendi 2125 ('Abd al-Razzāq Samarqandī, Maṭlaʿ al-saʿdayn)",
+          "Esad Efendi 3340 (Cihanşah's vakfiye for Tabriz hayrat: VERIFIED, also in TDV Konukçu 1993)",
+          "Esad Efendi 3369 (Uzun Hasan letter to Fatih about Mardin victory)",
+          "Esad Efendi 3673 (Husâmeddin-zâde mecmuası, var. 59ff.: Cihanşah long reply)",
+          "Edirne Sultan Selim 1492 (Maṭlaʿ al-saʿdayn)",
+          "Fatih 4371 (Ḥāfiẓ-i Abrū, Zubdat al-tavārīkh)",
+          "Nuruosmaniye 3317 (Ḥasan Beg Rūmlū, Aḥsan al-tavārīkh)",
+          "Nuruosmaniye 3428 (Ibn Taghrībirdī, al-Manhal al-ṣāfī)",
+          "Nuruosmaniye 4981 (mecmuʿa with Cihanşah letters)",
+          "Ayasofya 3499 (Ibn Taghrībirdī, al-Nujūm al-zāhira VII)",
+          "Devletşâh, Tazkirat al-shu'arā: Browne Leyden 1901 ed., p. 554"
+        ],
+        "sample_verses_count": 0,
+        "sample_verses_languages": [],
+        "sample_verses_summary": "Yınanç quotes ZERO sample verses from Hakîkî's Divan. Treatment is purely political-historical and bibliographic.",
+        "codicological_claims": "ZERO claims about Cihanşah's Divan manuscripts. Single relevant codicological lead: Esad Efendi 3340 = Cihanşah's vakfiye for Tabriz hayrat (charitable foundations): NOT a Divan witness, but the most-likely-decorated manuscript object connected to Cihanşah's name in Turkish collections (vakfiyes were often calligraphically/decoratively elaborate). unresolved question for authenticated YEK portal future research.",
+        "biographical_evaluation_summary": "Cihanşah characterised as: (1) bigger than other Qara-Qoyunlu rulers; (2) considered himself successor to Ilkhanid sovereigns; (3) wrote Persian + Turkish poems under Hakîkî pen-name 'in this century when Arab poetry had collapsed and Persian poetry was in decay'; (4) patron of scholars at Tabriz medrese; (5) Mar'aşi labels him Shi'i: Yınanç rebuts this attribution. Religious-philosophical attitudes 'partial truth' to charges of irreligion, 'more moderate than his brothers'."
+      },
+      {
+        "title": "TDV İslâm Ansiklopedisi C. 7, 'Cihan Şah'",
+        "type": "modern_encyclopaedia (tezkire-bibliographic)",
+        "author": "Enver Konukçu",
+        "edition_used": "TDV İslam Ansiklopedisi C. 7, İstanbul 1993, p. 536",
+        "url": "https://islamansiklopedisi.org.tr/cihan-sah",
+        "access_method": "direct HTTP fetch (returned summary; full text not accessible)",
+        "haqiqi_entry_present": true,
+        "extract_file": "tezkire_extracts/tdv_islamansiklopedisi_konukcu_cihansah.md",
+        "manuscripts_cited": [
+          "Süleymaniye Esad Efendi 3340 (Cihanşah's vakfiye for Tabriz charitable foundations)"
+        ],
+        "sample_verses_count": 0,
+        "sample_verses_languages": [],
+        "sample_verses_summary": "ZERO sample verses. The entry preserves Minorsky 1954's text statistics (105 Persian / 87 Turkish ghazals / 32 rubaʿis): pre-Macit numbers.",
+        "codicological_claims": "ZERO direct claims. Only mentions Esad Efendi 3340 as a vakfiye witness.",
+        "biographical_evaluation_summary": "Strictly biographical. Notes Hakîkî pen-name + bilingual poetry + Minorsky as the source for verse examples."
+      },
+      {
+        "title": "Câmî Münşeât poem in praise of Cihanşah's Divan",
+        "type": "primary_contemporary_literary_response (tezkire-adjacent)",
+        "author": "ʿAbd al-Raḥmān Jāmī (d. 898/1492)",
+        "edition_used": "Hikmet 1991 Turkish translation (Çev. M. N. Gencosman) of Hikmet's *Mollâ Câmî*; reproduced verbatim in Macit 2000 Bilig 13 pp. 10-11",
+        "url": null,
+        "access_method": "via Macit 2000 Bilig 13 PDF (376 KB) downloaded by direct HTTP fetch",
+        "haqiqi_entry_present": true,
+        "extract_file": "tezkire_extracts/jami_munseat_haqiqi_response.md",
+        "manuscripts_cited": [],
+        "sample_verses_count": 0,
+        "sample_verses_languages": [],
+        "sample_verses_summary": "Reproduces Câmî's full verse-response (28 couplets in Turkish trans.) but quotes NO sample of Cihanşah's own poetry. The response is a Persian poem about Cihanşah's Divan, not a quotation from it.",
+        "codicological_claims": "TENTATIVE: Câmî describes the Divan-manuscript as 'içi mücevher hokkasını andıran gerçek incilerle dolu mübarek bir kitap' (a blessed book whose interior resembles a casket of jewels filled with genuine pearls). PANEGYRIC METAPHOR: NOT decoration evidence. Methodologically unsafe to read as decorated-paper claim. However, confirms high-quality manuscript copies of the Divan circulated as gifts at the Timurid-Aq Qoyunlu intellectual elite level.",
+        "biographical_evaluation_summary": "Câmî praises Cihanşah's Divan as containing 'gazeller, mesneviler, sûret ve manâya ait sırlar' (ghazals, mathnawīs, secrets of form and meaning): supports a masnavī-bearing form for Cihanşah's lifetime divan; specific codex/count assignment to Mat 965 / Süleymaniye Fatih 3808 remains unresolved pending direct collation."
+      },
+      {
+        "title": "Macit, 'Cihânşâh ve Türkçe Şiirleri': Bilig 13 (2000)",
+        "type": "modern_scholarly_study (tezkire-synthesizing)",
+        "author": "Doç. Dr. Muhsin Macit",
+        "edition_used": "Bilig 13 (Bahar 2000), pp. 9-17; English abstract pp. 18-19, open-access PDF",
+        "url": "https://bilig.yesevi.edu.tr/yonetim/icerik/makaleler/3452-published.pdf",
+        "access_method": "direct HTTP fetch + pypdf extraction (376 KB PDF)",
+        "haqiqi_entry_present": true,
+        "extract_file": "tezkire_extracts/macit_bilig_2000_haqiqi.md",
+        "manuscripts_cited": [
+          "British Museum Or. 9493 (London): 113 P + 92 T + 33 tuyughs per Macit revision",
+          "Matenadaran 965 (Erivan, Macit '?')",
+          "Süleymaniye Fatih 3808: 109 P + 32 mesnevis + 94 T + 28 tuyughs",
+          "Ankara DTCF İsmail Saib I/2221"
+        ],
+        "sample_verses_count": 16,
+        "sample_verses_languages": [
+          "Turkish"
+        ],
+        "sample_verses_summary": "13 ghazals + 3 tuyughs reproduced as matlaʿ (opening couplets only); all overlap with Nesîmî attributions in Araslı 1973 / Ayan 1990 / Kahramanof 1973 editions of Nesîmî Divan. CRITICAL TEXTUAL LIFELINES for cross-checking witnesses since manuscript folio refs (S=Süleymaniye Fatih 3808, L=BL Or 9493) are explicit.",
+        "codicological_claims": "ZERO. Macit gives no paper, decoration, illumination, or binding details for ANY of the 4 witnesses.",
+        "biographical_evaluation_summary": "Cihanşah is bilingual ruler-poet; Hurufi-influenced but suppressed Hurufi rebellion 1441; Hallâcî-Mansurian mystical imagery; closer textually to Nesîmî than Minorsky 1954 acknowledged. Câmî's Münşeât response supports a masnavī-bearing form within Cihanşah's lifetime; specific codex assignment to Mat 965 / Süleymaniye remains unresolved pending direct collation."
+      },
+      {
+        "title": "Devletşâh, Tezkiretü'ş-Şuʿarâ (1487): Lugal Vol 1-3",
+        "type": "primary_tezkire (PARTIAL ACCESS)",
+        "author": "Devletşâh-ı Semerkandî",
+        "edition_used": "Necati Lugal trans. İstanbul 1977 Tercüman 1001 Temel Eser: Vols 1-3 retrieved via silo.tips full-text mirror; Vol 4 (containing dedicated Cihanşah entry per TEIS Yesevi citation 'Devletşâh 1977: 537') NOT retrieved",
+        "url": "https://silo.tips/download/d-m-tsm-tgzko-tezkire-i-devletah-1001-temel-eser",
+        "access_method": "third-party HTML mirroring + direct HTTP fetch",
+        "haqiqi_entry_present": "partial: political mentions only in Vols 1-3; dedicated entry in Vol 4 not retrieved",
+        "extract_file": "tezkire_extracts/devletshah_lugal_haqiqi.md",
+        "manuscripts_cited": [],
+        "sample_verses_count": 0,
+        "sample_verses_languages": [],
+        "sample_verses_summary": "ZERO from the dedicated entry (not retrieved). 5 political-narrative mentions of Cihanşah Türkmen / Cihanşah b. Kara Yusuf in Şahruh-era / Aq Qoyunlu rivalry contexts. Vol 1-3 ends with 'Cihanşah ve evlâdının hal tercümesi bundan sonra gelecektir' (forward reference).",
+        "codicological_claims": "ZERO. Tezkires of this genre never engage codicology.",
+        "biographical_evaluation_summary": "Per TEIS quotation of Lugal Vol 4 p. 537: 'Cihanşah yetmiş yıl ömür sürdü' (lived 70 years): used by Kurbanov 1990 to compute birth year 1399. Devletşâh's tezkire (1487, 20 years post-Cihanşah) is the earliest external acknowledgement of Cihanşah-as-poet outside Cihanşah's own circle."
+      },
+      {
+        "title": "Encyclopaedia Iranica 'JAHĀNŠĀH QARĀ QOYUNLU' (cross-reference stub)",
+        "type": "modern_encyclopaedia (stub)",
+        "author": "n/a (cross-reference only)",
+        "edition_used": "online stub, last updated 2012-03-13, published 2008-12-15",
+        "url": "https://www.iranicaonline.org/articles/jahansah-qara-qoyunlu",
+        "access_method": "direct HTTP fetch (HTTP 403); third-party HTML mirroring returned page metadata only: no article body",
+        "haqiqi_entry_present": false,
+        "extract_file": "tezkire_extracts/iranica_jahansah_qaraqoyunlu_stub.md",
+        "manuscripts_cited": [],
+        "sample_verses_count": 0,
+        "sample_verses_languages": [],
+        "sample_verses_summary": "ZERO. Stub redirects to Qara Qoyunlu main entry which is itself 404 at all tested slugs (qara-qoyunlu, qara-qoyunlu-confederation, kara-koyunlu, qaraqoyunlu, haqiqi-2, haqiqi-jahanshah). The full Iranica Jahanshah entry is presumably in printed Vol XIV (J) but not migrated online.",
+        "codicological_claims": "ZERO retrievable.",
+        "biographical_evaluation_summary": "Not retrievable from online source."
+      }
+    ],
+    "new_witnesses": [],
+    "supplementary_data_for_existing_witnesses": [
+      {
+        "witness_id": "bl_or_9493",
+        "supplementary_data_type": "textual_recension_status",
+        "data": "Câmî's Münşeât poem indicates Cihanşah's lifetime Divan contained 'gazeller, mesneviler, sûret ve manâya ait sırlar', so the mesnevi component is authorial. BL Or 9493 (no mesnevis) preserves a narrower form; specific assignment of the masnavī-bearing form to the Mat 965 / Süleymaniye Fatih 3808 codices remains unresolved pending direct collation.",
+        "source": "tezkire_extracts/jami_munseat_haqiqi_response.md + tezkire_extracts/macit_bilig_2000_haqiqi.md"
+      },
+      {
+        "witness_id": "bl_or_9493",
+        "supplementary_data_type": "sample_verse_cross_check_anchor",
+        "data": "13 ghazals + 3 tuyughs in BL Or 9493 (folios listed in Macit 2000 p. 13) overlap textually with Nesîmî Divan editions. These constitute textual lifelines for cross-checking Hakîkî-attributed material against later Nesîmî manuscript collections (the mecmûʿa sweep Nesîmî-adjacency heuristic confirmed empirically).",
+        "source": "tezkire_extracts/macit_bilig_2000_haqiqi.md"
+      },
+      {
+        "witness_id": "matenadaran_965",
+        "supplementary_data_type": "textual_recension_status",
+        "data": "Mat 965 (1474-75) PRE-DATES every known Nesîmī manuscript witness. When ghazals are attributed to both Hakîkî AND Nesîmî in different printed editions, the chronology of Mat 965's existence supports Hakîkî priority of attribution.",
+        "source": "tezkire_extracts/macit_bilig_2000_haqiqi.md"
+      },
+      {
+        "witness_id": "(non-witness, codicological lead)",
+        "supplementary_data_type": "non_divan_manuscript_lead",
+        "data": "Süleymaniye Esad Efendi 3340 = Cihanşah's vakfiye for Tabriz charitable foundations. NOT a Divan witness, but the most-likely-decorated manuscript object directly connected to Cihanşah's name in Turkish collections (vakfiyes are often calligraphically/decoratively elaborate). unresolved question for authenticated YEK portal future research visualization.",
+        "source": "tezkire_extracts/yinanc_meb_islam_ansiklopedisi_cihansah.md + tezkire_extracts/tdv_islamansiklopedisi_konukcu_cihansah.md"
+      }
+    ],
+    "disambiguation_findings": {
+      "homonymous_hakikis_distinguished": [
+        "HAKÎKÎ Cihânşâh (d. 1467): TARGET, Qaraqoyunlu ruler, bilingual Persian/Turkish poet",
+        "HAKÎKÎ Mustafa Bağdâdî: different poet, often confused; TEIS Yesevi has separate entry",
+        "HAKÎKÎZÂDE Osman Efendi (d. 1627): Ottoman dervish poet",
+        "MELÂMÎ HAKÎKÎ (d. 1640): Melami sufi poet"
+      ],
+      "rejected_attributions": [
+        "Verses ostensibly attributed to Hakîkî in late mecmuʿas without Nesîmî disambiguation should be cross-checked against the 13 ghazals + 3 tuyughs that Macit 2000 establishes as appearing in BOTH Nesîmî and Hakîkî manuscript traditions. Default to Hakîkî only if (a) the verse is in Mat 965 (1474-75) or BL Or 9493 (1488), (b) matches the Hakîkî-takhalluṣ usage pattern, or (c) is in a clearly Hakîkî-titled witness."
+      ]
+    },
+    "codicological_findings_for_bl_or_9493_decoration_question": {
+      "summary": "Tezkire literature provides ZERO direct codicological / paper / decoration evidence for any of the TEIS Yesevi 5 Cihanşah Hakîkî witnesses. This is a structural feature of the tezkire genre, not a gap that further tezkire mining can fill. The most relevant codicological lead surfaced by this scope is INDIRECT: TEIS Yesevi (citing Uluç 2006 pp. 28, 66) confirms that Pīr Budāq, Cihanşah's son, patronised illumination (nakış) and binding (cilt) at Cihanşah's court: establishing the Turkmen-period book-arts patronage chain in which BL Or 9493 (1488 Isfahan, 21 years post-Cihanşah) was produced. Câmî's panegyric metaphor 'içi mücevher hokkasını andıran gerçek incilerle dolu mübarek bir kitap' is methodologically unsafe to read as decoration evidence: it is metaphor about textual content, not material decoration."
+    },
+    "summary_metrics": {
+      "tezkires_with_full_entry_retrieved": 4,
+      "tezkires_with_partial_entry_retrieved": 1,
+      "tezkires_with_stub_only": 1,
+      "tezkires_unretrieved_targets": 7,
+      "total_sample_verses_captured_verbatim": "3 full ghazals + 1 full tuyug + 16 ghazal/tuyug matlaʿ pairs",
+      "manuscript_citations_gathered": 17,
+      "new_witnesses_added_to_register": 0,
+      "rejection_of_existing_witnesses": 0,
+      "supplementary_data_records_for_existing_witnesses": 4
+    }
+  },
+  "audit_metadata": {
+    "record_type": "literature_backchain",
+    "record_date": "2026-05-02",
+    "artifact_status": "current",
+    "source_layers": [
+      "project_classification",
+      "scholarly_description"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

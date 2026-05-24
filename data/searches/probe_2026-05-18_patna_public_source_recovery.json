@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "session_label": "Patna public-source recovery and author-claim trace",
+  "session_id": "patna-public-source-recovery-2026-05-18",
+  "date": "2026-05-18",
+  "status": "DESK_VERIFICATION_NO_REGISTER_CHANGE",
+  "scope": "Desk-only follow-up after outreach was deferred. This pass rechecked public web, catalogue, bookstore, and archive surfaces for Patna Madrasa Sulaimania MS no. 2 / For Tomorrow no. 126, with no emails, library contact, interlibrary-loan requests, or scholar/publisher outreach.",
+  "questions_tested": [
+    "Does any reachable public source identify Patna Madrasa Sulaimania MS no. 2 / For Tomorrow no. 126 as Jahanshah b. Qara Yusuf Haqiqi?",
+    "Can the earlier Bookvision author-identification claim be independently recovered?",
+    "Is the phrase 'Jahanshah b. Qara Yusuf Haqiqi Turkman' source-confirmed somewhere else in the public web corpus?",
+    "Does public metadata for the 2023 Patna catalogue expose entry-level text for manuscript no. 2?"
+  ],
+  "executive_findings": [
+    {
+      "finding": "Reachable Patna evidence remains title-level only.",
+      "confidence": "high",
+      "evidence_basis": "The load-bearing Blogfa / Majma-i Zakhair-i Islami facsimile-series list gives Divan-i Haqiqi, manuscript no. 2, Madrasa Sulaimania/Sulaymaniyah, Patna, India; Persian / poetry; 126 pages; color. It does not give author heading, incipit, explicit, colophon, date, foliation, scribe, or first lines.",
+      "impact": "Patna remains a high-priority unverified candidate lead outside data/witness_register.json."
+    },
+    {
+      "finding": "The 'Jahanshah b. Qara Yusuf Haqiqi Turkman' wording is confirmed on a separate printed-edition / bookstore lane, not on the reachable Patna source.",
+      "confidence": "medium-high",
+      "evidence_basis": "IranKetab and search-result snippets from Iranian bookstore pages identify the author of a Behjat printed edition, Divan-i Jahanshah Haqiqi / Shah Turkman Shah Qaraqoyunlu, as Jahanshah b. Qara Yusuf Haqiqi Turkman. A related Jahanshahakyky blog post describes the Behjat / Khanegeldi Ownuk 1392/1393 printed book and says it is based on the Matenadaran manuscript.",
+      "impact": "This likely explains the author phrase in external lead discussions, but it must not be retrofitted onto Patna MS no. 2 without entry-level Patna evidence."
+    },
+    {
+      "finding": "The 2023 Patna catalogue is still the decisive missing source.",
+      "confidence": "high",
+      "evidence_basis": "The Boroujerdi Telegram mirror states that the Patna catalogue introduces more than 200 manuscripts and contains bibliographic/codicological data plus images from some manuscripts. Public metadata and Alfehrest's public Telegram storefront confirm the catalogue identity and product metadata, but do not expose entry no. 2.",
+      "impact": "The next non-outreach task is source recovery from public catalogue shadows, not register promotion."
+    },
+    {
+      "finding": "Bookvision remains unresolved from this environment.",
+      "confidence": "high",
+      "evidence_basis": "DNS resolution for www.bookvision.ir failed; direct fetch to https://www.bookvision.ir/Book.aspx?id=IGT236502 failed; web search for IGT236502 and Bookvision + Divan-i Haqiqi did not recover a cached record. India VPN retesting did not improve this: bookvision.ir A lookup timed out and www.bookvision.ir returned DNS server failure.",
+      "impact": "Any Bookvision claim should remain marked as unrecovered until checked from a resolver/network that can reach bookvision.ir or from a preserved screenshot/cache."
+    },
+    {
+      "finding": "Torob confirms a live Alfehrest acquisition shadow for the facsimile title, but not entry-level Patna authorship evidence.",
+      "confidence": "high",
+      "evidence_basis": "Manual browser access and direct HTML retrieval through multiple regional routes exposed a live listing titled 'Divan-i Haqiqi (facsimile print)' sold by Alfehrest, with availability, seller, price, category, and image metadata.",
+      "impact": "This materially strengthens the non-outreach acquisition path for the For Tomorrow / Patna facsimile, but it still does not identify the Patna manuscript's author as Jahanshah/Cihansah or expose incipit, explicit, colophon, foliation, date, scribe, or first lines."
+    },
+    {
+      "finding": "A Bing-indexed Alfehrest product result recovered the exact facsimile product slug and seller-page snippet.",
+      "confidence": "medium-high",
+      "evidence_basis": "A Bing result for the exact query 'Divan-i Haqiqi' + 'Patna' returned the Alfehrest product URL https://alfehrest.com/product/%D8%AF%D9%8A%D9%88%D8%A7%D9%86-%D8%AD%D9%82%D9%8A%D9%82%DB%8C/ and a snippet naming 'Divan-i Haqiqi (facsimile print)', price 10,000,000 IRR, poetry / Persian, For Tomorrow no. 126, manuscript no. 2, Madrasa Sulaimania, Patna, India, color print, and add-to-cart wording.",
+      "impact": "This independently ties the Torob facsimile to an Alfehrest product slug and confirms the same Patna/For Tomorrow metadata through a search-index cache. It still does not expose the full Alfehrest page, author heading, incipit, explicit, colophon, date, scribe, foliation, or first lines."
+    },
+    {
+      "finding": "Image-index and product-image recovery did not expose usable cover or OCR evidence.",
+      "confidence": "high",
+      "evidence_basis": "Bing Images queries for the exact facsimile title, Alfehrest title/slug, For Tomorrow no. 126, Patna, and Madrasa Sulaimania returned unrelated false positives. A manually accessed Torob page exposed the product image element and source URLs, but the image host requests timed out in the browser and the image element had naturalWidth/naturalHeight 0.",
+      "impact": "No image/OCR evidence can currently supplement the text-index snippet. The remaining decisive evidence still requires the full Alfehrest page, the facsimile, or the Patna catalogue entry."
+    },
+    {
+      "finding": "Alfehrest's public Telegram storefront recovers the Patna catalogue product, not the manuscript entry.",
+      "confidence": "high",
+      "evidence_basis": "Telegram public search for the Alfehrest shop channel recovered posts 8982 and 9376. They identify the product as Fihrist-i nuskha-ha-yi khatti-i kitabkhana-yi Madrasa-yi Sulaymaniyah, Patna, Hindustan, give the Alfehrest product URL, author Tayebeh Hajj Baqerian, publisher Majma-i Zakhair-i Islami, price 3,200,000 IRR, and a cover image. A strict channel-wide pagination sweep of 619 public Telegram pages recovered no Divan-i Haqiqi facsimile product post; the only target-adjacent hits were the same Patna catalogue posts and keyword false positives.",
+      "impact": "This strengthens catalogue acquisition metadata and clarifies that the Patna catalogue product is distinct from the For Tomorrow no. 126 facsimile. It still does not reveal the text of catalogue entry no. 2."
+    }
+  ],
+  "source_checks": [
+    {
+      "source": "Majma-i Zakhair-i Islami Blogfa facsimile-series list",
+      "url": "https://zakhair.blogfa.com/post/34",
+      "access_result": "reachable",
+      "observed": "For Tomorrow no. 126 lists 'Divan-i Haqiqi, manuscript no. 2, Madrasa Sulaimania/Sulaymaniyah, Patna, India'; language Persian / poetry; 126 pages; color.",
+      "missing_for_identification": [
+        "author heading",
+        "incipit",
+        "explicit",
+        "colophon",
+        "date",
+        "scribe",
+        "folio count",
+        "first lines"
+      ],
+      "interpretation": "Strong title-level and acquisition lead; not sufficient to identify the author as Jahanshah/Cihansah."
+    },
+    {
+      "source": "Boroujerdi Library Telegram mirror",
+      "url": "https://telegram.me/s/Boroujerdilib?before=4805",
+      "access_result": "reachable",
+      "observed": "Post at lines 179-183 announces the Patna Madrasa Sulaimania catalogue launch at the 7 Ordibehesht 1402 / 27 April 2023 Qom conference; it says the catalogue covers more than 200 manuscripts, was prepared by Tayebeh Hajj Baqerian, contains bibliographic and codicological data plus images from some manuscripts, and was published in 100 copies by Majma-i Zakhair-i Islami with Oriental Company.",
+      "missing_for_identification": [
+        "entry no. 2 text",
+        "facsimile no. 126 pages",
+        "author heading"
+      ],
+      "interpretation": "Confirms that the printed catalogue is likely the decisive evidence surface, but does not expose the Patna no. 2 entry."
+    },
+    {
+      "source": "Alfehrest public Telegram storefront search for Patna catalogue",
+      "url": "https://t.me/s/alfehrest2?q=%D9%BE%D8%AA%D9%86%D8%A7",
+      "access_result": "reachable",
+      "observed": "The public Telegram view for Alfehrest shop channel @alfehrest2 returned posts 8982 and 9376. Post 8982, dated 2023-05-10, links to an Alfehrest product page titled 'Fihrist-i nuskha-ha-yi khatti-i kitabkhana-yi Madrasa-yi Sulaymaniyah, Patna Hindustan'. Post 9376, dated 2024-02-16, gives product metadata: product name 'Fihrist-i nuskha-ha-yi khatti-i kitabkhana-yi Madrasa-yi Sulaymaniyah, Patna Hindustan', price 3,200,000 IRR, subjects Iran print / Persian language / poetry / catalogue / manuscript cataloguing / recommended books / India / India studies, author Tayebeh Hajj Baqerian, publisher Majma-i Zakhair-i Islami, photographs by Sohail Asghar Thalethi, introduction by Seyed Sadeq Hosseini Eshkouri, and shortlink B2n.ir/t13221. The attached cover image reads 'Ganjineh-yi mirath-i makhtut (128)' and 'Fihrist-i nuskha-ha-yi khatti-i kitabkhana-yi Madrasa-yi Sulaymaniyah (Patna - Hindustan)'.",
+      "missing_for_identification": [
+        "catalogue entry no. 2",
+        "Divan-i Haqiqi title row",
+        "author heading",
+        "incipit",
+        "explicit",
+        "colophon",
+        "date",
+        "scribe",
+        "first lines"
+      ],
+      "interpretation": "Strong seller-side acquisition metadata for the Patna catalogue, but not manuscript-entry evidence. It also separates the catalogue product and cover series number from the For Tomorrow no. 126 facsimile listing."
+    },
+    {
+      "source": "Alfehrest public Telegram storefront facsimile-title sweep",
+      "url": "https://t.me/s/alfehrest2",
+      "access_result": "reachable",
+      "observed": "Targeted public Telegram searches for 'Divan-i Haqiqi', 'Haqiqi', 'facsimile print', 'For Tomorrow', 'no. 126', 'manuscript no. 2', 'Madrasa Sulaymaniyah', and 'Patna' did not recover a Divan-i Haqiqi facsimile product post. A strict channel-wide pagination sweep scanned 619 public Telegram pages with zero fetch errors. The sweep surfaced 9 target-adjacent keyword hits: Khanqah Mujibiyah Patna catalogue post 2290, unrelated Istanbul Sulaimania/Suleymaniye catalogue posts 2317, 2404, and 7014, unrelated Divan-i Azar Khorasani posts 7838 and 12248, unrelated 'For Tomorrow 5' post 7924, and the already-known Patna catalogue posts 8982 and 9376. None exposed the For Tomorrow no. 126 Divan-i Haqiqi facsimile, Patna manuscript no. 2 entry text, author heading, incipit, explicit, colophon, date, scribe, foliation, or first lines.",
+      "missing_for_identification": [
+        "For Tomorrow no. 126 facsimile product post",
+        "catalogue entry no. 2",
+        "author heading",
+        "incipit",
+        "explicit",
+        "colophon",
+        "date",
+        "scribe",
+        "folio count",
+        "first lines"
+      ],
+      "interpretation": "Public text-searchable Telegram storefront mining is now largely exhausted for this lead. Further Telegram value would require image-level/OCR inspection of product cards or recovery of shortlinks/product pages not exposed by text search."
+    },
+    {
+      "source": "Boroujerdi Library direct blib.ir article",
+      "url": "http://blib.ir/libportal/tabid/56/articleType/ArticleView/articleId/2665/Default.aspx",
+      "access_result": "timeout from this environment",
+      "observed": "The Telegram mirror preserves the article snippet and direct link, but direct HTTP/HTTPS fetch attempts timed out.",
+      "interpretation": "Use the Telegram mirror for public-source traceability unless blib.ir becomes reachable."
+    },
+    {
+      "source": "Google Books Patna catalogue page",
+      "url": "https://books.google.com/books/about/%D9%81%D9%87%D8%B1%D8%B3%D8%AA_%D9%86%D8%B3%D8%AE%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C_%D8%AE%D8%B7%DB%8C_%DA%A9%D8%AA.html?id=hlJR0AEACAAJ",
+      "access_result": "metadata tokens reachable; Books API rate-limited",
+      "observed": "Direct page fetch exposed catalogue-level tokens including Sulaimania, ISBN 9786223041525, OCLC, Majma, 364, and Zakhair; the Books API returned HTTP 429 in this pass.",
+      "interpretation": "Supports catalogue identity only; no searchable entry-level data for manuscript no. 2 recovered."
+    },
+    {
+      "source": "WorldCat",
+      "url": "https://search.worldcat.org/title/1402253747",
+      "access_result": "blocked by Cloudflare / 403 from this environment",
+      "observed": "Direct fetch returned a security-verification page. Existing project metadata preserves OCLC 1402253747 from prior checks, but this pass did not recover additional entry-level data.",
+      "interpretation": "Useful acquisition metadata, not Patna no. 2 author evidence."
+    },
+    {
+      "source": "Bookvision product record IGT236502",
+      "url": "https://www.bookvision.ir/Book.aspx?id=IGT236502",
+      "access_result": "unresolved DNS / unrecovered",
+      "observed": "Resolve-DnsName for www.bookvision.ir returned DNS server failure; Google DNS-over-HTTPS reported that the bookvision.ir name servers did not respond at delegation; direct web request failed; and web searches for IGT236502 / Bookvision / Divan-i Haqiqi found no cached record. India VPN retest still failed: bookvision.ir A lookup timed out and www.bookvision.ir returned DNS server failure.",
+      "interpretation": "The earlier Bookvision author-identification claim remains an unrecovered external lead."
+    },
+    {
+      "source": "Torob product page for Divan-i Haqiqi (facsimile print)",
+      "url": "https://torob.com/p/c7ebba2f-69d5-4da9-beff-08b3a87d87c8/%D8%AF%DB%8C%D9%88%D8%A7%D9%86-%D8%AD%D9%82%DB%8C%D9%82%DB%8C-%DA%86%D8%A7%D9%BE-%D8%B9%DA%A9%D8%B3%DB%8C/",
+      "access_result": "reachable through manual browser access and later retrievable as HTML through multiple regional routes",
+      "observed": "The page title was 'Buy and price Divan-i Haqiqi (facsimile print) | Torob'. Embedded product data identified the item as 'Divan-i Haqiqi (facsimile print)', with price, seller, availability, category, product image URL, and seller profile domain alfehrest.com. Regional direct HTML fetches returned HTTP 200 and schema.org Product data with matching seller and availability fields. Attempts to resolve the outbound seller link did not return a stable Alfehrest product page, so the stable recovered evidence is the Torob HTML and embedded product data rather than a resolved Alfehrest page.",
+      "missing_for_identification": [
+        "author heading",
+        "Patna manuscript number",
+        "For Tomorrow series number",
+        "incipit",
+        "explicit",
+        "colophon",
+        "date",
+        "scribe",
+        "folio count",
+        "first lines"
+      ],
+      "interpretation": "Strong live acquisition and availability evidence for the facsimile title; not sufficient to classify Patna MS no. 2 as a Jahanshah/Cihansah witness."
+    },
+    {
+      "source": "Torob Alfehrest shop profile",
+      "url": "https://torob.com/shop/47301/%D8%A7%D9%84%D9%81%D9%87%D8%B1%D8%B3%D8%AA/",
+      "access_result": "reachable in Playwright after Torob challenge",
+      "observed": "The seller profile identifies shop 'Alfehrest', domain alfehrest.com, location Qom, status active in Torob, performance score 4.9/5, cooperation with Torob since 1402-01-13, online payment through the seller site, and shipping by courier, freight, Tipax/private post, or post. It also links to alfehrest.com and a seller pre-purchase information page.",
+      "interpretation": "Confirms Alfehrest as the live seller/acquisition route for the Torob product. It is commercial-source metadata, not manuscript-entry evidence."
+    },
+    {
+      "source": "Bing search-index result for Alfehrest facsimile product",
+      "url": "https://www.bing.com/search?q=%22%D8%AF%DB%8C%D9%88%D8%A7%D9%86%20%D8%AD%D9%82%DB%8C%D9%82%DB%8C%22%20%22%D9%BE%D8%AA%D9%86%D8%A7%22",
+      "access_result": "reachable through Jina/Bing text rendering; target Alfehrest page still timed out directly",
+      "observed": "The Bing result list includes 'Divan-i Haqiqi (facsimile print) - Alfehrest | international shop for books, posters, and magazines' with encoded target URL https://alfehrest.com/product/%D8%AF%D9%8A%D9%88%D8%A7%D9%86-%D8%AD%D9%82%D9%8A%D9%82%DB%8C/. The snippet reads: '10,000,000 (poetry - Persian) For Tomorrow, no. 126, manuscript no. 2, Madrasa Sulaimania, Patna, India, color print, Divan-i Haqiqi (facsimile print), quantity, add to cart.' Direct curl fetches of the exact slug on alfehrest.com and www.alfehrest.com timed out; Jina Reader attempts against the exact slug returned navigation-timeout errors.",
+      "missing_for_identification": [
+        "full Alfehrest product description",
+        "author heading",
+        "catalogue entry no. 2",
+        "incipit",
+        "explicit",
+        "colophon",
+        "date",
+        "scribe",
+        "folio count",
+        "first lines"
+      ],
+      "interpretation": "This is stronger than Torob-only seller metadata because it recovers the exact Alfehrest product slug and the seller-page snippet, but it is still search-index evidence rather than a direct page read or manuscript-entry proof."
+    },
+    {
+      "source": "Bing Images and Torob product-image recovery",
+      "url": "https://www.bing.com/images/search?q=%22%D8%AF%DB%8C%D9%88%D8%A7%D9%86%20%D8%AD%D9%82%DB%8C%D9%82%DB%8C%20%28%DA%86%D8%A7%D9%BE%20%D8%B9%DA%A9%D8%B3%DB%8C%29%22",
+      "access_result": "image index reachable; target images unrecovered",
+      "observed": "Bing Images was queried for the exact title 'Divan-i Haqiqi (facsimile print)', title plus Alfehrest, site:alfehrest.com/product plus title, both hyphenated slug forms, the 10,000,000 price string, Patna, For Tomorrow no. 126, and Madrasa Sulaimania. Result sets contained unrelated false positives rather than Alfehrest/Torob product-card images. The manually accessed Torob page exposed product image src https://image.torob.com/base/images/eF/to/eFto-XkFI9Z6zdst.jpg_/280x280.jpg and currentSrc https://image.torob.com/base/images/eF/to/eFto-XkFI9Z6zdst.jpg_/560x560.webp, but the element reported naturalWidth 0 and naturalHeight 0. Playwright network logs showed repeated image.torob.com requests for the 560x560 and 300x300 product images failing with net::ERR_TIMED_OUT.",
+      "missing_for_identification": [
+        "cover image",
+        "product-card OCR",
+        "author heading",
+        "catalogue entry no. 2",
+        "incipit",
+        "explicit",
+        "colophon",
+        "date",
+        "scribe",
+        "folio count",
+        "first lines"
+      ],
+      "interpretation": "Image/OCR mining did not add evidence beyond the Bing text snippet. The Torob product image URL is known but not recoverable from this route."
+    },
+    {
+      "source": "Alfehrest direct web/product search",
+      "url": "https://alfehrest.com/?s=%D8%AF%DB%8C%D9%88%D8%A7%D9%86%20%D8%AD%D9%82%DB%8C%D9%82%DB%8C&post_type=product",
+      "access_result": "timeout from this environment",
+      "observed": "Direct Alfehrest search and guessed product-slug routes for Divan-i Haqiqi timed out in both shell and Playwright, even though Torob's seller page identified alfehrest.com as the seller domain. UAE, Turkey, and India VPN retests resolved alfehrest.com to 195.28.169.45 and TCP ports 80/443 succeeded, but HTTPS timed out before completing TLS and HTTP accepted a GET request then returned zero bytes before timeout. Home, search, guessed Divan-i Haqiqi product routes, WordPress REST endpoints, sitemap.xml, product-sitemap.xml, post-sitemap.xml, product category sitemap, RSS feed, B2n shortlink t13221, and the known Alfehrest Patna-catalogue product URL all failed without usable response content from this machine. After Bing recovered the exact product slug /product/%D8%AF%D9%8A%D9%88%D8%A7%D9%86-%D8%AD%D9%82%D9%8A%D9%82%DB%8C/, direct curl and Jina Reader attempts against that slug and the www variant also timed out.",
+      "interpretation": "Alfehrest remains a decisive acquisition surface, but its own HTTP application responses were not recovered in this pass. UAE, Turkey, and India are sufficient for Torob HTML and Telegram public storefront search, but not sufficient for an Alfehrest HTTP response from this machine."
+    },
+    {
+      "source": "IranKetab author profile for Jahanshah b. Qara Yusuf Haqiqi Turkman",
+      "url": "https://www.iranketab.ir/profile/69936-%D8%AC%D9%87%D8%A7%D9%86%D8%B4%D8%A7%D9%87-%D8%A8%D9%86-%D9%82%D8%B1%D8%A7%DB%8C%D9%88%D8%B3%D9%81-%D8%AD%D9%82%DB%8C%D9%82%DB%8C-%D8%AA%D8%B1%DA%A9%D9%85%D8%A7%D9%86",
+      "access_result": "reachable",
+      "observed": "Author page describes Jahanshah Haqiqi as Qaraqoyunlu ruler 1438-1467 who wrote in Turkish and Persian; it lists Divan-i Jahanshah Haqiqi / Shah Turkman Shah Qaraqoyunlu under this author.",
+      "interpretation": "Confirms the author phrase for the printed-edition/bookseller lane, not for Patna MS no. 2."
+    },
+    {
+      "source": "Iranian bookstore search snippets for Behjat edition",
+      "url": "https://idebook.ir/product/p-38662",
+      "access_result": "direct fetch timed out; search snippets visible",
+      "observed": "Search snippets for Idebook identify Divan-i Jahanshah Haqiqi, author Jahanshah b. Qara Yusuf Haqiqi Turkman, publisher Behjat, 1393, 248 pages, ISBN 9786003380066.",
+      "interpretation": "Further support that the author phrase belongs to the Behjat printed-edition lane."
+    },
+    {
+      "source": "Jahanshahakyky blog post on Behjat / Khanegeldi Ownuk edition",
+      "url": "https://jahanshahakyky.blogspot.com/2014/01/xiv-xv-1.html",
+      "access_result": "reachable",
+      "observed": "Blog post describes a Behjat printed book titled Divan-i Jahanshah Haqiqi, written/researched by Khanegeldi Ownuk, 248 pages, and states the divan is based on the manuscript in the Matenadaran manuscript institute.",
+      "interpretation": "This is a derivative printed-edition/backchain surface, not independent Patna evidence."
+    },
+    {
+      "source": "Fihrist / Islamisation authority data for Jahanshah Haqiqi",
+      "url": "https://www.islam-anatolia.ac.uk/data/documents/UK_or_9493",
+      "access_result": "reachable",
+      "observed": "Authority and BL Or 9493 record identifies Cihan Shah / Jahanshah variants, gives the pen names Haqiqi/Hakiki, and states that he wrote Persian and Turkish poetry under Haqiqi.",
+      "interpretation": "Useful identity baseline for what a positive Patna identification should look like; not evidence about Patna itself."
+    },
+    {
+      "source": "NAMAMI / National Mission for Manuscripts repository directory",
+      "url": "https://www.namami.gov.in/sites/default/files/Manuscript_Repositories.pdf",
+      "access_result": "search-index snippet visible; direct fetch failed from this environment",
+      "observed": "Search result snippet lists Madrasa Sulaimania Library, Pachim Darwaza, Patna City, Bihar, as repository no. 1010.",
+      "interpretation": "Confirms institutional identity of the Patna holder; not entry-level manuscript evidence."
+    }
+  ],
+  "inference": "The strongest current hypothesis is that the Patna source trail and the Behjat/Ownuk printed-edition source trail have been partially conflated in external discussion. The title Divan-i Haqiqi at Patna is real enough to prioritize, and Torob plus Bing now confirm a live Alfehrest acquisition route and exact product slug for a facsimile-print product under that title. However, the author formula Jahanshah b. Qara Yusuf Haqiqi Turkman is currently documented on separate printed-edition/bookstore surfaces, not on directly read Patna evidence. Public text-searchable Alfehrest Telegram mining supports the catalogue acquisition path but did not recover the facsimile product or manuscript-entry evidence, and image/OCR routes did not recover usable product-card or cover evidence. Until the Patna catalogue entry or facsimile is inspected, the Patna item should remain an unverified title-level lead.",
+  "non_outreach_next_steps": [
+    "Recover the Alfehrest product page for the exact Bing-indexed slug https://alfehrest.com/product/%D8%AF%D9%8A%D9%88%D8%A7%D9%86-%D8%AD%D9%82%D9%8A%D9%82%DB%8C/ through a route other than the already-tested UAE, Turkey, India, Jina Reader, and manual browser-access paths; extract SKU, ISBN, product images, and any description text.",
+    "Treat text-searchable Alfehrest Telegram storefront mining as largely exhausted for this lead; if revisited, focus on image/OCR inspection of product cards or recovery of shortlinks/product pages rather than repeating public text queries.",
+    "Treat generic Bing Images and Torob product-image recovery as exhausted from this route unless a new network can load image.torob.com or a preserved product image URL is found.",
+    "Retry Bookvision IGT236502 through preserved cache/screenshot routes only; live DNS is currently failing at delegation from this environment.",
+    "Search for For Tomorrow no. 126 and Baray-i Farda no. 126 in Persian and Latin transliteration, including exact quoted strings around 'دیوان حقیقی' and 'مدرسه سلیمانیه'.",
+    "Search for the Patna catalogue title plus 'فهرست', 'نمایه', 'حقیقی', 'دیوان', 'شماره ۲', ISBN 9786223041525, and OCLC 1402253747 across search engines and catalogue aggregators.",
+    "Continue the South Asian Haqiqi homonym matrix with Storey, Khuda Bakhsh/Bankipore, Salar Jung, Rampur Raza, Asiatic Society, Aligarh/Maulana Azad, and Indo-Persian tazkira indexes before interpreting a Persian-only Patna entry.",
+    "Keep the prepared outreach packet unsent until public-source recovery is exhausted or the user reopens outreach."
+  ],
+  "register_impact": {
+    "new_witnesses_added": 0,
+    "new_candidates_added": 0,
+    "witness_count_change": "none",
+    "reason": "No reachable public source in this pass identifies Patna MS no. 2 as Jahanshah/Cihansah Qaraqoyunlu or gives first-line/textual evidence."
+  },
+  "release_blocker": false,
+  "audit_metadata": {
+    "record_type": "targeted_followup",
+    "record_date": "2026-05-18",
+    "artifact_status": "current",
+    "source_layers": [
+      "edition_apparatus",
+      "project_classification",
+      "scholarly_description"
+    ],
+    "access_mode": "open_web",
+    "disposition": "methodological_record",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

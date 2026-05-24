@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "artifact_label": "Alevi Hakiki incipit and mahlas concordance",
+  "date": "2026-05-20",
+  "sources": [
+    {
+      "citation": "Hamidreza Sohrabiabad and Bulent Akin, Tarihi Bulgular ve Hakikinin Bilinmeyen Siirlerinden Hareketle Karakoyunlularin Mezhebi Egilimleri Uzerine Yeni Tespit ve Gorusler, Alevilik-Bektasilik Arastirmalari Dergisi 19 (2019): 179-223.",
+      "url": "https://isamveri.org/pdfdrg/D03540/2019_19/2019_19_SOHRABIABADH_AKINB.pdf",
+      "download_sha256": "147178B26189BC01BAAD5215CB4D10B19B5B0E84619CA129B87B7A8EFDB301E8",
+      "role": "primary publication of the Diyarbakir and Ilkhchi Alevi Hakiki poem texts"
+    },
+    {
+      "citation": "Akbar Najaf, Qaraqoyunlu hokmdari Cahansah Haqiqinin yeni tapilan seirleri, Azerbaycan dili ve edebiyyat tedrisi 2020/1.",
+      "url": "https://tall.edu.az/web/uploads/archive/254/254.pdf",
+      "download_sha256": "7F4583BEF6162880D0CFD56842C479907F758F9041B55BFC8A18F0BCC73496C6",
+      "role": "secondary republication of the 8+3 Sohrabiabad-Akin poems in Azerbaijani orthography"
+    }
+  ],
+  "purpose": "Reusable incipit/closing-line concordance for classifying future Hakiki hits in Alevi cenk/conk/defter/kelam contexts without re-reading the full articles.",
+  "scope": "Known Alevi-community Hakiki poem texts published by Sohrabiabad-Akin 2019 and republished by Najaf 2020. This does not include institutional divan witnesses or unverified conk leads.",
+  "summary": {
+    "total_entries": 11,
+    "diyarbakir_uluturk_entries": 8,
+    "ilkhchi_kirklar_entries": 3,
+    "register_impact": "none; this is a concordance of already registered/known Alevi witnesses, not new witness evidence.",
+    "najaf_2020_relationship": "secondary republication; useful for Azerbaijani search forms and orthographic variants, not an independent physical witness."
+  },
+  "entries": [
+    {
+      "concordance_id": "SA2019-DIY-01",
+      "source_witness_id": "diyarbakir_uluturk_alevi_cenk",
+      "source_item_no": "Ek-1 no. 1",
+      "source_print_pages": "206-207",
+      "source_text_line_refs": {
+        "sohrabiabad_akin_meter_line": 1295,
+        "sohrabiabad_akin_incipit_line": 1296,
+        "sohrabiabad_akin_closing_mahlas_line": 1348,
+        "sohrabiabad_akin_post_mahlas_formula_line": 1350,
+        "najaf_2020_incipit_line": 7884
+      },
+      "meter": "Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilün",
+      "sohrabiabad_akin_incipit": "Her kimiñ muśāĥibi yoķdur gelmesün meydān ara",
+      "najaf_2020_incipit": "Hər kimin müsahibi yoxdur gəlməsin meydan ara",
+      "closing_mahlas_line": "Ey Ĥaķįķį baĥr-i Ǿummāndır cihānda bu ŧarįķ",
+      "post_mahlas_formula": "Ĥaķįķį raĥmetullah",
+      "ritual_or_doctrinal_terms": [
+        "musahib",
+        "meydan",
+        "er-Refik summe-t-tarik",
+        "Shah-i Merdan",
+        "Lahmuke lahmi",
+        "on iki imam",
+        "erkan",
+        "tarik"
+      ],
+      "form_or_item_type": "gazel",
+      "notes": "Strong musahip/erkan poem; title Ara in Najaf."
+    },
+    {
+      "concordance_id": "SA2019-DIY-02",
+      "source_witness_id": "diyarbakir_uluturk_alevi_cenk",
+      "source_item_no": "Ek-1 no. 2",
+      "source_print_pages": "207",
+      "source_text_line_refs": {
+        "sohrabiabad_akin_meter_line": 1354,
+        "sohrabiabad_akin_incipit_line": 1355,
+        "sohrabiabad_akin_closing_mahlas_line": 1380,
+        "sohrabiabad_akin_post_mahlas_formula_line": null,
+        "najaf_2020_incipit_line": 7926
+      },
+      "meter": "Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilün",
+      "sohrabiabad_akin_incipit": "Bir mürebbį vü muśāĥib maǾnide iķrāredir",
+      "najaf_2020_incipit": "Bir mürəbbi vü müsahib manidə iqrarədir",
+      "closing_mahlas_line": "Ey Ĥaķįķį maǾnāyı bil bu maǾni-i ekbāredir",
+      "post_mahlas_formula": null,
+      "ritual_or_doctrinal_terms": [
+        "murebbi",
+        "musahib",
+        "ikrar",
+        "murshid",
+        "pir",
+        "Refik",
+        "tarik"
+      ],
+      "form_or_item_type": "gazel",
+      "notes": "Musahip/murebbi/ikrar poem."
+    },
+    {
+      "concordance_id": "SA2019-DIY-03",
+      "source_witness_id": "diyarbakir_uluturk_alevi_cenk",
+      "source_item_no": "Ek-1 no. 3",
+      "source_print_pages": "207-208",
+      "source_text_line_refs": {
+        "sohrabiabad_akin_meter_line": 1384,
+        "sohrabiabad_akin_incipit_line": 1385,
+        "sohrabiabad_akin_closing_mahlas_line": 1438,
+        "sohrabiabad_akin_post_mahlas_formula_line": 1440,
+        "najaf_2020_incipit_line": 7955
+      },
+      "meter": "Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilün",
+      "sohrabiabad_akin_incipit": "Śūfiyā śāf ol bu gün çün rāh u erkān sendedir",
+      "najaf_2020_incipit": "Sufiyə səf ol bu gün çün rəh-i ərkan səndədir",
+      "closing_mahlas_line": "Ey Ĥaķįķį cānı çün cānāna virdin sıdk ile",
+      "post_mahlas_formula": "ǾAle’l-Ĥaķįķį raĥmetullāhi",
+      "ritual_or_doctrinal_terms": [
+        "rah",
+        "erkan",
+        "tevhid",
+        "Qalu bala",
+        "shariat",
+        "tariqat",
+        "haqiqat",
+        "marifat"
+      ],
+      "form_or_item_type": "gazel",
+      "notes": "Najaf title Sendedir; strong yol/erkan frame."
+    },
+    {
+      "concordance_id": "SA2019-DIY-04",
+      "source_witness_id": "diyarbakir_uluturk_alevi_cenk",
+      "source_item_no": "Ek-1 no. 4",
+      "source_print_pages": "208-209",
+      "source_text_line_refs": {
+        "sohrabiabad_akin_meter_line": 1444,
+        "sohrabiabad_akin_incipit_line": 1445,
+        "sohrabiabad_akin_closing_mahlas_line": 1479,
+        "sohrabiabad_akin_post_mahlas_formula_line": 1481,
+        "najaf_2020_incipit_line": 8003
+      },
+      "meter": "Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilün",
+      "sohrabiabad_akin_incipit": "Oldı ĥüsnüñ defteri bu göñlüme ümmü’l-kitāb",
+      "najaf_2020_incipit": "Oldı hüsnün dəftəri bu gönlümə ümmül-kitab",
+      "closing_mahlas_line": "Ey Ĥaķįķį Ǿāşıķa maǾşūķ ĥālin söylegil",
+      "post_mahlas_formula": "ǾAle’l-Ĥaķįķį raĥmetullāh",
+      "ritual_or_doctrinal_terms": [
+        "ummu-l-kitab",
+        "yeddi hatt",
+        "sebal-mesani",
+        "Qabe qavseyn",
+        "ism-i zat"
+      ],
+      "form_or_item_type": "gazel",
+      "notes": "Hurufi-adjacent letter/body vocabulary; no direct ritual institution term in the incipit."
+    },
+    {
+      "concordance_id": "SA2019-DIY-05",
+      "source_witness_id": "diyarbakir_uluturk_alevi_cenk",
+      "source_item_no": "Ek-1 no. 5",
+      "source_print_pages": "209",
+      "source_text_line_refs": {
+        "sohrabiabad_akin_meter_line": 1485,
+        "sohrabiabad_akin_incipit_line": 1486,
+        "sohrabiabad_akin_closing_mahlas_line": 1524,
+        "sohrabiabad_akin_post_mahlas_formula_line": 1526,
+        "najaf_2020_incipit_line": 8028
+      },
+      "meter": "Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilün",
+      "sohrabiabad_akin_incipit": "Derdime dermān ķılan ol gözleri şehlā imiş",
+      "najaf_2020_incipit": "Dərdimə dərman qılan ol gözləri şəhla imiş",
+      "closing_mahlas_line": "Dilberim ķıldı Ĥaķįķį ism-i pākinden rıżā",
+      "post_mahlas_formula": "ǾAle’l-Ĥaķįķį raĥmetullāh",
+      "ritual_or_doctrinal_terms": [
+        "Qabe qavseyn",
+        "mirac",
+        "sebal-mesani",
+        "kuntu kenz"
+      ],
+      "form_or_item_type": "gazel",
+      "notes": "Mystical beloved poem with Hakiki name in mahlas line."
+    },
+    {
+      "concordance_id": "SA2019-DIY-06",
+      "source_witness_id": "diyarbakir_uluturk_alevi_cenk",
+      "source_item_no": "Ek-1 no. 6",
+      "source_print_pages": "210",
+      "source_text_line_refs": {
+        "sohrabiabad_akin_meter_line": 1530,
+        "sohrabiabad_akin_incipit_line": 1531,
+        "sohrabiabad_akin_closing_mahlas_line": 1573,
+        "sohrabiabad_akin_post_mahlas_formula_line": 1575,
+        "najaf_2020_incipit_line": 8060
+      },
+      "meter": "Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilün",
+      "sohrabiabad_akin_incipit": "Tende cānın bilmeyenler bilmedi cānān nedir",
+      "najaf_2020_incipit": "Təndə canın bilməyənlər bilmədi canan nədir?",
+      "closing_mahlas_line": "Ey Ĥaķįķį pįr ile erkānda çok seyr eylediñ",
+      "post_mahlas_formula": "ǾAle’l-Ĥaķįķį raĥmetullāhi",
+      "ritual_or_doctrinal_terms": [
+        "can",
+        "canan",
+        "pir",
+        "hizmet",
+        "erkan",
+        "tarik",
+        "kamil insan"
+      ],
+      "form_or_item_type": "gazel",
+      "notes": "Strong pir/hizmet/erkan poem."
+    },
+    {
+      "concordance_id": "SA2019-DIY-07",
+      "source_witness_id": "diyarbakir_uluturk_alevi_cenk",
+      "source_item_no": "Ek-1 no. 7",
+      "source_print_pages": "210-211",
+      "source_text_line_refs": {
+        "sohrabiabad_akin_meter_line": 1579,
+        "sohrabiabad_akin_incipit_line": 1580,
+        "sohrabiabad_akin_closing_mahlas_line": 1637,
+        "sohrabiabad_akin_post_mahlas_formula_line": 1639,
+        "najaf_2020_incipit_line": 8097
+      },
+      "meter": "Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilün",
+      "sohrabiabad_akin_incipit": "Olmuşum śaĥrā-güźār bir Leylį sevdāsında men",
+      "najaf_2020_incipit": "Olmuşam səhra-güzər bir Leyli sevdasında mən",
+      "closing_mahlas_line": "Bil Ĥaķįķį cān olana her zamān cānān gelür",
+      "post_mahlas_formula": "ǾAle’l-Ĥaķįķį",
+      "ritual_or_doctrinal_terms": [
+        "Leyli",
+        "Mecnun",
+        "Tur-i Musa",
+        "sebal-mesani",
+        "salavat"
+      ],
+      "form_or_item_type": "gazel",
+      "notes": "Love-mystical poem; useful for exact-incipit matching."
+    },
+    {
+      "concordance_id": "SA2019-DIY-08",
+      "source_witness_id": "diyarbakir_uluturk_alevi_cenk",
+      "source_item_no": "Ek-1 no. 8",
+      "source_print_pages": "212",
+      "source_text_line_refs": {
+        "sohrabiabad_akin_meter_line": 1643,
+        "sohrabiabad_akin_incipit_line": 1644,
+        "sohrabiabad_akin_closing_mahlas_line": 1665,
+        "sohrabiabad_akin_post_mahlas_formula_line": 1666,
+        "najaf_2020_incipit_line": 8145
+      },
+      "meter": "Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilün",
+      "sohrabiabad_akin_incipit": "Ķılmayan cānıñ fidāy ol dilber-i cānānına",
+      "najaf_2020_incipit": "Qılmayan canın fəday ol dilbəri-cananına",
+      "closing_mahlas_line": "Ķıl fidāy cānıñ Ĥaķįķį böyle meclis ħānına",
+      "post_mahlas_formula": "ǾAle’l-Ĥaķįķį",
+      "ritual_or_doctrinal_terms": [
+        "can",
+        "canan",
+        "pir",
+        "murshid",
+        "erkan",
+        "refik",
+        "murebbi",
+        "tevhid",
+        "meclis-i irfan"
+      ],
+      "form_or_item_type": "gazel",
+      "notes": "Strong pir/murshid/erkan/meclis poem."
+    },
+    {
+      "concordance_id": "SA2019-ILK-01",
+      "source_witness_id": "ilkhchi_kirklar_ocagi_cem_cenks",
+      "source_item_no": "Ek-2 no. 1",
+      "source_print_pages": "213",
+      "source_text_line_refs": {
+        "sohrabiabad_akin_meter_line": 1683,
+        "sohrabiabad_akin_incipit_line": 1684,
+        "sohrabiabad_akin_closing_mahlas_line": 1717,
+        "sohrabiabad_akin_post_mahlas_formula_line": null,
+        "najaf_2020_incipit_line": 8171
+      },
+      "meter": "Mefâ ‘ilün Mefâ ‘ilün Mefâ ‘ilünf Mefâ ‘ilün",
+      "sohrabiabad_akin_incipit": "Vücûdun şehrine girdim ‘aceb sırr-ı Hudâ gördüm",
+      "najaf_2020_incipit": "Vücudun şərhinə girdim əcəb sirri-Xüda gördüm",
+      "closing_mahlas_line": "Hakîkî cânı cânânı Aliü’l-Murtaza gördüm",
+      "post_mahlas_formula": null,
+      "ritual_or_doctrinal_terms": [
+        "Cihan",
+        "sultan",
+        "Muhammad Mustafa",
+        "Ali al-Murtaza"
+      ],
+      "form_or_item_type": "gazel",
+      "notes": "Kirklar/Ilkhchi item; Najaf reads sehr/serh differently from Sohrabiabad-Akin sehrine."
+    },
+    {
+      "concordance_id": "SA2019-ILK-02",
+      "source_witness_id": "ilkhchi_kirklar_ocagi_cem_cenks",
+      "source_item_no": "Ek-2 no. 2",
+      "source_print_pages": "214",
+      "source_text_line_refs": {
+        "sohrabiabad_akin_meter_line": 1730,
+        "sohrabiabad_akin_incipit_line": 1731,
+        "sohrabiabad_akin_closing_mahlas_line": 1772,
+        "sohrabiabad_akin_post_mahlas_formula_line": null,
+        "najaf_2020_incipit_line": 8207
+      },
+      "meter": "Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilâtün Fâ‘ilün",
+      "sohrabiabad_akin_incipit": "Demişdim bir kez beli ey yâr senden dönmezem",
+      "najaf_2020_incipit": "Demişdim bir kəz bəli ey yar səndən dönməzəm",
+      "closing_mahlas_line": "Çün Hakîkî doymuşam esrâr senden dönmezem",
+      "post_mahlas_formula": null,
+      "ritual_or_doctrinal_terms": [
+        "beli",
+        "uhuvvet",
+        "meyhane-yi vahdet",
+        "Sanani",
+        "zunnar"
+      ],
+      "form_or_item_type": "gazel",
+      "notes": "Kirklar/Ilkhchi item; title-less in Sohrabiabad-Akin and item 2 in Najaf."
+    },
+    {
+      "concordance_id": "SA2019-ILK-03",
+      "source_witness_id": "ilkhchi_kirklar_ocagi_cem_cenks",
+      "source_item_no": "Ek-2 no. 3",
+      "source_print_pages": "215",
+      "source_text_line_refs": {
+        "sohrabiabad_akin_meter_line": 1786,
+        "sohrabiabad_akin_incipit_line": 1787,
+        "sohrabiabad_akin_closing_mahlas_line": 1824,
+        "sohrabiabad_akin_post_mahlas_formula_line": null,
+        "najaf_2020_incipit_line": [
+          8248,
+          8249
+        ]
+      },
+      "meter": "Mefâ ‘ilün Mefâ ‘ilün Mefâ ‘ilünf Mefâ ‘ilün",
+      "sohrabiabad_akin_incipit": "Utan şerm eylegil haķdan dûr ey gafil ne yatubsen",
+      "najaf_2020_incipit": "Utan şərm eyləgil həqdən Dur ey qafil nə yatıbsan",
+      "closing_mahlas_line": "Haķîķî fikr-i mahşer kıl dur ey gâfil ne yatubsen",
+      "post_mahlas_formula": null,
+      "ritual_or_doctrinal_terms": [
+        "zikr",
+        "fikr",
+        "mahshar",
+        "defter"
+      ],
+      "form_or_item_type": "gazel",
+      "notes": "Kirklar/Ilkhchi item; Najaf prints the refrain on separate lines."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "session_label": "Marashi-Najafi + Tehran University follow-on search execution",
+  "session_id": "marashi-tehran-followup-2026-05-10",
+  "date": "2026-05-10",
+  "scope": "Search-execution probe against the two Iranian portals identified as newly reachable in probe_2026-05-10_iran_caucasus_reachability.json. Goal: whether Cihanşah Qaraqoyunlu / Hakîkî / جهانشاه / حقیقی author/title queries surface any new manuscript witnesses, or any new codicology for the verified Tehran 8198 witness.",
+  "geopolitical_caveat": "Iranian internet infrastructure is currently subject to wartime intermittent shutdowns (2026 conflict). The Marashi and Tehran U reachability documented on this date may not persist; results below are point-in-time as of 2026-05-10.",
+  "method_summary": {
+    "marashi": "WebFetch direct against the WordPress site search at https://marashilibrary.com/?s=<term>; no VPN; tested 7 query variants in Persian + Latin scripts plus the curated 'نفایس مخطوطات' (Precious Manuscripts) gallery page",
+    "tehran_university": "Playwright headless browser via direct connection (no VPN); navigated to landing page, tried the top-banner search box and the /fa/advanced-search endpoint; probed the /manuscripts URL path",
+    "lib_eshia_ir_skipped": "Skipped this round per low Hakîkî relevance (collection scope is Shi'i jurisprudence/hadith)"
+  },
+  "marashi_najafi": {
+    "search_endpoint": "https://marashilibrary.com/?s=<query> (WordPress site search via Google CSE; indexes blog posts, articles, and a separate /manuscript/<slug>/ post type)",
+    "queries_executed": [
+      {
+        "query": "حقیقی",
+        "result_count": 13,
+        "outcome": "all noise; every hit matches the تحقیق (research/verification) root; zero results reference Hakîkî the poet"
+      },
+      {
+        "query": "جهانشاه",
+        "result_count": 8,
+        "outcome": "page header confirms 'نتایج جستجو برای: جهانشاه' but listed entries are NOT direct Cihanşah hits; entries include Mush'asha treatises, Divan of Fakhri Heravi (the poet's own divan, not the tezkire), Tezkire-i Ravzatü's-Selâtīn (Fakhri's tezkire; flagged in our existing tezkires_unretrieved_targets), Sanai's Garden, and Tarikh al-Muluk; likely body-text false-positive matches but worth noting as adjacency",
+        "follow_on_value": "the Tezkire-i Ravzatü's-Selâtīn surfacing under جهانشاه is the most interesting hint; could mean Marashi's holding of this tezkire mentions Cihanşah inside, but the WordPress site search is too coarse to confirm; direct catalogue access required"
+      },
+      {
+        "query": "قراقویونلو",
+        "result_count": 1,
+        "outcome": "Tarikh al-Muluk = Tarikh-i khulafa va padshahan (History of Caliphs and Kings), serial number 19728, author unknown; Persian chronicle that mentions Karakoyunlu in its body; NOT a Hakîkî witness; manuscript URL constructed from the search snippet returned 404 on direct fetch (URL-encoding issue or moved record)"
+      },
+      {
+        "query": "قره قویونلو",
+        "result_count": 0,
+        "outcome": "zero results; Marashi's indexer does not normalise the Kara/Qara variant"
+      },
+      {
+        "query": "روضة السلاطین",
+        "result_count": 0,
+        "outcome": "zero direct hits despite the title surfacing in the جهانشاه search above; confirms WordPress site search is body-text matching, not title-index matching"
+      },
+      {
+        "query": "تذكره روضة",
+        "result_count": 0,
+        "outcome": "zero results"
+      },
+      {
+        "query": "فخری هروی",
+        "result_count": 0,
+        "outcome": "zero direct hits despite Fakhri Heravi entries surfacing in the جهانشاه search; same body-text matching limitation"
+      },
+      {
+        "query": "Cihanşah",
+        "result_count": 0,
+        "outcome": "zero results; Marashi indexes Persian script only, does not normalise Latin/Turkish orthography"
+      }
+    ],
+    "precious_manuscripts_page_probe": {
+      "url": "https://marashilibrary.com/نفایس-مخطوطات/",
+      "type": "curated image gallery (WordPress media uploads), not a searchable catalogue",
+      "url_pattern_for_individual_records": "none identified; images served as /wp-content/uploads/<date>/<file>.jpg",
+      "cihansah_hakiki_mentions": "none; collection focuses on classical Quranic, commentary, poetry, and legal works; no Cihanşah Hakîkî reference"
+    },
+    "outcome": "ZERO new Cihanşah Hakîkî manuscript witnesses surfaced. The Marashi WordPress site search is too coarse for catalogue-level certainty. Substantive verification would require direct access to the Marashi institutional manuscript catalogue (likely on a separate subdomain such as fhq.marashi.ir or via the printed catalogue volumes; not probed this round).",
+    "follow_on_targets_for_future_session": [
+      "Probe fhq.marashi.ir or other Marashi institutional-catalogue subdomain to bypass the WordPress site-search limitations",
+      "If Marashi holds a Tezkire-i Ravzatü's-Selâtīn manuscript, retrieve the relevant folios for any Cihanşah biographical entry; addresses the still-unretrieved Fakhri Heravi tezkire target",
+      "If Marashi holds the Tarikh al-Muluk chronicle (serial 19728) in scanned form, capture the Karakoyunlu chapter for context (not for the Hakîkî register but for future scope chancery/historiographic scope)"
+    ]
+  },
+  "tehran_university": {
+    "search_endpoint": "https://library.ut.ac.ir/fa/search?query=<term> (delegates to Google Custom Search Engine cx=006239940977569577856:orpnzq9a1bw); /fa/advanced-search exposes a form but its fields are JS-loaded and were not surfaced in the accessibility snapshot",
+    "queries_executed": [
+      {
+        "query": "حقیقی",
+        "result_count": "results section is empty in the snapshot; the page renders a Google CSE iframe that does not expose result content via the accessibility tree",
+        "outcome": "site search is Google CSE for the library website's content (news, pages), NOT a manuscript-catalogue search; no manuscript records returned"
+      }
+    ],
+    "manuscripts_subpath_probe": {
+      "url": "https://library.ut.ac.ir/manuscripts",
+      "result": "HTTP 404 Not Found; no manuscripts catalogue at this path"
+    },
+    "manuscript_catalogue_status": "Tehran University's actual manuscript catalogue is at utdlib.ut.ac.ir (per Digital Orientalist 2023 and the project's 2026-05-02 search session). That subdomain timed out today. Per Digital Orientalist, the only working access path for manuscript orders is the Telegram channel @Manuscripts_lib, not a public web catalogue.",
+    "outcome": "ZERO new codicology data for the verified Tehran 8198 witness; the manuscript catalogue endpoint remains unreachable via public web. Site landing reachability does not extend to catalogue searchability.",
+    "follow_on_targets_for_future_session": [
+      "Re-attempt utdlib.ut.ac.ir on a future date when the geopolitical-caveat shutdown may have lifted",
+      "Direct Telegram contact via @Manuscripts_lib for the MS 8198 codicological description and any digital surrogate",
+      "ILL request through a Western university partnered with Tehran U for the MS 8198 record"
+    ]
+  },
+  "summary": {
+    "portals_probed_this_session": 2,
+    "queries_executed_total": 9,
+    "new_witnesses_surfaced": 0,
+    "new_codicology_for_existing_witnesses": 0,
+    "false_positive_classes_documented": [
+      "Persian تحقیق-root false positives in WordPress site search for حقیقی",
+      "WordPress body-text matching for جهانشاه returns adjacency hits (Fakhri Heravi divan, Ravzatü's-Selâtīn) without confirming whether they index Cihanşah specifically",
+      "Latin-script Cihanşah / Hakiki returns zero on Persian-only WordPress indexers"
+    ],
+    "structural_findings": [
+      "Marashi-Najafi WordPress site search is unsuitable for manuscript-catalogue-level queries; institutional catalogue lives elsewhere",
+      "Tehran University library landing is reachable but its manuscript-catalogue subdomain (utdlib.ut.ac.ir) and dedicated catalogue search are not; Telegram remains the documented order channel",
+      "The reachability gain on these two portals does not yet translate into search-execution gain for the Hakîkî census"
+    ],
+    "register_changes": "none; witness_register.json is unchanged by this session"
+  },
+  "audit_metadata": {
+    "record_type": "targeted_followup",
+    "record_date": "2026-05-10",
+    "artifact_status": "current",
+    "source_layers": [
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "methodological_record",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

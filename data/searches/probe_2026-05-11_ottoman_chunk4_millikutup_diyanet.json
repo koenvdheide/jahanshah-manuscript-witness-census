@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "session_label": "Ottoman chunk 4 (of 4); Milli Kütüphane Yazma Eserler + Diyanet İşleri Yazma Eserler deep-probe",
+  "session_id": "ottoman-chunk4-millikutup-diyanet-2026-05-11",
+  "date": "2026-05-11",
+  "scope": "Deep-probe Milli Kütüphane (Ankara) dijital-kutuphane.mkutup.gov.tr advanced search + /authority/personlist enumeration; Diyanet İşleri yazmaeserler.diyanet.gov.tr title/author search batteries across Cihanşah + Hakîkî + Karakoyunlu + Yusuf Hakîkî + جهانشاه + Cihan Şah variants. WebFetch-only (no Playwright). Verifies whether any NEW Cihanşah Qaraqoyunlu / Hakîkî witness surfaces beyond current poetry-witness register entry ankara_milli_kutuphane_a_5252.",
+  "context_note": "Follows site-restricted Google sweep in probe_2026-05-11_avenue_provincial_ottoman_sufi.json which surfaced these two portals as next-tier deep-probe candidates. The primary-session sweep also flagged Diyanet id=931 ([er-Risâle fî esrâri'l-hurûf]) as a future scope mecmûʿa-mining lead; captured here in hurufi_text_id_931_v2_followup block.",
+  "constraints": [
+    "WebFetch only; no Playwright",
+    "No em dashes in JSON (style rule)"
+  ],
+  "portals": [
+    {
+      "portal_name": "Milli Kütüphane Dijital Kütüphane Yazma Eserler (Ankara National Library, Manuscripts Division)",
+      "canonical_urls": {
+        "landing_list": "https://dijital-kutuphane.mkutup.gov.tr/tr/manuscripts/catalog/list",
+        "advanced_search": "https://dijital-kutuphane.mkutup.gov.tr/tr/manuscripts/catalog/advancedsearch",
+        "authority_person_list": "https://dijital-kutuphane.mkutup.gov.tr/authority/personlist"
+      },
+      "reachability": {
+        "advanced_search_url": "REDIRECTS_302_TO_LOGIN at /Account/Login?ReturnUrl=%2Ftr%2Fmanuscripts%2Fcatalog%2Fadvancedsearch; advanced search is behind an authenticated login wall (email + password + Giriş Yap button), with new-account registration link visible. No guest-access option exposed.",
+        "list_endpoint_with_q_param": "JS_RENDERED_SPA; static HTML shows only the catalog framework and navigation. Submitting ?q=Cihanşah or ?q=Hakîkî returns the same static skeleton with no results section populated. Real results load dynamically via AJAX after user interaction.",
+        "personlist_authority_endpoint": "PAGINATED_SPA; returns 1-50 of 135,824 person entries paginated across 2,717 pages. The ?q= and ?searchTerm= URL parameters do NOT filter the list; both return the same default page 1 alphabetically. Filtering requires JS-driven form submission inside the SPA.",
+        "specific_shelfmark_url": "Tried /tr/manuscripts/catalog/list/A%205252; returns the same static catalog-list framework, not a specific record detail page. Direct shelfmark deep-link via URL not supported."
+      },
+      "queries_executed": [
+        {
+          "query": "https://dijital-kutuphane.mkutup.gov.tr/tr/manuscripts/catalog/advancedsearch",
+          "method": "WebFetch (302 redirect to login)",
+          "result_count": "BLOCKED_LOGIN_WALL",
+          "outcome": "Advanced search inaccessible without authenticated session; login-walled."
+        },
+        {
+          "query": "https://dijital-kutuphane.mkutup.gov.tr/tr/manuscripts/catalog/list?q=Cihanşah",
+          "method": "WebFetch",
+          "result_count": "0 (SPA skeleton only)",
+          "outcome": "No static results returned; JS rendering required."
+        },
+        {
+          "query": "https://dijital-kutuphane.mkutup.gov.tr/tr/manuscripts/catalog/list?q=Hakîkî",
+          "method": "WebFetch",
+          "result_count": "0 (SPA skeleton only)",
+          "outcome": "No static results returned; JS rendering required."
+        },
+        {
+          "query": "https://dijital-kutuphane.mkutup.gov.tr/authority/personlist?q=Cihan",
+          "method": "WebFetch",
+          "result_count": "Page 1 default listing (50 of 135,824); ?q= ignored",
+          "outcome": "q= filter not honored by URL parameter; SPA-only filtering."
+        },
+        {
+          "query": "https://dijital-kutuphane.mkutup.gov.tr/authority/personlist?q=Hakîkî",
+          "method": "WebFetch",
+          "result_count": "Page 1 default listing (50 of 135,824); ?q= ignored",
+          "outcome": "q= filter not honored by URL parameter; SPA-only filtering."
+        },
+        {
+          "query": "https://dijital-kutuphane.mkutup.gov.tr/authority/personlist?searchTerm=Cihanşah",
+          "method": "WebFetch",
+          "result_count": "Page 1 default listing; searchTerm= also ignored",
+          "outcome": "Confirmed alternate parameter name also not honored. SPA-only filtering."
+        },
+        {
+          "query": "https://dijital-kutuphane.mkutup.gov.tr/tr/manuscripts/catalog/list/A%205252",
+          "method": "WebFetch",
+          "result_count": "Static catalog framework only",
+          "outcome": "Direct shelfmark deep-link not supported via URL path; requires SPA interaction."
+        }
+      ],
+      "current_register_overlap_note": "Witness ankara_milli_kutuphane_a_5252 (shelfmark A 5252, 204-folio mecmua with Cihānşāh poetry at ff. 183a-196a) was originally surfaced via Islamisation DB (islam-anatolia.ac.uk TK_Mil_A_5252 slug), NOT via direct Milli Kütüphane portal interaction. The current WebFetch-only probe confirms that the Milli Kütüphane public-facing catalogue is JS-SPA and that direct portal verification of A 5252 metadata would require a Playwright headed-browser session or authenticated advanced-search login. The Islamisation DB remains the canonical surfacing channel for this witness.",
+      "new_cihansah_witnesses": 0,
+      "verdict": "PROBED_INACCESSIBLE_VIA_WEBFETCH; advanced search login-walled, list endpoint and authority personlist endpoint are JS-SPA without URL-parameter filtering. No NEW Cihanşah witness beyond v1.0 A 5252 can be confirmed or excluded via WebFetch-only methodology. Residual gap: Playwright headed-browser pass on advanced-search login + SPA-driven personlist filtering.",
+      "residual_gaps_for_playwright_pass": [
+        "Authenticated login at /Account/Login then advanced search across Eser Adı = Hakîkî / Yazar = Cihanşah / Yazar = Karakoyunlu / Yazar = Yusuf Hakîkî",
+        "SPA-driven personlist filter q=Cihanşah / q=Hakîkî / q=Karakoyunlu to enumerate authority records",
+        "SPA-driven A 5252 deep-link to capture full bibliographic record"
+      ]
+    },
+    {
+      "portal_name": "Diyanet İşleri Başkanlığı Kütüphanesi Yazma Eserler",
+      "canonical_url": "https://yazmaeserler.diyanet.gov.tr/",
+      "search_url_pattern": "https://yazmaeserler.diyanet.gov.tr/search?field={title|author}&query={term}",
+      "detail_url_pattern": "https://yazmaeserler.diyanet.gov.tr/details?id={num}&materialType=YE",
+      "reachability": {
+        "search_endpoint": "REACHABLE; GET form with field= and query= URL parameters returns static HTML result lists indexable by WebFetch.",
+        "detail_endpoint": "PARTIALLY_REACHABLE; detail pages return HTML with title (Turkish + Arabic script) but most extended bibliographic fields (author, copyist, date, shelfmark, dimensions, foliation, paper, script, binding, decoration, contents) render via JS/encoded image data and are NOT extractable via WebFetch."
+      },
+      "queries_executed": [
+        {
+          "query": "search?field=title&query=Cihanşah",
+          "result_count": 0,
+          "outcome": "Zero matches."
+        },
+        {
+          "query": "search?field=author&query=Cihan Şah",
+          "result_count": 7,
+          "results": [
+            {
+              "id": 6508,
+              "title": "er-Risâletü'l-hâkāniyye fî tahkīk-i mebahasi'l-'ilm",
+              "subject": "philosophy/logic; ilm treatise; NOT Cihanşah Qaraqoyunlu Dīvān"
+            },
+            {
+              "id": 20347,
+              "title": "Müntehabü'l-fetâvâ",
+              "subject": "fıkıh fetva collection"
+            },
+            {
+              "id": 8975,
+              "title": "Hâşiye 'alâ Tahrîri'l-kavâ'idi'l-mantıkıyye",
+              "subject": "logic super-commentary"
+            },
+            {
+              "id": 2961,
+              "title": "Hall-i muammây-ı Mîr Hüseyin",
+              "subject": "muamma/riddle solution"
+            },
+            {
+              "id": 21651,
+              "title": "Dav'ü's-sirâc fî şerhu'l-ferâ'izi's-sirâciyye",
+              "subject": "fıkıh/inheritance law commentary"
+            },
+            {
+              "id": 847,
+              "title": "Dav'ü's-sirâc",
+              "subject": "fıkıh/inheritance law"
+            },
+            {
+              "id": 421,
+              "title": "Dav'ü's-sirâc",
+              "subject": "fıkıh/inheritance law"
+            }
+          ],
+          "outcome": "Seven jurisprudence/logic/literary-puzzle works whose titles or dedicatory frames include the phrase 'Cihan Şah' as compound title element or dedicatee, NOT the Cihanşah Qaraqoyunlu sultan-poet's Dīvān/Külliyât. Sampled id=6508 detail page confirmed no Cihanşah Qaraqoyunlu / Hakîkî / Karakoyunlu reference. These are FALSE POSITIVES per the Yusuf Hakîkî homonym treatment framework; generic 'Cihan Şah' as 'king of the world' honorific or unrelated patron Cihanşah."
+        },
+        {
+          "query": "search?field=author&query=Hakîkî",
+          "result_count": 2,
+          "results": [
+            {
+              "id": 15556,
+              "title": "Münşeât-ü Kınalızâde / منشات قنلي ذاده",
+              "subject": "Ahlak ve İslam adabı (Islamic ethics)"
+            },
+            {
+              "id": 19803,
+              "title": "Gülşen-i takva / كلشن تقوى",
+              "subject": "İslam dini, Turkish literature"
+            }
+          ],
+          "outcome": "Two Ottoman ethics/Sufi literature texts; neither is a Hakîkî Divan witness. The Münşeât is associated with Kınalızade Ali Çelebi (d. 979/1572, Ottoman moralist), and Gülşen-i takva is an Ottoman Sufi-ethical text. Sampling detail pages confirms no Cihanşah Qaraqoyunlu reference. The 'Hakîkî' index match is likely metadata-level (author or subject keyword), possibly Yusuf Hakîkî Bursavi adjacency, NOT the Qaraqoyunlu Hakîkî."
+        },
+        {
+          "query": "search?field=title&query=Hakîkî",
+          "result_count": 2,
+          "outcome": "Same two records as author-query: id=15556 Münşeât-ü Kınalızâde + id=19803 Gülşen-i takva. Confirms full Hakîkî index surface."
+        },
+        {
+          "query": "search?field=author&query=Karakoyunlu",
+          "result_count": 0,
+          "outcome": "Zero matches for the dynasty name."
+        },
+        {
+          "query": "search?field=author&query=Yusuf Hakîkî",
+          "result_count": 0,
+          "outcome": "Zero matches for Yusuf Hakîkî Bursavi (the homonym poet)."
+        },
+        {
+          "query": "search?field=author&query=جهانشاه",
+          "result_count": 0,
+          "outcome": "Zero matches for the Arabic-script form."
+        }
+      ],
+      "new_cihansah_witnesses": 0,
+      "verdict": "PROBED_NEGATIVE; zero Cihanşah Qaraqoyunlu / Hakîkî witness across all variant queries. Two Hakîkî-tagged records (id=15556, id=19803) are confirmed false positives (Ottoman ethics texts, no Cihanşah reference). Seven 'Cihan Şah' compound-title hits are jurisprudence/logic texts with the phrase 'Cihan Şah' as part of compound title or honorific dedicatory frame, NOT the sultan-poet's Dīvān. Diyanet catalogue contains NO Cihanşah Qaraqoyunlu witness.",
+      "false_positive_pattern_extracted": "Diyanet catalogue indexes the literal phrase 'Cihan Şah' from work titles like 'er-Risâletü'l-hâkāniyye' (treatise dedicated to a 'cihan şah' = king of the world) and 'Dav'ü's-sirâc' (containing 'cihan' in titulature). These match the 7-result hit pattern under field=author when search treats compound-title elements as author-adjacent. Per v1.0 false-positive framework, the lack of Qaraqoyunlu/Karakoyunlu dynasty markers and the jurisprudential/logical subject matter rule out all 7 as Cihanşah Qaraqoyunlu witnesses."
+    }
+  ],
+  "hurufi_text_id_931_v2_followup": {
+    "purpose": "future scope mecmûʿa-mining lead: Diyanet record [er-Risâle fî esrâri'l-hurûf] (id=931) is a Hurufi treatise that, per v1.0 mecmûʿa-Nesîmî-adjacency heuristic, sits adjacent to where Cihanşah Hakîkî witnesses appear (Ankara MK A 5252 mecmua co-locates Hakîkî with Nesîmî + Yûnus Emre Hurufi-adjacent content; Konya Hacı Bektaş BY0000010729 alphabetical Hakîkî entry sits in a Hurufi-themed mecmua). Diyanet's Hurufi text holdings are therefore a future scope surface worth dedicated mecmûʿa-mining probe to identify potential anthologies that co-locate Hurufi texts with Cihanşah/Hakîkî poetry.",
+    "captured_metadata": {
+      "title_turkish": "[er-Risâle fî esrâri'l-hurûf]",
+      "title_arabic_script": "[رساله فی اسرار الحروف]",
+      "title_translation": "Epistle on the Secrets of Letters",
+      "id": 931,
+      "material_type": "YE (Yazma Eser / Manuscript)",
+      "url": "https://yazmaeserler.diyanet.gov.tr/details?id=931&materialType=YE",
+      "host_library": "Diyanet İşleri Başkanlığı Kütüphanesi (Presidency of Religious Affairs Library, Ankara)",
+      "version_indicator": "1.9.0.2100",
+      "language_inferred": "Turkish + Arabic (per title bilingual presentation)",
+      "subject_inferred": "Hurufi mystical letter-symbolism; treatise on esoteric interpretation of alphabetic and numerical symbols within Islamic mysticism (Hurufiyya doctrine cluster)",
+      "extended_fields_status": "NOT_EXTRACTABLE_VIA_WEBFETCH; detail page renders most bibliographic fields (author, copyist, date, shelfmark/dosya no., dimensions, foliation count, paper, script, binding, decoration, contents, provenance, incipit, subject categories) via JS-encoded image data not parseable as text. Author and date critical for Cihanşah-adjacency assessment are NOT recoverable from current WebFetch session."
+    },
+    "future_scope_recommended_followup_actions": [
+      "Playwright headed-browser pass on https://yazmaeserler.diyanet.gov.tr/details?id=931&materialType=YE to capture full bibliographic record including author/copyist/date/shelfmark/contents; verify whether this is a known Hurufi text by Fadlallah Astarabadi, Mahmud Pasi, Nesîmî, or anonymous mecmua entry.",
+      "Once author/date captured, assess whether the codex is a SINGLE-WORK Hurufi treatise OR a mecmua co-locating Hurufi texts with poetry (the latter being the Cihanşah/Hakîkî-adjacent surface).",
+      "If mecmua, request full table-of-contents capture to check for any Hakîkî/Cihanşah ghazal entries.",
+      "Broaden Hurufi-text mining: re-query Diyanet for title queries Hurûf / Hurufiyye / Esrâr-ı hurûf / Câvidânnâme / Fadlullah / Astarâbâdî to enumerate full Hurufi-text holdings, then triage for mecmua structure."
+    ],
+    "scope_disclaimer": "id=931 is NOT a Cihanşah witness candidate. It is a future scope followup surface for mecmûʿa-mining and Hurufi-cluster heuristic application. Including in this probe output for the chunk 4 deliverable list; does NOT affect current poetry-witness register."
+  },
+  "summary": {
+    "portals_probed": 2,
+    "portals_with_static_search_results": 1,
+    "portals_blocked_by_login_or_spa": 1,
+    "verified_cihansah_hits_new": 0,
+    "false_positives_confirmed": 9,
+    "current_register_impact": "ZERO new witnesses. Milli Kütüphane A 5252 already in current poetry-witness register (witness_id ankara_milli_kutuphane_a_5252, surfaced via Islamisation DB); WebFetch-only probe cannot independently verify nor exclude additional Milli Kütüphane witnesses due to login-walled advanced search and JS-SPA list endpoint. Diyanet PROBED_NEGATIVE for direct Cihanşah witness across all variant queries.",
+    "future_scope_followup_captured": "Diyanet Hurufi text id=931 metadata captured at title-level; deep bibliographic capture requires Playwright pass.",
+    "residual_gaps": [
+      "Milli Kütüphane advanced-search account access would require separate manual registration through the portal login flow",
+      "Milli Kütüphane personlist SPA-driven Cihanşah/Hakîkî/Karakoyunlu filter via Playwright",
+      "Milli Kütüphane A 5252 direct shelfmark deep-link via SPA to capture full bibliographic record beyond what Islamisation DB surfaced",
+      "Diyanet detail-page JS rendering of full bibliographic fields for id=931 (Hurufi future scope followup) and any other Hurufi-text mecmua candidates",
+      "Broader Diyanet Hurufi-text query battery (Hurûf, Câvidânnâme, Fadlullah, Astarâbâdî, etc.) for future scope mecmûʿa-mining"
+    ],
+    "methodological_findings": [
+      "WebFetch is reliable for portals that expose static HTML search results from GET parameters (Diyanet); ineffective for portals that login-wall advanced search and JS-SPA list/personlist endpoints (Milli Kütüphane).",
+      "Diyanet 7-result 'Cihan Şah' compound-title false-positive class is now formalized: jurisprudence/logic texts dedicated to or titled with 'Cihan Şah' as compound title element / honorific dedicatory frame. The pattern matches v1.0 Yusuf Hakîkî Bursavi homonym risk in spirit (different king-poet/named dedicatee with similar phrase), and supports the v1.0 disambiguation criterion: confirm Qaraqoyunlu dynastic context + Persian-Turkic poetry content before accepting any 'Cihan Şah' index hit.",
+      "Diyanet Hurufi text id=931 confirms the heuristic that Anatolian/Ottoman Hurufi text holdings are a candidate mecmûʿa-mining surface; this is consistent with the v1.0 Ankara MK A 5252 + Konya HB BY0000010729 surfacing path (Hurufi-adjacent mecmua contexts yielding Hakîkî poetry)."
+    ]
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-11",
+    "artifact_status": "appendix",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

@@ -1,0 +1,645 @@
+{
+  "schema_version": 1,
+  "generated": "2026-05-02",
+  "_last_updated": "2026-05-20",
+  "purpose": "Author/title/identifier search-key matrix for the Haqiqi witness census. The matrix combines the modern-academic baseline with 19th-c. Orientalist forms, Soviet/Azerbaijani query forms, and additional Arabic-script orthographic variants. Extended 2026-05-11 with a `script_families` block covering 9 additional script-tradition variants (Russian Cyrillic modern, Azerbaijani Latin/Cyrillic modern + Soviet, Georgian Mkhedruli, Uzbek Latin/Cyrillic, Tajik Cyrillic, Devanagari, Urdu nastaʿliq) for institutional catalogues in the Russian Federation, Caucasus, Central Asia, and South Asia. Extended 2026-05-20 with Alevi-community route terms and contact-name search keys surfaced by the cenk/conk continuation pass.",
+  "author_forms": {
+    "modern_academic_latin": [
+      "Jahānshāh Qaraqoyunlu",
+      "Jihān-shāh Qara-qoyunlu",
+      "Jahanshah Qaraqoyunlu",
+      "Jihanshah Qaraqoyunlu",
+      "Jahan Shah",
+      "Jihan Shah",
+      "Ḥaqīqī",
+      "Haqiqi",
+      "Hakîkî",
+      "Hakiki",
+      "Hakyky"
+    ],
+    "modern_turkish": [
+      "Cihan Şah",
+      "Cihânşâh",
+      "Cihanşah",
+      "Cihansah Hakiki",
+      "Cihânşâh Hakîkî",
+      "Karakoyunlu Cihan Şah",
+      "Karakoyunlu Cihanşah Hakiki"
+    ],
+    "nineteenth_century_orientalist": {
+      "_note": "How Rieu, Blochet, Pertsch, Ethé, and other 19th-c. cataloguers would have rendered the name.",
+      "french": [
+        "Djihân Châh",
+        "Djehan Schah",
+        "Djihan Chah",
+        "Djahan Chah",
+        "Kara-Koyounlou",
+        "Kara Koyounlou"
+      ],
+      "german": [
+        "Dschahan Schah",
+        "Dschihān-Schāh",
+        "Dschihan Schah",
+        "Kara-Kojunlu",
+        "Karakojunlu"
+      ]
+    },
+    "soviet_russian_azerbaijani": {
+      "_note": "Forms used in Soviet-era cataloguing systems; relevant for Yerevan/Baku/Tashkent/Dushanbe holdings.",
+      "cyrillic": [
+        "Хакики",
+        "Хакики, Мирза Джаханшах",
+        "Джаханшах Хакики",
+        "Джиханшах",
+        "Мирза Джаханшах"
+      ],
+      "modern_azerbaijani_latin": [
+        "Cahanşah Həqiqi",
+        "Cahanşah Hakiki",
+        "Cahanşah Haqiqi",
+        "Jahanshah Hakyky",
+        "Cahanshah Heqiqi"
+      ]
+    },
+    "arabic_script": {
+      "_note": "Multiple orthographic variants reflect cataloguer drift; both the dotted-yā and dotless-ya variants (حقىقى vs حقیقی) are attested.",
+      "preferred": [
+        "جهانشاه قراقویونلو حقیقی",
+        "جهانشاه حقیقی",
+        "حقیقی"
+      ],
+      "variants": [
+        "جهانشاه حقىقى",
+        "حقىقى",
+        "حقیقی، جهانشاه",
+        "حقیقی ترکمان",
+        "جهانشاه قرا یوسف",
+        "قراقویونلو",
+        "قره قویونلو"
+      ]
+    }
+  },
+  "title_forms": {
+    "core": [
+      "Dīvān",
+      "Dīwān",
+      "Diwan",
+      "Divan",
+      "Dīvān-i Ḥaqīqī",
+      "Divan-i Hakiki",
+      "Divan-ı Hakîkî",
+      "Külliyyāt",
+      "Kulliyat",
+      "Külliyyāt-i Ḥaqīqī"
+    ],
+    "ottoman_turkish_descriptive": [
+      "müretteb olmayan divan",
+      "Divan-ı Hakîkî",
+      "Cihânşâh Hakîkî Divanı"
+    ],
+    "arabic_script": [
+      "دیوان جهانشاه حقیقی",
+      "دیوان حقیقی",
+      "دیوان حقىقى",
+      "كليات حقیقی"
+    ]
+  },
+  "catalogue_context_keys": {
+    "_note": "Catalogue-context terms used to find Haqiqi witnesses indexed under generic descriptors rather than author. Search these AND/OR with author+title forms when the author-direct query returns zero.",
+    "anthology_terms": [
+      "mecmua",
+      "mecmûa",
+      "mecmuʿa",
+      "jung",
+      "cönk",
+      "mecmuʿa-i ashʿār",
+      "جنگ",
+      "مجموعه"
+    ],
+    "european_catalogue_descriptors": [
+      "poetry collection",
+      "Gedichtsammlung",
+      "recueil",
+      "recueil de poésies persanes et turques",
+      "poésies turques",
+      "Persian and Turkish poems",
+      "bilingual divan"
+    ]
+  },
+  "scribe_and_colophon_keys": {
+    "_note": "Scribe-name search keys: may find sibling manuscripts by the same scribe.",
+    "scribe_arabic": [
+      "قنبر علی اصفهانی",
+      "قنبرعلی اصفهانی",
+      "قنبر علي بن خسرو الاصفهاني"
+    ],
+    "scribe_latin": [
+      "Qanbar Ali Isfahani",
+      "Qanbar-Ali al-Isfahani",
+      "Qanbar Ali ibn Khusraw al-Isfahani",
+      "Kanber Ali Isfahani"
+    ],
+    "colophon_anchor_strings": [
+      "893 \"حقیقی\"",
+      "Shavval 893",
+      "Sevval 893",
+      "Ramażān 893"
+    ]
+  },
+  "nesimi_adjacency_keys": {
+    "_note": "Nesîmî/Hurufi adjacency mining keys for mecmûʿa sweeps. Haqiqi poems demonstrably travel inside Nesîmî collections (Ankara MK A 5252 evidence).",
+    "queries": [
+      "Nesimi Hakiki",
+      "Nesîmî Cihanşah",
+      "Nesimi \"Cihanşah\"",
+      "نسیمی حقیقی",
+      "Hurufi Hakiki",
+      "Nesimi Hakiki mecmua",
+      "Nesîmî Hakîkî müşterek"
+    ]
+  },
+  "modern_editions_and_studies_for_backchain": {
+    "_note": "Edition backchain keys. For each editor/author: which manuscript(s) used as base text? Cited as variants? Saw firsthand? Includes editions plus the Demirci 1997 article/study that introduced Süleymaniye Fatih 3808 + Ankara DTCF I/2221.",
+    "editions_and_studies": [
+      {
+        "editor": "Demirci, Jale",
+        "year": 1997,
+        "place": "Ankara: DTCF Türkoloji Dergisi XII/1: 127-138",
+        "note": "Article/study (not a critical edition). Introduced Süleymaniye Fatih 3808 + Ankara DTCF I/2221 as the iki yeni nüsha. ISAM PDF inspection confirms the full 127-138 span, including manuscript-image plates on 137-138; Macit 2000's verbatim citation gives 127-134."
+      },
+      {
+        "editor": "Hüseyinzade",
+        "year": 1966,
+        "place": "Yerevan"
+      },
+      {
+        "editor": "Rahimov, Hüseyinzade & Aliyev",
+        "year": 1986,
+        "place": "Bakı: Yazıçı",
+        "_anl_bib_id": "vtls000216060",
+        "note": "142 + 1 pp; 15 cm; Cyrillic; Klassik Azərbaycan ədəbiyyatı series. Per ek.anl.az 2026-05-11 round, this is the 1986 Bakı Yazıçı 'Seçilmiş əsərləri' edition; earlier poetry-witness package state conflated it with the 2006 Şərq-Qərb edition (now split out below)."
+      },
+      {
+        "editor": "Rahimov, Hüseynzadə & Hacı Mail (red. M. Mailoğlu)",
+        "year": 2006,
+        "place": "Bakı: Şərq-Qərb",
+        "_anl_bib_id": "vtls000039901",
+        "note": "152 pp; 15 cm; Klassik Azərbaycan ədəbiyyatı series. Distinct from the 1986 Yazıçı edition (different publisher Şərq-Qərb, different editorial team Hacı Mail replacing Əliyev). 2026-05-11 follow-up pass correction F-V1-CORRECTION-2 via ek.anl.az probe 2026-05-11."
+      },
+      {
+        "editor": "Rahimov & Aliyev",
+        "year": 1988,
+        "place": "Bakı: Yazıçı",
+        "_anl_bib_id": "vtls000293094",
+        "note": "Qəzəllər və rübailər; 109 + 1 pp; 14 cm; Arabic script (NOT Cyrillic). Editors Rəhimov + Əliyev without Hüseyinzade. Arabic-script transliteration target is likely Iranian-Azerbaijani diaspora audience. F-EDITION3 via ek.anl.az probe 2026-05-11."
+      },
+      {
+        "editor": "Yerevanlı (red.)",
+        "year": 1966,
+        "place": "Yerevan: Hayastan",
+        "_anl_bib_id": "vtls000233714",
+        "note": "Şeirlər; 103 + 4 pp; 17 cm; Cyrillic. earlier poetry-witness package state attributes this 1966 Yerevan edition to Hüseyinzade as compiler/editor; ek.anl.az records 'Ə. Yerevanlı' as redaktor. Possible Soviet editorial-role distinction (Yerevanlı=redaktor / Hüseynzadə=tərtibçi). 8 copies held at ANL Baku; ILL pathway. F-V1-CORRECTION-1."
+      },
+      {
+        "editor": "Əliyev & Rəhimov",
+        "year": 1982,
+        "place": "Bakı (anthology II. buraxılış)",
+        "note": "'Cahanşah Həqiqi' chapter in 'Keçmişimizdən gələn səslər. II buraxılış'. S. 3-4-47. Pre-dates 1986 Bakı Yazıçı edition by 4 years; potentially the source for 1986 base text. F-EDITION2a via manuscript.az probe 2026-05-11."
+      },
+      {
+        "editor": "Bağırov, Əkrəm",
+        "year": 1987,
+        "place": "Bakı: Azərbaycan gəncləri (newspaper article)",
+        "note": "Newspaper article on Cahanşah Həqiqi dated 4 iyun 1987. F-EDITION2c via manuscript.az probe 2026-05-11. Brief popular-history piece; cited as evidence of Az popular reception, not as critical edition."
+      },
+      {
+        "editor": "Recebov",
+        "year": 1999,
+        "place": "Ashgabat"
+      },
+      {
+        "editor": "Ownuk / Hangeldi",
+        "year": 2014,
+        "place": "Ashgabat / Tehran-Behjat public edition lane",
+        "note": "Resolved 2026-05-18 as a Matenadaran/microfilm publication backchain, not a separate codex. Public Ownuk/Behjat pages and Flickr/Jahanshahakyky posts state that the edition is based on the Matenadaran manuscript and a Turkmenistan microfilm/1999 Ashgabat Cyrillic route."
+      },
+      {
+        "editor": "Baghban-Karimi, Mohammadreza",
+        "year": "1394 SH / 2015",
+        "place": "Nikan Ketab",
+        "note": "Edition-backchain target deepened 2026-05-18 via Mahdroo and Sozumuz: Divan-i Turki va Farsi-i Jahanshah Haqiqi, 428 pp., ISBN 978-964-196-309-7. Sozumuz says this edition appends images of the Tehran manuscript; a separate Sozumuz post exposes 77 derivative Tehran image URLs copied from the Karimi edition. Treat as derivative image/source-apparatus route, not an official digital surrogate."
+      },
+      {
+        "editor": "Baharli, Mehran / Sozumuz",
+        "year": 2017,
+        "place": "online corrected edition",
+        "note": "Online corrected Turkish divan edition and correction apparatus. The 2026-05-18 pass found that it explicitly derives from Macit's transcription of the four non-Tehran witnesses plus Alemdari and direct Tehran manuscript images copied from the Baghban-Karimi edition. Useful as a secondary collation and image-index route, not as independent witness evidence."
+      },
+      {
+        "editor": "Alemdârî",
+        "year": "2001 / 1379 SH",
+        "place": "Tehran: Fîrûzân"
+      },
+      {
+        "editor": "Demirci",
+        "year": 2001,
+        "place": "Köksav, Ankara"
+      },
+      {
+        "editor": "Değirmençay",
+        "year": 2004,
+        "place": "Atatürk Üniv., Erzurum",
+        "note": "Persian poems edition only"
+      },
+      {
+        "editor": "Değirmençay",
+        "year": 2021,
+        "place": "Atatürk Üniv., Erzurum",
+        "note": "Persian poems edition; second/updated edition by the same editor. Surfaced 2026-05-11 via ISAM Yordam direct GET-form exercise (chunk C2 finding F-EDITION1); not in earlier poetry-witness package state. Add to backchain matrix for future scope textual-criticism collation work."
+      },
+      {
+        "editor": "Macit",
+        "year": 2002,
+        "place": "Grafiker, Ankara",
+        "note": "Turkish poems"
+      },
+      {
+        "editor": "Poursharif, Nurellah",
+        "year": "1395 SH / 2016",
+        "place": "Nabati",
+        "note": "Edition-backchain target surfaced/deepened 2026-05-18 via Elmnet, Mahdroo, and Azerturan/Nabati Telegram: Divan-i Jahanshah Haqiqi: Turki-Farsi, compiler Nurellah Poursharif, Nabati 1395, 352 pp., ISBN 978-600-7281-60-4. Public metadata exposes no manuscript sigla or apparatus; inspect preface/source apparatus before using as witness evidence."
+      },
+      {
+        "editor": "Barqi, Lotfali",
+        "year": "1400 SH / 2021",
+        "place": "Akhtar",
+        "note": "Edition-backchain target surfaced/deepened 2026-05-18 via Elmnet/Mahdroo/Telegram: Turkja Haqiqi Divani, Qaraqoyunlu Jahanshah attributed, Akhtar, 156 pp., ISBN 978-600-486-342-1. Telegram post says Barqi's introduction addresses Minorsky's authorship doubt and attempts a near-critical Arabic-script edition preserving linguistic features. Focused acquisition pass found direct publisher routes (@nashreakhtar / @Nashre_akhtar, akhtar-pub@yahoo.com), original Evdeal product 1365 via Telegram, and a blocked Book House sample-PDF identifier 1400324250. Treat as high-value source-apparatus target only until the preface and manuscript references are inspected."
+      }
+    ]
+  },
+  "external_identifiers": {
+    "viaf": "43402797",
+    "fihrist_person": "person_43402797",
+    "fihrist_work": "work_20697"
+  },
+  "script_families": {
+    "_note": "Additive 2026-05-11 extension covering 9 script families for institutional-catalogue indexing in Russian Federation, Caucasus, Central Asia, and South Asia repositories. Complementary to `author_forms` above: that block is organized by language/scholarly tradition (modern academic Latin, 19th-c. Orientalist, Soviet-Cyrillic, Arabic-script); this block is organized by script with applies_to/cihansah_variants/hakiki_variants/qaraqoyunlu_variants/indexing_notes per family. Some overlap exists at the Soviet-Cyrillic intersection (e.g. Хакики, Cahanşah Həqiqi appear in both axes); this is by design (the two organizational views complement rather than replace each other).",
+    "_transliteration_sources_cross_checked": [
+      "Encyclopaedia of Islam 3rd edition (EI3); standard scholarly transliteration of Persian/Arabic/Turkic names",
+      "Encyclopaedia Iranica; Iranian-studies transliteration norms",
+      "GOST 7.79 / ISO 9; Russian Cyrillic transliteration standards",
+      "TÜBİTAK ULAKBİM / Türkiye Bilimler Akademisi; Modern Turkish and Azerbaijani Latin orthography standards",
+      "Tbilisi State University Caucasiology Institute conventions; Georgian Mkhedruli transliteration of Persian/Turkic proper names",
+      "ALA-LC romanization tables; used by US research library catalogues for South Asian Persian/Urdu manuscripts"
+    ],
+    "_caveat": "These variants are hand-constructed from standard transliteration rules and cross-checked against the above references, but local catalogue indexing may use orthographic conventions not anticipated here. Encountering an unfamiliar variant in a portal hit should NOT be treated as a false positive without further inspection.",
+    "russian_cyrillic_modern": {
+      "description": "Russian Federation institutional catalogues (IOM-RAS St. Petersburg, RGB Moscow, KFU Kazan, National Library of Tatarstan). Cyrillic alphabet, post-1918 orthography. Persian/Turkic proper names transliterated following GOST 7.79 or Russian Iranian-studies conventions.",
+      "applies_to": ["orientalmanuscripts.ru", "rsl.ru", "kpfu.ru", "tatknigafund.ru"],
+      "cihansah_variants": [
+        "Джахан-Шах",
+        "Джахан-шах",
+        "Джеханшах",
+        "Джиханшах",
+        "Джахан Шах Кара-Коюнлу",
+        "Джахан-Шах Кара-Коюнлу",
+        "Джахан-шах Кара-куюнлу"
+      ],
+      "hakiki_variants": [
+        "Хакики",
+        "Хакыки",
+        "Хаджики",
+        "Йусуф Хакики",
+        "Юсуф Хакики"
+      ],
+      "qaraqoyunlu_variants": [
+        "Кара-Коюнлу",
+        "Кара-куюнлу",
+        "Каракоюнлу",
+        "Кара Коюнлу",
+        "Караканлы"
+      ],
+      "indexing_notes": [
+        "Russian academic Persianist convention typically uses hyphen between compound proper-name elements (Кара-Коюнлу, Джахан-Шах).",
+        "Some Soviet-era publications dropped the hyphen (Каракоюнлу, Джеханшах).",
+        "Pen-name Хакики ('Khakiki' in romanized Russian) is the standard form; the variant Хакыки uses ы for the Persian /iː/."
+      ]
+    },
+    "azerbaijani_latin_modern": {
+      "description": "Modern Azerbaijani Latin orthography (post-1991 official), used in AMEA / Baku Institute of Manuscripts and Azerbaijan National Library current catalogues. Uses ə for schwa, ş for /ʃ/, ç for /tʃ/, q for /ɣ/-like; uses i / ı distinction (dotted vs dotless).",
+      "applies_to": ["manuscript.az", "anl.az", "elmler.az"],
+      "cihansah_variants": [
+        "Cahanşah",
+        "Cahanşah Qaraqoyunlu",
+        "Cahanşah Həqiqi",
+        "Cahan Şah",
+        "Cahan-şah"
+      ],
+      "hakiki_variants": [
+        "Həqiqi",
+        "Həqiqi Cahanşah",
+        "Yusif Həqiqi",
+        "Yusif Həqiqi (Bursalı)"
+      ],
+      "qaraqoyunlu_variants": [
+        "Qaraqoyunlu",
+        "Qara Qoyunlu",
+        "Qaraqoyunlular",
+        "Qaraqoyunlu dövləti"
+      ],
+      "indexing_notes": [
+        "Modern Azerbaijani uses Ş for /ʃ/ where Turkish modern uses Ş; both forms map to Persian ش.",
+        "Modern Azerbaijani uses Q for /q/ where Persian uses ق; this Q is identical to the Azerbaijani Cyrillic Г-with-bar-equivalent.",
+        "Azerbaijani specifically marks schwa ə in Həqiqi where Turkish would use a or Persian e; this is the primary distinguishing feature."
+      ]
+    },
+    "azerbaijani_cyrillic_soviet": {
+      "description": "Soviet-era Azerbaijani Cyrillic (1939-1991, with partial use to ~2001 and in some legacy catalogue records). Distinct from Russian Cyrillic in adding letters Ҹ (for /dʒ/), Ј (for /j/), Ҝ (for /ɟ/), Ғ (for /ɣ/), Ә (for schwa), Ү (for /y/), Ө (for /œ/), Һ (for /h/).",
+      "applies_to": ["manuscript.az legacy records", "AMEA pre-1991 publications", "Az National Library legacy catalogue"],
+      "cihansah_variants": [
+        "Ҹаһаншаһ",
+        "Ҹаһаншаһ Гарагојунлу",
+        "Ҹаһаншаһ Һәгиги",
+        "Ҹаһан шаһ"
+      ],
+      "hakiki_variants": [
+        "Һәгиги",
+        "Һәгиги Ҹаһаншаһ",
+        "Јусиф Һәгиги"
+      ],
+      "qaraqoyunlu_variants": [
+        "Гарагојунлу",
+        "Гара Гојунлу",
+        "Гара Гојунлулар"
+      ],
+      "indexing_notes": [
+        "Soviet-era Azerbaijani Cyrillic differs from Russian Cyrillic in its use of Ҹ (J + cedilla) for /dʒ/, where Russian uses Дж digraph.",
+        "Soviet-era Az Cyrillic uses Г for /q/ (so Қарақоюнлу becomes Гарагојунлу), distinct from Russian Cyrillic which used К-К compound (Кара-Коюнлу).",
+        "Records published 1939-1991 in Azerbaijan use this script; records 1991-present use Latin (azerbaijani_latin_modern)."
+      ]
+    },
+    "georgian_mkhedruli": {
+      "description": "Georgian alphabet (Mkhedruli script), used at Kekelidze Institute of Manuscripts (Tbilisi), Tbilisi State University, Georgian National Center of Manuscripts. Persian/Turkic proper names transliterated following Georgian phonetics with -i nominative suffix typical for foreign proper names ending in consonant.",
+      "applies_to": ["manuscript.ge", "tsu.edu.ge"],
+      "cihansah_variants": [
+        "ჯაჰანშაჰი",
+        "ჯაჰან-შაჰი",
+        "ჯიჰანშაჰი",
+        "ჯაჰან შაჰი ყარაყოიუნლუ",
+        "ჯაჰანშაჰი ყარაყოიუნლუ"
+      ],
+      "hakiki_variants": [
+        "ჰაკიკი",
+        "ჰაყიყი",
+        "იუსუფ ჰაკიკი",
+        "ჰაკიკი ჯაჰანშაჰი"
+      ],
+      "qaraqoyunlu_variants": [
+        "ყარაყოიუნლუ",
+        "ყარა ყოიუნლუ",
+        "ყარაყოიუნლუს დინასტია"
+      ],
+      "indexing_notes": [
+        "Georgian alphabet does not distinguish case; all letters are essentially the same single-case Mkhedruli script.",
+        "Georgian uses ჰ for /h/ and ხ for /x/; the distinction between Persian ح / ه is sometimes neutralized to ჰ.",
+        "Georgian uses ყ for /q/ (a deep glottal-stop-like sound), distinct from კ /k/.",
+        "Persian Hakîkî (حقیقی) renders as ჰაკიკი if treating ح as /h/ and ق as /k/; alternative ჰაყიყი uses ყ for ق and double-ი for the long /iː/."
+      ]
+    },
+    "uzbek_latin_modern": {
+      "description": "Modern Uzbek Latin orthography (1995-present, gradually replacing Cyrillic in Uzbekistan). Used in Tashkent Al-Biruni Institute and Beruni Institute of Oriental Studies catalogues for newer entries. Uses o instead of u for /o/-vowel; uses sh / ch digraphs; uses q for /q/ and gʻ for /ɣ/.",
+      "applies_to": ["nodir.natlib.uz partial", "natlib.uz", "uzscience.uz"],
+      "cihansah_variants": [
+        "Jahonshoh",
+        "Jahonshoh Qoraqoyunli",
+        "Jahonshoh Qoraqoyunlu",
+        "Jahonshoh Haqiqiy",
+        "Jahon Shoh"
+      ],
+      "hakiki_variants": [
+        "Haqiqiy",
+        "Yusuf Haqiqiy",
+        "Haqiqiy Jahonshoh"
+      ],
+      "qaraqoyunlu_variants": [
+        "Qoraqoyunlu",
+        "Qoraqoyunli",
+        "Qora Qoyunli",
+        "Qoraqoyunlilar"
+      ],
+      "indexing_notes": [
+        "Uzbek Latin uses 'o' where Persian uses long ā (Jahonshoh for Persian Jahānshāh).",
+        "Uzbek Latin uses 'iy' suffix for relational adjectives where Persian uses ī (Haqiqiy for Persian Ḥaqīqī).",
+        "Uzbek may pluralize ethnonyms with -lar suffix (Qoraqoyunlilar = the Qaraqoyunlu people)."
+      ]
+    },
+    "uzbek_cyrillic_soviet_legacy": {
+      "description": "Uzbek Cyrillic (Soviet-era 1940-1995, still in widespread use particularly in catalogues for pre-1995 records). Adds letters Ҳ (for /h/), Қ (for /q/), Ғ (for /ɣ/), Ў (for /o/), Ё (for /jo/).",
+      "applies_to": ["nodir.natlib.uz legacy records", "Beruni Institute pre-1995 publications"],
+      "cihansah_variants": [
+        "Жаҳоншоҳ",
+        "Жаҳоншоҳ Қорақоюнлу",
+        "Жаҳоншоҳ Ҳақиқий",
+        "Жаҳон Шоҳ"
+      ],
+      "hakiki_variants": [
+        "Ҳақиқий",
+        "Юсуф Ҳақиқий",
+        "Ҳақиқий Жаҳоншоҳ"
+      ],
+      "qaraqoyunlu_variants": [
+        "Қорақоюнлу",
+        "Қора Қоюнлу",
+        "Қорақоюнлилар"
+      ],
+      "indexing_notes": [
+        "Uzbek Cyrillic Ҳ (for /h/) is distinct from Russian Cyrillic Х (for /x/); the Soviet-era Az Cyrillic Һ is a third variant.",
+        "Uzbek Cyrillic Қ corresponds to Persian ق; same as Az Cyrillic Г and Russian Cyrillic К-К compound.",
+        "Uzbek Cyrillic Ж corresponds to Persian ج /dʒ/; same as Russian Cyrillic Дж digraph, Az Cyrillic Ҹ."
+      ]
+    },
+    "tajik_cyrillic_modern": {
+      "description": "Tajik Cyrillic (since 1939, officially Tajikistan's script although Persian-Arabic script is also used informally). Adds letters Ҷ (for /dʒ/), Ҳ (for /h/), Ғ (for /ɣ/), Қ (for /q/), Ӣ (for long /iː/), Ӯ (for long /uː/). The long-vowel diacritics are the distinguishing feature.",
+      "applies_to": ["Tajik National Library Dushanbe", "Rudaki Institute of Language and Literature Dushanbe", "Tajik State University collections"],
+      "cihansah_variants": [
+        "Ҷаҳоншоҳ",
+        "Ҷаҳоншоҳи Қоракӯюнлу",
+        "Ҷаҳоншоҳ Ҳақиқӣ",
+        "Ҷаҳон Шоҳ"
+      ],
+      "hakiki_variants": [
+        "Ҳақиқӣ",
+        "Юсуф Ҳақиқӣ",
+        "Ҳақиқӣ Ҷаҳоншоҳ"
+      ],
+      "qaraqoyunlu_variants": [
+        "Қоракӯюнлу",
+        "Қора Кӯюнлу",
+        "Қоракӯюнлуи Шарқ"
+      ],
+      "indexing_notes": [
+        "Tajik Cyrillic adds the diacritic Ӣ for long /iː/ vowel, distinguishing Ҳақиқӣ from a hypothetical Ҳақиқи with short /i/. This is a feature of Tajik that Uzbek and Russian lack.",
+        "Tajik Cyrillic Ҷ corresponds to Persian ج, same as Uzbek Cyrillic Ж and Az Cyrillic Ҹ, distinct from Russian Дж.",
+        "Tajik's Persian-substrate makes its transliteration of Persian proper names more conservative (closer to original Persian orthography) than Uzbek's."
+      ]
+    },
+    "devanagari_south_asian": {
+      "description": "Devanagari script transliteration used in some South Asian (particularly Indian Hindu/Hindi-medium) catalogue entries for Persian manuscripts. Most South Asian Persian mss are catalogued in Persian/Urdu nastaʿliq (see urdu_nastaliq below); Devanagari versions appear primarily in Hindi-language scholarly literature.",
+      "applies_to": ["Some Indian national library entries", "Hindi-medium scholarly works"],
+      "cihansah_variants": [
+        "जहांशाह",
+        "जहान्शाह",
+        "जहाँशाह",
+        "जहाँ शाह",
+        "जहांशाह क़ाराक़ोयुनलू"
+      ],
+      "hakiki_variants": [
+        "हकीकी",
+        "हक़ीक़ी",
+        "यूसुफ़ हकीकी",
+        "हक़ीक़ी जहांशाह"
+      ],
+      "qaraqoyunlu_variants": [
+        "क़ाराक़ोयुनलू",
+        "काराकोयुनलू",
+        "क़ारा क़ोयुनलू"
+      ],
+      "indexing_notes": [
+        "Devanagari with nukta (e.g., क़ for /q/, ज़ for /z/, फ़ for /f/) distinguishes Arabic-origin sounds from native Hindi phonology.",
+        "Hindi catalogues often drop the nukta (काराकोयुनलू vs. क़ाराक़ोयुनलू); both forms may co-exist in indexing.",
+        "The Devanagari forms are most likely to appear in Hindi-language descriptions of Salar Jang or other Indian institutional holdings, NOT in the catalogue records themselves which are typically in Urdu nastaʿliq."
+      ]
+    },
+    "urdu_nastaliq_south_asian": {
+      "description": "Urdu nastaʿliq script (essentially Persian-Arabic script with minor Indic adaptations). Used in most South Asian Persian/Urdu manuscript catalogues. The Arabic-script base is identical to Persian (covered by current search_keys.json arabic_script family), but Urdu uses ہ (do-chashmi he) where Persian uses ه, and may use slightly different diacritic conventions.",
+      "applies_to": ["salarjungmuseum.in", "razalibrary.gov.in", "khudabakhshlibrary.com", "Asiatic Society Kolkata catalogue"],
+      "cihansah_variants": [
+        "جہانشاہ",
+        "جہان شاہ",
+        "جہانشاہ قراقویونلو",
+        "جیہان شاہ"
+      ],
+      "hakiki_variants": [
+        "حقیقی",
+        "حقیقی جہانشاہ",
+        "یوسف حقیقی"
+      ],
+      "qaraqoyunlu_variants": [
+        "قراقویونلو",
+        "قرا قویونلو",
+        "قراقویونلوسلطنت"
+      ],
+      "indexing_notes": [
+        "Urdu nastaʿliq uses ہ (Unicode U+06C1, do-chashmi he) for the /h/ sound that Persian writes as ه (Unicode U+0647); this is a critical distinction for Indian institutional catalogue search, as the two characters do not always match in fulltext search.",
+        "Urdu may also use ی (Unicode U+06CC, Arabic farsi yeh) where Persian uses ي (Unicode U+064A, Arabic yeh) or ی; Persian-script search must accommodate Unicode variant matching.",
+        "South Asian catalogues often interleave Persian and Urdu forms in the same record; search batteries should test both ه/ہ and ی/ي variants."
+      ]
+    }
+  },
+  "alevi_community_route_terms": {
+    "_note": "Additive 2026-05-20 extension promoted from the Alevi transmission expansion search artifacts. These are route and contact search keys for cenk/conk, kelamhan, ocak, defter/beyaz, and Alevi-Bektashi community manuscript evidence; they are not witness evidence by themselves.",
+    "turkish": [
+      "Hakiki cenk",
+      "Hakiki conk",
+      "Hakiki kelamlar",
+      "Hakiki kelamlari",
+      "Hakiki makami",
+      "Cihansah Hakiki Alevi",
+      "Karakoyunlu Hakiki Alevi",
+      "Alevi erkan defteri Hakiki",
+      "Defter Beyaz Hakiki",
+      "Kirklar Ocagi Hakiki",
+      "Celten Ocagi Hakiki",
+      "Ilhici Hakiki",
+      "Ilkhchi Hakiki",
+      "Alevi zakir Hakiki",
+      "kelamhan Hakiki"
+    ],
+    "azerbaijani_latin": [
+      "Cahansah Haqiqi cung",
+      "Cahansah Haqiqi defter",
+      "Haqiqi cem",
+      "Haqiqi ocak",
+      "Haqiqi qizilbas",
+      "Haqiqi elevi",
+      "Haqiqi Ilxici",
+      "Haqiqi Kirklar"
+    ],
+    "persian_arabic_script": [
+      "جهانشاه حقیقی اهل حق",
+      "حقیقی ایلخچی",
+      "کلام حقیقی ایلخچی",
+      "جهانشاه حقیقی کلام",
+      "حقیقی دفتر اهل حق",
+      "حقیقی جمع خانه"
+    ],
+    "archive_owner_names": [
+      "Bulent Akin",
+      "Hamidreza Sohrabiabad",
+      "Dervis Erdal",
+      "Serhat Sabri Yilmaz",
+      "Dogan Kaya",
+      "M. Sabri Koz",
+      "Lutfu Segmen",
+      "Mehmet Ersal",
+      "Ozan Yilmaz",
+      "Abbas Onen",
+      "Halil Esen"
+    ]
+  },
+  "yusuf_hakiki_homonym_treatment": {
+    "purpose": "Across all 9 script families in `script_families` above, the homonym question 'is this Cihanşah Hakîkî or Yusuf Hakîkî?' must be resolved per-hit using the standard v1.0 disambiguation criteria.",
+    "disambiguation_criteria": [
+      "Date filter: Cihanşah Qaraqoyunlu d. 872 AH / 1467 CE. Yusuf Hakîkî Bursavi d. 893 AH / 1487 CE (Ottoman, Bursa-based, Hurufi-adjacent). A record dated post-872 AH that names 'Hakîkî' without further qualifier is more likely Yusuf Hakîkî unless the codex content positively confirms Cihanşah's Dīvān.",
+      "Context cluster: Cihanşah's Hakîkî pen-name appears with Qaraqoyunlu / Karakoyunlu titulature and Persian-Turkic bilingual content. Yusuf Hakîkî appears with Ottoman / Bursa context and Hurufi-symbolic content.",
+      "Hurufi sub-cluster: both poets are Hurufi-adjacent (per the v1.0 mecmûʿa-adjacency-Nesîmî diagnostic), but Yusuf Hakîkî's Hurufi affiliation is more direct (he is documented as a Bektashi-Hurufi initiate)."
+    ]
+  },
+  "south_asian_haqiqi_homonym_treatment": {
+    "purpose": "Additional Patna / South Asian disambiguation rule. For an Indian, Pakistani, or Indo-Persian catalogue hit titled only Divan-i Haqiqi, do not assume the main false-positive class is Yusuf Hakiki alone. South Asian Persian manuscript collections may preserve local Persian-writing poets or Sufi figures using Haqiqi as a takhallus.",
+    "null_hypothesis": "A Persian-only Divan-i Haqiqi in a South Asian collection is an unassigned Haqiqi homonym until the entry gives author identity, first lines, contents, date, or contextual markers tying it to Cihansah Qaraqoyunlu.",
+    "query_families": {
+      "latin": [
+        "\"Haqiqi\" \"takhallus\" Indian Persian",
+        "\"Haqiqi\" \"Persian divan\" India",
+        "\"Haqiqi\" tazkira Mughal poet",
+        "\"Haqiqi Hindustani\"",
+        "\"Diwan-i Haqiqi\" Patna",
+        "\"Divan-i Haqiqi\" \"Madrasa Sulaimania\""
+      ],
+      "persian_urdu": [
+        "\"حقیقی\" \"تذکره\" هند",
+        "\"حقیقی\" \"دیوان\" هند",
+        "\"حقیقی\" \"تخلص\"",
+        "\"دیوان حقیقی\" \"پتنه\"",
+        "\"دیوان حقیقی\" \"پتنا\"",
+        "\"دیوان حقیقی\" \"مدرسه سلیمانیه\""
+      ],
+      "reference_surfaces": [
+        "Storey, Persian Literature: A Bio-Bibliographical Survey",
+        "South Asian Persian manuscript-catalogue indexes: Khuda Bakhsh/Bankipore, Salar Jung, Rampur Raza, Asiatic Society of Bengal, Aligarh/Maulana Azad",
+        "Indo-Persian tazkira indexes, especially Mughal and regional North Indian biographical anthologies"
+      ]
+    },
+    "positive_cihansah_signals": [
+      "Author heading gives Cihansah, Jahanshah, Cahan Shah, or equivalent plus Qaraqoyunlu/Karakoyunlu/Turkman lineage.",
+      "Contents are Persian-Turkish bilingual or include Turkish ghazals/tuyughs matching the known Cihansah corpus.",
+      "Incipit, explicit, or first lines match BL Or 9493, Matenadaran 965, Suleymaniye Fatih 3808, Ankara DTCF I/2221, Tehran University 8198, or another confirmed Cihansah witness.",
+      "Colophon/date/context places the witness in a plausible Cihansah transmission line rather than a local South Asian Sufi/lyrical corpus."
+    ],
+    "confirmed_homonym_examples": [
+      {
+        "name": "Hagigi / Haqiqi (Muhammad Baig)",
+        "source": "Salar Jung Museum and Library, A Concise Descriptive Catalogue of the Persian Manuscripts, vol. II, catalogue no. 566, Gul-e-Ra'na; index reference 566/110.",
+        "why_it_matters": "Gul-e-Ra'na is described as a tadhkira of Persian poets who were Indians by birth and arranged alphabetically by takhallus. This confirms that South Asian Haqiqi/Hagigi takhallus holders exist as a real collision class, not just a theoretical risk.",
+        "intake_rule": "For Indian or Indo-Persian title-only Divan-i Haqiqi hits, require author-heading, first-line, bilingual-content, or Qaraqoyunlu/Turkman-context evidence before treating the hit as Cihansah/Jahanshah."
+      }
+    ],
+    "hold_or_negative_signals": [
+      "Title only: Divan-i Haqiqi with no author heading, incipit, explicit, or contents.",
+      "Persian-only lyrical or Sufi corpus in an Indian copying context with no Qaraqoyunlu/Turkman marker.",
+      "Catalogue or publisher-normalized title that is not visible on the manuscript title page.",
+      "Any hit where Haqiqi functions adjectivally rather than as a takhallus."
+    ]
+  }
+}

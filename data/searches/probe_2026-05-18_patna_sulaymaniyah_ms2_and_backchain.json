@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "session_label": "Patna Madrasa Sulaimania MS no. 2 and backchain-mining pass",
+  "session_id": "patna-sulaymaniyah-ms2-and-backchain-2026-05-18",
+  "date": "2026-05-18",
+  "scope": "Follow up the external new-leads review from a blank-slate posture. Mine the strongest candidate lead, Patna Madrasa Sulaimania / Sulaymaniyah MS no. 2, and retest adjacent edition, South Asian, MESTAP, Ilkhchi, and Turkish backchain routes. Register counts are not changed by this artifact.",
+  "method_summary": {
+    "primary": "Targeted web search in Persian, Latin transliteration, Turkish, and South Asian institutional terminology; direct page inspection for the surviving hits; comparison against the existing South Asia and edition-backchain search artifacts.",
+    "source_weighting": "Primary catalogue, repository, facsimile-series, and article pages were prioritized. Shop, Telegram, and aggregator pages are treated as acquisition or backchain leads unless they expose codex-level evidence.",
+    "promotion_rule": "A lead is not promoted to data/witness_register.json unless the evidence identifies Jahanshah/Cihansah Haqiqi rather than another Haqiqi, and gives enough manuscript-level detail to distinguish a codex, facsimile, or edition from a generic title hit."
+  },
+  "external_review_follow_up": {
+    "reviewer": "independent artifact review",
+    "review_output": "local artifact-review note; private reviewer path not deposited",
+    "review_date": "2026-05-18",
+    "accepted_points": [
+      "Patna no. 2 needs an Indo-Persian Haqiqi homonym/disambiguation lane before any register promotion; Yusuf Hakiki is not the only relevant false-positive class for a South Asian Persian divan title.",
+      "The Blogfa For Tomorrow no. 126 listing is load-bearing and volatile; archive/stability handling should be explicit.",
+      "The listing's 126-page statement is a page-count, not necessarily a folio-count; it cannot be compared directly against witness folio counts without the facsimile or catalogue entry.",
+      "The Demirci 1997 page range needed direct PDF resolution because local artifacts mixed 127-134 and 127-138."
+    ],
+    "verified_after_review": [
+      "Direct ISAM PDF inspection confirms the full article span as printed pages 127-138. Pages 137-138 are manuscript-image plates; pages 130-131 contain the core codicological descriptions for Suleymaniye Fatih 3808 and Ankara DTCF Ismail Saib I/2221.",
+      "The Blogfa listing was directly reachable on 2026-05-18 and contains the For Tomorrow no. 126 Divan-i Haqiqi entry, but Wayback availability/save attempts from this environment returned HTTP 429 or timed out."
+    ],
+    "held_points": [
+      "Claude named possible Indo-Persian Haqiqi figures, but those names are treated only as search seeds here because they were not independently confirmed in this pass."
+    ]
+  },
+  "queries_executed": [
+    {
+      "family": "Patna MS no. 2 core",
+      "queries": [
+        "\"Divan Haqiqi\" Patna Sulaimaniah",
+        "\"Divan-i Haqiqi\" \"Madrasa Sulaymaniyah\" Patna",
+        "\"دیوان حقیقی\" \"مدرسه سلیمانیه\" پتنا",
+        "\"دیوان حقیقی\" \"نسخه ش 2\" \"پتنا\"",
+        "\"جهانشاه بن قرایوسف\" \"پتنا\"",
+        "\"برای فردا\" \"دیوان حقیقی\" \"126\""
+      ]
+    },
+    {
+      "family": "Patna catalogue bibliographic metadata",
+      "queries": [
+        "\"فهرست نسخه های خطی کتابخانه مدرسه سلیمانیه شهر پتنه هندوستان\"",
+        "\"فهرست نسخه‌های خطی کتابخانه مدرسه سلیمانیه\" \"Google Books\"",
+        "\"9786223041525\"",
+        "\"1402253747\"",
+        "\"Muarrifi-i Mirath-i makhtut\" \"128\""
+      ]
+    },
+    {
+      "family": "Institution confirmation",
+      "queries": [
+        "\"Madrasa Sulaimania Library\" Patna manuscripts",
+        "\"Madrasa Sulaimania Library\" \"Pachim Darwaza\"",
+        "\"Madrasa Sulaimania\" Patna \"1844\" manuscripts",
+        "site:namami.gov.in \"Madrasa Sulaimania Library\""
+      ]
+    },
+    {
+      "family": "South Asian portal retest",
+      "queries": [
+        "site:namami.gov.in Haqiqi",
+        "site:namami.gov.in \"Diwan-i Haqiqi\"",
+        "site:bharatiyakritisampada.nic.in Haqiqi",
+        "site:bharatiyakritisampada.nic.in \"دیوان حقیقی\""
+      ]
+    },
+    {
+      "family": "Modern edition and source-apparatus backchain",
+      "queries": [
+        "\"دیوان جهانشاه حقیقی\" \"نورالله پورشریف\"",
+        "\"دیوان جهانشاه حقیقی\" \"نباتی\"",
+        "\"تورکجه حقیقی دیوانی\" \"لطفعلی برقی\" \"اختر\"",
+        "\"دیوان ترکی و فارسی جهانشاه حقیقی\" \"محمدرضا باغبان کریمی\"",
+        "\"دیوان جهانشاه حقیقی\" \"خانی گلدی اونق\""
+      ]
+    },
+    {
+      "family": "MESTAP / mecmua / Nesimi adjacency",
+      "queries": [
+        "\"Hakiki\" \"MESTAP\"",
+        "\"Hakiki\" \"MESTAP\" \"mecmua\"",
+        "\"Cihansah\" \"mecmua\" \"Hakiki\"",
+        "\"Nesimi\" \"Hakiki\" \"mecmua\""
+      ]
+    }
+  ],
+  "high_priority_findings": [
+    {
+      "lead_id": "patna_madrasa_sulaimania_ms2_divan_i_haqiqi",
+      "classification": "new_witness_candidate_unverified",
+      "status": "HIGH_PRIORITY_VERIFY_BEFORE_REGISTER_PROMOTION",
+      "summary": "A Majma-i Zakhair-i Islami facsimile-series list records a Divan-i Haqiqi, manuscript no. 2, Madrasa Sulaimania/Sulaymaniyah, Patna, India, as For Tomorrow no. 126, Persian poetry, 126 pages, color facsimile. A later Boroujerdi Library notice identifies a 2023 printed catalogue of the same Patna collection as containing bibliographic/codicological data and selected images for more than 200 manuscripts. Google Books and WorldCat now confirm the catalogue as a 364-page 2023 Majma-i Zakhair-i Islami publication by Tayebeh Hajj Baqerian, ISBN 9786223041525 / OCLC 1402253747, volume 128 of the Muarrifi-i Mirath-i makhtut series. This is the first concrete Patna Madrasa Sulaimania lead found in the project and is outside the previously probed Khuda Bakhsh/Bankipore Patna route.",
+      "source_evidence": [
+        {
+          "source": "Majma-i Zakhair-i Islami Blogfa facsimile-series list",
+          "url": "https://zakhair.blogfa.com/post/34",
+          "retrieved": "2026-05-18",
+          "observed": "For Tomorrow no. 126 lists Divan-i Haqiqi, manuscript no. 2, Madrasa Sulaimania/Sulaymaniyah, Patna, India; Persian / poetry; 126 pages; color.",
+          "weight": "strong lead for a facsimile/manuscript source; not yet sufficient for author identity or contents.",
+          "stability_note": "This is the load-bearing public source for the Patna no. 2 lead. Wayback availability/save attempts from this environment on 2026-05-18 returned HTTP 429 or timed out, so no archive timestamp is recorded yet."
+        },
+        {
+          "source": "National Mission for Manuscripts repository directory",
+          "url": "https://www.namami.gov.in/sites/default/files/Manuscript_Repositories.pdf",
+          "retrieved": "2026-05-18",
+          "observed": "The repository directory lists Madrasa Sulaimania Library at Pachim Darwaza, Patna City, Bihar.",
+          "weight": "confirms the institution as a distinct Patna manuscript repository, not Khuda Bakhsh."
+        },
+        {
+          "source": "Alfehrest / catalogue metadata lead",
+          "url": "https://alfehrest.com/product/%D9%81%D9%87%D8%B1%D8%B3%D8%AA-%D9%85%D8%AF%D8%B1%D8%B3%D9%87-%D8%B3%D9%84%DB%8C%D9%85%D8%A7%D9%86%DB%8C%D9%87-%D9%BE%D8%AA%D9%86%D8%A7-%D9%87%D9%86%D8%AF/",
+          "retrieved": "2026-05-18",
+          "observed": "Search snippets identify a printed catalogue for the Madrasa Sulaimania Patna manuscripts, reportedly heavy in Persian holdings. Direct fetch did not succeed in this session.",
+          "weight": "catalogue-acquisition lead only until the entry for MS no. 2 is inspected."
+        },
+        {
+          "source": "Boroujerdi Library Telegram / blib.ir publication notice",
+          "url": "https://telegram.me/s/Boroujerdilib?before=4805",
+          "retrieved": "2026-05-18",
+          "observed": "The library notice reports the launch of a catalogue for the manuscripts of Madrasa Sulaimania, Patna, at the 7 Ordibehesht 1402 / 27 April 2023 Qom conference on Eastern manuscripts. It states that the catalogue covers more than 200 manuscripts, was prepared by Tayebeh Hajj Baqerian, includes bibliographic and codicological data plus images of some manuscripts, and was published in 100 copies by Majma-i Zakhair-i Islami with Oriental Company.",
+          "weight": "strongest acquisition route for the codicological catalogue likely to contain the MS no. 2 entry; not direct evidence for Jahanshah until the entry itself is inspected."
+        },
+        {
+          "source": "Google Books catalogue metadata",
+          "url": "https://books.google.com/books?id=hlJR0AEACAAJ",
+          "retrieved": "2026-05-18",
+          "observed": "Google Books identifies the printed catalogue as Fihrist-i nuskha-ha-yi khatti-i kitabkhana-yi Madrasa-yi Sulaimania, Patna, Hindustan, by Tayebeh Hajj Baqerian, Majma-i Zakhair-i Islami, 2023, 364 pages, ISBN 9786223041525 / 6223041527, volume 128 of Muarrifi-i Mirath-i makhtut.",
+          "weight": "confirms the exact catalogue publication to acquire, but Google Books exposes no searchable text or entry-level data."
+        },
+        {
+          "source": "WorldCat catalogue metadata",
+          "url": "https://search.worldcat.org/title/1402253747",
+          "retrieved": "2026-05-18",
+          "observed": "WorldCat/OCLC metadata confirms the same Persian catalogue title, author line, 2023 publication, Persian language, hardcover format, ISBN 9786223041525, and OCLC 1402253747.",
+          "weight": "confirms library-catalogue identity and acquisition identifier; no MS no. 2 entry text exposed."
+        }
+      ],
+      "why_not_register_yet": [
+        "The accessible facsimile-list entry gives title, shelf/series number, institution, language, and page count, but not author heading, incipit, explicit, colophon, date, scribe, foliation, or first lines.",
+        "Haqiqi is a known homonym and can also function adjectivally; a title-only Divan-i Haqiqi in a South Asian Persian setting must be disambiguated before counting.",
+        "In a Patna / Indo-Persian library context, the homonym prior must include local or regional Persian-writing Haqiqi poets and Sufi figures, not only Yusuf Hakiki or Ottoman/Bektashi false positives.",
+        "The 126-page listing is not a folio count. Until the facsimile or catalogue entry is inspected, it should not be compared one-for-one against folio counts in BL Or 9493, Matenadaran 965, Fatih 3808, DTCF I/2221, or Tehran 8198.",
+        "The facsimile listing proves a concrete acquisition path. It does not by itself prove this is Jahanshah Qaraqoyunlu's Divan rather than another Haqiqi or an edition/facsimile title normalized by the publisher."
+      ],
+      "next_verification_steps": [
+        "Use the new data/search_keys.json south_asian_haqiqi_homonym_treatment block as the intake checklist; extend it with named, source-confirmed Indo-Persian Haqiqi homonyms only after Storey, tazkira, or catalogue evidence is inspected.",
+        "Obtain the 2023 printed Patna Madrasa Sulaimania catalogue and inspect entry no. 2. Prioritize this over generic catalogue searching because the launch notice says it contains codicological descriptions and selected images.",
+        "Obtain or view For Tomorrow no. 126 from Majma-i Zakhair-i Islami; record title page, author heading, incipit, explicit, foliation/page count, date, scribe, and any colophon.",
+        "Compare at least three first lines against known Jahanshah witnesses: BL Or 9493, Matenadaran 965, Suleymaniye Fatih 3808, Ankara DTCF I/2221, and Tehran University 8198.",
+        "If the evidence confirms Jahanshah/Cihansah, add a candidate entry to the register using an existing allowed verification_status unless the schema is explicitly extended."
+      ],
+      "register_impact": "No witness-count change yet."
+    },
+    {
+      "lead_id": "demirci_1997_isam_retrieved",
+      "classification": "existing_witness_verification_route_resolved",
+      "status": "RESOLVED_ONLINE",
+      "summary": "The previously unretrieved Demirci 1997 article is now hosted by ISAM with a downloadable PDF. Direct inspection resolves the full article span as printed pages 127-138; pages 137-138 are manuscript-image plates. The article directly describes the two Turkish witnesses: Suleymaniye Fatih 3808 and Ankara DTCF Ismail Saib I/2221.",
+      "source_evidence": [
+        {
+          "source": "ISAM Makaleler database",
+          "url": "https://makale.isam.org.tr/items/d4186c28-771c-4962-8e12-8510d08fd862/full",
+          "retrieved": "2026-05-18",
+          "observed": "The record identifies Jale Demirci, 1997, Turkoloji Dergisi XII/1, pp. 127-138, with a 1.33 MB PDF."
+        },
+        {
+          "source": "ISAM PDF",
+          "url": "https://makale.isam.org.tr/bitstreams/65db899b-e022-43c2-8248-8d848e5f7b96/download",
+          "retrieved": "2026-05-18",
+          "observed": "The article states that, beyond the British Museum witness, two previously unmentioned copies exist: one in Suleymaniye Library and one in Ankara University DTCF Library. It gives dimensions, folios, line counts, contents, and copy notes for both. The PDF has 13 pages: a cover page plus printed article pages 127-138. Printed pages 137-138 are manuscript-image plates, so the ISAM 127-138 range is the complete article/plate span; older 127-134 citations should be treated as legacy or shortened citations unless the citing source is being quoted verbatim."
+        }
+      ],
+      "codex_data_recovered": {
+        "suleymaniye_fatih_3808": "Fatih 3808, copied by Mustafa Bey Osman Pasha; 24.4 x 15.6 cm; 107 folios; 10-12 lines/page; ff. 1a-71b Persian poems and ff. 72a-107a Turkish poems; 96 Turkish ghazals and 29 rubais; nasta'liq; described as carefully copied and well preserved. The article gives opening and closing lines but no paper, binding, illumination, or decoration data.",
+        "ankara_dtcf_ismail_saib_1_2221": "Ankara University DTCF Library, Ismail Saib I.2221; 26 folios; 13 x 18 cm with 11.5 x 16.5 cm writing area; nasta'liq; copied by al-Hac Huseyin, completed 12 Muharram 1290 AH; contains 80 Turkish ghazals, lacks the Persian section and rubais found in the other two witnesses; no paper, binding, illumination, or decoration data."
+      },
+      "implications": [
+        "The register and README should no longer say Demirci 1997 was not retrieved in open access.",
+        "Use 127-138 for the complete Demirci 1997 article citation in non-verbatim metadata. Preserve 127-134 only where it is quoted from Macit 2000 or another source as a historical citation.",
+        "Demirci strongly supports Ankara DTCF as the institution for Ismail Saib I/2221, while the Islamisation DB/Ataturk University conflict remains worth institutional follow-up.",
+        "The article improves codicological description but does not solve the main decoration/material-data gap."
+      ]
+    }
+  ],
+  "secondary_findings": [
+    {
+      "lead_id": "modern_iranian_turkish_edition_backchain",
+      "classification": "edition_backchain_targets",
+      "status": "SOURCE_APPARATUS_NOT_YET_INSPECTED",
+      "summary": "Elmnet and Iranian book pages expose a wider modern edition cluster than the earlier matrix emphasized: Poursharif/Nabati 1395, Baghban-Karimi/Nikan 1394, Ownuk/Behjat 1393, and Barqi/Akhtar 1400.",
+      "source_evidence": [
+        {
+          "source": "Elmnet bibliographic record",
+          "url": "https://elmnet.ir/doc/30873935-95571",
+          "observed": "Records Divan-i Jahanshah Haqiqi: Turki-Farsi, poet Jahanshah b. Qara Yusuf Haqiqi Turkmen, compiler Nurellah Poursharif, Nabati, 1395; related records list Baghban-Karimi, Ownuk, and Barqi editions."
+        },
+        {
+          "source": "Mahdroo book record",
+          "url": "https://mahdroo.ir/shop/product/book-205847-u3jsze",
+          "observed": "Records Lotfali Barqi's Turkja Haqiqi Divani, Akhtar, 1400, 156 pages, ISBN 978-600-486-342-1."
+        },
+        {
+          "source": "Turkish/Azerbaijani literature Telegram listing",
+          "url": "https://t.me/s/turkdiledebiyat?before=827",
+          "observed": "Announces the Barqi/Akhtar edition and says the editor aimed at a near-critical Arabic-script edition preserving linguistic features."
+        }
+      ],
+      "interpretation": "These are not manuscript witnesses. They are acquisition targets for preface/source-apparatus mining and may reveal manuscript backchains or confirm derivative use of known editions."
+    },
+    {
+      "lead_id": "telegram_pdf_access_traces",
+      "classification": "edition_access_route",
+      "status": "NOT_USED_AS_EVIDENCE",
+      "summary": "Telegram pages surface PDFs or document posts for Firuz Rafahi/Alamdari, Macit, and Ownuk editions. These were not downloaded into the repository and are treated only as access leads.",
+      "source_evidence": [
+        {
+          "source": "Turkish/Azerbaijani literature Telegram document listing",
+          "url": "https://t.me/s/turkdiledebiyat?before=34",
+          "observed": "Posts list Divan-i Jahanshah Haqiqi PDFs associated with Firuz Rafahi/Alamdari, Muhsin Macit, and Khanegeldi Ownuk."
+        }
+      ],
+      "interpretation": "Potentially useful for source-apparatus inspection, but copyright/access status and exact edition identity require care."
+    },
+    {
+      "lead_id": "alfehrest_fehristvareh_catalogue",
+      "classification": "publisher_catalogue_route",
+      "status": "POTENTIAL_ACQUISITION_ROUTE",
+      "summary": "The Alfehrest Telegram channel exposes a FehrestVareh 1396 catalogue PDF post for Majma-i Zakhair-i Islami. This may contain fuller ordering metadata for For Tomorrow no. 126.",
+      "source_evidence": [
+        {
+          "source": "Alfehrest Telegram post",
+          "url": "https://t.me/alfehrest/560",
+          "observed": "Post advertises/hosts FehrestVareh 96 Majma Zakhair Islami.pdf, a catalogue/booklet introducing 250 new works."
+        }
+      ],
+      "interpretation": "Useful acquisition/ordering lead; not a witness source unless it expands the Patna no. 2 description."
+    },
+    {
+      "lead_id": "majma_subcontinent_catalogue_lane",
+      "classification": "adjacent_subcontinent_catalogue_route",
+      "status": "FOLLOW_UP_AFTER_PATNA_MS2",
+      "summary": "The Majma/Alfehrest channel also announces or advertises other South Asian manuscript-catalogue projects, including Sultan al-Madaris / Jami'a Sultaniya, Lucknow. No Haqiqi hit surfaced there in this pass, but the Patna result shows that this publisher/channel is a distinct discovery lane from major South Asian institutional portals.",
+      "source_evidence": [
+        {
+          "source": "Alfehrest Telegram channel",
+          "url": "https://telegram.me/s/alfehrest?after=312",
+          "observed": "The channel announced a forthcoming catalogue of the Sultan al-Madaris and Jami'a Sultaniya manuscript collections in Lucknow for the Tehran Book Fair."
+        },
+        {
+          "source": "Alfehrest Telegram channel",
+          "url": "https://telegram.me/s/alfehrest?before=1088",
+          "observed": "The 2023 conference program included a launch slot for the Madrasa Sulaimania, Patna catalogue alongside other manuscript-catalogue publications."
+        }
+      ],
+      "interpretation": "Treat this as a secondary catalogue-mining lane: scan Majma/Oriental Company South Asian catalogue indexes for Haqiqi/Jahanshah terms after the Patna no. 2 entry is verified."
+    }
+  ],
+  "negative_or_inconclusive_checks": [
+    {
+      "target": "Bookvision IGT236502 record",
+      "result": "Not independently confirmed in this session. Direct DNS resolution for www.bookvision.ir failed and web search for IGT236502 / Bookvision did not recover the record. Treat the previously reported Bookvision author-identification claim as an external lead until reverified."
+    },
+    {
+      "target": "Google Books Patna catalogue",
+      "result": "The catalogue record is now confirmed as the 364-page 2023 Majma-i Zakhair-i Islami publication by Tayebeh Hajj Baqerian, ISBN 9786223041525 / OCLC 1402253747. It is not full-text searchable or browsable; SearchWithinVolume returned searchable=false and no results for Haqiqi terms. The Books API returned quota/rate limiting."
+    },
+    {
+      "target": "WorldCat / OpenLibrary acquisition metadata",
+      "result": "WorldCat confirms OCLC 1402253747 and the same ISBN/title metadata. OpenLibrary has no ISBN JSON record for 9786223041525. Public catalogue metadata still does not expose entry no. 2, author heading, incipit, explicit, colophon, date, foliation, or images."
+    },
+    {
+      "target": "NAMAMI / Kriti Sampada",
+      "result": "Site-restricted searches for Haqiqi / Diwan-i Haqiqi / Madrasa Sulaimania did not surface a manuscript record. This does not close the live Indian portal because prior work already established access and indexing limitations."
+    },
+    {
+      "target": "MESTAP / DergiPark / YOK-style mecmua tables",
+      "result": "No concrete Hakiki row with shelfmark and first line surfaced in this pass. MESTAP remains methodologically promising for poem-level witnesses but produced no promotable lead here."
+    },
+    {
+      "target": "Wayback archiving for Blogfa linchpin",
+      "result": "Attempted on 2026-05-18. The availability endpoint returned HTTP 429 from this environment, and a save request to web.archive.org/save timed out. Treat the Blogfa source as directly retrieved but not yet externally archived."
+    },
+    {
+      "target": "South Asian printed-catalogue re-scan",
+      "result": "Not completed in this pass. Claude review identified this as a distinct follow-up lane: Khuda Bakhsh/Bankipore printed catalogues, Salar Jung, Rampur Raza, Asiatic Society of Bengal, Aligarh/Maulana Azad, Storey, and Indo-Persian tazkira indexes should be checked per volume/index rather than by broad web search alone."
+    },
+    {
+      "target": "Pir Budaq / Jami / masnavi query family",
+      "result": "No new codex lead surfaced beyond already documented literary-transmission context."
+    }
+  ],
+  "impact_on_existing_artifacts": [
+    {
+      "file": "data/searches/probe_2026-05-11_avenue_south_asia.json",
+      "impact": "Partially qualified. The earlier South Asia pass covered Khuda Bakhsh/Bankipore Patna and major South Asian institutional surfaces, but not the separate Madrasa Sulaimania Patna facsimile/catalogue route. Its zero-yield verdict should be read as a baseline institutional sweep, not as closure of all Patna madrasa collections."
+    },
+    {
+      "file": "data/searches/search_2026-05-02_catalogue_scribe_edition_backchain.json",
+      "impact": "Partially superseded for Demirci 1997 online availability. The old artifact recorded the article as unresolved online; ISAM now hosts it."
+    },
+    {
+      "file": "data/witness_register.json",
+      "impact": "No count change. Demirci 1997 caveats can be updated, but Patna MS no. 2 should remain outside the register until author and textual identity are verified."
+    }
+  ],
+  "recommended_next_actions": [
+    "Treat Patna Madrasa Sulaimania MS no. 2 as the top current release candidate lead.",
+    "Acquire/inspect the 2023 Patna Madrasa Sulaimania catalogue entry no. 2 and For Tomorrow no. 126 before changing witness counts. Use the catalogue identifiers now recovered: ISBN 9786223041525 and OCLC 1402253747.",
+    "Use the concrete acquisition routes now identified: Boroujerdi Library / blib.ir notice, Majma-i Zakhair-i Islami / Alfehrest contact channel, Google Books / WorldCat catalogue metadata, and the older Zakhair Blogfa For Tomorrow facsimile list.",
+    "When contacting Majma-i Zakhair-i Islami / Alfehrest, ask for both the catalogue entry for manuscript no. 2 and the For Tomorrow no. 126 facsimile pages, not just catalogue ordering information.",
+    "Before evaluating the Patna no. 2 entry, use and extend the new Indo-Persian Haqiqi homonym matrix in data/search_keys.json; add named homonyms only when source-confirmed.",
+    "Retry durable archiving of https://zakhair.blogfa.com/post/34 from a less rate-limited network or with a manual browser session; the 2026-05-18 automated attempts did not produce an archive timestamp.",
+    "After Patna no. 2 is resolved, scan Majma/Oriental Company South Asian catalogue indexes, especially the Lucknow Sultan al-Madaris / Jami'a Sultaniya catalogue lane, for Haqiqi/Jahanshah terms.",
+    "Use 127-138 for the complete Demirci 1997 citation in non-verbatim metadata and cite pages 130-131 for the codicological descriptions; preserve 127-134 only when quoting Macit 2000 or another source verbatim.",
+    "Add Poursharif 1395 and Barqi 1400 to the edition-backchain matrix as low-priority source-apparatus targets if their prefaces can be obtained.",
+    "If Patna no. 2 confirms Jahanshah, add a register candidate with explicit evidence-level caveat rather than promoting directly to verified."
+  ],
+  "release_blocker": false,
+  "register_impact": {
+    "new_witnesses_added": 0,
+    "new_candidates_added": 0,
+    "new_high_priority_external_candidates": 1,
+    "witness_count_change": "none"
+  },
+  "audit_metadata": {
+    "record_type": "source_apparatus_probe",
+    "record_date": "2026-05-18",
+    "artifact_status": "current",
+    "source_layers": [
+      "edition_apparatus",
+      "project_classification",
+      "scholarly_description"
+    ],
+    "access_mode": "open_web",
+    "disposition": "deferred_followup",
+    "follow_up_required": true,
+    "follow_up_type": "source_acquisition"
+  }
+}

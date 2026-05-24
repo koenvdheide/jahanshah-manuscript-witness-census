@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "session_label": "Iranian institutional manuscript-catalogue rediscovery probe",
+  "session_id": "iran-institutional-catalogue-rediscovery-2026-05-11",
+  "date": "2026-05-11",
+  "scope": "Definitive-answer follow-on to probe_2026-05-10_iran_caucasus_reachability + search_2026-05-10_marashi_tehran_followup. Three in-scope portals (Marashi-Najafi, Tehran University, Astan-e Quds Razavi) where the prior round documented public-website reachability but failed to reach the underlying institutional manuscript catalogue. Goal of this round: enumerate candidate institutional-catalogue subdomains, look up canonical URLs from scholarly literature and library directories, and reach a definitive verdict per portal on whether any new Cihanşah / Hakîkî witnesses are surfaceable via current web access. Search-execution against any confirmed catalogue is in scope; non-web access paths (Telegram, ILL, partnership mirrors, printed Fihrist) are documented as follow-ons.",
+  "geopolitical_caveat": "Iranian internet infrastructure is currently subject to wartime intermittent shutdowns (2026 conflict). Reachability documented here is point-in-time as of 2026-05-11. The structural barriers documented per portal (printed-only catalogue at Marashi, geo-IP block at Astan-e Quds, catalogue-subdomain unreachable at Tehran U) are not specific to the wartime situation and are expected to persist regardless of network conditions, but specific HTTP status codes for reachable but blocked endpoints may shift over time.",
+  "method_summary": {
+    "tier_1_subdomain_enumeration": "Direct HTTP probe against guessed institutional-catalogue subdomains per portal (e.g. fhq.marashi.ir, manuscript.ut.ac.ir). Fourteen candidate subdomains probed in total across the three portals (5 Marashi-Najafi, 3 Tehran University, 6 Astan-e Quds Razavi); of these, 12 were guessed-subdomain enumeration and 2 were the library.razavi.ir canonical-URL variants identified via the tier_2 scholarly-literature lookup.",
+    "tier_2_canonical_url_lookup": "Web search against scholarly references (Wikipedia, Digital Orientalist 2022 article, library directories) for the canonical institutional-catalogue URLs. Source-confirmed URLs were then re-probed with Playwright if direct HTTP returned a JS-redirect shell.",
+    "tier_3_partnership_mirror_investigation": "Investigation of the May 2025 Astan-e Quds Razavi / Alisher Navoi Library (Tashkent) cooperation agreement to determine whether the 50,000-manuscript Razavi mirror is web-accessible at nodir.natlib.uz or restricted to on-premises terminals.",
+    "tier_4_printed_catalogue_documentation": "Documentation of the Marashi-Najafi printed Fihrist (30 of an anticipated 60 volumes published) as the only definitive route for a Marashi Cihanşah verdict, with WorldCat holdings noted (WorldCat itself returned 403 to direct HTTP probe and was not pursued further this round)."
+  },
+  "marashi_najafi": {
+    "candidate_subdomain_probes": [
+      {
+        "url": "https://fhq.marashi.ir",
+        "outcome": "ECONNREFUSED",
+        "verdict": "non-existent or DNS-blocked"
+      },
+      {
+        "url": "https://marashi.ir",
+        "outcome": "ECONNREFUSED",
+        "verdict": "non-existent or DNS-blocked"
+      },
+      {
+        "url": "https://library.marashi.ir",
+        "outcome": "ECONNREFUSED",
+        "verdict": "non-existent or DNS-blocked"
+      },
+      {
+        "url": "https://catalog.marashi.ir",
+        "outcome": "ECONNREFUSED",
+        "verdict": "non-existent or DNS-blocked"
+      },
+      {
+        "url": "https://en.marashilibrary.com",
+        "outcome": "ECONNREFUSED",
+        "verdict": "non-existent or DNS-blocked"
+      }
+    ],
+    "canonical_url_lookup": {
+      "wikipedia_en_marashi_najafi_library": "Lists only an archived link from 2002 (web.archive.org/web/20020121202241/http://www.marashilibrary.com/english/index.html), which is the predecessor of the current marashilibrary.com WordPress site (already documented in the prior round as being a Google CSE for blog/articles only). No institutional-catalogue URL given.",
+      "wikipedia_finding": "The Marashi Najafi Library Computer Center has 'published thirty volumes of the catalog so far, and anticipating 60 volumes in total'; the institutional manuscript catalogue (Fihrist-i Nuskhah'hā-yi Khattī-i Kitabkhānah-yi Marashi) is published as PRINTED VOLUMES, not as an online portal.",
+      "digital_orientalist_2022_finding": "Article on digital humanities and manuscript archives in Iran explicitly notes 'no data on what portion of [Marashi Najafi Library] manuscripts are digitised'; confirming there is no public online manuscript catalogue."
+    },
+    "printed_fihrist_evidence": {
+      "title": "Fihrist-i Nuskhah'hā-yi Khattī-i Kitābkhānah-yi ʿUmūmī-i Ḥaḍrat Āyat Allāh al-ʿUẓmā Najafī Marʿashī",
+      "publisher": "Marashi-Najafi Library Computer Center, Qom",
+      "volumes_published_status": "30 of an anticipated 60 volumes (per Wikipedia article)",
+      "western_holdings_confirmed": "UW-Madison (search.library.wisc.edu/catalog/999783388002121; at least one volume held); WorldCat search blocked by 403 to direct HTTP, not pursued further this round; Princeton, Harvard, UPenn, UCLA, Columbia likely also hold subsets; to be confirmed in a follow-on session via WorldCat through a different route."
+    },
+    "definitive_verdict": "EXHAUSTED via web. The Marashi-Najafi institutional manuscript catalogue is published only as printed Fihrist volumes; no online manuscript catalogue exists. The marashilibrary.com WordPress site (Google CSE for blog/articles) was already exhausted in the prior 8-query round (search_2026-05-10_marashi_tehran_followup.json) with zero new Cihanşah witnesses surfaced. Any further definitive Marashi verdict requires consulting the printed Fihrist volumes held in Western university libraries.",
+    "non_web_access_paths": [
+      "Consult the printed Fihrist volumes at UW-Madison / Princeton / Harvard / UCLA / Columbia / UPenn library Special Collections reading rooms (volume coverage to be confirmed via WorldCat in a future session)",
+      "Email the Marashi Computer Center via the contact info on marashilibrary.com to request a Cihanşah / Hakîkî / Yusuf Hakîkî search across their internal database (response time and language barrier unknown)",
+      "ILL request through a Western university partnered with Marashi-Najafi"
+    ]
+  },
+  "tehran_university": {
+    "candidate_subdomain_probes": [
+      {
+        "url": "https://utdlib.ut.ac.ir",
+        "outcome": "ECONNREFUSED via direct HTTP (continues to time out from prior rounds)",
+        "verdict": "manuscript catalogue server unreachable from outside Iran"
+      },
+      {
+        "url": "https://digital.ut.ac.ir",
+        "outcome": "JS-redirect shell that resolves to https://digital.ut.ac.ir/fa under Playwright; destination page is the Tehran University 'Vice-Presidency for Digital Technologies' (معاونت فناوری‌های دیجیتالی); i.e. the IT/CIO department, NOT the digital library",
+        "verdict": "wrong subdomain; IT department, not library"
+      },
+      {
+        "url": "https://manuscript.ut.ac.ir",
+        "outcome": "ECONNREFUSED",
+        "verdict": "non-existent or DNS-blocked"
+      }
+    ],
+    "canonical_url_lookup": {
+      "wikipedia_en_central_library_university_tehran": "States that 'Digital library includes 12000 manuscripts for free download' but provides NO URL or subdomain for accessing the digital manuscript catalogue. The English Wikipedia article does not list utdlib.ut.ac.ir or any alternate.",
+      "digital_orientalist_2022_finding": "Notes 'all of the manuscripts in the Majles Library, Tehran University Central Library, Malek National Library...are digitised' but provides no URLs or access details. The article is the most authoritative published guide for Iranian manuscript portal access and confirms the gap."
+    },
+    "tashkent_mirror_relevance": "Not applicable; the Alisher Navoi partnership is specifically for Astan-e Quds Razavi manuscripts, not Tehran University.",
+    "definitive_verdict": "EXHAUSTED via web. The actual manuscript catalogue (utdlib.ut.ac.ir) continues to time out across all routes including the prior probe and Playwright. The other Tehran U subdomains (library.ut.ac.ir = Google CSE for site content; digital.ut.ac.ir = IT department; manuscript.ut.ac.ir = non-existent) do not provide manuscript-catalogue access. No new Cihanşah witnesses surfaceable via Tehran U web access from outside Iran.",
+    "non_web_access_paths": [
+      "Telegram contact via @Manuscripts_lib (per Digital Orientalist 2023); documented as the official channel for ordering scans of MS Tehran U 8198 codicology and any future Cihanşah witnesses found via on-premises catalogue search",
+      "ILL request through a Western university partnered with Tehran University (Princeton, Harvard, etc.)",
+      "On-site visit to the Tehran University Central Library reading room (low priority given current geopolitical environment)"
+    ]
+  },
+  "astan_e_quds_razavi": {
+    "candidate_subdomain_probes": [
+      {
+        "url": "https://aqr.ir",
+        "outcome": "HTTP 403 Forbidden via direct HTTP AND via Playwright (geo-IP block, server-side, not UA-based)",
+        "verdict": "geo-IP blocked"
+      },
+      {
+        "url": "https://library.aqr.ir",
+        "outcome": "ECONNREFUSED",
+        "verdict": "non-existent or DNS-blocked"
+      },
+      {
+        "url": "https://digital.aqr.ir",
+        "outcome": "HTTP 504 Gateway Timeout",
+        "verdict": "server alive but upstream timeout, likely geo-IP-related"
+      },
+      {
+        "url": "https://digital.aqlibrary.ir",
+        "outcome": "ECONNREFUSED (the 2026-05-02 probe documented this URL as the original Astan-e Quds digital collection endpoint at /index.aspx?pid=16&CollectionID=61; the subdomain has gone dark since)",
+        "verdict": "domain abandoned"
+      },
+      {
+        "url": "https://library.razavi.ir/",
+        "outcome": "JS-redirect shell that resolves to nginx 403 Forbidden under Playwright (geo-IP blocked)",
+        "verdict": "geo-IP blocked at the new canonical domain"
+      },
+      {
+        "url": "https://library.razavi.ir/en",
+        "outcome": "Same JS-redirect shell, same nginx 403 destination",
+        "verdict": "geo-IP blocked"
+      }
+    ],
+    "canonical_url_lookup": {
+      "websearch_finding": "library.razavi.ir is the current canonical URL for the Astan-e Quds Razavi Central Library, having migrated from aqlibrary.org (which is parked / hijacked, redirecting to yoyanetaq.sbs as documented in the prior round). The migration is recent enough that scholarly references still point to the aqlibrary.org domain.",
+      "library_size_finding": "The library catalogue holds approximately 3 million digital information sources including manuscripts, lithographic prints, movable type prints, historic documents, image sources, maps, and treatises; substantial enough that a Cihanşah search would be expected to yield results IF the catalogue were reachable."
+    },
+    "tashkent_mirror_investigation": {
+      "partnership_basis": "Joint cooperation agreement between the Organization of Libraries, Museums, and Documents Center of Astan Quds Razavi and the National Library (Alisher Navoi Library) of Uzbekistan was concluded on 2025-05-22.",
+      "manuscript_count_mirrored": "Over 50,000 digitized manuscripts available in Razavi Treasury made accessible to Tashkent Library members.",
+      "additional_resources": "A digital study station for Persian and Arabic printed books with capability to request acquisition of over 500,000 titles also operating at Tashkent Library.",
+      "access_modality": "ON-PREMISES at the Alisher Navoi Library in Tashkent; accessible to library members (with implication of Tashkent on-site presence). Establishment of online connection between the AQR Central Library in Mashhad and the Tashkent terminal occurred during the Iranian technical team's visit; the public-facing Uzbek catalogue (nodir.natlib.uz) was probed as part of this investigation.",
+      "nodir_natlib_uz_probe": {
+        "url": "https://nodir.natlib.uz/en-US",
+        "is_institutional_catalogue": true,
+        "interface_languages": [
+          "English",
+          "Russian",
+          "Cyrillic Uzbek",
+          "Latin Uzbek"
+        ],
+        "search_endpoint": "/en-US/Search/Query?RecordTemplateId=",
+        "record_endpoint": "/Record/Details/[ID]",
+        "publication_types_indexed": [
+          "Books",
+          "Manuscripts",
+          "Albums",
+          "Periodicals"
+        ],
+        "razavi_mirror_exposure_in_public_catalogue": "NO; the public landing for nodir.natlib.uz makes no reference to Razavi, Mashhad, Iran, or the May 2025 partnership. The Razavi mirror appears to be a separate on-premises resource not integrated into the public web catalogue, OR the integration may not yet be complete (partnership is recent, May 2025).",
+        "login_status": "Login required for full content; only ~15% of full-text resources viewable without login. Full access requires 'official letter to library management'.",
+        "verdict": "Tashkent public catalogue does NOT currently expose the Razavi mirror to outside-of-Tashkent web users."
+      }
+    },
+    "definitive_verdict": "EXHAUSTED via web. All Astan-e Quds Razavi domains (aqlibrary.org parked, aqr.ir 403, library.razavi.ir 403, digital.aqr.ir 504, digital.aqlibrary.ir ECONNREFUSED) are geo-IP blocked from outside Iran. The Tashkent Alisher Navoi mirror partnership exists but is on-premises only; not accessible via the nodir.natlib.uz public catalogue. No new Cihanşah witnesses surfaceable via Astan-e Quds web access from outside Iran. The 50,000-manuscript Razavi Treasury would require either an on-premises visit (Tashkent or Mashhad) or an ILL request to retrieve any Cihanşah-attributed witnesses.",
+    "non_web_access_paths": [
+      "On-site visit to the Alisher Navoi Library in Tashkent; leverage the May 2025 partnership for on-premises access to the 50,000-manuscript Razavi Treasury mirror",
+      "On-site visit to the Astan Quds Razavi Central Library reading room in Mashhad (low priority given current geopolitical environment)",
+      "ILL request through a Western university partnered with Astan-e Quds Razavi",
+      "Email request to the AQR Central Library in Mashhad; response time and language barrier unknown",
+      "Future re-probe of nodir.natlib.uz once the May 2025 partnership integration may have been extended to public web users"
+    ]
+  },
+  "summary": {
+    "portals_probed_this_session": 3,
+    "candidate_subdomains_probed_total": 14,
+    "canonical_url_lookups_via_scholarly_literature": 4,
+    "playwright_followups": 3,
+    "partnership_mirror_investigations": 1,
+    "new_witnesses_surfaced": 0,
+    "new_codicology_for_existing_witnesses": 0,
+    "definitive_verdicts": {
+      "marashi_najafi": "EXHAUSTED via web; institutional catalogue is printed-only (30 of 60 Fihrist volumes); future verdict requires Western library Fihrist consultation",
+      "tehran_university": "EXHAUSTED via web; utdlib.ut.ac.ir continues to time out, no alternate manuscript catalogue subdomain exists; future verdict requires Telegram @Manuscripts_lib or ILL",
+      "astan_e_quds_razavi": "EXHAUSTED via web; all domains geo-IP blocked from outside Iran; Tashkent Alisher Navoi partnership mirror is on-premises only; future verdict requires Tashkent visit, Mashhad visit, or ILL"
+    },
+    "structural_findings": [
+      "Three different access barriers across three portals: Marashi = institutional catalogue is printed-only and never digitized; Tehran U = catalogue subdomain hard-blocked across all routes despite parent landing being reachable; Astan-e Quds = full geo-IP block across all five subdomain variants probed.",
+      "The May 2025 Astan-e Quds Razavi / Alisher Navoi (Tashkent) partnership is a meaningful access workaround for any researcher able to visit Tashkent in person; 50,000 Razavi manuscripts available on-premises; but the partnership is NOT exposed via the public web catalogue at nodir.natlib.uz.",
+      "Subdomain enumeration by guessing (fhq, library, catalog, manuscript, digital) is not productive for these portals: 11 of 12 guessed subdomains (i.e., the 14 total probed minus the 2 library.razavi.ir canonical-URL variants identified via scholarly literature in tier_2) returned ECONNREFUSED or 403/504. The actual canonical URLs (library.razavi.ir, utdlib.ut.ac.ir, marashilibrary.com) are knowable only from scholarly literature, not from subdomain pattern-matching.",
+      "Direct HTTP fetch and Playwright produce identical results for all probed Iranian portal endpoints in this round; the blocks are server-side (geo-IP, ECONNREFUSED, timeout) rather than client-side (UA-based, JS-execution-required, access challenge). One exception: the digital.ut.ac.ir JS-redirect required Playwright to follow but the destination was the wrong portal anyway."
+    ],
+    "register_changes": "none; witness_register.json is unchanged by this session; the 14-entry roster persists",
+    "follow_on_targets_for_future_session": [
+      "WorldCat lookup for the Marashi printed Fihrist volume holdings at Western university libraries (probe-tool selection: WorldCat returned 403 to direct HTTP this round; Playwright with a real browser session may succeed)",
+      "If a Western library holding a Fihrist volume covering the Hurufi-cluster shelfmark range is identified, request a digital copy of the Cihanşah / Yusuf Hakîkî index entries via ILL or in-person consultation",
+      "Telegram contact via @Manuscripts_lib for Tehran U MS 8198 codicology data and for any further Cihanşah-attributed witnesses in the Tehran U digital library",
+      "Out-of-scope for this session but flagged for future scope scope expansion: Astan-e Quds Razavi access via Tashkent on-premises visit (high yield given 50,000 manuscript count); relevant to future scope chancery / inscriptions / coinage genres as well as the current poetry register",
+      "Future re-probe of nodir.natlib.uz quarterly or semi-annually to monitor whether the May 2025 partnership extends Razavi mirror access to public web users",
+      "Future re-probe of utdlib.ut.ac.ir quarterly to monitor whether Tehran U manuscript catalogue server returns from extended downtime (likely tied to wartime infrastructure shutdowns)"
+    ]
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-11",
+    "artifact_status": "current",
+    "source_layers": [
+      "catalogue_record",
+      "institutional_access_status",
+      "project_classification"
+    ],
+    "access_mode": "blocked_or_down",
+    "disposition": "access_gap_logged",
+    "follow_up_required": true,
+    "follow_up_type": "repeat_access_check"
+  }
+}

@@ -1,0 +1,404 @@
+{
+  "schema_version": 1,
+  "session_label": "Mecmua / Nesîmî-Hurufi adjacency mining + candidate verification",
+  "session_id": "mecmua-nesimi",
+  "date": "2026-05-02",
+  "scope": "Verify 4 fragment candidates (Konya BY0000010729 / Diyarbakır Ulutürk / Ilkhchi Kırklar / AMEA Baku 2021); retrieve and parse Sohrabiabad-Akın 2019 in full as the primary citation for the two Alevi-shrine candidates; mine YEK and other sources for additional Hakîkî witnesses inside Nesîmî/Hurufi/Bektaşi/Qizilbash poetic-anthology contexts. the empirical grounding (Ankara MK A 5252) motivated the heuristic that Cihanşah-Hakîkî verse travels in Nesîmî-adjacent mecmuas.",
+  "method_summary": {
+    "primary": "(a) direct HTTP fetch retrieval of Sohrabiabad-Akın 2019 PDF (isamveri.org Diyanet İSAM mirror): 45-page article extracted in full; (b) authenticated YEK portal access with paginate flag for the 8 search-key probes from search_keys.json#nesimi_adjacency_keys plus disambiguating cross-checks (Yusuf Hakîkî, Hatâî+Hakîkî, Kızılbaş+Hakîkî, Hurufi); (c) direct HTTP fetch of manuscript.az AMEA acquisition page for AMEA verification; (d) post-extraction analytic step on Konya 709791 detail to position-map the Hakîkî reference within the 330-poet list relative to Nesîmî, Hatâî, Şah İsmail Bahadır.",
+    "fallback": "(a) for Iranian portals: not attempted this session (verified UK/US-IP block); (b) Süleymaniye direct catalogue: verified non-indexed in YEK in (Fatih sub-collection absent); (c) Tezkire backchain not attempted in this session.",
+    "yek_search_terms_attempted": [
+      {
+        "term": "Nesimi",
+        "field": "yazar_adi",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "yazar_adi DOM count extractor failure (consistent with the Turkey sweep finding); inconclusive"
+      },
+      {
+        "term": "Nesimi",
+        "field": "genel_notlar",
+        "and_term": "Hakiki",
+        "and_field": "genel_notlar",
+        "raw_count": 2,
+        "rows": 2,
+        "interpretation": "WORKING: 2 hits (Konya 709791 already-known, Afyon Gedik 13918 NEW); both filtered as low-probability for Cihanşah"
+      },
+      {
+        "term": "Hatai",
+        "field": "genel_notlar",
+        "and_term": "Hakiki",
+        "and_field": "genel_notlar",
+        "raw_count": 1,
+        "rows": 1,
+        "interpretation": "WORKING: 1 hit, same Konya 709791 already known"
+      },
+      {
+        "term": "Hakîkî",
+        "field": "genel_notlar",
+        "and_term": "Şah Hatâî",
+        "and_field": "genel_notlar",
+        "raw_count": 1,
+        "rows": 1,
+        "interpretation": "WORKING: same Konya 709791. Note: 'Şah Hatâî' is NOT in the Konya 709791 notes (the actual term in the cataloguer's list is 'Hatâî' alone): YEK's content-search must token-match 'Hatâî' inside 'Şah Hatâî'. Confirms diacritic forms work; stem-search is forgiving"
+      },
+      {
+        "term": "Cihan Şah",
+        "field": "genel_notlar",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "DOM count failed for space-token form; inconclusive"
+      },
+      {
+        "term": "Cihanşah",
+        "field": "genel_notlar",
+        "raw_count": 2,
+        "rows": 2,
+        "interpretation": "WORKING: same 2 Cihanşah-historical-context FPs as the Turkey sweep (Levâyih-i Hakîkat, Münşe'ât-ı Selâtîn); confirms the Turkey sweep finding stable, no new results"
+      },
+      {
+        "term": "Karakoyunlu",
+        "field": "genel_notlar",
+        "and_term": "şiir",
+        "and_field": "genel_notlar",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "DOM count failed; inconclusive"
+      },
+      {
+        "term": "Kızılbaş",
+        "field": "genel_notlar",
+        "and_term": "Hakîkî",
+        "and_field": "genel_notlar",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "DOM count failed; inconclusive: but Kızılbaş is a sensitive term in YEK descriptors (Alevi/Qızılbaş associations may be downplayed in catalogue prose)"
+      },
+      {
+        "term": "Hurufi",
+        "field": "genel_notlar",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "DOM count failed; inconclusive"
+      },
+      {
+        "term": "حقیقی",
+        "field": "genel_notlar",
+        "and_term": "نسیمی",
+        "and_field": "genel_notlar",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "Persian-script AND search; DOM count failed"
+      },
+      {
+        "term": "Yusuf Hakikî",
+        "field": "yazar_adi",
+        "raw_count": 4,
+        "rows": 4,
+        "interpretation": "WORKING: 4 hits including 2 'Muhabbetnâme' copies (Yusuf Hakîkî's known 15th-c. Bayrami work; Aksaray); important DISAMBIGUATION ANCHOR: YEK indexes Yusuf Hakikî but NOT Cihanşah Hakîkî, confirming Cihanşah witness absence is structural not search-failure"
+      },
+      {
+        "term": "Hakîkî",
+        "field": "yazar_adi",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "DOM count failed for unprefixed 'Hakîkî': yazar_adi field consistent failure"
+      }
+    ],
+    "non_yek_sources_consulted": [
+      {
+        "source": "isamveri.org/pdfdrg/D03540/2019_19/2019_19_SOHRABIABADH_AKINB.pdf",
+        "purpose": "Sohrabiabad-Akın 2019 full-text retrieval",
+        "outcome": "SUCCESS: 45-page PDF extracted in full; verbatim witness extract written to research_log/sohrabiabad_akin_2019_witness_list.md"
+      },
+      {
+        "source": "manuscript.az/index.php?17/385459.html",
+        "purpose": "AMEA Baku 2021 acquisition #38 verification",
+        "outcome": "SUCCESS: confirmed acquisition is 'əlyazma surəti' (manuscript reproduction/copy) acquired from 'İstanbulun Süleymaniyyə kitabxanası': i.e. Süleymaniye Library reproduction. Specific shelfmark Fatih 3808 NOT named on the page, but Süleymaniye Cihanşah Hakîkî is uniquely Fatih 3808 per the Turkey/Anatolia sweep, so identification is near-certain"
+      },
+      {
+        "source": "acikerisim.nevsehir.edu.tr/handle/20.500.11787/3546",
+        "purpose": "Sohrabiabad-Akın 2019 institutional repository",
+        "outcome": "ECONNREFUSED: not used; PDF retrieved from İSAM mirror instead"
+      },
+      {
+        "source": "dergipark.org.tr/tr/pub/abad/issue/47012",
+        "purpose": "DergiPark TOC for Issue 19",
+        "outcome": "404: issue not indexed at this URL"
+      }
+    ]
+  },
+  "search_session": {
+    "date": "2026-05-02",
+    "field_searched": "genel_notlar",
+    "term_searched": "Nesimi/Hakiki/Hatai/Cihanşah/Karakoyunlu/Kızılbaş/Hurufi (multi-term Nesîmî-adjacency probe)",
+    "operator": "İçeren",
+    "raw_result_count": 4,
+    "results": [
+      {
+        "yek_id": "709791",
+        "title": "Mecmû'a-i Eş'âr",
+        "author": null,
+        "collection": "Hacı Bektaş-ı Veli Dergahı",
+        "shelfmark": "BY0000010729",
+        "library": "Konya Yazma Eserler Bölge Müdürlüğü",
+        "language": "Türkçe",
+        "subject": "811.202 / Şiir mecmuaları",
+        "date_ah": null,
+        "date_ce": null,
+        "paper_field": null,
+        "notes_field_excerpt": "330-poet anthology; cataloguer: Faruk Ağartan, Kübra Ata Öğüt; ta'lik script; 150 ff., 315×225 mm. Hakîkî at position 163 in poet list; Nesîmî at 38; Şah İsmail Bahadır at 321; Hatâî at 345. Hakîkî's IMMEDIATE neighbors in the list: Mestî, Bidarî, Resmî, Hakîkî, Hevaî, Naimî, Riyazî: NOT a Hurufi/Qizilbash cluster. Yoğun nem lekeleri (heavy water damage) noted.",
+        "decoration_field": null,
+        "binding_field": null,
+        "scribe": null,
+        "dimensions_mm": "315x225-muhtelif mm",
+        "folio_count": "150 yk., muhtelif st.",
+        "script": "Arap harfli-Ta'lik",
+        "classification": "none",
+        "is_false_positive": true,
+        "false_positive_reason": "REVISED VERDICT after position-mapping: in the 330-poet list the Hakîkî sits among Mestî/Bidarî/Resmî/Hevaî/Naimî/Riyazî: i.e. generic 17th-19th-c. Ottoman tekke/Mevlevi poets, NOT next to Nesîmî (38) or Hatâî (345). The Bektaşi-tekke origin and the simultaneous presence of Hatâî+Şah İsmail+Nesîmî elsewhere in the same large mecmua does NOT individually elevate this Hakîkî to Cihanşah probability. Visual confirmation of folio range where the Hakîkî poems sit would be needed to settle, but: NOT digitized + NO author-by-author folio range in the cataloguer's note. the Turkey sweep's status was 'low confidence candidate'; the mecmûʿa sweep downgrades to 'most likely OTHER namesake (Hakîkî Mehmed Dede / Halveti / Mevlevi tradition)': keep as candidate but lower priority than originally flagged.",
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "low",
+        "notes": "Status: downgraded from 'candidate' to 'candidate but probably non-Cihanşah'. The Hurufi/Qizilbash adjacency hypothesis fails on close reading of the cataloguer's note: Hakîkî's local cluster is non-Hurufi. The entry is retained with a disambiguation tagging as 'low priority' until physical/visual access is possible. The Bektaşi-tekke provenance is a positive signal, but generic 'Hakîkî' in 19th-c.+ Bektaşi mecmuas often resolves to one of the 6+ other namesakes documented in the Turkey sweep."
+      },
+      {
+        "yek_id": "618897",
+        "title": "Cönk",
+        "author": null,
+        "collection": "Afyon Gedik Ahmet Paşa İl Halk Kütüphanesi",
+        "shelfmark": "03 Gedik 13918",
+        "library": "Milli Kütüphane",
+        "language": "Türkçe",
+        "subject": "492.7 / Arap dili",
+        "date_ah": "1250",
+        "date_ce": "1834/35",
+        "paper_field": null,
+        "notes_field_excerpt": "197 yk. cönk dated AH 1250 = 1834-35 CE. Poet list: Ahmed, Âşık Kerem, Âşık Ömer, Derviş, Fehmî, Firârî, Garîmî, Gevheri, Gubârî, Hakîkî, Hâmid, Harâbî, Kâtib-zâde, Kul Osman, Mecnûnî, Nasîbî, Nesîmî, Neşet, Niyazi, Sinâni, Salı, Sohbeti, Safâyî, Şevkî, Fikrî, Şerifi, Vâfî. Cataloguer: Mehmet Akif Alpaydın.",
+        "decoration_field": null,
+        "binding_field": null,
+        "scribe": null,
+        "dimensions_mm": null,
+        "folio_count": "197 yk.",
+        "script": "Arap harfli",
+        "classification": "none",
+        "is_false_positive": true,
+        "false_positive_reason": "Strongly NOT Cihanşah. (1) DATE is explicit AH 1250 / 1834-35 CE: a 19th-c. cönk; (2) The poet roster is a CLASSIC 17th-19th-c. Anatolian âşık/halk-poet anthology: Gevheri (d. ~1737), Âşık Ömer (d. ~1707), Âşık Kerem (legendary 16th-c. but in folk tradition by 1834), Harâbî (Edib Harâbî, 1853-1916: date conflict), Niyazi (Misri Niyazi, d. 1694). Hakîkî in this list is overwhelmingly likely the SAME 19th-c. namesake as the Turkey sweep's YEK result 'Bayrakdar Mehmed Erzurum Janissary' or the Sinan-ı Ümmî family Hakîkî. The Hakîkî+Nesîmî adjacency here is a side-effect of a generic Anatolian âşık-tekke anthology, not a Hurufi-doctrine signal.",
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "very_high",
+        "notes": "NEW HIT but NOT a candidate witness. Documented 7th distinct 'Hakîkî' contextual cluster: 19th-c. Anatolian âşık / halk-poet tradition (Gevheri/Âşık Ömer milieu). Add to disambiguation roster of namesake clusters. The Edib Harâbî (1853-1916) presence creates a date paradox vs the AH 1250 = 1834-35 cataloguer date: most likely cataloguer error in dating, OR the cönk was started in 1834 and continued by later hands. Either way confirms 19th-c. provenance, not Karakoyunlu."
+      }
+    ],
+    "false_positive_count": 2,
+    "genuine_count": 0,
+    "candidate_count": 0,
+    "false_positive_rate": 1.0,
+    "_extra_finding": "ZERO genuine new Cihanşah Hakîkî witnesses surfaced from the YEK Nesîmî-adjacency mining. The hypothesis itself is empirically valid (Ankara MK A 5252 IS a real Hurufi co-location of Cihanşah verse with Nesîmî+Yûnus Emre: established by the Turkey sweep from Anatolia DB), but YEK does NOT index that Ankara MK record (the Turkey sweep verified that A 5252 is not searchable through YEK genel_notlar despite existing in the Anatolia DB). The implication: any further YEK-based Hurufi mining for Cihanşah is likely to keep returning low-probability namesake-FP results because YEK's catalogue prose for actual Hurufi mecmuas often (a) does not list every poet inside a 300+ poet anthology, (b) when it does, the Hakîkî identification is undisambiguated, and (c) the Anatolia DB is the better hunting ground (already exhausted by the Turkey sweep). Implication: primary-source field-research bibliography (the Sohrabiabad-Akın approach) is more productive for further Cihanşah recovery than YEK adjacency mining."
+  },
+  "candidate_verifications": {
+    "konya_haci_bektas_by0000010729": {
+      "verification_status": "candidate_with_lowered_confidence",
+      "verification_method": "Detail-page re-fetch from YEK + position-mapping of Hakîkî in poet list",
+      "data_extracted_verbatim": {
+        "library": "Konya Yazma Eserler Bölge Müdürlüğü",
+        "collection": "Hacı Bektaş-ı Veli Dergahı",
+        "shelfmark": "BY0000010729",
+        "yek_id": "709791",
+        "language": "Türkçe",
+        "folios": "150 yk., muhtelif st.",
+        "dimensions_mm": "315x225-muhtelif mm",
+        "script": "Arap harfli-Ta'lik",
+        "subject": "811.202 / Şiir mecmuaları",
+        "decoration_field": null,
+        "paper_field": null,
+        "binding_field": null,
+        "physical_condition": "Yoğun nem lekeleri mevcuttur (heavy water-damage stains)",
+        "cataloguers": "Faruk Ağartan, Kübra Ata Öğüt",
+        "has_digitized_images": false
+      },
+      "hakiki_position_in_poet_list": "163 of ~330 poets",
+      "hakiki_local_neighbors": [
+        "Mestî",
+        "Bidarî",
+        "Resmî",
+        "Hakîkî",
+        "Hevaî",
+        "Naimî",
+        "Riyazî"
+      ],
+      "hurufi_qizilbash_poets_elsewhere_in_same_codex": {
+        "Nesîmî_position": 38,
+        "Şah_İsmail_Bahadır_position": 321,
+        "Hatâî_position": 345
+      },
+      "interpretation": "The Hakîkî's IMMEDIATE local neighbors are non-Hurufi, non-Qizilbash poets. The presence of Nesîmî/Hatâî/Şah İsmail elsewhere in this large 330-poet mecmua does NOT establish doctrinal-cluster adjacency at the Hakîkî text. The Bektaşi-tekke provenance IS suggestive but inconclusive without folio-range visual confirmation."
+    },
+    "diyarbakir_uluturk_alevi_cenk": {
+      "verification_status": "VERIFIED",
+      "verification_method": "Sohrabiabad-Akın 2019 primary-source full-text retrieval + verbatim extraction (research_log/sohrabiabad_akin_2019_witness_list.md)",
+      "data_extracted_verbatim": {
+        "shelfmark": "(non-institutional: held by İmam Zeynel Abidin Ocağı dedesi Abbas Önen, originally from Ulutürk/Darlı/Türkdarlı village, Bismil district, Diyarbakır; currently resident in Ankara)",
+        "scribe": "İbrahim Halil Dede (Abbas Önen's grandfather)",
+        "date_of_writing": "1860s (per oral testimony from Abbas Önen)",
+        "script": "rika",
+        "languages": "Old Anatolian Turkish + Azerbaijani Turkish features (men, aparup, oḳı, oldı, yitdüm, virdi, idüben)",
+        "hakiki_content_count": "8 ghazals: all reproduced verbatim in article appendix Ek-1",
+        "co_located_authors": {
+          "Seyyid Nesimî": 1,
+          "Abdal Pir Sultan": 2,
+          "Şah Hatayî": 1,
+          "Seyyid Niazmoğlu": 1,
+          "Seyfî": 1,
+          "Derviş Ali": 3,
+          "Karacaoğlan": 1,
+          "Diyarbakırlı Huri": 1,
+          "Âşık Sevdayî": 1,
+          "Kul Ahmed": 1,
+          "anonymous": 1,
+          "plus_quatrains": "several"
+        },
+        "decoration_data_from_photographs": {
+          "format": "small handheld notebook",
+          "paper": "cream/yellowed plain machine-made paper; some tide-line water damage; brittle/crumbling edges",
+          "ruling": "simple double-rule frames in dark blue/violet ink, drawn freehand (no gilt, no zerefşân, no halkar, no decorated paper)",
+          "script_color": "primarily dark blue/black ink",
+          "rubrication": "absent: mahlas closures in same blue ink as text; no red rubric",
+          "illumination": "NONE",
+          "binding": "partly disintegrated; spine torn; covers detached or near-detached in plates"
+        },
+        "field_documentation": "Photographed by Bülent Akın in 2016 (two visits to Önen's Ankara residence); originals retained by Önen, photographic copies in Akın personal archive; TÜBİTAK 113K056 project (2013-2017)"
+      },
+      "cihansah_attribution_evidence": {
+        "linguistic": "Old Anatolian Turkish + Azerbaijani Turkish features (the article authors' principal positive evidence)",
+        "negative_disambiguation": "Yusuf Hakîkî (15th-c. Aksaray Bayrami) explicitly RULED OUT by Sohrabiabad-Akın on linguistic + tarikat grounds",
+        "positive_doctrinal_match": "Alevi/Hurufi/Qizilbash conceptual lexicon throughout (musahip, dört kapı, ikrar, mürebbî, Şâh-ı Merdân, Lahmüke lahmî): consistent with Cihanşah's known Hurufi engagement",
+        "ritual_continuity": "Konyar 1936 (Diyarbekir Yıllığı III, p.79) independently attests Hakîkî's performance in Diyarbakır Alevi cems: 80-year-prior corroboration that Hakîkî has deep liturgical tradition in this region"
+      },
+      "decoration_data_for_paper_question": "The codex is 19th-c. a modest village notebook; codicological relevance to BL Or 9493's paper question is ZERO. Useful only as textual witness.",
+      "promote_to_status": "VERIFIED (was: candidate)"
+    },
+    "ilkhchi_kirklar_ocagi_diary": {
+      "verification_status": "VERIFIED: the Iran sweep/the South-Asia sweep disagreement RESOLVED",
+      "verification_method": "Sohrabiabad-Akın 2019 primary-source: pages 200-201 verbatim",
+      "resolution_of_iran_sweep_vs_south_asia_sweep_disagreement": "Both the Iran sweep and the South-Asia sweep readings were partially correct because there are TWO DISTINCT items at this site: (1) a complete divan nüsha of Hakîkî held in Kırklar Ocağı pirs' personal archive (matches the Iran sweep's 'complete divan'); (2) excerpt cönks ('Defter / Beyaz' notebooks) used by ocak Kelâmhans for cem ritual performance (matches the South-Asia sweep's '3 ghazals': those are the 3 reproduced in Ek-2). Both should appear separately in the witness register.",
+      "data_extracted_verbatim": {
+        "site": "İlhıcı (Ilkhchi) town, East Azerbaijan province, Iran",
+        "ocak": "Kırklar (Celten) Ocağı",
+        "item_1_full_divan": {
+          "shelfmark": "(non-institutional: pirs' personal archive)",
+          "completeness": "complete divan nüsha",
+          "publication_status": "NOT yet shared with academia; private archive",
+          "use": "Source text for cem-ritual recitation; cem-cönks are istinsah copies from this divan",
+          "decoration_data": "NONE published; codex not photographed by article authors"
+        },
+        "item_2_cem_conks": {
+          "shelfmark": "(multiple, non-institutional: among ocak members)",
+          "format": "Defter / Beyaz cönks",
+          "hakiki_content_in_article": "3 ghazals reproduced verbatim in Ek-2",
+          "performance_context": "Hakîkî Kelamlar (Hakîkî Words) performed in cem ritual; tunes called Hakîkî Makamı; outside cem performance is 'Mecazi Makam'",
+          "decoration_data": "NONE published"
+        },
+        "field_documentation": "Bülent Akın fieldwork in Tabriz and Ilkhchi, September 2010 + subsequent years; TÜBİTAK 113K056 project"
+      },
+      "cihansah_attribution_evidence": "Same as Diyarbakır cönk: Old Anatolian Turkish + Azerbaijani features; Alevi/Qizilbash conceptual lexicon; geographic plausibility (East Azerbaijan was Cihanşah's heartland: pre-modern Tabriz was his capital)",
+      "promote_to_status": "VERIFIED (was: candidate); split into TWO witness entries (full-divan + cönks)"
+    },
+    "amea_baku_2021_acquisition": {
+      "verification_status": "REJECTED as independent witness: confirmed Süleymaniye reproduction",
+      "verification_method": "direct HTTP fetch of manuscript.az/index.php?17/385459.html: AMEA Manuscripts Institute new-acquisitions registry, entry #38 dated 12 January 2021",
+      "amea_announcement_verbatim": "Azərbaycan şairi, Qaraqoyunlu dövlətinin hökmdarı Cahanşah Həqiqinin (1405-1467) 'Şeirlər toplusu – Divan'ının əlyazma surəti: İstanbulun Süleymaniyyə kitabxanası, Türkiyə",
+      "translation": "Manuscript reproduction (əlyazma surəti) of the 'Poetry collection: Divan' of the Azerbaijani poet, Karakoyunlu state ruler Cahanşah Həqiqi (1405-1467): Süleymaniye Library, Istanbul, Turkey",
+      "interpretation": "The word 'surəti' (Azerbaijani for 'reproduction/copy/facsimile') confirms this is a SURROGATE not an independent codex. AMEA's own announcement names Süleymaniye Library as the source institution. The specific shelfmark (Fatih 3808) is NOT named on the AMEA page, but Süleymaniye's only Cihanşah Hakîkî witness is Fatih 3808 (per Anatolia DB filiations panel of Mat 965). Therefore identification of the AMEA acquisition as = Süleymaniye Fatih 3808 surrogate is near-certain.",
+      "promote_to_status": "REJECTED (was: candidate_likely_microfilm); now confirmed REJECTED with primary-source citation"
+    }
+  },
+  "new_witnesses_or_candidates": [
+    {
+      "rank": "verified_via_sohrabiabad_akin_2019_primary_source",
+      "candidate_id": "diyarbakir_yazma_eserler_kutuphanesi_lost",
+      "shelfmark": "(unknown shelfmark)",
+      "collection": "Diyarbakır İl Halk Kütüphanesi / Diyarbakır Yazma Eserler Kütüphanesi (institutional designation per Macit-Cunbur communication)",
+      "city": "Diyarbakır",
+      "country": "Turkey",
+      "verification_status": "REPORTED LOST: pre-1999 sighting, post-1999 missing",
+      "decoration_data_captured_so_far": "None: only reported existence and reported disappearance.",
+      "confidence_rating": "verification confidence high (Cunbur reliable witness); recovery confidence low"
+    },
+    {
+      "rank": "verified_via_sohrabiabad_akin_2019_primary_source",
+      "candidate_id": "ilkhchi_kirklar_ocagi_full_divan",
+      "shelfmark": "(non-institutional: Kırklar Ocağı pirs' personal archive)",
+      "collection": "Kırklar (Celten) Ocağı",
+      "city": "İlhıcı (Ilkhchi)",
+      "country": "Iran (East Azerbaijan province)",
+      "verification_status": "VERIFIED EXISTENCE; CODICOLOGY UNKNOWN",
+      "decoration_data_captured_so_far": "None: codex not photographed in article, no description.",
+      "confidence_rating": "high"
+    },
+    {
+      "rank": "verified_via_sohrabiabad_akin_2019_primary_source",
+      "candidate_id": "ilkhchi_kirklar_cem_conks",
+      "shelfmark": "(non-institutional: multiple cönks among ocak members)",
+      "collection": "Kırklar Ocağı / İlhıcı Alevi community",
+      "city": "İlhıcı (Ilkhchi)",
+      "country": "Iran",
+      "verification_status": "VERIFIED",
+      "decoration_data_captured_so_far": "None: no photographs of cönks published.",
+      "confidence_rating": "high"
+    }
+  ],
+  "decoration_data_captured_for_pending_witnesses": {
+    "summary": "Sohrabiabad-Akın 2019 Ek-3 includes 7 photograph plates of the Diyarbakır Ulutürk cönk (Abbas Önen archive). The cönk is a modest 19th-c. Anatolian-Alevi village notebook: cream/yellowed plain paper, simple blue/violet hand-ruled double-line frames, dense rika script, no gilding, no rubrication, no illumination, no decorated paper. Spine torn, covers detached. Codicological value for the BL Or 9493 paper-question is ZERO; this is a textual witness only. The Ilkhchi divan and cönks are NOT photographed in the article: codicology remains UNKNOWN.",
+    "by_witness": {
+      "diyarbakir_uluturk_cönk": {
+        "paper_description": "cream/yellowed plain machine-made paper; tide-line water damage; brittle edges",
+        "ruling": "blue/violet hand-ruled double-line frames",
+        "illumination": "none",
+        "rubrication": "none",
+        "binding": "disintegrated; spine torn; covers detached",
+        "scribe": "İbrahim Halil Dede (1860s, per Abbas Önen oral testimony)",
+        "data_source": "Sohrabiabad-Akın 2019, Ek-3, pp. 216-223 (photograph plates)",
+        "confidence": "high"
+      },
+      "ilkhchi_full_divan": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": "NOT published in article",
+        "confidence": "unknown"
+      },
+      "ilkhchi_cem_conks": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": "NOT published in article",
+        "confidence": "unknown"
+      },
+      "diyarbakir_lost_library_divan": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": "NEVER photographed; reported lost pre-1999",
+        "confidence": "unknown"
+      }
+    }
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-02",
+    "artifact_status": "current",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

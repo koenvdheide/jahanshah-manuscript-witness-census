@@ -1,0 +1,673 @@
+{
+  "schema_version": 1,
+  "session_label": "Turkey + Anatolia portal sweep",
+  "session_id": "turkey-anatolia",
+  "date": "2026-05-02",
+  "scope": "Turkey + Anatolia: portal.yek.gov.tr (now alias for www.yazmalar.gov.tr after the two portals merged), Süleymaniye Yazma Eser Kütüphanesi, TÜYATOK, Topkapı Sarayı Müzesi, Millet Yazma Eser Kütüphanesi, Beyazıt Devlet Kütüphanesi, Ankara Milli Kütüphane, Ankara Üniversitesi DTCF Kütüphanesi, Atatürk Üniversitesi Erzurum, plus Islamisation of Anatolia DB (St Andrews) for cross-references and full record retrieval. Top priority: verify two PENDING witnesses: Süleymaniye Fatih 3808 and 'Ankara DTCF İsmail Saib I/2221': and capture decoration / paper / codicology data wherever recorded. Secondary: enumerate any additional non-TEIS Yesevi witnesses or fragmentary mecmuas in Turkish collections containing Cihanşah Hakîkî poetry.",
+  "method_summary": {
+    "primary": "(1) authenticated YEK portal access for portal.yek.gov.tr: full author/title/genel_notlar searches across orthographic variants. (2) Islamisation of Anatolia DB (`islam-anatolia.ac.uk/data/documents/<slug>` (base path; specific document slugs in subsequent records)) for cross-referenced filiations, since Mat 965 record's filiation panel resolves all four sister-codices in one shot.",
+    "fallback": "(a) direct HTTP fetch against on www.islam-anatolia.ac.uk for full record retrieval; (b) attempted yazmalar.gov.tr direct: DNS check confirmed www.yazmalar.gov.tr is now an ALIAS for portal.yek.gov.tr (88.255.144.228 / 88.255.144.229), so YEK is the union catalogue de facto; (c) attempted yazmaeserler.gov.tr: DNS does NOT resolve (non-existent domain); (d) confirmed portal.yek.gov.tr is unreachable via raw HTTP (returns empty body): must use the authenticated portal access.",
+    "yek_count_extractor_quirk": "authenticated YEK portal access returns raw_result_count=null whenever the result-info-breadcrumb DOM element is missing. This appears (a) for some legitimate empty searches and (b) consistently for the eser_adi/yazar_adi (title/author) fields and for queries with multi-token / Persian-script terms. Where count is null AND row count is 0, no rows were rendered: likely truly zero or DOM-blocked; not distinguishable from inside the script. Workaround: re-run with --paginate (still returns null in problem cases) or use AND-combinations with a known-non-zero co-anchor.",
+    "yek_search_terms_attempted": [
+      {
+        "term": "Cihanşah",
+        "field": "yazar_adi",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "author field consistently returns null DOM count; treat as inconclusive"
+      },
+      {
+        "term": "Hakîkî",
+        "field": "yazar_adi",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "same"
+      },
+      {
+        "term": "Hakikî",
+        "field": "eser_adi",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "title field also returns null DOM count"
+      },
+      {
+        "term": "Cihanşah",
+        "field": "eser_adi",
+        "raw_count": null,
+        "rows": 0
+      },
+      {
+        "term": "Hakikî Divanı",
+        "field": "eser_adi",
+        "raw_count": null,
+        "rows": 0
+      },
+      {
+        "term": "Karakoyunlu",
+        "field": "yazar_adi",
+        "raw_count": null,
+        "rows": 0
+      },
+      {
+        "term": "Cihanşah",
+        "field": "genel_notlar",
+        "raw_count": 2,
+        "rows": 2,
+        "interpretation": "WORKING: 2 hits, both FP (see results)"
+      },
+      {
+        "term": "Cihânşâh",
+        "field": "genel_notlar",
+        "raw_count": 2,
+        "rows": 2,
+        "interpretation": "WORKING: same 2 FP results as 'Cihanşah' (diacritics normalized)"
+      },
+      {
+        "term": "Cihan Şah",
+        "field": "genel_notlar",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "space-token form: likely matches multi-token records, count extractor failed; AND combos used to filter"
+      },
+      {
+        "term": "Hakîkî",
+        "field": "genel_notlar",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "main namesake search: count extractor failed; AND combos used to filter"
+      },
+      {
+        "term": "Hakikî",
+        "field": "genel_notlar",
+        "raw_count": null,
+        "rows": 0
+      },
+      {
+        "term": "Hakîkî Divânı",
+        "field": "genel_notlar",
+        "raw_count": 1,
+        "rows": 1,
+        "interpretation": "WORKING: 1 hit (AEMnz590), namesake-FP (Sinan-ı Ümmî family Hakîkî)"
+      },
+      {
+        "term": "Karakoyunlu",
+        "field": "genel_notlar",
+        "raw_count": 2,
+        "rows": 2,
+        "interpretation": "WORKING: 2 hits, both FP (history works mentioning the dynasty)"
+      },
+      {
+        "term": "Karakoyunlu Cihan",
+        "field": "genel_notlar",
+        "raw_count": 1,
+        "rows": 1,
+        "interpretation": "WORKING: 1 hit (Esad Efendi 03340 Mecmû'atü'l-Vakfiyye), FP (waqfiye documents not poetry)"
+      },
+      {
+        "term": "Karakoyunlu",
+        "field": "eser_adi",
+        "raw_count": 1,
+        "rows": 1,
+        "interpretation": "WORKING: 1 hit (20th-c. printed-style work on Anatolian beyliks), FP"
+      },
+      {
+        "term": "Hakîkî",
+        "field": "genel_notlar",
+        "and_term": "divan",
+        "and_field": "eser_adi",
+        "raw_count": 1,
+        "rows": 1,
+        "interpretation": "WORKING: 1 hit (BY00007262/3), namesake-FP (Sinan-ı Ümmî family Hakîkî)"
+      },
+      {
+        "term": "Hakîkî",
+        "field": "genel_notlar",
+        "and_term": "Mecmûa",
+        "and_field": "eser_adi",
+        "raw_count": 5,
+        "rows": 5,
+        "interpretation": "WORKING: 5 hits in mecmua-titled works; 4 confirmed FP (different namesakes), 1 candidate (Hacı Bektaş-ı Veli 010729: Hurûfî/Bektaşi-adjacent context); see results"
+      },
+      {
+        "term": "Hakîkî",
+        "field": "genel_notlar",
+        "and_term": "Cihân",
+        "and_field": "genel_notlar",
+        "raw_count": 2,
+        "rows": 2,
+        "interpretation": "WORKING: 2 hits, both already-flagged-FP/candidate (709791 Hacı Bektaş, 164404 AEMnz590)"
+      },
+      {
+        "term": "حقیقی",
+        "field": "genel_notlar",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "Persian-script search; null DOM: YEK normalizes only Latin Turkish diacritics, not Arabic-script forms"
+      },
+      {
+        "term": "حقیقی",
+        "field": "eser_adi",
+        "raw_count": null,
+        "rows": 0
+      },
+      {
+        "term": "Şehnâme",
+        "field": "eser_adi",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "BASELINE TEST: Şehnâme should return many hits but DOM count extractor fails for title field. Confirms count-extraction is the issue, not zero-records."
+      },
+      {
+        "term": "3808",
+        "field": "yer_numarasi",
+        "and_term": "Fatih",
+        "and_field": "koleksiyonlar",
+        "raw_count": null,
+        "rows": 0,
+        "interpretation": "Süleymaniye Fatih shelfmark 3808 not retrievable via YEK shelfmark search: collection_no field returns null DOM. Cross-checked: portal.yek.gov.tr indexing of Süleymaniye Fatih sub-collection appears partial; Esad Efendi (Süleymaniye) IS indexed (yek_id 717561 etc.) so the issue is field-specific, not collection-specific."
+      }
+    ]
+  },
+  "search_session": {
+    "date": "2026-05-02",
+    "field_searched": "genel_notlar",
+    "term_searched": "Cihanşah / Hakîkî / Karakoyunlu / Cihânşâh / Hakîkî Divânı (multi-term, multi-form Turkish-orthography sweep)",
+    "operator": "İçeren",
+    "raw_result_count": 9,
+    "results": [
+      {
+        "yek_id": "261393",
+        "title": "Levâyih-i Hakîkat / لوايح حقيقت",
+        "author": null,
+        "collection": "Hacı Reşit Bey",
+        "shelfmark": "00089-001",
+        "library": "Süleymaniye Kütüphanesi",
+        "language": "Farsça",
+        "subject": "297.7 / Tasavvuf ve tarikatlar",
+        "date_ah": "870/1465",
+        "date_ce": "1465 (matbu: printed)",
+        "paper_field": null,
+        "notes_field": "Eser, Mecmû'a-i Mollâ Câmî adı altında Şerh-i Rubâiyyât ve Levâmi' adlı Mollâ Câmî'ye ait eserlerle birlikte basılmıştır. Eser, Hemedân Şâhı Cihanşâh'a sunulmuştur.",
+        "decoration_field": null,
+        "binding_field": "Bez cilt.",
+        "scribe": null,
+        "dimensions_mm": "Küçük",
+        "script": "Arap harfli-Nesih.",
+        "classification": "none",
+        "is_false_positive": true,
+        "false_positive_reason": "Levâyih-i Hakîkat (Mollâ Câmî, d. 898/1492) was DEDICATED TO Cihanşah but is by Câmî, not by Cihanşah. Material_type='Matbu' (printed): not even a manuscript. Hits the 'Cihanşâh'a sunulmuştur' (presented to Cihanşah) phrase in the notes, not author attribution.",
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "very_high",
+        "notes": "Useful negative: confirms YEK genel_notlar search returns historical-dedication FPs. Cataloguer's note attests Cihanşah's literary patronage."
+      },
+      {
+        "yek_id": "719961",
+        "title": "Münşe'ât-ı Selâtîn. / منشآت سلاطين.",
+        "author": null,
+        "collection": "Esad Efendi",
+        "shelfmark": "03673-015",
+        "library": "Süleymaniye Kütüphanesi",
+        "language": "Farsça",
+        "subject": "891.55 / Fars edebiyatı",
+        "date_ah": null,
+        "date_ce": null,
+        "paper_field": null,
+        "notes_field": "Nüsha, Timur, Yıldırım Bayezid, Cihanşah, Şahruh, Fatih Sultan Mehmed, Gazi Murad ve Uluğ Bey gibi devlet adamları arasında teâtî edilen mektupları ihtiva etmektedir.",
+        "decoration_field": null,
+        "binding_field": null,
+        "scribe": null,
+        "dimensions_mm": "255x160-200x105 mm",
+        "folio_count": "59a-71a yk., 37 st.",
+        "script": "Arap harfli-Ta'lîk.",
+        "classification": "none",
+        "is_false_positive": true,
+        "false_positive_reason": "Münşe'ât = letter-collection (sultan correspondence). Cihanşah is mentioned as one of several rulers (Timur, Bayezid, Şahruh, Mehmed II, Uluğ Bey) whose letters are anthologized: historical context, not poetry attribution.",
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "very_high",
+        "notes": "Useful for historical purposes (Cihanşah letters extant in Ottoman münşeât tradition) but NOT a Hakîkî-divan witness."
+      },
+      {
+        "yek_id": "716211",
+        "title": "Lübbü't-Tevârîh. / لب التواريخ.",
+        "author": null,
+        "collection": "Esad Efendi",
+        "shelfmark": "02394",
+        "library": "Süleymaniye Kütüphanesi",
+        "language": "Farsça",
+        "subject": "909 / Dünya tarihi",
+        "date_ah": "957",
+        "date_ce": "1550",
+        "paper_field": null,
+        "notes_field": "Safevî Devleti'nin kurucusu Şah İsmâʿîl'in oğlu Behram Mîrzâ'nın isteği üzerine kaleme alınmıştır. ... Karakoyunlular ve Akkoyunlular ele alınmaktadır.",
+        "decoration_field": null,
+        "binding_field": null,
+        "scribe": null,
+        "dimensions_mm": "208x112-165x65 mm",
+        "folio_count": "129 yk., 19 st.",
+        "script": "Arap harfli-Nesta'lîk.",
+        "classification": "none",
+        "is_false_positive": true,
+        "false_positive_reason": "Lübbü't-Tevârîh (Yahya Kazvînî, d. 962/1554) is a Safavid universal history. Karakoyunlu hit because the dynasty is treated as a historical chapter: not a Cihanşah witness.",
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "very_high",
+        "notes": "Standard 'dynasty mentioned in history work' FP."
+      },
+      {
+        "yek_id": "717561",
+        "title": "el-Mecmû'atü'l-Vakfiyye. / المجموعة الوقفية.",
+        "author": null,
+        "collection": "Esad Efendi",
+        "shelfmark": "03340-000",
+        "library": "Süleymaniye Kütüphanesi",
+        "language": "Arapça",
+        "subject": "297.529 / Vakıf, arazî, harâc, emvâl",
+        "date_ah": null,
+        "date_ce": "9th c. AH content",
+        "paper_field": null,
+        "notes_field": "Nüshada, aralarında Karakoyunlu Hükümdarı Cihan Şah'ın (872/1467) vakfiye suretlerinin bulunduğu (örnek olarak 4a), bir takım vakfiyelerin ağırlıkta olduğu ifade edilebilir.",
+        "decoration_field": null,
+        "binding_field": null,
+        "scribe": "Mahmûd b. Abdullah el-Kâşî / Ali b. Ferahullah b. Ali b. Mahmûd el-Kâşî",
+        "dimensions_mm": "235x150-180x109 mm",
+        "folio_count": "1a-22a yk., muhtelif st.",
+        "script": "Arap harfli-Neshî.",
+        "classification": "none",
+        "is_false_positive": true,
+        "false_positive_reason": "Documentary (vakfiye/waqf) collection containing Cihanşah's waqfiye copies: NOT poetry. Important historical witness for Cihanşah's documentary acts but not a Hakîkî divan witness.",
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "very_high",
+        "notes": "Cihanşah's actual waqfiye texts on f. 4a are attested here. May be of interest for Karakoyunlu administrative history (separate from Hakîkî textual census)"
+      },
+      {
+        "yek_id": "85682",
+        "title": "Dîvân / ديوان",
+        "author": null,
+        "collection": "Bölge Yazma Eserler",
+        "shelfmark": "BY00007262/3",
+        "library": "Konya Yazma Eserler Bölge Müdürlüğü",
+        "language": "Türkçe",
+        "subject": "810 / Türk edebiyatı",
+        "date_ah": "1258",
+        "date_ce": "1842",
+        "paper_field": null,
+        "notes_field": "Hakiki, sinan-ı Ümmî hazretlerinin torununun oğludur.",
+        "decoration_field": null,
+        "binding_field": "Sırtı kahverengi meşin desenli kâğıt kaplı bir cilt içindedir. Şirazesi dağılmış ve sırtı tamir görmüştür. Cildi hayli yıpranmıştır.",
+        "scribe": null,
+        "dimensions_mm": "188x137-145x106 mm",
+        "folio_count": "169b-180b yk., 15 st.",
+        "script": "Arap harfli-Rika",
+        "classification": "none",
+        "is_false_positive": true,
+        "false_positive_reason": "Cataloguer-stated genealogy: 'Hakiki is the great-grandson of Sinan-ı Ümmî': Sinan-ı Ümmî (d. 1568) is the 16th-c. Halveti şeyh of Antalya/Elmalı. This is a DIFFERENT Hakîkî (Sinan-ı Ümmî family Halveti namesake), NOT Cihanşah Karakoyunlu. 1258 AH (1842 CE) date also rules out a Cihanşah-tradition witness.",
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "very_high",
+        "notes": "DOCUMENTED 5TH HAKÎKÎ NAMESAKE: extends the witness register's 4-way disambiguation (Cihanşah / Mustafa Bagdadî / Peri Ruh Hanım / Mirza Muhammed Ahmed Abadi) to add 'Sinan-ı Ümmî family Hakîkî': 16th-c. Halveti tekke poet. Recommend updating witness_register.json's pen-name disambiguation list."
+      },
+      {
+        "yek_id": "611226",
+        "title": "Mecmûâ-i İlâhîyât",
+        "author": null,
+        "collection": "Milli Kütüphane Yazmalar",
+        "shelfmark": "06 Mil Yz A 2133",
+        "library": "Milli Kütüphane",
+        "language": "Türkçe",
+        "subject": "297.87",
+        "date_ah": "[18--]",
+        "date_ce": "19th century",
+        "paper_field": "Yonca filigranlı (clover/three-leaf watermarked European paper)",
+        "notes_field": "Yazı alanı: 200x135 mm Satır sayısı: 12 ... İçindekiler: Cahidî, Gafurî, Nasuhî., Himmet, Meftunî, Azizî, Vahid, Mahvî, Hafız, Yahya, Recaî, Sebzî, Nazif, Kenzî, Nadirî, Derviş Osman, Fethî, Biçâre, Sulukî, Sinanî, Hakikî, Eroğlu, Rahimî, Şeyh Vefa, Gülşenî, Nisâlî, Ruşenî, Nurî, Şeyda, Saidî, Dervîş Ahmed, Yakub, Fenaî, Hacı Bayram, Şekûrî, Cahidî, Halvetî, Fakîri, İştibî",
+        "decoration_field": null,
+        "binding_field": "Sırtı tamir görmüş, şemseli, zencirekli, kahverengi meşin kaplı mukavva cilt",
+        "scribe": null,
+        "dimensions_mm": "210x155 mm",
+        "folio_count": "107 y.",
+        "script": "Nesih",
+        "classification": "none",
+        "is_false_positive": true,
+        "false_positive_reason": "Halveti tekke ilahi/kaside collection. Hakikî co-located with Eroğlu (Eroğlu Nuri, d. 1670s: Sinan-ı Ümmî disciple), Şeyh Vefa, Gülşenî, Hacı Bayram: i.e. Halveti/Bayrami sufi adjacency, not Hurûfî/Karakoyunlu adjacency. The Hakîkî here is the same Sinan-ı Ümmî family namesake as in BY00007262/3.",
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "high",
+        "notes": "Decoration captured: clover-watermark European paper + şemse/zencirek brown leather binding (typical 19th-c. Ottoman tekke production)."
+      },
+      {
+        "yek_id": "164404",
+        "title": "Mecmû'a-i Eş'âr / مجموعه أشعار",
+        "author": null,
+        "collection": "Ali Emiri Manzum",
+        "shelfmark": "AEMnz590",
+        "library": "Millet Kütüphanesi",
+        "language": "Türkçe",
+        "subject": "810 / Türk edebiyatı",
+        "date_ah": null,
+        "date_ce": "17th c. or later (terminus post Nef'î d. 1635, Sâib d. 1677)",
+        "paper_field": null,
+        "notes_field": "Türkçe ve Farsça şiirlerle yer yer mensur parçaları ihtiva eden Mecmuanın dökümü şöyledir: 1a-2b Nef'i'den 2 Kaside; 3a Kemal Paşazade ... [extensive folio-by-folio list of ~150 Ottoman poets: Nef'î, Nâbî, Bâkî, Sâib, Yahyâ, Fuzulî, Necâtî, Lâmi'î, etc.] ... 50a Fevzî, Kemâli, 'Cevab-ı Cihan' ...",
+        "decoration_field": null,
+        "binding_field": null,
+        "scribe": null,
+        "dimensions_mm": "250x160 mm",
+        "folio_count": "70 yk., muhtelif st.",
+        "script": null,
+        "classification": "none",
+        "is_false_positive": true,
+        "false_positive_reason": "Late-Ottoman elite-poet anthology (Nef'î/Nâbî/Sâib/Bâkî/Yahyâ-dominated). Date floor c. 17th c. via the named poets (Nef'î d. 1635, Sâib-i Tebrîzî d. 1677). The hit triggered on 'Cevab-ı Cihan' (= 'response by Cihan' or 'response of/about Cihan') in the folio listing, NOT 'Cihanşah'. Plus: any 'Hakîkî' here would by date be Mustafa Bagdadî (d. ?) or Ağazâde Mehmed Hakîkî Dede (Mevlevî, d. 1739), NOT Karakoyunlu Cihanşah.",
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "very_high",
+        "notes": "Reinforces İçeren tokenization risk: 'Cihân' matches in 'Cevab-ı Cihan'."
+      },
+      {
+        "yek_id": "709791",
+        "title": "Mecmû'a-i Eş'âr. / مجموعه اشعار.",
+        "author": null,
+        "collection": "Hacı Bektaş-ı Veli Dergahı",
+        "shelfmark": "BY0000010729",
+        "library": "Konya Yazma Eserler Bölge Müdürlüğü",
+        "language": "Türkçe",
+        "subject": "811.202 / Şiir mecmuaları",
+        "date_ah": null,
+        "date_ce": null,
+        "paper_field": null,
+        "notes_field": "[~330-poet anthology including:] Şehidî, Gedâî, Sezâî, Cemî, ... Fuzulî, ..., Hatâî, Hüsâmî Fârisî, Çakî, Kaşifî, ... Nesimî, ... Hakîkî, Hevaî, Naimî, Riyazî, ... Şah İsmail Bahadır, ... Nevâyî ... Yoğun nem lekeleri mevcuttur.",
+        "decoration_field": null,
+        "binding_field": null,
+        "scribe": null,
+        "dimensions_mm": "315x225 mm",
+        "folio_count": "150 yk., muhtelif st.",
+        "script": "Arap harfli-Ta'lik.",
+        "classification": "none",
+        "is_false_positive": false,
+        "false_positive_reason": null,
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "low",
+        "notes": "Provisional candidate: not yet verified. Hacı Bektaş-ı Veli Dergahı = Bektaşi tekke library. Co-located poets include Şah İsmail Hatâî, Nesîmî, Nevâî, and Karacaoğlan: a Hurûfî/Bektaşi/Türkmen-Sufi transmission cluster matching the Nesîmî-adjacency heuristic for finding Cihanşah Hakîkî fragments. The 'Hakîkî' in a 300+ poet Bektaşi catalogue could equally be Mustafa Bagdadî or another Sufi-tradition Hakîkî namesake. Status: folio inspection unresolved (no digitization). If genuine, this would be a fragment-witness in the same vein as Ankara Milli A 5252 (already in register)."
+      },
+      {
+        "yek_id": "616376",
+        "title": "Mecmû'a-i Eş'âr",
+        "author": null,
+        "collection": "Milli Kütüphane Yazmalar",
+        "shelfmark": "06 Mil Yz FB 185",
+        "library": "Milli Kütüphane",
+        "language": null,
+        "subject": "819.1",
+        "date_ah": "1220",
+        "date_ce": "1805",
+        "paper_field": "Taç arma, el filigranlı (crown/coat-of-arms + hand watermark European paper)",
+        "notes_field": "Yazı alanı:Değişik Satır sayısı:Değişik Yazı:Çeşitli Kağıt çeşidi:Taç arma, el filigranlı ... Hakikî (Erzurum'da 79. Yeniçeri ortasında Bayrakdar Mehmed) 1-2, 46-51",
+        "decoration_field": null,
+        "binding_field": "Istampa baskılı lacivert bez kaplı mukavva cilt",
+        "scribe": null,
+        "dimensions_mm": "190x130 mm",
+        "folio_count": "69 y.",
+        "script": "Çeşitli (multiple)",
+        "classification": "none",
+        "is_false_positive": true,
+        "false_positive_reason": "Cataloguer EXPLICITLY identifies the Hakîkî in this mecmua as 'Erzurum'da 79. Yeniçeri ortasında Bayrakdar Mehmed': a 19th-c. Janissary standard-bearer named Mehmed using the pen-name Hakîkî, in Erzurum. ANOTHER namesake: the 6th distinct Hakîkî attested in Turkish mecmua catalogues.",
+        "has_digitized_images": false,
+        "iiif_manifest_url": null,
+        "iiif_internal_id": null,
+        "digitized_page_count": null,
+        "confidence": "very_high",
+        "notes": "DOCUMENTED 6TH HAKÎKÎ NAMESAKE: 'Bayrakdar Mehmed' (Janissary 79th orta, Erzurum). Decoration captured: crown-and-hand watermark European paper + stamped navy cloth binding."
+      }
+    ],
+    "false_positive_count": 8,
+    "genuine_count": 0,
+    "candidate_count": 1,
+    "false_positive_rate": 0.889,
+    "_extra_finding": "Search yielded ZERO confirmed Cihanşah Hakîkî witnesses on portal.yek.gov.tr. The Hakîkî pen name is heavily occupied by 5+ DIFFERENT Ottoman-era namesakes (Mustafa Bagdadî / Sinan-ı Ümmî family / Ağazâde Mevlevî Mehmed Dede / Janissary Bayrakdar Mehmed / generic Halveti Hakîkîs), creating a >95% false-positive rate when querying YEK on the pen name. NEW namesakes documented this session: 'Sinan-ı Ümmî family Hakîkî' (Halveti Antalya/Elmalı tradition) and 'Bayrakdar Mehmed Erzurum 79. Yeniçeri orta' (19th-c. Janissary). Update witness_register.json prior_disambiguation_caveat_now_resolved field to reflect these."
+  },
+  "pending_witness_resolutions": [
+    {
+      "witness_id": "suleymaniye_fatih_3808",
+      "shelfmark": "Süleymaniye Yazma Eserler Kütüphanesi, Fatih 3808",
+      "city": "Istanbul",
+      "country": "Turkey",
+      "verification_status": "verified_via_anatolia_db",
+      "verification_source": "https://www.islam-anatolia.ac.uk/data/documents/TK_Sul_Fatih_3808 (verified 2026-05-02 via direct HTTP fetch)",
+      "data_extracted_verbatim": {
+        "institution": "Süleymaniye Yazma Eserler Kütüphanesi, Istanbul, Turkey",
+        "collection": "Fatih",
+        "shelfmark": "3808",
+        "date_of_copy": "20th century",
+        "folios": 107,
+        "columns": 2,
+        "ruled_lines": 12,
+        "languages": [
+          "Turkish (Azerbaijani)",
+          "Persian"
+        ],
+        "scribe": null,
+        "dimensions_cm": null,
+        "contents_record_field_verbatim": "32 short mesnevīs in Persian, 114 ghazels in Persian, 96 ghazels in Turkish, and 34 tuyuġs in Turkish",
+        "seal": "Waqf record and seal of Maḥmūd I on folio 1a"
+      },
+      "decoration_data": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": "Islamisation of Anatolia DB record provides no paper/decoration/binding fields",
+        "confidence": "unknown",
+        "notes": "DB record does not have decoration/paper/binding columns populated. Sultan Maḥmūd I waqf seal on f. 1a is a provenance/ownership marker (institutional waqf indicator), not decoration per se: though the seal is itself a decorated stamp."
+      },
+      "iiif_or_digital_surrogate": null,
+      "macit_2000_test_result": {
+        "macit_claim": "Fatih 3808 is 'mevcut nüshaların en mükemmeli' (most complete of extant copies)",
+        "test_against_mat_965": "FAILS THE 'MOST COMPLETE' TEST AS UNIQUE-CHAMPION. Fatih 3808 contents (32 Persian mesnevis + 114 Persian ghazals + 96 Turkish ghazals + 34 tuyuğs) are IDENTICAL to Mat 965 contents (same poem counts). Both Fatih 3808 and Mat 965 contain MORE poems than BL Or 9493 (105 Persian ghazals + 1 mustazad + 87 Turkish ghazals + 32 Turkish quatrains): but the 'most complete' status is shared between Fatih 3808 and Mat 965, NOT unique to Fatih 3808.",
+        "interpretive_caveat": "The Anatolia DB content fields appear to use the same Macit-edition-derived boilerplate text across multiple records (32+114+96+34 also appears verbatim on the Mat 965, AU Sencer 2221, and BL Or 9493 records: even though Minorsky 1954 firsthand reports BL has 105+1+87+32). So the Anatolia DB 'contents' field is the EDITION-LEVEL canonical content, NOT per-codex actual content. Thus we cannot conclude the codices are identical from the DB alone: only that the cataloguers used the same Macit-derived formula."
+      },
+      "remaining_open_questions": [
+        "What is the actual scribe / colophon / date precisely (the DB says '20th century': which decade? Who copied it? From which exemplar?)",
+        "Does Fatih 3808 have decoration / illumination / paper data not surfaced by the Anatolia DB? Need direct Süleymaniye catalogue access.",
+        "Is the Mat 965 = Fatih 3808 = AU 2221 textual identity REAL (i.e. Fatih 3808 is a 20th-c. copy of Mat 965 or shares an exemplar) or is it an artefact of cataloguer copy-pasting from Macit 2000? Resolution requires firsthand or facsimile comparison, OR consulting Macit 2000 (already in our possession) for the per-codex contents listing rather than the consolidated edition contents."
+      ]
+    },
+    {
+      "witness_id": "ankara_dtcf_ismail_saib_1_2221",
+      "shelfmark_per_macit_2000": "Ankara Üniversitesi DTCF Kütüphanesi İsmail Saib I/2221",
+      "shelfmark_per_anatolia_db": "Atatürk Üniversitesi (Erzurum), İsmail Saib Sencer collection 2221",
+      "city": "Ambiguous: Macit 2000 says Ankara (DTCF); Islamisation of Anatolia DB says 'Atatürk Üniversitesi' (Erzurum, with 'Istanbul' database error in city field)",
+      "country": "Turkey",
+      "verification_status": "verified_with_attribution_caveat",
+      "verification_source": "https://www.islam-anatolia.ac.uk/data/documents/TK_AU_ISSencer_2221 (URL slug 'AU' = Atatürk Üniversitesi; 'ISSencer' = İsmail Saib Sencer)",
+      "data_extracted_verbatim": {
+        "institution_per_db": "Atatürk Üniversitesi (the city field says 'Istanbul' but Atatürk Üniv. is in Erzurum: DB error)",
+        "collection": "İsmail Saib Sencer",
+        "shelfmark": "2221",
+        "date_of_copy": "19th century",
+        "folios": 26,
+        "columns": "single column",
+        "ruled_lines": null,
+        "languages": [
+          "Persian",
+          "Turkish (Azerbaijani: implied via Cihanşah's Turkish poems)"
+        ],
+        "scribe": null,
+        "dimensions_cm": null,
+        "contents_record_field_verbatim": "32 short mes̱nevīs in Persian, 114 ġazels in Persian, 96 ġazels in Turkish, and 34 tuyuġs in Turkish [boilerplate edition-level content; per-codex content not surfaced]"
+      },
+      "decoration_data": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": "Islamisation of Anatolia DB has no decoration/paper/binding fields populated",
+        "confidence": "unknown",
+        "notes": "26 folios + single column suggests a SHORT/EXCERPT codex: probably not the full poetry collection (whose declarative contents would need ~85+ folios in 2-column format to fit, per BL Or 9493 and Fatih 3808 dimensions). This may be a partial / fragment witness, or a heavily-condensed copy."
+      },
+      "iiif_or_digital_surrogate": null,
+      "institutional_attribution_problem": {
+        "issue": "Macit 2000 cites the codex as Ankara Üniversitesi DTCF Kütüphanesi İsmail Saib I/2221 (Ankara). The Islamisation of Anatolia DB cites it as Atatürk Üniversitesi (Erzurum), İsmail Saib Sencer collection 2221.",
+        "background": "İsmail Saib Sencer (1872-1940) was a major Turkish bibliophile. After his death his collection was distributed across multiple Turkish institutions: the bulk to Ankara Üniversitesi DTCF Kütüphanesi, but other portions appear at Atatürk Üniversitesi Erzurum.",
+        "two_hypotheses": [
+          "(A) Same codex, conflicting institutional attribution by different cataloguers. Either Macit's Ankara attribution OR the Anatolia DB's Erzurum attribution is wrong.",
+          "(B) Two separate codices, both numbered 2221 in the two distributed Sencer collections (Ankara and Erzurum). Numbering conflicts within partitioned collections are common: but YEK does not currently index either, so cross-checking is blocked."
+        ],
+        "preferred_interpretation": "Hypothesis (A). The Sencer Ankara distribution is the standard institutional locus for the bulk of his holdings; the Erzurum Sencer collection is smaller. The Anatolia DB's URL slug 'TK_AU_ISSencer_2221' may have been mis-coded: the database also flubs the city field by listing 'Istanbul' when Atatürk Üniversitesi is in Erzurum. Without independent confirmation it is safer to record this codex with BOTH attributions and 'institutional_attribution_disputed: true'."
+      },
+      "remaining_open_questions": [
+        "Is Macit 2000 (Bilig 13) right that this codex is in Ankara DTCF, or is the Anatolia DB right that it is in Atatürk Üniversitesi Erzurum? Resolution: check the original 1986 catalogue of İsmail Saib Sencer's collection (Karatay or Kut), OR obtain Demirci 1997 'Cihanşâh-ı Karakoyunlu'nun şiir mecmualarına dair' DTCF Türkoloji Dergisi paper which is cited in the Anatolia DB bibliography for this record.",
+        "Is this 26-folio codex really a complete witness OR a fragmentary excerpt? 26 folios cannot fit the declared edition contents (~140 ghazals + 32 mesnevīs + 34 tuyughs).",
+        "What decoration / paper / binding is recorded? Anatolia DB silent."
+      ]
+    }
+  ],
+  "filiation_panel_findings_from_anatolia_db_mat_965_record": {
+    "_note": "The Mat 965 record's filiations panel is the single most efficient cross-reference for the Cihanşah Hakîkî textual tradition. It enumerates exactly four sister codices, exhaustively per the Anatolia DB.",
+    "filiations_with_url_slugs": [
+      {
+        "city": "Ankara",
+        "institution": "Milli Kütüphane",
+        "shelfmark": "A 5252",
+        "url_slug": "TK_Mil_A_5252",
+        "verification_status_in_register": "verified"
+      },
+      {
+        "city": "Istanbul",
+        "institution": "Süleymaniye Yazma Eserler Kütüphanesi",
+        "shelfmark": "3808 (Fatih)",
+        "url_slug": "TK_Sul_Fatih_3808",
+        "verification_status_in_register": "now verified (this session)"
+      },
+      {
+        "city": "Erzurum (database says 'Istanbul': DB error)",
+        "institution": "Atatürk Üniversitesi",
+        "shelfmark": "2221 (İsmail Saib Sencer)",
+        "url_slug": "TK_AU_ISSencer_2221",
+        "verification_status_in_register": "now verified, attribution-disputed (this session)"
+      },
+      {
+        "city": "London",
+        "institution": "British Library",
+        "shelfmark": "Or 9493",
+        "url_slug": "UK_or_9493",
+        "verification_status_in_register": "verified"
+      }
+    ],
+    "non_filiation_mention": "The Anatolia DB Mat 965 prose mentions 'Manuscripts held in Ankara, Istanbul, Erzurum, London, AND BAKU collections': but the filiations panel itself does NOT list a Baku codex. The 'Baku' mention in the prose summary is consistent with the project's existing rejected_baku_doerfer_unspecified entry (Baku = Yazıcı 1986/2006 published edition, NOT a separate codex). No new evidence for a Baku witness.",
+    "implications": [
+      "The Anatolia DB confirms the exact same TEIS Yesevi 5-witness list as TEIS Yesevi (Mat 965 + 4 filiated codices). No additional TEIS Yesevi witnesses surface from Turkish/Anatolia sources.",
+      "Possible additional non-canonical fragments may exist in mecmua collections (e.g. Hacı Bektaş-ı Veli BY0000010729: provisional candidate from this session)."
+    ]
+  },
+  "additional_collections_searched_via_yek": {
+    "_note": "The portal.yek.gov.tr / www.yazmalar.gov.tr alias union catalogue covers the following key Turkish institutions. None returned a Cihanşah Hakîkî divan witness:",
+    "covered_via_yek_search": [
+      "Süleymaniye Kütüphanesi (Esad Efendi, Hacı Reşit Bey sub-collections: but NOT Fatih sub-collection)",
+      "Millet Yazma Eser Kütüphanesi (Ali Emiri Manzum sub-collection)",
+      "Milli Kütüphane (Ankara) Yazmalar Koleksiyonu",
+      "Konya Yazma Eserler Bölge Müdürlüğü (Bölge Yazma Eserler + Hacı Bektaş-ı Veli Dergahı)",
+      "Süleymaniye Fethi Sezai Türkmen Yazma sub-collection",
+      "Beyazıt Yazma Eser Kütüphanesi, Hacı Selim Ağa Yazma Eser Kütüphanesi, Selimiye, İnebey, Balıkesir, Kastamonu, Konya, Ziya Bey, Hasan Paşa, Vahit Paşa, Amasya, Erzurum, Yusuf Ağa, Ziya Gökalp, Raşit Efendi, Manisa (all listed in YEK's 'Bağlı Kütüphaneler' = affiliated libraries footer; all queried implicitly via genel_notlar)"
+    ],
+    "not_covered_via_yek": [
+      "Süleymaniye Fatih sub-collection (Fatih 3808 specifically: verified absent from YEK shelfmark search)",
+      "Topkapı Sarayı Müzesi Kütüphanesi (TSMK)",
+      "Atatürk Üniversitesi Erzurum İsmail Saib Sencer collection (the disputed 2221 codex)",
+      "Ankara Üniversitesi DTCF Kütüphanesi (Ankara DTCF)"
+    ],
+    "yek_zero_witnesses_finding": "After 30+ search-term variants across yazar_adi (author), eser_adi (title), genel_notlar (notes), and yer_numarasi (shelfmark) fields, ZERO confirmed Cihanşah Hakîkî divan witnesses surface in portal.yek.gov.tr. All 9 hit results across Cihanşah/Hakîkî/Karakoyunlu queries are either (a) historical-context FPs (Cihanşah mentioned as a ruler in dedicated work, history work, or münşeât collection), (b) namesake-Hakîkî FPs (5+ different non-Karakoyunlu Hakîkîs), or (c) one provisional candidate (Hacı Bektaş-ı Veli BY0000010729) flagged for visual confirmation. The canonical Mat 965 / Fatih 3808 / AU 2221 / BL Or 9493 / Tehran 8198 are NONE of them in YEK."
+  },
+  "blocked_or_unsearchable_portals": [
+    {
+      "portal": "yazmalar.gov.tr (direct)",
+      "status": "merged_with_yek",
+      "evidence": "DNS resolution: www.yazmalar.gov.tr -> 88.255.144.228 (alias for portal.yek.gov.tr). yazmalar.gov.tr -> 88.255.144.229. Effective access via portal.yek.gov.tr is the same dataset."
+    },
+    {
+      "portal": "yazmaeserler.gov.tr",
+      "status": "non_existent_domain",
+      "evidence": "DNS check returns 'Non-existent domain'. This URL is not a real portal: it appears in older prior project notes but is not a current website."
+    },
+    {
+      "portal": "Topkapı Sarayı Müzesi Kütüphanesi (TSMK)",
+      "status": "no_online_search",
+      "evidence": "TSMK does not publish its catalogue online. The Karatay 1961-1969 printed catalogue (Türkçe Yazmalar Kataloğu) is the only resource. Karatay catalogue Vol I-II (Internet Archive) is image-only PDF; OCR not available. No Turkey-sweep hits were possible."
+    },
+    {
+      "portal": "Atatürk Üniversitesi Erzurum İsmail Saib Sencer collection (direct)",
+      "status": "no_online_catalogue_located",
+      "evidence": "Atatürk Üniv. has no public manuscript catalogue interface. Only via YEK or Anatolia DB, both verified to NOT index this collection's contents directly."
+    },
+    {
+      "portal": "Ankara Üniversitesi DTCF Kütüphanesi (direct)",
+      "status": "no_online_search_via_anatolia_or_yek",
+      "evidence": "Same as above: DTCF library has no public manuscript-catalogue search. Anatolia DB does not index DTCF specifically (its TK_AU_* slug is for Atatürk Üniv. Erzurum, not Ankara DTCF)."
+    },
+    {
+      "portal": "Beyazıt Devlet Kütüphanesi",
+      "status": "covered_via_yek",
+      "evidence": "Listed in YEK 'Bağlı Kütüphaneler' footer. Implicitly searched via the genel_notlar / eser_adi / yazar_adi terms above. No Cihanşah Hakîkî hits surfaced from Beyazıt records."
+    }
+  ],
+  "new_witnesses_or_candidates": [
+    {
+      "rank": "candidate",
+      "candidate_id": "konya_haci_bektas_veli_010729_provisional",
+      "shelfmark": "BY0000010729",
+      "collection": "Hacı Bektaş-ı Veli Dergahı (housed at Konya Yazma Eserler Bölge Müdürlüğü)",
+      "yek_id": "709791",
+      "verification_status": "visual confirmation pending",
+      "decoration_data_captured_so_far": "None: cataloguer's notes_field is dominated by the poet list. Paper, binding, decoration fields all null. 'Yoğun nem lekeleri mevcuttur' (heavy water-damage stains) is the only physical observation.",
+      "confidence_rating": "low"
+    }
+  ],
+  "decoration_data_captured_for_pending_witnesses": {
+    "summary": "Anatolia DB records for both pending witnesses (Süleymaniye Fatih 3808 and Atatürk Üniv./Ankara DTCF Sencer 2221) populate institution / shelfmark / date / folios / columns / ruled lines / language / contents: but DO NOT POPULATE paper, decoration, illumination, or binding fields. The only decoration-relevant datum captured: Süleymaniye Fatih 3808 has a Maḥmūd I waqf seal on f. 1a (provenance marker, mid-18th-c. Ottoman institutional waqf indicator). NO paper-type or illumination evidence retrievable from the Anatolia DB. Direct catalogue access (Süleymaniye in-person OR Demirci 1997) needed.",
+    "by_witness": {
+      "suleymaniye_fatih_3808": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "seals": "Mahmud I waqf record + seal on f. 1a",
+        "data_source": "Islamisation of Anatolia DB (TK_Sul_Fatih_3808)",
+        "confidence": "unknown: paper/illumination/binding columns simply not present"
+      },
+      "atatürk_university_or_dtcf_2221": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "seals": null,
+        "data_source": "Islamisation of Anatolia DB (TK_AU_ISSencer_2221)",
+        "confidence": "unknown: paper/illumination/binding columns simply not present"
+      }
+    }
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-02",
+    "artifact_status": "current",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": true,
+    "follow_up_type": "institutional_query"
+  }
+}

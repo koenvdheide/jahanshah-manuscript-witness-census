@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "session_label": "Ottoman Chunk 3 / Avenue 6: Sufi tekke holdings + dedicated Yusuf Hakîkî Bursavi homonym audit",
+  "session_id": "ottoman-chunk3-sufi-tekke-yusuf-homonym-audit-2026-05-11",
+  "date": "2026-05-11",
+  "scope": "Probe Konya Mevlana Müzesi / Yusufağa, Hacı Bektaş Veli Müzesi, Bursa İl Halk Kütüphanesi, and Edirne Selimiye Yazma Eserler for Cihanşah Qaraqoyunlu / Hakîkî witnesses. Concurrent dedicated Yusuf Hakîkî Bursavi (d. 893 AH / 1487 CE) homonym audit; the PRIMARY false-positive surface for Cihanşah Hakîkî searches in Ottoman tekke catalogues.",
+  "context_note": "Chunk 3 of 4 splitting the lost Parallel probe C Ottoman scope (Parallel probe C terminated failed during final write after 61 tool uses without writing output). Focus is the disambiguation work; expected witness count is 0 new Cihanşah hits. The deliverable IS the homonym audit.",
+  "method_summary": {
+    "tier_1_portal_recon": "WebSearch site-restricted + free-text WebSearch to enumerate published catalogue surfaces and TEIS / TDV İslâm Ansiklopedisi authoritative entries.",
+    "tier_2_authoritative_canon_check": "WebFetch TEIS HAKÎKÎ, Cihânşâh + TEIS HAKÎKÎ, Yûsuf-ı Hakîkî Baba entries + TDV Yusuf Hakîkî entry to enumerate the complete Yusuf Hakîkî Bursavi manuscript surface for direct comparison against any Cihanşah candidates.",
+    "tier_3_per_hit_disambiguation": "Every 'Hakîkî' surface classified via date filter (pre/post-872 AH), context cluster (Persian-Turkic bilingual + Qaraqoyunlu titulature vs Bursa/Aksaray/Bektaşi Turkish-only), and Hurufi-adjacency analysis per current poetry-witness register methodology (Konya Hacı Bektaş BY0000010729 entry)."
+  },
+  "portals": [
+    {
+      "portal_name": "Konya Mevlana Müzesi / Yusufağa Kütüphanesi",
+      "canonical_urls": [
+        "https://konyamuze.gov.tr/",
+        "https://www.konya.gov.tr/yusuf-aga-kutuphanesi",
+        "https://konya.kutuphane.gov.tr/",
+        "https://konya.yek.gov.tr/"
+      ],
+      "method": "WebSearch site-restricted + free-text + WebFetch TEIS / TDV authoritative entries",
+      "queries_executed": [
+        {
+          "query": "site:konyamuze.gov.tr OR 'Konya Mevlana' yazma 'Cihanşah' OR 'Hakîkî'",
+          "result_count": 0,
+          "outcome": "Zero indexed Cihanşah hits on konyamuze.gov.tr"
+        },
+        {
+          "query": "'Yusufağa Kütüphanesi' yazma Hakîkî OR Cihanşah",
+          "result_count": 2,
+          "outcome": "TEIS Cihanşah entry + Şühûd-nâme Risâlesi article. Neither references a Yusufağa Kütüphanesi witness. TEIS confirms the canonical 5-witness Cihanşah corpus (BL Or 9493, Matenadaran 965, Süleymaniye Fatih 3808, Ankara DTCF İsmail Saib I.2221, Tehran University 8198); NONE in Konya."
+        },
+        {
+          "query": "'Mevlana Müzesi' yazma katalog Hakîkî OR Cihanşah Karakoyunlu",
+          "result_count": 10,
+          "outcome": "Mevlana Müzesi has the Gölpınarlı 1311-volume catalogue (3 vols. published 1967-1972). One result is a Cihanşah Hakîkî Divan PDF (Muhsin Macit 2002 edition), but the edition uses the 4 first-known witnesses, NOT a Mevlana Müzesi codex."
+        },
+        {
+          "query": "'Mevlana Müzesi' 2430 Hakîkî Yusuf Divan nüsha",
+          "result_count": 10,
+          "outcome": "Mevlana Müzesi 2430 is consistently attested as Yusuf Hakîkî Baba's Hakîkî-nâme/Divan in TEIS and TDV ansiklopedisi entries."
+        }
+      ],
+      "verdict": "PROBED_NEGATIVE_FOR_CIHANSAH; Mevlana Müzesi 2430 verified as Yusuf Hakîkî Bursavi (NOT Cihanşah). Yusufağa Kütüphanesi shows zero indexed Cihanşah hits.",
+      "yusuf_hakiki_finding": "Mevlana Müzesi Kütüphanesi 2430 = Yusuf Hakîkî Baba's Hakîkî-nâme/Divan. Sadi Somuncuoğlu collection. Per TEIS + TDV. NOT Cihanşah Qaraqoyunlu."
+    },
+    {
+      "portal_name": "Hacı Bektaş Veli Müzesi",
+      "canonical_urls": [
+        "https://www.hacibektas.gov.tr/haci-bektas-veli-muzesi",
+        "https://muze.gov.tr/muze-detay?SectionId=HCB01&DistId=MRK",
+        "http://haktuv.org.tr/hacibektas-veli-muzesi/"
+      ],
+      "method": "WebSearch site-restricted",
+      "queries_executed": [
+        {
+          "query": "'Hacı Bektaş Veli Müzesi' yazma 'Hakîkî' OR 'Cihanşah' OR 'Yusuf Hakîkî'",
+          "result_count": 10,
+          "outcome": "All hits are museum-info / tourism / general info pages. Key catalogue note: 'Books related to Bektashism were catalogued and sent to the National Library'; i.e. the Hacı Bektaş tekke manuscript corpus is now physically AT Milli Kütüphane Ankara, not at the museum-on-site. This means the current poetry-witness register entry konya_haci_bektas_by0000010729 (recovered via YEK) represents the surviving surface, and no new Hacı Bektaş witnesses are reachable via direct museum probing."
+        }
+      ],
+      "verdict": "PROBED_NEGATIVE; Hacı Bektaş tekke holdings absorbed into Milli Kütüphane; current poetry-witness register's konya_haci_bektas_by0000010729 entry already exhausts this surface.",
+      "current_register_overlap": "Existing v1.0 entry konya_haci_bektas_by0000010729 (yek_id 709791): 150-folio Bektaşi mecmua with 'Hakîkî' at position 163 in 330-poet alphabetical-ish list with non-Hurufi local neighbors (Mestî/Bidarî/Resmî/Hevaî/Naimî/Riyazî). Marked 'candidate_probably_non_cihansah'; likely Anatolian aşık-tradition Hakîkî per the cross-cluster heuristic."
+    },
+    {
+      "portal_name": "Bursa İl Halk Kütüphanesi / Bursa Yazma ve Eski Basma Eserler Kütüphanesi (İnebey)",
+      "canonical_urls": [
+        "https://bursa.kutuphane.gov.tr/",
+        "https://koha.ekutuphane.gov.tr/cgi-bin/koha/opac-library.pl?branchcode=29",
+        "https://bursa.ktb.gov.tr/TR-322144/mudurlugumuze-bagli-kutuphaneler.html"
+      ],
+      "method": "WebSearch site-restricted + free-text",
+      "queries_executed": [
+        {
+          "query": "site:bursa.kultur.gov.tr OR 'Bursa İl Halk' yazma 'Cihanşah' OR 'Yusuf Hakîkî'",
+          "result_count": 0,
+          "outcome": "Zero indexed Cihanşah / Yusuf Hakîkî hits on Bursa cultural-ministry domain."
+        },
+        {
+          "query": "'Bursa İl Halk Kütüphanesi' OR 'Bursa Yazma' Hakîkî Divan Karakoyunlu",
+          "result_count": 10,
+          "outcome": "Bursa Yazma ve Eski Basma Eserler Kütüphanesi confirmed as Turkey's 3rd-largest manuscript library (8,389 manuscripts) housed in 14th-century İnebey medrese; ALL search results are library-info pages or general Bursa-cultural-heritage articles, none containing Hakîkî/Cihanşah/Karakoyunlu witness references. Notably the canonical 5 Cihanşah witnesses (BL/Matenadaran/Süleymaniye/Ankara/Tehran) are repeatedly enumerated WITHOUT a Bursa entry."
+        }
+      ],
+      "verdict": "PROBED_NEGATIVE; Bursa İl Halk / İnebey holdings do not surface a Cihanşah witness in indexed search. Caveat: site-restricted Google indexing may miss JS-rendered catalogue records.",
+      "yusuf_hakiki_homonym_concern": "Bursa is THE primary surface for Yusuf Hakîkî Bursavi attribution risk (he taught at Bursa). The probe finding 0 Yusuf Hakîkî hits in indexed search suggests Yusuf Hakîkî's manuscripts are NOT primarily held in Bursa; TEIS / TDV attestation puts them at Konya (Mevlana Müzesi 2430, İl Halk Uzluk 6968), Manisa (Murâdiye 1296), Süleymaniye (Hacı Mahmud Efendi 2974, 2574), and possibly Cairo Hidiviyye. Bursa as a Yusuf Hakîkî FP-surface is OVER-INDEXED in the original Avenue 6 hypothesis."
+    },
+    {
+      "portal_name": "Edirne Selimiye Yazma Eserler Kütüphanesi",
+      "canonical_urls": [
+        "https://selimiye.yek.gov.tr/",
+        "http://www.selimiye.yek.gov.tr/Home/ShowLink?LINK_CODE=3"
+      ],
+      "method": "WebSearch site-restricted + free-text",
+      "queries_executed": [
+        {
+          "query": "site:edirne.gov.tr OR 'Edirne Selimiye' yazma 'Hakîkî' OR 'Cihanşah'",
+          "result_count": 0,
+          "outcome": "Zero indexed Cihanşah hits on edirne.gov.tr domain."
+        },
+        {
+          "query": "'Edirne' OR 'Selimiye' yazma eserler Hakîkî Yusuf Cihansah",
+          "result_count": 10,
+          "outcome": "Selimiye Yazma Eser Kütüphanesi confirmed as a YEK child portal hosting 2,600 manuscript volumes (3,384 items) + 5,617 printed works. All results are library-overview / institutional articles; none reference a Cihanşah / Hakîkî witness."
+        }
+      ],
+      "verdict": "PROBED_NEGATIVE; Edirne Selimiye holdings do not surface a Cihanşah witness in indexed search. The single confirmed Cihanşah text reference on TEIS does not cite Selimiye holdings."
+    }
+  ],
+  "homonym_disambiguation_audit": {
+    "purpose": "Per-hit classification of every 'Hakîkî' surface encountered in this chunk. The audit IS the deliverable.",
+    "classification_categories": {
+      "cihansah_qaraqoyunlu": "Date pre-872 AH (1467 CE), Persian-Turkic bilingual content, Qaraqoyunlu titulature, Hurufi-cluster mecmûʿa adjacency",
+      "yusuf_hakiki_bursavi": "Date post-893 AH (1487 CE) with Bursa/Aksaray/Bektaşi context, Turkish-only content, 'Hakîkî Baba' / 'Hakîkî Bursavi' titulature, Bektashi-Hurufi şathiyat content",
+      "anatolian_asik_hakiki": "17th-19th c. folk tradition, non-Hurufi local neighbor poets in mecmûʿa",
+      "other_namesake": "None of the above",
+      "indeterminate": "Insufficient data; flag for follow-up"
+    },
+    "hits": [
+      {
+        "hit_id": "yusuf_hakiki_mevlana_muzesi_2430",
+        "source": "TEIS HAKÎKÎ, Yûsuf-ı Hakîkî Baba entry + TDV İslâm Ansiklopedisi Yusuf Hakîkî entry",
+        "shelfmark": "Konya Mevlâna Müzesi Kütüphanesi 2430",
+        "collection": "Sadi Somuncuoğlu collection (acquired into Mevlana Müzesi)",
+        "work": "Hakîkî-nâme (Divan)",
+        "classification": "yusuf_hakiki_bursavi",
+        "reasoning": "TEIS + TDV both attest this codex as Yusuf Hakîkî Bursavi's Divan, NOT Cihanşah Qaraqoyunlu. Yusuf Hakîkî d. 893 AH / 1487 CE in Aksaray; he is Somuncu Baba's son and a Bayrami-Melami / Bektashi-Hurufi adept. The codex content matches his Turkish-only mystical-didactic register, distinct from Cihanşah's Persian-Turkic bilingual royal-court ghazals.",
+        "fp_risk_for_cihansah_search": "VERY HIGH; a casual catalogue search for 'Hakîkî' in Konya Mevlana Müzesi would surface this entry as a 5-witness Cihanşah corpus candidate. Disambiguation requires reading the codex content or consulting TEIS/TDV."
+      },
+      {
+        "hit_id": "yusuf_hakiki_konya_il_halk_uzluk_6968",
+        "source": "TEIS + TDV + Çavuşoğlu 2009 critical edition",
+        "shelfmark": "Konya İl Halk Kütüphanesi Uzluk 6968",
+        "collection": "Uzluk koleksiyonu (Konya provincial public library)",
+        "work": "Mahabbet-nâme / Muhabbetnâme (3,696-beyit mesnevî)",
+        "classification": "yusuf_hakiki_bursavi",
+        "reasoning": "Mahabbet-nâme is uniquely Yusuf Hakîkî's mystical mesnevî, not a Cihanşah work. Cihanşah's corpus is Divan-only (ghazals + tuyuğs). A Mahabbet-nâme attribution to 'Hakîkî' is diagnostically Yusuf Hakîkî.",
+        "fp_risk_for_cihansah_search": "LOW (work-title disambiguates) but the author-name index 'Hakîkî' alone could surface this as a false positive in unstructured search."
+      },
+      {
+        "hit_id": "yusuf_hakiki_manisa_muradiye_1296",
+        "source": "TEIS + TDV + Çavuşoğlu 2009",
+        "shelfmark": "Manisa Murâdiye Kütüphanesi 1296",
+        "collection": "Murâdiye Kütüphanesi (Manisa)",
+        "work": "Mahabbet-nâme (175 folios, 11 lines/page, copied by Muhammed ibni Paşa in 894 AH / 1489 CE; one year after author's death)",
+        "classification": "yusuf_hakiki_bursavi",
+        "reasoning": "Same as Uzluk 6968; Mahabbet-nâme is uniquely Yusuf Hakîkî's. The 894 AH (1489) copy-date is one year post Yusuf Hakîkî's death (893 AH); the colophon explicitly identifies him as the recently-deceased author.",
+        "fp_risk_for_cihansah_search": "LOW (work-title + colophon date both disambiguate)."
+      },
+      {
+        "hit_id": "yusuf_hakiki_suleymaniye_hacimahmudefendi_2974",
+        "source": "TEIS",
+        "shelfmark": "Süleymaniye Kütüphanesi Hacı Mahmud Efendi 2974",
+        "work": "Tasavvuf Risâlesi",
+        "classification": "yusuf_hakiki_bursavi",
+        "reasoning": "Mystical-theological prose treatise attributed to Yusuf Hakîkî in TEIS. Distinct from Cihanşah's Divan-only corpus.",
+        "fp_risk_for_cihansah_search": "LOW (prose treatise; Cihanşah has no attested prose works)."
+      },
+      {
+        "hit_id": "yusuf_hakiki_suleymaniye_hacimahmudefendi_2574",
+        "source": "TEIS + TDV",
+        "shelfmark": "Süleymaniye Kütüphanesi Hacı Mahmud Efendi 2574",
+        "work": "Metâli'u'l-Îmân",
+        "classification": "yusuf_hakiki_bursavi",
+        "reasoning": "Mystical-theological treatise attributed to Yusuf Hakîkî in TEIS/TDV. Per TDV the codex also contains three sufism-related sub-treatises 'likely attributable to Yûsuf Hakîkî'. Distinct from Cihanşah's Divan-only corpus.",
+        "fp_risk_for_cihansah_search": "LOW (prose treatise + theological-doctrinal register; Cihanşah has no attested prose works)."
+      },
+      {
+        "hit_id": "yusuf_hakiki_sadi_somuncuoglu_private",
+        "source": "TEIS",
+        "shelfmark": "Sadi Somuncuoğlu private collection (two copies of Hakîkî-nâme/Divan); Mevlana Müzesi 2430 was one of these",
+        "work": "Hakîkî-nâme / Divan",
+        "classification": "yusuf_hakiki_bursavi",
+        "reasoning": "Family-collector pedigree (Somuncuoğlu = descendants of Somuncu Baba, Yusuf Hakîkî's father). Provenance alone identifies the work as Yusuf Hakîkî's.",
+        "fp_risk_for_cihansah_search": "MODERATE; provenance is not catalogued in every aggregator; a generic 'Hakîkî Divan' index entry could be confused with Cihanşah's Divan."
+      },
+      {
+        "hit_id": "yusuf_hakiki_cairo_hidiviyye_unverified",
+        "source": "TEIS (provenance unverified; 'Cairo Hidiviyye Kütüphanesi, undetermined content and volume')",
+        "shelfmark": "Cairo Hidiviyye Kütüphanesi (likely modern Dār al-Kutub al-Miṣriyya)",
+        "work": "Et-Tesnîm + Er-Rahîk el-Mahtûm (both attributed but not located in indexed catalogues)",
+        "classification": "indeterminate",
+        "reasoning": "TEIS-attributed Yusuf Hakîkî works in Cairo Hidiviyye but no folio count / shelfmark / inspection. Could be a different Hakîkî or a misattribution. Flag for future scope follow-up via Dār al-Kutub.",
+        "fp_risk_for_cihansah_search": "LOW (work titles disambiguate; Cihanşah corpus is Divan-only)."
+      },
+      {
+        "hit_id": "haci_bektas_by0000010729_already_in_v1",
+        "source": "current poetry-witness register konya_haci_bektas_by0000010729 (re-verified for this chunk)",
+        "shelfmark": "BY0000010729 (yek_id 709791)",
+        "collection": "Konya Hacı Bektaş-ı Veli Dergahı (via YEK)",
+        "work": "150-folio Bektaşi mecmua with 'Hakîkî' at position 163 in 330-poet alphabetical-ish list",
+        "classification": "anatolian_asik_hakiki",
+        "reasoning": "Mecmûʿa adjacency analysis: Hakîkî sits with non-Hurufi local neighbors (Mestî/Bidarî/Resmî/Hevaî/Naimî/Riyazî). Nesîmî at position 38, Şah Hatâî at 345, Şah İsmail Bahadır at 321; far elsewhere in the codex. The diagnostic Hurufi-doctrine cluster adjacency is NOT codex-layout-confirmed. Likely an Anatolian aşık-tradition Hakîkî per the Afyon Gedik 13918 cluster heuristic.",
+        "fp_risk_for_cihansah_search": "HIGH (already documented in v1.0 as a discovered FP)."
+      }
+    ],
+    "audit_summary": {
+      "total_hits_classified": 8,
+      "cihansah_qaraqoyunlu_hits": 0,
+      "yusuf_hakiki_bursavi_hits": 6,
+      "anatolian_asik_hakiki_hits": 1,
+      "other_namesake_hits": 0,
+      "indeterminate_hits": 1,
+      "notable_finding": "Yusuf Hakîkî Bursavi's manuscript surface is concentrated in Konya (Mevlana Müzesi 2430 + İl Halk Uzluk 6968), Manisa (Murâdiye 1296), and Istanbul (Süleymaniye Hacı Mahmud Efendi 2974 + 2574). Bursa; the city where Yusuf Hakîkî taught; is NOT a primary holding location for his manuscripts. The 'Bursa = Yusuf Hakîkî FP-surface' hypothesis in the original Avenue 6 scope is OVER-INDEXED. The real FP-surface is Konya Mevlana Müzesi 2430.",
+      "current_register_impact": "ZERO new Cihanşah witnesses. The dedicated Yusuf Hakîkî audit confirms the FP-surface is well-characterized; 6 attested Yusuf Hakîkî witnesses (Mevlana Müzesi 2430, İl Halk Uzluk 6968, Manisa Murâdiye 1296, Süleymaniye Hacı Mahmud Efendi 2974 + 2574, Sadi Somuncuoğlu private) plus 1 indeterminate (Cairo Hidiviyye)."
+    }
+  },
+  "summary": {
+    "portals_probed": 4,
+    "portals_reachable_landing": 4,
+    "portals_reachable_with_search_form_surfaced": 0,
+    "portals_blocked_cert_error": 0,
+    "verified_cihansah_hits_new": 0,
+    "yusuf_hakiki_hits_documented": 6,
+    "anatolian_asik_hakiki_hits_documented": 1,
+    "indeterminate_hits_documented": 1,
+    "current_register_impact": "ZERO new Cihanşah Qaraqoyunlu witnesses added. The Yusuf Hakîkî homonym audit is the substantive deliverable; it enumerates the Yusuf Hakîkî Bursavi manuscript surface (6 attested + 1 indeterminate) and pinpoints Konya Mevlana Müzesi 2430 as the highest-risk FP surface for casual 'Hakîkî Divan' searches.",
+    "methodological_findings": [
+      "TEIS (teis.yesevi.edu.tr) and TDV İslâm Ansiklopedisi (islamansiklopedisi.org.tr) are the authoritative disambiguation surfaces for Cihanşah vs. Yusuf Hakîkî homonyms in Turkish-language scholarship. Direct portal probing of Konya/Bursa/Edirne local domains adds nothing beyond what TEIS/TDV already enumerate.",
+      "Bursa is NOT a primary FP-surface for Yusuf Hakîkî manuscripts despite being his teaching location. The real concentration is Konya (Mevlana Müzesi + İl Halk Uzluk) + Manisa Murâdiye + Süleymaniye Hacı Mahmud Efendi.",
+      "Hacı Bektaş tekke holdings have been absorbed into Milli Kütüphane Ankara; the v1.0 entry konya_haci_bektas_by0000010729 (recovered via YEK) already exhausts the on-site surface.",
+      "Edirne Selimiye holdings (2,600 manuscript volumes) show zero indexed Cihanşah or Yusuf Hakîkî hits; consistent with Yusuf Hakîkî's geographical concentration in Konya/Aksaray/Manisa and Cihanşah's being collected in non-Ottoman channels (BL, Matenadaran, Tehran)."
+    ],
+    "residual_gaps_for_v2": [
+      "Cairo Hidiviyye Kütüphanesi (modern Dār al-Kutub al-Miṣriyya): confirm whether Yusuf Hakîkî's Et-Tesnîm + Er-Rahîk el-Mahtûm are present and distinguish from any potential Cihanşah witness via direct catalogue probe.",
+      "Konya Mevlana Müzesi 2430 + İl Halk Uzluk 6968: direct codex inspection would confirm Yusuf Hakîkî attribution and rule out any chance of mixed-codex Cihanşah excerpt embedded inside.",
+      "Bursa İnebey Yazma Kütüphanesi (8,389 manuscripts, separate from İl Halk): not directly probed; recommend Playwright-headed pass on its dedicated catalogue if future scope expands to Anatolian provincial Bektaşi-Hurufi mecmua-mining."
+    ]
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-11",
+    "artifact_status": "appendix",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

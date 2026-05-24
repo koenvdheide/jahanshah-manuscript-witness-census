@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "generated": "2026-05-20",
+  "purpose": "Current-status index for structured extract artifacts outside the canonical witness register.",
+  "record_fields": {
+    "file": "Extract artifact filename under data/extracts.",
+    "artifact_type": "Short classification of the extract artifact.",
+    "current": "True when this artifact is the current authority for its extract scope.",
+    "release_blocker": "True only if the artifact leaves a release blocker open.",
+    "note": "Human-readable status note."
+  },
+  "records": [
+    {
+      "file": "teece_2016_pir_budaq_corpus.json",
+      "artifact_type": "structured_corpus_probe",
+      "current": true,
+      "release_blocker": false,
+      "note": "Teece 2016 Pir Budaq library mining and Appendix B disambiguation; net finding zero new Jahanshah poetry witnesses."
+    },
+    {
+      "file": "alevi_hakiki_incipit_concordance.json",
+      "artifact_type": "incipit_concordance",
+      "current": true,
+      "release_blocker": false,
+      "note": "Reusable concordance for the 11 published Alevi-community Hakiki poems already represented by the Diyarbakir and Ilkhchi register entries."
+    },
+    {
+      "file": "dogan_kaya_2011_conk_corpus.json",
+      "artifact_type": "candidate_route_reconstruction",
+      "current": true,
+      "release_blocker": false,
+      "note": "Structured reconstruction of Dogan Kaya's 35-conk corpus for future Hakiki candidate triage; not witness-count evidence."
+    },
+    {
+      "file": "albanian_hurufi_bektashi_ali_emiri_003094.json",
+      "artifact_type": "candidate_route_extract",
+      "current": true,
+      "release_blocker": false,
+      "note": "Open-web Balkan Hurufi-Bektashi candidate route requiring catalogue, image, and text verification before any register impact."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+* text=auto eol=lf
+*.cff text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+docs/superpowers/ export-ignore
+notes/legacy_dm/ export-ignore
+.codex/ export-ignore
+.claude/ export-ignore
+*.pdf export-ignore
+*.tif export-ignore
+*.tiff export-ignore
+*.jpg export-ignore
+*.jpeg export-ignore
+*.png export-ignore
+*.webp export-ignore

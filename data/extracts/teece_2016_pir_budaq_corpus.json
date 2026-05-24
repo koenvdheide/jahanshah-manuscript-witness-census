@@ -1,0 +1,1059 @@
+{
+  "extraction_metadata": {
+    "extraction_tool": "Poppler pdftotext -layout -enc UTF-8 via PowerShell. Python/PyMuPDF was requested, but no usable Python executable was available.",
+    "pdf_pages_detected": 744,
+    "output_scope": "Only this JSON file was written."
+  },
+  "vienna_safineh_n_f_143": {
+    "status": "found",
+    "shelfmark": "Vienna, Osterreichische Nationalbibliothek, N.F. 143",
+    "date_ah": "865 AH; Muharram 865 in catalogue",
+    "date_ce": "1460 CE; 16 October to 14 November 1460 in catalogue",
+    "folios": "67 folios in chapter prose; 68 folios in catalogue entry, with colophon cited on fol. 68b",
+    "dimensions_cm": {
+      "bound_side": 6.4,
+      "long_side": 17.8,
+      "rulings_bound_side": 3.7,
+      "rulings_long_side": 11.2
+    },
+    "calligrapher": "Shaykh Mahmud Pir Budaqi",
+    "dedicatee": "Abu'l-Fath Pir Budaq Bahadur Khan",
+    "place_of_production": "dar al-Mulk Shiraz",
+    "format": "small oblong safineh; opening unwan also calls it majmua al-ashar",
+    "script": "fine elegant nastaliq",
+    "language": "Persian",
+    "poets_present": [
+      {
+        "poet_name": "Qasim al-Anvar Tabrizi",
+        "takhallus_if_known": "Qasim",
+        "folio_range": "3a-7b",
+        "number_of_poems_if_stated": null,
+        "form": "ghazal",
+        "note": "Same Qasim al-Anvar linked with Pir Budaq library."
+      },
+      {
+        "poet_name": "Khoja / Khoju",
+        "takhallus_if_known": "Khoja",
+        "folio_range": "8a-11a",
+        "number_of_poems_if_stated": null,
+        "form": "ghazal",
+        "note": "Probably the same Khoja represented in Ouseley 141, but not fully identified here."
+      },
+      {
+        "poet_name": "Hasan",
+        "takhallus_if_known": "Hasan",
+        "folio_range": "11b-15b",
+        "number_of_poems_if_stated": null,
+        "form": "ghazal",
+        "note": "Only the name or takhallus Hasan is stated."
+      },
+      {
+        "poet_name": "Sa'di",
+        "takhallus_if_known": null,
+        "folio_range": "15b-17a",
+        "number_of_poems_if_stated": null,
+        "form": "ghazal",
+        "note": null
+      },
+      {
+        "poet_name": "Salman Savaji",
+        "takhallus_if_known": null,
+        "folio_range": "17a-20a; another poem after fol. 29b",
+        "number_of_poems_if_stated": null,
+        "form": "ghazal",
+        "note": "Teece notes page or quire shuffling after the Khusrau section."
+      },
+      {
+        "poet_name": "Amir Khusrau Dehlavi",
+        "takhallus_if_known": "Khusrau",
+        "folio_range": "20b-29b",
+        "number_of_poems_if_stated": null,
+        "form": "ghazal",
+        "note": null
+      },
+      {
+        "poet_name": "Hafez",
+        "takhallus_if_known": null,
+        "folio_range": "37a-42b",
+        "number_of_poems_if_stated": null,
+        "form": "ghazal",
+        "note": "The section begins in the middle of a poem."
+      },
+      {
+        "poet_name": "Kamal Khujandi",
+        "takhallus_if_known": "Kamal",
+        "folio_range": "42b-50b; again 57b-58b",
+        "number_of_poems_if_stated": null,
+        "form": "ghazal",
+        "note": null
+      },
+      {
+        "poet_name": "Iraqi",
+        "takhallus_if_known": null,
+        "folio_range": "51a-54a",
+        "number_of_poems_if_stated": null,
+        "form": "ghazal",
+        "note": null
+      },
+      {
+        "poet_name": "Humam (?)",
+        "takhallus_if_known": null,
+        "folio_range": null,
+        "number_of_poems_if_stated": null,
+        "form": "ghazal",
+        "note": "Named in catalogue contents list, not folio-localized in chapter prose."
+      },
+      {
+        "poet_name": "Auhadi",
+        "takhallus_if_known": null,
+        "folio_range": "54a-57b",
+        "number_of_poems_if_stated": null,
+        "form": "ghazal",
+        "note": null
+      },
+      {
+        "poet_name": "Jalal",
+        "takhallus_if_known": "Jalal",
+        "folio_range": "59a-60b",
+        "number_of_poems_if_stated": null,
+        "form": "ghazal",
+        "note": null
+      },
+      {
+        "poet_name": "Sayen",
+        "takhallus_if_known": null,
+        "folio_range": null,
+        "number_of_poems_if_stated": null,
+        "form": "ghazal",
+        "note": "Named in catalogue contents list; final folios are difficult to identify in the chapter prose."
+      }
+    ],
+    "illuminations_summary": "Opening shamseh on fol. 1a dedicates the volume to Pir Budaq; opening unwan on fol. 1b identifies a majmua al-ashar. Dedication and unwan are in white on a gold ground.",
+    "binding_summary": "Contemporary leather binding apparently retained but turned inside out. Original dark nearly black leather covers have embossed floral vine, knotwork, punchwork, and burnished relief. Inner doublures are filigreed cut leather over blue paper with gold highlights and contrasting gold tones.",
+    "teece_page_citations": [
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      102,
+      111,
+      399,
+      400,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439
+    ],
+    "extraction_caveats": [
+      "No poem counts are given.",
+      "Chapter prose and catalogue differ on folio count.",
+      "Final folios are difficult to identify in prose; catalogue adds Humam (?) and Sayen."
+    ]
+  },
+  "bodleian_ouseley_131": {
+    "status": "found",
+    "shelfmark": "Oxford, Bodleian Library, Ouseley 131",
+    "date_ah": "865 AH by group association; colophon is in Ouseley 140",
+    "date_ce": "1460 CE",
+    "folios": "63 folios, including final blank folio; Ethe gives 62",
+    "dimensions_cm": {
+      "vertical": 16.1,
+      "width": 8.0,
+      "rulings_vertical": 10.6,
+      "rulings_width": 4.2
+    },
+    "calligrapher": "Shaykh Mahmud Pir Budaqi, by group association",
+    "dedicatee": "Pir Budaq; shamseh dedication on fol. 1a",
+    "place_of_production": "Shiraz, by group colophon",
+    "format": "small upright pocket-size fascicle; not safineh",
+    "script": "elegant but thick/plump nastaliq; ten horizontal lines/five bayts in one column",
+    "language": "Persian",
+    "poets_present": [
+      {
+        "poet_name": "Hakim Na'im al-Din ibn Jamal al-Din Nizari of Kuhistan",
+        "takhallus_if_known": "Nizari",
+        "folio_range": "1b-61b",
+        "number_of_poems_if_stated": null,
+        "form": "masnavi",
+        "note": "Dastur-nameh, a moral masnavi; not a multi-author ghazal section."
+      }
+    ],
+    "illuminations_summary": "Small dedicatory shamseh on fol. 1a; unwan on fol. 1b naming Kitab-e Dastur-nameh; small design at conclusion on fol. 61b; fols. 62a-b illuminated on both sides.",
+    "binding_summary": "Now in an individual later binding; Teece argues Ouseley 131, 140, and 141 were produced together as sections or fascicles of a composite poetic anthology and have lost original binding context.",
+    "teece_page_citations": [
+      93,
+      99,
+      100,
+      101,
+      102,
+      401,
+      402
+    ]
+  },
+  "bodleian_ouseley_140": {
+    "status": "found",
+    "shelfmark": "Oxford, Bodleian Library, Ouseley 140",
+    "date_ah": "865 AH; colophon on fol. 42a",
+    "date_ce": "1460 CE",
+    "folios": "42 folios",
+    "dimensions_cm": {
+      "vertical": 16.1,
+      "width": 7.5,
+      "rulings_vertical": 10.5,
+      "rulings_width": 4.0
+    },
+    "calligrapher": "Shaykh Mahmud Pir Budaqi",
+    "dedicatee": "Pir Budaq; group entry and Appendix B mention shamseh dedication",
+    "place_of_production": "dar al-Mulk Shiraz",
+    "format": "small upright pocket-size fascicle; not safineh",
+    "script": "elegant but thick/plump nastaliq; ten horizontal lines/five bayts in one column, with some rubaiyyat pages allowing eight bayts because of rubrics",
+    "language": "Persian",
+    "poets_present": [
+      {
+        "poet_name": "Omar Khayyam",
+        "takhallus_if_known": "Khayyam",
+        "folio_range": "2b-42a",
+        "number_of_poems_if_stated": null,
+        "form": "rubai",
+        "note": "Ruba'iyyat arranged alphabetically by end rhyme except the first two poems; colophon on fol. 42a."
+      }
+    ],
+    "illuminations_summary": "Blank fol. 1 of carton-like paper; illuminated shamseh title on fol. 2a; decorative unwan on fol. 2b with floral elements including small pinks, three-petaled flowers, and lotus forms; colophon on fol. 42a.",
+    "binding_summary": "Now in an individual later binding; Teece treats it as the likely conclusion of the three-fascicle Oxford anthology group.",
+    "teece_page_citations": [
+      99,
+      100,
+      101,
+      401,
+      402,
+      441,
+      442,
+      443,
+      444
+    ],
+    "extraction_caveats": [
+      "The extracted colophon translation appears internally inconsistent, but Teece dates the manuscript 865 AH / 1460 CE in chapter and catalogue."
+    ]
+  },
+  "bodleian_ouseley_141": {
+    "status": "found",
+    "shelfmark": "Oxford, Bodleian Library, Ouseley 141",
+    "date_ah": "865 AH by group association; colophon is in Ouseley 140",
+    "date_ce": "1460 CE",
+    "folios": "11 folios",
+    "dimensions_cm": {
+      "vertical": 16.1,
+      "width": 7.5,
+      "rulings_vertical": 10.5,
+      "rulings_width": 4.0
+    },
+    "calligrapher": "Shaykh Mahmud Pir Budaqi, by group association",
+    "dedicatee": "Pir Budaq by group association",
+    "place_of_production": "Shiraz, by group colophon",
+    "format": "small upright pocket-size fascicle; not safineh",
+    "script": "elegant but thick/plump nastaliq; ten horizontal lines/five bayts in one column",
+    "language": "Persian",
+    "poets_present": [
+      {
+        "poet_name": "Baba Afzal al-Din Muhammad Kashi (probable)",
+        "takhallus_if_known": "Khoja / Baba Afzal",
+        "folio_range": "1b-11b",
+        "number_of_poems_if_stated": null,
+        "form": "rubai",
+        "note": "Teece identifies this as Ruba'iyyat of a certain Khoja, probably Baba Afzal al-Din Muhammad Kashi."
+      }
+    ],
+    "illuminations_summary": "Opening fol. 1a has ogival illumination with scalloped circular field and cross-shaped floral design containing the title; decorative unwan on fol. 1b; rectangular illumination marks conclusion on fol. 11b.",
+    "binding_summary": "Now in an individual later binding; Teece treats it as one fascicle of the composite Oxford anthology group.",
+    "teece_page_citations": [
+      99,
+      100,
+      101,
+      401,
+      402
+    ]
+  },
+  "appendix_b_pir_budaq_manuscripts": {
+    "status": "found",
+    "title": "Appendix B: Manuscripts Associated with Pir Budaq Qara Quyunlu",
+    "pdf_page_range": [
+      335,
+      336,
+      337
+    ],
+    "printed_page_range": [
+      294,
+      295,
+      296
+    ],
+    "entries": [
+      {
+        "shelfmark": "H. 779",
+        "current_location": "Istanbul, Topkapi Saray",
+        "text": "Khamsa of Nizami",
+        "date_ah": "857",
+        "date_ce": "1453",
+        "calligrapher_if_named": null,
+        "dedication_if_named": null,
+        "place_of_production": null,
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 335,
+        "entry_transcription": "857 / 1453 (dated 26th Shaban 857 / 26 August 1453); Istanbul, Topkapi Saray, H. 779; Khamsa of Nizami"
+      },
+      {
+        "shelfmark": "TIEM 1987 (formerly 1562 ?)",
+        "current_location": "Istanbul, TIEM",
+        "text": "Diwan of Katibi",
+        "date_ah": "860",
+        "date_ce": "1456",
+        "calligrapher_if_named": "Abd al-Rahman al-Khwarazmi",
+        "dedication_if_named": "shamseh dedication to Pir Budaq",
+        "place_of_production": "Shiraz",
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 335,
+        "entry_transcription": "860/1456 (dated Jumada I 860 / April-May 1456); Istanbul, TIEM, 1987 (formerly 1562 ?); Diwan of Katibi; Shiraz; Copied by Abd al-Rahman al-Khwarazmi, with shamseh dedication to Pir Budaq"
+      },
+      {
+        "shelfmark": "Or. 11846",
+        "current_location": "London, British Library",
+        "text": "Diwan of Hafez Sa'd (?)",
+        "date_ah": "864",
+        "date_ce": "1459",
+        "calligrapher_if_named": "Shaykh Mahmud Pir Budaqi",
+        "dedication_if_named": "dedication to Pir Budaq",
+        "place_of_production": "Shiraz",
+        "source_reference": "Titley",
+        "teece_appendix_b_page": 335,
+        "entry_transcription": "864 / 1459 (dated 864 / 1459); London, British Library, Or. 11846; Diwan of Hafez Sa'd (?); Copied at Shiraz by Shaykh Mahmud Pir Budaqi; Mentioned by Titley as a finely illustrated copy dated 864/1459-60 bearing a dedication to him"
+      },
+      {
+        "shelfmark": "Pers. 134",
+        "current_location": "Dublin, Chester Beatty Library",
+        "text": "Tracts by Husan ibn Muhammad Rashid",
+        "date_ah": "864",
+        "date_ce": "1459",
+        "calligrapher_if_named": "Shaykh Mahmud",
+        "dedication_if_named": "for Pir Budaq",
+        "place_of_production": "Shiraz",
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 335,
+        "entry_transcription": "864 / 1459 (dated 864 / 1459); Dublin, Chester Beatty Library, Pers. 134; Tracts by Husan ibn Muhammad Rashid; Copied at Shiraz by Shaykh Mahmud for Pir Budaq"
+      },
+      {
+        "shelfmark": "TIEM 1986 (formerly 1551)",
+        "current_location": "Istanbul, TIEM",
+        "text": "Diwan of Qasim",
+        "date_ah": "863",
+        "date_ce": "1459",
+        "calligrapher_if_named": "Shaykh Mahmud Pir Budaqi",
+        "dedication_if_named": "shamseh dedication to Pir Budaq",
+        "place_of_production": null,
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 335,
+        "entry_transcription": "863 / 1459; Istanbul, TIEM 1986 (formerly 1551); Diwan of Qasim; Copied by Shaykh Mahmud Pir Budaqi, with shamseh dedication to Pir Budaq"
+      },
+      {
+        "shelfmark": "Hazine 2153, fol. 21b",
+        "current_location": "Istanbul, Topkapi",
+        "text": "Colophon only",
+        "date_ah": "863",
+        "date_ce": "1459",
+        "calligrapher_if_named": "Shaykh Mahmud Pir Budaqi",
+        "dedication_if_named": null,
+        "place_of_production": "Shiraz",
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 335,
+        "entry_transcription": "863 / 1459 - Colophon only; Istanbul, Topkapi, Hazine 2153, fol. 21b; Copied in Shiraz by Shaykh Mahmud Pir Budaqi",
+        "source_rows_merged": 2,
+        "alternate_entry_transcription": "863 / 1459 - Colophon only (dated the last ten days of Dhu'l Qada 863 / 18-28 September 1459); Istanbul, Topkapi, Hazine 2153, fol. 21b; Copied in Shiraz by Shaykh Mahmud",
+        "deduplication_note": "Two Appendix B rows described the same shelfmark/location/text/date object with different calligrapher/date-detail wording. Merged here to prevent downstream double-counting by compound manuscript key."
+      },
+      {
+        "shelfmark": "Hazine 2153, fol. 6a",
+        "current_location": "Istanbul, Topkapi",
+        "text": "Colophon only",
+        "date_ah": "864",
+        "date_ce": "1459",
+        "calligrapher_if_named": "Shaykh Mahmud",
+        "dedication_if_named": null,
+        "place_of_production": "Shiraz",
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 335,
+        "entry_transcription": "864 / 1459 - Colophon Only (dated the first ten days of Muharrem 864 / 28 Oct. - 10 Nov. 1459); Istanbul, Topkapi, Hazine 2153; Copied by Shaykh Mahmud in Shiraz in first ten days of Muharrem 864 / 28 October - 10 November 1459 (fol. 6a)"
+      },
+      {
+        "shelfmark": "Hazine 2153, fol. 111b",
+        "current_location": "Istanbul, Topkapi",
+        "text": "Colophon only",
+        "date_ah": "864",
+        "date_ce": "1459",
+        "calligrapher_if_named": "Shaykh Mahmud",
+        "dedication_if_named": null,
+        "place_of_production": "Shiraz",
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 335,
+        "entry_transcription": "864 / 1459 - Colophon Only (dated 864); Istanbul, Topkapi, Hazine 2153; Copied by Shaykh Mahmud in Shiraz in 864 (fol. 111b)"
+      },
+      {
+        "shelfmark": "Hazine 2153, fol. 147b",
+        "current_location": "Istanbul, Topkapi",
+        "text": "Colophon only",
+        "date_ah": "864",
+        "date_ce": "1459",
+        "calligrapher_if_named": "Shaykh Mahmud",
+        "dedication_if_named": null,
+        "place_of_production": null,
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 335,
+        "entry_transcription": "864 / 1459 - Colophon Only (dated 864); Istanbul, Topkapi, Hazine 2153; Copied by Shaykh Mahmud in 864 (fol. 147b)"
+      },
+      {
+        "shelfmark": null,
+        "current_location": "Istanbul, Istanbul University Library",
+        "text": "Ghazaliyyat of Amir Shahi",
+        "date_ah": "864",
+        "date_ce": "1459",
+        "calligrapher_if_named": "Shaykh Mahmud",
+        "dedication_if_named": null,
+        "place_of_production": "Shiraz",
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 336,
+        "entry_transcription": "864 / 1459; Istanbul, Istanbul University Library; Ghazaliyyat of Amir Shahi; Copied by Shaykh Mahmud in Shiraz"
+      },
+      {
+        "shelfmark": "Lala Ismail 574",
+        "current_location": "Istanbul, Suleymaniyya Mosque Library",
+        "text": "Kulliyat of Katibi",
+        "date_ah": "865",
+        "date_ce": "1460",
+        "calligrapher_if_named": null,
+        "dedication_if_named": "double-page frontispiece with dedicatory shamseh to Pir Budaq",
+        "place_of_production": null,
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 336,
+        "entry_transcription": "865 / 1460; Istanbul, Suleymaniyya Mosque Library, Lala Ismail 574; Kulliyat of Katibi; With a double-page frontispiece containing a dedicatory shamseh to Pir Budaq"
+      },
+      {
+        "shelfmark": "N. F. 143",
+        "current_location": "Vienna, ONB",
+        "text": "Safineh poetry anthology",
+        "date_ah": "865",
+        "date_ce": "1460",
+        "calligrapher_if_named": "Shaykh Mahmud Pir Budaqi",
+        "dedication_if_named": "dedicatory shamseh to Pir Budaq",
+        "place_of_production": null,
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 336,
+        "entry_transcription": "865 / 1460; Vienna, ONB, N. F. 143; Safineh poetry anthology; Copied by Shaykh Mahmud Pir Budaqi, with dedicatory shamseh to Pir Budaq"
+      },
+      {
+        "shelfmark": "Ouseley 140; related Ouseley 141 and Ouseley 131",
+        "current_location": "Oxford, Bodleian Library",
+        "text": "Ruba'iyyat of Omar Khayyam",
+        "date_ah": "865",
+        "date_ce": "1460",
+        "calligrapher_if_named": "Shaykh Mahmud Pir Budaq",
+        "dedication_if_named": "shamseh dedication to Pir Budaq",
+        "place_of_production": "Shiraz",
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 336,
+        "entry_transcription": "865 / 1460 (dated 865 / 1460); Oxford, Bodleian Library, Ouseley 140; Ruba'iyyat of Omar Khayyam; Copied at Shiraz by Shaykh Mahmud Pir Budaq, with shamseh dedication to Pir Budaq; Related booklets: Ouseley 141 and Ouseley 131"
+      },
+      {
+        "shelfmark": "Hazine 2153, fol. 48b",
+        "current_location": "Istanbul, Topkapi",
+        "text": "Colophon only",
+        "date_ah": "865",
+        "date_ce": "1460",
+        "calligrapher_if_named": "Shaykh Mahmud",
+        "dedication_if_named": null,
+        "place_of_production": "Baghdad",
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 336,
+        "entry_transcription": "865 / 1460 - Colophon Only (dated 865); Istanbul, Topkapi, Hazine 2153; Copied by Shaykh Mahmud in Baghdad (fol. 48b)"
+      },
+      {
+        "shelfmark": "H. 761",
+        "current_location": "Istanbul, Topkapi",
+        "text": "Khamsa of Nizami",
+        "date_ah": "866",
+        "date_ce": "1461",
+        "calligrapher_if_named": "Shaykh Mahmud Pir Budaqi; Fakhr al-Din",
+        "dedication_if_named": "first 200 folios for Pir Budaq; next 109 for Sultan Khalil Aq Quyunlu",
+        "place_of_production": null,
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 336,
+        "entry_transcription": "866 / 1461 (dated 20 Rabi I 866 / 24 December 1461); Istanbul, Topkapi, H. 761; Khamsa of Nizami; First 200 folios copied by Shaykh Mahmud Pir Budaqi; Next 109 folios copied by Fakhr al-Din for Sultan Khalil Aq Quyunlu"
+      },
+      {
+        "shelfmark": "R. 1021",
+        "current_location": "Istanbul, Topkapi Saray",
+        "text": "Khamsa of Amir Khusrau Dehlavi",
+        "date_ah": "867",
+        "date_ce": "1463",
+        "calligrapher_if_named": "Mahmud al-Katib",
+        "dedication_if_named": null,
+        "place_of_production": "Baghdad",
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 336,
+        "entry_transcription": "867 / 1463 (dated 867 / 1463); Istanbul, Topkapi Saray, R. 1021; Khamsa of Amir Khusrau Dehlavi; Copied in Baghdad by Mahmud al-Katib (fol. 190a)"
+      },
+      {
+        "shelfmark": "Christie's Sale 7987, London, 6 October 2011, lot 124",
+        "current_location": "Location unknown",
+        "text": "Husn o Dil of Muhammad Yahya ibn Sibak",
+        "date_ah": "868",
+        "date_ce": "1463-1464",
+        "calligrapher_if_named": "Mirak al-Shirazi",
+        "dedication_if_named": "shamseh dedication to Pir Budaq",
+        "place_of_production": "Baghdad",
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 336,
+        "entry_transcription": "868 / 1463-1464; Location unknown - Christie's Sale 7987, London 6 October 2011, lot 124; Husn o Dil of Muhammad Yahya ibn Sibak; Copied at Baghdad by Mirak al-Shirazi with shamseh dedication to Pir Budaq"
+      },
+      {
+        "shelfmark": "AKM00518",
+        "current_location": "Toronto (?), Aga Khan Museum",
+        "text": "Kallimat of Hazrat Ali",
+        "date_ah": "869",
+        "date_ce": "1464-65",
+        "calligrapher_if_named": "Mahmud Haravi",
+        "dedication_if_named": null,
+        "place_of_production": null,
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 336,
+        "entry_transcription": "869 / 1464-65; Toronto (?), Aga Khan Museum, AKM00518; Kallimat of Hazrat Ali; Copied by Mahmud Haravi"
+      },
+      {
+        "shelfmark": "I. O. 138",
+        "current_location": "London, British Library",
+        "text": "Khamsa of Jamali",
+        "date_ah": "869 and 870",
+        "date_ce": "1465",
+        "calligrapher_if_named": null,
+        "dedication_if_named": null,
+        "place_of_production": "Baghdad",
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 336,
+        "entry_transcription": "870 / 1465 (two colophons dated 2 Ramadan 869 / 28 April 1465 and Muharram 870 / 24 August to 22 September 1465); London, British Library, I. O. 138; Khamsa of Jamali; Copied in Baghdad"
+      },
+      {
+        "shelfmark": "H. 1015",
+        "current_location": "Istanbul, Topkapi Saray",
+        "text": "Diwan of Hafez",
+        "date_ah": "870",
+        "date_ce": "1465",
+        "calligrapher_if_named": "Shaykh Mahmud",
+        "dedication_if_named": "for Pir Budaq",
+        "place_of_production": "Baghdad",
+        "source_reference": "not stated in Appendix B",
+        "teece_appendix_b_page": 337,
+        "entry_transcription": "870 / 1465; Istanbul, Topkapi Saray, H. 1015; Diwan of Hafez; Copied at Baghdad by Shaykh Mahmud for Pir Budaq"
+      },
+      {
+        "shelfmark": null,
+        "current_location": "Tehran, Gulistan Palace",
+        "text": "Kalila wa Dimna",
+        "date_ah": null,
+        "date_ce": "c. 1460-5",
+        "calligrapher_if_named": null,
+        "dedication_if_named": null,
+        "place_of_production": null,
+        "source_reference": "listed by Teece as other possible manuscript for Pir Budaq",
+        "teece_appendix_b_page": 337,
+        "entry_transcription": "Other possible mss. for Pir Budaq; c. 1460-5; Tehran, Gulistan Palace; Kalila wa Dimna"
+      },
+      {
+        "shelfmark": "Supp. Pers. 1964",
+        "current_location": "Paris, Bibliotheque nationale",
+        "text": "Mihr va Mushtari",
+        "date_ah": null,
+        "date_ce": "c. 1460-5?",
+        "calligrapher_if_named": null,
+        "dedication_if_named": null,
+        "place_of_production": null,
+        "source_reference": "listed by Teece as other possible manuscript for Pir Budaq",
+        "teece_appendix_b_page": 337,
+        "entry_transcription": "c. 1460-5?; Paris, Bibliotheque nationale, Supp. Pers. 1964; Mihr va Mushtari"
+      },
+      {
+        "shelfmark": null,
+        "current_location": "Istanbul, TIEM",
+        "text": "Quran manuscript",
+        "date_ah": null,
+        "date_ce": "unknown date",
+        "calligrapher_if_named": null,
+        "dedication_if_named": "copied for Pir Budaq",
+        "place_of_production": null,
+        "source_reference": "listed by Teece as other possible manuscript for Pir Budaq",
+        "teece_appendix_b_page": 337,
+        "entry_transcription": "Unknown date; Istanbul, TIEM; Quran manuscript; Copied for Pir Budaq"
+      },
+      {
+        "shelfmark": "Ms. 1919",
+        "current_location": "Istanbul, TIEM",
+        "text": "Muqta'at of Amir Mahmud ibn Yamin",
+        "date_ah": null,
+        "date_ce": "unknown date",
+        "calligrapher_if_named": "Azhar",
+        "dedication_if_named": "shamseh dedication to Pir Budaq",
+        "place_of_production": null,
+        "source_reference": "listed by Teece as other possible manuscript for Pir Budaq",
+        "teece_appendix_b_page": 337,
+        "entry_transcription": "Unknown date; Istanbul, TIEM, Ms. 1919; Muqta'at of Amir Mahmud ibn Yamin; Copied by Azhar with shamesh dedication to Pir Budaq"
+      },
+      {
+        "shelfmark": "Fatih 4054",
+        "current_location": "Istanbul, Suleymaniye Mosque Library",
+        "text": "Kulliyat of Imad al-Din (d. 1371)",
+        "date_ah": null,
+        "date_ce": "date TBD",
+        "calligrapher_if_named": "Shaykh Mahmud Pir Budaqi",
+        "dedication_if_named": null,
+        "place_of_production": "Baghdad",
+        "source_reference": "Teece notes unpublished",
+        "teece_appendix_b_page": 337,
+        "entry_transcription": "Date TBD; Istanbul, Suleymaniye Mosque Library, Fatih 4054; Kulliyat of Imad al-Din (d. 1371); Copied by Shaykh Mahmud Pir Budaqi at Baghdad; Unpublished"
+      },
+      {
+        "shelfmark": null,
+        "current_location": "unknown date/location",
+        "text": "Manuscript of Rumi (?)",
+        "date_ah": null,
+        "date_ce": "unknown date",
+        "calligrapher_if_named": null,
+        "dedication_if_named": null,
+        "place_of_production": null,
+        "source_reference": "mentioned in the literature",
+        "teece_appendix_b_page": 337,
+        "entry_transcription": "Also mentioned in the literature: Unknown date/location; Manuscript of Rumi (?)"
+      },
+      {
+        "shelfmark": null,
+        "current_location": "unknown date/location",
+        "text": "Manuscript of Yusuf Amiri",
+        "date_ah": null,
+        "date_ce": "unknown date",
+        "calligrapher_if_named": null,
+        "dedication_if_named": null,
+        "place_of_production": null,
+        "source_reference": "mentioned in the literature",
+        "teece_appendix_b_page": 337,
+        "entry_transcription": "Unknown date/location; Manuscript of Yusuf Amiri"
+      }
+    ],
+    "extraction_caveats": [
+      "Appendix B starts at PDF page 335, not PDF page 294; printed page number is 294.",
+      "Most entries do not name a source reference in Appendix B itself.",
+      "The appendix includes associated, possible, colophon-only, and literature-mentioned items."
+    ]
+  },
+  "appendix_c_objects": {
+    "status": "found_but_title_mismatch",
+    "requested_title": "Objects Associated with Pir Budaq",
+    "actual_title": "Appendix C: Objects Associated with Uzun Hasan Aq Quyunlu",
+    "pdf_page_range": [
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345
+    ],
+    "printed_page_range": [
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304
+    ],
+    "items": [
+      {
+        "item": "Blue glass bowl in the Treasury of San Marco, Venice",
+        "date_or_period": "bowl described as 9th-10th century Persian; reputed 1472 gift; connection contested",
+        "location": "Treasury of San Marco, Venice",
+        "summary": "Turquoise-blue glass bowl with later gold and silver-gilt enameled mounts, traditionally linked to an Uzun Hasan embassy gift but possibly in San Marco by 1325."
+      },
+      {
+        "item": "Tazza Farnese",
+        "date_or_period": "antique sardonyx cameo bowl; linked in scholarship to 1470 Uzun Hasan envoys",
+        "location": "Museo Archeologico Nazionale, Naples",
+        "summary": "A Diez Album drawing attributed to a 15th-century Persian artist closely resembles the bowl; Teece notes the proposed route from Persia to Italy through Aq Quyunlu diplomatic exchange."
+      },
+      {
+        "item": "So-called Veneto-Saracenic wares and covered box signed Mahmud al-Kurdi",
+        "date_or_period": "15th-century context",
+        "location": "Courtauld Institute, London, for covered box",
+        "summary": "Sylvia Auld links this metalwork milieu to embassies with Uzun Hasan; the box is signed in Arabic script and Roman transliteration by Mahmud al-Kurdi."
+      },
+      {
+        "item": "Aq Quyunlu or Qara Quyunlu binding reused in Venice",
+        "date_or_period": "Persian binding likely late 15th century; manuscript rebound c. 1520-1530",
+        "location": "Trustees of the Chatsworth Settlement, Chatsworth",
+        "summary": "Teece suggests a binding published as Venetian is more likely a reused Persian Shiraz binding set into a Venetian border."
+      },
+      {
+        "item": "Venetian pattern books",
+        "date_or_period": "1529 and 1530",
+        "location": "Metropolitan Museum of Art for Tagliente example; Venice publication context",
+        "summary": "Pattern books by Giovanni Antonio Tagliente and Nicolo Zoppino include designs resembling Aq Quyunlu or early Safavid illumination and binding repertories."
+      },
+      {
+        "item": "Uzun Hasan art collection described by Josafa Barbaro",
+        "date_or_period": "Barbaro at Tabriz in April 1474",
+        "location": "Uzun Hasan court, Tabriz",
+        "summary": "Barbaro describes jewels, rubies, cameos, carpets, and antiquities shown by Uzun Hasan."
+      },
+      {
+        "item": "Inscribed balas ruby",
+        "date_or_period": "shown to Barbaro in 1474; compared to Timurid/Safavid/Mughal inscription practices",
+        "location": "Uzun Hasan collection; possible later analogues in Al-Sabah collection and Iranian Central Bank",
+        "summary": "Uzun Hasan showed Barbaro a large ruby with Arabic letters, reportedly an older royal inscription preserved rather than recut."
+      },
+      {
+        "item": "Cameos",
+        "date_or_period": "shown or gifted in 1474 account",
+        "location": "Uzun Hasan court",
+        "summary": "Barbaro reports Indian envoy gifts including a cameo-like object and another cameo with a woman head that Uzun Hasan asked him to identify."
+      }
+    ]
+  },
+  "hakiki_jahanshah_explicit_passages": [
+    {
+      "pdf_page": 43,
+      "surrounding_text": "earliest extant manuscripts created under their patronage - among these an as-yet-unpublished manuscript created for Muhammadi, the son of Jahan Shah Qara Quyunlu. This chapter also outlines the corpus of manuscripts once held in the library of Muhammadi's better-known brother Pir Budaq",
+      "interpretive_note": "Front matter previews Muhammadi and Pir Budaq as sons of Jahan Shah."
+    },
+    {
+      "pdf_page": 49,
+      "surrounding_text": "Major patrons such as Jahan Shah Qara Quyunlu, along with his sons Pir Budaq and Muhammadi (pls. 2.2 and 2.3) commissioned important architectural monuments and numerous manuscripts while in control of these important cities.",
+      "interpretive_note": "The introduction frames Jahan Shah, Pir Budaq, and Muhammadi as major patrons."
+    },
+    {
+      "pdf_page": 62,
+      "surrounding_text": "Minorsky, V. 'Jihan-Shah Qara-Quyunlu and his Poetry' Turkmenica, 9 in the Bulletin of the School of Oriental and African Studies. no. 16, (1954), pp. 271-297.",
+      "interpretive_note": "The historiography cites Minorsky on Jihan-Shah and his poetry."
+    },
+    {
+      "pdf_page": 79,
+      "surrounding_text": "This first volume covers the history of the Qara Quyunlu period up to the rule of Jahan Shah (only). He states that full references would be given in his forthcoming volume II.",
+      "interpretive_note": "Teece notes the limited state of Qara Quyunlu historical scholarship."
+    },
+    {
+      "pdf_page": 80,
+      "surrounding_text": "Jahan Shah ibn Qara Yusuf Qara Quyunlu (r. 1438 - 1467) It was not until the 15th century, however, during the reign of Qara Yusuf's son that the Qara Quyunlu territory grew into a large empire and enjoyed its most brilliant phase.",
+      "interpretive_note": "Teece introduces Jahan Shah as ruler of the Qara Quyunlu high point."
+    },
+    {
+      "pdf_page": 80,
+      "surrounding_text": "This son was Abu Muzaffar al-Din Jahan Shah ibn Qara Yusuf Qara Quyunlu; the dates of his reign have been given as ranging from 23 Shawwal 841 to 5 Rabi 872 (19 April 1438 to 4 October 1467).",
+      "interpretive_note": "Teece gives Jahan Shah's reign dates."
+    },
+    {
+      "pdf_page": 80,
+      "surrounding_text": "see also Minorsky, V. 'Jihan-Shah Qara-Qoyunlu and His Poetry (Turkmenica, 9)' in Bulletin of the School of Oriental and African Studies, vol. 16, no. 2 (1954), pp. 271-297.",
+      "interpretive_note": "A footnote points to the main study of Jahan Shah's poetry."
+    },
+    {
+      "pdf_page": 81,
+      "surrounding_text": "challenged by Jahan Shah's much-feared brother Iskandar (d. 1438) - gave his support to Jahan Shah, recognizing him as the head of the Qara Quyunlu confederation. Eventually, Jahan Shah defeated Iskandar",
+      "interpretive_note": "Teece describes Timurid support for Jahan Shah against Iskandar."
+    },
+    {
+      "pdf_page": 82,
+      "surrounding_text": "Although Jahan Shah's control over Khurasan was short-lived, his military prowess nevertheless was impressive. At the height of Qara Quyunlu power under Jahan Shah, his territories stretched from eastern Anatolia/Turkey, and Azerbaijan, southward to the Persian Gulf",
+      "interpretive_note": "Teece summarizes the extent of Jahan Shah's realm."
+    },
+    {
+      "pdf_page": 82,
+      "surrounding_text": "Jahan Shah made his own capital at Tabriz, in the region of Azerbaijan. One contemporary source - Abd al-Razzaq Samarqandi - writing in about 1462, describes the Qara Quyunlu capital of Tabriz under Jahan Shah's rule",
+      "interpretive_note": "Teece links Jahan Shah to Tabriz prosperity and rulership."
+    },
+    {
+      "pdf_page": 82,
+      "surrounding_text": "In distributing territories to his sons, Jahan Shah had given the governorship of Isfahan (along with the wider region of Iraq-i ajam) to his son Muhammadi. To his son Pir Budaq went the region of Fars",
+      "interpretive_note": "Teece outlines Jahan Shah's allocation of governorships to Muhammadi and Pir Budaq."
+    },
+    {
+      "pdf_page": 82,
+      "surrounding_text": "Daulat-shah instead paints Jahan Shah's son Pir Budaq as generous. He notes that Jahan Shah appears to have condoned the killing of Pir Budaq by his brother Muhammadi.",
+      "interpretive_note": "A footnote records hostile source tradition about Pir Budaq's death."
+    },
+    {
+      "pdf_page": 83,
+      "surrounding_text": "Under Jahan Shah, the Qara Quyunlu became one of the greatest dynastic powers in the region - and, it is with his reign that the art historical record of the Qara Quyunlu dynasty essentially begins. The Literary Patronage of Jahan Shah Qara Quyunlu",
+      "interpretive_note": "Teece makes Jahan Shah's reign the starting point for the art-historical record."
+    },
+    {
+      "pdf_page": 83,
+      "surrounding_text": "he wrote poems in Turkish and Persian under the pseudonym of Hakiki. As Sumer points out, Jahan Shah was a poet in his own right - utilizing the takhallus 'Haqiqi.' A manuscript copy of Jahan Shah's bi-lingual poetry produced after his reign (dated Shawwal 893 / September 1488) survives today in the British Museum collection (Or. 9493)",
+      "interpretive_note": "This is the key explicit identification of Jahan Shah as Hakiki/Haqiqi and BL Or. 9493 as his bilingual diwan copy."
+    },
+    {
+      "pdf_page": 84,
+      "surrounding_text": "Jami, in turn, replied by composing a poem in praise of Jahan Shah's work. It reads in part: From the opening verses of each ghazal there broke The felicitous brightness of the dawn of the morning",
+      "interpretive_note": "Teece reports Jami's praise for Jahan Shah's poetry."
+    },
+    {
+      "pdf_page": 84,
+      "surrounding_text": "This book has revealed the true [Haqiqi] Shah. While such high praise and anecdotal stories speak to Jahan Shah's abilities in and appreciation for literature, physical evidence of his library is still sadly lacking.",
+      "interpretive_note": "Teece says literary evidence exists but physical evidence for Jahan Shah's own library is lacking."
+    },
+    {
+      "pdf_page": 85,
+      "surrounding_text": "it is likely that the patron of this manuscript was Muhammadi ibn Jahan Shah Qara Quyunlu. Perhaps a testament to his own unrealized royal aspirations, this rather large Shahnama contains spaces for a number of paintings",
+      "interpretive_note": "Jahan Shah appears in the identification of Muhammadi as manuscript patron."
+    },
+    {
+      "pdf_page": 86,
+      "surrounding_text": "the most significant patron of the book arts of this period was his brother, Pir Budaq ibn Jahan Shah Qara Quyunlu (r. 1452-1466). Pir Budaq, ibn Jahan Shah Qara Quyunlu",
+      "interpretive_note": "Teece identifies Pir Budaq as Jahan Shah's son and a major book patron."
+    },
+    {
+      "pdf_page": 86,
+      "surrounding_text": "Pir Budaq staged his first unsuccessful attempt to declare independence from his father's rule. As a result, Jahan Shah removed his son from his seat in Shiraz, and relocated him to Baghdad",
+      "interpretive_note": "Teece links the rupture with Jahan Shah to Pir Budaq's transfer from Shiraz to Baghdad."
+    },
+    {
+      "pdf_page": 87,
+      "surrounding_text": "When Jahan Shah Qara Quyunlu took power in western Persia in the mid-15th century, Shiraz had been in the hands of the Timurids for some time - since their 1393 defeat of the Muzaffarids.",
+      "interpretive_note": "Teece situates Shiraz manuscript traditions before Qara Quyunlu control."
+    },
+    {
+      "pdf_page": 95,
+      "surrounding_text": "the seal bears a Quranic phrase - Sura 16:90, while the bottom half contains the names of Pir Budaq, his father Jahan Shah and his grandfather Yusuf Qara Quyunlu. It reads: Verily, God commands justice and the doing of good - Pir Budaq, son of Jahan Shah, son of Yusuf Nuyan",
+      "interpretive_note": "The seal provides explicit genealogy for Pir Budaq as son of Jahan Shah."
+    },
+    {
+      "pdf_page": 96,
+      "surrounding_text": "the Vienna safineh, this manuscript was completed in the month of Muharram in the year 865/1460 at Pir Budaq's capital of Shiraz. Only a few weeks later, in the early spring of 1460, evidence of Pir Budaq's insubordination would provide reason for Jahan Shah to order his son's transfer from Shiraz to the city of Baghdad.",
+      "interpretive_note": "The Vienna safineh is dated just before Jahan Shah moved Pir Budaq to Baghdad."
+    },
+    {
+      "pdf_page": 116,
+      "surrounding_text": "With the sudden victory of Abu al-Nasr Hasan ibn Ali Aq Quyunlu, more commonly known as Uzun Hasan over Jahan Shah Qara Quyunlu on 12 Rabi II 871 / 10 November 1467 on the plain of Mus, the Aq Quyunlu confederacy quickly inherited much of the existing Qara Quyunlu territories",
+      "interpretive_note": "Teece marks Jahan Shah's defeat as the Aq Quyunlu succession moment."
+    },
+    {
+      "pdf_page": 119,
+      "surrounding_text": "Jahangir Aq Quyunlu sought refuge and support from Jahan Shah Qara Quyunlu. Yet, even Jahan Shah Qara Quyunlu realized that Uzun Hasan was a force to be reckoned with",
+      "interpretive_note": "Teece describes Aq Quyunlu diplomacy with Jahan Shah before the final conflict."
+    },
+    {
+      "pdf_page": 119,
+      "surrounding_text": "a treaty with Jahan Shah Qara Quyunlu on 9 April 1452 / 19 Rabi I 856. It stipulated that Jahangir would recognize Qara Quyunlu control over Diyarbakir, that he would give his daughter's hand in marriage to Jahan Shah's son Muhammadi",
+      "interpretive_note": "The treaty passage links Jahan Shah, Muhammadi, and Aq Quyunlu alliance politics."
+    },
+    {
+      "pdf_page": 120,
+      "surrounding_text": "Jahan Shah Qara Quyunlu responded to this victory cautiously, sending Uzun Hasan an ambassador in 864 / 1460 with many gifts, including a golden sword-belt that was interpreted as a sword of investiture.",
+      "interpretive_note": "Teece notes Jahan Shah's diplomatic response to Uzun Hasan."
+    },
+    {
+      "pdf_page": 120,
+      "surrounding_text": "Uzun Hasan reluctantly signed an armistice with Jahan Shah Qara Quyunlu. Despite these early overtures towards Uzun Hasan, Jahan Shah Qara Quyunlu rallied his armies in Tabriz in Shaban 871 / March 1467",
+      "interpretive_note": "Teece narrates the move from armistice to renewed war."
+    },
+    {
+      "pdf_page": 120,
+      "surrounding_text": "Jahan Shah decided to furlough his troops for the winter, but remained behind with his sons Muhammadi and Abu Yusuf Qara Quyunlu. Uzun Hasan seized this opportunity and attacked the half-deserted Qara Quyunlu army camp on the plains of Mus. Jahan Shah was killed",
+      "interpretive_note": "Teece describes Jahan Shah's death and the capture of his sons."
+    },
+    {
+      "pdf_page": 120,
+      "surrounding_text": "By the end of the year, he had secured nearly all of what had formerly been in Jahan Shah Qara Quyunlu's control. And, with the victory over Abu Said, Timurid rule in the western regions of Persia came to an end.",
+      "interpretive_note": "Teece summarizes the absorption of Jahan Shah's territories by Uzun Hasan."
+    },
+    {
+      "pdf_page": 129,
+      "surrounding_text": "Even the rival Qara Quyunlu sought to form alliances with their northern neighbors, with Jahan Shah Qara Quyunlu marrying the daughter of Alexios IV (1417-29).",
+      "interpretive_note": "Teece notes Jahan Shah's Trebizond dynastic marriage."
+    },
+    {
+      "pdf_page": 138,
+      "surrounding_text": "Tusi (moved from the court of Sultan Abul-Qasim Babur into the court of Jahan Shah Qara Quyunlu, d. 869) (fol. 80b), and Talai (d. 858) (fol. 86b).",
+      "interpretive_note": "A poet in another anthology is linked to Jahan Shah's court."
+    },
+    {
+      "pdf_page": 179,
+      "surrounding_text": "In 889/1484, the Nasriyya tomb complex in Tabriz (begun during the reign of his father, Uzun Hasan) was brought to completion. This was described as several times larger than Jahan Shah Qara Quyunlu's Muzaffariyya complex.",
+      "interpretive_note": "Teece compares later Aq Quyunlu architecture with Jahan Shah's Muzaffariyya."
+    },
+    {
+      "pdf_page": 350,
+      "surrounding_text": "Just as Jahan Shah Qara Quyunlu had to contend with the rebellion of Pir Budaq, Uzun Hasan's son Ughurlu also had an independent nature. Ughurlu Muhammad began a rebellion in 1474",
+      "interpretive_note": "The appendix uses Pir Budaq's rebellion against Jahan Shah as a comparison for Ughurlu Muhammad."
+    },
+    {
+      "pdf_page": 413,
+      "surrounding_text": "Minorsky, V. 'Jihan-Shah Qara-Quyunlu and his Poetry' Turkmenica, 9. in the Bulletin of the School of Oriental and African Studies. vol. 16, (1954), pp. 271-297.",
+      "interpretive_note": "The bibliography includes the Minorsky article on Jahan Shah's poetry."
+    }
+  ],
+  "muhammadi_passages": [
+    {
+      "pdf_page": 43,
+      "surrounding_text": "as-yet-unpublished manuscript created for Muhammadi, the son of Jahan Shah Qara Quyunlu. This chapter also outlines the corpus of manuscripts once held in the library of Muhammadi's better-known brother Pir Budaq",
+      "interpretive_note": "Front matter flags a manuscript for Muhammadi and places him beside Pir Budaq."
+    },
+    {
+      "pdf_page": 49,
+      "surrounding_text": "Major patrons such as Jahan Shah Qara Quyunlu, along with his sons Pir Budaq and Muhammadi (pls. 2.2 and 2.3) commissioned important architectural monuments and numerous manuscripts",
+      "interpretive_note": "The introduction treats Muhammadi as one of the major Qara Quyunlu patrons."
+    },
+    {
+      "pdf_page": 82,
+      "surrounding_text": "Jahan Shah had given the governorship of Isfahan (along with the wider region of Iraq-i ajam) to his son Muhammadi. To his son Pir Budaq went the region of Fars",
+      "interpretive_note": "Teece identifies Muhammadi's governorship at Isfahan."
+    },
+    {
+      "pdf_page": 82,
+      "surrounding_text": "Jahan Shah appears to have condoned the killing of Pir Budaq by his brother Muhammadi. There is also a graphic description of Jahan Shah's devastation of Tiflis",
+      "interpretive_note": "A footnote reports a source tradition implicating Muhammadi in Pir Budaq's death."
+    },
+    {
+      "pdf_page": 84,
+      "surrounding_text": "Manuscript Production under Muhammadi ibn Jahan Shah Qara Quyunlu. In terms of the manuscript patronage of the Qara Quyunlu dynasts, scholarship thusfar has focused exclusively on that of Jahan Shah's son Pir Budaq.",
+      "interpretive_note": "Teece introduces Muhammadi as an underrecognized manuscript patron."
+    },
+    {
+      "pdf_page": 84,
+      "surrounding_text": "one of the earliest extant Qara Quyunlu manuscripts may be attributable to the patronage of Pir Budaq's brother, Muhammadi ibn Jahan Shah. Jahan Shah's son, Muhammadi, appears in the histories as the next in line for the Qara Quyunlu throne",
+      "interpretive_note": "Teece argues Muhammadi may have been heir and patron despite Pir Budaq's seniority."
+    },
+    {
+      "pdf_page": 85,
+      "surrounding_text": "Suleymaniye Mosque library collection holds a Shahnama manuscript containing a dedicatory shamseh to a ruler named Muhammadi. Given the date and the place of production cited in the colophon, along with its inscription, it is likely that the patron of this manuscript was Muhammadi ibn Jahan Shah Qara Quyunlu.",
+      "interpretive_note": "Teece identifies Aya Sofya 3288 as likely commissioned by Muhammadi."
+    },
+    {
+      "pdf_page": 85,
+      "surrounding_text": "Dublin, CBL 137 - Isfahan (?) 868 / 1463 (?) Another manuscript, elsewhere attributed to the patronage of his brother Pir Budaq, may also have been one of Muhammadi's commissions. Muhammadi held his seat in Isfahan up to 1466.",
+      "interpretive_note": "Teece proposes CBL Pers. 137 as a possible Muhammadi commission."
+    },
+    {
+      "pdf_page": 85,
+      "surrounding_text": "the name of Muhammadi, the Qara Quyunlu patron, was discovered. Titley, p. 62 attributes this manuscript to the patronage of Pir Budaq. But, considering the distribution of power at that period",
+      "interpretive_note": "Teece notes how the Muhammadi identification emerged and contrasts it with prior Pir Budaq attribution."
+    },
+    {
+      "pdf_page": 85,
+      "surrounding_text": "if the reading of the former colophon associated with the manuscript is correct, then Muhammadi would be the most likely patron of such a manuscript executed in Isfahan.",
+      "interpretive_note": "Teece's attribution of CBL Pers. 137 to Muhammadi is conditional on the Isfahan colophon."
+    },
+    {
+      "pdf_page": 86,
+      "surrounding_text": "although the Shahnama created for Muhammadi may be one of the earliest known Qara Quyunlu manuscripts, undoubtedly the most significant patron of the book arts of this period was his brother, Pir Budaq ibn Jahan Shah Qara Quyunlu",
+      "interpretive_note": "Teece ranks Pir Budaq as the larger book patron while preserving Muhammadi's early importance."
+    },
+    {
+      "pdf_page": 86,
+      "surrounding_text": "Seeing no other solution, Jahan Shah and Muhammadi laid siege to the city of Baghdad. Eventually, Pir Budaq died at the hands of his own brother for repeated refusals to submit to their father's commands.",
+      "interpretive_note": "Teece links Muhammadi directly to the Baghdad siege and Pir Budaq's death."
+    },
+    {
+      "pdf_page": 119,
+      "surrounding_text": "Jahangir would recognize Qara Quyunlu control over Diyarbakir, that he would give his daughter's hand in marriage to Jahan Shah's son Muhammadi, and that he would send his son Murad Aq Quyunlu as hostage",
+      "interpretive_note": "Muhammadi appears in an Aq Quyunlu-Qara Quyunlu marriage alliance."
+    },
+    {
+      "pdf_page": 120,
+      "surrounding_text": "Jahan Shah decided to furlough his troops for the winter, but remained behind with his sons Muhammadi and Abu Yusuf Qara Quyunlu. Uzun Hasan seized this opportunity and attacked the half-deserted Qara Quyunlu army camp on the plains of Mus. Jahan Shah was killed, and his sons were captured. Muhammadi was executed",
+      "interpretive_note": "Teece states Muhammadi was captured and executed after Jahan Shah's defeat."
+    }
+  ],
+  "hakiki_likelihood_assessment": "No Class-A Hakiki witness emerges from Teece's corpus as extracted. Teece explicitly states that Jahan Shah wrote Turkish and Persian poetry under the pseudonym Haqiqi and that BL Or. 9493 is a 1488 copy of his bilingual diwan, but she does not list Hakiki/Cihan Shah among the contents of Pir Budaq anthologies. The best Class-B chase target is Vienna ONB N.F. 143 because it is a multi-author ghazal safineh made for Pir Budaq in Shiraz in 865/1460, copied by Shaykh Mahmud Pir Budaqi, and Teece says its final folios are difficult to identify. Yet her identified contents point away from Hakiki: Qasim, Khoja/Khoju, Hasan, Sadi, Salman Savaji, Amir Khusrau, Hafez, Kamal Khujandi, Iraqi, Auhadi, Jalal, plus catalogue names Humam (?) and Sayen. The Oxford Ouseley group is much weaker for Hakiki: Ouseley 131 is Nizari Dastur-nameh, Ouseley 140 is Khayyam rubaiyyat, and Ouseley 141 is probably Baba Afzal/Khoja rubaiyyat, not a multi-author ghazal corpus. Teece does say Pir Budaq collected recent or local west-Persian mystical poets and writers active within the previous century or generation, but that circle does not extend in her contents lists to Jahan Shah/Haqiqi. The political rupture with Jahan Shah is central to her historical framing, but she does not say it suppressed circulation of Jahan Shah poetry in Pir Budaq atelier books. Methodologically, the absence should be treated as weak negative evidence, not proof. For census future scope, Vienna N.F. 143 deserves image/catalogue verification before expansion; the Ouseley fascicles do not justify a Hakiki witness chase unless independent cataloguing contradicts Teece.",
+  "extraction_notes": {
+    "findability": {
+      "vienna_safineh_n_f_143": "found in chapter prose PDF pages 93-99, summary discussion around 102 and 111, catalogue pages 399-400, plates 433-439",
+      "bodleian_ouseley_group": "found in chapter prose PDF pages 99-102, catalogue pages 401-402, Ouseley 140 plates 441-444",
+      "appendix_b": "found at PDF pages 335-337, printed pages 294-296",
+      "appendix_c": "found at PDF pages 338-345, but title is Uzun Hasan objects, not Pir Budaq objects",
+      "hakiki_jahanshah": "found under Hakiki, Haqiqi, Jahan Shah, Jihan-Shah, Jihanshah, and typo Jahan Shan; no hits for Jahanshah, Cihanshah, Cihan Shah, or Cihanşah",
+      "muhammadi": "found under Muhammadi and Muhammadi ibn Jahan Shah; no hits for Muḥammadī or Muhammadi ibn Jahanshah as continuous phrase"
+    },
+    "search_index_summary": {
+      "Ouseley 131": "10 hits: PDF pages 93,99,100,336,401,402",
+      "Ouseley 140": "18 hits: PDF pages 13,99,100,101,336,401,402,441-444",
+      "Ouseley 141": "5 hits: PDF pages 99,100,101,336,402",
+      "N.F. 143 / N. F. 143": "24 combined hits: PDF pages 13,15,93,242,243,256,336,364,399,433-439,457",
+      "Vienna safineh": "15 hits: PDF pages 93,95,96,97,99,100,102,108,111",
+      "Appendix B": "3 hits: PDF pages 40,89,335",
+      "Appendix C": "3 hits: PDF pages 40,130,338",
+      "Hakiki/Haqiqi/Jahan Shah/Jihan variants": "main hits on PDF pages 43,49,62,79-87,95-96,116,119-120,129,138,179,350,413",
+      "Muhammadi": "23 hits on PDF pages 43,49,82,84,85,86,119,120",
+      "Aya Sofya 3288": "1 hit: PDF page 85",
+      "CBL Pers 137": "0 exact hits; CBL 137 appears as Dublin, CBL 137 on PDF page 85"
+    },
+    "other_census_relevant_shelfmarks": [
+      {
+        "shelfmark": "British Library Or. 9493",
+        "relevance": "Explicit 1488 copy of Jahan Shah/Haqiqi bilingual diwan, cited from Minorsky; already known but confirmed."
+      },
+      {
+        "shelfmark": "Suleymaniye Aya Sofya 3288",
+        "relevance": "Shahnama dated 1456 with dedication to Muhammadi, likely commissioned by Muhammadi ibn Jahan Shah."
+      },
+      {
+        "shelfmark": "Chester Beatty Library CBL Pers. 137",
+        "relevance": "Khamsa possibly attributable to Muhammadi if former Isfahan 1463 colophon is accurate."
+      },
+      {
+        "shelfmark": "British Library Or. 13193",
+        "relevance": "Later Aq Quyunlu oblong anthology for Yusuf mentioned in front matter; useful for broad 15th-century ghazal anthology census, though not Pir Budaq."
+      },
+      {
+        "shelfmark": "Istanbul Süleymaniye Fatih 04054 / Istanbul TIEM 02030 (disambiguation)",
+        "relevance": "Teece Appendix B entry #26 lists 'Fatih 4054 | Kulliyat of Imad al-Din (d. 1371) | date TBD | Suleymaniye Mosque Library' under Pir Budaq's library. YEK precision-resolution (probes B4 and B5 in data/searches/probe_2026-05-12_teece_corpus_bodleian_yek.json) shows two distinct Imad-i Faqih Kulliyats exist: TIEM 02030 dated 04 Zilhicce 863 AH / 1459 CE is the Pir-Budaq-era manuscript (Penc Genc + Divan structure); Süleymaniye Fatih 04054 dated 898 AH / 1492-93 CE is a later independent copy that postdates Pir Budaq's death by 26 years. Teece's Pir-Budaq-era attribution applies to TIEM 02030, not Fatih 04054. See notes/teece_2016_appendix_b_disambiguation.md for the full disambiguation narrative."
+      },
+      {
+        "shelfmark": "Istanbul University Library, Ghazaliyyat of Amir Shahi",
+        "relevance": "Pir Budaq-associated ghazal collection by a near-contemporary poet, copied by Shaykh Mahmud in Shiraz."
+      },
+      {
+        "shelfmark": "Istanbul Suleymaniyya Lala Ismail 574",
+        "relevance": "Kulliyat of Katibi with dedicatory shamseh to Pir Budaq."
+      },
+      {
+        "shelfmark": "London British Library I. O. 138",
+        "relevance": "Khamsa of Jamali copied in Baghdad with 1465 colophons; part of late Pir Budaq corpus."
+      },
+      {
+        "shelfmark": "Istanbul Topkapi H. 1015",
+        "relevance": "Diwan of Hafez copied at Baghdad by Shaykh Mahmud for Pir Budaq."
+      }
+    ],
+    "methodology_bearing_statements": [
+      "Teece selects multi-author collections of short-form poetry, especially ghazal and rubai, as the central anthology type for the dissertation's second half.",
+      "She states that the relatively high number of surviving anthological manuscripts suggests popularity in the Qara Quyunlu and Aq Quyunlu region and period.",
+      "She stresses that many valuable anthology examples are unpublished or little published and held in obscure collections.",
+      "For Pir Budaq, she states the Vienna and Oxford anthologies are portable miniature libraries of poetic selections and samples of his broader library.",
+      "She states Pir Budaq's library was current and regional, including writers still living or active within the previous century or generation, but also earlier classics.",
+      "She states many more manuscripts for other Qara Quyunlu royal patrons likely remain unrecognized in Istanbul and elsewhere."
+    ],
+    "extraction_limitations": [
+      "Embedded-text extraction used pdftotext; no independent PyMuPDF extraction was retained in the public record.",
+      "No OCR or visual verification was performed; extraction relies on embedded text via pdftotext.",
+      "Persian-script dedication and colophon readings were summarized from Teece translation rather than re-transcribed independently.",
+      "Teece does not provide poem counts for the Vienna or Ouseley contents in the extracted ranges."
+    ]
+  },
+  "source_publication": {
+    "author": "Teece, Emily",
+    "title": "Vessels of Verse, Ships of Song",
+    "year": 2016,
+    "publication_type": "doctoral dissertation",
+    "access_note": "The source PDF used for extraction is not redistributed in this archive; this record preserves structured extract data and source-publication metadata."
+  }
+}

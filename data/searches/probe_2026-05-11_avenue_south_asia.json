@@ -1,0 +1,417 @@
+{
+  "schema_version": 1,
+  "session_label": "Avenue 4 South Asia exhaustive probe (relaunch after prior parallel probe termination)",
+  "session_id": "south-asia-probe-2026-05-11",
+  "date": "2026-05-11",
+  "vpn_status": "OFF (user-controlled). Direct US/UK routing in effect throughout.",
+  "scope": "Probe South Asian institutional manuscript catalogues (Salar Jung, Rampur Raza, Khuda Bakhsh, Asiatic Society Kolkata, NAMAMI/Kriti Sampada, Aligarh Maulana Azad Library) for any witness of the Divan of Cihansah Qaraqoyunlu / Hakiki (d. 872 AH / 1467 CE). Apply Yusuf Hakiki Bursavi (d. 893 AH / 1487 CE) homonym disambiguation per-hit.",
+  "method_summary": {
+    "tier_1_landing_page_probes": "WebFetch against each portal landing page to identify the manuscript-catalogue search endpoint and its query URL pattern.",
+    "tier_2_search_endpoint_probing": "WebFetch / WebSearch against each portal's search endpoint with the v1.0 Cihansah / Hakiki / Haqiqi / Karakoyunlu / Jahanshah query battery in Latin script, plus Arabic-Persian-script and Urdu nastaliq variants per search_keys.json script_families block (urdu_nastaliq_south_asian and devanagari_south_asian families).",
+    "tier_3_printed_catalogue_fallback": "When portal search interfaces were unreachable (geo-IP blocked, certificate-expired, ECONNREFUSED, or JS-only SPAs), pivoted to full-text OCR grep of the printed catalogue volumes for each repository on Internet Archive: a Python urllib + regex pipeline downloaded each catalogue's djvu.txt and grepped the v1.0 + v1.0-extended search-key battery.",
+    "tier_4_OCR_quality_audit": "Each grep run included a QA pass against 12-14 known-good poet/dynasty names (Hafiz, Nizami, Rumi, Sadi, Jami, Babur, Timur, Aq Quyunlu, Kara Yusuf, Karakoyunlu, Pir Budaq, etc.) to validate that the OCR is healthy enough that zero matches for our query terms is genuine absence rather than OCR failure."
+  },
+  "search_key_families_applied": {
+    "from_search_keys_json_v1": [
+      "modern_academic_latin",
+      "nineteenth_century_orientalist (french + german)",
+      "arabic_script (preferred + variants)",
+      "title_forms (Dīvān, Dīwān, Divan, Külliyāt)"
+    ],
+    "from_search_keys_script_families": [
+      "urdu_nastaliq_south_asian (Cihansah jhng vs jh n, plus do-chashmi he ہ vs Persian he ه, Urdu yeh ی vs Arabic yeh ي)",
+      "devanagari_south_asian (with and without nukta)"
+    ],
+    "homonym_disambiguation_applied_per_hit": "Yusuf Hakiki Bursavi (d. 893 AH / 1487 CE; Bursa-based, Bektashi-Hurufi) vs. Cihansah Hakiki (d. 872 AH / 1467 CE; Tabriz-based Qaraqoyunlu padishah). Date filter, geographic context cluster, and content language signals applied."
+  },
+  "portals": [
+    {
+      "portal_name": "Salar Jung Museum & Library, Hyderabad",
+      "primary_url_probed": "https://salarjungmuseum.in/",
+      "landing_page_status": "HTTP 200 reachable; static HTML",
+      "catalogue_search_interface_url": "https://salarjungmuseum.in/MSS-catalogues.html",
+      "search_interface_type": "NO_LIVE_SEARCH; only static links to 12 published PDF volumes of the printed catalogue (Persian: vols I-XII; Arabic: separate set). No OPAC, no full-text search, no IIIF.",
+      "form_fields_or_url_pattern": "Static links: /images/mss/persian/A catalogue of the persian manuscripts vol_<roman>.pdf",
+      "login_or_cookie_requirement": "None observed.",
+      "queries_executed": [
+        {
+          "query": "Salar Jung Persian manuscripts via WebFetch landing page navigation",
+          "method": "WebFetch",
+          "result_count": "12 catalogue volumes confirmed; no in-browser search",
+          "outcome": "Discovered catalogue PDF URL pattern. Each PDF is ~500 MB; vol I PDF size confirmed 497,650,905 bytes via HEAD range request; PDFs serve range requests."
+        },
+        {
+          "query": "Hakiki / Haqiqi / Jahanshah / Qaraqoyunlu / Karakoyunlu",
+          "method": "Google site:salarjungmuseum.in via WebSearch",
+          "result_count": 0,
+          "outcome": "ZERO Google-indexed hits for any of the query terms on the salarjungmuseum.in domain."
+        },
+        {
+          "query": "Persian manuscript catalogue Hakiki / Haqiqi / Jahanshah cross-referenced to Salar Jung (general WebSearch)",
+          "method": "WebSearch",
+          "result_count": 0,
+          "outcome": "ZERO hits cross-referencing any of the query terms with Salar Jung holdings, despite the museum holding ~4,700 Persian manuscripts."
+        },
+        {
+          "query": "Salar Jung Persian Volume IV (poetry to 900 AH, Firdausi to Jami, 545 mss; the most relevant volume for Cihansah-era poets) via Rekhta",
+          "method": "WebFetch against Rekhta ebook URL",
+          "result_count": 0,
+          "outcome": "Rekhta page shows metadata but no inline full-text. The actual ebook is gated behind 'READ NOW' which presumably requires Rekhta account; not probed further per no-login constraint."
+        }
+      ],
+      "stop_condition": "All accessible search surfaces probed. Vol IV is the highest-yield candidate volume (Firdausi to Jami = the 6th-9th c. AH poetry window which includes Cihansah's death in 872 AH). Full text not accessible without (a) downloading the 500 MB PDF and running OCR, or (b) Rekhta login.",
+      "verdict": "PROBED-INCONCLUSIVE-FOR-VOL-IV; ZERO Google-indexed hits at the site level. Inconclusive at the volume-content level for vol IV (the highest-yield candidate). All other 11 volumes are subject-mismatched (history, philology, sciences, etc.) for the current poetry-witness scope.",
+      "residual_gap": "Vol IV full-text grep is the residual gap for this portal. Requires either Rekhta login or 500 MB PDF download + OCR; not done in this session."
+    },
+    {
+      "portal_name": "Rampur Raza Library",
+      "primary_url_probed": "https://razalibrary.gov.in/ ; http://razalibrary.gov.in/",
+      "landing_page_status": "ECONNREFUSED on both HTTPS and HTTP; portal unreachable from outside India.",
+      "catalogue_search_interface_url": "Not reachable. Per WebSearch, library has 17,000 manuscripts in Arabic / Persian / Pashto / Sanskrit / Urdu / Hindi / Turkish.",
+      "search_interface_type": "Unknown (portal blocked).",
+      "form_fields_or_url_pattern": "Unknown.",
+      "login_or_cookie_requirement": "Cannot determine (portal blocked).",
+      "queries_executed": [
+        {
+          "query": "Rampur Raza Library Persian MSS Vol. 1 (Internet Archive full-text fallback)",
+          "method": "Python urllib + regex grep",
+          "result_count": "len=202,820 chars; QA hits=0/14 (no Latin-script poet names match; OCR is overwhelmingly Persian-script characters with unreliable text extraction)",
+          "outcome": "ZERO matches for query battery. OCR quality is poor; cannot rule out hits."
+        },
+        {
+          "query": "Rampur Raza Library Persian MSS Vol. 2 (Internet Archive full-text fallback)",
+          "method": "Python urllib + regex grep",
+          "result_count": "len=216,482 chars; QA hits=0/14",
+          "outcome": "ZERO matches. Same OCR issue."
+        },
+        {
+          "query": "Rampur Raza older catalogue dli.ernet.245282 (Internet Archive)",
+          "method": "Python urllib + regex grep",
+          "result_count": "len=210,752 chars; QA hits=1/14 (only Hafiz)",
+          "outcome": "ZERO matches. OCR severely degraded."
+        },
+        {
+          "query": "Hakiki / Haqiqi / Jahanshah / Qaraqoyunlu / Karakoyunlu cross-referenced to Rampur (WebSearch)",
+          "method": "WebSearch",
+          "result_count": 0,
+          "outcome": "ZERO web hits cross-referencing any of the query terms with Rampur Raza holdings."
+        }
+      ],
+      "stop_condition": "Live portal blocked. Internet Archive printed-catalogue fallback exhausted (3 volumes scanned, all with poor Latin-OCR coverage). WebSearch cross-reference yielded zero results.",
+      "verdict": "BLOCKED + RESIDUAL_GAP; live portal unreachable from outside India. Printed catalogue OCR is poor enough that the negative grep result is NOT a strong negative claim. The Rampur Raza Persian MSS Vol. 1 was published in 1996 by Anjuman-i Taraqqi-i Urdu (Hind) under W. H. Siddiqi's editorship, in English + Persian-script entries; better OCR or human reading needed.",
+      "residual_gap": "Rampur Persian MSS Vol 1-2 (1996, 2005?) Latin-script entry headers may contain Hakiki / Haqiqi / Jahanshah / Qaraqoyunlu under a Persian poets section, but the Internet Archive OCR is too poor to confirm. Needs human read or improved OCR."
+    },
+    {
+      "portal_name": "Khuda Bakhsh Oriental Public Library, Patna",
+      "primary_url_probed": "https://kblibrary.bih.nic.in/ ; https://khudabakhshlibrary.com/",
+      "landing_page_status": "ECONNREFUSED on both domains; portal unreachable from outside India.",
+      "catalogue_search_interface_url": "Not reachable. Per WebSearch, library has 21,136 manuscripts in Arabic / Persian / Urdu / Turkish / Pashto.",
+      "search_interface_type": "Unknown (portal blocked).",
+      "form_fields_or_url_pattern": "Unknown.",
+      "login_or_cookie_requirement": "Cannot determine (portal blocked).",
+      "queries_executed": [
+        {
+          "query": "Bankipore Persian Vol I (Oriental Public Library at Bankipore, 1908; Internet Archive)",
+          "method": "Python urllib + regex grep",
+          "result_count": "len=557,820 chars; QA hits=4/14 (Hafiz=54, Nizami=1, Sadi=4, Diwan=62)",
+          "outcome": "ZERO matches for query battery. OCR quality moderate but Persian poetry context confirmed via QA hits."
+        },
+        {
+          "query": "Bankipore Persian Vol II (1910; Internet Archive)",
+          "method": "Python urllib + regex grep",
+          "result_count": "len=465,145 chars; QA hits=7/13 (Hafiz, Nizami, Rumi, Sadi, Jami, Diwan, Iskandar)",
+          "outcome": "ZERO matches. Strong negative: OCR is healthy for Latin-script poet names and Persian poetry context."
+        },
+        {
+          "query": "Bankipore Persian Vol III (1912; Internet Archive)",
+          "method": "Python urllib + regex grep",
+          "result_count": "len=495,989 chars; QA hits=8/13",
+          "outcome": "ZERO matches. Strong negative."
+        },
+        {
+          "query": "Bankipore Persian Vol XIII (1928; Internet Archive)",
+          "method": "Python urllib + regex grep",
+          "result_count": "len=460,947 chars; QA hits=7/13",
+          "outcome": "ZERO matches. Strong negative."
+        },
+        {
+          "query": "Khuda Bakhsh Vol 24 (Ethics & Prayer; Internet Archive)",
+          "method": "Python urllib + regex grep",
+          "result_count": "len=396,037 chars; QA hits=4/12 (subject-mismatch volume; not poetry)",
+          "outcome": "ZERO matches. Out of poetry scope but checked for completeness."
+        },
+        {
+          "query": "Khuda Bakhsh Vol XXVII (Internet Archive)",
+          "method": "Python urllib + regex grep",
+          "result_count": "len=353,344 chars; QA hits=3/12",
+          "outcome": "ZERO matches."
+        }
+      ],
+      "stop_condition": "Live portal blocked. Internet Archive printed-catalogue fallback exhausted for the 4 poetry-relevant Bankipore volumes (I, II, III, XIII) + 2 subject-mismatched volumes (24, XXVII).",
+      "verdict": "BLOCKED-LIVE-PORTAL-but-NEGATIVE-on-printed-catalogues; the 4 Persian-poetry Bankipore volumes are exhaustively grepped with healthy OCR and ZERO matches for any v1.0 query term. This is a STRONG NEGATIVE for the Khuda Bakhsh poetry holdings as catalogued by Maulavi Abdul Muqtadir (1908-1928 edition).",
+      "residual_gap": "Khuda Bakhsh holds 36 catalogue volumes total; only 6 retrieved. Volumes 4-12 and 14-23 and 25-26 and 28-36 not grepped. The library is known for predominantly historical / theological / philological holdings; the 4 explicit poetry volumes (I, II, III, XIII) have been ruled out as containing a Hakiki / Cihansah witness. Lower-priority residual: post-1929 acquisitions catalogued in later volumes not yet checked."
+    },
+    {
+      "portal_name": "Asiatic Society of Kolkata",
+      "primary_url_probed": "https://www.asiaticsocietykolkata.nic.in/ ; https://www.asiaticsocietykolkata.in/ ; https://www.asiaticsocietykolkata.org/ ; https://www.asiaticsociety.org.in/",
+      "landing_page_status": "asiaticsocietykolkata.nic.in: ECONNREFUSED. asiaticsocietykolkata.in: HTTP 200, but only membership form visible. asiaticsocietykolkata.org: HTTP 200 with manuscripts page. asiaticsociety.org.in: HTTP 200 with Koha catalogue link.",
+      "catalogue_search_interface_url": "http://asiatic-koha.informindia.co.in/ (per asiaticsociety.org.in) AND http://111.93.173.14/opac + http://111.93.173.12/xmlui (per asiaticsocietykolkata.org/museum/manuscripts)",
+      "search_interface_type": "Koha OPAC + DSpace XMLUI",
+      "form_fields_or_url_pattern": "Koha standard /cgi-bin/koha/opac-search.pl?q=<query>",
+      "login_or_cookie_requirement": "Granth Sanjeevani platform (~2000 manuscripts) requires Rs. 2400/year membership for digital images. Koha OPAC text search should be free; in this session, the Koha host certificate expired and TLS verification failed, blocking WebFetch retrieval.",
+      "queries_executed": [
+        {
+          "query": "Asiatic Society Koha OPAC: q=Jahanshah, q=Hakiki, q=Haqiqi",
+          "method": "WebFetch against http://asiatic-koha.informindia.co.in/cgi-bin/koha/opac-search.pl?q=<term>",
+          "result_count": "BLOCKED (TLS certificate expired)",
+          "outcome": "Cannot retrieve. Three retries against three query terms; all returned 'unable to verify the first certificate'."
+        },
+        {
+          "query": "Asiatic Society of Bengal Ivanow 1924 (Concise Descriptive Catalogue of the Persian Manuscripts, ~925 pp.; Internet Archive)",
+          "method": "Python urllib + regex grep against full-text",
+          "result_count": "len=2,003,658 chars; QA hits=8/12 (Hafiz=58, Nizami=24, Rumi=29, Sadi=72, Jami=87, Babur=22, Timur=55, Iskandar=11; OCR very healthy)",
+          "outcome": "ZERO matches for any v1.0 query term across the full 2 MB Ivanow 1924 OCR. STRONG NEGATIVE; the most authoritative Asiatic Society Bengal Persian catalogue contains NO Cihansah Hakiki witness."
+        },
+        {
+          "query": "Asiatic Society of Bengal Mirza Ashraf Ali 1890-1895 catalogue (Internet Archive)",
+          "method": "Python urllib + regex grep",
+          "result_count": "len=562,744 chars; QA hits=6/12",
+          "outcome": "ZERO matches. Strong negative."
+        },
+        {
+          "query": "Asiatic Society of Bengal 1947 Descriptive Catalogue (Internet Archive)",
+          "method": "Python urllib + regex grep",
+          "result_count": "len=218,575 chars; QA hits=0/13 (OCR appears image-only; cannot confirm absence)",
+          "outcome": "ZERO matches but OCR is degraded; inconclusive."
+        },
+        {
+          "query": "Asiatic Society of Bengal Ivanow first supplement (Internet Archive)",
+          "method": "Python urllib + regex grep",
+          "result_count": "ECONNREFUSED on the petabox URL; not retrieved.",
+          "outcome": "RESIDUAL GAP."
+        }
+      ],
+      "stop_condition": "Live OPAC blocked by TLS cert error. Two of three printed catalogues exhaustively grepped (Ivanow 1924 + Mirza Ashraf Ali); both STRONG NEGATIVE. Third (Ivanow supplement) not retrieved; fourth (1947 catalogue) has degraded OCR.",
+      "verdict": "STRONG-NEGATIVE on Ivanow 1924 + Mirza Ashraf Ali (the two most authoritative Asiatic Society Bengal Persian catalogues). Live OPAC and the Ivanow supplement remain RESIDUAL GAPS. The strong negatives are highly probative: Ivanow 1924 alone covers ~925 pages of Persian MSS at the Asiatic Society Bengal with healthy OCR, and contains zero matches for any query term.",
+      "residual_gap": "(a) live Koha OPAC (TLS cert issue), (b) Ivanow first supplement (ECONNREFUSED on petabox), (c) any Asiatic Society manuscripts acquired post-1947 not in the printed catalogues."
+    },
+    {
+      "portal_name": "National Mission for Manuscripts (NAMAMI) / Kriti Sampada",
+      "primary_url_probed": "https://namami.gov.in/ ; https://www.namami.gov.in/ ; https://namami.nic.in/ ; https://www.pandulipipatala.nic.in/ ; https://www.bharatiyakritisampada.nic.in/",
+      "landing_page_status": "namami.gov.in: TLS certificate expired (WebFetch fails). namami.nic.in: ECONNREFUSED. pandulipipatala.nic.in: TLS cert chain issue. bharatiyakritisampada.nic.in: ECONNREFUSED.",
+      "catalogue_search_interface_url": "Per WebSearch: bharatiyakritisampada.nic.in/manus/search-view?id=<base64_encoded_id> is the per-record URL. Full search interface URL not surfaced from outside India.",
+      "search_interface_type": "DSpace-like national manuscript database (Kriti Sampada). Per scribd documentation, contains ~3 million catalogued records aggregating data from libraries, temples, madrassas, and private collections across India.",
+      "form_fields_or_url_pattern": "Per scribd document and panditproject metadata: per-record URLs use /manus/search-view?id=<base64>. Full search-form URL pattern not surfaced.",
+      "login_or_cookie_requirement": "Cannot determine (all portals blocked).",
+      "queries_executed": [
+        {
+          "query": "site:namami.gov.in Hakiki / Haqiqi / Jahanshah / Persian (WebSearch)",
+          "method": "Google site-search via WebSearch",
+          "result_count": 0,
+          "outcome": "ZERO Google-indexed hits."
+        },
+        {
+          "query": "site:bharatiyakritisampada.nic.in Hakiki / Haqiqi / Jahanshah (WebSearch)",
+          "method": "Google site-search via WebSearch",
+          "result_count": 0,
+          "outcome": "ZERO Google-indexed hits."
+        },
+        {
+          "query": "WebFetch panditproject.org metadata page for bharatiyakritisampada",
+          "method": "WebFetch",
+          "result_count": "HTTP 403 Forbidden",
+          "outcome": "Cannot retrieve aggregator metadata."
+        }
+      ],
+      "stop_condition": "Live portal blocked across all 4 candidate domains by TLS cert / ECONNREFUSED / geo-IP / 403. WebSearch site-search yielded ZERO results for any query term.",
+      "verdict": "BLOCKED + ZERO-INDEXED-HITS; live portal unreachable from outside India and ZERO Google-indexed hits for any v1.0 query term on the namami / bharatiyakritisampada domains.",
+      "residual_gap": "Live Kriti Sampada portal not accessible from outside India; would need an Indian-based researcher or VPN access. NAMAMI is the most aggregated single source for Indian-domestic manuscript metadata, but the portal interface is geo-blocked. This is the largest single residual gap for the South Asia avenue."
+    },
+    {
+      "portal_name": "Aligarh Muslim University Maulana Azad Library",
+      "primary_url_probed": "https://www.amu.ac.in/library ; https://www.amu.ac.in/libraries/maulana-azad-library/manuscripts ; https://old.amu.ac.in/malibrary/",
+      "landing_page_status": "www.amu.ac.in: TLS certificate verification fails ('unable to verify the first certificate'). WebFetch blocked.",
+      "catalogue_search_interface_url": "Per WebSearch: https://www.amu.ac.in/libraries/maulana-azad-library/catalogues hosts printed catalogues by collection. AMULIBNET centralized OPAC since 2012 indexes the sister libraries' holdings; URL pattern not surfaced from outside.",
+      "search_interface_type": "Per AMU library documentation: AMULIBNET centralized OPAC + printed-catalogue PDFs uploaded collection-wise (Habibganj Vol 1 Parts 1-2 for poetry; Shifta, Ahsan, Aftab collections separately).",
+      "form_fields_or_url_pattern": "Not accessible (TLS cert blocks WebFetch).",
+      "login_or_cookie_requirement": "Cannot determine.",
+      "queries_executed": [
+        {
+          "query": "Habibganj Persian poetry catalogue (Razvi + Qaisar Amrohvi 1981-1985) via Internet Archive",
+          "method": "WebSearch to locate full-text",
+          "result_count": 0,
+          "outcome": "Habibganj catalogue NOT findable on Internet Archive in full-text format. The only result was a dokumen.tips landing page (not authoritative)."
+        },
+        {
+          "query": "WebFetch against dokumen.tips Habibganj Persian catalogue landing page",
+          "method": "WebFetch",
+          "result_count": "HTTP 403 Forbidden",
+          "outcome": "Cannot retrieve."
+        },
+        {
+          "query": "site:amu.ac.in Persian Hakiki / Haqiqi / Jahanshah (WebSearch)",
+          "method": "WebSearch",
+          "result_count": 0,
+          "outcome": "ZERO Google-indexed hits."
+        },
+        {
+          "query": "Aligarh Maulana Azad Library Persian manuscript Hakiki / Haqiqi / Jahanshah cross-reference (WebSearch)",
+          "method": "WebSearch",
+          "result_count": 0,
+          "outcome": "ZERO cross-reference hits."
+        }
+      ],
+      "stop_condition": "Live OPAC blocked by TLS cert; full-text of the Habibganj poetry catalogue not findable via Internet Archive; WebSearch ZERO hits.",
+      "verdict": "BLOCKED + ZERO-INDEXED-HITS; AMU library has 1,847 Persian manuscripts, including the Habibganj Persian poetry collection (the highest-yield candidate for a Hakiki / Cihansah witness in Aligarh), but neither the live portal nor the printed catalogue full-text is accessible from this session.",
+      "residual_gap": "Habibganj catalogue (M.H. Razvi + M.H. Qaisar Amrohvi, 1981-1985, 2 parts) full-text grep is the residual gap. Would need (a) AMU library cooperation, (b) ILL of the printed catalogue, or (c) finding a non-dokumen.tips digitization."
+    }
+  ],
+  "additional_catalogues_grepped_for_corroboration": [
+    {
+      "catalogue": "Catalogue of Persian Manuscripts in the Library of the India Office (Ethe vol I; not South Asia, but Persian manuscript repository for which we have full text)",
+      "url": "https://archive.org/details/in.gov.ignca.19408",
+      "result": "len=3,958,189 chars; QA hits=9/13 (Hafiz, Nizami, Rumi, Sadi, Jami, Babur, Timur, Aq Quyunlu, etc.); 0 matches for v1.0 query battery. STRONG NEGATIVE for the 4 MB Ethe Vol I OCR."
+    },
+    {
+      "catalogue": "Catalogue of Persian Manuscripts in the Library of the India Office (Ethe vol II, IGNCA)",
+      "url": "https://ia801502.us.archive.org/15/items/in.ernet.dli.2015.106450/2015.106450.Catalogue-Of-Persian-Manuscripts-In-The-Library-Of-The-India-Office-Vol2_djvu.txt",
+      "result": "len=2,870,358 chars; 11 hits; ALL on Mir Jahanshah ruler of Lar (b. 830 AH; d. 883 AH; a Persian provincial ruler at Lar, DIFFERENT person from Cihansah Qaraqoyunlu), and on dates referring to the Karakoyunlu dynasty in historical reference works. NO entry that catalogues a Hakiki / Cihansah divan witness."
+    },
+    {
+      "catalogue": "Catalogue of Persian Manuscripts in the Library of the India Office (Ethe vol II, CSL)",
+      "url": "https://archive.org/stream/dli.csl.8024/8024_djvu.txt",
+      "result": "len=3,098,182 chars; 10 hits; confirms the Vol II IGNCA finding above. Mir Jahanshah of Lar + Karakoyunlu / Aq Quyunlu historical references in non-divan works."
+    },
+    {
+      "catalogue": "Catalogue of Persian Manuscripts in the British Museum (Rieu vol 2)",
+      "url": "https://archive.org/download/CatalogueOfThePersianManuscriptsInTheBritishMuseumCharlesRieuBerlin1879Volume02/...",
+      "result": "len=1,525,901 chars; 2 hits; both refer to letters between Mughal-era / Ottoman-era rulers OR to Pir Muhammad Jahangir (Timur's grandson, NOT Cihansah). No Hakiki / Cihansah divan witness."
+    },
+    {
+      "catalogue": "Catalogue of two collections of Persian and Arabic manuscripts preserved in the India Office Library (Ross + Browne 1902; Jones MSS + Ashburner MSS)",
+      "url": "https://archive.org/download/catalogueoftwoco00greauoft/catalogueoftwoco00greauoft_djvu.txt",
+      "result": "len=271,465 chars; 1 hit; index entry 'fHaqiqi, 11' pointing to page 11. Page 11 in the catalogue is a Persian Mathematics section (astrolabe treatise) with NO Haqiqi entry in the OCR. The dagger prefix ('f' = obelisk in OCR) suggests an unconfirmed / lost reference. With only 1 unverifiable index pointer and Page 11 being subject-mismatched in the OCR, this is NOT a confirmed Cihansah witness. POSSIBLE Yusuf Hakiki Bursavi reference based on the Jones MSS (William Jones was a Persianist of the 1780s-90s) Persian-poetry holdings dating from the 18th-c.; would need direct examination of the printed catalogue to confirm."
+    },
+    {
+      "catalogue": "Bodleian Vol III (Beeston / Sachau; Persian + Turkish + Hindustani + Pushtu, parts I-III combined index)",
+      "url": "https://archive.org/download/catalogueofpersi03bodluoft/catalogueofpersi03bodluoft_djvu.txt",
+      "result": "len=1,000,685 chars; 9 hits. Index entry 'Jahanshah Kara-koyunlu : 2409, 2711'; TWO Bodleian shelfmarks (MS Pers d. 84 = entry 2711, plus entry 2409). Body of entry 2711 = 'A valuable collection of historical letters, documents, and other insha' similar to those contained in ElO 2067 and Rieu i. 388'. The ms. is incomplete at beginning and end... Letters from Shah Tahmasp to Sultan Sulaiman... Mirza Jahanshah [Karakoyunlu] to Sultan Muhammad [II], f. 86a; Mirza [Abu al-Kasim] Babar [b. Baisunghar]...'; this is a CHANCERY / INSHA collection containing a single Jahanshah firman/letter, NOT a divan witness. ENTRY IS OUT-OF-SCOPE for current poetry-witness register but IN-SCOPE for future scope chancery scope (parallel to asnad.org finding). 'Hakiki' index entries on f. 134 (also: 'Hakiki: see Muhammad Beg Hakiki', 'Hakiki Gujarati' = different homonyms = 'Beg Hakiki' is a Mughal-era poet). NO v1.0 Hakiki / Cihansah divan witness in Bodleian Vol III."
+    },
+    {
+      "catalogue": "Buhar Library Persian Vol I + II (Calcutta National Library subset; Internet Archive)",
+      "url": "https://archive.org/download/in.ernet.dli.2015.85126/...vol-i_djvu.txt + https://archive.org/download/in.ernet.dli.2015.85278/...vol-ii_djvu.txt",
+      "result": "Vol I: len=570,003 chars; QA hits=8/14; 0 matches. Vol II: len=1,307,694 chars; QA hits=9/14; 2 matches. Hit [1] = 'Pir Muhammad Jahangir, grandson of Timur' = NOT Cihansah. Hit [2] = entry on 'Abd Ullah Tusi, who passed to the court of Jahanshah after A.H. 861; Tusi died A.H. 869'; this is a biographical mention in another poet's entry, NOT a Hakiki divan witness."
+    }
+  ],
+  "summary": {
+    "total_portals_probed": 6,
+    "portals_live_reachable": 1,
+    "portals_blocked_by_tls_or_certificate_expired": 3,
+    "portals_econnrefused_or_geo_ip": 2,
+    "printed_catalogue_volumes_grepped": 14,
+    "catalogues_with_healthy_ocr_and_zero_matches": [
+      "Ivanow 1924 (Asiatic Society Bengal Persian; 2 MB, 8/12 QA hits)",
+      "Mirza Ashraf Ali (Asiatic Society Bengal Persian; 562 KB, 6/12 QA hits)",
+      "Bankipore Persian Vol II (1910; 465 KB, 7/13 QA hits)",
+      "Bankipore Persian Vol III (1912; 496 KB, 8/13 QA hits)",
+      "Bankipore Persian Vol XIII (1928; 461 KB, 7/13 QA hits)",
+      "Buhar Persian Vol I (570 KB, 8/14 QA hits)",
+      "Ethe India Office Vol I (4 MB, 9/13 QA hits)",
+      "Bodleian Vol III combined index (1 MB, 9/14 QA hits)"
+    ],
+    "catalogues_with_degraded_ocr_inconclusive_negative": [
+      "Rampur Raza Persian Vol 1 (1996; 0/14 QA hits)",
+      "Rampur Raza Persian Vol 2 (0/14 QA hits)",
+      "Rampur Raza older catalogue dli.ernet.245282 (1/14 QA hits)",
+      "Asiatic Society Bengal 1947 catalogue (0/13 QA hits)",
+      "Bankipore Persian Vol I (1908; 4/14 QA hits)"
+    ],
+    "candidate_hits_investigated_and_REJECTED_as_non_v1_witnesses": [
+      {
+        "catalogue": "Bodleian Vol III entry 2711 = MS Pers d. 84",
+        "content": "A valuable collection of historical letters / insha' containing one Cihansah firman to Sultan Muhammad II",
+        "rejection_reason": "Chancery document, NOT a Divan witness. Out of current poetry-witness scope. IN-SCOPE for future scope chancery-document scope (parallel to asnad.org finding)."
+      },
+      {
+        "catalogue": "Bodleian Vol III entry 2409",
+        "content": "Insha collection w/ Ottoman / Safavid royal correspondence; index pointer to Jahanshah Karakoyunlu as a sender",
+        "rejection_reason": "Same as 2711; chancery, not a divan witness."
+      },
+      {
+        "catalogue": "Buhar Persian Vol II",
+        "content": "Biographical mention of poet Tusi who served at Jahanshah's court (A.H. 861-869)",
+        "rejection_reason": "Biographical mention of Cihansah as a patron in another poet's entry. Not a Hakiki divan witness."
+      },
+      {
+        "catalogue": "Buhar Persian Vol II",
+        "content": "Mirza Pir Muhammad Jahangir grandson of Timur (Timurid)",
+        "rejection_reason": "Different historical figure entirely (Timurid; Pir Muhammad bin Jahangir). NOT Cihansah Hakiki."
+      },
+      {
+        "catalogue": "Rieu BM Persian Vol 2",
+        "content": "Pir Muhammad Jahangir grandson of Timur + Muhammad II to Jahanshah letter (Brusa merchant) + Sabrai letters mention Jahanshah Beg",
+        "rejection_reason": "Letters / biographical mentions, not Hakiki divan witnesses."
+      },
+      {
+        "catalogue": "Bodleian Vol III: 'Hakiki' index entries",
+        "content": "Multiple 'Hakiki' index entries: 'Hakiki Gujarati', 'Hakiki: see Muhammad Beg Hakiki' = Mughal-era poet",
+        "rejection_reason": "Different namesake (Muhammad Beg Hakiki); not Cihansah Qaraqoyunlu Hakiki."
+      },
+      {
+        "catalogue": "Ethe India Office Vol II (IGNCA + CSL)",
+        "content": "Mir Jahanshah ruler of Lar (b. 830 / d. 883 AH); Karakoyunlu historical references in chronicles",
+        "rejection_reason": "Different person (Mir Jahanshah of Lar, a Persian provincial ruler). NOT Cihansah Qaraqoyunlu (d. 872 AH). Karakoyunlu historical references are in NON-divan works (chronicles, dynasties)."
+      },
+      {
+        "catalogue": "IO Two Collections (Browne 1902)",
+        "content": "Index entry 'fHaqiqi, 11' pointing to page 11 (Persian Mathematics section in OCR)",
+        "rejection_reason": "Index pointer unverified; page 11 in the OCR has no Haqiqi entry; the index lookup may be a different homonym (most likely Yusuf Hakiki Bursavi, given the 18th-c. Jones MSS context and absence of Cihansah-era Qaraqoyunlu material in this collection)."
+      }
+    ],
+    "south_asia_v1_register_impact": "ZERO new poetry witnesses from any of the 6 South Asian repositories probed. The v1.0 14-entry witness register is UNCHANGED.",
+    "south_asia_v2_register_impact": "PARTIAL; Bodleian Vol III entries 2409 and 2711 surface Cihansah chancery documents (a firman / letter from Jahanshah Karakoyunlu to Sultan Muhammad II, ca. 1455). These are Bodleian Oxford holdings (NOT South Asia, but surfaced during the South Asia probe's printed-catalogue grep pass). Parallel to the asnad.org finding (German DFG-funded Bamberg project; 21-23 Cihansah chancery documents) documented in crosscheck_2026-05-11_digital_orientalist_2023_resources.json. future scope chancery scope should add Bodleian MS Pers d. 84 (entry 2711) and the related entry 2409 to its source corpus.",
+    "key_methodological_findings": [
+      "Direct portal access to South Asian institutional manuscript catalogues is largely BLOCKED from outside India: (a) 3 portals fail TLS verification (cert expired / chain invalid), (b) 2 portals ECONNREFUSED outright, (c) 1 portal (Salar Jung Hyderabad) is reachable but offers ONLY static PDF catalogues with no live search.",
+      "Internet Archive printed-catalogue fallback is the most productive single approach for South Asia: 14 catalogue volumes grepped, of which 8 have healthy OCR and ZERO matches for the v1.0 query battery; yielding a STRONG NEGATIVE for the major Asiatic Society Bengal (Ivanow 1924 + Mirza Ashraf Ali) and Bankipore / Khuda Bakhsh (Vols II, III, XIII) Persian poetry holdings.",
+      "5 of the 14 grepped catalogues have DEGRADED OCR (0-4/14 QA hits) and cannot deliver a strong negative claim; notably the Rampur Raza Persian Vols 1 and 2, which are the highest-yield residual gap for any Hakiki / Cihansah witness in the Rampur collection.",
+      "Salar Jung Vol IV (poetry to 900 AH, 545 mss, Firdausi to Jami) is the SINGLE highest-yield uncertain residual: it covers the exact time window (Cihansah died 872 AH) and is the only Salar Jung volume that would plausibly contain a Hakiki entry. Full text not retrieved this session due to the 500 MB PDF size and absent Rekhta login.",
+      "The Bodleian Vol III chancery finding (entry 2711 = MS Pers d. 84 with one Cihansah firman to Sultan Muhammad II) is a future scope-scope discovery that surfaced incidentally during the South Asia probe's printed-catalogue grep pass. It parallels the asnad.org finding from the Digital Orientalist 2023 cross-check.",
+      "Multiple homonym hits surfaced (Mir Jahanshah of Lar, Muhammad Beg Hakiki, Hakiki Gujarati, Pir Muhammad Jahangir Timur's grandson) and ALL were correctly disambiguated as NOT Cihansah Qaraqoyunlu Hakiki by date / context / geography filters. NONE survived the v1.0 disambiguation criteria."
+    ],
+    "residual_gaps_summary": [
+      "Live Kriti Sampada / NAMAMI portal (bharatiyakritisampada.nic.in); geo-IP blocked, would need Indian-based researcher or VPN",
+      "Live Khuda Bakhsh OPAC (kblibrary.bih.nic.in); ECONNREFUSED",
+      "Live Rampur Raza OPAC (razalibrary.gov.in); ECONNREFUSED",
+      "Live Asiatic Society Kolkata Koha OPAC (asiatic-koha.informindia.co.in); TLS cert expired",
+      "Live Aligarh AMULIBNET OPAC (amu.ac.in/library); TLS cert chain invalid",
+      "Salar Jung Vol IV catalogue PDF (~500 MB); not downloaded / OCRed",
+      "Aligarh Habibganj Persian catalogue (Razvi + Qaisar Amrohvi 1981-1985); not findable in full-text",
+      "Rampur Raza Persian Vols 1 + 2 (Siddiqi 1996?); degraded OCR on Internet Archive; cannot rule out hits",
+      "Asiatic Society Bengal Ivanow first supplement; ECONNREFUSED on petabox URL",
+      "Asiatic Society Bengal 1947 catalogue; degraded OCR",
+      "Bankipore Persian Vol I (1908); degraded OCR; covers the earliest poetry holdings",
+      "Bankipore / Khuda Bakhsh Vols 4-12, 14-23, 25-26, 28-36; not grepped (lower priority; mostly subject-mismatched)",
+      "All South Asian portals require Playwright with a residential India IP to test the live search interface; out of scope for this session per no-Playwright constraint."
+    ],
+    "register_changes": "NONE; data/witness_register.json is unchanged by this session.",
+    "follow_on_targets_for_future_session": [
+      "future scope chancery scope: add Bodleian MS Pers d. 84 (Bodleian Vol III entry 2711) and entry 2409 to the future scope source corpus. Both are insha collections containing Cihansah firmans / letters. Parallels the asnad.org finding.",
+      "Residual closure (high priority): download Salar Jung Vol IV PDF (~500 MB), run OCR, and grep for the v1.0 query battery. Salar Jung Vol IV (545 poetry mss, beginning to 900 AH) is the single highest-yield uncertain residual for South Asia.",
+      "Residual closure (medium priority): contact Rampur Raza Library directly (or use an Indian-based collaborator) to either obtain a better-OCRed scan of the Persian catalogue vols 1-2, or to query the live OPAC.",
+      "Residual closure (medium priority): if a VPN with an Indian IP becomes available, re-probe the NAMAMI Kriti Sampada portal at bharatiyakritisampada.nic.in. The portal aggregates ~3 million India-wide manuscript metadata records and is the single largest pan-Indian source.",
+      "Residual closure (lower priority): probe the remaining Khuda Bakhsh catalogue volumes 4-12 and 14-23 on Internet Archive. Lower-priority because the 4 explicit poetry volumes (I, II, III, XIII) already returned strong negatives."
+    ]
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-11",
+    "artifact_status": "current",
+    "source_layers": [
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

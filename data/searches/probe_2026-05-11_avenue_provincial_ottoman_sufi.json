@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "session_label": "Avenues 5+6 Ottoman provincial tezkires + Sufi tekke libraries (primary-session replacement for a failed Ottoman probe output)",
+  "session_id": "avenue-provincial-ottoman-sufi-primary-session-2026-05-11",
+  "date": "2026-05-11",
+  "current_status_note": "Superseded for Ottoman-current-status purposes by probe_2026-05-11_ottoman_chunks_synthesis.json, which deepened this shallow site-restricted pass through four focused chunk probes.",
+  "scope": "Probe Turkish institutional manuscript portals (yazmalar.gov.tr, Türkiye Yazma Eserler Başkanlığı yek.gov.tr, ISAM new home katalog.isam.org.tr, Milli Kütüphane dijital-kutuphane.mkutup.gov.tr, Diyanet yazmaeserler.diyanet.gov.tr) for any Cihanşah Qaraqoyunlu / Hakîkî witness not in current poetry-witness register. Includes Sufi tekke holdings (Konya Mevlana, Bektaşi-affiliated, Bursa where Yusuf Hakîkî Bursavi taught). Replaces a failed Ottoman probe output that did not produce a usable artifact.",
+  "context_note": "The earlier Ottoman provincial/Sufi pass did not produce a usable artifact. This replacement probe uses a tighter site-restricted index search rather than direct portal interaction.",
+  "method_summary": {
+    "tier_1_url_discovery": "WebSearch for current canonical yazmalar.gov.tr URL + identification of related Turkish institutional manuscript portals (yek.gov.tr parent, katalog.isam.org.tr ISAM new home, dijital-kutuphane.mkutup.gov.tr Milli Kütüphane manuscripts, yazmaeserler.diyanet.gov.tr Diyanet manuscripts).",
+    "tier_2_direct_reachability": "WebFetch each canonical URL; document reachability + cert/redirect signatures + search-form URL pattern.",
+    "tier_3_site_restricted_search": "WebSearch site-restricted queries with Cihanşah / Hakîkî / Karakoyunlu against each portal domain. Captures records that are statically indexed by Google but bypasses JS-rendered SPA search forms and cert-issue WebFetch failures."
+  },
+  "portals": [
+    {
+      "portal_name": "yazmalar.gov.tr (Türkiye Yazma Eserler portal)",
+      "canonical_url": "https://www.yazmalar.gov.tr/",
+      "alternate_urls_tested": [
+        "https://www.yazmalar.gov.tr/index.php?dill=eng",
+        "http://www.yazmalar.gov.tr/"
+      ],
+      "reachability": {
+        "https_www": "CERT_ERROR ('unable to verify the first certificate'); consistent across alternate-route and direct-route",
+        "verdict": "CERT_WALLED_TO_WEBFETCH; site is live per Google indexing but cert chain blocks WebFetch"
+      },
+      "queries_executed": [
+        {
+          "query": "site:yazmalar.gov.tr 'Cihanşah' OR 'Hakîkî' OR 'Cihan Şah' OR 'Karakoyunlu' divan",
+          "method": "WebSearch site-restricted",
+          "result_count": 0,
+          "outcome": "Zero indexed pages match Cihanşah-related terms"
+        }
+      ],
+      "verdict": "PROBED_NEGATIVE_VIA_SITE_RESTRICTED_SEARCH; residual gap for Playwright cert-ignore pass + direct search-form exercise. Indirect coverage via Islamisation DB (islam-anatolia.ac.uk) suggests Cihanşah witnesses surfaced via Turkish institutional collections are already in current poetry-witness register."
+    },
+    {
+      "portal_name": "Türkiye Yazma Eserler Kurumu Başkanlığı (yek.gov.tr parent)",
+      "canonical_url": "https://www.yek.gov.tr/",
+      "reachability": {
+        "verdict": "CERT_ERROR; behaves identically to yazmalar.gov.tr child portal"
+      },
+      "verdict": "INFERRED_NEGATIVE; the parent ministry portal does not host its own manuscript catalogue beyond what is at yazmalar.gov.tr"
+    },
+    {
+      "portal_name": "ISAM Kütüphane (Center for Islamic Studies, Istanbul)",
+      "canonical_url": "https://kutuphane.isam.org.tr/?url=makaleilh/findrecords.php",
+      "alternate_urls_tested": [
+        "http://ktp.isam.org.tr/?url=makaleilh/findrecords.php (301-redirects to kutuphane.isam.org.tr)",
+        "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=*"
+      ],
+      "reachability": {
+        "kutuphane_isam_org_tr": "REACHABLE; HTTP 200; Turkish-language Yordam-based catalogue interface; 10 search fields (Eser Adı, Yazar, Konu Başlığı, Dili, etc.)",
+        "katalog_isam_org_tr_yordam": "form action URL pattern surfaced; query parameter q=*",
+        "verdict": "REACHABLE_LANDING_AND_SEARCH_FORM_SURFACED"
+      },
+      "queries_executed": [
+        {
+          "query": "site:katalog.isam.org.tr 'Cihanşah' OR 'Hakîkî' OR 'Karakoyunlu'",
+          "method": "WebSearch site-restricted",
+          "result_count": 0,
+          "outcome": "Zero indexed pages match Cihanşah-related terms across either katalog.isam.org.tr or kutuphane.isam.org.tr"
+        }
+      ],
+      "verdict": "PROBED_NEGATIVE; ISAM Yordam-based catalogue does not appear to host a Cihanşah Hakîkî record indexed by Google. Direct Yordam search via Playwright is a residual gap."
+    },
+    {
+      "portal_name": "Milli Kütüphane Dijital Kütüphane Yazma Eserler (Ankara National Library, Manuscripts Division)",
+      "canonical_url": "https://dijital-kutuphane.mkutup.gov.tr/tr/manuscripts/catalog/list",
+      "advanced_search_url": "https://dijital-kutuphane.mkutup.gov.tr/tr/manuscripts/catalog/advancedsearch",
+      "authority_indexes": "/authority/personlist, /authority/subjectlist, /authority/papertypelist (paper-type index notable for future scope codicology), /authority/sgriptlist (script-type), /authority/collectionlist, /authority/libraryist",
+      "reachability": {
+        "landing_page": "REACHABLE; HTTP 200; Turkish-language interface; advanced search exposed",
+        "verdict": "REACHABLE_LANDING; deep search needs Playwright"
+      },
+      "queries_executed": [
+        {
+          "query": "site:mkutup.gov.tr OR site:dijital-kutuphane.mkutup.gov.tr 'Cihanşah' OR 'Hakîkî' OR 'Karakoyunlu' yazma",
+          "method": "WebSearch site-restricted",
+          "result_count": "10 results, ZERO relevant",
+          "outcome": "All results are browse-listing pages (manuscripts/catalog/list, periodicals catalogs, authority indexes); no actual Cihanşah record surfaced"
+        }
+      ],
+      "current_register_overlap_note": "Ankara Milli Kütüphane A 5252 is ALREADY in current poetry-witness register (witness_id: ankara_milli_kutuphane_a_5252), surfaced via Islamisation DB filiations panel (TK_Mil_A_5252 slug), not via dijital-kutuphane.mkutup.gov.tr direct. The site-restricted search not finding it is consistent with the Islamisation DB being the surfacing channel rather than the Milli Kütüphane public-facing catalogue.",
+      "verdict": "PROBED_NEGATIVE_NEW_HITS; A 5252 already-registered via Islamisation DB. /authority/papertypelist endpoint flagged as future scope codicology resource."
+    },
+    {
+      "portal_name": "Diyanet İşleri Başkanlığı Kütüphanesi Yazma Eserler (yazmaeserler.diyanet.gov.tr)",
+      "canonical_url": "https://yazmaeserler.diyanet.gov.tr/",
+      "reachability": {
+        "landing_page": "REACHABLE; self-hosted manuscript catalogue with Yordam-like search interface; record URL pattern /details?id=<num>&materialType=YE"
+      },
+      "queries_executed": [
+        {
+          "query": "site:yazmaeserler.diyanet.gov.tr OR site:kutuphane.diyanet.gov.tr 'Cihanşah' OR 'Hakîkî' yazma divan",
+          "method": "WebSearch site-restricted",
+          "result_count": "10 results, ZERO Cihanşah-related",
+          "outcome": "All results are Ottoman religious / literary works (Kânûnnâme, İrşâdü's-sârî, Risâle fî beyân-ı merâtîbi'l-mevcûdât, et-Risâle fî esrâri'l-hurûf, er-Risâletü'ş-şemsiyye, etc.); none mention Cihanşah / Hakîkî"
+        }
+      ],
+      "hurufi_adjacency_note_for_v2": "One Diyanet result is `[er-Risâle fî esrâri'l-hurûf] / [رساله فی اسرار الحروف]` ('Epistle on the Secrets of Letters') indexed as id=931 with materialType=YE. This is a Hurufi text. Per v1.0 mecmûʿa-Nesîmî-adjacency heuristic (which surfaced Ankara MK A 5252 + Konya Hacı Bektaş BY0000010729), Diyanet Hurufi holdings are a future scope mecmûʿa-mining surface worth dedicated probe.",
+      "verdict": "PROBED_NEGATIVE_FOR_DIRECT_CIHANSAH_WITNESS; future scope mecmûʿa-mining lead flagged"
+    },
+    {
+      "portal_name": "Bursa İl Halk Kütüphanesi + provincial Sufi tekke holdings (catalogued via yazmalar.gov.tr cluster)",
+      "canonical_aggregator": "yazmalar.gov.tr (cert-walled)",
+      "yusuf_hakiki_homonym_risk_assessment": "Yusuf Hakîkî Bursavi (d. 893 AH / 1487 CE) taught at Bursa; the Bursa İl Halk Kütüphanesi and Bektaşi-affiliated tekke collections are the PRIMARY false-positive surface for Cihanşah Hakîkî searches in Ottoman catalogues. Per current poetry-witness register Konya Hacı Bektaş BY0000010729 entry (witness_id: konya_haci_bektas_by0000010729), the existing register flags this homonym ambiguity directly and marks the Konya record as 'candidate_probably_non_cihansah' precisely because Hakîkî's position in the alphabetical poet-list does NOT show Hurufi-cluster adjacency to Nesîmî/Hatâî/Şah İsmail.",
+      "verdict": "INFERRED_NEGATIVE_VIA_V1_PRIOR; Bursa + Bektaşi probing would primarily surface Yusuf Hakîkî Bursavi hits, not Cihanşah Qaraqoyunlu. Direct probe would require yazmalar.gov.tr Playwright pass + Hurufi-adjacency analysis per v1.0 methodology."
+    }
+  ],
+  "summary": {
+    "portals_probed": 6,
+    "portals_reachable_landing": 5,
+    "portals_reachable_with_search_form_surfaced": 2,
+    "portals_blocked_cert_error": 2,
+    "verified_cihansah_hits_new": 0,
+    "current_register_impact": "ZERO new witnesses. The Turkish institutional Cihanşah Hakîkî surface is saturated by current poetry-witness register entries already sourced via Islamisation DB (islam-anatolia.ac.uk): suleymaniye_fatih_3808, ankara_dtcf_ismail_saib_1_2221, ankara_milli_kutuphane_a_5252, konya_haci_bektas_by0000010729. Turkish public-facing portals (yazmalar, ISAM, Milli Kütüphane, Diyanet) do not appear to add to this surface in site-restricted indexing.",
+    "residual_gaps": [
+      "yazmalar.gov.tr Playwright cert-ignore pass + direct search-form exercise across all Yusuf Hakîkî homonym disambiguation variants",
+      "ISAM katalog.isam.org.tr/yordam/?q=Cihanşah direct query (Yordam GET form may bypass Google indexing latency)",
+      "Diyanet yazmaeserler.diyanet.gov.tr Hurufi-adjacency mining for future scope mecmûʿa-discovery scope",
+      "Milli Kütüphane /authority/papertypelist endpoint enumeration for future scope codicology surface"
+    ],
+    "methodological_findings": [
+      "Site-restricted Google indexing is a Playwright substitute with a known false-negative class for JS-rendered SPA catalogues. The 0-hit pattern across 4 Turkish institutional portals is suggestive but not definitive of 'no Cihanşah record exists in these databases'.",
+      "Islamisation DB (islam-anatolia.ac.uk) is the canonical Anatolian Cihanşah witness-discovery surface; Turkish public-facing portals appear to host the same records under different institutional fronts.",
+      "Yusuf Hakîkî Bursavi homonym risk is concentrated in Bursa + Bektaşi tekke collections; current poetry-witness register's Konya Hacı Bektaş BY0000010729 entry already documents the disambiguation methodology (Hurufi-cluster proximity vs alphabetical-list adjacency)."
+    ]
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-11",
+    "artifact_status": "superseded",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

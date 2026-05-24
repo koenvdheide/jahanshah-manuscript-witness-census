@@ -1,0 +1,40 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+.obsidian/
+*.swp
+*~
+
+# Local agent/workflow state
+.codex/
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Browser/test caches
+.playwright-cli/
+
+# Build artifacts
+*.aux
+*.log
+*.out
+*.toc
+
+# Local source PDFs and scans used for extraction; the public package keeps structured extracts instead.
+# Future image evidence can be staged intentionally with `git add -f <path>`.
+*.pdf
+*.tif
+*.tiff
+*.jpg
+*.jpeg
+*.png
+*.webp

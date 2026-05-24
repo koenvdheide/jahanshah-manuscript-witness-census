@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "generated": "2026-05-13",
+  "purpose": "Machine-readable index for tezkire and tezkire-adjacent Markdown extracts. The Markdown files retain narrative headers with legacy label variation; this index is the stable metadata surface.",
+  "records": [
+    {
+      "file": "jami_munseat_haqiqi_response.md",
+      "source_type": "tezkire-adjacent literary source",
+      "source_citation": "Abd al-Rahman Jami, Munsha'at verse response on Cihanshah's Divan; transmitted via Hikmet 1991 and Macit 2000.",
+      "access": "Indirect extraction from Hikmet 1991 as reproduced by Macit 2000.",
+      "extraction_date": "2026-05-02",
+      "sample_verses": true
+    },
+    {
+      "file": "macit_bilig_2000_haqiqi.md",
+      "source_type": "modern scholarly synthesis",
+      "source_citation": "Muhsin Macit, Cihansah ve Turkce Siirleri, bilig 13 (Bahar 2000): 9-17.",
+      "access": "https://bilig.yesevi.edu.tr/yonetim/icerik/makaleler/3452-published.pdf",
+      "extraction_date": "2026-05-02",
+      "sample_verses": true
+    },
+    {
+      "file": "tdv_islamansiklopedisi_konukcu_cihansah.md",
+      "source_type": "modern encyclopedia entry",
+      "source_citation": "Enver Konukcu, Cihan Sah, Turkiye Diyanet Vakfi Islam Ansiklopedisi, vol. 7 (1993), p. 536.",
+      "access": "https://islamansiklopedisi.org.tr/cihan-sah",
+      "extraction_date": "2026-05-02",
+      "sample_verses": false
+    },
+    {
+      "file": "teis_yesevi_haqiqi.md",
+      "source_type": "modern biographical encyclopedia entry",
+      "source_citation": "TEIS Yesevi, HAKIKI, Cihansah.",
+      "access": "https://teis.yesevi.edu.tr/madde-detay/hakiki-cihansah",
+      "extraction_date": "2026-05-02",
+      "sample_verses": true
+    },
+    {
+      "file": "yinanc_meb_islam_ansiklopedisi_cihansah.md",
+      "source_type": "modern encyclopedia entry",
+      "source_citation": "Mukrimin H. Yinanc, Cihan-Sah, Islam Ansiklopedisi, vol. III (1945), pp. 173-189.",
+      "access": "Internet Archive scan meb-islam-ansiklopedisi_202308, Cilt 03 PDF.",
+      "extraction_date": "2026-05-02",
+      "sample_verses": false
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "session_label": "Ottoman chunk 1: yazmalar.gov.tr URL resolution + yek.gov.tr parent ministry probe",
+  "session_id": "ottoman-chunk1-yazmalar-yek-2026-05-11",
+  "date": "2026-05-11",
+  "scope_note": "Chunk 1 of 4 splitting the original Parallel probe C Ottoman scope that lost output to tooling failure at ~32 min / 61 tool uses. This chunk's tight goal is to resolve the cert-error blockage on yazmalar.gov.tr by finding a working alternate URL (HTTP scheme, kataloglar.yek.gov.tr, web archive, etc.).",
+  "method_summary": {
+    "tier_1_url_form_variation": "Probed five candidate URL forms for yazmalar.gov.tr (http+www, http no-www, kataloglar.yek subdomain, yazmalar.yek subdomain) plus yek.gov.tr parent. Used Python urllib with ctx.verify_mode=CERT_NONE to bypass the cert-chain block that defeats WebFetch.",
+    "tier_2_subpath_enumeration": "On yek.gov.tr (the only reachable hostname in the cluster), probed common manuscript-portal subpaths (Yazmalar, Katalog, Anasayfa, icerik/yazma-eserler, kurumsal) to verify the site is flat single-page rather than CMS-driven.",
+    "tier_3_homepage_link_extraction": "Extracted all href attributes from yek.gov.tr homepage HTML to map the live institutional manuscript-portal architecture and identify the actual operational catalogue URL.",
+    "tier_4_wayback_machine": "Used Internet Archive available-snapshot API (http://archive.org/wayback/available) to confirm whether yazmalar.gov.tr was historically indexed. CDX API attempted but transient 503/timeout."
+  },
+  "portals": [
+    {
+      "portal_name": "yazmalar.gov.tr (legacy Türkiye Yazma Eserler portal)",
+      "url_forms_tested": [
+        {
+          "url": "http://www.yazmalar.gov.tr/index.php?dill=eng",
+          "outcome": "WebFetch auto-upgrades HTTP to HTTPS; cert chain error persists"
+        },
+        {
+          "url": "http://yazmalar.gov.tr/",
+          "outcome": "WebFetch auto-upgrades HTTP to HTTPS; cert chain error"
+        },
+        {
+          "url": "https://www.yazmalar.gov.tr/ via python urllib CERT_NONE",
+          "outcome": "HTTP 200 status returned, body is nginx 404 page (139 bytes). TLS handshake succeeds; the application behind the cert is DEAD."
+        },
+        {
+          "url": "https://www.yazmalar.gov.tr/index.php?dill=eng via python urllib CERT_NONE",
+          "outcome": "HTTP 404 Not Found"
+        },
+        {
+          "url": "https://www.yazmalar.gov.tr/Home/Index_?n_id=1 (legacy YEK CMS pattern) via python urllib CERT_NONE",
+          "outcome": "HTTP 404 Not Found"
+        },
+        {
+          "url": "https://www.yazmalar.gov.tr/arama via python urllib CERT_NONE",
+          "outcome": "HTTP 404 Not Found"
+        },
+        {
+          "url": "https://www.yazmalar.gov.tr/sayfa.php via python urllib CERT_NONE",
+          "outcome": "HTTP 404 Not Found"
+        },
+        {
+          "url": "https://yazmalar.gov.tr/ via python urllib CERT_NONE",
+          "outcome": "TCP-level timeout on no-www variant"
+        }
+      ],
+      "alternate_hostnames_tested": [
+        {
+          "url": "https://kataloglar.yek.gov.tr/",
+          "outcome": "ECONNREFUSED; hostname does not resolve to a live service"
+        },
+        {
+          "url": "https://yazmalar.yek.gov.tr/",
+          "outcome": "ECONNREFUSED; hostname does not resolve to a live service"
+        }
+      ],
+      "wayback_machine_check": {
+        "method": "Internet Archive available-snapshot API",
+        "queries": [
+          {
+            "endpoint": "http://archive.org/wayback/available?url=yazmalar.gov.tr",
+            "result": "{archived_snapshots: {}} empty"
+          },
+          {
+            "endpoint": "http://archive.org/wayback/available?url=yazmalar.gov.tr&timestamp=2024",
+            "result": "{archived_snapshots: {}} empty"
+          },
+          {
+            "endpoint": "http://archive.org/wayback/available?url=yazmalar.gov.tr&timestamp=2023",
+            "result": "{archived_snapshots: {}} empty"
+          },
+          {
+            "endpoint": "http://archive.org/wayback/available?url=yazmalar.gov.tr&timestamp=2022",
+            "result": "{archived_snapshots: {}} empty"
+          }
+        ],
+        "cdx_api_check": "http://web.archive.org/cdx/search/cdx?url=yazmalar.gov.tr/* returned transient 503 / timeout; not retried within chunk-1 tool budget",
+        "verdict": "ZERO Wayback snapshots indexed across all year filters. The yazmalar.gov.tr domain appears to have been excluded by robots.txt or never crawled. A historical snapshot recovery path is NOT available."
+      },
+      "verdict": "DEFINITIVELY_DEAD. The legacy yazmalar.gov.tr application has been retired: TLS handshake succeeds, but every probed path (/, /index.php, /Home/Index_, /arama, /sayfa.php) returns nginx 404. The cert-error blockage identified in the prior probe was a red herring; bypassing the cert with verify_mode=CERT_NONE only reveals that no application is being served. The prior probe's flagged residual gap ('yazmalar.gov.tr Playwright cert-ignore pass') is FALSIFIED. No URL form, hostname variation, or web-archive snapshot recovers a live search interface for this portal."
+    },
+    {
+      "portal_name": "yek.gov.tr (Türkiye Yazma Eserler Kurumu Başkanlığı parent ministry)",
+      "url_forms_tested": [
+        {
+          "url": "https://www.yek.gov.tr/ via python urllib CERT_NONE",
+          "outcome": "HTTP 200, 80883 bytes; rendered HTML is the institutional homepage (corporate brochure, news slider, library directory)"
+        },
+        {
+          "url": "yek.gov.tr subpaths (tr/Yazmalar, tr/Katalog, tr/Anasayfa, tr/icerik/yazma-eserler, tr/icerik/yazmalar, tr/kurumsal)",
+          "outcome": "All return HTTP 404; site is flat single-page with content loaded by JS-driven sliders, not CMS-routed"
+        }
+      ],
+      "homepage_link_extraction": {
+        "key_finding": "yek.gov.tr homepage explicitly identifies the operational manuscript-portal URL as 'https://portal.yek.gov.tr/' (line 207, navbar h1: 'Yazma Eserler Veritabanı'; also line 1459 footer logo link).",
+        "library_subdomains_enumerated": [
+          "suleymaniye.yek.gov.tr (Süleymaniye)",
+          "beyazit.yek.gov.tr (Beyazıt)",
+          "haciselimaga.yek.gov.tr (Hacı Selim Ağa)",
+          "millet.yek.gov.tr (Millet)",
+          "selimiye.yek.gov.tr (Selimiye)",
+          "inebey.yek.gov.tr (İnebey)",
+          "omeralibey.yek.gov.tr (Balıkesir Ömer Ali Bey)",
+          "kastamonu.yek.gov.tr (Kastamonu)",
+          "konya.yek.gov.tr (Konya)",
+          "hasanpasa.yek.gov.tr (Hasan Paşa)",
+          "ziyabey.yek.gov.tr (Ziya Bey)",
+          "vahitpasa.yek.gov.tr (Vahit Paşa)",
+          "amasya.yek.gov.tr (Amasya)",
+          "erzurum.yek.gov.tr (Erzurum)",
+          "yusufaga.yek.gov.tr (Yusuf Ağa)",
+          "ziyagokalp.yek.gov.tr (Ziya Gökalp)",
+          "rasitefendi.yek.gov.tr (Raşit Efendi)",
+          "manisa.yek.gov.tr (Manisa)",
+          "yazmanadir.yek.gov.tr (Yazma ve Nadir Eserler Dairesi)"
+        ],
+        "supporting_subdomains": [
+          "esatis.yek.gov.tr (e-sales)",
+          "mail.yek.gov.tr (corporate webmail)"
+        ]
+      },
+      "verdict": "REACHABLE_BUT_NO_CATALOGUE_ON_PARENT. The yek.gov.tr parent ministry homepage carries NO Cihanşah / Hakîkî / Karakoyunlu content (string-grep on the 81 KB body returns zero hits other than institutional words 'yazma', 'katalog' in non-author contexts). The homepage explicitly delegates all manuscript-catalogue queries to portal.yek.gov.tr, which is the SAME portal already searched authoritatively by the current poetry-witness register through the authenticated YEK catalogue pipeline for Süleymaniye, Beyazıt, Nuruosmaniye, and Esad Efendi records."
+    }
+  ],
+  "queries_executed": {
+    "note": "The chunk-1 scope was URL resolution + reachability, NOT search-query execution. No portal in this chunk surfaced a working search interface against which to run the query battery (Cihanşah, Cihan Şah, Karakoyunlu, Hakîkî, Hakiki, جهانشاه, حقیقی). The query battery is deferred to portal.yek.gov.tr searches already executed under the project's yek-search agent (under the project public-publishing boundary), which are out of chunk-1 scope.",
+    "queries_run_count": 0
+  },
+  "summary": {
+    "url_resolution_outcome": "yazmalar.gov.tr DEFINITIVELY_DEAD across HTTPS-cert-bypass, no-www, alt-hostname, and Wayback-snapshot recovery paths; yek.gov.tr REACHABLE but carries no catalogue content; the operational catalogue is portal.yek.gov.tr, which is already in current poetry-witness register coverage via yek-search agent.",
+    "query_hits": 0,
+    "blockage_category": "LEGACY_PORTAL_RETIRED_NO_ARCHIVE; yazmalar.gov.tr is an abandoned domain, not a cert-walled live application. The prior probe's 'cert-walled to WebFetch' diagnosis was a misread; TLS works, but the application has been removed. Wayback Machine has no snapshots, so historical search-form URLs cannot be recovered.",
+    "residual_gaps_resolved": [
+      "The prior probe's flagged gap 'yazmalar.gov.tr Playwright cert-ignore pass + direct search-form exercise' is FALSIFIED. No live search form exists behind the cert; bypassing the cert reveals nginx 404 on every path. No further Playwright work on this domain will yield results."
+    ],
+    "residual_gaps_remaining": [
+      "portal.yek.gov.tr queries with the 9 extended-script-family variants from data/search_keys.json script_families block (Russian Cyrillic, Az Latin, Az Cyrillic, Georgian, Uzbek Latin, Uzbek Cyrillic, Tajik Cyrillic, Devanagari, Urdu nastaʿliq) have not been exhausted; these are operational queries belonging in chunks 2-4 or in a portal.yek.gov.tr-focused future scope sweep, NOT in chunk 1's URL-resolution scope."
+    ],
+    "current_register_impact": "ZERO new witnesses. The chunk-1 finding resolves and CLOSES the residual gap on yazmalar.gov.tr by demonstrating the portal is abandoned, not blocked. No witnesses move into or out of the current poetry-witness register as a result of this chunk."
+  },
+  "output_path": "data/searches/probe_2026-05-11_ottoman_chunk1_yazmalar_yek.json",
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-11",
+    "artifact_status": "appendix",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

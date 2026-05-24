@@ -1,0 +1,47 @@
+{
+  "title": "Jahanshah Qaraqoyunlu Manuscript Witness Census",
+  "version": "1.0.0",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "van der Heide, Koen",
+      "orcid": "0009-0008-9855-3848",
+      "affiliation": "Independent Scholar"
+    },
+    {
+      "name": "Kazemipourleilabadi, Negar",
+      "orcid": "0009-0008-2289-7492",
+      "affiliation": "Ludwig-Maximilians-Universität München, Department of Art History"
+    }
+  ],
+  "description": "<p>This dataset records manuscript witnesses for the dispersed Dīvān tradition of Jahanshah Qaraqoyunlu (d. 872 AH / 1467 CE; pen name Ḥaqīqī / Hakîkî). It also documents an LLM-assisted search workflow for building a census across inconsistent multilingual catalogues, printed references, private and community archives, blocked or non-searchable portals, and lost or unlocated reports.</p><p>The census records 7 verified and 2 caveated Jahanshah witnesses: 5 on the TEIS Yesevi roster, 1 institutional fragment, and 3 Alevi shrine witnesses in the Ocak tradition: 1 Anatolian (Diyarbakır Ulutürk) and 2 Iranian Azerbaijani (Ilkhchi Kırklar Ocağı). It also records 1 attribution-disputed candidate and 1 lost-attested entry (Diyarbakır YE per Cunbur 1999). Routine search false positives are kept in the per-session search JSONs under data/searches/, outside the witness table. It includes a 257-string search-key matrix: 99 base author/title/context/scribe/Nesimi strings, 106 additional script-family variants, 12 South Asian homonym-disambiguation queries, and 40 Alevi-community route/contact terms. The matrix covers 14 language/script or orthographic traditions: modern Latin, Turkish/Ottoman Turkish, French and German Orientalist forms, Persian/Arabic-script forms, Russian Cyrillic, Azerbaijani Latin/Cyrillic, Georgian, Uzbek Latin/Cyrillic, Tajik Cyrillic, Devanagari, and Urdu nastaliq. The release also includes 5 tezkire or tezkire-adjacent reference extracts and 5 research-log extracts on Hakîkî where available.</p><p>The Alevi shrine corpus records eleven published ghazals from Anatolian and Iranian Azerbaijani Ocak traditions that are absent from the institutional editions checked here. It also reports a complete, unphotographed divan codex in the Ilkhchi archive.</p><p>The deposit includes 37 indexed search-session and action records, the search-key matrix, search-surface counting rules, false-positive classifications, and a recovery agenda for blocked, private, and on-site manuscript sources. LLM tools assisted search-term expansion, catalogue-variant reconciliation, homonym checking, false-positive logging, and access-gap mapping; witness classifications and attribution decisions remain source-based and human-reviewed. Known failure modes for this use case include over-definitive coverage claims, wrong shelfmarks for real manuscripts, and hallucinated bibliographic entries; human source review and cross-model LLM review were used to mitigate those risks before public claims were retained.</p>",
+  "keywords": [
+    "Islamic manuscripts",
+    "Codicology",
+    "Persian poetry",
+    "Turkish poetry",
+    "Karakoyunlu",
+    "Qaraqoyunlu",
+    "Cihānşāh",
+    "Jahānshāh",
+    "Hakîkî",
+    "Ḥaqīqī",
+    "Alevi tradition",
+    "Anatolian Alevism",
+    "Iranian Azerbaijani Alevism",
+    "Tezkire",
+    "Manuscript witness census",
+    "Digital humanities"
+  ],
+  "subjects": [
+    {
+      "term": "Manuscripts, Islamic",
+      "identifier": "https://id.loc.gov/authorities/subjects/sh85080780",
+      "scheme": "url"
+    }
+  ],
+  "communities": []
+}

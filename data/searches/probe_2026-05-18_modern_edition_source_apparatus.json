@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "session_label": "Modern edition source-apparatus backchain pass",
+  "session_id": "modern-edition-source-apparatus-2026-05-18",
+  "date": "2026-05-18",
+  "scope": "Return to the non-Patna leads from the external new-leads review and mine the modern Iranian, Turkmen, Azerbaijani, and online edition lane for manuscript-source evidence, source apparatus, derivative images, and acquisition paths. This artifact does not change witness counts.",
+  "method_summary": {
+    "primary": "Targeted web searches in Persian, Azerbaijani/Turkic Arabic script, Turkish, English transliteration, and ISBN/product identifiers; direct inspection of public bibliographic pages, Telegram public-channel mirrors, blog posts, Flickr metadata, and repo-local prior search artifacts.",
+    "source_weighting": "Institutional or editor/publisher pages are preferred. Shop records and public Telegram posts are treated as bibliographic and acquisition evidence. Blogs are treated as secondary/tertiary evidence unless they expose page images or explicit source-apparatus statements.",
+    "promotion_rule": "No modern printed or online edition is counted as a manuscript witness. It can only affect the witness register when it identifies a distinct manuscript source, provides verifiable manuscript images, or materially clarifies the source chain of an existing witness."
+  },
+  "queries_executed": [
+    "\"Dīvān-i Jahanshah Haqiqi\" \"Nurellah Poursharif\"",
+    "\"دیوان جهانشاه حقیقی\" \"نوراله پورشریف\"",
+    "\"978-600-7281-60-4\"",
+    "\"دیوان ترکی و فارسی جهانشاه حقیقی\" \"نیکان کتاب\"",
+    "\"دیوان ترکی و فارسی جهانشاه حقیقی\" \"978-964-196-309-7\"",
+    "\"محمدرضا باغبان‌کریمی\" \"دیوان ترکی و فارسی جهانشاه حقیقی\"",
+    "\"تورکجه حقیقی دیوانی\" \"لطفعلی برقی\"",
+    "\"978-600-486-342-1\"",
+    "\"دیوان جهانشاه حقیقی\" \"خانگلدی اونق\"",
+    "\"Khanegeldi Ownuk\" \"Haqiqi\"",
+    "\"دیوان جهانشاه حقیقی\" \"آکادمی علوم ارمنستان\"",
+    "\"رحمان رجب اف\" \"جهانشاه حقیقی\"",
+    "\"Sözümüz\" \"جهانشاه حقیقی\"",
+    "\"تئهران اليازماسي\" \"جهانشاه حقيقی\""
+  ],
+  "edition_targets": [
+    {
+      "target_id": "poursharif_nabati_1395",
+      "classification": "modern_printed_edition_source_apparatus_target",
+      "status": "bibliographic_and_acquisition_metadata_only",
+      "summary": "Mahdroo and the Azerturan/Nabati Telegram public-channel mirror identify a Nabati 1395 SH edition, Divan-i Jahanshah Haqiqi: Turki-Farsi, prepared by Nurellah Poursharif. No preface, manuscript list, incipit, or source apparatus was exposed in the public pages inspected.",
+      "source_evidence": [
+        {
+          "source": "Mahdroo book record",
+          "url": "https://mahdroo.ir/shop/product/book-195132-m0tnky",
+          "retrieved": "2026-05-18",
+          "observed": "Records the title, Nabati publisher, Nurellah Poursharif as compiler, 352 pages, 1395 SH / 2016 publication date, 1000-copy print run, ISBN 978-600-7281-60-4, and digital/library access paths including Astan Quds Razavi."
+        },
+        {
+          "source": "Azerturan / Nabati Telegram public mirror",
+          "url": "https://t.me/s/azerturan_nebati?before=111",
+          "retrieved": "2026-05-18",
+          "observed": "Publisher-channel post identifies the book as Jahanshah's Turkish and Persian poems and points to Nabati / Azarturk sales."
+        }
+      ],
+      "manuscript_source_signal": "none exposed publicly",
+      "next_action": "Acquire or inspect the PDF/print copy and check the preface, bibliography, and any source abbreviations before treating it as more than a derivative edition."
+    },
+    {
+      "target_id": "baghban_karimi_nikan_1394",
+      "classification": "modern_printed_edition_with_derivative_tehran_images",
+      "status": "source_apparatus_partially_visible_via_secondary_blog",
+      "summary": "Mahdroo identifies a Nikan Ketab 1394 SH edition by Mohammadreza Baghban-Karimi. A Sozumuz correction page says this edition appends images of the Tehran manuscript, and a separate Sozumuz image post exposes 77 Googleusercontent image URLs labelled as Tehran manuscript images copied from the Karimi edition. A sampled image is a manuscript text page. This is a real public image trail for Tehran 8198, but it is derivative and unofficial.",
+      "source_evidence": [
+        {
+          "source": "Mahdroo book record",
+          "url": "https://mahdroo.ir/shop/product/book-1188399-ws0dbb",
+          "retrieved": "2026-05-18",
+          "observed": "Records the Nikan Ketab edition, Mohammadreza Baghban-Karimi as editor/corrector, 428 pages, 1394 SH / 2015 publication date, 1000-copy print run, ISBN 978-964-196-309-7, and digital/library access paths including Astan Quds Razavi."
+        },
+        {
+          "source": "Sozumuz correction page",
+          "url": "https://sozumuz1.blogspot.com/2017/12/blog-post_4.html",
+          "retrieved": "2026-05-18",
+          "observed": "States that the Karimi/Nikan edition appends images from the Tehran manuscript, with at least three pages missing, and critiques several readings. The same page lists the five known manuscript witnesses and says the Sozumuz corrected edition compares Macit's transcription, Alemdari, and Tehran images."
+        },
+        {
+          "source": "Sozumuz Tehran image post",
+          "url": "https://sozumuz1.blogspot.com/2017/12/blog-post_17.html",
+          "retrieved": "2026-05-18",
+          "observed": "The post is labelled as Tehran manuscript images taken from the Mohammadreza Karimi edition. Direct HTML inspection found 77 unique s1600 image URLs; one sampled image (0069.png) showed a manuscript text page."
+        }
+      ],
+      "manuscript_source_signal": "derivative images of existing Tehran University 8198 witness; no new codex",
+      "register_impact": "Adds a derivative image-access note to tehran_university_8198. Does not change digital_surrogate because the route is unofficial and copied from a print edition rather than an institutional manifest.",
+      "next_action": "If using these images, catalogue the image sequence, identify which Tehran folios/pages are present or missing, and separate textual-image utility from official digital-surrogate status."
+    },
+    {
+      "target_id": "ownuk_behjat_1392_1393",
+      "classification": "modern_turkmen_edition_derivative_of_matenadaran_chain",
+      "status": "source_chain_resolved_to_matenadaran_microfilm_route",
+      "summary": "Public Ownuk/Behjat pages identify the edition as a Turkmen-Arabic-script presentation of Jahanshah Haqiqi. The source-chain statements point to the Matenadaran manuscript and a Turkmenistan microfilm/1999 Ashgabat Cyrillic route, not to an independent Ownuk witness.",
+      "source_evidence": [
+        {
+          "source": "Sarsmaz / Ilgerek blog page",
+          "url": "https://ilgerek.blogspot.com/2012/03/magtymguly-pyragydan-gelse-gerekdir.html",
+          "retrieved": "2026-05-18",
+          "observed": "Lists the Behjat/Ownuk book details and says the work was prepared from manuscript copies and comparison with a printed version associated with the Armenian Academy manuscript library."
+        },
+        {
+          "source": "Flickr post by nagysh",
+          "url": "https://www.flickr.com/photos/nagysh/15217502015",
+          "retrieved": "2026-05-18",
+          "observed": "Identifies Ownuk's Divan-i Haqiqi as based on the Matenadaran manuscript and notes that a copy was made from a microfilm brought to Turkmenistan and published in Ashgabat in 1999 in Turkmen Cyrillic."
+        },
+        {
+          "source": "Jahanshahakyky blog post",
+          "url": "https://jahanshahakyky.blogspot.com/2017/06/blog-post.html",
+          "retrieved": "2026-05-18",
+          "observed": "Describes the Ownuk/Behjat publication and states that the divan is presented on the basis of the manuscript in the Matenadaran historical-manuscripts institute."
+        },
+        {
+          "source": "TEIS Yesevi Hakiki article",
+          "url": "https://teis.yesevi.edu.tr/madde-detay/hakiki-cihansah",
+          "retrieved": "2026-05-18",
+          "observed": "Lists the five known manuscript witnesses and separately lists Recebov 1999 as an Ashgabat printed edition, supporting the classification of this lane as publication/microfilm backchain rather than a sixth codex."
+        }
+      ],
+      "manuscript_source_signal": "Matenadaran 965 derivative; no independent Ownuk codex found",
+      "next_action": "Acquire Ownuk/Behjat only if needed to clarify the Matenadaran-to-Turkmenistan microfilm route or to compare Turkmenized readings."
+    },
+    {
+      "target_id": "barqi_akhtar_1399_1400",
+      "classification": "modern_printed_edition_with_authorship_discussion",
+      "status": "bibliographic_metadata_plus_public_intro_claim",
+      "summary": "Mahdroo and Telegram identify Lotfali Barqi's Akhtar edition as a 156-page Arabic-script Turkish divan attributed to Qaraqoyunlu Jahanshah. The Telegram post is important because it says the editor's introduction takes up Minorsky's authorship doubts and attempts a near-critical Arabic-script edition. The public pages do not expose manuscript sigla or a source list.",
+      "source_evidence": [
+        {
+          "source": "Mahdroo book record",
+          "url": "https://mahdroo.ir/shop/product/book-205847-u3jsze",
+          "retrieved": "2026-05-18",
+          "observed": "Records the Akhtar edition, Lotfali Barqi as editor/corrector, Jahanshah b. Qara Yusuf Haqiqi Turkmen as poet, 156 pages, 1400 SH publication date, 200-copy print run, ISBN 978-600-486-342-1, and digital/library access paths."
+        },
+        {
+          "source": "Turkish/Azerbaijani literature Telegram public mirror",
+          "url": "https://t.me/s/turkdiledebiyat?before=827",
+          "retrieved": "2026-05-18",
+          "observed": "Announces the Akhtar edition and states that the editor tried to fill the gap for an approximately critical Arabic-script edition preserving linguistic features; it also says the introduction pursues Minorsky's doubts about whether Jahanshah was the true author."
+        }
+      ],
+      "manuscript_source_signal": "none exposed publicly",
+      "next_action": "Inspect Barqi's introduction and apparatus. Because the editor explicitly addresses Minorsky's authorship doubt, this is a high-value textual-criticism target even if it is unlikely to add a new codex."
+    },
+    {
+      "target_id": "baharli_sozumuz_2017_online_corrected_edition",
+      "classification": "online_corrected_edition_and_derivative_image_index",
+      "status": "useful_for_textual_triage_not_a_witness",
+      "summary": "Mehran Baharli's Sozumuz online corrected edition is not a manuscript witness, but it gives an unusually explicit derivation statement: Macit's transcription for four witnesses, Alemdari, and Tehran manuscript images. It also supplies the Tehran-image post mentioned above. Treat it as a secondary collation aid and a lead to derivative Tehran images, not as independent codicological authority.",
+      "source_evidence": [
+        {
+          "source": "Sozumuz correction page",
+          "url": "https://sozumuz1.blogspot.com/2017/12/blog-post_4.html",
+          "retrieved": "2026-05-18",
+          "observed": "Lists the five known manuscript witnesses and states that the corrected edition is based indirectly on Ankara, Istanbul, London, and Matenadaran via Macit's transcription plus directly on Tehran images and Alemdari's edition."
+        },
+        {
+          "source": "Sozumuz Tehran image post",
+          "url": "https://sozumuz1.blogspot.com/2017/12/blog-post_17.html",
+          "retrieved": "2026-05-18",
+          "observed": "Supplies the derivative image run for Tehran manuscript pages."
+        }
+      ],
+      "manuscript_source_signal": "no new manuscript; derivative access to known witnesses",
+      "next_action": "Use only as a guide to places where published readings or image-derived readings differ; verify against manuscript images or primary editions before changing canonical contents."
+    }
+  ],
+  "negative_or_inconclusive_checks": [
+    {
+      "target": "Mahdroo sample PDFs",
+      "result": "Mahdroo exposes sample-PDF links for the Poursharif, Baghban-Karimi, and Barqi records, but direct shell requests returned HTTP 403 even with browser-like headers and referer. The sample route remains worth retrying with an interactive browser or legitimate provider access."
+    },
+    {
+      "target": "Direct manuscript-source statements for Poursharif and Barqi",
+      "result": "No public page inspected exposed manuscript sigla, source lists, incipits, explicits, folio images, or collation tables for these two editions. They remain source-apparatus acquisition targets."
+    },
+    {
+      "target": "Independent Ownuk manuscript witness",
+      "result": "No independent Ownuk/Behjat manuscript source surfaced. The public source-chain statements point back to Matenadaran 965 and the 1999 Ashgabat/microfilm route."
+    },
+    {
+      "target": "New register candidate from modern editions",
+      "result": "None. Every productive source-apparatus lane either points to already registered witnesses or to modern printed/online editions."
+    }
+  ],
+  "impact_on_existing_artifacts": [
+    {
+      "file": "data/witness_register.json",
+      "impact": "Adds a derivative-image-access note to tehran_university_8198. No count/status change."
+    },
+    {
+      "file": "data/search_keys.json",
+      "impact": "Updates the modern edition/backchain matrix with the resolved status of Poursharif, Baghban-Karimi, Ownuk, Barqi, and Baharli/Sozumuz."
+    },
+    {
+      "file": "data/searches/probe_2026-05-18_patna_sulaymaniyah_ms2_and_backchain.json",
+      "impact": "Deepens the secondary modern-edition section that artifact only sketched. The Patna candidate remains separate."
+    },
+    {
+      "file": "README.md",
+      "impact": "Search-artifact counts increase from 32 to 33 and follow-up/action records from 24 to 25."
+    }
+  ],
+  "recommended_next_actions": [
+    "Acquire or inspect the PDFs/print copies for Poursharif 1395, Baghban-Karimi 1394, Barqi 1399/1400, and Ownuk 1392/1393 only for prefaces/source apparatus, not as new-witness hunts.",
+    "Prioritize Barqi's introduction because the public Telegram post says it directly handles Minorsky's authorship doubt.",
+    "Catalogue the Sozumuz Tehran image sequence as an unofficial derivative image set if the project decides to use it; identify page order, missing images, and whether any image shows title/colophon/decoration-relevant surfaces.",
+    "Do not promote any modern edition to register evidence unless it names a manuscript not already in the five TEIS witnesses or the existing Alevi/cem conk lanes.",
+    "Keep Patna MS no. 2 as a separate candidate-verification track; this modern-edition pass did not add or remove Patna evidence."
+  ],
+  "release_blocker": false,
+  "register_impact": {
+    "new_witnesses_added": 0,
+    "new_candidates_added": 0,
+    "witness_count_change": "none",
+    "new_derivative_image_routes": [
+      "tehran_university_8198 via Sozumuz image post copied from Baghban-Karimi / Nikan 1394 edition"
+    ]
+  },
+  "audit_metadata": {
+    "record_type": "source_apparatus_probe",
+    "record_date": "2026-05-18",
+    "artifact_status": "current",
+    "source_layers": [
+      "edition_apparatus",
+      "project_classification",
+      "scholarly_description"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

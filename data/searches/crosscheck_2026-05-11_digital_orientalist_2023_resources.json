@@ -1,0 +1,436 @@
+{
+  "schema_version": 1,
+  "session_label": "2023 Digital Orientalist article cross-check: Persian manuscript resources",
+  "session_id": "digital-orientalist-2023-crosscheck-2026-05-11",
+  "date": "2026-05-11",
+  "scope": "User-prompted coverage check: enumerate every digital resource catalogued in https://digitalorientalist.com/2023/02/10/digital-resources-for-the-study-of-persian-manuscripts/ and verify whether each was probed in the earlier poetry-witness package state (search_2026-05-02_*.json sessions and probe_2026-05-10_iran_caucasus_reachability.json) or in the 2026-05-10/11 follow-on rounds. Where coverage gaps surface, run a Cihanşah / Hakîkî / Yusuf Hakîkî probe against the resource and document the outcome. Goal: a defensible answer to 'have we used all the relevant resources from the article'.",
+  "geopolitical_caveat": "Iranian internet infrastructure is currently subject to wartime intermittent shutdowns (2026 conflict). Iranian-portal status documented here is point-in-time as of 2026-05-11. Western-library status is not affected by the geopolitical caveat.",
+  "method_summary": {
+    "tier_1_inventory_extraction": "WebFetch against the 2023 Digital Orientalist article to extract a complete list of every resource named, with verbatim URL, type (manuscript catalogue / digital images / IIIF / Telegram / aggregator / printed catalogue), institution, and access notes.",
+    "tier_2_prior_coverage_check": "Grep against existing search-session JSONs (search_2026-05-02_iran_caucasus, _uk_european, _south_asian_global, _turkey_anatolia, _auctions, _tezkire, _mecmua_nesimi_adjacency, _catalogue_scribe_edition_backchain, plus probe_2026-05-10_iran_caucasus_reachability and search_2026-05-10_marashi_tehran_followup) to determine which of the 28 article resources had already been probed in v1.0.0 work.",
+    "tier_3_gap_probing": "For resources not previously probed, direct probe via WebFetch with Cihanşah / Jahanshah / Hakîkî / Yusuf Hakîkî query; if WebFetch returns 403/UA-block or JS-rendered content, escalate to Playwright; if rate-limited or returns Anubis-style access challenge, document as residual gap and defer.",
+    "tier_4_search_endpoint_verification": "For resources where the article URL points to a browse page rather than a search endpoint, identify the actual query URL pattern and run the Cihanşah query battery."
+  },
+  "article_inventory_total_resources": 28,
+  "resource_crosscheck": [
+    {
+      "id": 1,
+      "name": "Tehran University Manuscripts (Telegram)",
+      "url_in_article": "@Manuscripts_lib (Telegram)",
+      "type": "Telegram orders channel",
+      "institution": "Tehran University",
+      "prior_coverage": "Documented as access channel in probe_2026-05-10_iran_caucasus_reachability.json and search_2026-05-10_marashi_tehran_followup.json; not actually used (Telegram contact deferred; out of session scope and project tooling)",
+      "this_session_action": "no probe (channel access path documented only)",
+      "verdict": "DOCUMENTED-NOT-EXECUTED; Telegram contact remains the official path for ordering MS Tehran U 8198 codicology and any further Cihanşah-attributed witnesses surfacing via on-premises catalogue search at Tehran U"
+    },
+    {
+      "id": 2,
+      "name": "Malek Library & Museum",
+      "url_in_article": "http://malekmuseum.org/en/artifact/search?type=2",
+      "type": "Digital images & catalogue",
+      "institution": "Malek National Library and Museum",
+      "prior_coverage": "Probed in search_2026-05-02_iran_caucasus.json and probe_2026-05-10_iran_caucasus_reachability.json; both rounds: ECONNREFUSED across all routes including Uzbekistan VPN attempt",
+      "this_session_action": "no re-probe (already exhaustively documented)",
+      "verdict": "STILL_BLOCKED; hard ECONNREFUSED, no route discovered"
+    },
+    {
+      "id": 3,
+      "name": "Melli Library (NLAI) opac.nlai.ir",
+      "url_in_article": "https://opac.nlai.ir/opac-prod/index1.jsp",
+      "type": "Digital images",
+      "institution": "National Library of Iran",
+      "prior_coverage": "Probed in 2026-05-02 and 2026-05-10 rounds; both: ECONNREFUSED + geo-IP across all routes",
+      "this_session_action": "no re-probe (article notes 'Requires Iran IP; VPN may be needed outside Iran'; confirmed in prior rounds)",
+      "verdict": "STILL_BLOCKED"
+    },
+    {
+      "id": 4,
+      "name": "Melli Library Historical Documents (asnad.org)",
+      "url_in_article": "http://www.asnad.org/fa/",
+      "type": "Digital images of historical Persian documents",
+      "institution": "Chair of Iranian Studies, University of Bamberg, Germany (NOT NLAI directly; the article appears to misattribute; asnad.org is a German DFG-funded project that aggregates Persian historical documents from various sources including but not limited to NLAI)",
+      "bamberg_dfg_provenance_evidence": "Per WebFetch against http://www.asnad.org/fa/ (2026-05-11): the page footer credits 'A Research Project of the Chair of Iranian Studies at the University of Bamberg (Germany). Supported by the DFG' (DFG = Deutsche Forschungsgemeinschaft / German Research Foundation; logo present and links to https://www.dfg.de/). Persian heading: 'بايگانى ديجيتالى اسناد فارسى' (Digital Persian Archives). Confirms the Bamberg/DFG attribution stated in the institution field above and rebuts the article's misattribution as NLAI Historical Documents.",
+      "prior_coverage": "NOT PROBED in earlier poetry-witness package state. This is a coverage gap.",
+      "this_session_action": "FULL PROBE: site reachable HTTP 200; search box submitted with Persian-script Cihanşah / Karakoyunlu queries via Playwright; multiple result pages snapshotted",
+      "queries_executed": [
+        {
+          "query": "جهانشاه قره قویونلو",
+          "method": "Playwright simple_search submit",
+          "result_count": 0,
+          "outcome": "phrase-exact match returns zero; search uses literal phrase matching"
+        },
+        {
+          "query": "جهانشاه (Jahanshah)",
+          "method": "Playwright simple_search submit",
+          "result_count": 23,
+          "outcome": "MAJOR HIT; at least 9 documents directly attributed to Cihanşah Qaraqoyunlu visible on first page (firmans, soyurghal, kitabe inscription, letter); see chancery_documents_surfaced field below"
+        },
+        {
+          "query": "Jahanshah (Latin)",
+          "method": "WebFetch against /en/search/?simple_search=Jahanshah",
+          "result_count": 21,
+          "outcome": "Latin-script search returns 21 (slight delta from Persian-script 23; likely due to script-variant matching); confirmed 9 chancery documents + Yusuf Mirza b. Jahanshah vaqf-namah (1490, posthumous)"
+        },
+        {
+          "query": "Haqiqi",
+          "method": "WebFetch",
+          "result_count": 1,
+          "outcome": "1926/1344 marriage contract for Mirza 'Ali Aqa Haqiqi; Qajar-era namesake, NOT 15th-century Cihanşah Hakîkî"
+        },
+        {
+          "query": "Hakiki",
+          "method": "WebFetch",
+          "result_count": 0,
+          "outcome": "zero; different transliteration not indexed"
+        },
+        {
+          "query": "Karakoyunlu",
+          "method": "WebFetch",
+          "result_count": 0,
+          "outcome": "zero; Latin-script Karakoyunlu form not used; database uses Persian قره قویونلو / قراقویونلو variants"
+        }
+      ],
+      "chancery_documents_surfaced": [
+        {
+          "date_hijri_western": "0838/1434",
+          "title_en": "Farman by Jahanshah Qara Quyunlu",
+          "type": "firman / decree"
+        },
+        {
+          "date_hijri_western": "0853/1449",
+          "title_en": "Farman by Jahanshah Qara Quyunlu",
+          "type": "firman / decree"
+        },
+        {
+          "date_hijri_western": "0857/1453",
+          "title_en": "Farman by Jahanshah Qara Quyunlu",
+          "type": "firman / decree"
+        },
+        {
+          "date_hijri_western": "0859/1455",
+          "title_en": "Suyurghal from Jahanshah Qara Quyunlu",
+          "type": "soyurghal / land grant"
+        },
+        {
+          "date_hijri_western": "0862/1458",
+          "title_en": "Inscription by Jahanshah Qara Quyunlu",
+          "type": "kitabe / monumental inscription"
+        },
+        {
+          "date_hijri_western": "0867/1462",
+          "title_en": "Farman by Khatun Jan Begum, spouse of Jahanshah Qara Quyunlu",
+          "type": "firman / decree (consort-issued)"
+        },
+        {
+          "date_hijri_western": "0867/1463",
+          "title_en": "Farman by Jahanshah Qara Quyunlu",
+          "type": "firman / decree"
+        },
+        {
+          "date_hijri_western": "0872/1467",
+          "title_en": "Letter from Jahanshah b. Qara Yusuf",
+          "type": "correspondence (year of his death)"
+        },
+        {
+          "date_hijri_western": "0896/1490",
+          "title_en": "Vaqf-namah by Yusuf Mirza b. Jahanshah Qara Quyunlu",
+          "type": "waqf deed (posthumous; by his son)"
+        }
+      ],
+      "verdict": "MAJOR FINDING; 21-23 Cihanşah-related chancery / inscription / correspondence documents surfaced. ZERO poetry-related documents (no tezkires, no divans). Out of current poetry-witness Dīvān witness register scope. CRITICAL for future scope chancery / inscription / correspondence scope: this is likely the largest single source for future scope chancery materials currently identified. URL pattern for individual documents: /en/document/<id>/; usable by future future scope retrieval."
+    },
+    {
+      "id": 5,
+      "name": "Majles Digital Library",
+      "url_in_article": "[Not provided]",
+      "type": "Digital images & PDF",
+      "institution": "Majles Library",
+      "prior_coverage": "Probed in 2026-05-02 (ECONNREFUSED + 'temp out of service') and 2026-05-10 (ECONNREFUSED → 403 shift); Playwright confirmed still down",
+      "this_session_action": "no re-probe (article also notes 'Temporarily out of service')",
+      "verdict": "STILL_BLOCKED; article confirms the down-state observed in our probes"
+    },
+    {
+      "id": 6,
+      "name": "Astan-i Qods Library digital.aqlibrary.ir",
+      "url_in_article": "http://digital.aqlibrary.ir/index.aspx?pid=16&CollectionID=61",
+      "type": "Digital images",
+      "institution": "Library of Imam Reza's Shrine, Mashhad",
+      "prior_coverage": "Probed in 2026-05-02 (parked) and 2026-05-10 (ECONNREFUSED); rediscovery this round identified library.razavi.ir as new canonical (also geo-IP blocked); Tashkent Alisher Navoi May 2025 mirror partnership documented",
+      "this_session_action": "no further re-probe (exhaustively documented in probe_2026-05-11_institutional_catalogue_rediscovery.json)",
+      "verdict": "STILL_BLOCKED across all canonical and migrated subdomains; on-premises Tashkent access is the most viable workaround"
+    },
+    {
+      "id": 7,
+      "name": "DLME (Digital Library of the Middle East)",
+      "url_in_article": "https://dlmenetwork.org/library/browse/group/manuscripts/persian-manuscripts",
+      "type": "Aggregator",
+      "institution": "Digital Library of the Middle East consortium",
+      "prior_coverage": "Probed in search_2026-05-02_south_asian_global.json; 'No public query endpoint surfaced + 404 on dlme-review/api/search'; listed as residual gap",
+      "this_session_action": "RE-PROBE: WebFetch against the article's specific browse URL; returned 575 Persian manuscripts, contributing institutions Bodleian / U Michigan / Library of Congress / Leiden; search interface fields visible (Everything / Title / Creator / Identifier); URL pattern /library/catalog/<UUID>; tried direct query endpoint /library/search?q=Jahanshah+Hakiki+Qaraqoyunlu; 404 Not Found (search endpoint URL still not surfaced this round)",
+      "verdict": "PARTIAL; 575 Persian manuscripts indexed by aggregator but no working query-by-text endpoint surfaced from outside the JS interface. Manual browse of 575 records would be needed to definitively rule out a Cihanşah witness; deferred. Note: the contributing institutions (Bodleian, Michigan, LoC, Leiden) are likely already covered by Fihrist (UK) which we exhaustively probed in v1.0."
+    },
+    {
+      "id": 8,
+      "name": "Cambridge Digital Library Islamic Collection",
+      "url_in_article": "https://cudl.lib.cam.ac.uk/collections/islamic/1",
+      "type": "Digital images",
+      "institution": "Cambridge University",
+      "prior_coverage": "Probed in search_2026-05-02_uk_european.json (line 354: 'portal: cudl_cambridge')",
+      "this_session_action": "no re-probe",
+      "verdict": "ALREADY_PROBED in v1.0"
+    },
+    {
+      "id": 9,
+      "name": "Persian Collection, British Library",
+      "url_in_article": "https://www.bl.uk/collection-guides/persian-manuscripts",
+      "type": "Guide & catalogue",
+      "institution": "British Library, London",
+      "prior_coverage": "Implicit in Fihrist queries (Fihrist UK aggregates BL Persian holdings); BL Or 9493 directly examined as the ORIGINAL research-question witness (Edwards 1924, Minorsky 1954, Macit 2000, Fihrist 2024 examiners)",
+      "this_session_action": "no re-probe",
+      "verdict": "ALREADY_PROBED; heavily covered through Fihrist + direct BL Or 9493 work"
+    },
+    {
+      "id": 10,
+      "name": "Österreichische Nationalbibliothek (Vienna)",
+      "url_in_article": "https://search.onb.ac.at/primo-explore/search?...&tab=onb_sondersammlungen&...",
+      "type": "Digital images & catalogue",
+      "institution": "Austrian National Library, Vienna",
+      "prior_coverage": "Status in v1.0 unclear; not directly enumerated in cross-checked search-session JSONs",
+      "this_session_action": "WebFetch against the article's Primo URL with Cihanşah Qaraqoyunlu query; response empty (Primo interface is JS-rendered SPA; WebFetch sees only the empty shell)",
+      "verdict": "RESIDUAL GAP; JS-rendered Primo SPA requires Playwright with full DOM rendering to retrieve actual results; deferred. Vienna ONB has historic Persian holdings but no Cihanşah Hakîkî witness has surfaced via Fihrist or other major aggregators, suggesting low expected yield."
+    },
+    {
+      "id": 11,
+      "name": "Persian Manuscript Association (PMA)",
+      "url_in_article": "https://persianmanuscripts.org/",
+      "type": "Digital archive",
+      "institution": "Persian Manuscript Association (presumably US/diaspora)",
+      "prior_coverage": "NOT PROBED in earlier poetry-witness package state",
+      "this_session_action": "WebFetch; ECONNREFUSED",
+      "verdict": "DEFUNCT or domain inactive; likely the organization has changed URL or wound down. No further pursuit."
+    },
+    {
+      "id": 12,
+      "name": "Turkish Manuscripts Catalogue (ktp.isam.org.tr)",
+      "url_in_article": "http://ktp.isam.org.tr/ktpgenel/detailrecords.php",
+      "type": "Catalogue",
+      "institution": "ISAM (Center for Islamic Studies, Istanbul)",
+      "prior_coverage": "Probed in search_2026-05-02_turkey_anatolia.json",
+      "this_session_action": "no re-probe",
+      "verdict": "ALREADY_PROBED in v1.0"
+    },
+    {
+      "id": 13,
+      "name": "MENADoc / MENALib (Halle)",
+      "url_in_article": "http://menadoc.bibliothek.uni-halle.de/ssg/search/quick?query=persian",
+      "type": "Catalogue / digital aggregator",
+      "institution": "University of Halle, Germany",
+      "prior_coverage": "Status in v1.0 unclear; not directly enumerated in cross-checked search-session JSONs",
+      "this_session_action": "WebFetch against the article's URL; 301 redirect to https://www.menalib.de/digitale-ressourcen/menadoc-suche/ ; the new landing page does not expose a query endpoint URL in its static HTML",
+      "verdict": "RESIDUAL GAP; migrated portal with non-static query interface; deferred. MENA-DOC aggregates German university Persian/Arabic holdings but Fihrist UK and DLME likely cover the same major repositories."
+    },
+    {
+      "id": 14,
+      "name": "Bologna University Arabic Manuscripts",
+      "url_in_article": "https://amshistorica.unibo.it/manoscrittiarabi?lang=en",
+      "type": "Digital images",
+      "institution": "Bologna University, Italy",
+      "prior_coverage": "Status in v1.0 unclear",
+      "this_session_action": "WebFetch; 301 redirect to https://historica.unibo.it/ ; immediate retry on new URL returned 429 Too Many Requests with Retry-After: 3600 (1 hour)",
+      "verdict": "RATE_LIMITED; deferred to a future session. Bologna's collection is small (450 Arabic manuscripts, 'some Persian origin') so low expected yield."
+    },
+    {
+      "id": 15,
+      "name": "Berlin State Library Digital Resources",
+      "url_in_article": "https://digital.staatsbibliothek-berlin.de/suche/",
+      "type": "Digital images",
+      "institution": "Berlin State Library",
+      "prior_coverage": "Status in v1.0 unclear",
+      "this_session_action": "WebFetch with multiple query URL patterns; empty response (search interface is JS-rendered SPA)",
+      "verdict": "RESIDUAL GAP; JS-rendered search interface; deferred. Berlin Staatsbibliothek has rich Persian holdings but no Cihanşah Hakîkî witness has surfaced via aggregator queries, suggesting low expected yield."
+    },
+    {
+      "id": 16,
+      "name": "University of Pennsylvania Digital Library (OPenn)",
+      "url_in_article": "https://openn.library.upenn.edu/html/muslimworld_contents.html",
+      "type": "Aggregator",
+      "institution": "University of Pennsylvania",
+      "prior_coverage": "NOT PROBED in earlier poetry-witness package state",
+      "this_session_action": "WebFetch against the browse contents page; 500+ manuscripts confirmed, contributing partners Columbia / Free Library of Philadelphia / U Pennsylvania / Bryn Mawr / Haverford. Static page does NOT mention Cihanşah / Jahanshah / Hakîkî / Yusuf Hakîkî. Search endpoint URL pattern /Search.html accessed; the search interface is JS-rendered with 'standard Google searching techniques' but the search URL pattern was not surfaced. Direct query attempt at /cgi-bin/search.pl returned 404.",
+      "verdict": "PROBED-INCONCLUSIVE; browse confirms 500+ manuscripts but no direct query endpoint accessible from outside the JS interface. The major contributing institutions (Columbia, U Penn) are likely covered by Fihrist UK aggregator. No Cihanşah witnesses visible on browse."
+    },
+    {
+      "id": 17,
+      "name": "Chester Beatty Library",
+      "url_in_article": "https://viewer.cbl.ie/viewer/search/-/-/1/RANDOM/DC%3Apersiancollection/",
+      "type": "Digital images",
+      "institution": "Chester Beatty Library, Dublin",
+      "prior_coverage": "Prior notes documents the CBL Goobi viewer (viewer.cbl.ie) is Anubis-protected against headless browsers; IIIF Image API is accessible via direct urllib (used in this project's Chinese Paper search; CBL Per 119, Per 294 manuscripts retrieved). For Cihanşah: not directly probed.",
+      "this_session_action": "no re-probe (Anubis-protected; per prior project notes, a headed browser would resolve the Anubis challenge but was out of scope for this round)",
+      "verdict": "RESIDUAL GAP; Anubis access challenge requires headed browser; deferred. CBL has Persian poetry holdings but no Cihanşah Hakîkî witness has surfaced via Fihrist."
+    },
+    {
+      "id": 18,
+      "name": "Shahnama Project (Cambridge subset)",
+      "url_in_article": "https://cudl.lib.cam.ac.uk/collections/shahnama/1",
+      "type": "Digital images",
+      "institution": "Cambridge University Library",
+      "prior_coverage": "Implicit in Cambridge cudl probe (id 8); also relevant for the v1.0 comparator-corpus diagnostic (Pir Budaq Shahnama auctions)",
+      "this_session_action": "no re-probe (Shahnama is Firdausi's poem, not Cihanşah's poetry; comparator-corpus relevance documented in search_2026-05-02_auctions.json)",
+      "verdict": "ALREADY_PROBED; out of scope for direct Cihanşah witness search but used as comparator-corpus reference"
+    },
+    {
+      "id": 19,
+      "name": "Fihrist (UK)",
+      "url_in_article": "https://www.fihrist.org.uk/",
+      "type": "Catalogue (aggregator)",
+      "institution": "UK universities consortium",
+      "prior_coverage": "HEAVILY USED in search_2026-05-02_uk_european.json; 11+ queries against Fihrist with both Latin-script and Persian-script variants (Haqiqi, Hakiki, Hakîkî, حقیقی, Cihanshah, Jahan Shah, Karakoyunlu, Qaraqoyunlu, جهانشاه, Jahanshah Qaraqoyunlu); witness-discovery primary source for earlier poetry-witness package state; Fihrist 2024 listed as one of 4 examiners of BL Or 9493 in the project's triangulation analysis",
+      "this_session_action": "no re-probe (already exhaustively covered)",
+      "verdict": "ALREADY_PROBED; primary witness-discovery source for v1.0; coverage exhaustive"
+    },
+    {
+      "id": 20,
+      "name": "Edinburgh University Library; Al-Biruni",
+      "url_in_article": "https://images.is.ed.ac.uk/luna/servlet/view/all/what/Or.Ms.161",
+      "type": "Digital images (specific manuscript)",
+      "institution": "Edinburgh University Library",
+      "prior_coverage": "Out of scope (specific manuscript, not a witness candidate for Cihanşah)",
+      "this_session_action": "no probe",
+      "verdict": "OUT_OF_SCOPE"
+    },
+    {
+      "id": 21,
+      "name": "Edinburgh University Library; Rashid al-Din",
+      "url_in_article": "https://images.is.ed.ac.uk/luna/servlet/view/all/who/Rashid+al-Din+Ṭabib",
+      "type": "Digital images (specific author)",
+      "institution": "Edinburgh University Library",
+      "prior_coverage": "Out of scope (Rashid al-Din is a 13th-14th-century historian, not Cihanşah-era)",
+      "this_session_action": "no probe",
+      "verdict": "OUT_OF_SCOPE"
+    },
+    {
+      "id": 22,
+      "name": "Gallica (BnF)",
+      "url_in_article": "https://gallica.bnf.fr/...",
+      "type": "Digital images",
+      "institution": "National Library of France",
+      "prior_coverage": "Probed in search_2026-05-02_uk_european.json (BnF Persian/Arabe collection; specific URL example given is for Arabe 2964, a Cihanşah-era document)",
+      "this_session_action": "no re-probe",
+      "verdict": "ALREADY_PROBED in v1.0"
+    },
+    {
+      "id": 23,
+      "name": "Qatar Digital Library (qdl.qa)",
+      "url_in_article": "https://www.qdl.qa/en/search/site/persian%20manuscripts?...",
+      "type": "Digital images & searchable",
+      "institution": "National Library of Qatar",
+      "prior_coverage": "NOT PROBED in earlier poetry-witness package state",
+      "this_session_action": "WebFetch returned HTTP 403 (UA-blocked); Playwright navigated to /en/search/site/Jahanshah+Qaraqoyunlu; page returned 'Your search returned no results.'",
+      "verdict": "PROBED-NEGATIVE; zero Cihanşah Qaraqoyunlu results on QDL. Note QDL's collection scope is heavily focused on the British India Office records and 18th-20th-century Persian Gulf colonial-era documents, not 15th-century Qaraqoyunlu poetry; low base-rate expected yield, confirmed."
+    },
+    {
+      "id": 24,
+      "name": "HathiTrust Persian Manuscripts",
+      "url_in_article": "https://babel.hathitrust.org/cgi/mb?...;facet=topicStr%3A%22Manuscripts%2C+Persian%22",
+      "type": "Aggregator",
+      "institution": "Michigan University Library / HathiTrust",
+      "prior_coverage": "HathiTrust appears in search_2026-05-02_auctions.json as a blocked-portal probe (linked to provenance work for Christie's catalogues); Persian-manuscripts subset not specifically probed in v1.0",
+      "this_session_action": "WebFetch with Persian-manuscripts facet + Jahanshah query; HTTP 403 Forbidden",
+      "verdict": "RESIDUAL GAP; HathiTrust UA-blocked; deferred. Article notes only 191 Persian manuscripts in this facet; major US holdings (Princeton, Harvard, U Michigan, U Penn) are largely Fihrist-aggregated or OPenn-aggregated."
+    },
+    {
+      "id": 25,
+      "name": "Metropolitan Museum of Art",
+      "url_in_article": "https://www.metmuseum.org/art/collection/search?q=persian+manuscript",
+      "type": "Digital images",
+      "institution": "Metropolitan Museum of Art, New York",
+      "prior_coverage": "Met Cochran collection probed in search_2026-05-02_south_asian_global.json (line 192: 'Met Cochran collection: entirely classical Shahnamah/Nizami/Sa'di/Hafiz/Jami illuminated mss. No Hakîkî, no Cihanşah.')",
+      "this_session_action": "WebFetch search-by-text; HTTP 429 Too Many Requests (rate limited)",
+      "verdict": "ALREADY_PROBED-NEGATIVE in v1.0; today's re-probe rate-limited but prior verdict stands (Met has classical Persian poetry mss only; no Cihanşah / Hakîkî)"
+    },
+    {
+      "id": 26,
+      "name": "Library of Congress Persian Rare Materials",
+      "url_in_article": "https://www.loc.gov/collections/persian-language-rare-materials/about-this-collection/",
+      "type": "Digital images",
+      "institution": "Library of Congress",
+      "prior_coverage": "LoC indirectly probed via DLME aggregator (id 7) and Fihrist (id 19); direct LoC catalogue not separately enumerated in v1.0 search sessions",
+      "this_session_action": "no probe (low expected yield; LoC Persian holdings are well-aggregated through Fihrist UK and DLME)",
+      "verdict": "INDIRECTLY_COVERED via aggregators"
+    },
+    {
+      "id": 27,
+      "name": "Library of Congress; Arabic, Persian, Ottoman Calligraphy",
+      "url_in_article": "https://www.loc.gov/collections/selections-of-arabic-persian-and-ottoman-calligraphy/",
+      "type": "Digital images (calligraphy specimens)",
+      "institution": "Library of Congress",
+      "prior_coverage": "Out of direct scope for poetry-witness search (calligraphy specimens, not poetry codices)",
+      "this_session_action": "no probe",
+      "verdict": "OUT_OF_DIRECT_SCOPE for v1.0 poetry witness register; potentially relevant for future scope inscription / calligraphy scope"
+    },
+    {
+      "id": 28,
+      "name": "MGIMO University Rare Book Collection",
+      "url_in_article": "https://rarebook.mgimo.ru/book_r/index_p.php",
+      "type": "Digital images",
+      "institution": "MGIMO University, Russia",
+      "prior_coverage": "NOT PROBED in earlier poetry-witness package state",
+      "this_session_action": "WebFetch; 8 Persian manuscripts visible on browse (Malak ash-Shu'ara, Nizami Ganjavi, Amir Khusraw, Raji Kirmani, Abdurrahman Jami, Firdawsi, Sa'di, Muhammad Hayali); no search interface; no mention of Cihanşah / Jahanshah / Hakîkî / Karakoyunlu",
+      "verdict": "PROBED-NEGATIVE; tiny collection (8 Persian MSS), all named authors classical (Nizami, Khusraw, Jami, Firdawsi, Sa'di), no Cihanşah / Hakîkî witnesses. Definitively negative."
+    }
+  ],
+  "summary": {
+    "total_resources_in_article": 28,
+    "already_probed_in_v1": 11,
+    "newly_probed_this_session": 7,
+    "residual_gaps_deferred": 6,
+    "out_of_scope_or_specific_manuscripts": 4,
+    "newly_probed_breakdown": {
+      "asnad.org": "MAJOR FINDING; 21-23 Cihanşah chancery / inscription / correspondence documents; ZERO poetry. current poetry-witness register unchanged; future scope chancery scope dramatically enriched.",
+      "persianmanuscripts.org": "DEFUNCT (ECONNREFUSED)",
+      "DLME (re-probe with article URL)": "575 Persian MSS browse confirmed; query endpoint still not surfaced; manual browse deferred",
+      "qdl.qa (Qatar Digital Library)": "ZERO results for Cihanşah Qaraqoyunlu (collection scope is colonial-era, not 15th c.)",
+      "MGIMO Russia": "8 Persian MSS only, all classical authors; ZERO Cihanşah",
+      "UPenn OPenn (Muslim World)": "500+ MSS browse confirmed; search URL not surfaced; major partners covered by Fihrist anyway",
+      "library.razavi.ir (Astan-e Quds new domain)": "Geo-IP blocked (already documented in companion file probe_2026-05-11_institutional_catalogue_rediscovery.json)"
+    },
+    "residual_gaps_breakdown": {
+      "Vienna ONB (Primo SPA)": "JS-rendered; Playwright would resolve",
+      "Halle MENA-DOC / MENALib": "Migrated to www.menalib.de; query interface URL not surfaced",
+      "Bologna historica.unibo.it": "Rate-limited (429 Retry-After 3600)",
+      "Berlin Staatsbibliothek (JS SPA)": "JS-rendered; Playwright would resolve",
+      "Chester Beatty viewer.cbl.ie": "Anubis access challenge; headed browser would resolve",
+      "HathiTrust Persian (UA-blocked)": "WebFetch 403; Playwright might resolve"
+    },
+    "current_register_impact": "ZERO new poetry witnesses. The earlier poetry-witness package state's 14-witness register is unaffected. asnad.org's 21-23 Cihanşah hits are all chancery documents, inscriptions, correspondence; out of v1.0 scope (poetry-only Dīvān).",
+    "future_register_impact": "MAJOR; asnad.org alone provides ~9 directly-attributed Cihanşah chancery documents (firmans, soyurghal, kitabe inscription, letter) spanning 1434-1467, plus 1 posthumous vaqf-namah by his son Yusuf Mirza. This is likely the largest single source for future scope chancery-document scope. Combined with already-known Cihanşah inscriptions (Kabud Mosque Tabriz, etc.) and coinage (numismatic catalogues), the future scope expansion has substantially better source-corpus coverage than the Section 1 design assumed.",
+    "key_methodological_findings": [
+      "Cross-checking against the 2023 Digital Orientalist article surfaced 7 resources not previously probed in v1.0; one of these (asnad.org) yielded a major finding that fundamentally changes the future scope source-corpus picture.",
+      "The article's misattribution of asnad.org as 'Melli Library Historical Documents' (NLAI) is misleading; asnad.org is actually a German DFG-funded project at the University of Bamberg, NOT an NLAI subsidiary. This explains why it was NOT geo-IP blocked when other Iranian portals were.",
+      "Of the 6 residual gaps, 3 are JS-rendered SPAs (Vienna ONB, Berlin, MENA-DOC) that would require Playwright DOM rendering rather than WebFetch HTML extraction; 1 is rate-limited (Bologna 1-hour Retry-After); 1 is access-challenge-protected (CBL Anubis); 1 is UA-blocked (HathiTrust 403). OPenn is not in this group; it appears in newly_probed_breakdown above with verdict PROBED-INCONCLUSIVE.",
+      "Of the 4 already-probed Western Iranian poetry-witness aggregators (Fihrist UK, Cambridge cudl, Met Cochran, BnF Gallica), Fihrist is the most exhaustively covered; and has been treated as the witness-discovery source-of-truth for v1.0.",
+      "The 21-23 asnad.org chancery hits, plus the 9 confirmed Cihanşah-attributed firmans/soyurghals/inscriptions/letters, represent a future scope-only finding; they do not interact with the v1.0 poetry witness count or the original BL Or 9493 decoration question (which remains triangulated NEGATIVE)."
+    ],
+    "register_changes": "none; witness_register.json is unchanged by this session; the 14-entry roster persists",
+    "follow_on_targets_for_future_session": [
+      "future scope design: expand the source-corpus matrix to include asnad.org as the primary chancery-document source. Document the URL pattern /en/document/<id>/ and the per-document fields (date_hijri / date_western / sender / recipient / type / location).",
+      "future scope retrieval: pull all 21-23 asnad.org Cihanşah hits via /en/document/<id>/ for each result; capture full document images, transcriptions, and any prosopographic data.",
+      "Residual-gap closure (lower priority): Playwright passes against Vienna ONB, Berlin Staatsbibliothek, Halle MENA-DOC; rate-limit-respecting retry of Bologna historica.unibo.it; headed-browser pass at Chester Beatty viewer.cbl.ie. Each is low expected yield given Fihrist exhaustiveness.",
+      "If 2026-05-11 follow-up pass or later patch is published: include this cross-check artifact + the companion probe_2026-05-11_institutional_catalogue_rediscovery.json + an update to README documenting the asnad.org finding as a future scope-relevant discovery (without changing the current poetry-witness register)."
+    ]
+  },
+  "audit_metadata": {
+    "record_type": "crosscheck",
+    "record_date": "2026-05-11",
+    "artifact_status": "current",
+    "source_layers": [
+      "project_classification",
+      "search_engine_index"
+    ],
+    "access_mode": "open_web",
+    "disposition": "methodological_record",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

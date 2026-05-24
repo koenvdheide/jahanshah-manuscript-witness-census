@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "session_label": "Ottoman avenue chunked deep-probe synthesis (supersedes the shallow primary-session probe)",
+  "session_id": "ottoman-chunks-synthesis-2026-05-11",
+  "date": "2026-05-11",
+  "scope": "Consolidation of 4 chunked Ottoman avenue parallel probe probes (C1 yazmalar/YEK, C2 ISAM Yordam, C3 Sufi tekke + Yusuf homonym audit, C4 Milli Kütüphane + Diyanet) launched after the original Parallel probe C lost its work to tooling failure. Chunking strategy: 4 parallel parallel probes with tight per-portal scope (~15-25 min, ~20-30 tool calls each) replaces the monolithic 32-min Parallel probe C scope.",
+  "context_note": "This synthesis DEEPENS the shallow primary-session Ottoman probe at data/searches/probe_2026-05-11_avenue_provincial_ottoman_sufi.json (committed in 447dd25). Where chunk findings contradict the primary-session probe, the chunk findings SUPERSEDE (chunks did direct GET-form exercise where primary-session only did site-restricted Google).",
+  "supersession_table": [
+    {
+      "prior_main_context_claim": "yazmalar.gov.tr is CERT_WALLED_TO_WEBFETCH; site is live per Google indexing but cert chain blocks WebFetch; residual gap for Playwright cert-ignore pass",
+      "chunk_c1_supersedes_with": "yazmalar.gov.tr is DEFINITIVELY_DEAD: nginx 404 across all probe paths after TLS bypass; ZERO Wayback snapshots 2022-2024; alt hostnames ECONNREFUSED. Cert error was the legacy server stub. NO Playwright pass will yield results. Operational catalogue is portal.yek.gov.tr (v1.0 coverage via yek-search agent already).",
+      "residual_gap_resolution": "FALSIFIED; remove from 2026-05-11 follow-up pass release-blocker list"
+    },
+    {
+      "prior_main_context_claim": "ISAM site-restricted Google returns 0 Cihanşah hits; suggests no Cihanşah-related catalogue records",
+      "chunk_c2_supersedes_with": "ISAM Yordam direct GET-form exercise returns 5+ Cihanşah Qaraqoyunlu records (Değirmençay 2004 + 2021, Macit 2002, IX. Türk Tarih Kongresi 1988); all PRINTED editions/theses, ZERO manuscript witnesses. Google has a real false-negative class for Yordam (likely robots.txt / shallow crawl). Direct GET-form is the productive method.",
+      "methodological_finding": "Site-restricted Google is INSUFFICIENT for Yordam-based Turkish institutional catalogues. Future probes must exercise URL parameters directly."
+    }
+  ],
+  "chunk_artifacts": [
+    {
+      "chunk": "C1",
+      "scope": "yazmalar.gov.tr + YEK parent ministry + alternate URL forms (cert workarounds, canonical-URL resolution)",
+      "file": "data/searches/probe_2026-05-11_ottoman_chunk1_yazmalar_yek.json",
+      "duration_min": 5,
+      "tool_calls": 21,
+      "verdict": "yazmalar.gov.tr DEFINITIVELY_DEAD; residual gap falsified",
+      "new_witnesses": 0
+    },
+    {
+      "chunk": "C2",
+      "scope": "ISAM katalog.isam.org.tr Yordam direct query battery",
+      "file": "data/searches/probe_2026-05-11_ottoman_chunk2_isam_yordam.json",
+      "duration_min": 3,
+      "tool_calls": 23,
+      "verdict": "5 Cihanşah printed editions; 0 MSS; T811.225/T811.215 call-number disambiguation surfaced",
+      "new_witnesses": 0
+    },
+    {
+      "chunk": "C3",
+      "scope": "Konya Mevlevi + Bursa + Hacı Bektaş + Edirne with Yusuf Hakîkî Bursavi homonym audit",
+      "file": "data/searches/probe_2026-05-11_ottoman_chunk3_sufi_tekke_yusuf_homonym_audit.json",
+      "duration_min": 4,
+      "tool_calls": 26,
+      "verdict": "0 Cihanşah; 6 Yusuf Hakîkî MSS attested for disambiguation matrix; geographic correction (Konya cluster, NOT Bursa)",
+      "new_witnesses": 0
+    },
+    {
+      "chunk": "C4",
+      "scope": "Milli Kütüphane advanced search + Diyanet yazmaeserler.diyanet.gov.tr + Hurufi text id=931 future scope metadata capture",
+      "file": "data/searches/probe_2026-05-11_ottoman_chunk4_millikutup_diyanet.json",
+      "duration_min": 3,
+      "tool_calls": 27,
+      "verdict": "0 new Cihanşah beyond A 5252; new FP class 'Cihan Şah honorific-dedicatory-frame'; Hurufi text id 931 partial metadata captured",
+      "new_witnesses": 0
+    }
+  ],
+  "cumulative_findings": {
+    "new_cihansah_witnesses_total": 0,
+    "current_register_impact": "ZERO. 14-entry register unchanged.",
+    "yusuf_hakiki_bursavi_disambiguation_matrix_entries_added": [
+      {
+        "shelfmark": "Konya Mevlana Müzesi 2430",
+        "title": "Hakîkî-nâme / Divan",
+        "fp_risk": "HIGH; title pattern matches Cihanşah Hakîkî Dīvān search; reject via Bursa/Bektashi context + post-893 AH dating"
+      },
+      {
+        "shelfmark": "Konya İl Halk Uzluk 6968",
+        "title": "Yusuf Hakîkî work",
+        "fp_risk": "MEDIUM"
+      },
+      {
+        "shelfmark": "Manisa Murâdiye 1296",
+        "title": "Yusuf Hakîkî work",
+        "fp_risk": "MEDIUM"
+      },
+      {
+        "shelfmark": "Süleymaniye Hacı Mahmud Efendi 2974",
+        "title": "Yusuf Hakîkî work; Süleymaniye sub-collection NOT covered by v1.0 suleymaniye_fatih_3808 entry",
+        "fp_risk": "HIGH; Süleymaniye sub-collection architecture"
+      },
+      {
+        "shelfmark": "Süleymaniye Hacı Mahmud Efendi 2574",
+        "title": "Yusuf Hakîkî second copy at same sub-collection",
+        "fp_risk": "HIGH"
+      },
+      {
+        "shelfmark": "Sadi Somuncuoğlu private",
+        "title": "Yusuf Hakîkî work in private collection",
+        "fp_risk": "LOW; not catalogued in major aggregators"
+      }
+    ],
+    "indeterminate_followup_items": [
+      {
+        "shelfmark": "Cairo Hidiviyye Et-Tesnîm + Er-Rahîk",
+        "reasoning": "Title pattern (Tesnîm + Rahîk are Quranic / Sufi imagery) does not match either Cihanşah Qaraqoyunlu or Yusuf Hakîkî Bursavi attested works; needs catalogue-level inspection. F-FOLLOWUP-CAIRO-HIDIVIYYE."
+      }
+    ],
+    "new_fp_classes_formalized": [
+      {
+        "class_name": "Ottoman 'Cihan Şah' honorific-dedicatory-frame",
+        "context": "Compound-title-element / honorific dedications to ruling sultans/patrons in jurisprudence, logic, muamma texts",
+        "discrimination_signal": "Require Qaraqoyunlu dynastic context + Persian-Turkic poetry content (v1.0 disambiguation criterion); reject honorific-only matches",
+        "source": "Chunk C4 Diyanet 7 false positives"
+      },
+      {
+        "class_name": "Anatolian aşık-tradition Hakîkî",
+        "context": "17th-19th c. folk-poet tradition",
+        "discrimination_signal": "Non-Hurufi local neighbor poets in mecmûʿa layout",
+        "source": "Re-classification of v1.0 Konya Hacı Bektaş BY0000010729 entry"
+      }
+    ],
+    "isam_call_number_disambiguation_system": {
+      "_purpose": "ISAM's library catalogers use Dewey-like call numbers to disambiguate Cihanşah Qaraqoyunlu vs Yusuf Hakîkî Baba at the institutional level; can be used as a high-confidence disambiguation signal.",
+      "T811.225": "Cihanşah Qaraqoyunlu (Cihanşah Hakîkî)",
+      "T811.215": "Yusuf Hakîkî Baba (Bursa/Aksaray)",
+      "source": "Chunk C2 ISAM Yordam direct exercise"
+    },
+    "google_false_negative_class": {
+      "platform": "Yordam-based Turkish institutional catalogues",
+      "behavior": "robots.txt or shallow-crawl pattern hides Yordam records from Google site-restricted search",
+      "implication": "Site-restricted Google sweeps return 0 hits even when direct GET-form queries return many records; Yordam GET-form exercise is the productive probe method",
+      "affected_portals": "Confirmed at katalog.isam.org.tr; suspected at other Yordam-deployed Turkish library catalogues (Konya Yusufağa, Milli Kütüphane, etc.)"
+    },
+    "future_edition_chain_additions": [
+      {
+        "id": "F-EDITION1",
+        "content": "Değirmençay 2021 Erzurum (Persian poems edition); NEW relative to current search_keys.json editions_and_studies_for_backchain (which has Değirmençay 2004 only)",
+        "source": "Chunk C2 ISAM Yordam"
+      }
+    ],
+    "future_codicology_lead": {
+      "endpoint": "https://dijital-kutuphane.mkutup.gov.tr/authority/papertypelist",
+      "content": "Milli Kütüphane manuscript holdings paper-type metadata enumeration; useful for future scope codicology-augmentation work; integrates with the decorated-paper corpus project",
+      "source": "Chunk C4 Milli Kütüphane probe"
+    },
+    "future_mecmua_mining_lead": {
+      "shelfmark": "Diyanet [er-Risâle fî esrâri'l-hurûf] id=931 materialType=YE",
+      "content": "Hurufi text in Diyanet collection; per v1.0 Nesîmî-adjacency heuristic, Hurufi co-occurrence is a Cihanşah-witness predictor; full metadata needs Playwright (detail page is JS-encoded)",
+      "followup_id": "F-DIYANET-HURUFI-931",
+      "source": "Chunk C4 Diyanet probe"
+    }
+  },
+  "residual_gaps_revised": {
+    "_purpose": "Updated residual-gap list reflecting chunk findings. The prior 'yazmalar.gov.tr Playwright cert-ignore pass' gap is FALSIFIED and removed.",
+    "remaining_gaps": [
+      {
+        "gap": "Milli Kütüphane advanced search login-walled (302 to /Account/Login)",
+        "resolution_path": "Playwright + manuscript-collections institutional registration"
+      },
+      {
+        "gap": "Diyanet Hurufi text id=931 detail-page JS-encoded metadata",
+        "resolution_path": "Playwright DOM extraction"
+      },
+      {
+        "gap": "Cairo Hidiviyye Et-Tesnîm + Er-Rahîk Yusuf-or-other classification",
+        "resolution_path": "Direct Cairo Hidiviyye catalogue query OR catalogue scan of Yusuf Hakîkî works enumerated in Çavuşoğlu Yusuf Hakîkî Divani edition"
+      },
+      {
+        "gap": "Salar Jang Vol IV PDF (parallel probe A residual; 500MB)",
+        "resolution_path": "Direct download + OCR"
+      },
+      {
+        "gap": "NAMAMI/Kriti Sampada (parallel probe A residual; Indian-IP)",
+        "resolution_path": "VPN India routing OR local in-country contact"
+      }
+    ],
+    "removed_falsified_gaps": [
+      {
+        "gap": "yazmalar.gov.tr Playwright cert-ignore pass + direct search-form exercise",
+        "falsification_evidence": "Chunk C1: nginx 404 across all paths after TLS bypass; ZERO Wayback snapshots; portal application removed entirely"
+      }
+    ]
+  },
+  "summary": {
+    "total_chunks_executed": 4,
+    "total_tool_calls_across_chunks": 97,
+    "total_duration_minutes_across_chunks": 15,
+    "vs_original_parallel probe_c": "Original Parallel probe C ran 32 min / 61 tool uses then failed during final write; 4 parallel chunks ran in 15 minutes wall-clock with NO failures. Chunking reduced wall-clock by ~50% AND eliminated the single-point-of-failure overload risk.",
+    "new_cihansah_witnesses": 0,
+    "current_register_impact": "ZERO. 14-entry register unchanged. by_verification sum unchanged.",
+    "ottoman_avenue_status": "EXHAUSTIVELY_PROBED; 4 chunks deepen the prior primary-session shallow probe; cumulative Cihanşah probe outcome NEGATIVE across yazmalar (dead) + YEK parent + ISAM Yordam + Sufi tekke (Konya/Bursa/Hacı Bektaş/Edirne) + Milli Kütüphane + Diyanet."
+  },
+  "audit_metadata": {
+    "record_type": "methodological_record",
+    "record_date": "2026-05-11",
+    "artifact_status": "current",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "methodological_record",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

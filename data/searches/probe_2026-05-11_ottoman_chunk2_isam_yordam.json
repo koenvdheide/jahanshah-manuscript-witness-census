@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "session_label": "ISAM Yordam direct exercise for Cihansah Hakiki witness probing (chunk 2 of 4 splitting lost Parallel probe C Ottoman scope)",
+  "session_id": "ottoman_chunk2_isam_yordam_2026-05-11",
+  "date": "2026-05-11",
+  "scope": "Exercise the ISAM Yordam search interface (katalog.isam.org.tr/yordam/) directly via WebFetch with a Turkish + Arabic-script + homonym query battery. Replaces the lost Parallel probe C zero-hit site-restricted Google sweep for ISAM with a direct catalogue probe.",
+  "context_note": "Prior primary-session site-restricted Google sweep (probe_2026-05-11_avenue_provincial_ottoman_sufi.json, ISAM section) returned 0 indexed hits for Cihansah / Hakiki / Karakoyunlu. This direct Yordam exercise uses URL-parameter GET form (q=<term>, dil=0, p=<page>) and shows Yordam IS server-rendered with embedded result data, so WebFetch extraction works without Playwright.",
+  "method_summary": {
+    "tool": "WebFetch (no Playwright)",
+    "query_form": "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=<term>",
+    "rendering": "Server-rendered HTML with embedded result cards. NOT a JS-rendered SPA shell. WebFetch extraction reliable.",
+    "encoding_note": "Turkish-character queries require URL-encoded UTF-8 (e.g., Cihansah = Cihan%C5%9Fah). Persian Arabic-script queries can be sent URL-encoded but return 0 results because Yordam does not index Persian-script."
+  },
+  "query_battery_executed": [
+    {
+      "query": "Cihansah",
+      "url": "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=Cihan%C5%9Fah",
+      "http_status": 200,
+      "result_count": 5,
+      "rendering": "server_rendered",
+      "top_records": [
+        {
+          "title": "Karakoyunlu hukumdari Cihansah ve Farsca siirleri (Divan-i Hakiki)",
+          "author": "Cihansah",
+          "prepared_by": "Veyis Degirmencay",
+          "date": "2021",
+          "shelfmark": "T811.225 CIH.K 2021",
+          "material_type": "printed_edition"
+        },
+        {
+          "title": "Karakoyunlu hukumdari Cihansah ve Turkce siirleri",
+          "author": "Cihansah",
+          "prepared_by": "Muhsin Macit",
+          "date": "2002",
+          "shelfmark": "T811.225 CIH.K 2002",
+          "material_type": "printed_edition"
+        },
+        {
+          "title": "Karakoyunlu hukumdari Cihansah ve Farsca siirleri (Divan-i Hakiki)",
+          "author": "Cihansah",
+          "prepared_by": "Veyis Degirmencay",
+          "date": "2004",
+          "shelfmark": "T811.225 CIH.K 2004",
+          "material_type": "printed_edition"
+        }
+      ],
+      "new_witness_or_edition_finding": "Degirmencay 2021 Erzurum reprint/revision of Persian-poems edition is NEW relative to current search_keys.json editions list (which had Degirmencay 2004 only). This is an EDITION-CHAIN finding, not a manuscript witness."
+    },
+    {
+      "query": "Cihan Sah",
+      "url": "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=Cihan+%C5%9Eah",
+      "http_status": 200,
+      "result_count": 80,
+      "rendering": "server_rendered",
+      "outcome": "Bulk noise: name-token overlap with translators (Vildan Sahin / Nihal Cihan), editors (Cihan Okuyucu), and unrelated geographic content. NO direct Cihansah Qaraqoyunlu witness records beyond what the Cihansah query already surfaces."
+    },
+    {
+      "query": "Karakoyunlu",
+      "url": "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=Karakoyunlu",
+      "http_status": 200,
+      "result_count": 89,
+      "rendering": "server_rendered",
+      "outcome": "Predominantly secondary scholarship: Uzuncarsili Anadolu Beylikleri (1937, 1969), Budak Munsi Kazvini Cevahirul-ahbar (2000/1378). NO manuscript records of the Divan-i Hakiki itself. Likely candidates for v1.0 citation register; not new witnesses."
+    },
+    {
+      "query": "Hakiki (with circumflex Hakiki)",
+      "url": "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=Hak%C3%AEk%C3%AE",
+      "http_status": 200,
+      "result_count": 104,
+      "rendering": "server_rendered",
+      "outcome": "Mixed set: includes Degirmencay 2004 Cihansah Farsca siirleri; rest are Haki Hakiki (modern translator), Hakikiyye dersleri (Ali Kemal 1907 Turkish lit study), and Yusuf Hakiki subset. NO new manuscript witnesses."
+    },
+    {
+      "query": "Hakiki (plain ASCII)",
+      "url": "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=Hakiki",
+      "http_status": 200,
+      "result_count": 104,
+      "rendering": "server_rendered",
+      "outcome": "Identical result count to circumflex query (Yordam appears to use accent-insensitive matching for the Hakiki/Hakiki pair). Top records overlap with circumflex query."
+    },
+    {
+      "query": "Yusuf Hakiki",
+      "url": "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=Yusuf+Hakiki",
+      "http_status": 200,
+      "result_count": 8,
+      "rendering": "server_rendered",
+      "all_records": [
+        {
+          "title": "Yusuf Hakiki Baba divani: karsilastirmali metin",
+          "editor": "Erdogan Boz",
+          "date": "2009",
+          "shelfmark": "T811.215 YUS.H 2009",
+          "material_type": "printed_edition"
+        },
+        {
+          "title": "Mahabbet-name",
+          "author": "Yusuf Hakiki",
+          "date": "2009",
+          "shelfmark": "T811.215 YUS.M 2009",
+          "material_type": "printed_edition"
+        },
+        {
+          "title": "Yusuf-i Hakiki'nin Mahabbet-name'sinin tenkitli metni ve incelenmesi",
+          "author": "Ali Cavusoglu",
+          "date": "2002",
+          "shelfmark": "T811.215 CAV.Y 2002",
+          "material_type": "printed_edition_or_thesis"
+        },
+        {
+          "title": "Yusuf Hakiki Baba Divani'nin dini-tasavvufi kelime, tabir ve kavramlar bakimindan tahlili",
+          "author": "Kudret Safa Gumus",
+          "date": "2020",
+          "shelfmark": "T811.215 GUM.Y 2020",
+          "material_type": "printed_edition_or_thesis"
+        },
+        {
+          "title": "Tasavvuf risalesi ve Metaliu'l-Iman",
+          "editor": "Ali Cavusoglu",
+          "date": "2004",
+          "shelfmark": "297.7 YUS.T 2004",
+          "material_type": "printed_edition"
+        },
+        {
+          "title": "Yusuf Hakiki Baba Divani'ndan secmeler",
+          "editor": "Erdogan Boz",
+          "date": "2011",
+          "shelfmark": "T811.215 YUS.H 2011",
+          "material_type": "printed_edition"
+        },
+        {
+          "title": "Sevgi yolu",
+          "editor": "Ali Cavusoglu",
+          "date": "2010",
+          "shelfmark": "T811.215 YUS.M 2010",
+          "material_type": "printed_edition"
+        },
+        {
+          "title": "Muhabbet-name",
+          "editor": "Ali Cavusoglu",
+          "date": "2009",
+          "shelfmark": "T811.215 YUS.M 2009",
+          "material_type": "printed_edition"
+        }
+      ],
+      "disambiguation_outcome": "All 8 records use the call-number-prefix T811.215 (Yusuf Hakiki Baba slot) vs Cihansah's T811.225 (Cihansah slot). Yordam call-number assignment treats the two Hakikis as DISTINCT authors with separate Dewey-like buckets. ZERO Cihansah/Karakoyunlu cross-reference within Yusuf Hakiki records. ZERO manuscript witness records (all printed scholarship)."
+    },
+    {
+      "query": "Divan-i Hakiki",
+      "url": "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=Divan-%C4%B1+Hak%C3%AEk%C3%AE",
+      "http_status": 200,
+      "result_count": 31,
+      "rendering": "server_rendered",
+      "outcome": "31 records mixing Cihansah Qaraqoyunlu and Yusuf Hakiki Divan editions plus Kerim Hakiki spiritual-progression work (1957/1959 cluster). NO manuscript witnesses."
+    },
+    {
+      "query": "Degirmencay",
+      "url": "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=De%C4%9Firmen%C3%A7ay",
+      "http_status": 200,
+      "result_count": 19,
+      "rendering": "server_rendered",
+      "cihansah_related_records": [
+        {
+          "title": "Karakoyunlu hukumdari Cihansah ve Farsca siirleri (divan-i hakiki)",
+          "date": "2004",
+          "shelfmark": "T811.225 CIH.K 2004",
+          "place": "Erzurum: Ataturk Universitesi Fen Edebiyat Fakultesi"
+        },
+        {
+          "title": "Karakoyunlu hukumdari Cihansah ve Farsca siirleri (Divan-i Hakiki)",
+          "date": "2021",
+          "shelfmark": "T811.225 CIH.K 2021",
+          "place": "Erzurum: Ataturk Universitesi"
+        }
+      ],
+      "edition_chain_finding": "CONFIRMED: Degirmencay 2021 is a separate Atatürk Üniversitesi (Erzurum) publication, NOT present in current search_keys.json editions_and_studies_for_backchain list (which has Degirmencay 2004 only). Flagged as future scope edition-chain update."
+    },
+    {
+      "query": "Persian Arabic-script Hakiki (haqiqi)",
+      "url": "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=%D8%AD%D9%82%DB%8C%D9%82%DB%8C",
+      "http_status": 200,
+      "result_count": 0,
+      "rendering": "server_rendered",
+      "outcome": "Bulunan: 0 Adet. Yordam returns 0 for direct Arabic-script queries (likely because record-text fields are transliterated/Romanized in cataloguing convention, not stored in original script)."
+    },
+    {
+      "query": "Persian Arabic-script Jahanshah (jahanshah)",
+      "url": "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=%D8%AC%D9%87%D8%A7%D9%86%D8%B4%D8%A7%D9%87",
+      "http_status": 200,
+      "result_count": 0,
+      "rendering": "server_rendered",
+      "outcome": "Bulunan: 0 Adet. Confirms Yordam does not index Persian Arabic-script. Use Turkish or Romanized variants for ISAM probing."
+    },
+    {
+      "query": "Cihansah yazma (Cihansah AND manuscript)",
+      "url": "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=Cihan%C5%9Fah+yazma",
+      "http_status": 200,
+      "result_count": 1,
+      "rendering": "server_rendered",
+      "outcome": "1 result: IX. Turk Tarih Kongresi (1988) proceedings volume citing Cihansah in a paper. NO manuscript record."
+    },
+    {
+      "query": "Cihansah divan",
+      "url": "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=Cihan%C5%9Fah+divan",
+      "http_status": 200,
+      "result_count": 3,
+      "rendering": "server_rendered",
+      "all_records": [
+        {
+          "title": "Karakoyunlu hukumdari Cihansah ve Farsca siirleri (divan-i hakiki)",
+          "prepared_by": "Veyis Degirmencay",
+          "date": "2004",
+          "shelfmark": "T811.225 CIH.K 2004",
+          "material_type": "printed_edition"
+        },
+        {
+          "title": "Karakoyunlu hukumdari Cihansah ve Farsca siirleri (Divan-i Hakiki)",
+          "prepared_by": "Veyis Degirmencay",
+          "date": "2021",
+          "shelfmark": "T811.225 CIH.K 2021",
+          "material_type": "printed_edition"
+        },
+        {
+          "title": "IX. Turk Tarih Kongresi",
+          "date": "1988",
+          "shelfmark": "956 TUR.T 1988",
+          "material_type": "printed_conference_proceedings"
+        }
+      ],
+      "outcome": "Same Degirmencay edition pair + Turk Tarih Kongresi. NO manuscript witnesses."
+    },
+    {
+      "query": "Cihansah Hakiki (compound)",
+      "url": "https://katalog.isam.org.tr/yordam/?p=1&dil=0&q=Cihansah+Hakiki",
+      "http_status": 200,
+      "result_count": 0,
+      "rendering": "server_rendered",
+      "outcome": "Bulunan: 0 Adet. Compound name-token query returns 0; Yordam ranks single-token matches separately."
+    }
+  ],
+  "yusuf_hakiki_homonym_disambiguation": {
+    "ISAM_call_number_separation": "ISAM Yordam assigns distinct Dewey-like call-number prefixes to the two Hakikis: T811.225 = Cihansah Qaraqoyunlu, T811.215 = Yusuf Hakiki Baba (Bursa). This is a CATALOGUER-level disambiguation already in place at ISAM.",
+    "bursavi_link": "Confirmed via Cavusoglu Erciyes University 2002 doctoral dissertation on Yusuf Hakiki's Mahabbet-name (T811.215 CAV.Y 2002). Yusuf Hakiki Baba is the standard Turkish-Ottoman 15th-century mystic poet of Bursa/Aksaray area, distinct from Cihansah Qaraqoyunlu.",
+    "no_cross_contamination": "All 8 Yusuf Hakiki records contain ZERO mentions of Cihansah / Karakoyunlu / Qaraqoyunlu cross-reference. ISAM cataloguers have correctly separated the two authors."
+  },
+  "cihansah_qaraqoyunlu_isam_holdings_synthesis": {
+    "manuscript_witnesses_found": 0,
+    "manuscript_witnesses_inferred_negative_basis": "ISAM Kutuphanesi is a research library for Islamic-studies scholarship, NOT a primary manuscript repository. Yordam holds books, theses, and serials (357,627 items total per 2026-05-11 statistics); manuscripts are catalogued separately at yazmalar.gov.tr / yazma.org.tr / Diyanet (yazmaeserler.diyanet.gov.tr) / Sleymaniye / Beyazit. The 0-manuscript outcome at ISAM is structurally expected.",
+    "edition_chain_findings": [
+      "Degirmencay 2021 Erzurum (Persian poems): NEW entry for future scope editions_and_studies list",
+      "Degirmencay 2004 Erzurum (Persian poems): CONFIRMED present in ISAM holdings",
+      "Macit 2002 Ankara Grafiker (Turkish poems): CONFIRMED present in ISAM holdings (T811.225 CIH.K 2002 cluster confirms Macit 2002 specifically referenced)",
+      "Demirci 1997 DTCF article: NOT specifically surfaced in WebFetch top-3 output but may exist in 89-record Karakoyunlu hit set"
+    ],
+    "secondary_scholarship_observations": [
+      "Uzuncarsili Anadolu Beylikleri 1937 + 1969 editions both present (89-record Karakoyunlu set top hits): standard Turkish historical-survey context",
+      "Budak Munsi Kazvini Cevahir-i ahbar 2000/1378: Persian-language Qaraqoyunlu chronicle, scholarly secondary source"
+    ]
+  },
+  "yordam_methodology_findings": [
+    "Yordam IS server-rendered with embedded result-card HTML, NOT a JS-rendered SPA shell. WebFetch extraction reliable across all 13 queries tested.",
+    "URL pattern katalog.isam.org.tr/yordam/?p=<page>&dil=0&q=<urlencoded_term> works directly via GET; no POST form required.",
+    "Persian Arabic-script queries return 0 results (Yordam indexes Romanized/Turkish-orthography forms only).",
+    "Yordam accent-insensitive matching: q=Hakiki and q=Hakiki (with circumflex) both return 104 results identically.",
+    "Compound queries like 'Cihansah Hakiki' or 'Cihan Sah Karakoyunlu' return 0 hits; single-token queries are the productive form. Yordam's tokenizer appears to require exact word-boundary matching without phrase-AND semantics on multi-word queries.",
+    "Pagination beyond p=1 redirects to login interface (observed on p=2 fetch). Single-page sweep at p=1 captures top-20-30 ranked records; deeper hits require authenticated session."
+  ],
+  "summary": {
+    "queries_executed": 13,
+    "queries_with_results": 11,
+    "queries_zero_hits": 2,
+    "manuscript_witnesses_found": 0,
+    "manuscript_witnesses_v1_register_impact": 0,
+    "edition_chain_v2_findings": 1,
+    "future_scope_finding_label": "Degirmencay 2021 Erzurum (Persian poems) edition - ADD to editions_and_studies_for_backchain list as F-EDITION1",
+    "verdict": "ISAM Yordam PROBED NEGATIVE for manuscript witnesses (structurally expected: ISAM is a printed-scholarship library, not a manuscript repository). One EDITION-CHAIN update for future scope (Degirmencay 2021).",
+    "site_restricted_google_false_negative_demonstration": "Prior site-restricted Google query (probe_2026-05-11_avenue_provincial_ottoman_sufi.json) returned 0 hits for site:katalog.isam.org.tr 'Cihansah'. This direct Yordam exercise returned 5 hits for q=Cihansah. Demonstrates that site-restricted Google indexing has a real false-negative class for Yordam (likely robots.txt or shallow crawl depth on katalog.isam.org.tr). Direct Yordam GET-form exercise IS the productive method.",
+    "residual_gaps": [
+      "Pagination beyond p=1 requires authenticated session (login interface returned on p=2). Estimated impact: low; the productive hits already surface in p=1.",
+      "Yordam authority-index endpoints (Eser Adi, Yazar, Konu Basligi browsing) not exercised in this chunk; could surface Cihansah authority-record metadata."
+    ]
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-11",
+    "artifact_status": "appendix",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

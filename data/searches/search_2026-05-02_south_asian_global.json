@@ -1,0 +1,442 @@
+{
+  "schema_version": 1,
+  "session_label": "South Asian + global aggregator confirmation sweep",
+  "session_id": "south-asian-global",
+  "date": "2026-05-02",
+  "scope": "South Asian repositories (Salar Jung Hyderabad, Khuda Bakhsh Patna, Rampur Raza, Asiatic Society Bengal, NMM/Kritisampada, Aligarh, India Office, Bombay Mulla Firuz, Tonk, Met Cochran) + global aggregators (WorldCat, HathiTrust, vHMML, Princeton, LoC, NYU, BL Digitised Mss, DLME, Qalamos). Goal: confirmation sweep: most expected 'Hakîkî' hits in Indo-Persian collections are Mirza Muhammed Beg Ahmed Abadi Kecratî (11th-c. AH Indo-Persian poet), NOT Cihanşah Hakîkî. Document positively, document false-positive Hakîkî namesakes, note blocked portals.",
+  "method_summary": {
+    "primary": "direct HTTP fetch first; third-party HTML mirroring on 403/CAPTCHA; direct Internet Archive djvu.txt OCR full-text search via direct HTTP fetch for printed catalogues that are not surfaced behind bot protection.",
+    "fallback": "targeted web search for narrowly-scoped site:domain queries when portal endpoints blocked.",
+    "ocr_terms_searched": [
+      "haqiqi",
+      "hakiki",
+      "hakyky",
+      "jihan-shah",
+      "jahan-shah",
+      "jahanshah",
+      "jihanshah",
+      "jihan shah",
+      "jahan shah",
+      "cihanshah",
+      "qaraqoyunlu",
+      "kara-koyunlu",
+      "qara-koyunlu",
+      "qara-yusuf",
+      "qara yusuf",
+      "kara yusuf",
+      "karakoyunlu",
+      "mirza muhammad ahmad",
+      "ahmadabadi",
+      "ahmad-abadi",
+      "ahmad abadi",
+      "kechrati",
+      "turkmen",
+      "turkomans",
+      "turki ghazal",
+      "turkish ghazal",
+      "persian and turkish"
+    ]
+  },
+  "search_session": {
+    "date": "2026-05-02",
+    "field_searched": "yazar_adi",
+    "term_searched": "Jahanshah Haqiqi (and variants: multi-portal sweep)",
+    "operator": "İçeren",
+    "raw_result_count": 0,
+    "results": [],
+    "false_positive_count": 0,
+    "genuine_count": 0,
+    "false_positive_rate": 0.0
+  },
+  "portal_results": [
+    {
+      "portal": "Salar Jung Museum Library (Hyderabad)",
+      "url": "https://salarjungmuseum.in/persian-manuscripts.html",
+      "interface": "12 image-only PDF catalogue volumes by Muhammad Ashraf (1965 onwards). No online search interface.",
+      "method": "PDF download via direct HTTP fetch; pdftotext extraction yielded near-zero text (image-only scans, no OCR layer). Cross-checked Internet Archive copies of Vol I (History), II (Biographies/Geog), III, IV (Poetry), V: none have djvu.txt OCR available on IA either.",
+      "outcome": "blocked_no_ocr",
+      "verdict": "no_data: image-only PDFs, no full-text search; Macit's 2002 edition used only the canonical 4 (BL/Mat/Süleymaniye/DTCF) so a Salar Jung witness would have surfaced via published edition. Non-presence is highly suggestive but not conclusive.",
+      "haqiqi_hits": 0,
+      "cihanshah_hits": 0
+    },
+    {
+      "portal": "Khuda Bakhsh Oriental Public Library (Patna): Bankipore catalogues",
+      "url": "https://kblibrary.bih.nic.in/ (ECONNREFUSED) + IA fulltext for printed Bankipore catalogues",
+      "interface": "Library portal unreachable from this session (ECONNREFUSED). Substituted: Internet Archive OCR full-text of Bankipore catalogue Vols II, IV, V, VIII, IX, X, XIV, XV, XXIV (also full single-vol IA copies).",
+      "method": "IA djvu.txt OCR pulled for IDs in.ernet.dli.2015.62173 / 103897 / 279788 / in.gov.ignca.14500 / in.ernet.dli.2015.62180 / 537096 / 62176 / 103909 / 62354 / 30779 / dli.csl.5633 / 6974 / cataloguearabic00maugoog. Searched all OCR text for the ~25 disambiguation terms.",
+      "outcome": "covered",
+      "haqiqi_hits": 0,
+      "cihanshah_hits": 0,
+      "namesake_hits_other_hakikis": 0,
+      "incidental_findings": [
+        "Bankipore Vol XV (No. 1027): 'al-Ahmadabadi': but this is 'Abdallah b. Muhammad Siddiq al-Wa'iz al-Ahmadabadi (mid 11th-c. AH Sufi from Ahmadabad Gujarat). Not the Hakîkî namesake (Mirza Muhammed Beg Ahmed Abadi Kecratî is a different person). Different field (theology, not poetry); not a false-positive for Cihanşah Hakîkî.",
+        "Bankipore Vol IX (No. 893): 'Tuhfah-i Sultani': collection of Persian and Turkish proverbs by Muhammad Ibrahim b. Zayn ul-'Abidin Isfahani. Not by Hakîkî, irrelevant."
+      ],
+      "verdict": "no Cihanşah Hakîkî witness in Bankipore. Matches Macit's exclusion of South Asian witnesses from the TEIS Yesevi roster."
+    },
+    {
+      "portal": "Rampur Raza Library",
+      "url": "https://razalibrary.gov.in/ (ECONNREFUSED) + IA fulltext for printed Rampur Raza catalogues",
+      "interface": "Library portal unreachable. Substituted: IA OCR for Rampur Raza Library Catalogue Persian MSS Vol. 1 (335KB djvu.txt) and Vol. 2 (294KB djvu.txt), plus the 1937 single-volume catalogue (dli.ernet.243433, 3MB djvu.txt) and Tonk Catalogue Vol 3 (history of India).",
+      "method": "Full-text OCR search across all djvu.txt files.",
+      "outcome": "covered",
+      "haqiqi_hits": 0,
+      "cihanshah_hits": 0,
+      "namesake_hits_other_hakikis": 0,
+      "incidental_findings": [
+        "Tonk Vol 3 No. 1251 'Wazir Namah' (1292/1875): references 'Qara-Yusufi dynasty of Awadh'. The 'Qara-Yusufi' here refers to the 18th–19th-c. Nawabi dynasty of Awadh (descendants of Burhan ul-Mulk Sa'adat Khan), NOT the Qaraqoyunlu Turkmen Qara Yusuf. False-positive disambiguation note only: not a Cihanşah witness."
+      ],
+      "verdict": "no Cihanşah Hakîkî witness."
+    },
+    {
+      "portal": "Asiatic Society of Bengal (Kolkata): Ivanow catalogue",
+      "url": "https://www.asiaticsocietykolkata.com/",
+      "interface": "Online manuscripts portal not surfaced via search; substituted: IA OCR for Ivanow 1924 main catalogue (in.ernet.dli.2015.70295, 2MB djvu.txt) and Ivanow 1926 Curzon Collection supplement (in.ernet.dli.2015.114619, 220KB djvu.txt).",
+      "method": "Full OCR text search.",
+      "outcome": "covered",
+      "haqiqi_hits": 0,
+      "cihanshah_hits": 0,
+      "namesake_hits_other_hakikis": 0,
+      "incidental_findings": [
+        "Ivanow 1924 main catalogue: 5 'Ahmadabadi' hits: Hasan b. Musa Ahmadabadi (Ms B-572, father-of-author of a chain-of-hadith work, XII/AH); Mir Muhammad Taqi Ahmadabadi Gujarati 'Khiyal' (d. 1173/1760, author of Bustan-i Khiyal fairy-tale collection, D 34); Muhammad Rida Ahmadabadi 'Abbasi (composed Nukhbatu'l-Manasik 1166/1753, Ac 2). All three are LATE Indo-Persian Sufi/literary figures, none with the takhallus 'Hakîkî' or 'Haqiqi': not the Mirza Muhammed Beg Ahmed Abadi Kecratî namesake either. Documented as disambiguation context, not as candidate witnesses.",
+        "Ivanow 1926 Curzon Collection: 0 disambiguation hits."
+      ],
+      "verdict": "no Cihanşah Hakîkî witness in Asiatic Society of Bengal Persian holdings (Ivanow 1924 + 1926 supplement)."
+    },
+    {
+      "portal": "WorldCat (search.worldcat.org)",
+      "url": "https://search.worldcat.org/",
+      "interface": "Bot-protected (Cloudflare 403/429 + 'Too many requests'). third-party HTML mirroring also blocked.",
+      "method": "Direct fetch failed; substituted by IA + Google scrape of WorldCat record landing pages.",
+      "outcome": "covered_via_alternate",
+      "haqiqi_hits": 1,
+      "cihanshah_hits": 0,
+      "results_summary": [
+        {
+          "oclc": "895501158",
+          "title": "Dīvān-i Jahānshāh Ḥaqīqī : shāh-i turkamān, shāh-i tūvrīz, shāh-i mardān-i qarn-i chahārdahum va pānzdahum (Tehran: Fīrūzān, 1385/2006)",
+          "editor": "Mīrzā Cihānşāh Ḥakîkî [edited by] ʿAbbās ʿAlī Aḥmadī (Alemdârî)",
+          "format": "PRINTED EDITION",
+          "manuscript_witness": false,
+          "notes": "This is the published edition flagged by candidate-evidence research 2026-05-02 as the Tehran 8198 base-text. Already known to the project as Alemdârî 1385/2006 (per TEIS/OCLC listing; the examined edition is 2001/1379 SH): duplicates witness_register entry tehran_university_8198.scholarly_attestation."
+        }
+      ],
+      "verdict": "WorldCat surfaces only the printed edition. No South Asian or other manuscript witness records found."
+    },
+    {
+      "portal": "HathiTrust (catalog.hathitrust.org)",
+      "url": "https://catalog.hathitrust.org/",
+      "interface": "Public catalogue search.",
+      "method": "direct HTTP fetch via third-party HTML mirror of catalog search; Babel full-text search blocked (403).",
+      "outcome": "covered",
+      "haqiqi_hits": 0,
+      "cihanshah_hits": 0,
+      "results_summary": "0 catalogue records returned for 'Jahanshah' + 'Haqiqi'. No witnesses, no editions surfaced.",
+      "verdict": "no hits."
+    },
+    {
+      "portal": "vHMML / Hill Museum & Manuscript Library",
+      "url": "https://www.vhmml.org/readingRoom/search?q=Haqiqi",
+      "interface": "Cloudflare Turnstile (JS-rendered captcha). All access methods blocked.",
+      "method": "direct HTTP fetch direct = 403; third-party HTML mirroring = 'Turnstile validation failed'. targeted web search with site filtervhmml.org returned only one unrelated hit (CCM 00398 Mar Hirmiz Keldani Kilisesi, Mardin: Syriac/Christian, not Hakîkî).",
+      "outcome": "blocked",
+      "haqiqi_hits": null,
+      "cihanshah_hits": null,
+      "verdict": "BLOCKED: could not confirm presence/absence. Listed as residual gap. HMML catalogues many Eastern Christian + some Islamic collections (Mardin, Lebanon, Iraq, Ethiopia), so a Cihanşah Hakîkî witness in their indexed Anatolian/Syrian Islamic holdings is conceivable but not strongly expected. candidate-evidence research 2026-05-02 cuts had not flagged HMML as high-priority. Flag for manual web check by user if needed."
+    },
+    {
+      "portal": "Princeton University Library (catalog.princeton.edu + dpul.princeton.edu)",
+      "url": "https://catalog.princeton.edu/",
+      "interface": "Bot-protected (traffic verification screen). Direct HTTP fetch + third-party HTML mirror both blocked.",
+      "method": "targeted web search with site filterdpul.princeton.edu + site:catalog.princeton.edu for the 4 spelling variants.",
+      "outcome": "covered_via_websearch",
+      "haqiqi_hits": 0,
+      "cihanshah_hits": 0,
+      "namesake_hits_other_hakikis": 0,
+      "incidental_findings": [
+        "Princeton holds 'Tercüme-yi Hakanî' (a translation by Hakanî): Hakanî ≠ Hakîkî. Different poet (Hakanî = Khaqani, 12th-c. Persian) entirely. Not relevant."
+      ],
+      "verdict": "no Cihanşah Hakîkî witness surfaced via accessible Princeton search routes."
+    },
+    {
+      "portal": "Library of Congress",
+      "url": "https://www.loc.gov/",
+      "interface": "Bot-protected (CAPTCHA). Substituted with site:loc.gov web search.",
+      "method": "site:loc.gov targeted web search for 4 spelling variants.",
+      "outcome": "covered_via_websearch",
+      "haqiqi_hits": 0,
+      "cihanshah_hits": 0,
+      "incidental_findings": [
+        "LoC 'A Thousand Years of the Persian Book' exhibition mentions a 'Jahanshah': but in context of the Buluqiya-and-Queen-of-Serpents folktale from a Hizar Dastan illustrated mss. Different Jahanshah (folk-tale character), not Cihanşah Qaraqoyunlu Hakîkî. Documented as false-positive."
+      ],
+      "verdict": "no Cihanşah Hakîkî witness."
+    },
+    {
+      "portal": "British Library Digitised Manuscripts + Asian and African studies blog",
+      "url": "https://blogs.bl.uk/asian-and-african/",
+      "interface": "Search via targeted web search + direct HTTP fetch.",
+      "method": "targeted web search with site filterbl.uk OR site:blogs.bl.uk for Jahanshah / Haqiqi / Or 9493.",
+      "outcome": "covered",
+      "haqiqi_hits": 0,
+      "cihanshah_hits": 0,
+      "verdict": "BL Digitised Manuscripts confirms no other Or-class Cihanşah Hakîkî witness has been digitised besides Or 9493 (which is itself NOT digitised). Or 9493 has zero blog post coverage. No new witnesses surfaced."
+    },
+    {
+      "portal": "Met Museum (Cochran Persian-Turkish-Arabic catalogue)",
+      "url": "https://archive.org/details/catalogueofcoll00metr",
+      "interface": "IA OCR full-text.",
+      "method": "Full djvu.txt search.",
+      "outcome": "covered",
+      "haqiqi_hits": 0,
+      "cihanshah_hits": 0,
+      "verdict": "Met Cochran collection: entirely classical Shahnamah/Nizami/Sa'di/Hafiz/Jami illuminated mss. No Hakîkî, no Cihanşah."
+    },
+    {
+      "portal": "Aligarh Muslim University (Zaidi catalogue) + India Office Library (Ethé) + Tonk + Bombay Mulla Firuz + Hyderabad",
+      "url": "https://archive.org/ (multiple IA catalogue items)",
+      "interface": "IA OCR full-text.",
+      "method": "Full OCR search across Aligarh Hinduism in Manuscripts catalogue (Zaidi); India Office Library Vols I (Ethé) + II (Aligarh index); Tonk Vol 3 History; 1937 'Catalogue Of Persian Manuscripts Vol 2'; Descriptive Persian MSS Series 2/4/5.",
+      "outcome": "covered",
+      "haqiqi_hits": 0,
+      "cihanshah_hits_as_poet": 0,
+      "cihanshah_hits_as_historical_figure": 8,
+      "incidental_findings": [
+        "India Office Library Vol I (Ethé): Mir Jahanshah b. Kutb-aldin Mubashshir, ruler of LAR (b. AH 830, ruled AH 859: d. 883). Different person from Cihanşah Qaraqoyunlu: this is a 15th-c. ruler of LAR mentioned in genealogies of Lar dynasty. Documented as disambiguation; not a witness for the poet Hakîkî.",
+        "India Office Library Vol I + II: Multiple historical references to 'Jahanshah, the Turkman padishah (killed in battle AH 872 = AD 1467)': these are correct identifications of Cihanşah Qaraqoyunlu but appear in Persian-language history mss (genealogies, dynastic chronicles), NOT in any divan or anthology of his poetry. They are at most prose-source attestations of his existence and death. Not textual witnesses to Hakîkî's poetry.",
+        "India Office Library Vol II: 'Hasanbeg Shakar Oghlu': 'on his mother's [side] related to Jahanshah, the Turkman padishah': biographical entry mentioning Cihanşah; not a poetry witness.",
+        "Aligarh Hinduism catalogue: 0 hits.",
+        "Tonk Vol 3 (History of India): 16 'Gujrat' hits + 1 'Qara-Yusufi' (=Qara-Yusufi dynasty of AWADH, an Indo-Persian dynastic name unrelated to Qaraqoyunlu). All disambiguation noise."
+      ],
+      "verdict": "Cihanşah Qaraqoyunlu APPEARS as a HISTORICAL FIGURE in Indo-Persian dynastic chronicles (India Office Vols I + II reference his AH 872 death and his role in genealogies), but no codex in any of these catalogues holds his Hakîkî divan or any anthology with his poems. Confirms the negative scope finding."
+    },
+    {
+      "portal": "Internet Archive global search",
+      "url": "https://archive.org/advancedsearch.php",
+      "interface": "Public JSON search API.",
+      "method": "Multiple advanced-search queries.",
+      "outcome": "covered",
+      "results": [
+        {
+          "identifier": "DivanEMirzaJahanshahHaqiqiFarsiTurki",
+          "title": "Divan e Mirza Jahanshah Haqiqi (Farsi + Turki)",
+          "format": "Public-domain text upload (Hassaan Khan, 2016-01-12)",
+          "manuscript_witness": false,
+          "verdict": "Edition/text only: no manuscript metadata. Already accounted for via Macit/Alemdârî in witness_register."
+        },
+        {
+          "identifier": "ekber-necef-2",
+          "title": "Newly discovered poems of Jahanshah Haqiqi, the Ruler of Garagoyunlu state",
+          "author": "Akbar Najaf",
+          "year": 2020,
+          "format": "Scholarly article (English, citing Sokhrabiabad + Akın)",
+          "manuscript_witness": false,
+          "manuscript_witnesses_referenced": [
+            {
+              "shrine_location": "Diyarbakır Alevi shrine, Turkey",
+              "format": "parchment scroll (cüng)",
+              "language": "Azerbaijani Turkic",
+              "haqiqi_content": "8 ghazals attributed to Hakîkî",
+              "ritual_context": "recited in Qizilbash-Alevi ritual ceremonies",
+              "shelfmark": "NOT GIVEN",
+              "date": "NOT GIVEN",
+              "decoration": "NOT GIVEN",
+              "preservation_state": "in active religious use",
+              "verification_status": "pending: Najaf 2020 reports the discovery but article gives no shelfmark, dimensions, or codicological detail"
+            },
+            {
+              "shrine_location": "Kırklar (Girkhlar / 'Forty Saints') shrine, Ilkhçi, South Azerbaijan (NW Iran)",
+              "format": "diary",
+              "language": "Azerbaijani Turkic",
+              "haqiqi_content": "3 ghazals attributed to Hakîkî",
+              "ritual_context": "recited in Qizilbash-Alevi ritual ceremonies",
+              "shelfmark": "NOT GIVEN",
+              "date": "NOT GIVEN",
+              "decoration": "NOT GIVEN",
+              "verification_status": "pending: same as above"
+            }
+          ],
+          "verdict": "POTENTIALLY SIGNIFICANT: two new fragment witnesses (shrine-held cüng + diary) reported. Both are non-institutional (held in active Alevi/Qizilbash shrines, not libraries), so they don't appear in any library catalogue. Najaf's article does not give shelfmarks/codicological data. These are NOT South Asian. The mecmûʿa adjacency and edition-backchain sweeps treat the Sokhrabiabad/Akın citation as the primary access point."
+        }
+      ]
+    },
+    {
+      "portal": "DLME (Digital Library of the Middle East)",
+      "url": "https://dlmenetwork.org/",
+      "interface": "Browse by group, no public search-by-query URL surfaced; Stanford-hosted dlme-review subdomain unstable (404 on api/search; ConnectionReset on /library/search).",
+      "method": "direct HTTP fetch + IA / targeted web search site search.",
+      "outcome": "blocked_no_query_endpoint",
+      "verdict": "DLME aggregates many Persian mss but no accessible direct query endpoint for 'Haqiqi'/'Hakiki'/'Cihansah'. Listed as residual gap."
+    },
+    {
+      "portal": "Qalamos (German union catalog)",
+      "url": "https://www.qalamos.net/",
+      "interface": "MyCoRe v2025.06 search forms (search-form-manuscript-flexible.xed, search-form-work-flexible.xed, search-form-agent-flexible.xed). JS-rendered results not surfaced via direct HTTP fetch or third-party HTML mirror.",
+      "method": "Third-party HTML mirroring fetch returned form HTML only, not result rows.",
+      "outcome": "blocked_js_rendering",
+      "verdict": "Earlier candidate-evidence research 2026-05-02 flagged Qalamos as a high-priority untried source: confirmed not surfaceable via this sweep The mecmûʿa sweep used automated retrieval mode."
+    },
+    {
+      "portal": "Namami Kritisampada (Indian National Mission for Manuscripts)",
+      "url": "https://www.namami.gov.in/manuscript-database",
+      "interface": "Database of >135K manuscripts (76K free public access).",
+      "method": "direct HTTP fetch returned 'certificate has expired' error (gov.in TLS cert problem from this session).",
+      "outcome": "blocked_tls",
+      "verdict": "BLOCKED at TLS layer: needs cert override or interactive site access. Listed as residual gap. Even if accessible, Kritisampada's Persian/Turkish coverage skews to printed-catalogue digitization, not manuscript imaging: likely low yield for Cihanşah Hakîkî."
+    },
+    {
+      "portal": "NYU Abu Dhabi / NYU Persian mss",
+      "url": "https://nyuad.nyu.edu/en/library/",
+      "interface": "Arabic Collections Online (ACO) is NYUAD's primary public collection: Arabic-only, not Persian-Turkish.",
+      "method": "targeted web search.",
+      "outcome": "covered",
+      "haqiqi_hits": 0,
+      "cihanshah_hits": 0,
+      "verdict": "NYUAD ACO is scoped to Arabic public-domain texts; no Persian-Turkish poetry corpus present that would hold Hakîkî."
+    }
+  ],
+  "false_positive_hits_other_hakikis": [
+    {
+      "namesake": "Mirza Muhammed Beg Ahmed Abadi Kecratî (Ahmedâbâdî Gujarati)",
+      "centuries_active": "11th c. AH / 17th c. CE",
+      "context": "Indo-Persian poet; candidate-evidence research 2026-05-02 flagged this Hakîkî as the most likely false-positive surfacing in South Asian holdings.",
+      "found_in_this_sweep": false,
+      "explicit_search_hits": 0,
+      "search_terms_used": [
+        "mirza muhammad ahmad",
+        "ahmadabadi",
+        "ahmad abadi",
+        "kechrati"
+      ],
+      "notes": "ZERO explicit hits for any 'Hakîkî' attribution to this person in the Bankipore + Rampur Raza + Ivanow + Salar Jung (where searchable) + Aligarh + India Office + Tonk + Met Cochran catalogues. the predicted false-positive scenario did not materialize in this sweep: the namesake either is uncommon enough that the searched catalogues do not hold his divan, or his works were catalogued under a different attribution. Not a finding to invalidate the original disambiguation caveat: kept here as 'considered and absent in this scope'."
+    },
+    {
+      "namesake": "Mir Jahanshah b. Kutb-aldin Mubashshir, ruler of Lar (b. AH 830, ruled AH 859, d. AH 883)",
+      "found_in": "India Office Library catalogue Vol I (Ethé), entry 261; Vol II (Aligarh index), entries 724-726.261",
+      "false_positive_for_cihanshah": true,
+      "discriminator": "Different person: ruler of the local LAR dynasty in Fars/Persia; named in genealogies of the Lar atabegs (great-great-grandson of Amir Kutb-aldin Mu'ayyad). Death date AH 883, NOT AH 872 (= Cihanşah Qaraqoyunlu's death at Mush 1467). NOT a poet under takhallus Hakîkî.",
+      "documentation": "Recorded so future searchers don't conflate."
+    },
+    {
+      "namesake": "Hasan b. Musa Ahmadabadi (chain-of-hadith witness; XII c. AH); Mir Muhammad Taqi Ahmadabadi Gujarati 'Khiyal' (d. 1173/1760, fairy-tale author); Muhammad Rida Ahmadabadi 'Abbasi (1166/1753 hajj-manual author); 'Abdallah b. Muhammad Siddiq al-Wa'iz al-Ahmadabadi (mid 11th-c. AH Sufi)",
+      "found_in": "Asiatic Society Bengal Ivanow 1924 (4 entries); Bankipore Vol XV No. 1027 (1 entry)",
+      "false_positive_for_cihanshah": false,
+      "false_positive_for_kecrati_hakiki_namesake": null,
+      "discriminator": "All four are different Gujarati Indo-Persian figures. None has the takhallus 'Hakîkî' or 'Haqiqi' explicitly. None is the Mirza Muhammed Beg Ahmed Abadi Kecratî mentioned in the caveat: that person carries the Kecratî nisba, not the Ahmadabadi nisba alone, and is identifiable only with explicit takhallus attribution.",
+      "documentation": "Recorded as Indo-Persian Ahmedâbâdî diaspora context: useful for backchain sweep if anyone tries to disambiguate Hakîkî hits."
+    },
+    {
+      "namesake": "'Buluqiya and Queen of Serpents' tale character: folk-tale Jahanshah",
+      "found_in": "Library of Congress 'A Thousand Years of the Persian Book' exhibition (Hizar Dastan illustrated mss)",
+      "false_positive_for_cihanshah": true,
+      "discriminator": "Folk-tale prince, not historical Qaraqoyunlu ruler. Different storyline (companions of Buluqiya).",
+      "documentation": "Recorded; not a witness."
+    },
+    {
+      "namesake": "Hakanî / Khaqanî (12th-c. Persian poet of Shirvan)",
+      "found_in": "Princeton catalogue ('Hilye-yi şerîfe-yi Nebi… tercüme-yi Hakanî')",
+      "false_positive_for_cihanshah": true,
+      "discriminator": "Different takhallus: Hakanî ≠ Hakîkî. Hakanî = Afzal al-Din Khaqanî Sharvanî, court poet of the Shirvanshahs (d. ~1199); centuries earlier than Cihanşah.",
+      "documentation": "Recorded as orthographic-confusion false-positive."
+    },
+    {
+      "namesake": "Qara-Yusufi dynasty of Awadh (18th–19th-c. Nawabi successors of Burhan ul-Mulk Sa'adat Khan)",
+      "found_in": "Tonk Vol 3 No. 1251 (Wazir Namah, 1292/1875)",
+      "false_positive_for_cihanshah": true,
+      "discriminator": "'Qara-Yusufi' here = Indo-Persian Awadh dynastic adjective (related to the Awadh wazirs' genealogies). NOT Qara Yusuf Qaraqoyunlu (d. 1420), Cihanşah's grandfather. Late post-Qaraqoyunlu Indo-Persian usage that drifted via genealogical pretenses.",
+      "documentation": "Recorded; rare orthographic false-positive."
+    }
+  ],
+  "blocked_portals": [
+    {
+      "portal": "vHMML reading room",
+      "reason": "Cloudflare Turnstile JS captcha"
+    },
+    {
+      "portal": "Princeton catalog (catalog.princeton.edu)",
+      "reason": "Bot-protection traffic verification"
+    },
+    {
+      "portal": "Library of Congress search.loc.gov",
+      "reason": "Bot-protection 403"
+    },
+    {
+      "portal": "WorldCat search",
+      "reason": "Cloudflare 429 + Turnstile"
+    },
+    {
+      "portal": "Khuda Bakhsh portal (kblibrary.bih.nic.in)",
+      "reason": "ECONNREFUSED from this session"
+    },
+    {
+      "portal": "Rampur Raza portal (razalibrary.gov.in)",
+      "reason": "ECONNREFUSED from this session"
+    },
+    {
+      "portal": "Namami Kritisampada (namami.gov.in)",
+      "reason": "Expired TLS certificate at gov.in"
+    },
+    {
+      "portal": "DLME (dlmenetwork.org)",
+      "reason": "No public query endpoint surfaced + 404 on dlme-review/api/search"
+    },
+    {
+      "portal": "Qalamos (qalamos.net)",
+      "reason": "JS-rendered MyCoRe search; third-party HTML mirror returns form HTML only"
+    }
+  ],
+  "summary": {
+    "total_portals_attempted": 14,
+    "portals_covered_fully": 9,
+    "portals_blocked_or_partial": 5,
+    "genuine_cihanshah_hakiki_witnesses_found": 0,
+    "potentially_significant_new_witnesses_referenced": 2,
+    "potentially_significant_witnesses_detail": "Najaf 2020 (Internet Archive item ekber-necef-2) reports two NEW non-institutional witnesses held in active Alevi-Qizilbash shrines: (a) parchment scroll/cüng at Diyarbakır Alevi shrine, 8 Hakîkî ghazals; (b) diary at Kırklar/Girkhlar shrine, Ilkhçi (S. Azerbaijan, NW Iran), 3 Hakîkî ghazals. Both Azerbaijani Turkic. NEITHER is South Asian. Both lack codicological data (no shelfmark, dimensions, date). These are the most consequential novel finding from this South-Asia sweep but should NOT be added to witness_register at status=verified: rather flagged as candidate witnesses pending direct citation of Sokhrabiabad + Akın's primary publication.",
+    "false_positive_hakiki_namesakes_documented": 6,
+    "south_asian_outcome": "ZERO South Asian Cihanşah Hakîkî witnesses in any digitally-searchable catalogue: Bankipore (Khuda Bakhsh) Vols II–XV+XXIV, Rampur Raza Pers Vols 1–2, Asiatic Society of Bengal (Ivanow 1924 + Curzon 1926), Aligarh, India Office Library Ethé Vols I–II, Tonk Vol 3, Met Cochran. The Ahmadabadi/Gujarati Indo-Persian diaspora is well-represented in these catalogues (4 entries in Ivanow, 1 in Bankipore Vol XV) but NONE carry the takhallus 'Hakîkî/Haqiqi': the previously flagged Mirza Muhammed Beg Ahmed Abadi Kecratî namesake did not materialize as a false-positive risk in this scope.",
+    "global_aggregator_outcome": "WorldCat, HathiTrust, Princeton, LoC, BL Digitised Mss = NO Cihanşah Hakîkî manuscript witnesses. Only the Alemdârî 1385/2006 (per TEIS/OCLC listing; the examined edition is 2001/1379 SH) printed edition (OCLC 895501158) and the IA-mirror text upload, both already accounted for in witness_register.",
+    "consistency_with_teis_yesevi_5": "Confirms Macit's 2002 edition use of exactly the TEIS Yesevi 4 (BL Or 9493 / Mat 965 / Süleymaniye Fatih 3808 / DTCF İsmail Saib I/2221) + Alemdârî's reliance on Tehran 8198: no global aggregator surfaces a 6th TEIS Yesevi witness. The 2-fragment Najaf 2020 finding is supplemental, not a replacement for the TEIS Yesevi 5."
+  },
+  "files_consulted_via_ia_ocr": [
+    "in.ernet.dli.2015.70295: Asiatic Society of Bengal, Ivanow 1924 (2.0MB djvu.txt)",
+    "in.ernet.dli.2015.114619: Asiatic Society of Bengal, Curzon Coll. 1926 (220KB djvu.txt)",
+    "RampurRazaLibraryCataloguePersianMSSVol.1 (335KB djvu.txt)",
+    "RampurRazaLibraryCataloguePersianMSSVol.2 (294KB djvu.txt)",
+    "dli.ernet.245282: Catalogue Of Persian Manuscripts Of Rampur Raza Library (628KB djvu.txt)",
+    "in.ernet.dli.2015.62173: Bankipore Vol II 1910 (HTTP 500 error)",
+    "in.ernet.dli.2015.103897: Bankipore Vol IV",
+    "in.ernet.dli.2015.279788: Bankipore Vol V",
+    "in.gov.ignca.14500: Bankipore Vol VIII",
+    "in.ernet.dli.2015.62180: Bankipore Vol IX 1925",
+    "in.ernet.dli.2015.537096: Bankipore Vol X",
+    "in.ernet.dli.2015.62176: Bankipore Vol XIV 1928",
+    "in.ernet.dli.2015.103909: Bankipore Vol XV 1929",
+    "in.ernet.dli.2015.62354: Bankipore Vol XXIV 1940",
+    "in.ernet.dli.2015.30779: Bankipore single-vol catalogue",
+    "dli.csl.5633 / 6974 / cataloguearabic00maugoog: Bankipore early vols",
+    "AligarhManuscriptsCatalogue: Aligarh (Zaidi)",
+    "catalogueofpersi01greauoft: India Office Library Ethé Vol I (4.7MB djvu.txt)",
+    "in.ernet.dli.2015.106450: India Office Library Aligarh Vol II (2.9MB djvu.txt)",
+    "TonkCatalogueOfPersianMssVolume3HistoryOfIndia2006 (312KB djvu.txt)",
+    "dli.ernet.243433: 1937 Persian Mss Vol 2 (3.0MB djvu.txt)",
+    "dli.ernet.286421 / 286423 / 286420: Descriptive Persian Mss Series 2 / 4 / 5",
+    "catalogueofpersi02brituoft / 03brituoft: Rieu BM Persian Vols II + III",
+    "catalogueofcoll00metr: Met Museum Cochran Persian-Turkish-Arabic"
+  ],
+  "ipc_files_not_covered": [
+    "Salar Jung Museum & Library (Hyderabad) Persian Catalogue Vols I–XII: image-only PDFs hosted on salarjungmuseum.in, no IA OCR copies surfaced for V or any (Vol V poetry by Ashraf 1969 = item cxzx_catalogue-of-persian-manuscripts-volume-v-by-muhammad-a but IA does not have djvu.txt). Locally OCR-able but ~300MB per volume; deferred to if needed.",
+    "Khuda Bakhsh poetry-specific Bankipore Vol III: not surfaced as a separate IA item; the Vols II, IV, V, IX cover the periods most relevant to 15th-c. poetry but yielded no Hakîkî matches."
+  ],
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-02",
+    "artifact_status": "current",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

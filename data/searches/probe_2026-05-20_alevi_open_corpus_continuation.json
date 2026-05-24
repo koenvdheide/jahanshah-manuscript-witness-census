@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "session_label": "Alevi open-corpus continuation: Dogan Kaya, ABKED, recent conk articles, and Balkan Hurufi-Bektashi",
+  "session_id": "alevi-open-corpus-continuation-2026-05-20",
+  "date": "2026-05-20",
+  "trigger": "Autonomous continuation after the Alevi transmission expansion pass. Scope stayed non-outreach: open web, downloadable PDFs, journal archives, cenk/conk survey literature, and article-level text extraction.",
+  "relationship_to_prior_artifact": {
+    "supersedes_for_current_status": "probe_2026-05-20_alevi_transmission_expansion.json",
+    "uses_prior_artifact_for_detail": true,
+    "prior_artifact_summary": "The previous pass found 0 new verified Jahanshah witnesses and 2 physical Hakiki conk candidates: the Sivas/Yildizeli Islim Suleyman Efendi conk and Dogan Kaya's 35-conk corpus, especially no. 32.",
+    "this_continuation_delta": "Adds 1 new physical candidate from a Balkan Hurufi-Bektashi manuscript report, records full-public ABKED and Dogan Kaya negative sweeps, and classifies several recent conk articles."
+  },
+  "method_summary": {
+    "dogan_kaya_public_pdf_mine": {
+      "seeds": [
+        "https://dogankaya.com/",
+        "https://dogankaya.com/asik.asp",
+        "https://dogankaya.com/asik.asp?e=2",
+        "https://dogankaya.com/asik.asp?e=3",
+        "https://dogankaya.com/asik.asp?e=4",
+        "https://dogankaya.com/asik.asp?e=5",
+        "https://dogankaya.com/dini.asp",
+        "https://dogankaya.com/destan.asp",
+        "https://dogankaya.com/dogankaya-pop.asp?yazi_id=12"
+      ],
+      "pdf_links_discovered": 135,
+      "pdfs_downloaded": 121,
+      "texts_extracted": 121,
+      "patterns": [
+        "Hakik",
+        "Haqiq",
+        "Hakyky",
+        "Hekik",
+        "Cihan.?sah",
+        "Jahanshah",
+        "Karakoyun",
+        "Qaraqoyun"
+      ],
+      "result": "No new takhallus-level Hakiki witness beyond the already-recorded Bir Conk Sekiz Sair / Suleymaniye Yazma Bagislar 5881 low-priority public conk lead. Strong Alevi-Bektashi route surfaces in the Dogan Kaya public corpus were negative for Hakiki."
+    },
+    "abked_public_journal_crawl": {
+      "archive_url": "https://abked.de/tr/issue/archive",
+      "identity_check": "This is the same Alevilik-Bektasilik Arastirmalari Dergisi surface represented in ISAM as D03540 for the known Sohrabiabad-Akin 2019 article; issue 19 in the crawl includes article view 246/218.",
+      "issues_crawled": 32,
+      "pdf_galleys_downloaded": 364,
+      "texts_extracted": 364,
+      "download_failures": 0,
+      "targeted_patterns": [
+        "Hakiki near conk",
+        "Hakiki near kelam",
+        "Hakiki near defter",
+        "Cihan Sah",
+        "Karakoyunlu",
+        "Hakiki Makam"
+      ],
+      "result": "Only the known Sohrabiabad-Akin 2019 article contains Hakiki+cenk/conk/kelam evidence. Later ABKED Cihan Sah/Karakoyunlu mentions are derivative historical discussion; Ehl-i Hak Hakiki Makam hits are route terminology, not poet evidence."
+    },
+    "targeted_recent_conk_article_downloads": [
+      {
+        "surface_id": "cihansumul_2025_06_mil_yz_conk_309",
+        "url": "https://dergipark.org.tr/en/download/article-file/4821982",
+        "sha256": "BEABEABFBCAEDBA10C8090AA7FD8FE1D515881CB0FF1BCA3E769C237060D0ECB",
+        "result": "Dense Alevi-Bektashi poet roster with Nesimi, Virani, Hatayi, Pir Sultan Abdal, Kul Himmet and others; no Hakiki hit."
+      },
+      {
+        "surface_id": "suleymaniye_yazma_bagislar_5902",
+        "url": "https://dergipark.org.tr/tr/download/article-file/3473626",
+        "sha256": "79E090A0AAA6AA3CFFABA04E5D4391B79787B81B6D7A0AC4C237889DCB215484",
+        "result": "Rich 208-folio conk introduced from Suleymaniye Yazma Bagislar 5902; no Hakiki/Jahanshah hit in extracted text."
+      },
+      {
+        "surface_id": "mk_06_mil_yz_conk_193",
+        "url": "https://dergipark.org.tr/tr/download/article-file/2545795",
+        "sha256": "1598CE219F7DADA937C81B14C5551797D81E8541E3CADF65B469467D09D1ABC0",
+        "result": "Ilahi conk with Nesimi and Seyyid Nizamoglu in the poet table; no Hakiki/Jahanshah hit."
+      },
+      {
+        "surface_id": "mk_06_mil_yz_a_7978_ilahi_mecmuasi",
+        "url": "https://dergipark.org.tr/tr/download/article-file/1882677",
+        "sha256": "5D11C4C63DC3C256BC9B1C28FB93988838F552952C32ADFA45CF77F0A491B50C",
+        "result": "One Hakiki gazel on 69b, but the article itself cites the TEIS entry for Hakiki Agazade Mehmed Dede. Classify as a probable namesake/ilahi-mecmua false positive pending direct incipit comparison, not a verified Alevi Jahanshah lead."
+      },
+      {
+        "surface_id": "ibb_ataturk_kitapligi_bel_yz_k0059",
+        "url": "https://dergipark.org.tr/en/download/article-file/3909751",
+        "sha256": "5E3E7DAA06C2E7002047DED0F3B751C7AEC507CBF26C16A4389EABDDA635E1AE",
+        "result": "A 2024 IBB Ataturk Library conk article with Alevi-Bektashi/Hurufi route context and no Hakiki hit."
+      }
+    ],
+    "web_search_delta": {
+      "productive_query_family": "Hakiki conk / Hakiki cenk / Hurufi-Bektashi manuscript",
+      "new_productive_hit": "Caesura 11.2 (2024) article on an Albanian Hurufi-Bektashi manuscript in Millet Library, Ali Emiri collection, old no. 551 / new no. 003094.",
+      "low_value_or_negative_hits": [
+        "Scribd mirror of Salih Koca 2021 thesis on 06 Mil Yz Conk 31: table of contents and page text show no Hakiki; roster is generic asik/divan, not Alevi-Hakiki.",
+        "Turkiye Conkleri 1 Bibliyografya: indexed as a paid Google Play/RumeliYA ebook; open RumeliYA file URL returned only a short HTML redirect/404 body, so no full-text mining was possible from the open URL.",
+        "Final broad web cross-checks on Hakiki/Haqiqi + conk/cenk/Bektashi/Hatai/Nesimi/Kizil Deli returned only the already captured Caesura Albanian Hurufi-Bektashi lead, the known Sohrabiabad-Akin article, generic Bektashi route literature, and unrelated adjective/name-stem noise."
+      ]
+    },
+    "claude_review_and_post_review_desk_checks": {
+      "review_status": "Independent review was completed and findings were verified against local artifacts before integration.",
+      "material_review_findings_accepted": [
+        "Run the remaining exact-incipit web searches rather than relying on the first four exact incipit probes.",
+        "Check the Ismail Ozmen Alevi-Bektasi Siirleri Antolojisi trail for Hakiki/Cihansah indexing.",
+        "Read Bulent Akin 2023 specifically for new holder, ocak, or manuscript references before calling it derivative.",
+        "Search for Sohrabiabad post-2019 Hakiki/Cihansah publications.",
+        "Downgrade Dogan Kaya conk 31 because its roster is mixed Ottoman tekke/divan, not a strong Alevi route.",
+        "Raise Millet Ali Emiri 003094's relative priority because its Hurufi-Bektashi + Hatai + Nesimi co-occurrence profile is unusually strong.",
+        "Make the 06 Mil Yz A 7978 namesake classification provisional until its one Hakiki gazel incipit is checked directly."
+      ],
+      "material_review_findings_rejected_or_qualified": [
+        "The claim that the ABKED crawl missed ISAM D03540/HBV as a separate journal was not accepted as stated. The crawled abked.de archive is the Alevilik-Bektasilik Arastirmalari Dergisi surface that contains the known D03540/2019_19 Sohrabiabad-Akin article; issue 19 article 246/218 is present in the crawl manifest. A separate Haci Bektas Veli research journal remains a possible broader Alevi-studies surface, but it is not the source of the known 2019 witness article."
+      ],
+      "remaining_exact_incipit_searches": {
+        "queries_run": [
+          "Tende canin bilmeyenler",
+          "Olmusum sahraguzar",
+          "Vucudun sehrine girdim",
+          "Demisdim bir kez beli",
+          "Utan serm eylegil",
+          "Kilmayan canin feday",
+          "Derdime derman kilan ol gozleri sehla",
+          "Oldi husnun defteri",
+          "Her kimin musahibi meydan ara",
+          "Bir murebbi musahib ikrar",
+          "Sufiya saf ol erkan"
+        ],
+        "result": "No independent physical witness surfaced. Hits either returned the known Sohrabiabad-Akin/Najaf publication trail, generic phrase/adjective noise, or unrelated sufi vocabulary pages."
+      },
+      "ozmen_anthology_check": {
+        "surfaces": [
+          "PDFCoffee OCR for Alevi-Bektasi Siirleri Antolojisi cilt 1-4",
+          "Scribd/TheLib discovery for cilt 5",
+          "general web queries for Ozmen + Hakiki/Cihansah"
+        ],
+        "result": "No Hakiki/Cihansah index hit surfaced in cilt 1-4 OCR or web search. Cilt 5 is twentieth-century and not a likely Cihansah route; no Hakiki hit surfaced from the indexed snippets."
+      },
+      "akin_2023_recheck": {
+        "source_basis": "Downloaded ABKED PDF text extraction during the 2026-05-20 desk pass; transient local text was not retained in the repository.",
+        "result": "No new holder, ocak, shelfmark, or manuscript reference found. The article invokes the same Diyarbakir Alevi conk and Ilkhchi/Kirklar cem-performance evidence and cites Sohrabiabad-Akin 2019."
+      },
+      "sohrabiabad_post_2019_check": {
+        "queries_run": [
+          "Hamidreza Sohrabiabad Hakiki",
+          "Sohrabiabad Cihansah",
+          "Hamidreza Sohrabiabad Cihan Shah",
+          "Sohrabiabad Ilhici Hakiki"
+        ],
+        "result": "No later publication exposing the Ilkhchi full divan or new Hakiki witness surfaced. Results return the 2019 article, repository mirrors, Sohrabiabad's 2018 Akkoyunlu context article, and Akin 2023 derivative use."
+      },
+      "millet_ali_emiri_003094_catalogue_check": {
+        "queries_run": [
+          "003094 Ali Emiri Millet",
+          "Ali Emiri 551 003094",
+          "Millet Kutuphanesi 003094 Hakiki",
+          "Ali Emiri Hakiki Hatai"
+        ],
+        "raw_portal_probe": "Unauthenticated raw requests to portal.yek.gov.tr returned only a 1-byte shell for advancedsearch/detail endpoints; prior project evidence says precise YEK work searches require authenticated portal access.",
+        "result": "No public indexed catalogue record was recovered. Candidate remains unresolved, not downgraded."
+      },
+      "turkiye_conkleri_bibliography_check": {
+        "result": "Google Play and RumeliYA metadata confirm the 2024 bibliography exists. The open RumeliYA URL exposed only front matter/cover metadata in search and did not yield a full mineable text in this session. Additional KLU project pages confirm ongoing 'Turkiye Conkleri' transcription projects, but no Hakiki hit surfaced from indexed pages."
+      }
+    }
+  },
+  "new_or_reinforced_leads": [
+    {
+      "lead_id": "millet_ali_emiri_003094_albanian_hurufi_bektashi_conk",
+      "classification": "physical_witness_candidate_requires_catalog_image_text_verification",
+      "relative_priority": "co_highest_with_dogan_kaya_conk_32_after_review",
+      "register_impact": "none",
+      "source": {
+        "title": "Abdulla Rexhepi and Zeqije Xhafce, Exploring Hurufi-Bektashi Sufism in Albanian Literature. Insights from an Old Manuscript",
+        "publication": "Caesura 11.2 (2024)",
+        "url": "https://emanuel.ro/wp-content/uploads/2024/12/03AbdulaZeqije_Caesura-11.22024.pdf",
+        "sha256": "20427F00D31B4BC0F2D338A9EEC332B8172A57B628206CC1B63215F3286EC5B1",
+        "evidence_lines_seen": [
+          "Article frames the object as a Hurufi-Bektashi manuscript and as a junk / Turkish conk.",
+          "The manuscript is reported as 135 pages: 90 pages Albanian and the remaining pages Turkish and Persian.",
+          "The Turkish/Persian author roster includes Nesimi, Yunus Emre, Kizil Deli Dede, Esrefoglu, Hakiki and Hatai.",
+          "The manuscript is reported in Millet Library, Ali Emiri collection, Istanbul; old registration no. 551 and new no. 003094."
+        ]
+      },
+      "why_it_matters": "This is the first new open-web Balkan Hurufi-Bektashi physical manuscript lead surfaced in this continuation. It is not derivative of the Diyarbakir/Ilkhchi Sohrabiabad-Akin article and it co-locates Hakiki with Hatai and Nesimi in a Bektashi-Hurufi manuscript context.",
+      "risk_and_disambiguation": [
+        "No Hakiki incipit, folio, image, explicit, or item count is published.",
+        "Hakiki may be Cihan Shah, Yusuf Hakiki, Agazade Mehmed Dede, a local Bektashi/Hurufi namesake, or a simplified author-roster label.",
+        "The article proves Bektashi-Hurufi manuscript context, not current Alevi cem use.",
+        "The Millet/Ali Emiri catalogue record must be resolved directly before promotion."
+      ],
+      "followup": [
+        "Find the current Millet/YEK catalogue record for old no. 551 / new no. 003094.",
+        "Acquire the Turkish/Persian section pages containing Hakiki.",
+        "Record folio/page, incipit, explicit/mahlas, heading, meter, neighboring poems and image status.",
+        "Collate against known Cihan Shah, Sohrabiabad-Akin, Yusuf Hakiki, Agazade Mehmed Dede, and Balkan Bektashi/Hurufi corpora."
+      ]
+    },
+    {
+      "lead_id": "sivas_yildizeli_islim_suleyman_efendi_conk",
+      "classification": "carried_forward_physical_witness_candidate",
+      "source_artifact": "probe_2026-05-20_alevi_transmission_expansion.json",
+      "status": "Still one of the strongest Alevi-community candidates. This continuation did not add text or folio data."
+    },
+    {
+      "lead_id": "dogan_kaya_35_conk_corpus_hakiki_index",
+      "classification": "carried_forward_physical_witness_candidate",
+      "source_artifact": "probe_2026-05-20_alevi_transmission_expansion.json",
+      "status": "Still a high-value archive route, especially conk no. 32. The public Dogan Kaya PDF crawl did not expose the Hakiki text."
+    }
+  ],
+  "negative_or_deprioritized_surfaces": [
+    {
+      "surface_id": "dogan_kaya_public_pdf_surface",
+      "classification": "negative_for_new_hakiki_witnesses",
+      "details": "121 public PDFs extracted. Strong Alevi cenk/conk route articles were negative for Hakiki; only the already-known Bir Conk Sekiz Sair/Suleymaniye 5881 roster hit remains."
+    },
+    {
+      "surface_id": "abked_public_journal_archive",
+      "classification": "negative_for_independent_new_hakiki_witnesses",
+      "details": "364 ABKED PDFs extracted. The only Hakiki+cenk/conk witness evidence is the known Sohrabiabad-Akin 2019 article; later Karakoyunlu/Cihan Shah mentions are derivative or historical."
+    },
+    {
+      "surface_id": "mk_06_mil_yz_conk_309",
+      "classification": "strong_alevi_cluster_negative_for_hakiki",
+      "details": "2025 article lists Nesimi, Virani, Hatayi, Pir Sultan Abdal and Kul Himmet but no Hakiki."
+    },
+    {
+      "surface_id": "ibb_ataturk_bel_yz_k0059",
+      "classification": "alevi_bektashi_hurufi_route_negative_for_hakiki",
+      "details": "2024 article reports an Alevi-Bektashi-leaning conk with a Hurufism-related poem but no Hakiki."
+    },
+    {
+      "surface_id": "mk_06_mil_yz_a_7978_ilahi_mecmuasi",
+      "classification": "probable_hakiki_namesake_requires_incipit_check",
+      "details": "Table records Hakiki, 1 gazel, folio 69b, but source trail cites TEIS Hakiki Agazade Mehmed Dede. This is probably a useful disambiguation negative, not a Jahanshah candidate; final closure requires the 69b incipit."
+    }
+  ],
+  "false_positive_classes_reinforced": [
+    {
+      "class_name": "hakiki_as_ordinary_adjective_or_hakikat_stem",
+      "description": "Full-corpus grep produces many hakikat/hakiki adjective hits that are not a poet name."
+    },
+    {
+      "class_name": "ehl_i_hak_hakiki_makam",
+      "description": "Hakiki Makam is a real Ehl-i Hak ritual/music term; useful for route terminology but not a Hakiki author signal by itself."
+    },
+    {
+      "class_name": "agazade_mehmed_dede_and_other_ilahi_mecmua_namesakes",
+      "description": "Ilahi mecmuas can contain Hakiki poems from non-Jahanshah Ottoman religious poets. The 06 Mil Yz A 7978 case is a probable example, pending direct incipit capture."
+    }
+  ],
+  "summary": {
+    "new_verified_jahanshah_witnesses": 0,
+    "new_physical_witness_candidates_this_continuation": 1,
+    "cumulative_alevi_session_physical_candidates": 3,
+    "new_candidate_added": "Millet Library, Ali Emiri old no. 551 / new no. 003094 Albanian Hurufi-Bektashi conk with Hakiki in the Turkish/Persian author roster.",
+    "main_result": "The abked.de/D03540 journal crawl and Dogan Kaya's public website corpus are now locally saturated for this question, but not every broader Alevi-studies journal, closed cönk bibliography, or authenticated YEK surface is exhausted. The only new live desk lead came from the Balkan Hurufi-Bektashi manuscript route, not from Turkish institutional catalogue title search.",
+    "register_update_needed": false
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-20",
+    "artifact_status": "current",
+    "source_layers": [
+      "community_report",
+      "project_classification",
+      "scholarly_description"
+    ],
+    "access_mode": "private_or_permissioned",
+    "disposition": "deferred_followup",
+    "follow_up_required": true,
+    "follow_up_type": "source_acquisition"
+  }
+}

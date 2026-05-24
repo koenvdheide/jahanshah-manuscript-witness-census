@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "session_label": "South Asian Haqiqi homonym and false-positive matrix",
+  "session_id": "south-asian-haqiqi-homonym-matrix-2026-05-18",
+  "date": "2026-05-18",
+  "status": "DISAMBIGUATION_WORKSHEET",
+  "scope": "Intake worksheet for evaluating Patna and other South Asian Divan-i Haqiqi hits. It records source-confirmed collision types and search surfaces, but does not add named Indo-Persian Haqiqi poets unless independently verified by a catalogue, tazkira, or reference work.",
+  "trigger": "independent review of the Patna lead warned that a South Asian Persian Divan-i Haqiqi should not be screened only against Yusuf Hakiki. This worksheet operationalizes that warning without promoting unverified names.",
+  "linked_search_key_block": "data/search_keys.json::south_asian_haqiqi_homonym_treatment",
+  "current_conclusion": "One source-confirmed South Asian/Persianate Haqiqi takhallus-holder is now recorded as a disambiguation hazard: Hagigi/Haqiqi (Muhammad Baig) in Gul-e-Ra'na, a tadhkira of Indian-born Persian poets. The correct null hypothesis remains: title-only Divan-i Haqiqi in a South Asian collection is an unassigned Haqiqi homonym until author heading, first lines, contents, or contextual markers identify Cihansah Qaraqoyunlu.",
+  "confirmed_collision_types": [
+    {
+      "collision_type": "haqaiq_haqiqi_title_collision",
+      "risk": "A title containing Haqaiq/Haqiqi/Hindi can be a Sufi, philosophical, or devotional work rather than a poet's divan or a takhallus signal.",
+      "source_evidence": [
+        {
+          "source": "University of Washington ResearchWorks record for Heidi Pauwels, 'A Sufi listening to Hindi religious poetry: Mir Abdul Wahid Bilgrami's Haqayaq-i Hindi'",
+          "url": "https://digital.lib.washington.edu/researchworks/items/b6ece603-6dc3-4577-afbc-27c6c99a0687/full",
+          "observed": "The record identifies Haqayaq-i Hindi as a 16th-century Persian polemical work by Mir Abdul Wahid Bilgrami defending Hindu/Krishna bhakti poetry in Sufi sama sessions.",
+          "intake_rule": "Do not treat Haqaiq/Haqayaq/Haqiqi + Hindi/India as a divan or author clue unless the catalogue record explicitly gives a poetry divan and a takhallus/author heading."
+        }
+      ]
+    },
+    {
+      "collision_type": "haqiqi_as_adjective_in_incipit",
+      "risk": "The word haqiqi can occur in ordinary Persian prose incipits, especially in praise formulae, and full-text search can retrieve unrelated manuscripts.",
+      "source_evidence": [
+        {
+          "source": "Fihrist RAS Ellis Persian 12",
+          "url": "https://www.fihrist.org.uk/catalog/manuscript_2605",
+          "observed": "A copy of Tabaqat-i Akbari by Nizam al-Din Ahmad has incipit 'sipas-i raf'at-asas padishah-i haqiqi-ra'; the work is a Persian history of Muslim India, not a Divan-i Haqiqi."
+        },
+        {
+          "source": "Fihrist CODRINGTON/READE no. 59",
+          "url": "https://www.fihrist.org.uk/catalog/manuscript_489",
+          "observed": "Another Tabaqat-i Akbarshahi record has incipit 'Sipas-i raf''at-asas padshah-i haqiqi-ra sazad'; again unrelated to Jahanshah/Cihansah."
+        }
+      ],
+      "intake_rule": "Require title/author/content evidence. Incipit-only hits containing haqiqi should be classified as lexical false positives unless paired with Divan/Hakiki author evidence."
+    },
+    {
+      "collision_type": "ishq_e_haqeeqi_sufi_concept",
+      "risk": "South Asian Sufi catalogues and portals can use Haqeeqi/Haqiqi in the theological phrase ishq-e-haqeeqi, producing false positives unrelated to a poet named Haqiqi.",
+      "source_evidence": [
+        {
+          "source": "Sufinama author page for Hazrat Khawaja Banda Nawaz Muhammad Hussaini Gesudraz",
+          "url": "https://www.sufinama.org/authors/hazrat-khawaja-banda-nawaz-muhammad-hussaini-gesudraz/all",
+          "observed": "The page lists a book title Risala-e-Ishq-e-Haqeeqi under a South Asian Sufi author.",
+          "intake_rule": "Treat Ishq-e-Haqeeqi and comparable Sufi-concept titles as conceptual false positives, not Haqiqi takhallus evidence."
+        }
+      ]
+    },
+    {
+      "collision_type": "south_asian_takhallus_homonym",
+      "risk": "A South Asian catalogue entry titled only Divan-i Haqiqi can point to a local Indo-Persian poet using Haqiqi/Hagigi as a takhallus, not necessarily to Jahanshah/Cihansah Qaraqoyunlu.",
+      "source_evidence": [
+        {
+          "source": "Salar Jung Museum and Library, A Concise Descriptive Catalogue of the Persian Manuscripts, vol. II, biographies / geography / travels",
+          "url": "https://archive.org/details/urir_a-concise-descriptive-catalogue-of-the-persian-manuscripts-volume-ii-biogra",
+          "observed": "Catalogue no. 566 is Gul-e-Ra'na, described as a collection of biographical notes on Persian poets who were Indians by birth, compiled by Lachmi Narain Shafiq Aurangabadi in 1182/1768. The catalogue says the work is arranged alphabetically according to takhallus; its index lists Hagigi (Muhammad Baig), 566/110.",
+          "intake_rule": "Treat South Asian title-only Haqiqi hits as homonym-risk evidence until the record gives a Jahanshah/Cihansah/Qaraqoyunlu author heading, matching first lines, or bilingual Cihansah-corpus contents."
+        }
+      ]
+    },
+    {
+      "collision_type": "related_jahanshah_mention_not_authorial_witness",
+      "risk": "A manuscript can mention Jahanshah/Cihansah and his Haqiqi takhallus without transmitting his own Divan or poems.",
+      "source_evidence": [
+        {
+          "source": "Salar Jung Museum and Library, A Concise Descriptive Catalogue of the Persian Manuscripts, vol. III",
+          "url": "https://archive.org/details/dqsp_a-concise-descriptive-catalogue-of-the-persian-manuscripts-in-the-salar-jun",
+          "observed": "Catalogue no. 783, Risala-e-Insha, includes 'Jami's letter, in verse, addressed to Jahan Shah whose takhallus was Hagigi' on f. 55. This is a related literary/historical mention, not evidence that the manuscript transmits Jahanshah's own poetry.",
+          "intake_rule": "Do not count a Jahanshah/Haqiqi mention as a textual witness unless the record transmits Jahanshah's own poetry or a confirmed extract from his corpus."
+        }
+      ]
+    }
+  ],
+  "patna_specific_tests": {
+    "positive_cihansah_tests": [
+      "Author heading gives Cihansah/Jahanshah/Cahan Shah plus Qaraqoyunlu/Karakoyunlu/Turkman lineage.",
+      "Text is Persian-Turkish bilingual, or contains Turkish ghazals/tuyughs matching known Cihansah corpus witnesses.",
+      "Incipit, explicit, or first lines match BL Or 9493, Matenadaran 965, Suleymaniye Fatih 3808, Ankara DTCF I/2221, Tehran University 8198, or another confirmed Cihansah witness.",
+      "Colophon/date/context plausibly fits Cihansah transmission and does not point to a local South Asian Sufi author."
+    ],
+    "hold_tests": [
+      "Catalogue gives only Divan-i Haqiqi, Persian, Patna MS no. 2, and page count.",
+      "Title appears only in publisher/facsimile metadata and not on the manuscript page.",
+      "Persian-only poetry appears without author heading, first lines, date, or lineage."
+    ],
+    "negative_tests": [
+      "Record identifies another author with Haqiqi as takhallus.",
+      "Record is a prose/Sufi/devotional/theological title containing haqiqi as a concept.",
+      "First lines match a non-Cihansah work or the known false-positive classes above."
+    ]
+  },
+  "query_battery": {
+    "latin": [
+      "\"Haqiqi\" \"takhallus\" Indian Persian",
+      "\"Haqiqi\" \"Persian divan\" India",
+      "\"Haqiqi\" tazkira Mughal poet",
+      "\"Haqiqi Hindustani\"",
+      "\"Diwan-i Haqiqi\" Patna",
+      "\"Divan-i Haqiqi\" \"Madrasa Sulaimania\"",
+      "\"Haqaiq-i Hindi\" \"Divan\"",
+      "\"Haqayaq-i Hindi\" \"Haqiqi\""
+    ],
+    "persian_urdu": [
+      "\"حقیقی\" \"تذکره\" هند",
+      "\"حقیقی\" \"دیوان\" هند",
+      "\"حقیقی\" \"تخلص\"",
+      "\"دیوان حقیقی\" \"پتنه\"",
+      "\"دیوان حقیقی\" \"پتنا\"",
+      "\"دیوان حقیقی\" \"مدرسه سلیمانیه\"",
+      "\"حقائق هندی\" \"دیوان\"",
+      "\"عشق حقیقی\" \"دیوان\""
+    ]
+  },
+  "catalogue_ocr_sweeps": [
+    {
+      "surface": "Storey, Persian Literature: A Bio-Bibliographical Survey, Section II",
+      "url": "https://archive.org/details/in.ernet.dli.2015.281845",
+      "method": "Internet Archive OCR searched for Haqiqi/Hakiki/Hagigi, Divan-i Haqiqi, Jahanshah near Qara/Qaraqoyunlu.",
+      "result": "No Divan-i Haqiqi or Jahanshah/Qaraqoyunlu witness hit. Haqiqi-root hits were ordinary haqiqat/title phrases such as Haqiqat-ha-yi Hindustan and lexical prose contexts."
+    },
+    {
+      "surface": "Bankipore / Khuda Bakhsh Oriental Public Library OCR-accessible catalogue volumes",
+      "url": "https://archive.org/details/cataloguearabic00maugoog",
+      "method": "Internet Archive OCR for cataloguearabic00maugoog and dli.csl.6974 searched for Haqiqi/Hakiki/Hagigi, Divan-i Haqiqi, Jahanshah near Qara/Qaraqoyunlu.",
+      "result": "No Divan-i Haqiqi or Jahanshah/Qaraqoyunlu witness hit. Haqiqi-root hits were Sanai's Hadiqat-ul-Haqiqah or hagiographical/prose-name contexts such as Abu Ali Shaqiq/Haqiq."
+    },
+    {
+      "surface": "Salar Jung Museum Persian manuscript catalogue volumes I-V",
+      "url": "https://archive.org/details/twmh_concise-descriptive-catalogue-of-the-persian-manuscripts-volume-iv-by-muham",
+      "method": "Internet Archive OCR over available volumes I-V searched for Haqiqi/Hakiki/Hagigi, Divan-i Haqiqi, Jahanshah near Qara/Qaraqoyunlu.",
+      "result": "No Divan-i Haqiqi witness hit. Vol. II yielded the named homonym Hagigi/Haqiqi (Muhammad Baig) in Gul-e-Ra'na; vol. III yielded a non-witness Jami letter addressed to Jahan Shah whose takhallus was Hagigi; other hits were title/common-noun collisions such as Hadiqatu'l-Haqiqat and Nur-e-Haqiqat."
+    },
+    {
+      "surface": "Rampur Raza Library and Saulat Public Library OCR-accessible catalogue volumes",
+      "url": "https://archive.org/details/RampurRazaLibraryCataloguePersianMSSVol.1",
+      "method": "Internet Archive OCR for Rampur Raza vols. I-II, a duplicate DLI Rampur Raza catalogue item, and Saulat Public Library Rampur searched for Haqiqi/Hakiki/Hagigi, Divan-i Haqiqi, Jahanshah near Qara/Qaraqoyunlu.",
+      "result": "No Divan-i Haqiqi, Haqiqi takhallus, or Jahanshah/Qaraqoyunlu witness hit in the Rampur Raza OCR volumes. Saulat hits were conceptual/title phrases such as Dar Bayan-i-Hagigat-i-Alam."
+    },
+    {
+      "surface": "Aligarh manuscript catalogue shadow",
+      "url": "https://archive.org/details/AligarhManuscriptsCatalogue",
+      "method": "Internet Archive OCR for Hinduism in Aligarh Manuscripts / Persian Catalog by Zaidi searched for Haqiqi/Hakiki/Hagigi, Divan-i Haqiqi, Jahanshah near Qara/Qaraqoyunlu.",
+      "result": "No target string hits."
+    },
+    {
+      "surface": "Asiatic Society of Bengal catalogue shadows",
+      "url": "https://studylib.net/doc/25345652/bk-001236-b",
+      "method": "Studylib OCR for Ivanow's 1927 first supplement was searched via page text; the Zenodo Curzon Collection PDF was downloaded and pdftotext was attempted.",
+      "result": "No target hit was recovered from the first supplement page text. The Zenodo Curzon Collection PDF metadata was reachable, but local pdftotext did not recover searchable text from the scanned PDF."
+    }
+  ],
+  "surfaces_to_mine_next": [
+    {
+      "surface": "Storey, Persian Literature: A Bio-Bibliographical Survey",
+      "purpose": "Check indexed Haqiqi/Haqaiq/Haqeeqi entries and distinguish poet takhallus from title/common noun occurrences."
+    },
+    {
+      "surface": "Khuda Bakhsh / Bankipore printed catalogues",
+      "purpose": "Per-volume index search for Haqiqi, Divan-i Haqiqi, Jahanshah/Cihansah, and Qaraqoyunlu variants."
+    },
+    {
+      "surface": "Salar Jung Persian manuscript catalogues",
+      "purpose": "Per-volume index search; watch for Sufi-concept and title collisions."
+    },
+    {
+      "surface": "Rampur Raza / Arshi catalogues",
+      "purpose": "Per-volume index search for Haqiqi and Qaraqoyunlu variants."
+    },
+    {
+      "surface": "Asiatic Society of Bengal / Kolkata Persian manuscript catalogues",
+      "purpose": "Per-volume index search for Haqiqi and title collisions."
+    },
+    {
+      "surface": "Aligarh / Maulana Azad and Subhanullah collection catalogues",
+      "purpose": "Per-volume index search for Haqiqi and South Asian local takhallus holders."
+    },
+    {
+      "surface": "Indo-Persian tazkira indexes",
+      "purpose": "Only add named Haqiqi homonyms after an indexed tazkira entry gives name, place, period, and takhallus evidence."
+    }
+  ],
+  "named_homonyms_added": [
+    {
+      "name": "Hagigi / Haqiqi (Muhammad Baig)",
+      "source": "Gul-e-Ra'na, catalogue no. 566, Salar Jung Persian manuscripts vol. II",
+      "source_url": "https://archive.org/details/urir_a-concise-descriptive-catalogue-of-the-persian-manuscripts-volume-ii-biogra",
+      "evidence": "The catalogue describes Gul-e-Ra'na as a tadhkira of Indian-born Persian poets arranged alphabetically by takhallus and indexes Hagigi (Muhammad Baig), 566/110.",
+      "use_in_patna_screening": "A Patna or Indian catalogue entry titled only Divan-i Haqiqi must be held until author-heading or first-line evidence excludes local Indo-Persian Haqiqi/Hagigi takhallus holders such as Muhammad Baig."
+    }
+  ],
+  "named_homonyms_policy": "Do not add named people from weak web snippets or model suggestions. Add only after a source gives a concrete person, place/period, and evidence that Haqiqi is a takhallus or author name.",
+  "impact_on_patna_lead": "Patna MS no. 2 remains high-priority but unverified. The disambiguation threshold is now source-anchored by at least one named Indian-born Persian-poet Haqiqi/Hagigi homonym; this does not lower the lead's priority, but it makes title-only promotion unsafe.",
+  "register_impact": {
+    "new_witnesses_added": 0,
+    "new_candidates_added": 0,
+    "witness_count_change": "none"
+  },
+  "release_blocker": false,
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-18",
+    "artifact_status": "current",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "deferred_followup",
+    "follow_up_required": true,
+    "follow_up_type": "source_acquisition"
+  }
+}

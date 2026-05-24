@@ -1,0 +1,355 @@
+{
+  "schema_version": 1,
+  "session_label": "Alevi transmission expansion and stubborn lead sweep",
+  "session_id": "alevi-transmission-expansion-2026-05-20",
+  "date": "2026-05-20",
+  "trigger": "User hypothesis: multiple village/community witnesses use Hakiki poetry in Alevi ritual, so known witnesses likely scratch the surface. Task: brainstorm and proceed exhaustively to find more Jahanshah/Hakiki witness leads used in Alevi communities.",
+  "scope": "Desk sweep across Alevi-Bektasi ritual manuscript literature, Ehl-i Hak/Kirklar/Ocak fieldwork literature, cenk/conk survey articles, exact incipit searches, Turkish/Azerbaijani/Persian terminology, and known catalogue surfaces. This artifact records leads and routes only; it does not alter witness counts.",
+  "baseline": {
+    "known_alevi_witness_surface_before_this_session": [
+      "Diyarbakir Uluturk/Imam Zeynel Abidin Ocagi cenk: 8 Hakiki gazels photographed by Bulent Akin in 2016 and published by Sohrabiabad-Akin 2019.",
+      "Ilkhchi Kirklar/Celten Ocagi full divan: reported in pirs' private archive by Sohrabiabad-Akin 2019; not yet shared with academia.",
+      "Ilkhchi Kirklar/Celten Ocagi Defter/Beyaz cem conks: excerpt copies used by kelamhans in cem ritual; 3 gazels published by Sohrabiabad-Akin 2019.",
+      "Lost Diyarbakir library/divan trail: Cunbur-to-Macit report, recorded in Sohrabiabad-Akin 2019."
+    ],
+    "starting_assumption": "The productive surface is not ordinary institutional title search. It is fieldwork around Alevi ocaks, dede/zakir/kelamhan private archives, and cenk/conk survey literature where Hakiki may be an unqualified mahlas inside ritual manuscripts."
+  },
+  "method_summary": {
+    "web_search_clusters": [
+      "Known-witness and exact-incipit confirmation: Hakiki Kelamlar, Ilkhchi Kirklar Ocagi, Her kimin musahibi yoktur, Her kimin musahibi yokdur, Vucudun sehrine girdim, Utan serm eylegil hakdan.",
+      "Alevi cenk/conk co-location: Hakiki + conk + Nesimi/Hatayi/Virani/Pir Sultan/Kul Himmet/Dede Kargin/Kececi Baba.",
+      "Turkish fieldwork: Bulent Akin, Hamidreza Sohrabiabad, Mehmet Ersal, Ozan Yilmaz, Alevi erkan conks, TUBITAK 113K056.",
+      "Azerbaijani/Iranian terminology: CahanSah Haqiqi, Heqiqi, kelam, cem, defter, cung, ocak, Kirklar, Ilkhchi, Alevi, Qizilbas.",
+      "Persian terminology: jahanshah haqiqi, haqiqi, ahl-e haqq, ilkhchi, kalam.",
+      "Catalogue/survey surfaces: DergiPark, ISAM pdfdrg, ABKED, Dogan Kaya archive pages, Turkish Bitig, Islamisation of Anatolia."
+    ],
+    "pdfs_downloaded_for_text_extraction": [
+      {
+        "source_url": "https://dergipark.org.tr/en/download/article-file/496703",
+        "local_processing_note": "Downloaded during the 2026-05-20 desk pass; transient PDF was not retained in the repository.",
+        "sha256": "0ABF5381438A9395AA90D13D400399C341F4E8FF4E5A76E58BB9FA6C6D7AAC36",
+        "extraction": "pdftotext -layout -enc UTF-8"
+      },
+      {
+        "source_url": "https://dogankaya.com/fotograf/Bir-Conk-Sekiz-Sair.pdf",
+        "local_processing_note": "Downloaded during the 2026-05-20 desk pass; transient PDF was not retained in the repository.",
+        "sha256": "C0C00E553330DCA8FFA75B1D4D2BA04893AF2DD90733D567B3F9973779D9E805",
+        "extraction": "pdftotext -layout -enc UTF-8"
+      }
+    ],
+    "text_patterns_used_after_pdf_extraction": [
+      "Hakik",
+      "Hekimhan",
+      "Kumbet",
+      "Nuri",
+      "Sivas",
+      "Malatya",
+      "Hatayi",
+      "Nesim",
+      "Virani",
+      "Cihan",
+      "Jahan"
+    ]
+  },
+  "new_or_reinforced_leads": [
+    {
+      "lead_id": "sivas_yildizeli_islim_suleyman_efendi_conk",
+      "classification": "physical_witness_candidate_requires_textual_identification",
+      "register_impact": "none",
+      "source": {
+        "title": "Dervis Erdal and Serhat Sabri Yilmaz, Sozlu Kultur-Yazili Kultur Iliskisi Baglaminda Conkler ve Sivas Kaynakli Bir Conk",
+        "url": "https://dergipark.org.tr/en/download/article-file/496703",
+        "publication": "CU Sosyal Bilimler Dergisi 42/1, 2018",
+        "evidence_lines_seen": [
+          "Article identifies the item as an Alevi-Bektasi-origin conk preserved by Halil Esen from Suleyman Efendi of Sivas/Yildizeli/Islim.",
+          "The conk was gifted to Suleyman Efendi by a Malatya soldier friend; authors infer a Malatya-Hekimhan Alevi-Bektasi milieu because Malatya-Hekimhan and Alevi-Bektasi poets are numerous.",
+          "Poet table lists Hakiki with 1 poem, co-located with Hatayi 9, Nesimi 13, Virani 19, Pir Sultan Abdal 2, Kul Himmet 3, Sadik Baba 12, Teslim Abdal 1, Kaygusuz Abdal 1."
+        ]
+      },
+      "physical_description": {
+        "holder_or_transmission": "Suleyman Efendi -> son Halil Esen; given to Dervis Erdal for scholarly introduction",
+        "provenance": "Sivas, Yildizeli, Islim village; probable Malatya-Hekimhan Alevi-Bektasi recording context",
+        "format": "brown leather-covered conk",
+        "extent": "70 folios",
+        "dimensions": "5 x 10 cm",
+        "condition": "some missing pages; some too faded to read; multiple hands"
+      },
+      "why_it_matters": "This is a distinct Alevi-Bektasi physical witness lead outside the already-known Diyarbakir/Ilkhchi cluster. The roster is not a generic Ottoman anthology; it is a dense Alevi ritual-poet cluster with Hakiki explicitly counted.",
+      "risk_and_disambiguation": [
+        "The article does not publish the Hakiki poem, incipit, folio, or attribution discussion.",
+        "Hakiki could be Jahanshah, Yusuf Hakiki, a local Alevi/Bektasi Hakiki, or another mahlas-holder.",
+        "The correct next step is text acquisition, not promotion."
+      ],
+      "followup": [
+        "Contact Dervis Erdal and Serhat Sabri Yilmaz for the Hakiki folio image, incipit, and full text.",
+        "Ask whether the Hakiki item sits under a heading such as nefes, duvaz, divani, or gazel.",
+        "Compare the text against the Sohrabiabad-Akin 11 Alevi Hakiki poems, Macit/Jahanshah divan, Yusuf Hakiki corpus, and known Alevi Hakiki namesakes.",
+        "If the poem uses musahip/ikrar/erkan/murebbi/Kirklar/Shah-i Merdan lexicon or old Anatolian/Azerbaijani features, escalate to high-priority candidate."
+      ]
+    },
+    {
+      "lead_id": "dogan_kaya_35_conk_corpus_hakiki_index",
+      "classification": "physical_witness_candidate_requires_archive_check",
+      "register_impact": "none",
+      "source": {
+        "title": "Dogan Kaya, Alevilik Arastirmalari Dergisi 2011 article surveying 35 conks",
+        "url": "https://isamveri.org/pdfdrg/D04118/2011_1/2011_1_KAYAD.pdf",
+        "evidence_lines_seen": [
+          "The article surveys 35 conks, many from Sivas/Divrigi/Kangal/Tokat/Gurun and Alevi-Bektasi poet clusters.",
+          "Descriptions of no. 31 and no. 32 both list Hakiki among poets or mahlases.",
+          "The aggregate poet index records Hakiki (1), so the corpus contains at least one Hakiki poem even if the item-level descriptions create a count ambiguity."
+        ]
+      },
+      "candidate_items": [
+        {
+          "conk_no": "31",
+          "holder": "M. Sabri Koz, with photocopy in Kaya archive",
+          "format": "43 folios, 9 x 16.5 cm, broken naskh",
+          "contents_signal": "nefesler, ilahiler, semailer, gazels, qitas, many mufreds and anonymous poems; poet list includes Hakiki alongside Dervis Ali, Fahri, Gevheri, Hudai, Katibi, Niyazi, Seyyidi, Uftade, etc.",
+          "priority": "medium: mixed tekke/asik list, but direct text can resolve cheaply"
+        },
+        {
+          "conk_no": "32",
+          "holder": "Lutfu Segmen",
+          "format": "50 folios, 13 x 22.5 cm, rik'a",
+          "contents_signal": "nefes, divan, gazel and beyit; Hakiki appears with Fuzuli, Garib, Hatayi, Kaygusuz Sultan, Kul Himmet, Kul Nesimi, Pir Sultan Abdal, Sersem Abdal, Teslim Abdal, Turabi, Virani Abdal and other Alevi-Bektasi names.",
+          "priority": "high: stronger Alevi-Bektasi co-location than no. 31"
+        }
+      ],
+      "why_it_matters": "This is the most concrete new archive route after the Sivas Islim conk: at least one Hakiki poem is indexed inside a known Alevi conk survey corpus, and two item descriptions point to candidate conks.",
+      "risk_and_disambiguation": [
+        "The article gives no poem text or folio for Hakiki.",
+        "The aggregate index count of Hakiki (1) conflicts with two item-level mentions; one mention may be a duplicate, catalogue slip, or a single poem copied across notes.",
+        "Late Alevi/Bektasi conks can contain non-Jahanshah Hakiki namesakes."
+      ],
+      "followup": [
+        "Contact Dogan Kaya or locate his archive access path for conk nos. 31 and 32.",
+        "Contact M. Sabri Koz for no. 31 and Lutfu Segmen or associated heirs/archives for no. 32.",
+        "Request only the Hakiki item first: folio/page, first and last couplets, heading, meter, nearby poems, and image if possible."
+      ]
+    },
+    {
+      "lead_id": "ehli_hak_kelamhan_defter_route",
+      "classification": "repertoire_and_fieldwork_route_reinforced",
+      "register_impact": "none",
+      "source": {
+        "title": "Bulent Akin, Ehl-i Haklarda Kelamhanlik Gelenegi ve Kelamhan Defterlerinin Gelenegin Korunmasi ve Aktarimindaki Rolu",
+        "url": "https://turkoloji.cu.edu.tr/pdf/akin_bulent_makale.pdf",
+        "publication": "Milli Folklor 111, 2016",
+        "evidence_lines_seen": [
+          "Kelam means sacred poem read in cem, not ordinarily performed outside the belief circle.",
+          "Kelams are preserved in Defter manuscripts, described as conk or mecmua-type written records.",
+          "Kelam contents differ by hanedan, ocak or taife.",
+          "Conclusion explicitly names Iranian Kirklar, Aliilahiler and other Alevi communities as needing comparative study with Turkey/Balkan Alevi-Bektasi manuscript traditions."
+        ]
+      },
+      "why_it_matters": "This source does not add a Jahanshah witness by itself, but it explains exactly where hidden witnesses would live: kelamhan defters, ocak/hanedan/taife archives, and ritual manuscripts not exposed through ordinary library catalogues.",
+      "terminology_expansion": [
+        "kelamhan",
+        "defter",
+        "beyaz",
+        "cenk/conk",
+        "mecmua",
+        "erkan defteri",
+        "hanedan",
+        "taife",
+        "ocak",
+        "guyende",
+        "zakir/asik",
+        "cemhane"
+      ],
+      "false_positive_warning": "Hakiki makam and Hakiki kelam can be generic Ehl-i Hak terms for sacred/true makams or kelams, not necessarily the poet Hakiki. Treat them as route terms unless paired with Cihan/Jahanshah, mahlas context, poem incipit, or a manuscript item."
+    },
+    {
+      "lead_id": "azerbaijani_term_bridge_najaf_2020",
+      "classification": "secondary_republication_and_term_backchain_route",
+      "register_impact": "none",
+      "source": {
+        "title": "Akbar Najaf, Qaraqoyunlu hokmdari Cahansah Haqiqinin yeni tapilan seirleri",
+        "url": "https://tall.edu.az/web/uploads/archive/254/254.pdf",
+        "publication": "Azerbaycan dili ve edebiyyat tedrisi 2020/1",
+        "evidence_lines_seen": [
+          "Keywords include Haqiqi, qizilbas, elevi, xalq islami, cung, defter, cem, ocak.",
+          "The article explicitly cites Sohrabiabad-Akin 2019 as the source for the Diyarbakir cenk and Ilkhchi Kirklar Defter/Beyaz evidence.",
+          "The body republishes the 8 Diyarbakir and 3 Ilkhchi Hakiki ghazals in Azerbaijani orthography; no independent manuscript source is named beyond Sohrabiabad-Akin 2019."
+        ]
+      },
+      "why_it_matters": "This is not an independent witness because it depends on Sohrabiabad-Akin 2019, but it is more than a keyword bridge: it republishes the known Alevi Hakiki poem set in Azerbaijani orthography and gives searchable terminology that can reach non-Turkish discussions: cung, defter, cem, ocak, qizilbas, elevi, Haqiqi.",
+      "followup": "If Najaf is used in an apparatus, compare its orthographic text against Sohrabiabad-Akin 2019 Ek-1/Ek-2 before treating it as variant evidence; ask Najaf only if there is reason to suspect access to a source beyond the cited 2019 article."
+    }
+  ],
+  "deprioritized_or_negative_hits": [
+    {
+      "hit_id": "bir_conk_sekiz_sair_suleymaniye_yazma_bagislar_5881",
+      "classification": "public_cenk_candidate_but_not_alevi_ritual_route",
+      "source": {
+        "title": "Dogan Kaya, Bir Conk Sekiz Sair",
+        "url": "https://dogankaya.com/fotograf/Bir-Conk-Sekiz-Sair.pdf",
+        "evidence_lines_seen": [
+          "Suleymaniye Library Yazma Bagislar 5881, 62 folios.",
+          "Poet roster includes Hakiki and Nesimi among 21 identified poets.",
+          "The article transcribes rare poets, not the Hakiki poem."
+        ]
+      },
+      "interpretation": "Useful as a public institutional conk lead, but not currently evidence of Alevi community use. The roster is broadly religious/sufi rather than a dense Hatayi/Pir Sultan/Kul Himmet/Virani Alevi cluster.",
+      "followup": "Low-cost if Suleymaniye images can be requested: identify Hakiki folio and incipit. Do not prioritize over Sivas Islim or Kaya nos. 31/32."
+    },
+    {
+      "hit_id": "abked_catalog_i",
+      "classification": "archive_route_negative_for_hakiki_in_catalog_i",
+      "source": {
+        "title": "Omur Ceylan and Mehmet Ersal, Alevi-Bektasi Kultur Enstitusu Arsivi Yazma Eserler Katalogu I",
+        "url": "https://isamveri.org/pdfdrg/D03540/2019_20/2019_20_CEYLANO_ERSALM.pdf",
+        "evidence_lines_seen": [
+          "The catalogue introduces an Alevi-Bektasi Culture Institute archive built from personal Alevi-Bektasi manuscript archives and digital collections.",
+          "The first catalogue article describes many conks, but text search in this session did not find Hakiki."
+        ]
+      },
+      "interpretation": "No new Hakiki hit from Catalog I, but the archive is structurally high value. Later catalogue installments or uncatalogued holdings should be searched directly."
+    },
+    {
+      "hit_id": "exact_incipit_sweeps",
+      "classification": "negative",
+      "queries": [
+        "Her kimin musahibi yoktur Hakiki",
+        "Her kimin musahibi yokdur Hakiki",
+        "Vucudun sehrine girdim Hakiki",
+        "Utan serm eylegil hakdan Hakiki"
+      ],
+      "interpretation": "Exact incipit searches mainly rediscovered Sohrabiabad-Akin and derivative secondary pages; no independent web-visible witness surfaced."
+    },
+    {
+      "hit_id": "islamisation_of_anatolia_direct_surface",
+      "classification": "already_saturated",
+      "queries": [
+        "site:islam-anatolia.ac.uk/data/ Hakiki Conk",
+        "site:islam-anatolia.ac.uk/data/documents/ Hagigi Jahanshah",
+        "site:islam-anatolia.ac.uk/data/documents/ Jahanshah Hakiki"
+      ],
+      "interpretation": "Rediscovered known Islamisation/Anatolia DB Cihansah/Hagigi surfaces but did not add an Alevi-community witness beyond prior corpus coverage."
+    }
+  ],
+  "false_positive_classes_reinforced": [
+    {
+      "class_name": "generic_hakiki_kelam_or_hakiki_makam",
+      "description": "In Ehl-i Hak/Alevi music and ritual literature, hakiki can mark sacred/true kelams or makams. It is a route term, not author evidence, unless there is a mahlas, byline, Cihan/Jahanshah co-occurrence, or poem text."
+    },
+    {
+      "class_name": "late_anatolian_asik_or_bektasi_hakiki",
+      "description": "Late conks often contain unqualified Hakiki inside mixed asik/tekke rosters. Alevi co-location raises priority but does not by itself prove Jahanshah. Require incipit, language features, doctrinal lexicon, or comparison with known Jahanshah/Yusuf/local corpora."
+    },
+    {
+      "class_name": "large_mecmua_false_adjacency",
+      "description": "A large anthology may contain Hakiki, Nesimi, Hatayi, and Shah Ismail far apart. Only local folio-level adjacency or shared ritual section matters."
+    }
+  ],
+  "operational_followup_plan": [
+    {
+      "priority": 1,
+      "target": "Sivas/Yildizeli Islim Suleyman Efendi conk",
+      "ask": "Obtain Hakiki poem folio/image/transcription from Dervis Erdal or Serhat Sabri Yilmaz; use Mehmet Ersal as a parallel Cumhuriyet University / Alevi-Bektasi manuscript contact route if direct author contact stalls.",
+      "acceptance_criteria": "At least incipit, explicit/mahlas line, heading, folio, and neighboring poems."
+    },
+    {
+      "priority": 2,
+      "target": "Dogan Kaya 35-conk corpus, nos. 31 and 32",
+      "ask": "Resolve which conk contains the aggregate Hakiki (1) poem and obtain text/image.",
+      "acceptance_criteria": "Identify no. 31 vs no. 32, holder, folio, item type (full poem vs beyit/mufret), incipit, explicit, and immediate context."
+    },
+    {
+      "priority": 3,
+      "target": "Kirklar/Celten Ocagi and Ilkhchi kelamhan network",
+      "ask": "Through Bulent Akin/Sohrabiabad, request metadata-only survey first: number of Hakiki poems in the full divan and Defter/Beyaz copies, whether copies exist in more than one household, and whether headings/incipits can be shared.",
+      "acceptance_criteria": "Count of distinct physical items and non-sensitive incipit list; no need to demand full ritual texts initially."
+    },
+    {
+      "priority": 4,
+      "target": "Alevi-Bektasi Culture Institute archive and Mehmet Ersal fieldwork corpus",
+      "ask": "Search beyond Catalog I for Hakiki/Haqiqi in conk contents, especially uncatalogued or later catalogued items from Amasya, Kirikkale, Corum, Cankiri, Ankara, Eskisehir, Isparta, Didymoteicho/Rousa and Momchilgrad/Bulgaria.",
+      "acceptance_criteria": "Any item-level Hakiki occurrence with conk number, owner/archive, folio, and neighboring poets."
+    },
+    {
+      "priority": 5,
+      "target": "Diyarbakir Alevi ocak private archives",
+      "ask": "Use the confirmed Imam Zeynel Abidin, Seyyid Dervis Ali, Abbas Onen, and Bektas Onbasi trails to locate related dede/zakir conks not yet published; do not use any AguiCen/Agucan-style lead until the exact ocak name and source are verified.",
+      "acceptance_criteria": "Inventory of conks/divans that include Hakiki, Fuzuli, Seyyid Nizamoglu, Nesimi, Hatayi or ritual section headings."
+    },
+    {
+      "priority": 6,
+      "target": "Suleymaniye Yazma Bagislar 5881",
+      "ask": "Submit a low-cost institutional image or folio-identification request for the Hakiki item surfaced by Dogan Kaya's Bir Conk Sekiz Sair article.",
+      "acceptance_criteria": "Determine Hakiki folio, item type, incipit, explicit, and local neighboring poems; close as wrong-Hakiki if the text is a namesake."
+    }
+  ],
+  "search_terms_to_reuse": {
+    "turkish": [
+      "Hakiki cenk",
+      "Hakiki conk",
+      "Hakiki kelamlar",
+      "Hakiki kelamlari",
+      "Hakiki makami",
+      "Cihansah Hakiki Alevi",
+      "Karakoyunlu Hakiki Alevi",
+      "Alevi erkan defteri Hakiki",
+      "Defter Beyaz Hakiki",
+      "Kirklar Ocagi Hakiki",
+      "Celten Ocagi Hakiki",
+      "Ilhici Hakiki",
+      "Ilkhchi Hakiki",
+      "Alevi zakir Hakiki",
+      "kelamhan Hakiki"
+    ],
+    "azerbaijani_latin": [
+      "Cahansah Haqiqi cung",
+      "Cahansah Haqiqi defter",
+      "Haqiqi cem",
+      "Haqiqi ocak",
+      "Haqiqi qizilbas",
+      "Haqiqi elevi",
+      "Haqiqi Ilxici",
+      "Haqiqi Kirklar"
+    ],
+    "persian_arabic_script": [
+      "جهانشاه حقیقی اهل حق",
+      "حقیقی ایلخچی",
+      "کلام حقیقی ایلخچی",
+      "جهانشاه حقیقی کلام",
+      "حقیقی دفتر اهل حق",
+      "حقیقی جمع خانه"
+    ],
+    "archive_owner_names": [
+      "Bulent Akin",
+      "Hamidreza Sohrabiabad",
+      "Dervis Erdal",
+      "Serhat Sabri Yilmaz",
+      "Dogan Kaya",
+      "M. Sabri Koz",
+      "Lutfu Segmen",
+      "Mehmet Ersal",
+      "Ozan Yilmaz",
+      "Abbas Onen",
+      "Halil Esen"
+    ]
+  },
+  "summary": {
+    "new_verified_jahanshah_witnesses": 0,
+    "new_physical_witness_candidates": 2,
+    "strongest_new_candidate": "Sivas/Yildizeli Islim Suleyman Efendi conk: Alevi-Bektasi source, probable Malatya-Hekimhan transmission, one Hakiki poem in a dense Alevi poet roster.",
+    "strongest_archive_route": "Dogan Kaya 35-conk corpus, especially conk no. 32 with Hakiki in a Hatayi/Kul Himmet/Kul Nesimi/Pir Sultan/Teslim/Turabi/Virani Abdal cluster.",
+    "main_methodological_result": "For Alevi-community Jahanshah witnesses, fieldwork bibliographies and conk survey articles now outperform YEK/Google catalogue mining. The next breakthrough likely requires asking targeted holders for a single Hakiki folio rather than broad public search."
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-20",
+    "artifact_status": "superseded",
+    "source_layers": [
+      "community_report",
+      "project_classification",
+      "scholarly_description"
+    ],
+    "access_mode": "private_or_permissioned",
+    "disposition": "augmented_existing_witness",
+    "follow_up_required": true,
+    "follow_up_type": "community_consent_contact"
+  }
+}

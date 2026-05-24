@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "generated": "2026-05-21",
+  "purpose": "Current-status index for search-session artifacts. Historical JSON files are retained, but this index identifies which files are current authorities for status questions and which are superseded or appendices.",
+  "record_fields": {
+    "file": "Search artifact filename under data/searches.",
+    "theme": "Short topic or avenue label.",
+    "current": "True when this artifact is a current authority for its theme; false when superseded or appendix-only.",
+    "superseded_by": "List of files that should be consulted instead for current status.",
+    "release_blocker": "True only if the artifact leaves a v1.x release blocker open.",
+    "note": "Human-readable status note."
+  },
+  "records": [
+    {
+      "file": "crosscheck_2026-05-11_digital_orientalist_2023_resources.json",
+      "theme": "Digital Orientalist resource inventory",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Use as inventory; use do2023 residual closure for final witness-discovery status."
+    },
+    {
+      "file": "gap_disposition_2026-05-11.json",
+      "theme": "Tool/access gap disposition",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current normalized disposition for 9 non-Playwright tool/access gaps; companion Playwright file covered 4 more."
+    },
+    {
+      "file": "probe_2026-05-10_iran_caucasus_reachability.json",
+      "theme": "Iran/Caucasus reachability retry",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current evidence that some parent sites became reachable while manuscript-catalogue execution remained blocked or non-searchable."
+    },
+    {
+      "file": "probe_2026-05-11_avenue_caucasus.json",
+      "theme": "Caucasus avenue",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current Caucasus probe artifact."
+    },
+    {
+      "file": "probe_2026-05-11_avenue_central_asia_russia_yerevan.json",
+      "theme": "Central Asia/Russia/Yerevan avenue",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current negative probe and provenance-clarification artifact."
+    },
+    {
+      "file": "probe_2026-05-11_avenue_provincial_ottoman_sufi.json",
+      "theme": "Ottoman provincial/Sufi avenue shallow pass",
+      "current": false,
+      "superseded_by": [
+        "probe_2026-05-11_ottoman_chunks_synthesis.json"
+      ],
+      "release_blocker": false,
+      "note": "Superseded by the chunked Ottoman deep-probe synthesis."
+    },
+    {
+      "file": "probe_2026-05-11_avenue_south_asia.json",
+      "theme": "South Asia avenue",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current baseline institutional South Asia probe; Patna Madrasa Sulaimania MS no. 2 lead is handled separately in probe_2026-05-18_patna_sulaymaniyah_ms2_and_backchain.json."
+    },
+    {
+      "file": "probe_2026-05-18_patna_sulaymaniyah_ms2_and_backchain.json",
+      "theme": "Patna Madrasa Sulaimania candidate and edition backchain",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current artifact for the Patna Madrasa Sulaimania MS no. 2 candidate lead and Demirci 1997 online retrieval; no register-count change until the Patna item is verified."
+    },
+    {
+      "file": "patna_2026-05-18_acquisition_intake_packet.json",
+      "theme": "Patna Madrasa Sulaimania acquisition packet",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Operational contact/intake checklist for acquiring and evaluating Patna Madrasa Sulaimania MS no. 2; not witness evidence and no register-count change."
+    },
+    {
+      "file": "probe_2026-05-20_alevi_transmission_expansion.json",
+      "theme": "Alevi transmission expansion",
+      "current": false,
+      "superseded_by": [
+        "probe_2026-05-20_alevi_open_corpus_continuation.json"
+      ],
+      "release_blocker": false,
+      "note": "Initial Alevi-community expansion pass; superseded for current status by the continuation rollup that adds public-corpus sweeps and the Millet/Ali Emiri 003094 candidate."
+    },
+    {
+      "file": "probe_2026-05-20_alevi_open_corpus_continuation.json",
+      "theme": "Alevi open-corpus continuation",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current Alevi-community status: 0 new verified witnesses, 3 cumulative physical Hakiki conk/manuscript candidates requiring text acquisition; Dogan Kaya and ABKED public corpora saturated with no further hits."
+    },
+    {
+      "file": "probe_2026-05-21_ersal_ceylan_alevi_bektashi_catalogue.json",
+      "theme": "Ersal-Ceylan Alevi-Bektashi catalogue probe",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Targeted desk probe of the 2019 Alevi-Bektashi Culture Institute manuscript-catalogue installment; no Cihansah/Hakiki target terms surfaced in the public PDF text."
+    },
+    {
+      "file": "probe_2026-05-18_south_asian_haqiqi_homonym_matrix.json",
+      "theme": "South Asian Haqiqi homonym matrix",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current disambiguation worksheet for South Asian Divan-i Haqiqi hits, especially Patna MS no. 2; no named homonyms added without source confirmation."
+    },
+    {
+      "file": "probe_2026-05-18_patna_public_source_recovery.json",
+      "theme": "Patna public-source recovery",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Desk-only recovery pass separating title-level Patna MS no. 2 evidence from the separate Behjat/Ownuk printed-edition author-identification lane; no register-count change."
+    },
+    {
+      "file": "probe_2026-05-18_modern_edition_source_apparatus.json",
+      "theme": "Modern edition source-apparatus backchain",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current source-apparatus pass for Poursharif/Nabati, Baghban-Karimi/Nikan, Ownuk/Behjat, Barqi/Akhtar, and Sozumuz/Baharli; no register-count change."
+    },
+    {
+      "file": "probe_2026-05-18_barqi_akhtar_acquisition.json",
+      "theme": "Barqi/Akhtar acquisition",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Focused acquisition route for Lotfali Barqi's Akhtar edition; publisher/Telegram and Book House sample-PDF paths identified, no register-count change."
+    },
+    {
+      "file": "probe_2026-05-11_avenues_rollup_summary.json",
+      "theme": "Avenue rollup summary",
+      "current": false,
+      "superseded_by": [
+        "probe_2026-05-11_ottoman_chunks_synthesis.json",
+        "../witness_register.json"
+      ],
+      "release_blocker": false,
+      "note": "Partially superseded by later Ottoman chunking and Nuruosmaniye reclassification in the current register."
+    },
+    {
+      "file": "probe_2026-05-11_do2023_residual_closure.json",
+      "theme": "Digital Orientalist final residual closure",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Final current closure artifact for Digital Orientalist residuals."
+    },
+    {
+      "file": "probe_2026-05-11_followups_resolved.json",
+      "theme": "Individual follow-up resolutions",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current follow-up resolution artifact."
+    },
+    {
+      "file": "probe_2026-05-11_institutional_catalogue_rediscovery.json",
+      "theme": "Iranian institutional catalogue rediscovery",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current Marashi/Tehran follow-up context; parent sites may be reachable while manuscript endpoints remain non-searchable."
+    },
+    {
+      "file": "probe_2026-05-11_ottoman_chunk1_yazmalar_yek.json",
+      "theme": "Ottoman chunk C1",
+      "current": false,
+      "superseded_by": [
+        "probe_2026-05-11_ottoman_chunks_synthesis.json"
+      ],
+      "release_blocker": false,
+      "note": "Appendix evidence for the current Ottoman synthesis."
+    },
+    {
+      "file": "probe_2026-05-11_ottoman_chunk2_isam_yordam.json",
+      "theme": "Ottoman chunk C2",
+      "current": false,
+      "superseded_by": [
+        "probe_2026-05-11_ottoman_chunks_synthesis.json"
+      ],
+      "release_blocker": false,
+      "note": "Appendix evidence for the current Ottoman synthesis."
+    },
+    {
+      "file": "probe_2026-05-11_ottoman_chunk3_sufi_tekke_yusuf_homonym_audit.json",
+      "theme": "Ottoman chunk C3",
+      "current": false,
+      "superseded_by": [
+        "probe_2026-05-11_ottoman_chunks_synthesis.json"
+      ],
+      "release_blocker": false,
+      "note": "Appendix evidence for the current Ottoman synthesis."
+    },
+    {
+      "file": "probe_2026-05-11_ottoman_chunk4_millikutup_diyanet.json",
+      "theme": "Ottoman chunk C4",
+      "current": false,
+      "superseded_by": [
+        "probe_2026-05-11_ottoman_chunks_synthesis.json"
+      ],
+      "release_blocker": false,
+      "note": "Appendix evidence for the current Ottoman synthesis."
+    },
+    {
+      "file": "probe_2026-05-11_ottoman_chunks_synthesis.json",
+      "theme": "Ottoman current synthesis",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current Ottoman avenue status artifact."
+    },
+    {
+      "file": "probe_2026-05-11_residual_gaps_closure.json",
+      "theme": "Digital Orientalist intermediate residual closure",
+      "current": false,
+      "superseded_by": [
+        "probe_2026-05-11_do2023_residual_closure.json"
+      ],
+      "release_blocker": false,
+      "note": "Intermediate closure artifact."
+    },
+    {
+      "file": "probe_2026-05-11_tool_shaped_gaps_playwright.json",
+      "theme": "Tool-shaped gaps Playwright pass",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current companion artifact for the 4 probed Playwright gaps."
+    },
+    {
+      "file": "probe_2026-05-12_teece_corpus_bodleian_yek.json",
+      "theme": "Teece corpus Bodleian/YEK probe",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current Teece 2016 candidate-corpus reachability artifact."
+    },
+    {
+      "file": "search_2026-05-02_auctions.json",
+      "theme": "Baseline auction sweep",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Baseline v1.0 sweep retained as current historical evidence."
+    },
+    {
+      "file": "search_2026-05-02_catalogue_scribe_edition_backchain.json",
+      "theme": "Baseline catalogue/scribe/edition backchain",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Baseline v1.0 sweep retained as historical evidence; consult probe_2026-05-18_patna_sulaymaniyah_ms2_and_backchain.json for Demirci 1997 online retrieval, probe_2026-05-18_modern_edition_source_apparatus.json for newer edition-source checks, and probe_2026-05-18_barqi_akhtar_acquisition.json for Barqi/Akhtar acquisition."
+    },
+    {
+      "file": "search_2026-05-02_iran_caucasus.json",
+      "theme": "Baseline Iran/Caucasus sweep",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Baseline v1.0 sweep; consult later Iran reachability artifacts for access-status refinements."
+    },
+    {
+      "file": "search_2026-05-02_mecmua_nesimi_adjacency.json",
+      "theme": "Baseline mecmua/Nesimi adjacency sweep",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Baseline v1.0 sweep retained as current historical evidence."
+    },
+    {
+      "file": "search_2026-05-02_south_asian_global.json",
+      "theme": "Baseline South Asian/global sweep",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Baseline v1.0 sweep; later South Asia avenue adds follow-up context."
+    },
+    {
+      "file": "search_2026-05-02_tezkire.json",
+      "theme": "Baseline tezkire sweep",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Baseline v1.0 sweep retained as current historical evidence."
+    },
+    {
+      "file": "search_2026-05-02_turkey_anatolia.json",
+      "theme": "Baseline Turkey/Anatolia sweep",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Baseline v1.0 sweep; later Ottoman synthesis adds follow-up context."
+    },
+    {
+      "file": "search_2026-05-02_uk_european.json",
+      "theme": "Baseline UK/European sweep",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Baseline v1.0 sweep retained as current historical evidence."
+    },
+    {
+      "file": "search_2026-05-10_marashi_tehran_followup.json",
+      "theme": "Marashi/Tehran follow-up",
+      "current": true,
+      "superseded_by": [],
+      "release_blocker": false,
+      "note": "Current follow-up clarifying that parent reachability did not yield executable manuscript-catalogue search."
+    }
+  ]
+}

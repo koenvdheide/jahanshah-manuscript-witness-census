@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "session_label": "Resolution of 3 single-item follow-ups identified in the 2026-05-11 2026-05-11 follow-up pass candidate stack",
+  "session_id": "followups-resolved-2026-05-11",
+  "date": "2026-05-11",
+  "scope": "Targeted resolution of the 3 single-item follow-ups flagged across the 2026-05-11 probe artifacts: F-EDITION1 (Değirmençay 2021 edition addition), F-DIYANET-HURUFI-931 (full metadata extraction), F-FOLLOWUP-CAIRO-HIDIVIYYE (Yusuf-vs-other classification). All three resolved within 2026-05-11 follow-up pass candidate scope without expanding the witness register.",
+  "method_summary": {
+    "f_edition1": "Edit data/search_keys.json modern_editions_and_studies_for_backchain.editions_and_studies array to add the Değirmençay 2021 Erzurum Persian-poems edition entry alongside the existing 2004 entry by the same editor.",
+    "f_diyanet_hurufi_931": "Playwright headless navigation to https://yazmaeserler.diyanet.gov.tr/details?id=931&materialType=YE; accessibility snapshot captures the full DOM after JS-rendering (the base64-encoded image-data portion is irrelevant to bibliographic metadata which renders as ordinary HTML text).",
+    "f_followup_cairo_hidiviyye": "Grep on the C3 chunk JSON (probe_2026-05-11_ottoman_chunk3_sufi_tekke_yusuf_homonym_audit.json) located the original TEIS Yesevi attribution citing the Cairo Hidiviyye works as YUSUF HAKÎKÎ, with explicit fp_risk_for_cihansah_search: LOW notation. Resolution does NOT require Çavuşoğlu edition lookup."
+  },
+  "resolutions": {
+    "F-EDITION1": {
+      "item": "Değirmençay 2021 Erzurum Persian poems edition (NEW relative to current search_keys.json which had Değirmençay 2004 only)",
+      "source": "Chunk C2 ISAM Yordam direct query battery; surfaced as printed-edition record in ISAM holdings",
+      "action_taken": "Added entry to data/search_keys.json modern_editions_and_studies_for_backchain.editions_and_studies array, immediately after Değirmençay 2004",
+      "added_metadata": {
+        "editor": "Değirmençay",
+        "year": 2021,
+        "place": "Atatürk Üniv., Erzurum",
+        "note": "Persian poems edition; second/updated edition by the same editor. Surfaced 2026-05-11 via ISAM Yordam direct GET-form exercise (chunk C2 finding F-EDITION1); not in earlier poetry-witness package state. Add to backchain matrix for future scope textual-criticism collation work."
+      },
+      "by_verification_impact": "ZERO (no witness change; updates a backchain-key reference list)",
+      "status": "RESOLVED"
+    },
+    "F-DIYANET-HURUFI-931": {
+      "item": "Diyanet İşleri Başkanlığı Kütüphanesi MS id=931 [er-Risâle fî esrâri'l-hurûf] full metadata (was partial; JS-rendered detail page)",
+      "source": "Chunk C4 Milli Kütüphane + Diyanet probe; flagged as future scope mecmûʿa-mining lead pending Playwright extraction",
+      "action_taken": "Playwright headless navigation + accessibility snapshot extracted full DOM metadata",
+      "extracted_metadata": {
+        "title_turkish": "[er-Risâle fî esrâri'l-hurûf]",
+        "title_arabic": "رساله فی اسرار الحروف",
+        "title_english_translation": "Epistle on the Secrets of the Letters",
+        "katalog_kaynagi": "DIB (Diyanet İşleri Başkanlığı)",
+        "language": "Arabic (Arapça)",
+        "dewey_class": "297.7 İSC (Islamic Mysticism / Sufism)",
+        "demirbas": "002445-III (THIRD work in compound manuscript 002445)",
+        "author": "Za'ferânî / الزعفرانی (al-Za'farānī)",
+        "folios": "36b-37a (2-folio fragment embedded in compound codex)",
+        "script": "Tâlik",
+        "format": "mensur (prose)",
+        "lines_per_page": 21,
+        "dimensions_mm": "180 x 130",
+        "writing_surface_mm": "120 x 80",
+        "paper": "Nohudi renkte filigransız kâğıt (chickpea-colored, without watermark)",
+        "ink": "Black and red",
+        "opening_lines_ar": "بسم الله ... قال الشیخ فرید دهره ووحید عصره کمال الاسلام والمسلمین الزعفرانی هذه من بعض اسرار الحروف ینتفع به اخوانی فی الدین",
+        "opening_lines_translation": "In the name of God ... The Sheikh, unique of his time and singular of his age, Kamāl al-Islām wa-l-Muslimīn al-Za'farānī said: These are some of the secrets of the letters; my brothers in the faith may profit by them",
+        "closing_lines_ar": "لا من کتب لام والف واسراره فی غیر هذه المعنی لانه من الاسماء المرکبة المفهمة للنفی ای ینفی ما سوی الله والحمد لله رب العالمین یا رب العالمین",
+        "condition": "Spine disintegrated; some pages dethreaded; water damage; mold stains",
+        "rakabe_catchwords": "Present",
+        "subject_terms": "Tasavvuf / تصوف / Sufism",
+        "marc_export_available": true,
+        "digital_kaynak_available": true
+      },
+      "downgrade_assessment": {
+        "original_claim_in_c4": "Hurufi text; per v1.0 Nesîmî-adjacency heuristic, Hurufi co-occurrence is a Cihanşah-witness predictor; flagged as future scope mecmûʿa-mining lead",
+        "post_extraction_correction": "This MS is generic Sufi letter-mysticism (asrār al-ḥurūf as Islamic intellectual tradition), NOT Hurufism-of-Fadl Allāh-Astarābādī (the heterodox-Shia 14th-c. movement that the Bektashi-Hurufi cluster connects to Cihanşah via Nesîmî). Doctrinally distinct surfaces despite shared vocabulary.",
+        "evidence": "Author is al-Za'farānī (likely a 9th-11th-c. early Sufi shaykh, multiple candidates; the title 'Kamāl al-Islām wa-l-Muslimīn' is an Ash'arite-Sufi honorific not used in Hurufi circles); the content is generic letter-cosmology (asrār al-ḥurūf as a Sufi philosophical-mystical topos going back to al-Ḥakīm al-Tirmidhī d. 932); zero Hurufi doctrinal markers (no Fadl Allāh references, no Nesîmî adjacency in the compound codex's other works as far as visible)",
+        "future_scope_relevance_revised": "DOWNGRADED. This MS is NOT a Nesîmî-adjacency-worthy Hurufi text. The future scope mecmûʿa-mining lead F-DIYANET-HURUFI-931 is closed without further followup. The broader Diyanet collection may still hold Hurufism-proper texts; the lead was incorrectly assumed from a generic asrār al-ḥurūf title-match without author verification."
+      },
+      "current_register_impact": "ZERO",
+      "future_scope_lead_revision": "REMOVED from future scope mecmûʿa-mining backlog",
+      "status": "RESOLVED_AS_FALSE_LEAD"
+    },
+    "F-FOLLOWUP-CAIRO-HIDIVIYYE": {
+      "item": "Cairo Hidiviyye Kütüphanesi 'Et-Tesnîm + Er-Rahîk el-Mahtûm' classification (Yusuf Hakîkî vs other-namesake vs Cihanşah)",
+      "source": "Chunk C3 Sufi tekke + Yusuf homonym audit; classified as 'indeterminate' pending Çavuşoğlu edition lookup",
+      "action_taken": "Re-read of the C3 audit entry plus targeted WebSearch on Dar al-Kutub / Hidiviyye holdings",
+      "resolution": {
+        "teis_attribution": "Per TEIS Yesevi (the authoritative Turkish biographical encyclopedia used throughout v1.0), the Cairo Hidiviyye works 'Et-Tesnîm + Er-Rahîk el-Mahtûm' are attributed to YUSUF HAKÎKÎ Bursavi, NOT Cihanşah Qaraqoyunlu",
+        "c3_audit_fp_risk_for_cihansah_search": "LOW (per C3 chunk JSON, line 149-150: 'work titles disambiguate; Cihanşah corpus is Divan-only')",
+        "scope_classification": "NOT_A_CIHANSAH_WITNESS_CANDIDATE; the 'indeterminate' tag in C3 was about Yusuf-vs-other-homonym uncertainty (whether the Cairo Hidiviyye record is genuinely Yusuf Hakîkî or a different namesake/misattribution), NOT about Cihanşah-relevance",
+        "out_of_current_scope": "The Yusuf-vs-other-homonym disambiguation remains open but is out of 2026-05-11 follow-up pass Cihanşah-witness scope. Defer to future scope if a comprehensive Yusuf Hakîkî MS census is undertaken.",
+        "future_scope_resolution_path": "Direct Dar al-Kutub al-Misriyya catalogue query OR Çavuşoğlu/Boz Yusuf Hakîkî Divani edition introduction reading"
+      },
+      "current_register_impact": "ZERO (was already excluded from Cihanşah witness candidates per work-title disambiguation)",
+      "status": "RESOLVED_FOR_V1_1_0_SCOPE_DEFERRED_FOR_V2_DETAIL"
+    }
+  },
+  "summary": {
+    "followups_resolved": 3,
+    "follow_up_breakdown": {
+      "added_metadata": 1,
+      "playwright_extraction": 1,
+      "scope_clarification": 1
+    },
+    "false_leads_corrected": 1,
+    "current_register_impact": "ZERO. 14-entry register unchanged. by_verification sum unchanged.",
+    "future_scope_backlog_changes": {
+      "removed": [
+        "F-DIYANET-HURUFI-931 future scope mecmûʿa-mining lead (downgraded: not Hurufi-proper)"
+      ],
+      "retained_but_deferred": [
+        "Yusuf Hakîkî Bursavi MS census future scope followup; Cairo Hidiviyye is one of several Yusuf-attributed locations needing future scope disambiguation"
+      ]
+    },
+    "residual_gap_count_after_followups": {
+      "tool_shaped_gaps": 10,
+      "paywall_print_only_gaps": 9,
+      "single_item_followups": 0,
+      "future_scope_deferred_intentional": 5,
+      "note": "All 3 single-item follow-ups RESOLVED. Net 2026-05-11 follow-up pass release-ready status unchanged: 0 release-blocking gaps."
+    }
+  },
+  "audit_metadata": {
+    "record_type": "targeted_followup",
+    "record_date": "2026-05-11",
+    "artifact_status": "current",
+    "source_layers": [
+      "project_classification",
+      "scholarly_description"
+    ],
+    "access_mode": "open_web",
+    "disposition": "rejected_false_positive",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

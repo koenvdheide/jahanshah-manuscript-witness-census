@@ -1,0 +1,940 @@
+{
+  "schema_version": 1,
+  "session_label": "Teece 2016 candidate-corpus reachability probe — Digital Bodleian + YEK",
+  "session_id": "teece-2026-05-12-bodleian-yek-probe",
+  "date": "2026-05-12",
+  "scope": "7 candidate manuscripts identified from Teece 2016 thesis as Pir Budaq Qaraqoyunlu library members; reachability + cataloguer-metadata capture; substantive Hakîkî-content textual search deferred to follow-on session.",
+  "method_summary": {
+    "primary_bodleian": "direct HTTP against digital.bodleian.ox.ac.uk public search; application/ld+json Accept header used for the public Data API at /search/",
+    "fallback_bodleian": "Playwright headless browser navigation, 60s navigation cap",
+    "secondary_bodleian_catalogue": "Fihrist public catalogue records checked for Ouseley 131, 140, 141",
+    "primary_yek": "authenticated YEK catalogue queries; no exact prior public search records were found for the requested query strings"
+  },
+  "probes": [
+    {
+      "target_id": "A1",
+      "portal": "Digital Bodleian",
+      "shelfmark": "Ouseley 131",
+      "source_reference": "Teece 2016, pp. 52 (and Chapter 2 detailed analysis); preliminary main-session read at PDF p. 93",
+      "probe_attempts": [
+        {
+          "method": "direct_http",
+          "url": "https://digital.bodleian.ox.ac.uk/?q=Ouseley+131",
+          "status": 200,
+          "body_length": 466761,
+          "challenge_markers": [],
+          "duration_s": 0.872,
+          "outcome": "HTML application shell; no challenge markers"
+        },
+        {
+          "method": "direct_http_data_api",
+          "url": "https://digital.bodleian.ox.ac.uk/search/?q=Ouseley%20131",
+          "status": 200,
+          "body_length": 1101,
+          "challenge_markers": [],
+          "duration_s": 0.081,
+          "outcome": "application/ld+json search returned totalItems=0"
+        },
+        {
+          "method": "playwright",
+          "url": "https://digital.bodleian.ox.ac.uk/search/?q=Ouseley%20131",
+          "status": null,
+          "body_length": 753,
+          "challenge_markers": [],
+          "duration_s": 8.447,
+          "outcome": "Rendered search page reported: No items found"
+        },
+        {
+          "method": "fihrist_http",
+          "url": "https://www.fihrist.org.uk/catalog/manuscript_12919",
+          "status": 200,
+          "body_length": 20205,
+          "challenge_markers": [],
+          "duration_s": null,
+          "outcome": "Catalogue record found"
+        }
+      ],
+      "best_metadata_capture": {
+        "title": "A treasury copy of Nizārī Quhistānī's Dastūrnāmah.",
+        "date_ah": "circa 865 AH",
+        "date_ce": "circa 1460 CE",
+        "folios": "ff. 62",
+        "calligrapher": null,
+        "scribe": null,
+        "language": "Persian",
+        "format": "codex",
+        "iiif_manifest_url": null,
+        "catalogue_url": "https://www.fihrist.org.uk/catalog/manuscript_12919",
+        "contents_summary": "Dastūrnāmah / دستورنامه by Nizārī Quhistānī; Fihrist notes comparison with Bodleian MS. Ouseley 140 and MS. Ouseley 141.",
+        "illumination_description": null,
+        "hand": "Nastaʻlīq",
+        "origin": "Shiraz",
+        "availability_status": "catalogue-only on Fihrist; not found in Digital Bodleian search"
+      },
+      "ready_for_content_search": false,
+      "notes": "Fihrist reachable and richer than Digital Bodleian for this shelfmark. No Digital Bodleian object or IIIF manifest located."
+    },
+    {
+      "target_id": "A2",
+      "portal": "Digital Bodleian",
+      "shelfmark": "Ouseley 140",
+      "source_reference": "Teece 2016, pp. 52 (and Chapter 2 detailed analysis); preliminary main-session read at PDF p. 93",
+      "probe_attempts": [
+        {
+          "method": "direct_http",
+          "url": "https://digital.bodleian.ox.ac.uk/?q=Ouseley+140",
+          "status": 200,
+          "body_length": 466761,
+          "challenge_markers": [],
+          "duration_s": 0.765,
+          "outcome": "HTML application shell; no challenge markers"
+        },
+        {
+          "method": "direct_http_data_api",
+          "url": "https://digital.bodleian.ox.ac.uk/search/?q=Ouseley%20140",
+          "status": 200,
+          "body_length": 4125,
+          "challenge_markers": [],
+          "duration_s": 0.063,
+          "outcome": "application/ld+json search returned totalItems=2; first result is Bodleian Library MS. Ouseley 140"
+        },
+        {
+          "method": "playwright",
+          "url": "https://digital.bodleian.ox.ac.uk/search/?q=Ouseley%20140",
+          "status": null,
+          "body_length": 1780,
+          "challenge_markers": [],
+          "duration_s": 5.155,
+          "outcome": "Rendered search page returned 2 items; first matching result linked to /objects/44c54e4b-d102-4329-97cc-9607bdd9bee1/"
+        },
+        {
+          "method": "iiif_manifest_http",
+          "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/44c54e4b-d102-4329-97cc-9607bdd9bee1.json",
+          "status": 200,
+          "body_length": 94647,
+          "challenge_markers": [],
+          "duration_s": null,
+          "outcome": "IIIF Presentation v2 manifest retrieved; 102 canvases"
+        },
+        {
+          "method": "fihrist_http",
+          "url": "https://www.fihrist.org.uk/catalog/manuscript_4623",
+          "status": 200,
+          "body_length": 21754,
+          "challenge_markers": [],
+          "duration_s": null,
+          "outcome": "Catalogue record found"
+        }
+      ],
+      "best_metadata_capture": {
+        "title": "Rubāʻīyāt-i Ḥakīm ʻUmar Khayyām / Rubā‘īyāt",
+        "date_ah": "End of Ṣafar 865 AH",
+        "date_ce": "December 1460 CE",
+        "folios": "42 ff. in Fihrist; 102 Digital Bodleian surfaces/canvases",
+        "calligrapher": "Shaykh Maḥmūd Pirbūdāqī",
+        "scribe": "Shaykh Maḥmūd Pirbūdāqī (named under Fihrist Hand(s))",
+        "language": "Persian",
+        "format": "codex",
+        "iiif_manifest_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/44c54e4b-d102-4329-97cc-9607bdd9bee1.json",
+        "catalogue_url": "https://www.fihrist.org.uk/catalog/manuscript_4623",
+        "digital_bodleian_url": "https://digital.bodleian.ox.ac.uk/objects/44c54e4b-d102-4329-97cc-9607bdd9bee1/",
+        "contents_summary": "Collection of 158 rubā‘īyāt/quatrains of ʻUmar Khayyām; Fihrist gives incipit: گر گوهر طاعتت نسفتم هرگز گرد گنه از چهره نرفتم هرگز",
+        "illumination_description": null,
+        "binding": "19th-century marbled paper over pasteboard",
+        "hand": "Nastaʻlīq",
+        "origin": "Shīrāz / Iran, Shiraz",
+        "availability_status": "digitized on Digital Bodleian; full IIIF manifest available"
+      },
+      "ready_for_content_search": true,
+      "notes": "Only Ouseley item among the three that is currently digitized in Digital Bodleian."
+    },
+    {
+      "target_id": "A3",
+      "portal": "Digital Bodleian",
+      "shelfmark": "Ouseley 141",
+      "source_reference": "Teece 2016, pp. 52 (and Chapter 2 detailed analysis); preliminary main-session read at PDF p. 93",
+      "probe_attempts": [
+        {
+          "method": "direct_http",
+          "url": "https://digital.bodleian.ox.ac.uk/?q=Ouseley+141",
+          "status": 200,
+          "body_length": 466761,
+          "challenge_markers": [],
+          "duration_s": 0.694,
+          "outcome": "HTML application shell; no challenge markers"
+        },
+        {
+          "method": "direct_http_data_api",
+          "url": "https://digital.bodleian.ox.ac.uk/search/?q=Ouseley%20141",
+          "status": 200,
+          "body_length": 1101,
+          "challenge_markers": [],
+          "duration_s": 0.08,
+          "outcome": "application/ld+json search returned totalItems=0"
+        },
+        {
+          "method": "playwright",
+          "url": "https://digital.bodleian.ox.ac.uk/search/?q=Ouseley%20141",
+          "status": null,
+          "body_length": 753,
+          "challenge_markers": [],
+          "duration_s": 5.127,
+          "outcome": "Rendered search page reported: No items found"
+        },
+        {
+          "method": "fihrist_http",
+          "url": "https://www.fihrist.org.uk/catalog/manuscript_12916",
+          "status": 200,
+          "body_length": 20191,
+          "challenge_markers": [],
+          "duration_s": null,
+          "outcome": "Catalogue record found"
+        }
+      ],
+      "best_metadata_capture": {
+        "title": "A selection of quatrains by Bābā Afz̤al",
+        "date_ah": "circa 865 AH",
+        "date_ce": "circa 1460 CE",
+        "folios": "ff. 12",
+        "calligrapher": null,
+        "scribe": null,
+        "language": "Persian",
+        "format": "codex",
+        "iiif_manifest_url": null,
+        "catalogue_url": "https://www.fihrist.org.uk/catalog/manuscript_12916",
+        "marco_url": "https://marco.ox.ac.uk/ark%3A29072/x01n79h54847",
+        "contents_summary": "Rubāʻīyāt-i Khwājah Afz̤al Kāshī / رباعيات خواجه افضل كاشى by Bābā Afz̤al; Fihrist notes comparison with Bodleian MS. Ouseley 140 and MS. Ouseley 131.",
+        "illumination_description": null,
+        "hand": "Nastaʻlīq",
+        "origin": "Shiraz",
+        "availability_status": "catalogue-only on Fihrist/MARCO; not found in Digital Bodleian search"
+      },
+      "ready_for_content_search": false,
+      "notes": "Fihrist and MARCO both indicate not available online; no Digital Bodleian object or IIIF manifest located."
+    },
+    {
+      "target_id": "B1",
+      "portal": "YEK",
+      "shelfmark": "Süleymaniye Aya Sofya 3288",
+      "source_reference": "Teece 2016 candidate list: Shahnama, 1456, possibly commissioned by Muhammadi ibn Jahanshah Qaraqoyunlu",
+      "probe_attempts": [
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "Ayasofya 3288",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 24.16,
+          "outcome": "11268 raw hits; broad AllFields tokenization returned irrelevant top rows"
+        },
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "Aya Sofya 3288",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 25.423,
+          "outcome": "36293 raw hits; broad AllFields tokenization returned irrelevant top rows"
+        },
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "Ayasofya 3288 muk.",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 23.776,
+          "outcome": "99161 raw hits; broad AllFields tokenization returned irrelevant top rows"
+        },
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "Süleymaniye Ayasofya 3288",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 23.919,
+          "outcome": "240883 raw hits; broad AllFields tokenization returned irrelevant top rows"
+        },
+        {
+          "method": "yek_search_cli_precision",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "3288",
+            "field": "yer_numarasi",
+            "and_term": "Ayasofya",
+            "and_field": "koleksiyon_adi"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 26.1,
+          "outcome": "1 raw hit; target found as YEK 203941"
+        },
+        {
+          "method": "yek_detail_cli",
+          "url": "https://portal.yek.gov.tr/works/detail/203941",
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": null,
+          "outcome": "Detail metadata extracted"
+        }
+      ],
+      "search_results_top3": [
+        {
+          "yek_id": "203941",
+          "title": "Şahnâme / شاه نامه",
+          "date_ah": "861",
+          "date_ce": "1456-1457 CE (inferred from AH 861; Teece target gives 1456)",
+          "folios": "25 s., 523 yk.",
+          "iiif_available": false,
+          "detail_page_url": "https://portal.yek.gov.tr/works/detail/203941",
+          "relevance": "exact Ayasofya 03288 precision hit"
+        }
+      ],
+      "best_metadata_capture": {
+        "title": "Şahnâme / شاه نامه",
+        "date_ah": "861",
+        "date_ce": "1456-1457 CE (inferred from AH 861; Teece target gives 1456)",
+        "folios": "25 s., 523 yk.",
+        "calligrapher": null,
+        "scribe": null,
+        "language": "Farsça",
+        "format": "Yazma eser",
+        "iiif_manifest_url": null,
+        "catalogue_url": "https://portal.yek.gov.tr/works/detail/203941",
+        "contents_summary": "Şahnâme; YEK subject: 891.5 / İran edebiyatı.",
+        "illumination_description": null,
+        "library": "Süleymaniye Kütüphanesi",
+        "collection": "Ayasofya",
+        "shelfmark_normalized": "03288",
+        "dimensions": "355x435-225x146 mm.",
+        "script": "Arap harfli-Talik",
+        "material_type": "Yazma eser",
+        "iiif_available": false
+      },
+      "ready_for_content_search": false,
+      "notes": "YEK public detail page was reachable through authenticated CLI. No viewer link/IIIF availability surfaced. Broad user-specified AllFields variants are high-noise due YEK tokenization; shelfmark+collection precision search is decisive."
+    },
+    {
+      "target_id": "B2",
+      "portal": "YEK",
+      "shelfmark": "Türk ve İslam Eserleri Müzesi (TIEM) 1986",
+      "source_reference": "Teece 2016 candidate list: manuscript copied by Shaykh Mahmud Pir Budaqi, 863 / 1458 to 1459, Iran",
+      "probe_attempts": [
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "TIEM 1986",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 25.096,
+          "outcome": "4490 raw hits; broad AllFields top rows irrelevant"
+        },
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "Türk-İslam Eserleri 1986",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 23.613,
+          "outcome": "463236 raw hits; broad AllFields top rows irrelevant"
+        },
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "Türk ve İslam Eserleri 1986",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 25.119,
+          "outcome": "587715 raw hits; broad AllFields top rows irrelevant"
+        },
+        {
+          "method": "yek_search_cli_precision",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "1986",
+            "field": "yer_numarasi",
+            "and_term": "TİEM",
+            "and_field": "koleksiyon_adi"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 23.851,
+          "outcome": "4 raw hits; TIEM 01986 component records found"
+        },
+        {
+          "method": "yek_search_cli_precision",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "1986",
+            "field": "yer_numarasi",
+            "and_term": "Pir Budaq",
+            "and_field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 23.649,
+          "outcome": "1 raw hit; YEK 704932"
+        },
+        {
+          "method": "yek_detail_cli",
+          "url": "https://portal.yek.gov.tr/works/detail/704929,704930,704931,704932",
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": null,
+          "outcome": "Detail metadata extracted for all four TIEM 01986 component records"
+        }
+      ],
+      "search_results_top3": [
+        {
+          "yek_id": "704932",
+          "title": "Enîsü’l-Âşıkîn. / أنيس العاشقين.",
+          "date_ah": "Cemâziyelâhir 863.",
+          "date_ce": "1459 CE (inferred; Teece target gives 1458-1459)",
+          "folios": "218b-230b+I yk., 17 st. ;",
+          "iiif_available": false,
+          "detail_page_url": "https://portal.yek.gov.tr/works/detail/704932",
+          "relevance": "precision hit for TIEM 1986 and Pir Budaq"
+        },
+        {
+          "yek_id": "704929",
+          "title": "Külliyât-ı Kâsım-ı Envâr. / كليات قاسم أنور.",
+          "date_ah": null,
+          "date_ce": null,
+          "folios": "I+230+I yk., 17 st. ;",
+          "iiif_available": false,
+          "detail_page_url": "https://portal.yek.gov.tr/works/detail/704929",
+          "relevance": "aggregate/component record for TIEM 01986"
+        },
+        {
+          "yek_id": "704931",
+          "title": "Enîsü’l-Ârifîn. / أنيس العارفين.",
+          "date_ah": null,
+          "date_ce": null,
+          "folios": "198b-217b yk., 17 st. ;",
+          "iiif_available": false,
+          "detail_page_url": "https://portal.yek.gov.tr/works/detail/704931",
+          "relevance": "component record for TIEM 01986"
+        }
+      ],
+      "best_metadata_capture": {
+        "title": "TIEM 01986 composite: Külliyât-ı Kâsım-ı Envâr; Dîvân; Enîsü’l-Ârifîn; Enîsü’l-Âşıkīn",
+        "date_ah": "Cemâziyelâhir 863 (dated component 01986-003)",
+        "date_ce": "1459 CE (inferred from AH 863; Teece target gives 1458-1459)",
+        "folios": "I+230+I yk., 17 st.; component ranges include I+1b-217b, 198b-217b, and 218b-230b+I",
+        "calligrapher": null,
+        "scribe": null,
+        "language": "Farsça",
+        "format": "Yazma eser",
+        "iiif_manifest_url": null,
+        "catalogue_url": "https://portal.yek.gov.tr/works/detail/704929",
+        "contents_summary": "YEK 704929 notes: Bu mecmuada Kâsım-ı Envâr'ın Dîvân'ı, Enîsü’l-Ârifîn ve Enîsü’l-Âşıkîn eserleri yer almaktadır.",
+        "illumination_description": null,
+        "library": "Türk ve İslam Eserleri Müzesi",
+        "collection": "TİEM Yazma Eser Koleksiyonu",
+        "shelfmark_normalized": "01986",
+        "dimensions": "260x180-180x95 mm.",
+        "script": "Arap harfli-Nesta‘lîk.",
+        "material_type": "Yazma eser",
+        "iiif_available": false,
+        "cataloguer": "Banu Ateş (surfaced inside notes_field on YEK 704929)",
+        "component_records": [
+          {
+            "yek_id": "704929",
+            "title": "Külliyât-ı Kâsım-ı Envâr. / كليات قاسم أنور.",
+            "shelfmark": "01986-000"
+          },
+          {
+            "yek_id": "704930",
+            "title": "Dîvân component under TIEM 01986",
+            "shelfmark": "01986-001"
+          },
+          {
+            "yek_id": "704931",
+            "title": "Enîsü’l-Ârifîn. / أنيس العارفين.",
+            "shelfmark": "01986-002"
+          },
+          {
+            "yek_id": "704932",
+            "title": "Enîsü’l-Âşıkīn. / أنيس العاشقين.",
+            "shelfmark": "01986-003"
+          }
+        ]
+      },
+      "ready_for_content_search": false,
+      "notes": "YEK did not surface a structured scribe field in extracted detail metadata, despite the Teece-supplied Shaykh Mahmud Pir Budaqi attribution. No viewer link/IIIF availability surfaced."
+    },
+    {
+      "target_id": "B3",
+      "portal": "YEK",
+      "shelfmark": "TIEM 1987",
+      "source_reference": "Teece 2016 candidate list: Diwan of Katibi of Nishapur, 860 / 1456, copied by Abd al-Rahman al-Khwarazmi for Pir Budaq",
+      "probe_attempts": [
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "TIEM 1987",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 23.894,
+          "outcome": "4697 raw hits; broad AllFields top rows irrelevant"
+        },
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "Türk-İslam Eserleri 1987",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 25.943,
+          "outcome": "463291 raw hits; broad AllFields top rows irrelevant"
+        },
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "Türk ve İslam Eserleri 1987",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 23.846,
+          "outcome": "587699 raw hits; broad AllFields top rows irrelevant"
+        },
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "Katibi Divan",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 23.954,
+          "outcome": "16453 raw hits; broad AllFields top rows include generic Dîvân noise"
+        },
+        {
+          "method": "yek_search_cli_precision",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "1987",
+            "field": "yer_numarasi",
+            "and_term": "TİEM",
+            "and_field": "koleksiyon_adi"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 23.648,
+          "outcome": "1 raw hit; target found as YEK 704933"
+        },
+        {
+          "method": "yek_search_cli_precision",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "1987",
+            "field": "yer_numarasi",
+            "and_term": "Katibi",
+            "and_field": "eser_adi"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 23.306,
+          "outcome": "2 raw hits; target plus one unrelated shelfmark-token false positive"
+        },
+        {
+          "method": "yek_detail_cli",
+          "url": "https://portal.yek.gov.tr/works/detail/704933",
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": null,
+          "outcome": "Detail metadata extracted"
+        }
+      ],
+      "search_results_top3": [
+        {
+          "yek_id": "704933",
+          "title": "Dîvân-ı Kâtibî. / ديوان كاتبي.",
+          "date_ah": "15 Cemâziyelevvel 860.",
+          "date_ce": "1456 CE (inferred from AH 860; Teece target gives 1456)",
+          "folios": "131+I yk., 15 st., 2 stn. ;",
+          "iiif_available": false,
+          "detail_page_url": "https://portal.yek.gov.tr/works/detail/704933",
+          "relevance": "exact TIEM 01987 precision hit"
+        },
+        {
+          "yek_id": "396217",
+          "title": "Mekâtib-i Sultâniyeye Yeni Teşkilata Tevfikan 1329-1330 Sene-i Dersiyesinde Talebe Kabülüne ve Programın Sûret-i Tatbikine Dâ’ir Tâlimatnâme / مكاتب سلطانيه يه يكى تشكيلاته توفيقا ۱۳٢۹-۱۳۳۰ سنه درسيه سنده طلبه قبولنه و پروغرامك صورت تطبيقنه دائر تعليماتنامه",
+          "date_ah": null,
+          "date_ce": null,
+          "folios": null,
+          "iiif_available": null,
+          "detail_page_url": "https://portal.yek.gov.tr/works/detail/396217",
+          "relevance": "false positive from 1987 shelfmark token search"
+        }
+      ],
+      "best_metadata_capture": {
+        "title": "Dîvân-ı Kâtibî. / ديوان كاتبي.",
+        "date_ah": "15 Cemâziyelevvel 860.",
+        "date_ce": "1456 CE (inferred from AH 860; Teece target gives 1456)",
+        "folios": "131+I yk., 15 st., 2 stn. ;",
+        "calligrapher": null,
+        "scribe": null,
+        "language": "Farsça",
+        "format": "Yazma eser",
+        "iiif_manifest_url": null,
+        "catalogue_url": "https://portal.yek.gov.tr/works/detail/704933",
+        "contents_summary": "Dîvân-ı Kâtibî; YEK subject: 891.5 / İran edebiyatı.",
+        "illumination_description": null,
+        "library": "Türk ve İslam Eserleri Müzesi",
+        "collection": "TİEM Yazma Eser Koleksiyonu",
+        "shelfmark_normalized": "01987",
+        "dimensions": "210x120-135x75 mm.",
+        "script": "Arap harfli-Nesta‘lîk.",
+        "material_type": "Yazma eser",
+        "iiif_available": false
+      },
+      "ready_for_content_search": false,
+      "notes": "YEK did not surface a structured scribe field in extracted detail metadata, despite the Teece-supplied Abd al-Rahman al-Khwarazmi attribution. No viewer link/IIIF availability surfaced."
+    },
+    {
+      "target_id": "B4",
+      "portal": "YEK",
+      "shelfmark": "Süleymaniye, shelfmark unknown in Teece; YEK precision match found TIEM 02030",
+      "source_reference": "Teece 2016 candidate list: unpublished Kulliyat of Imad al-Din Ali / Imad-i Faqih / Faqih-i Kermani, Pir Budaq commission; no specific shelfmark known from Teece",
+      "probe_attempts": [
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "Imad al-Din Faqih Kermani Külliyat",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 24.582,
+          "outcome": "340052 raw hits; first result is YEK 705037 but count is inflated by tokenization"
+        },
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "İmad-i Faqih",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 24.039,
+          "outcome": "234179 raw hits; YEK 705037 appears in top 3"
+        },
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "Faqih-i Kermani",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 24.155,
+          "outcome": "230735 raw hits; top rows irrelevant"
+        },
+        {
+          "method": "yek_search_cli",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "Faqih Kermani Külliyat",
+            "field": "AllFields"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 23.512,
+          "outcome": "1073 raw hits; top rows mostly Külliyât false positives"
+        },
+        {
+          "method": "yek_search_cli_precision",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "Külliyat",
+            "field": "eser_adi",
+            "and_term": "İmad",
+            "and_field": "yazar_adi"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 24.768,
+          "outcome": "1 raw hit; YEK 705037"
+        },
+        {
+          "method": "yek_search_cli_precision",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "İmad",
+            "field": "yazar_adi",
+            "and_term": "Külliyat",
+            "and_field": "eser_adi"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 24.325,
+          "outcome": "1 raw hit; YEK 705037"
+        },
+        {
+          "method": "yek_search_cli_precision",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "2030",
+            "field": "yer_numarasi",
+            "and_term": "İmad",
+            "and_field": "eser_adi"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 23.702,
+          "outcome": "2 raw hits; YEK 705037 Külliyât and YEK 705044 Dîvân component"
+        },
+        {
+          "method": "yek_search_cli_suleymaniye_check",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "Külliyat",
+            "field": "eser_adi",
+            "and_term": "Süleymaniye",
+            "and_field": "koleksiyonlar"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 24.026,
+          "outcome": "raw_result_count=null and rows_extracted=0; no Süleymaniye row rendered"
+        },
+        {
+          "method": "yek_search_cli_suleymaniye_check",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "query": {
+            "term": "İmad",
+            "field": "yazar_adi",
+            "and_term": "Süleymaniye",
+            "and_field": "koleksiyonlar"
+          },
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": 24.093,
+          "outcome": "raw_result_count=null and rows_extracted=0; no Süleymaniye row rendered"
+        },
+        {
+          "method": "yek_detail_cli",
+          "url": "https://portal.yek.gov.tr/works/detail/705037,705044",
+          "status": 0,
+          "body_length": null,
+          "challenge_markers": [],
+          "duration_s": null,
+          "outcome": "Detail metadata extracted for Külliyât record and Dîvân component"
+        }
+      ],
+      "search_results_top3": [
+        {
+          "yek_id": "705037",
+          "title": "Külliyât-ı İmâd-ı Fakîh. / كليات عماد فقيه.",
+          "date_ah": "04 Zilhicce 863.",
+          "date_ce": "1459 CE (inferred from AH 863)",
+          "folios": "II+200+II yk, 25 st. muhtelif stn. ;",
+          "iiif_available": false,
+          "detail_page_url": "https://portal.yek.gov.tr/works/detail/705037",
+          "relevance": "best precision hit for İmad + Külliyat; current YEK record is TIEM, not Süleymaniye"
+        },
+        {
+          "yek_id": "705044",
+          "title": "Dîvân-ı İmâd-ı Fakîh. / دیوان عماد فقيه.",
+          "date_ah": "04 Zilhicce 863.",
+          "date_ce": "1459 CE (inferred from AH 863)",
+          "folios": "90b-200a yk., muhtelif st. 3 stn. ;",
+          "iiif_available": false,
+          "detail_page_url": "https://portal.yek.gov.tr/works/detail/705044",
+          "relevance": "Dîvân component under TIEM 02030"
+        },
+        {
+          "yek_id": "547329",
+          "title": "Kasîde li-İmâmı İmâdı Fakîh / قصيدة لإمام عماد فقيه",
+          "date_ah": null,
+          "date_ce": null,
+          "folios": null,
+          "iiif_available": null,
+          "detail_page_url": "https://portal.yek.gov.tr/works/detail/547329",
+          "relevance": "related-name false positive; not the Külliyât target"
+        }
+      ],
+      "best_metadata_capture": {
+        "title": "Külliyât-ı İmâd-ı Fakîh. / كليات عماد فقيه.",
+        "date_ah": "04 Zilhicce 863.",
+        "date_ce": "1459 CE (inferred from AH 863)",
+        "folios": "II+200+II yk, 25 st. muhtelif stn. ;",
+        "calligrapher": null,
+        "scribe": null,
+        "language": "Farsça",
+        "format": "Yazma eser",
+        "iiif_manifest_url": null,
+        "catalogue_url": "https://portal.yek.gov.tr/works/detail/705037",
+        "contents_summary": "YEK 705037 notes: Penc Genc; Tarikatnâme (1a-35a), Safânâme / Münisü'l-Ebrâr (35b-50b), Hüsnnâme (51a-53b), Sohbetnâme (53b-65a), Muhabbetnâme (65b-76a), Dehnâme (76b-85b), Zeyl-i Dehnâme (86a-90a), Dîvân-ı İmâd-ı Fakîh with Kasa'id (90b-113b), Gazaliyyât (114a-191b), Rubâ'iyyât (192a-200a).",
+        "illumination_description": null,
+        "library": "Türk ve İslam Eserleri Müzesi",
+        "collection": "TİEM Yazma Eser Koleksiyonu",
+        "shelfmark_normalized": "02030-000",
+        "dimensions": "260x170-165x110 mm.",
+        "script": "Arap harfli-Ta‘lîk.",
+        "material_type": "Yazma eser",
+        "iiif_available": false,
+        "component_records": [
+          {
+            "yek_id": "705037",
+            "title": "Külliyât-ı İmâd-ı Fakîh. / كليات عماد فقيه.",
+            "shelfmark": "02030-000"
+          },
+          {
+            "yek_id": "705044",
+            "title": "Dîvân-ı İmâd-ı Fakîh. / دیوان عماد فقيه.",
+            "shelfmark": "02030-007"
+          }
+        ]
+      },
+      "ready_for_content_search": false,
+      "notes": "Teece target was described here as Süleymaniye with no shelfmark, but the live YEK precision match is TIEM 02030, not a Süleymaniye collection row. Targeted Süleymaniye field checks rendered zero rows/null counts. No viewer link/IIIF availability surfaced."
+    },
+    {
+      "target_id": "B5",
+      "portal": "YEK",
+      "shelfmark": "Süleymaniye Yazma Eser Kütüphanesi, Fatih 04054",
+      "source_reference": "Teece 2016, Appendix B entry #26 (printed pp. ~294 to 296): \"Fatih 4054 | Kulliyat of Imad al-Din (d. 1371) | date TBD | Istanbul, Suleymaniye Mosque Library\"",
+      "probe_purpose": "Follow-up verification of Teece Appendix B entry #26 against B4 finding (TIEM 02030 = Pir-Budaq-era Imad-i Faqih Kulliyat). Resolves Codex Call 2 note: \"B4 live precision hit resolves to TIEM 02030, not a confirmed Süleymaniye record.\"",
+      "probe_attempts": [
+        {
+          "method": "yek_search_cli_precision",
+          "url": "https://portal.yek.gov.tr/works/advancedsearch/full",
+          "params": {
+            "term": "04054",
+            "field": "yer_numarasi",
+            "and_term": "Fatih",
+            "and_field": "koleksiyon_adi"
+          },
+          "status": 0,
+          "raw_result_count": 7,
+          "rows_extracted": 7,
+          "outcome": "Süleymaniye Fatih 4054 resolves to a 7-component Imad-i Faqih Kulliyat composite"
+        },
+        {
+          "method": "yek_detail_cli",
+          "url": "https://portal.yek.gov.tr/works/detail/242536,242537,242538,242539,242540,242541,242542",
+          "status": 0,
+          "outcome": "Detail metadata extracted for all 7 components; uniform date_ah 898, 21 lines per page, 340x172 mm, Talik script"
+        }
+      ],
+      "best_metadata_capture": {
+        "title": "Külliyat of Imad al-Din Faqih Kermani (multi-text composite)",
+        "date_ah": "898",
+        "date_ce": "1492 to 1493 CE",
+        "folios": "ca. 400 total across 7 components (ff. 1-36, 37-63, 64-89, 90-163, 164-183, 184-208, 209-400)",
+        "calligrapher": null,
+        "scribe": null,
+        "language": "Persian",
+        "format": "Multi-text composite codex",
+        "iiif_manifest_url": null,
+        "catalogue_url": "https://portal.yek.gov.tr/works/detail/242536",
+        "detail_url_pattern": "https://portal.yek.gov.tr/works/detail/{component_yek_id}",
+        "contents_summary": "Component breakdown: 04054-001 Fâtihatü'l-İhlâs (ff.1-36, YEK 242536); 04054-002 Sohbetnâme (ff.37-63, YEK 242537); 04054-003 Muhabbetnâme (ff.64-89, YEK 242538); 04054-004 Misbâhu'l-Hidâye (ff.90-163, YEK 242539); 04054-005 Dehnâme (ff.164-183, YEK 242540); 04054-006 Dîvân-ı Kasâid (ff.184-208, YEK 242541); 04054-007 Dîvân-ı Gazeliyyât (ff.209-400, YEK 242542).",
+        "library": "Süleymaniye Kütüphanesi",
+        "collection": "Fatih",
+        "shelfmark_normalized": "04054",
+        "dimensions_mm": "340x172-150x82 mm",
+        "lines_per_page": 21,
+        "script": "Arap harfli-Talik",
+        "material_type": "Yazma eser"
+      },
+      "ready_for_content_search": false,
+      "pir_budaq_era": false,
+      "hakiki_witness_candidate": false,
+      "notes": "Follow-up verification of Teece Appendix B entry #26. Süleymaniye Fatih 04054 colophon resolves to 898 AH / 1492-93 CE (post-Pir-Budaq by 26 years); Teece's Pir-Budaq attribution applies to the parallel TIEM 02030 (B4, 863/1459) instead. See notes/teece_2016_appendix_b_disambiguation.md for the full disambiguation narrative."
+    }
+  ],
+  "summary": {
+    "total_targets": 8,
+    "bodleian_reachable": 1,
+    "bodleian_fihrist_catalogue_records": 3,
+    "bodleian_iiif_available": 1,
+    "yek_targets_with_precision_hits": 5,
+    "yek_hits": 5,
+    "yek_iiif_available": 0,
+    "ready_for_content_search": [
+      "A2"
+    ],
+    "hard_blocks": [],
+    "major_quirks": [
+      "Digital Bodleian default HTML is an application shell; application/ld+json Accept header is needed for direct JSON search results.",
+      "YEK AllFields tokenizes multi-word shelfmark strings and produced very large noisy counts; precision searches used yer_numarasi plus collection/title/author anchors.",
+      "YEK detail extraction did not expose structured scribe/calligrapher fields for B2/B3, even where Teece supplies copyist attributions.",
+      "Two distinct Imad-i Faqih Kulliyats exist on YEK: TIEM 02030 (863/1459 CE) is the Pir-Budaq-era manuscript; Süleymaniye Fatih 04054 (898/1492-93 CE) is a later independent copy. See notes/teece_2016_appendix_b_disambiguation.md."
+    ]
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-12",
+    "artifact_status": "current",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification"
+    ],
+    "access_mode": "open_web",
+    "disposition": "methodological_record",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

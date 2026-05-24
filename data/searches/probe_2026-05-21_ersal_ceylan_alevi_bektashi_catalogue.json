@@ -1,0 +1,69 @@
+{
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-21",
+    "artifact_status": "current",
+    "source_layers": [
+      "catalogue_record",
+      "community_report",
+      "project_classification",
+      "scholarly_description"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  },
+  "session_label": "Ersal-Ceylan Alevi-Bektashi Culture Institute manuscript catalogue probe",
+  "date": "2026-05-21",
+  "purpose": "Targeted check of a published Alevi-Bektashi manuscript catalogue surfaced during the literature-method review, to determine whether it adds any Cihansah Qaraqoyunlu / Hakiki witness lead beyond the current Alevi-community corpus.",
+  "source": {
+    "citation": "Ceylan, Omur and Mehmet Ersal. 2019. Alevi-Bektasi Kultur Enstitusu Arsivi Yazma Eserler Katalogu I. Alevilik-Bektasilik Arastirmalari Dergisi 20: 173-208. DOI: 10.24082/2019.abked.264.",
+    "isam_record": "https://makale.isam.org.tr/items/f669808e-6256-413e-a02e-907fe0895052",
+    "journal_record": "https://abked.de/index.php/abked/article/view/264",
+    "pdf_checked": "https://isamveri.org/pdfdrg/D03540/2019_20/2019_20_CEYLANO_ERSALM.pdf",
+    "source_type": "published article and catalogue of 30 manuscript/cenk items from the Alevi-Bektashi Culture Institute archive"
+  },
+  "method": {
+    "access": "Downloaded the public PDF and extracted text with pypdf for desk-search triage.",
+    "source_document_sha256": "AAD3179D948DBABD0D180739375C618C2D60C6AAD526385084ABA22CC58FAF9D",
+    "text_extraction_recipe": "Downloaded the PDF listed under source.pdf_checked; extracted page text with pypdf.PdfReader(...).pages; counted casefolded literal-string occurrences for each target term.",
+    "search_terms_checked": [
+      "Cihan",
+      "Cihansah",
+      "Cihan Shah",
+      "Jahanshah",
+      "Jahan Shah",
+      "Cihanşah",
+      "Cihânşâh",
+      "Hakiki",
+      "Hakîkî",
+      "Haqiqi",
+      "Karakoyunlu",
+      "Qaraqoyunlu",
+      "Djahanchah",
+      "Dschihanschah",
+      "حقیقی",
+      "حقىقى",
+      "جهانشاه",
+      "جهان شاه",
+      "قره قویونلو",
+      "قراقویونلو"
+    ],
+    "ocr_text_characters": 69291,
+    "limits": "PDF text extraction is a desk-search triage method. A zero-hit result does not prove the entire archive lacks a relevant witness, and it does not replace future inspection of later catalogue installments or the underlying archive."
+  },
+  "results": {
+    "target_term_hits": 0,
+    "new_witnesses_discovered": 0,
+    "existing_witnesses_augmented": 0,
+    "audit_rejections_added": 0,
+    "summary": "No Cihansah Qaraqoyunlu / Hakiki target term surfaced in the public PDF text of the 2019 catalogue installment. The article remains useful as Alevi-Bektashi archive context and as evidence that this community-adjacent manuscript-catalogue surface was checked."
+  },
+  "disposition": {
+    "register_change": "none",
+    "search_matrix_change": "none",
+    "article_value": "contextual comparator for Alevi-Bektashi manuscript archive cataloguing and community-adjacent discovery surfaces",
+    "follow_up": "No current release follow-up required. If later catalogue installments appear, repeat the same target-term and incipit probe."
+  }
+}

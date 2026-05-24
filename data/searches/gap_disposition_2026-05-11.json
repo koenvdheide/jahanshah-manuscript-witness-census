@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "session_label": "Gap disposition for 9 tool-shaped gaps deferred from approach B Playwright sweep",
+  "session_id": "gap-disposition-2026-05-11",
+  "date": "2026-05-11",
+  "scope": "Formal disposition (Filled / Out-of-Scope-Justified / Deferred-future scope / Indirectly Covered) for the 9 tool-shaped gaps NOT probed in the 2026-05-11 Playwright sweep (approach B). Companion to probe_2026-05-11_tool_shaped_gaps_playwright.json which covers the 4 probed gaps (manuscript.az + ek.anl.az + manuscript.ge + Chester Beatty).",
+  "methodology": "Each gap classified by (a) expected witness yield vs already-known register saturation, (b) resolution feasibility under remote-only constraint, (c) future scope relevance. No new probing in this artifact; the disposition itself closes the surface epistemically.",
+  "gaps": [
+    {
+      "gap_id": "G-MILLI-KUTUPHANE-LOGIN",
+      "portal": "Milli Kütüphane Dijital Kütüphane Yazma Eserler (Ankara National Library Manuscripts Division)",
+      "url": "https://dijital-kutuphane.mkutup.gov.tr/tr/manuscripts/catalog/advancedsearch",
+      "blockage": "Advanced search login-walled (302 redirect to /Account/Login); list endpoint + /authority/personlist are JS-SPA without honoring URL parameters",
+      "expected_witness_yield": "LOW; ankara_milli_kutuphane_a_5252 already in current poetry-witness register (sourced via Islamisation DB filiations panel TK_Mil_A_5252 slug, not via this portal directly). The site-restricted Google sweep already returned 0 Cihanşah hits.",
+      "resolution_feasibility": "Playwright + manuscript-collections institutional registration. Account-creation has identity-tracking implications; user opt-in required. Out of remote-only autonomous scope.",
+      "disposition": "OUT_OF_SCOPE_FOR_V1_1_0; expected yield does not justify registration; A 5252 already in register via alternative channel",
+      "future_scope_relevance": "future scope codicology surface (/authority/papertypelist endpoint flagged for paper-type metadata enumeration)",
+      "disposition_group": "OUT_OF_SCOPE_FOR_V1_1_0"
+    },
+    {
+      "gap_id": "G-EAP-POST-FORM",
+      "portal": "Endangered Archives Programme (British Library)",
+      "url": "https://eap.bl.uk/search",
+      "blockage": "Search endpoint returns HTTP 405 Method Not Allowed on GET; requires POST or JS form submission",
+      "expected_witness_yield": "LOW; per WebSearch enumeration of EAP projects, Persian-related projects (EAP1526 Afshar 1736-1796 documents) are POST-Cihanşah; EAP848 Georgian heritage materials are non-Persian; no EAP project digitizes a 15th-c. Cihanşah-era Persian-Turkic poetry corpus",
+      "resolution_feasibility": "Playwright POST form submission; technically straightforward. Yield-blocking factor is the scope mismatch, not the tooling.",
+      "disposition": "OUT_OF_SCOPE_FOR_V1_1_0; EAP project enumeration via WebSearch already confirmed no Cihanşah-period Persian-Turkic poetry digitization; the POST-form barrier is irrelevant to expected yield",
+      "future_scope_relevance": "EAP1526 GNCM Afshar/Safavid documents may be parallel to asnad.org for future scope chancery scope",
+      "disposition_group": "OUT_OF_SCOPE_FOR_V1_1_0"
+    },
+    {
+      "gap_id": "G-DLME-BLACKLIGHT",
+      "portal": "Digital Library of the Middle East (DLME) Blacklight-faceted Solr index",
+      "url": "https://dlmenetwork.org/library/catalog?q=<term>",
+      "blockage": "Parallel probe D confirmed UA-blocked to WebFetch; live UI is JS-rendered Blacklight; query endpoint signatures documented (f[cho_type_facet.en_ssim][], language_en, range)",
+      "expected_witness_yield": "LOW; DLME contributing institutions are Bodleian + Michigan + LoC + Leiden, all already covered by Fihrist UK aggregator (heavily probed in v1.0). 575 Persian mss browse confirmed; no Cihanşah hit surfaced via Fihrist.",
+      "resolution_feasibility": "Playwright + Blacklight URL construction; possible but redundant with Fihrist UK coverage",
+      "disposition": "OUT_OF_SCOPE_FOR_V1_1_0; institutional-overlap with Fihrist UK (already exhaustively probed); no additional yield",
+      "future_scope_relevance": "None identified",
+      "disposition_group": "OUT_OF_SCOPE_FOR_V1_1_0"
+    },
+    {
+      "gap_id": "G-OPENN-GOOGLE-RELAY",
+      "portal": "OPenn (University of Pennsylvania) MS aggregator",
+      "url": "https://openn.library.upenn.edu/html/muslimworld_contents.html",
+      "blockage": "Self-described as 'standard Google searching techniques'; /Search.html is a Google site-search relay; no self-hosted query endpoint",
+      "expected_witness_yield": "LOW; 500+ Muslim World MSS confirmed; major contributors (Columbia, UPenn) already aggregated by Fihrist UK. Parallel probe A South Asia probe surfaced 3 unrelated 15th-c. Persian holdings (Bryn Mawr BV 51 Khamsa Shiraz Iskandar/Ibrahim Sultan; Columbia Or 69 Masnavi 1495; Columbia Or 444 Mavahib-i ilahi 1431); all Timurid/Mevlevi tradition, none Cihanşah",
+      "resolution_feasibility": "Already accessible via Google site:openn.library.upenn.edu queries; site-restricted Google returned 0 Cihanşah hits in parallel probe D pass",
+      "disposition": "FILLED_VIA_GOOGLE_SITE_RESTRICTED; the OPenn 'blockage' is a UI design choice (Google relay), not an actual blockage. Site-restricted Google sweep WAS the canonical probe; 0 hits is the authoritative answer.",
+      "future_scope_relevance": "Comparator-corpus surface (Bryn Mawr BV 51 Shiraz Iskandar workshop; Columbia Or 69 Masnavi) for future scope atelier-comparison scope",
+      "disposition_group": "FILLED_VIA_ALTERNATIVE_PATH"
+    },
+    {
+      "gap_id": "G-HATHITRUST-CLOUDFLARE",
+      "portal": "HathiTrust Persian-manuscripts subset",
+      "url": "https://babel.hathitrust.org/cgi/mb?...&facet=topicStr%3A%22Manuscripts%2C+Persian%22",
+      "blockage": "Cloudflare UA-block 403; parallel probe D confirmed",
+      "expected_witness_yield": "LOW; per parallel probe D Persian-MS facet enumerates 191 records; major US contributors (Princeton, Harvard, U Michigan, U Penn) are Fihrist-aggregated or OPenn-aggregated. The 9 printed-MS-catalogues that surfaced via broader Google sweep (Cochran/MMA, India Office, Bankipore, Madras, Oudh, Bodleian, etc.) are reference works already backchain-mined in v1.0.",
+      "resolution_feasibility": "Playwright + Cloudflare evasion is HIGH cost; headed browser may resolve, but yield does not justify",
+      "disposition": "OUT_OF_SCOPE_FOR_V1_1_0; Cloudflare evasion cost vs near-zero expected yield. Indirect coverage via Fihrist UK + OPenn aggregators is the project's substitute.",
+      "future_scope_relevance": "None identified",
+      "disposition_group": "OUT_OF_SCOPE_FOR_V1_1_0"
+    },
+    {
+      "gap_id": "G-NAMAMI-INDIAN-IP",
+      "portal": "National Mission for Manuscripts NAMAMI / Kriti Sampada",
+      "url": "namami.gov.in or bharatiyakritisampada.nic.in (parallel probe A confirmed all 4 candidate domains geo-IP/TLS/ECONNREFUSED blocked)",
+      "blockage": "Indian IP required; geo-IP blocked from UK/US/Belarus-VPN routes",
+      "expected_witness_yield": "UNKNOWN_PROBABLY_LOW; India has 5+ million indigenous MSS but no scholarly hint of a Cihanşah Hakîkî MS in Indian collections via Western aggregators (Salar Jung, Rampur, Khuda Bakhsh, Asiatic Society all probed by parallel probe A with 0 hits). Cihanşah's MS lineage is Persian-Turkic-Caucasian, not South Asian.",
+      "resolution_feasibility": "Indian VPN routing OR local-in-country contact; geopolitically constrained for autonomous remote work",
+      "disposition": "DEFERRED_V2_0_LOW_PRIORITY; expected base-rate yield is near-zero given the MS lineage geography. If a future scope South Asian focus emerges (e.g., for chancery-document scope incl. asnad.org Indian-Mughal references), revisit.",
+      "future_scope_relevance": "Speculative; no current scholarly hint of Cihanşah-relevant holdings",
+      "disposition_group": "DEFERRED_V2_0"
+    },
+    {
+      "gap_id": "G-IRANIAN-WARTIME-CLUSTER",
+      "portal_cluster": "Iranian portals (NLAI opac.nlai.ir + Tehran U utdlib.ut.ac.ir + Astan-e Quds aqr.ir + Malek malekmuseum.org + Majles ical.ir + Marashi marashilibrary.com search backend)",
+      "blockage": "Geo-IP blocked from UK/US; 2026 wartime intermittent shutdowns confirmed in geopolitical caveat across all probe rounds; even Uzbekistan/Belarus VPN attempts fail per probe_2026-05-10 + probe_2026-05-11 documentation",
+      "expected_witness_yield_per_portal": {
+        "NLAI": "MEDIUM (national library; possible Cihanşah holdings) but blocked",
+        "Tehran_U_utdlib_deep_codicology": "HIGH (MS 8198 already in v1.0; deep codicology only via Tehran U Telegram channel)",
+        "Astan_e_Quds": "MEDIUM (Mashhad shrine library; possible Cihanşah era holdings)",
+        "Malek": "LOW (Malek Library Tehran; small collection)",
+        "Majles": "LOW (Majles Library Tehran; primarily parliamentary records)",
+        "Marashi": "LOW (Qom; printed Fihrist 30/60 vols on-premises only)"
+      },
+      "resolution_feasibility": "Iranian IP + wartime conditions out of remote autonomous scope; Tehran U Telegram channel @Manuscripts_lib is the documented official order-placement path for MS 8198 codicology (per Digital Orientalist 2023 article + probe_2026-05-10)",
+      "disposition": "DEFERRED_V2_0_AND_OUT_OF_REMOTE_SCOPE; the cluster needs either (a) Iranian institutional cooperation, (b) post-wartime portal restoration, or (c) Tehran U Telegram order for MS 8198 specific codicology. None achievable autonomously.",
+      "future_scope_relevance": "HIGH; Tehran U 8198 codicology + Astan-e Quds Cihanşah-era holdings + NLAI Cihanşah lineage all potentially relevant",
+      "disposition_group": "DEFERRED_V2_0"
+    },
+    {
+      "gap_id": "G-ON-PREMISES-CENTRAL-ASIA",
+      "portal_cluster": "Tajik National Library Dushanbe + Beruni Institute Tashkent + Bukhara museum archives",
+      "blockage": "On-premises only; no online catalogue exposed (parallel probe B verified)",
+      "expected_witness_yield": "LOW; per prior project notes + parallel probe B: Cihanşah's MS lineage clusters in Istanbul/London/Tehran/Yerevan/Ankara, not Central Asia. Beruni Tashkent 19/19 query battery returned ZERO in prior probe. Tajik NL + Bukhara have no documented Cihanşah-relevant holdings.",
+      "resolution_feasibility": "Physical travel only; out of remote-only autonomous scope",
+      "disposition": "OUT_OF_REMOTE_SCOPE; the surface is microscopic and the access mode is physical-only. Defer indefinitely unless a future scope in-person research trip is undertaken.",
+      "future_scope_relevance": "Speculative; no current scholarly hint",
+      "disposition_group": "OUT_OF_SCOPE_FOR_V1_1_0"
+    },
+    {
+      "gap_id": "G-IOM-RAS-INTERMITTENT",
+      "portal": "Institute of Oriental Manuscripts RAS St. Petersburg (orientalstudies.ru)",
+      "blockage": "ERR_CONNECTION_CLOSED even via Belarus VPN; parallel probe B confirmed via 2026-05-11 retest",
+      "expected_witness_yield": "LOW; per parallel probe B + prior project notes: Akimushkin 1964 printed Persian MSS catalogue at IOM-RAS is the canonical reference; no Cihanşah Hakîkî hit identified in Akimushkin per scholarly survey. NLR St. Petersburg Manuscripts Dept (DIFFERENT institution; probed via Belarus VPN in 2026-05-11 round) returned 15/17 ZERO + 1 FP (Курд. 26 Kurdish 18th-c. namesake).",
+      "resolution_feasibility": "Network intermittency may resolve; alternatively Akimushkin 1964 printed catalogue (Russian; out of print but ILL possible) is the canonical substitute",
+      "disposition": "INDIRECTLY_COVERED_VIA_AKIMUSHKIN_1964; no further probing warranted for 2026-05-11 follow-up pass; IOM-RAS is print-canonical and the printed catalogue is the authoritative source",
+      "future_scope_relevance": "ILL of Akimushkin 1964 for future scope codicology backchain",
+      "disposition_group": "INDIRECTLY_COVERED"
+    }
+  ],
+  "summary": {
+    "total_gaps_addressed": 9,
+    "companion_playwright_gaps_probed": 4,
+    "total_gap_items_with_explicit_handling": 13,
+    "dispositions": {
+      "OUT_OF_SCOPE_FOR_V1_1_0": 5,
+      "FILLED_VIA_ALTERNATIVE_PATH": 1,
+      "DEFERRED_V2_0": 2,
+      "INDIRECTLY_COVERED": 1
+    },
+    "current_register_impact": "ZERO; no gap requires register modification. 14-entry baseline preserved.",
+    "release_readiness": "The companion Playwright sweep probed 4 gaps and this file dispositioned 9 additional tool/access gaps, for 13 total items with explicit handling. Net 2026-05-11 follow-up release blocker count: 0.",
+    "approach_b_completion": "User-selected approach B (Caucasus 3 + CBL + formalize rest) is COMPLETE."
+  },
+  "audit_metadata": {
+    "record_type": "access_gap_disposition",
+    "record_date": "2026-05-11",
+    "artifact_status": "current",
+    "source_layers": [
+      "institutional_access_status",
+      "project_classification"
+    ],
+    "access_mode": "blocked_or_down",
+    "disposition": "access_gap_logged",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

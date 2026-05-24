@@ -1,0 +1,784 @@
+{
+  "schema_version": 1,
+  "generated": "2026-05-11",
+  "purpose": "Authoritative witness register for the Ḥaqīqī / Hakîkî (Jahānshāh Qaraqoyunlu) manuscript census. Research-only; not corpus-integrated. See README.md for scope and methodology.",
+  "rejection_inclusion_criterion": "The three `rejected` entries below are audit-preserved rebuttals to specific claims that have appeared in published scholarship or in a major institutional acquisition announcement. Routine search false-positives (e.g., name-collision noise, namesake disambiguations, body-text matches in WordPress catalogues) are documented in the per-session JSONs under `data/searches/` and are not promoted to the register. Two of the three rejected entries address one underlying question, namely whether Baku holds an independent Cihānşāh codex; both answer that question in the negative with independent strands of evidence. The third rejected entry (Nuruosmaniye 04281) addresses a scribal homonym misidentification: the colophon identifies the scribe as Jahānshāh b. Bābā Gejelū (Muḥarram 1088 AH / 1677 CE), not Cihānşāh Qaraqoyunlu. Each rejected entry carries a `rejection_type` sub-classification: `derivative_surrogate` (the entry is a copy/microfilm/photocopy of an existing witness and would double-count it if included), `non_manuscript_misidentification` (the entry was never an independent manuscript, e.g. a printed edition once mistakenly absorbed as a witness), or `scribal_homonym_misidentification` (the entry was attributed to Cihanşah but colophon evidence identifies a scribe with a homonymous given name).",
+  "candidate_inclusion_criterion": "The `candidate_probably_*` entries below are retained when the source catalogue's attribution was Hakîkî-ambiguous and required disambiguation work to assign a verdict (e.g., mecmûʿa-adjacency layout analysis; Mu'in V.961-962 multi-Hakîkî reference + Ottoman-date prior; folio-count anomaly). Codices where Hakîkî identity was clear at the catalogue level (e.g., explicitly catalogued as Yusuf Hakîkî) or contextually obvious (Cihan Şah honorific frames, Anatolian aşık-tradition Hakîkîs, name-collision noise) are tracked in per-session probe artifacts under `data/searches/`, not promoted to the register. Like the rejection_inclusion_criterion above, this preserves the audit trail of which candidates required substantive analytical work to dismiss.",
+  "witnesses": [
+    {
+      "witness_id": "bl_or_9493",
+      "shelfmark": "Or 9493",
+      "collection": "British Library, Oriental Manuscripts",
+      "city": "London",
+      "country": "UK",
+      "date_ah": "Shawwāl 893",
+      "date_ce": "September 1488",
+      "scribe": "Qanbar-ʿAlī b. Khusraw al-Iṣfahānī",
+      "languages": [
+        "Persian",
+        "Turkish"
+      ],
+      "folios": 85,
+      "dimensions_cm": "23 × 16",
+      "writing_surface_cm": "16 × 11",
+      "lines_per_page": "10–11",
+      "contents": "Contents counts differ by source: Minorsky 1954 reported 105 Persian ghazals + 1 mustazad (ff. 1b-42a), 87 Turkish ghazals (ff. 45b-80a), and 32 Turkish quatrains (ff. 80b-85a); Macit corrected the count after collation to 113 Persian ghazals, 92 Turkish ghazals, and 33 tuyug. Two added poems by 'Farrukh' appear on f. 85b (one Persian, one Turkish).",
+      "completeness": "complete",
+      "fragment_type": null,
+      "digital_surrogate": null,
+      "decoration": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": null,
+        "confidence": "unknown",
+        "notes": "Minorsky 1954: 'state of preservation perfect' + 'handsome little manuscript': no further decoration data in any open-access scholarly source."
+      },
+      "scholarly_attestation": [
+        {
+          "author": "Minorsky",
+          "year": 1954,
+          "ref": "BSOAS 16/2: 271–297",
+          "saw_firsthand": true
+        },
+        {
+          "author": "Macit",
+          "year": 2000,
+          "ref": "Bilig 13: 9-17",
+          "saw_firsthand": true,
+          "remark": "Macit collated this codex (siglum L) against Süleymaniye Fatih 3808 (S) and Bakü neşri (B = Rahimov 1986 ed.). Verse counts CORRECTED: 113 Persian ghazals (not 105 per Minorsky), 92 Turkish (not 87), 33 tuyug (not 32). Zero codicological description in 9-page treatment."
+        },
+        {
+          "author": "Düzgün, D.",
+          "year": null,
+          "ref": "academia.edu/43146022 (self-deposited preprint, no peer-review venue identified)",
+          "saw_firsthand": false
+        },
+        {
+          "author": "Alemdârî",
+          "year": "2001 / 1379 SH",
+          "ref": "Mîrzâ Cihânşâh Hakîkî Dîvân-ı Fârisî-Türkî (Tahran: Fîrûzân): at archive.org/details/DivanEMirzaJahanshahHaqiqiFarsiTurki",
+          "saw_firsthand": true,
+          "remark": "Used BL Or 9493 as collation witness against Tehran 8198 base text: 100+ verbatim 'Bu şer Tehran nüsxasinda yoxdur / London nüsxasinda var' footnotes prove direct examination. No codicology section."
+        }
+      ],
+      "discovery_source": "https://www.fihrist.org.uk/catalog/manuscript_6481",
+      "evidence_level": "catalogue_or_scholarly_attestation",
+      "access_level": "catalogue_or_edition_only",
+      "material_data_level": "partial_material_evidence",
+      "verification_status": "verified",
+      "fihrist_decoration_facet": "Decoration: No (per Fihrist verification 2026-05-02). First open-access positive evidence that Meredith-Owens 1968 recorded no decoration. Caveat: Fihrist's coarse boolean tag does not distinguish illumination from decorated paper; primary research question (decorated paper specifically) remains open until direct examination or new imaging.",
+      "notes": "Posthumous copy: 21 yrs after Jahānshāh's death (d. 1467). Isfahani scribe: Minorsky notes the scribe didn't fully understand the Turkish verses (omits/misreads several words and metres). Colophon transcribed in full by Minorsky pp. 280."
+    },
+    {
+      "witness_id": "suleymaniye_fatih_3808",
+      "shelfmark": "Fatih 3808",
+      "collection": "Süleymaniye Yazma Eser Kütüphanesi",
+      "city": "Istanbul",
+      "country": "Turkey",
+      "date_ah": null,
+      "date_ce": "20th century",
+      "scribe": null,
+      "languages": [
+        "Persian",
+        "Azerbaijani Turkish"
+      ],
+      "folios": 107,
+      "dimensions_cm": "24.4 × 15.6",
+      "lines_per_page": 12,
+      "columns": 2,
+      "contents": "DB-listed contents identical to Mat 965 (32 Persian mes̱nevīs + 114 Persian ghazals + 96 Turkish ghazals + 34 tuyughs): the Turkey sweep flagged this as likely Macit-edition boilerplate copy-pasted across DB records, NOT proven textual identity. Real per-codex contents need direct examination.",
+      "completeness": "complete",
+      "fragment_type": null,
+      "digital_surrogate": null,
+      "decoration": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "seals_marks": "Maḥmūd I waqf seal on f. 1a (per Anatolia DB verification)",
+        "data_source": "https://www.islam-anatolia.ac.uk (TK_Sul_Fatih_3808 record; discovered via Mat 965 filiations panel)",
+        "confidence": "low",
+        "notes": "20th-century copy. Codicological relevance to BL Or 9493's paper question is reduced (modern copy aesthetic, not Turkmen-period)."
+      },
+      "scholarly_attestation": [
+        {
+          "author": "Macit",
+          "year": 2000,
+          "ref": "Bilig 13: 9-17",
+          "saw_firsthand": true,
+          "remark": "Macit collated this codex (siglum S). Counted 109 Persian ghazals + 94 Turkish + 28 tuyug (29 minus 1 duplicate). 'Most complete' claim has SPECIFIC narrow basis: this codex opens with 32 mesnevis in fâ'ilâtün-fâ'ilâtün-fâ'ilün meter; BL lacks them and Mat 965 status remains unresolved pending direct collation. Macit's modal 'sayılabilir' (may be regarded as) is hedged, not categorical. Zero codicological description."
+        },
+        {
+          "author": "Demirci, Jale",
+          "year": 1997,
+          "ref": "DTCF Türkoloji Dergisi XII/1: 127-138 'Cihânşâh (Hakîkî) Divânı'nın İki Yeni Nüshası'",
+          "saw_firsthand": "likely",
+          "remark": "Macit 2000 confirms: this codex was first introduced to Turkish scholarship by Demirci 1997 alongside Ankara DTCF I/2221 (= her 'iki yeni nüsha' = two new copies). Demirci 1997 is now retrieved via ISAM and gives codicological description: Fatih 3808, copied by Mustafa Bey Osman Paşa, 24.4 x 15.6 cm, 107 folios, 10-12 lines/page, Persian poems on ff. 1a-71b and Turkish poems on ff. 72a-107a, 96 Turkish ghazals and 29 rubais, nasta'liq, carefully copied and well preserved. No paper, binding, illumination, or decoration data."
+        },
+        {
+          "author": "TEIS Yesevi",
+          "year": null,
+          "ref": "https://teis.yesevi.edu.tr/madde-detay/hakiki-cihansah: TEIS Yesevi roster item 3"
+        }
+      ],
+      "discovery_source": "Macit 2000; verified via Islamisation of Anatolia DB filiations panel 2026-05-02 (TK_Sul_Fatih_3808 slug)",
+      "evidence_level": "catalogue_or_scholarly_attestation",
+      "access_level": "catalogue_or_edition_only",
+      "material_data_level": "partial_material_evidence",
+      "verification_status": "verified",
+      "verification_caveat": "Verified existence + basic codicology, but: (a) date is 20th c. NOT medieval; (b) contents description in DB is suspected edition-boilerplate not codex-specific; (c) Macit's 'most complete' claim is unresolved at the codex level. Direct examination needed to test against Mat 965.",
+      "notes": "20th-century manuscript copy with Mahmud I waqf seal: contradicts older assumption of medieval witness. Süleymaniye dataset format issue: yazmaeserler.gov.tr is dead, yazmalar.gov.tr now redirects to portal.yek.gov.tr. Süleymaniye's Fatih sub-collection is NOT indexed in YEK directly (verified by failed shelfmark search)."
+    },
+    {
+      "witness_id": "ankara_dtcf_ismail_saib_1_2221",
+      "shelfmark": "İsmail Saib I/2221",
+      "collection_per_macit": "Ankara Üniversitesi DTCF Kütüphanesi (Macit 2000, TEIS Yesevi)",
+      "collection_per_islamisation_db": "Atatürk Üniversitesi (Erzurum): per URL slug TK_AU_ISSencer_2221",
+      "collection": "DISPUTED: Ankara DTCF (Macit/TEIS) vs Atatürk Üniversitesi Erzurum (Islamisation DB)",
+      "_shelfmark_normalization": "Normalized shelfmark: İsmail Saib I/2221; source-quoted variants include I.2221, No. I. 2221, and OCR-reading 1.2221",
+      "city": "Ankara OR Erzurum",
+      "country": "Turkey",
+      "date_ah": null,
+      "date_ce": "19th century (per Anatolia DB)",
+      "scribe": null,
+      "languages": null,
+      "folios": 26,
+      "dimensions_cm": "13 × 18",
+      "lines_per_page": null,
+      "columns": 1,
+      "contents": "26 ff.: likely a FRAGMENT (cannot fit a full Cihanşah Hakîkî divan)",
+      "completeness": "fragment_or_excerpt",
+      "fragment_type": "partial_divan",
+      "digital_surrogate": null,
+      "decoration": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": "https://www.islam-anatolia.ac.uk (filiations panel)",
+        "confidence": "low",
+        "notes": "19th-century copy. Codicological relevance to BL Or 9493's paper question is minimal."
+      },
+      "scholarly_attestation": [
+        {
+          "author": "Macit",
+          "year": 2000,
+          "ref": "Bilig 13: 9-17",
+          "saw_firsthand": false,
+          "remark": "Verbatim re-read correction: prior 'saw_firsthand: true' was incorrect. Macit's verbatim text refers to Ankara DTCF only via Demirci 1997, citing 'Hakîkî Divânı'nın Türkiye'deki kütüphanelerde bulunan iki nüshası ise Jale Demirci tarafından tanıtılmıştır.' He notes 'Ankara nüshası ise eksik bir nüshadır' (the Ankara copy is incomplete) but does not claim direct examination."
+        },
+        {
+          "author": "Demirci, Jale",
+          "year": 1997,
+          "ref": "DTCF Türkoloji Dergisi XII/1: 127-138 'Cihânşâh (Hakîkî) Divânı'nın İki Yeni Nüshası'",
+          "saw_firsthand": "likely",
+          "remark": "Demirci 1997 introduced THIS codex to Turkish scholarship, alongside Süleymaniye Fatih 3808, and is now retrieved via ISAM. It describes Ankara University DTCF Library İsmail Saib I.2221 as 26 folios, 13 x 18 cm with 11.5 x 16.5 cm writing area, nasta'liq, copied by el-Hac Hüseyin and completed 12 Muharram 1290 AH. It contains 80 Turkish ghazals, lacks the Persian section and rubais found in the other two witnesses, and has no paper, binding, illumination, or decoration data."
+        },
+        {
+          "author": "TEIS Yesevi",
+          "year": null,
+          "ref": "https://teis.yesevi.edu.tr/madde-detay/hakiki-cihansah: TEIS Yesevi roster item 4 (cited as Ankara Üniv. DTCF)"
+        },
+        {
+          "author": "Islamisation of Anatolia DB",
+          "year": null,
+          "ref": "TK_AU_ISSencer_2221 record: places at Atatürk Üniv. Erzurum"
+        }
+      ],
+      "discovery_source": "Macit 2000; verified via Anatolia DB 2026-05-02",
+      "evidence_level": "catalogue_or_scholarly_attestation",
+      "access_level": "catalogue_or_edition_only",
+      "material_data_level": "partial_material_evidence",
+      "verification_status": "verified_with_attribution_caveat",
+      "verification_caveat": "Existence verified but institutional attribution conflicts: Macit 2000 + TEIS Yesevi say Ankara DTCF (Dil ve Tarih-Coğrafya Fakültesi); Islamisation DB URL slug suggests Atatürk Üniv. Erzurum. Demirci 1997 (DTCF Türkoloji Dergisi XII/1: 127-138), now retrieved via ISAM, explicitly places İsmail Saib I.2221 in Ankara University DTCF Library and strongly supports the Ankara attribution; direct institutional query is still useful because the Islamisation DB/Atatürk URL conflict remains.",
+      "notes": "26 folios suggests this is a PARTIAL DIVAN or EXCERPT, not a full TEIS Yesevi roster witness. 19th-c. date. Lower codicological value than once assumed.",
+      "writing_surface_cm": "11.5 × 16.5"
+    },
+    {
+      "witness_id": "baku_doerfer_unspecified",
+      "shelfmark": "(no shelfmark: non-witness)",
+      "collection": "(none: entry rejected as non-witness)",
+      "city": "Baku",
+      "country": "Azerbaijan",
+      "date_ah": null,
+      "date_ce": null,
+      "scribe": null,
+      "languages": null,
+      "folios": null,
+      "dimensions_cm": null,
+      "lines_per_page": null,
+      "contents": null,
+      "completeness": null,
+      "fragment_type": null,
+      "digital_surrogate": null,
+      "decoration": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": null,
+        "confidence": "unknown",
+        "notes": null
+      },
+      "scholarly_attestation": [],
+      "discovery_source": "(rejected) Initially absorbed into baseline from a misread of an edition list; TEIS Yesevi consultation 2026-05-02 confirmed no Baku manuscript witness exists in the TEIS Yesevi census.",
+      "evidence_level": "catalogue_or_scholarly_attestation",
+      "access_level": "catalogue_or_edition_only",
+      "material_data_level": "not_applicable_rejected",
+      "verification_status": "rejected",
+      "rejection_type": "non_manuscript_misidentification",
+      "rejection_reason": "TEIS Yesevi 'HAKÎKÎ, Cihânşâh' (https://teis.yesevi.edu.tr/madde-detay/hakiki-cihansah): the authoritative Turkish biographical encyclopaedia entry: lists exactly FIVE TEIS Yesevi witnesses (BL Or 9493 / Mat 965 / Süleymaniye Fatih 3808 / Ankara DTCF İsmail Saib I/2221 / Tehran 8198). NO Baku codex appears in the witness list. The 'Baku' reference traces to Rahimov, Hüseyinzade & Aliyev's 1986/2006 BAKU EDITION (Yazıcı press), which is a published edition prepared from copies of MSS held elsewhere: not a separate codex. this risk had been flagged explicitly in advance ('Baku may be a publication witness'), and the consultation confirms the publication-only interpretation.",
+      "notes": "Audit-trail entry. Retained at verification_status=rejected so future researchers/reviewers see this attribution was considered and ruled out. Do not promote to non-rejected witness status without new primary-source evidence."
+    },
+    {
+      "witness_id": "matenadaran_965",
+      "shelfmark": "MS 965",
+      "collection": "The Mesrop Mashtots Institute of Ancient Manuscripts (Matenadaran)",
+      "city": "Yerevan (Erivan)",
+      "country": "Armenia",
+      "date_ah": "879 AH (per Rahimov 1986)",
+      "date_ce": "1474–75 CE (per Rahimov 1986; ~13 years before BL Or 9493)",
+      "scribe": null,
+      "languages": [
+        "Persian",
+        "Turkish"
+      ],
+      "folios": 54,
+      "dimensions_cm": null,
+      "lines_per_page": null,
+      "contents": "Reported contents disputed: Islamisation DB reports 32 Persian mesnevis, 114 Persian ghazals, 96 Turkish ghazals, and 34 tuyughs, while Düzgün reports 78 Persian ghazals, 61 Turkish ghazals, and 16 tuyughs. Treat the count as unresolved pending direct reconciliation with Hüseyinzade 1966.",
+      "completeness": "complete",
+      "fragment_type": null,
+      "digital_surrogate": null,
+      "decoration": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": null,
+        "confidence": "unknown",
+        "notes": null
+      },
+      "scholarly_attestation": [
+        {
+          "author": "Macit",
+          "year": 2000,
+          "ref": "Bilig 13: 9-17",
+          "saw_firsthand": false,
+          "remark": "Verbatim re-read confirms saw_firsthand: false. Macit's verbatim text: 'Erivan nüshasını henüz temin edemedik' (we have not yet been able to obtain the Erivan copy). He references the codex via Hüseynzade 1966 + Rahimov 1986 + the Bakü neşri only. Shelfmark left as 'No. ?' in Macit's roster."
+        },
+        {
+          "author": "Düzgün, D.",
+          "year": null,
+          "ref": "academia.edu/43146022 (self-deposited preprint, no peer-review venue identified)",
+          "saw_firsthand": false,
+          "remark": "Düzgün gives different content count: 78 Persian ghazals + 61 Turkish ghazals + 16 tuyughs (vs. Islamisation DB's 32+114+96+34): discrepancy suggests one source uses edition-boilerplate, not codex-specific counting"
+        },
+        {
+          "author": "Rahimov, Hüseyinzade & Aliyev",
+          "year": "1986/2006",
+          "ref": "Cahanşah Hakiki - Seçilmiş Eserleri (Bakü: Yazıcı)",
+          "saw_firsthand": "likely",
+          "remark": "Dates Mat 965 to 879 AH (1474-75 CE), meaningfully earlier than BL Or 9493; the date assignment implies but does not directly evidence firsthand examination."
+        },
+        {
+          "author": "Hüseyinzade",
+          "year": 1966,
+          "ref": "Hakiki - Şiirler, Erivan",
+          "saw_firsthand": "likely",
+          "remark": "Yerevan-published edition almost certainly used Mat 965 as base text and the introduction may carry nüsha tavsifi (manuscript description) including paper; firsthand examination is inferred rather than directly evidenced. Edition not located online; ILL or Yerevan-side cooperation needed."
+        },
+        {
+          "author": "Alemdârî",
+          "year": "2001 / 1379 SH",
+          "ref": "Mîrzâ Cihânşâh Hakîkî Dîvân-ı Fârisî-Türkî (Tahran: Fîrûzân)",
+          "saw_firsthand": true,
+          "remark": "Used Mat 965 as collation witness against Tehran 8198 base text: verbatim 'Irevan nüsxasinda var' footnotes confirm direct examination."
+        }
+      ],
+      "discovery_source": "https://www.islam-anatolia.ac.uk/data/documents/AR_Mat_965: verified 2026-05-02. Record explicitly cross-references British Library [9493] and other related copies (Ankara Milli Kütüphane, Süleymaniye, Atatürk Üniversitesi).",
+      "evidence_level": "catalogue_or_scholarly_attestation",
+      "access_level": "catalogue_or_edition_only",
+      "material_data_level": "unrecovered",
+      "verification_status": "verified",
+      "candidate_provenance": "candidate-evidence research 2026-05-02; merged with prior matenadaran_macit_unspecified entry (same codex)",
+      "contents_discrepancy_flag": "Two independent counts diverge: Islamisation DB (32 Persian mesnevis + 114 Persian ghazals + 96 Turkish ghazals + 34 tuyughs) vs Düzgün (78 Persian ghazals + 61 Turkish ghazals + 16 tuyughs). The DB count likely cribbed from edition-level data, not codex-level. Reconciliation requires reading Hüseyinzade 1966 directly.",
+      "notes": "Mat 965 (1474-75) PRE-DATES BL Or 9493 (1488) by ~13 years. Earliest extant witness in the TEIS Yesevi roster. Hüseyinzade autograph hypothesis is textually impossible since Cihanşah died 1467 (8 years before Mat 965 was copied). Folio count (54 ff.) smaller than BL's 85: likely denser format. Decoration data NOT yet recovered from any open-access source.",
+      "gazaryan_provenance_and_institutional_consolidation": {
+        "_purpose": "Pre-1959 institutional history of Matenadaran MS 965, recovered from Azerbaijani-language popular-history sources via 2026-05-11 Caucasus avenue probe. Documents the popular-history-to-institutional-record mapping and rebuts a conflation found in Azerbaijani Wikipedia.",
+        "popular_history_account": "Azerbaijani-language sources (Az Wikipedia 'Cahanşah'; Azadliq.info '28265.html' (URL now 404); Azertag.az 2012; Az Wikipedia bio of Lətif Hüseynzadə) describe an Hagigi divan bequeathed by NYC Armenian collector Arutyun Gazaryan to 'Yerevan University' and discovered there by Lətif Hüseynzadə, who published it (Yerevan 1966 edition).",
+        "institutional_clarification": "Hüseynzadə was at Yerevan PEDAGOGICAL Institute (not Yerevan State University as the Az Wiki narrative sometimes implies). Discovery year: 1961. First publication: Yerevan 1966 (Hüseyinzade, 'Hakiki: Şiirler', already cited in scholarly_attestation above).",
+        "1959_consolidation_event": "Per Encyclopaedia Iranica MATENADARAN article, in 1959 the manuscript holdings of multiple Yerevan institutions including Yerevan State University were consolidated into the Matenadaran (Mesrop Mashtots Institute of Ancient Manuscripts). The pre-1959 'Yerevan University' attribution in popular-history accounts is the institutional location of the codex now catalogued as Matenadaran MS 965; the codex itself did not change.",
+        "az_wiki_conflation_caveat": "The Az Wikipedia narrative additionally conflates the Gazaryan-bequest provenance chain with BL Or 9493's separate London examination (Minorsky 1954). The Az Wiki account presents these as a single continuous itinerary (Istanbul; Alexandria; London; NYC; Yerevan), but BL Or 9493 and Matenadaran MS 965 are TWO DIFFERENT CODICES with separate provenances (BL Or 9493 was acquired by the British Library through standard institutional channels; Matenadaran MS 965 reached Yerevan via Gazaryan bequest).",
+        "by_verification_impact": "ZERO; existing verified status unchanged. This augmentation adds documented institutional-history context to an existing register entry; no new witness, no count change.",
+        "source": "2026-05-11 Avenue 1 Caucasus / Avenue 2 Russia+Yerevan probes (data/searches/probe_2026-05-11_avenue_caucasus.json + data/searches/probe_2026-05-11_avenue_central_asia_russia_yerevan.json)"
+      }
+    },
+    {
+      "witness_id": "tehran_university_8198",
+      "shelfmark": "Tahran-Danişgah Ktp. n.8198",
+      "collection": "Tehran University Central Library (Kitābkhāna-yi Markazī-yi Dānishgāh-i Tihrān)",
+      "city": "Tehran",
+      "country": "Iran",
+      "date_ah": "10th century AH",
+      "date_ce": "16th century CE",
+      "scribe": null,
+      "languages": [
+        "Persian",
+        "Turkish"
+      ],
+      "folios": 133,
+      "dimensions_cm": null,
+      "lines_per_page": null,
+      "script": "nestalik (nasta'liq)",
+      "contents": "Listed by Ay 2013 as 'Divan-ı Hakikî'. Verbatim description (Turkish): 'Mesnevinin arkasından Türkçe gazel ve rubâiler hece tertibine göre sıralanmıştır.' Translation: After a mesnevi, Turkish ghazals and rubāʿīs arranged by alphabetical/syllabic order.",
+      "completeness": "complete",
+      "fragment_type": null,
+      "digital_surrogate": null,
+      "decoration": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": null,
+        "confidence": "unknown",
+        "notes": null
+      },
+      "scholarly_attestation": [
+        {
+          "author": "TEIS Yesevi",
+          "year": null,
+          "ref": "https://teis.yesevi.edu.tr/madde-detay/hakiki-cihansah: 'HAKÎKÎ, Cihânşâh' biographical entry, witness list item 5",
+          "saw_firsthand": false,
+          "remark": "Authoritative Turkish biographical encyclopaedia. Confirms Tehran 8198 = Cihanşah Hakîkî witness specifically, resolving the Ay-2013 pen-name disambiguation concern."
+        },
+        {
+          "author": "Alemdârî",
+          "year": "2001 / 1379 SH (TEIS lists as 1385/2006, possibly referring to a reprint)",
+          "ref": "Mîrzâ Cihânşâh Hakîkî Dîvân-ı Fârisî-Türkî, Tahran: Fîrûzân (320 pp., ISBN 964-92994-2-4; first print verified at archive.org/details/DivanEMirzaJahanshahHaqiqiFarsiTurki)",
+          "saw_firsthand": true,
+          "remark": "Persian-Turkish edition; previously flagged this as the Tehran 8198 base text. >100 verbatim cross-codex collation footnotes against BL Or 9493 + Mat 965 prove direct examination."
+        },
+        {
+          "author": "Ay (Ümran)",
+          "year": 2013,
+          "ref": "Divan Edebiyatı Araştırmaları Dergisi 11 (Istanbul): 88, item 23",
+          "saw_firsthand": false,
+          "remark": "DENA-derived; flagged the Hakikî pen-name ambiguity (resolved via TEIS)"
+        },
+        {
+          "author": "Münzevî",
+          "year": null,
+          "ref": "Münzevî s. 2301 (Ay 2013 cites)"
+        }
+      ],
+      "discovery_source": "candidate-evidence research 2026-05-02; verified via TEIS Yesevi 'HAKÎKÎ, Cihânşâh' authoritative biographical entry on 2026-05-02 (https://teis.yesevi.edu.tr/madde-detay/hakiki-cihansah: Tehran 8198 listed as item 5 in TEIS Yesevi 5-witness Cihanşah Hakîkî roster). Ay 2013 (Dergipark) provides the manuscript description; TEIS provides the attribution.",
+      "evidence_level": "catalogue_or_scholarly_attestation",
+      "access_level": "catalogue_or_edition_only",
+      "material_data_level": "unrecovered",
+      "verification_status": "verified",
+      "candidate_provenance": "candidate-evidence research 2026-05-02",
+      "prior_disambiguation_caveat_now_resolved": "Ay 2013 had flagged 4-way pen-name ambiguity (Cihanşah / Mustafa Bagdadî / Peri Ruh Hanım / Mirza Muhammed Ahmed Abadi). TEIS Yesevi consultation 2026-05-02 settles in favor of Cihanşah by listing Tehran 8198 explicitly in the TEIS Yesevi Cihanşah Hakîkî witness roster.",
+      "iran_caucasus_sweep_findings": {
+        "folio_count_discrepancy": "D. Düzgün (academia.edu/43146022, self-deposited preprint): 143 ff.; Ay 2013 (Dergipark, peer-reviewed): 133 ff.: 10-folio discrepancy unexplained.",
+        "azertac_2012_photographic_reproductions_claim_REJECTED": "AzerTAC Nov 2012 announcement claimed Alemdârî's edition includes 'photographic reproductions of the original manuscript'. backchain sweep retrieved Alemdârî 2001 in full from archive.org (DivanEMirzaJahanshahHaqiqiFarsiTurki) and turuz.com: 320pp typeset only, ZERO photo plates. Claim is REFUTED. AzerTAC's announcement was inaccurate.",
+        "azertac_autograph_claim_rejected": "AzerTAC's parallel claim that Tehran 8198 is 'written in the poet's own hand' is editorial puffery: Cihanşah died 1467, MS dated 10th c. AH = 1494–1591, so cannot be autograph.",
+        "baghban_karimi_tehran_image_trail_2026_05_18": "Sözümüz 2017 post (https://sozumuz1.blogspot.com/2017/12/blog-post_17.html) labels a 77-image run as Tehran manuscript images copied from Mohammadreza Karimi / Baghban-Karimi's Nikan Ketab 1394 edition. One sampled image (0069.png) is a manuscript text page. Treat as derivative/unofficial page-image access, useful for textual or visual triage but not an official digital_surrogate or institutional IIIF manifest."
+      },
+      "alemdari_edition_findings": {
+        "edition_date_correction": "First print 2001 / 1379 SH per archive.org item: NOT 1385/2006 as TEIS lists. The 1385 figure may refer to a 2006 reprint, or TEIS may be in error. Either way: edition was published 2001.",
+        "triple_witness_collation_methodology": "Alemdârî used Tehran 8198 as base text + BL Or 9493 (London) variants + Mat 965 (Erivan) variants: 100+ verbatim 'Bu şer Tehran nüsxasinda yoxdur' footnotes prove direct cross-codex collation. Implication: Alemdârî had photographic access to all three codices in the early 2000s: so some form of direct or reproduced access existed (publisher archive, scholar's photocopies, Iranian institutional access), just weren't published.",
+        "baku_nusxasi_footnote_p316": "Alemdârî's glossary at p. 316 footnotes a 'Bakı nüsxası': possibly Rahimov 1986 published edition treated as text-witness, OR an unidentified Baku codex. disambiguation flag.",
+        "no_codicology_section": "Alemdârî 2001 contains NO nüsha tavsifi (manuscript description) section. Pure textual criticism, no paper/decoration data."
+      },
+      "notes": "Verified Cihanşah Hakîkî witness. 133-143 ff. (source-dependent), 10th c. AH, Persian-Turkish, nestalik. Mesnevi-led then alphabetized Turkish ghazals + rubāʿīs (per Ay 2013). Used as base text by Alemdârî 2001/1379 SH Tehran-Fîrûzân edition (collated against BL Or 9493 + Mat 965). Iranian manuscript-catalogue endpoints remained inaccessible, blocked, down, or non-searchable in the 2026-05-11 follow-up remote pass; some parent or landing surfaces became reachable but did not support executable manuscript-catalogue search. AzerTAC 'photographic reproductions' lead now REFUTED for Alemdârî 2001; a separate derivative Sözümüz image run copied from Baghban-Karimi 1394 provides public page images of text leaves, but official institutional digital access and binding/material metadata remain unrecovered."
+    },
+    {
+      "witness_id": "ankara_milli_kutuphane_a_5252",
+      "shelfmark": "A 5252",
+      "collection": "Milli Kütüphane Yazmalar Koleksiyonu (T.C. Kültür ve Turizm Bakanlığı Milli Kütüphane, Ankara)",
+      "city": "Ankara",
+      "country": "Turkey",
+      "date_ah": null,
+      "date_ce": "20th century",
+      "scribe": null,
+      "languages": [
+        "Turkish"
+      ],
+      "folios": 204,
+      "dimensions_cm": null,
+      "lines_per_page": null,
+      "columns": 2,
+      "contents": "Multi-author mecmua. Cihān Şāh poetry on ff. 183a–196a (Work 15 in record). Other contents include Nesīmī poetry (Works 1 & 2), Yūnus Emre (d. 1320, Work 13), and additional Sufi/Hurufi material.",
+      "completeness": "fragment",
+      "fragment_type": "anthology_excerpt",
+      "fragment_folio_range": "183a–196a",
+      "digital_surrogate": null,
+      "decoration": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": null,
+        "confidence": "unknown",
+        "notes": "20th-century copy: codicological relevance to BL Or 9493's paper question is zero. Decoration data not relevant for that comparator purpose; still recorded if encountered."
+      },
+      "scholarly_attestation": [],
+      "discovery_source": "https://www.islam-anatolia.ac.uk/data/documents/TK_Mil_A_5252: verified 2026-05-02. Cihān Şāh poetry confirmed at ff. 183a–196a in a 204-folio mecmua co-located with Nesīmī and Yūnus Emre.",
+      "evidence_level": "catalogue_or_scholarly_attestation",
+      "access_level": "catalogue_or_edition_only",
+      "material_data_level": "unrecovered",
+      "verification_status": "verified",
+      "candidate_provenance": "candidate-evidence research 2026-05-02",
+      "notes": "Verified fragment witness. Modern (20th-c.) compilation, NOT medieval: but textually still a witness to the Haqiqi corpus. Critically: the Nesîmî co-location is now empirically confirmed. This single witness motivated the mecmûʿa sweep Nesîmî-adjacency mining heuristic (now demonstrably grounded). Expect more such fragments in Nesîmî mecmuas."
+    },
+    {
+      "witness_id": "konya_haci_bektas_by0000010729",
+      "shelfmark": "BY0000010729 (yek_id 709791)",
+      "collection": "Konya Hacı Bektaş-ı Veli Dergahı (via YEK)",
+      "city": "Konya",
+      "country": "Turkey",
+      "date_ah": null,
+      "date_ce": null,
+      "scribe": null,
+      "languages": [
+        "Turkish"
+      ],
+      "folios": 150,
+      "dimensions_cm": null,
+      "lines_per_page": null,
+      "contents": "150-folio Bektaşi mecmua. 'Hakîkî' appears un-disambiguated in a 300+ poet list. Co-located with Şah Hatâî / Nesîmî / Nevâî / Karacaoğlan: matches the Nesîmî-adjacency heuristic.",
+      "completeness": "fragment",
+      "fragment_type": "anthology_excerpt_undisambiguated",
+      "digital_surrogate": null,
+      "decoration": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": null,
+        "confidence": "unknown",
+        "notes": null
+      },
+      "scholarly_attestation": [],
+      "discovery_source": "Turkey/Anatolia sweep 2026-05-02 via portal.yek.gov.tr; mecmûʿa adjacency re-check confirmed but downgraded probability of Cihanşah attribution",
+      "evidence_level": "catalogue_or_scholarly_attestation",
+      "access_level": "catalogue_or_edition_only",
+      "material_data_level": "unrecovered",
+      "verification_status": "candidate_probably_non_cihansah",
+      "candidate_provenance": "Turkey/Anatolia YEK query 2026-05-02",
+      "mecmua_adjacency_finding": "Hakîkî sits at position 163 in 330-poet alphabetical-ish list with non-Hurufi local neighbors (Mestî/Bidarî/Resmî/Hevaî/Naimî/Riyazî). Nesîmî (38), Hatâî (345), Şah İsmail Bahadır (321) appear far elsewhere in the same mecmua: Hurufi-doctrine-cluster adjacency NOT codex-layout-confirmed. Probably an Anatolian aşık-tradition Hakîkî, not Cihanşah.",
+      "disambiguation_caveat": "Hakîkî attribution un-disambiguated in YEK record. Mecmûʿa adjacency analysis suggests this is more likely an Anatolian aşık-tradition Hakîkî (per Afyon Gedik 13918 cluster: distinct oral-tradition cluster, separate from the seven named historical-poet namesakes) than Cihanşah.",
+      "notes": "Down-prioritized after mecmûʿa adjacency layout analysis. The Hacı Bektaş dergah context overlaps with the shrine-search surface where Sohrabiabad-Akın 2019 confirmed Cihanşah's verse (Diyarbakır + Ilkhchi Alevi-Ocak shrine witnesses), but the within-codex layout here doesn't show the diagnostic Hurufi-cluster proximity."
+    },
+    {
+      "witness_id": "diyarbakir_uluturk_alevi_cenk",
+      "shelfmark": "(non-institutional: held by Abbas Önen)",
+      "collection": "İmam Zeynel Abidin Ocağı, Ulutürk village (Diyarbakır region)",
+      "city": "Diyarbakır",
+      "country": "Turkey",
+      "date_ah": null,
+      "date_ce": "1860s",
+      "scribe": "İbrahim Halil Dede (per Sohrabiabad-Akın 2019)",
+      "languages": [
+        "Azerbaijani Turkish"
+      ],
+      "folios": null,
+      "dimensions_cm": null,
+      "lines_per_page": null,
+      "script": "rika",
+      "contents": "8 Hakîkî ghazals; co-located with Nesîmî and Şah Hatâî (mirroring the Ankara MK A 5252 pattern)",
+      "completeness": "fragment",
+      "fragment_type": "anthology_excerpt_alevi_shrine",
+      "digital_surrogate": null,
+      "photo_documentation": "Photographed 2016 by Bülent Akın archive; published as photo plates Ek-3 of Sohrabiabad-Akın 2019",
+      "scholarly_attestation": [
+        {
+          "author": "Sohrabiabad & Akın",
+          "year": 2019,
+          "ref": "Alevilik-Bektaşilik Araştırmaları Dergisi 19: 179-223",
+          "saw_firsthand": true,
+          "remark": "Field-research article documenting Cihanşah Hakikî's preservation in living Alevi/Qizilbash liturgical tradition. 8 ghazals reproduced verbatim in article appendix Ek-1."
+        },
+        {
+          "author": "Konyar",
+          "year": 1936,
+          "ref": "Diyarbekir Yıllığı III, p.79",
+          "saw_firsthand": false,
+          "remark": "Independent ethnographic attestation 80 years before Sohrabiabad-Akın fieldwork; Konyar's 1936 record documents Hakîkî's role in Diyarbakır Alevi cems but does not describe or examine the cönk codex"
+        }
+      ],
+      "discovery_source": "Iran/Caucasus sweep 2026-05-02; cross-confirmed by the South-Asian/global sweep via Najaf 2020 IA item 'ekber-necef-2'; primary article retrieved from isamveri.org via mecmûʿa adjacency sweep",
+      "evidence_level": "direct_primary_inspection",
+      "access_level": "digital_or_image_access",
+      "material_data_level": "negative_or_qualitative_only",
+      "verification_status": "verified",
+      "verification_method": "Primary text Sohrabiabad-Akın 2019 retrieved and read in full (mecmûʿa sweep); Cihanşah attribution confirmed on linguistic grounds (Old Anatolian Turkish + Azerbaijani features); Yusuf Hakîkî alternative explicitly ruled out by article authors.",
+      "decoration": {
+        "paper_description": "Undecorated village notebook (per photo plates in Sohrabiabad-Akın 2019)",
+        "illumination": "None",
+        "binding": null,
+        "data_source": "Photo plates Ek-3, Sohrabiabad-Akın 2019",
+        "confidence": "high",
+        "notes": "Negative decoration data: a 19th-c. Anatolian village rika manuscript with no decorative program. Codicologically irrelevant to BL Or 9493's paper question, but textually a verified Cihanşah witness."
+      },
+      "notes": "Verified fragment witness via primary-text retrieval via mecmûʿa adjacency sweep. Cihanşah Hakîkî's verse preserved as living liturgical material in Anatolian Alevi shrine traditions (İmam Zeynel Abidin Ocağı, Diyarbakır). Pattern: Hakîkî co-located with Nesîmî + Şah Hatâî: the Hurufi-Türkmen-Alevi poetic continuum, attested as deep-tradition (Konyar 1936) not just modern survival."
+    },
+    {
+      "witness_id": "ilkhchi_kirklar_ocagi_full_divan",
+      "shelfmark": "(non-institutional: Kırklar Ocağı pirs' private archive)",
+      "collection": "Kırklar Ocağı pirs' private archive, Ilkhchi village",
+      "city": "Ilkhchi (East Azerbaijan province)",
+      "country": "Iran",
+      "date_ah": null,
+      "date_ce": null,
+      "scribe": null,
+      "languages": [
+        "Azerbaijani Turkish"
+      ],
+      "folios": null,
+      "dimensions_cm": null,
+      "lines_per_page": null,
+      "contents": "Complete divan of Cihanşah Hakîkî held in Kırklar Ocağı pirs' private archive: per Sohrabiabad-Akın 2019.",
+      "completeness": "complete",
+      "fragment_type": null,
+      "digital_surrogate": null,
+      "decoration": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": null,
+        "confidence": "unknown",
+        "notes": "Manuscript unphotographed: Sohrabiabad-Akın 2019 reports its existence but were not granted permission to photograph. Codicology unknown."
+      },
+      "scholarly_attestation": [
+        {
+          "author": "Sohrabiabad & Akın",
+          "year": 2019,
+          "ref": "Alevilik-Bektaşilik Araştırmaları Dergisi 19: 179-223",
+          "saw_firsthand": false,
+          "remark": "Existence reported via interview testimony from Kırklar Ocağı members; physical access to the divan not granted; cem-ritual poems verified as excerpts"
+        }
+      ],
+      "discovery_source": "Iran sweep; mecmûʿa sweep split into two distinct Ilkhchi witnesses after primary-text retrieval",
+      "evidence_level": "reported_unexamined",
+      "access_level": "private_or_permissioned_access",
+      "material_data_level": "unrecovered",
+      "verification_status": "verified_with_attribution_caveat",
+      "verification_caveat": "Existence attested in Sohrabiabad-Akın 2019 via Kırklar Ocağı interview testimony; physical manuscript not examined or photographed. Codicology and decoration unknown until physical access permitted. Geographic context: Ilkhchi is in Cihanşah's geographic heartland (East Azerbaijan, near Tabriz), a plausible region for genuine pre-modern witnesses.",
+      "notes": "Unpublished Cihanşah witness in non-institutional archive. Access requirement: in-person research access via Iranian collaborators or Sohrabiabad/Akın direct contact required to obtain codicology and photos."
+    },
+    {
+      "witness_id": "ilkhchi_kirklar_ocagi_cem_cenks",
+      "shelfmark": "(non-institutional: Kırklar Ocağı cem performance cönks)",
+      "collection": "Kırklar Ocağı cem-performance archive, Ilkhchi village",
+      "city": "Ilkhchi (East Azerbaijan province)",
+      "country": "Iran",
+      "date_ah": null,
+      "date_ce": null,
+      "scribe": null,
+      "languages": [
+        "Azerbaijani Turkish"
+      ],
+      "folios": null,
+      "dimensions_cm": null,
+      "lines_per_page": null,
+      "contents": "Cem (Alevi ritual) performance cönks containing 3 Hakîkî ghazals: reproduced verbatim in Sohrabiabad-Akın 2019 Ek-2 appendix",
+      "completeness": "fragment",
+      "fragment_type": "cem_performance_cönk",
+      "digital_surrogate": null,
+      "decoration": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": null,
+        "confidence": "unknown",
+        "notes": "Cem-performance cönks are ritual notebooks, almost always undecorated: but specific data not in Sohrabiabad-Akın 2019."
+      },
+      "scholarly_attestation": [
+        {
+          "author": "Sohrabiabad & Akın",
+          "year": 2019,
+          "ref": "Alevilik-Bektaşilik Araştırmaları Dergisi 19: 179-223, Ek-2 appendix",
+          "saw_firsthand": true,
+          "remark": "3 Hakîkî ghazals reproduced verbatim from Ilkhchi cem cönks"
+        }
+      ],
+      "discovery_source": "mecmûʿa sweep: split from prior 'ilkhchi_kirklar_ocagi_diary' entry after primary-text retrieval",
+      "evidence_level": "catalogue_or_scholarly_attestation",
+      "access_level": "private_or_permissioned_access",
+      "material_data_level": "unrecovered",
+      "verification_status": "verified",
+      "notes": "Cem performance fragment witness (separate codex from full divan above). Fewer poems but documented in published article."
+    },
+    {
+      "witness_id": "diyarbakir_yazma_eserler_lost",
+      "shelfmark": "(formerly Diyarbakır Yazma Eserler Kütüphanesi: shelfmark unknown: REPORTED LOST)",
+      "collection": "Diyarbakır Yazma Eserler Kütüphanesi (Diyarbakır Manuscripts Library)",
+      "city": "Diyarbakır",
+      "country": "Turkey",
+      "date_ah": null,
+      "date_ce": null,
+      "scribe": null,
+      "languages": null,
+      "folios": null,
+      "dimensions_cm": null,
+      "lines_per_page": null,
+      "contents": "Reported as a Hakîkî (Cihan Şah) Divan formerly held at Diyarbakır Yazma Eserler Kütüphanesi",
+      "completeness": "unknown",
+      "fragment_type": null,
+      "digital_surrogate": null,
+      "decoration": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": null,
+        "confidence": "unknown",
+        "notes": null
+      },
+      "scholarly_attestation": [
+        {
+          "author": "Cunbur (Müjgan)",
+          "year": 1999,
+          "ref": "Personal communication to M. Macit, subsequently recorded in Sohrabiabad and Akın (2019) interview with Macit; not in Macit 2000's printed bibliography.",
+          "saw_firsthand": false,
+          "remark": "Cunbur, longtime Turkish manuscript bibliographer, is reported as having seen the codex; the chain (Cunbur 1999 personal communication to Macit, recorded by Sohrabiabad-Akın 2019) is testimonial, not documentary. Macit attempted indirect contact and was told the codex was lost."
+        }
+      ],
+      "discovery_source": "mecmûʿa sweep: surfaced via Sohrabiabad and Akın 2019 interview with Macit, reporting Macit's 1999 personal communication from Cunbur (the testimony is not in Macit's printed 2000 Bilig article bibliography)",
+      "evidence_level": "catalogue_or_scholarly_attestation",
+      "access_level": "lost_or_unlocated",
+      "material_data_level": "unrecovered",
+      "verification_status": "lost_witness_attested_only",
+      "notes": "Cunbur is a credible witness (longtime career at Turkish national bibliographic institutions). Three-stage testimony: Cunbur saw it → reported to Macit → Macit reported. The codex is reportedly LOST. Access requirement: contact Diyarbakır Yazma Eserler Kütüphanesi directly to confirm loss / search shelves; cross-reference with Diyarbakır manuscript inventory updates post-1999."
+    },
+    {
+      "witness_id": "amea_baku_2021_acquisition",
+      "shelfmark": "AMEA Manuscripts Institute acquisition #38 (Jan 2021)",
+      "collection": "Institute of Manuscripts of ANAS (Azerbaijan National Academy of Sciences) Manuscripts Institute, Baku",
+      "city": "Baku",
+      "country": "Azerbaijan",
+      "date_ah": null,
+      "date_ce": "(post-2021 acquisition; underlying codex date TBD: likely a microfilm/photocopy of an existing codex)",
+      "scribe": null,
+      "languages": null,
+      "folios": null,
+      "dimensions_cm": null,
+      "lines_per_page": null,
+      "contents": "Manuscript copy of Cihanşah Həqiqi's divan acquired 12 January 2021 from Süleymaniye Library (per AMEA announcement)",
+      "completeness": "complete",
+      "fragment_type": null,
+      "digital_surrogate": null,
+      "decoration": {
+        "paper_description": null,
+        "illumination": null,
+        "binding": null,
+        "data_source": null,
+        "confidence": "unknown",
+        "notes": null
+      },
+      "scholarly_attestation": [],
+      "discovery_source": "Iran sweep 2026-05-02; mecmûʿa sweep verbatim AMEA announcement re-read",
+      "evidence_level": "catalogue_or_scholarly_attestation",
+      "access_level": "catalogue_or_edition_only",
+      "material_data_level": "not_applicable_rejected",
+      "verification_status": "rejected",
+      "rejection_type": "derivative_surrogate",
+      "rejection_reason": "AMEA's own announcement uses verbatim 'əlyazma surəti' (manuscript reproduction): i.e., a SURROGATE/COPY of a manuscript, not an independent codex. Acquired from Süleymaniye Library, Istanbul. Süleymaniye's unique Cihanşah witness is Fatih 3808; therefore the AMEA holding is a Fatih 3808 surrogate. Confirmed as a microfilm/photographic copy via mecmûʿa sweep verbatim re-reading of AMEA Manuscripts Institute page (https://www.manuscript.az/index.php?17%2F385459.html).",
+      "notes": "Audit-trail entry. Baku question now closed: there is no independent Baku Cihanşah witness; Rahimov 1986 edition was prepared from copies of Süleymaniye Fatih 3808 (likely the same surrogate AMEA acquired). Both Baku entries (baku_doerfer_unspecified and amea_baku_2021_acquisition) are rejected on the same evidence."
+    },
+    {
+      "witness_id": "nuruosmaniye_04281",
+      "shelfmark": "Nuruosmaniye 04281",
+      "collection": "Nuruosmaniye Kütüphanesi",
+      "city": "Istanbul",
+      "country": "Turkey",
+      "date_ah": "1088",
+      "date_ce": "1677/78",
+      "scribe": "Jahanshah b. Baba Gejelu (جهانشاه بن بابا گجلو); Muḥarram 1088 AH / March-April 1677 CE per colophon, IIIF p. 331",
+      "languages": [
+        "Persian"
+      ],
+      "folios": 326,
+      "dimensions_cm": null,
+      "dimensions_mm": "237 × 135-160 × 65",
+      "lines_per_page": null,
+      "script": "Nestalik",
+      "contents": "Catalogued only as 'Dîvân / ديوان': attribution to Hakîkî inferred from YEK cataloguer's reference to Mu'in Ferheng-i Fârsī V.961-962 (entries on multiple Hakîkîs). Title and author fields do NOT print 'Hakîkî' or 'Cihanşah' explicitly.",
+      "completeness": "complete",
+      "fragment_type": null,
+      "digital_surrogate": null,
+      "surrogate_access_note": "YEK detail metadata says digitised images are not available, but the IIIF manifest endpoint was accessible during the 2026-05-11 authenticated/read pass and is preserved in colophon.iiif_manifest for audit reproducibility.",
+      "decoration": {
+        "paper_description": "Aharlı, ince, su yolu dikey, krem renk (sized, thin, vertical chain-lines, cream colour)",
+        "illumination": null,
+        "binding": "Mukavva üzeri vişne renk meşin kaplı miklebli yaldız gömme şemseli, salbekli, zencerekli cetvelli şemse cilt (pasteboard core, cherry-red leather, miklebli envelope flap, gilt-tooled sunken şemse central medallion, salbek pendant lobes, zencerek chain-pattern border ruling: classic 17th-c. Ottoman shemse cilt)",
+        "seals_marks": "Osman III tughralı waqf seal on f. 1a; İbrahim Hanif seal on f. 1a; waqf notes on f. 1a",
+        "data_source": "https://portal.yek.gov.tr/works/detail/178787 (verbatim YEK detail fields, recovery via authenticated YEK portal access)",
+        "decoration_data_confidence": "high",
+        "cihansah_attribution_confidence": "low",
+        "notes": "First catalogued Hakîkî-attributed manuscript with full decoration data captured. But disambiguation gap is severe: see verification_caveat.",
+        "confidence": "low"
+      },
+      "scholarly_attestation": [],
+      "discovery_source": "Source-reverification 2026-05-02 via authenticated YEK AllFields search 'Cihansah' followed by detail-page lookup. NOT surfaced by earlier YEK title/author/notes searches because the codex is catalogued only as 'Dîvân' with attribution implicit in the Mu'in reference.",
+      "evidence_level": "direct_primary_inspection",
+      "access_level": "digital_or_image_access",
+      "material_data_level": "not_applicable_rejected",
+      "verification_status": "rejected",
+      "verification_caveat": "326 folios is far larger than any of the 5 TEIS Yesevi Cihanşah Hakîkî witnesses (BL Or 9493 = 85, Mat 965 = 54, Süleymaniye Fatih 3808 = 107, Tehran 8198 = 133-143, DTCF I/2221 = 26). The 1088 AH (1677/78 CE) Ottoman date is 200+ years after Cihanşah and falls in a period when Yusuf Hakîkî (Aksaray Sufi, d. 880/1475) was extensively copied in Ottoman scriptoria but Cihanşah was NOT. Mu'in's V.961-962 entry covers MULTIPLE Hakîkîs sharing contiguous lexicon entries. Strong prior probability that this is Yusuf Hakîkî's divan, not Cihanşah's.\n\nRECLASSIFIED 2026-05-11 from candidate_probably_yusuf_hakiki_or_other_homonym to rejected on the basis of direct colophon reading (visual-confirmation pass against IIIF p. 331). The colophon-derived scribe identification plus the four-fold convergent disconfirmation made the rejection decisive. See rejection_reason and colophon fields for evidence.",
+      "decoration_data_value_for_or_9493_question": "LOW. Even if this turns out to be a Cihanşah witness, the 1677 Ottoman date + Ottoman shemse cilt aesthetic places it firmly outside the Karakoyunlu/Aq Qoyunlu comparator window. Codicologically irrelevant as a comparator for BL Or 9493's 1488 Tabriz-era paper question.",
+      "yek_authenticated_recovery_method": "Authenticated YEK detail-page lookup for shelfmark 178787",
+      "notes": "Audit-trail entry. Codex confirmed to be a 326-folio Persian Dīvān copied AH 1088 / CE 1677-78 by an Anatolian Alevi-Bektaşi tekke scribe named Jahanshah b. Baba Gejelu, whose given name plausibly commemorates the ruler-poet (a venerated figure in Alevi-Bektaşi literary genealogy) without indicating authorial identity. The YEK cataloguer's Muʿin Ferheng-i Farsi V.961-962 reference is an attribution error driven by the scribal-name homonym. The codex is by some other author, most plausibly Yusuf Hakiki Baba of Aksaray given the mufradat opening, the Bektaşi-Alevi profile of the scribe, and the 17th-century Ottoman copying-Yusuf-Hakiki context. Definitive identification of the underlying author would require textual collation against published Yusuf Hakiki Divan editions (Boz 2009; Çavuşoğlu 2009 for Mahabbet-name) and is out of v1.x poetry-witness-census scope since the codex is decisively not a Cihanshah Qaraqoyunlu witness. Retained at verification_status=rejected so future researchers and reviewers see this attribution was considered, evidenced, and ruled out. The decoration data (paper, binding, seals) captured during prior verification work is preserved in the decoration field as audit material; it pertains to a non-Cihanshah codex and is not Cihanshah-corpus decoration data.",
+      "rejection_type": "scribal_homonym_misidentification",
+      "rejection_reason": "Colophon (IIIF p. 331) names the scribe as Jahanshah b. Baba Gejelu (جهانشاه بن بابا گجلو), dated Muharram 1088 AH (March-April 1677 CE). No author is named anywhere in the codex's incipit, colophon, or section headings. The YEK cataloguer's reference to Muʿin Ferheng-i Farsi V.961-962 is an attribution error driven by the scribal-name homonym: the cataloguer treated 'Cihanshah' in the colophon as authorial and reached for the poet-biographical appendix. Cihanshah Qaraqoyunlu attribution is excluded by four convergent lines of evidence: (1) Codicological size anomaly - 326 folios is far larger than the documented Cihanshah witnesses (26-143 folios) and would require substantial additional matter beyond the known 224-poem corpus. (2) Genre mismatch - opening folios 1b-3a contain 33+ mufradat (single-bayt epigrams), a genre with no presence in Cihanshah's documented corpus. (3) Temporal and contextual distance - the copy is 210 years after Cihanshah's death, in an Ottoman scriptorium context more consistent with Yusuf Hakiki Baba transmission than with the currently documented Karakoyunlu courtly witness line. (4) Authorial silence in the codex itself - the only 'Cihanshah' signal is the scribe's given name, plausibly bestowed in Alevi commemorative-naming honor of the ruler-poet rather than indicating authorial identity.",
+      "colophon": {
+        "iiif_page": 331,
+        "iiif_manifest": "https://portal.yek.gov.tr/iiif/2/0000000164151/manifest",
+        "transcription_arabic": "قد اتفق الفراغ من تسويد هذه النسخة الشريفة في تاريخ شهر الأول عن سنة الثامن من عشر التاسع عن مأة الأول من ألف الثاني فمن الهجرة النبوية المصطفوية على يد العبد الضعيف المحتاج بعنايات الله جهانشاه بن بابا گجلو عفو ذنوبه وستر عيوبه بحق محمد وآله الأمجاد سنه ١٠٨٨",
+        "transcription_translit": "qad ittafaqa al-farāgh min taswīd hādhihi al-nuskha al-sharīfa fī tārīkh shahr al-awwal ʿan sanat al-thāmin min ʿashr al-tāsiʿ ʿan miʾat al-awwal min alf al-thānī fa-min al-hijra al-nabawiyya al-muṣṭafawiyya ʿalā yad al-ʿabd al-ḍaʿīf al-muḥtāj bi-ʿināyāt Allāh Jahānshāh b. Bābā Gejelū ʿafw dhunūbihi wa-satr ʿuyūbihi bi-ḥaqq Muḥammad wa-ālihi al-amjād sene 1088",
+        "translation_english": "It came to pass that the drafting of this noble copy was completed in the first month [Muḥarram], in the year [composed as] the eighth of the ninth decade, of the first hundred, of the second millennium of the Prophetic, Chosen Hijra, by the hand of the weak servant in need of God's solicitudes, Jahānshāh son of Bābā Gejelū - may his sins be forgiven and his faults concealed, by the right of Muḥammad and his glorious family. Year 1088.",
+        "scribe_name_arabic": "جهانشاه بن بابا گجلو",
+        "scribe_name_translit": "Jahānshāh b. Bābā Gejelū",
+        "date_completion_ah": "Muḥarram 1088",
+        "date_completion_ce_julian": "approximately 4 March - 2 April 1677",
+        "date_completion_ce_gregorian": "approximately 14 March - 12 April 1677",
+        "place_of_copying_named": null,
+        "patron_named": null,
+        "author_of_underlying_text_named": null,
+        "religious_formula_note": "Closing invocation 'wa-ālihi al-amjād' (and his glorious family) omits the standard Sunni 'wa-ṣaḥbihi' (and his companions). The Prophet's family-without-companions formula is characteristic of Shia/Alevi-inflected piety, consistent with the Bektaşi-Alevi tekke profile suggested by the scribe's Baba-titled father.",
+        "date_chronogram_note": "The year 1088 is given twice in the colophon: first as a paratextual chronogram (the eighth of the ninth decade, of the first hundred, of the second millennium of the Hijra = 8 + 80 + 1000 = 1088), then repeated in plain numerals as ١٠٨٨. This doubled date is characteristic of literate scribes who valued formal colophon paratexts.",
+        "palaeographic_notes": "Scribe-name palaeography: the patronymic is بابا (Bābā, with terminal alif after the second bāʾ), not باب (Bāb). The tribal nisba is گجلو (Gejelū / Gechelū): kāf-with-stroke = gāf, then jīm, lām, wāw. NOT قاجارلو (Qājārlū / Qajar tribal) and NOT گچلو (Gachalū).",
+        "recovery_method": "Direct read of IIIF p. 331 native-resolution image, visual-confirmation pass 2026-05-11. Colophon transcription and translation are captured inline in this register for audit-trail preservation."
+      }
+    }
+  ],
+  "stats": {
+    "total_non_rejected_entries": 11,
+    "total_verified_or_caveated_witnesses": 9,
+    "total_witnesses_active": 11,
+    "total_entries_including_rejected_and_lost": 14,
+    "by_verification": {
+      "verified": 7,
+      "verified_with_attribution_caveat": 2,
+      "candidate_probably_non_cihansah": 1,
+      "candidate_probably_yusuf_hakiki_or_other_homonym": 0,
+      "lost_witness_attested_only": 1,
+      "rejected": 3,
+      "pending": 0
+    },
+    "by_completeness": {
+      "complete": 5,
+      "fragment_or_excerpt": 1,
+      "fragment": 4,
+      "unknown": 1
+    },
+    "by_country": {
+      "UK": 1,
+      "Turkey": 6,
+      "Armenia": 1,
+      "Iran": 3
+    }
+  },
+  "teis_yesevi_roster": [
+    "BL Or 9493 (London)",
+    "Matenadaran 965 (Yerevan)",
+    "Süleymaniye Fatih 3808 (Istanbul)",
+    "Ankara Üniversitesi DTCF İsmail Saib I/2221 (Ankara)",
+    "Tehran University Central Library 8198 (Tehran)"
+  ]
+}

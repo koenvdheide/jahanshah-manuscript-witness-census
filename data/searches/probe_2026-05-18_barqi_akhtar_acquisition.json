@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "generated": "2026-05-18",
+  "scope": "Focused acquisition pass for Lotfali Barqi's Akhtar edition of the Turkish Divan-i Haqiqi, separated from the general modern-edition source-apparatus pass.",
+  "target": {
+    "title_persian": "تورکجه حقیقی دیوانی: قاراقویونلو جهانشاه منسوب اولونموشدور",
+    "title_latin": "Turkja Haqiqi Divani: Qaraqoyunlu Jahanshah mansub olunmushdur",
+    "author_attribution": "Jahanshah b. Qara Yusuf Haqiqi Turkmen",
+    "editor": "Lotfali Barqi",
+    "publisher": "Nashr-i Akhtar, Tabriz",
+    "publication_years_observed": [
+      "1399",
+      "1400"
+    ],
+    "pages": 156,
+    "format": "raq'i paperback",
+    "isbn": "978-600-486-342-1",
+    "print_run_observed": 200,
+    "publication_date_observed": "1400/03/24",
+    "why_priority": "The public Telegram announcement says Barqi explicitly follows Minorsky's authorship doubt and offers a near-critical Arabic-script edition preserving linguistic features; the preface and source list are therefore high-value even if the edition adds no new manuscript witness."
+  },
+  "sources_checked": [
+    {
+      "source": "Mahdroo product page",
+      "url": "https://mahdroo.ir/shop/product/book-205847-u3jsze",
+      "status": "reachable",
+      "observed": "Confirms bibliographic metadata, ISBN, 156 pages, 200-copy print run, Akhtar publisher, Barqi as corrector/editor, and Jahanshah b. Qara Yusuf Haqiqi Turkmen as poet. The page itself says Mahdroo's shop is inactive and is only an information surface.",
+      "acquisition_value": "Bibliographic authority and aggregator hints only; not a purchase route."
+    },
+    {
+      "source": "Turkish language and literature Telegram mirror",
+      "url": "https://t.me/s/turkdiledebiyat?before=827",
+      "status": "reachable",
+      "observed": "Forwards Evdeal's original sale post for product 1365 and repeats the publisher announcement. The post gives price 42,000 toman, ISBN 1-342-486-600-978, Akhtar/Tabriz, 1399, 156 pages, and says Barqi's introduction addresses Minorsky's doubts about authorship.",
+      "acquisition_value": "Best evidence for the original seller route and for why the edition matters."
+    },
+    {
+      "source": "Evdeal product route",
+      "url": "http://www.evdeal.ir/product-1365",
+      "status": "not_recovered",
+      "observed": "DNS resolves and TCP ports 80/443 connect, but HTTP and HTTPS requests timed out with no response during the 2026-05-18 pass. The Telegram source still gives @evdeal as the practical contact route.",
+      "acquisition_value": "Likely original online seller, but current web route is unusable from this environment."
+    },
+    {
+      "source": "Mahdroo digital-vendor panel",
+      "url": "https://mahdroo.ir/shop/product/book-205847-u3jsze#buyElectronicBook",
+      "status": "partly_recovered",
+      "observed": "Rendered page lists four PDF vendors: Fidibo, Taaghche, Ketabchin, and Ketabrah, with prices and update dates in Ordibehesht 1405. The rendered buttons are disabled/cursor-not-allowed and do not expose outbound links. Independent Taaghche searches by exact title and ISBN did not find the book, Fidibo returned 403, Ketabrah redirected to an error page for the attempted search URL, and Ketabchin timed out.",
+      "acquisition_value": "Treat as stale or non-actionable until one provider is verified directly by search or login."
+    },
+    {
+      "source": "Mahdroo sample / Book House PDF redirect",
+      "url": "https://pic.ketab.ir/DataBase/bookpdf/00/1400324250.pdf",
+      "status": "blocked",
+      "observed": "Clicking Mahdroo's sample link opened both the Mahdroo asset URL and a Book House / pic.ketab.ir sample PDF route with identifier 1400324250. The Book House route returned 403 and showed a 'site updating/forbidden' image in browser; shell download also returned 403.",
+      "acquisition_value": "High-value retry target from a different network or authenticated Iranian access; may expose the table of contents or preface pages."
+    },
+    {
+      "source": "Akhtar publisher Telegram channel",
+      "url": "https://t.me/s/nashreakhtar?before=484",
+      "status": "reachable",
+      "observed": "Active publisher channel gives address 'Tabriz, first Taleghani Street, opposite Mosalla, Nashr-i Akhtar' and manager handle @Nashre_akhtar. Recent posts continue advertising Akhtar titles.",
+      "acquisition_value": "Best direct acquisition route for a physical copy."
+    },
+    {
+      "source": "80118 Akhtar directory entry",
+      "url": "https://www.80118.ir/jobs/view/4677/%D9%86%D8%B4%D8%B1%2B%D8%A7%D8%AE%D8%AA%D8%B1",
+      "status": "reachable_via_web_index",
+      "observed": "Directory entry identifies manager Samad Mahdi Asilbi, activity as publishing/bookshop, email akhtar-pub@yahoo.com, and address in Tabriz at first Taleghani Street opposite Mosalla. Phone/mobile/fax are image-rendered in the directory.",
+      "acquisition_value": "Secondary direct contact route."
+    },
+    {
+      "source": "Older Akhtar sales/contact mentions",
+      "url": "https://yashilxiyal.blogfa.com/post/97",
+      "status": "reachable",
+      "observed": "An older Akhtar title announcement gives the same shop location and lists phone 04115555393. Other regional lists give the modernized equivalent 04135555393 for Akhtar Bookshop.",
+      "acquisition_value": "Phone route worth trying, but treat as older contact data until confirmed."
+    },
+    {
+      "source": "Mahdroo borrow/library panel",
+      "url": "https://mahdroo.ir/shop/product/book-205847-u3jsze#borrowBook",
+      "status": "partly_recovered",
+      "observed": "Rendered page lists Astan Quds Razavi Library in Mashhad as holding/loan surface, with last update 1405/02/17. The 'search in library' button was non-actionable in the browser session.",
+      "acquisition_value": "Potential institutional consultation route if publisher/seller acquisition fails."
+    }
+  ],
+  "acquisition_ranking": [
+    {
+      "rank": 1,
+      "route": "Direct publisher Telegram",
+      "contact": "@Nashre_akhtar / @nashreakhtar",
+      "ask": "Ask whether 'تورکجه حقیقی دیوانی' by Lotfali Barqi, ISBN 978-600-486-342-1, is still in stock, and whether they can provide a scan/photo of the introduction, source list, and first/last text pages for research citation.",
+      "reason": "Publisher is active and owns the stock/source relationship."
+    },
+    {
+      "rank": 2,
+      "route": "Akhtar phone/email",
+      "contact": "akhtar-pub@yahoo.com; older phone records 04115555393 / 04135555393",
+      "ask": "Same as Telegram, with exact title, ISBN, and 156-page Akhtar/Tabriz edition details.",
+      "reason": "Independent direct contact route if Telegram is not usable."
+    },
+    {
+      "rank": 3,
+      "route": "Evdeal Telegram",
+      "contact": "@evdeal",
+      "ask": "Ask about product 1365, originally advertised as the Barqi/Akhtar 'تورکجه حقیقی دیوانی'.",
+      "reason": "Original sales post came from Evdeal, but the web shop is currently unresponsive."
+    },
+    {
+      "rank": 4,
+      "route": "Book House sample PDF retry",
+      "contact": "https://pic.ketab.ir/DataBase/bookpdf/00/1400324250.pdf",
+      "ask": "Retry from an Iranian network, institutional proxy, or Book House interface; target only sample/preface pages, not an illicit full-copy route.",
+      "reason": "The identifier is precise and may expose enough apparatus to answer the source-question without buying the whole book."
+    },
+    {
+      "rank": 5,
+      "route": "Astan Quds Razavi Library",
+      "contact": "Use Mashhad/Astan Quds catalogue or reader services; Mahdroo lists the holding under the borrow panel.",
+      "ask": "Request catalogue confirmation and, if permitted, copies of introduction/source-list pages.",
+      "reason": "Institutional fallback if print/digital acquisition fails."
+    }
+  ],
+  "provider_status": {
+    "mahdroo": "Information page only; store inactive.",
+    "evdeal": "Original seller by Telegram; website currently times out.",
+    "fidibo": "Mahdroo lists it as PDF vendor, but direct search URL returned 403.",
+    "taaghche": "Mahdroo lists it as PDF vendor, but exact-title and ISBN searches did not recover the book.",
+    "ketabchin": "Mahdroo lists it as PDF vendor, but search route timed out.",
+    "ketabrah": "Mahdroo lists it as PDF vendor, but attempted search URL redirected to a generic error page.",
+    "book_house_pdf": "Precise sample identifier recovered, but access blocked with 403.",
+    "akhtar": "Direct publisher route active through Telegram/channel footprint.",
+    "astan_quds": "Potential library route surfaced by Mahdroo, not independently confirmed in catalogue during this pass."
+  },
+  "request_template_fa": "سلام. برای یک پروژه پژوهشی درباره نسخه‌ها و چاپ‌های دیوان حقیقی، دنبال کتاب «تورکجه حقیقی دیوانی: قاراقویونلو جهانشاه منسوب اولونموشدور»، مقدمه و تصحیح لطفعلی برقی، نشر اختر تبریز، ۱۵۶ صفحه، شابک 978-600-486-342-1 هستم. آیا نسخه‌ای برای خرید موجود است؟ اگر ممکن است، برای تشخیص مأخذ تصحیح، تصویر/اسکن مقدمه، فهرست منابع یا نسخه‌های مورد استفاده، و صفحه اول و آخر متن را هم می‌خواهم. استفاده فقط پژوهشی و با ارجاع خواهد بود.",
+  "request_template_en": "Hello. I am trying to acquire Lotfali Barqi's Akhtar edition 'Turkja Haqiqi Divani: Qaraqoyunlu Jahanshah mansub olunmushdur' (Tabriz: Nashr-i Akhtar, 156 pp., ISBN 978-600-486-342-1) for a research project on the manuscript and printed transmission of Divan-i Haqiqi. Is a copy available for purchase? If possible, I also need images/scans of the introduction, source/manuscript list, and the first and last text pages so that the edition's source basis can be cited accurately.",
+  "open_questions": [
+    "Does Barqi cite specific manuscript shelfmarks, or is the edition based only on prior printed editions?",
+    "Does the introduction materially revise Minorsky's authorship caveat or only discuss it rhetorically?",
+    "Do the 156 pages include a bibliography/source list, notes, or only the edited text?",
+    "Is the Book House sample PDF accessible from an Iranian network or only through a disabled public route?"
+  ],
+  "register_impact": "No witness-register status change. This is an acquisition and source-apparatus target for a printed edition, not independent manuscript evidence.",
+  "audit_metadata": {
+    "record_type": "targeted_followup",
+    "record_date": "2026-05-18",
+    "artifact_status": "current",
+    "source_layers": [
+      "edition_apparatus",
+      "project_classification",
+      "scholarly_description"
+    ],
+    "access_mode": "print_or_ill_only",
+    "disposition": "deferred_followup",
+    "follow_up_required": true,
+    "follow_up_type": "source_acquisition"
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "schema_version": 1,
+  "search_session": {
+    "date": "2026-05-02",
+    "scope": "auction_archives",
+    "family": "haqiqi_witness_census",
+    "status": "complete",
+    "schema_note": "Adapted from shared search-session schema by setting family='haqiqi_witness_census' and adding scope='auction_archives'. Per-portal sweeps captured in searches_completed[]; auction lots related to Haqiqi/Cihanşah captured in haqiqi_lots[] (zero in this run); contemporary Qaraqoyunlu/Aq Qoyunlu sister-workshop manuscripts at auction captured in comparator_candidates[] for comparator inventory input.",
+    "search_session_summary": "auctions sweep of Christie's, Sotheby's, Bonhams, HALI, Drouot/Millon for any manuscript or detached folio related to Cihanşah Hakîkî's poetry, with secondary objective of populating the comparator inventory with rich-decoration-described Qaraqoyunlu / Aq Qoyunlu / Tabriz-Shiraz-Baghdad-1460s-90s sister manuscripts. Methodology: direct lot-page retrieval succeeded on Bonhams (worked for Christie's previously, but Christie's responded with placeholder pages this run: both /search and /results endpoints returned identical 60-64KB landing pages with no real data). targeted web search + direct HTTP fetch supplemented to harvest catalogue lots. Bonhams's upcoming Sale 32276 'Islamic and Indian Art' (21 May 2026) returned 6 strong comparator candidates. Sotheby's results page is JS-rendered (266KB pages contain no result data); targeted web search with site:sothebys.com filter unlocked 4 confirmed Sotheby's comparator lots. No Cihanşah Hakîkî / Jahanshah authored or signed lots found in any auction archive. BL Or 9493 pre-acquisition provenance: zero open-internet evidence of a 1920s London auction; the Rieu 1888 Catalogue of Turkish MSS at British Museum confirmed (via Internet Archive djvu.txt) that Or 9493 is post-1888 and post-Rieu, consistent with the ~1923-28 BM accession date.",
+    "searches_completed": [
+      {
+        "portal": "christies",
+        "method": "direct HTTP fetch + targeted web search with site filter",
+        "search_terms_used": [
+          "haqiqi",
+          "hakiki",
+          "jahanshah",
+          "jahan shah",
+          "qaraqoyunlu",
+          "qara qoyunlu",
+          "kara koyunlu",
+          "karakoyunlu",
+          "aq qoyunlu",
+          "tabriz 1480",
+          "qanbar ali isfahani",
+          "turkmen poetry",
+          "turkman manuscript",
+          "pir budaq"
+        ],
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "Christie's /search and /results endpoints returned identical 60-64KB Cloudflare-cached landing pages: no result content. targeted web search with site:christies.com filter for 'Pir Budaq manuscript poetry' returned zero results. Christie's direct HTTP fetch is BLOCKED (Code: 'the archival/web retrieval environment is unable to fetch from www.christies.com'). Two known Pir Budaq Christie's lots previously retrieved and reused as comparator (christies-direct-6229664.html = Amir Khusraw Khamsa 2019, christies-direct-6500539.html = Jami Diwan 2024): re-used in comparator_candidates below. Christie's 2011 lot 124 (referenced in 2024 Jami lot essay) is the Sibak Husn u Dil signed Mirak al-Shirazi, Baghdad 1463-64: confirmed via targeted web search but full lot URL not retrievable in this session.",
+        "url_template": "https://www.christies.com/en/results and https://www.christies.com/en/search?entry={q}&searchtype=p (both endpoints)"
+      },
+      {
+        "portal": "sothebys",
+        "method": "direct HTTP fetch failed for result pages; direct lot URLs + targeted web search with site filter used",
+        "search_terms_used": [
+          "haqiqi",
+          "hakiki",
+          "jahanshah",
+          "qara qoyunlu",
+          "kara koyunlu",
+          "aq qoyunlu",
+          "turkman divan",
+          "pir budaq",
+          "qanbar ali isfahani"
+        ],
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "Sotheby's /results pages are JS-rendered; static HTML returns generic 266KB landing pages with no actual lot data. direct HTTP fetch successful on individual lot URLs. targeted web search with site:sothebys.com filter unlocked 4 confirmed comparator lots: (1) 2020 Hafez Diwan dedicated to Pir Budaq library (Lot 23, sold 10 June 2020, hammer £375,000); (2) 2023 Aq Qoyunlu Quran (Lot 24, 26 April 2023); (3) 2024 Lutfullah Shahnama (Lot 74, 24 April 2024, ex-Kevorkian Fund 1976); (4) 2024 Khurasan/Bukhara stencil-margin poetry manuscript (Lot 158, 23 October 2024, ex-Zebrowski / 1994 Sotheby's). Plus 2003 Welch Sale lot 22 (Husayn Bayqara Majalis al-Ushaq) and 2011 Welch Part II lot 39 (Nizami Makhzan al-Asrar frontispiece, Persia or Turkey late 15th c.): both Welch-collection material. Zero Cihanşah Hakîkî authored lots.",
+        "url_template": "https://www.sothebys.com/en/results?keyword={q} (266KB JS-rendered pages with no result content); direct HTTP fetch successful for direct lot URLs"
+      },
+      {
+        "portal": "bonhams",
+        "method": "direct HTTP fetch (successful: JSON-blob HTML)",
+        "search_terms_used": [
+          "haqiqi",
+          "hakiki",
+          "jahanshah",
+          "qara qoyunlu",
+          "qaraqoyunlu (no space)",
+          "aq qoyunlu",
+          "turkman",
+          "turkmen",
+          "turcoman",
+          "tabriz divan",
+          "tabriz 1480",
+          "kara koyunlu",
+          "karakoyunlu",
+          "djihan",
+          "pir budaq",
+          "shaykh mahmud",
+          "dar al ilm",
+          "baghdad 1460"
+        ],
+        "raw_count": 7,
+        "genuine_count": 0,
+        "fp_count": 1,
+        "notes": "Bonhams direct HTTP fetch returned valid JSON-blob HTML (84-624 KB pages with parseable lot titles). Direct Cihanşah Hakîkî / Jahanshah / Karakoyunlu searches: ZERO genuine matches. Some FP results (e.g. 'qaraqoyunlu' returned Tibetan thangkas: Cyrillic/Sanskrit cross-match; 'karakoyunlu' returned Swedish carpet listings; 'pir budaq' returned an Iranian carpet 'Pir Balut'). However, the upcoming Bonhams Sale 32276 'Islamic and Indian Art' (London, 21 May 2026) yielded 6 STRONG comparator-candidate lots from the immediate Türkmen / Aq Qoyunlu / Shiraz-Tabriz / 15th-c. Persian-language manuscript milieu (lots 6, 7, 8, 10, 14, 18). All 6 fetched with verbatim paper/decoration descriptions: see comparator_candidates[] below.",
+        "url_template": "https://www.bonhams.com/search/?q={q}&type=lots; saleindex at /auction/32276/"
+      },
+      {
+        "portal": "hali",
+        "method": "targeted web search with site filter",
+        "url": "https://hali.com",
+        "search_terms_used": [
+          "Pir Budaq",
+          "Aq Qoyunlu",
+          "Qara Qoyunlu",
+          "Cihanşah Hakîkî"
+        ],
+        "raw_count": 1,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "HALI's open-web indexed coverage is sparse for Türkmen-period manuscripts. One auction-report URL surfaced (hali.com/news/art-of-the-islamic-and-indian-worlds-christies-london-25-october/) but it lists Christie's 25 October sale highlights, no Cihanşah / Haqiqi content. HALI archives behind paywall; deeper sweep would require subscription."
+      },
+      {
+        "portal": "drouot_millon",
+        "method": "targeted web search (broad)",
+        "url": "https://www.drouot.com / https://www.millon.com",
+        "search_terms_used": [
+          "Djihân Châh",
+          "Kara-Koyounlou",
+          "Hakîkî"
+        ],
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "Per candidate-evidence research 2026-05-02: low priority for Türkmen-period mss. Single broad query confirmed zero hits for the 19th-c. Orientalist romanizations (Djihân Châh, Kara-Koyounlou). Continental auction houses for medieval Persian/Turkic mss have negligible indexed open-web coverage."
+      },
+      {
+        "portal": "internet_archive",
+        "method": "direct HTTP fetch on djvu.txt",
+        "url": "https://archive.org/stream/catalogueofturki00brituoft/catalogueofturki00brituoft_djvu.txt",
+        "search_terms_used": [
+          "9493",
+          "Hakiki",
+          "Hakiqi",
+          "Haqiqi",
+          "Jahan-shah",
+          "Cihan-shah",
+          "Jahanshah",
+          "Qara-Qoyunlu",
+          "Kara-Qoyunlu",
+          "Karakoyounlou"
+        ],
+        "raw_count": 0,
+        "genuine_count": 0,
+        "fp_count": 0,
+        "notes": "Rieu 'Catalogue of the Turkish Manuscripts in the British Museum' 1888: full OCR text searched via direct HTTP fetch. ZERO matches for any search term. CONFIRMS Or 9493 is a post-1888 BM accession, consistent with the 1923-28 acquisition window stated in the initial research brief. The Meredith-Owens 1968 'Handlist of Persian manuscripts 1895-1966' (Hathi Trust 001173294) was 403-blocked; would require institutional access to confirm Or 9493 acquisition channel from BM accession registers."
+      }
+    ],
+    "haqiqi_lots_found": [],
+    "comparator_candidates": [
+      {
+        "comparator_id": "christies_2019_amir_khusraw_khamsa_pir_budaq",
+        "auction_house": "Christie's",
+        "sale_title": "Art of the Islamic and Indian Worlds (London, 24 October 2019)",
+        "lot_number": 37,
+        "lot_url": "https://www.christies.com/en/lot/lot-6229664",
+        "title_verbatim": "AMIR KHUSRAW DIHLAVI (d. AH 725/1324-5 AD): KHAMSA, SIGNED 'ABDULLAH KATIB ISFAHANI, QARA QOYUNLU ISFAHAN, IRAN, DATED 17 SAFAR AH 868/ 31 OCTOBER 1463 AD",
+        "comparator_relevance": "DIRECT: Pir Budaq's Isfahan kitabkhana, signed by 'Abdullah Katib Isfahani; Qara Qoyunlu provenance; just 25 years before BL Or 9493 (1488). Co-located in Isfahan as scribal centre. Important: this Khamsa was originally bound with the Chester Beatty Per 137 Nizami (its 'sister volume'): confirms shared workshop production for Pir Budaq's library.",
+        "decoration_verbatim_paraphrase": "From the lot essay: 'crisp paper... rich use [of lapis lazuli] along with gold, which is generously applied to illuminations and text blocks as seen on the illuminated headings'... 'The program of illumination might be limited here but it is executed with utmost care and uses the same pigments and design aesthetics that are seen on other Pir Budaq manuscripts'. Paper verbatim: 'sensually appealing because of the quality of its crisp paper and the elegance of the calligraphy'. Two unfinished chapter heading illuminations evidence Pir Budaq's death cutting production short.",
+        "scribe": "'Abdullah Katib Isfahani",
+        "place_date": "Isfahan, Qara Qoyunlu, 17 Safar 868 AH / 31 October 1463 AD",
+        "patron": "Pir Budaq (d. 1466), eldest son of Jahanshah Qaraqoyunlu",
+        "ex_collection_chain": "Philipp Walter Schulz (purchased 1897-99), Leipzig collection 1900 exhibition; sold privately early 20th c.; rediscovered for Christie's 2019 sale"
+      },
+      {
+        "comparator_id": "christies_2024_jami_diwan_pir_budaq_baghdad",
+        "auction_house": "Christie's",
+        "sale_title": "Art of the Islamic and Indian Worlds including Rugs and Carpets (London, 24 October 2024)",
+        "lot_number": 37,
+        "lot_url": "https://www.christies.com/lot/lot-6500539",
+        "title_verbatim": "NUR AL-DIN 'ABD AL-RAHMAN JAMI (D.1492): DIWAN, SIGNED SHAYKH MAHMUD, COPIED IN THE DAR AL-'ILM, QARA QOYUNLU BAGHDAD, DATED AH 867 / 1462-3 AD",
+        "decoration_verbatim": "Persian manuscript on paper, 54ff. plus two flyleaves, each folio with 17ll. black nasta'liq arranged in two columns, section headings in the central panel, set within gold and blue rules, the margins plain, catchwords, the opening folio with gold and polychrome illuminated headpiece with gold strapwork down the central axis, the closing folio with gold scrolling vines and split palmettes, the colophon signed and dated with place of copying, in later gilt soft leather binding, the doublures of dyed paper",
+        "dimensions_verbatim": "Text panel 6 1/8 x 3 1/8 in. (15.5 x 8 cm.); folio 9 5/8 x 5 7/8 in. (24.3 x 14.9 cm.)",
+        "scribe": "Shaykh Mahmud (Pir Budaqi), trained under Ja'far Baysunghuri",
+        "place_date": "Baghdad, Dar al-'Ilm, Qara Qoyunlu, AH 867 / 1462-3 AD",
+        "patron": "Pir Budaq (Baghdad governor 1460-66): circumstantial via close style match with other Pir Budaq library mss; Jami text not yet dedicated when Pir Budaq commissioned, scribe is Shaykh Mahmud who is Pir Budaq's signature scribe",
+        "ex_collection_chain": "Djafar Ghazi (d.2007), Munich; Christie's London 6 October 2009 lot 75; Christie's London 10 April 2014 lot 1; Christie's London 24 October 2024 lot 37"
+      },
+      {
+        "comparator_id": "sothebys_2020_hafez_diwan_pir_budaq",
+        "auction_house": "Sotheby's",
+        "sale_title": "Arts of the Islamic World & India including Fine Rugs & Carpets (London, 10 June 2020)",
+        "lot_number": 23,
+        "lot_url": "https://www.sothebys.com/en/buy/auction/2020/arts-of-the-islamic-world-india-including-fine-rugs-carpets/hafiz-d-1390-ad-diwan-dedicated-to-the-library-of",
+        "title_verbatim": "Hafiz (d.1390 AD), Diwan, dedicated to the library of Pir Budaq, copied by Shaykh Mahmud Pir Budaqi, Baghdad, dated AH 867/1462 AD",
+        "decoration_verbatim_paraphrase": "Persian manuscript on polished paper, 160 leaves plus 4 fly-leaves, 17 lines per page in elegant nasta'liq script, text in two columns with black and gold ruling, illuminated opening with dedication to Pir Budaq, illuminated heading on f.2b, decorated finispiece on f.160b, brown leather stamped and gilt binding",
+        "dimensions_verbatim": "23 by 11.8 cm",
+        "dedication_verbatim": "Bi-rasm khazanah [kutub zill allah] al-mannan maladh khawaqin [al-zaman abu'l-fath] pir budaq bahadur khan ayya[dahu alllah] bi'l-nasr wa al-ihsan ('For the Library of the shadow of God the Propitious, refuge of emperors of the time, Abu'l-Fath Pir Budaq Bahadur Khan, may God help him with victory and benevolence')",
+        "scribe": "Shaykh Mahmud Pir Budaqi",
+        "place_date": "Baghdad, AH 867 / 1462 AD",
+        "patron": "Pir Budaq (explicit dedication in colophon)",
+        "ex_collection_chain": "Jafar Ghazi (Munich, d. 2007); STOLEN; recovered 2019 by art-detective Arthur Brand; sold Sotheby's June 2020",
+        "estimate": "£80,000-120,000",
+        "hammer_price": "£375,000"
+      },
+      {
+        "comparator_id": "sothebys_2023_aqqoyunlu_quran",
+        "auction_house": "Sotheby's",
+        "sale_title": "Arts of the Islamic World and India, including Fine Rugs and Carpets (London, 26 April 2023)",
+        "lot_number": 24,
+        "lot_url": "https://www.sothebys.com/en/buy/auction/2023/arts-of-the-islamic-world-and-india-including-fine-rugs-and-carpets/an-illuminated-quran-persia-timurid-or-aqqoyunlu",
+        "title_verbatim": "An illuminated Qur'an, Persia, Timurid or Aqqoyunlu, second half 15th century",
+        "decoration_verbatim": "Arabic manuscript on paper, 418 leaves, plus 2 fly-leaves, 12 lines to the page; thuluth in gold and naskh in black; gold and blue rosettes; gold and polychrome illuminated marginal medallions; Safavid gilt stamped binding, découpé doublures",
+        "dimensions_verbatim": "Text panel 16.7 by 10.6 cm; leaf 23.1 by 15.1 cm",
+        "place_date": "Persia, Timurid or Aqqoyunlu, second half 15th century",
+        "scribe": "unidentified",
+        "patron": "unknown",
+        "estimate": "£80,000-120,000"
+      },
+      {
+        "comparator_id": "sothebys_2024_lutfullah_shahnama_safavid_tabriz",
+        "auction_house": "Sotheby's",
+        "sale_title": "Arts of the Islamic World and India (London, 24 April 2024)",
+        "lot_number": 74,
+        "lot_url": "https://www.sothebys.com/en/buy/auction/2024/arts-of-the-islamic-world-and-india/abul-qasim-firdausi-d-1025-ad-shahnameh-copied-by",
+        "title_verbatim": "Abu'l Qasim Firdausi (d. 1025 AD), Shahnameh, copied by Lutfullah ibn Habibullah ibn 'Imad [al-Hala'i], probably Tabriz, Persia, Safavid, dated Safar AH 912 (July-August 1506 AD)",
+        "decoration_verbatim": "Persian manuscript on paper, 633 leaves, 25 lines to the page written in nasta'liq in black ink arranged in four columns with gold and black intercolumnar rules, headings in red, blue and gold, ruled in gold, blue and black, including 110 illustrations in gouache heightened with gold, in contemporaneous Safavid lacquer binding, lacquer doublures",
+        "dimensions_verbatim": "Text panel 22.8 by 15.4 cm; leaf 32.4 by 22.8 cm",
+        "place_date": "probably Tabriz, Safar AH 912 / July-August 1506 AD (early Safavid, immediately post-Aqqoyunlu Tabriz)",
+        "scribe": "Lutfullah ibn Habibullah ibn 'Imad al-Hala'i",
+        "patron": "unknown",
+        "estimate": "£40,000-60,000",
+        "ex_collection_chain": "Sotheby's London, Important Oriental Manuscripts and Miniatures: The Property of The Hagop Kevorkian Fund, 21 April 1976, lot 188"
+      },
+      {
+        "comparator_id": "sothebys_2024_zebrowski_khurasan_bukhara_poetry",
+        "auction_house": "Sotheby's",
+        "sale_title": "Arts of the Islamic World & India (London, 23 October 2024)",
+        "lot_number": 158,
+        "lot_url": "https://www.sothebys.com/buy/37019688-05a6-4eba-ad40-f68d92721a81/lots/68c9d964-fe25-4cda-ab8c-5e09c297bf88",
+        "title_verbatim": "An illuminated manuscript of poetry in nasta'liq, Persia or Central Asia, Khurasan or Bukhara, 16th century",
+        "decoration_verbatim": "Persian manuscript on gold-sprinkled paper, 17 leaves, plus 2 fly-leaves, 12 lines to the page written in nasta'liq in black ink arranged in two columns, within gold and orange rules, and narrow gold floral illuminated borders, headings in blue and red within illuminated panels, each leaf with wide polychrome stencilled and découpé margins decorated with arabesques, cloudbands, geometric tilework and split palmettes, in brown leather binding stamped and gilt with a tughra of Tahir ibn Muhammad, paper doublures",
+        "dimensions_verbatim": "Text panel 11 by 5.5 cm; leaf 25.9 by 15.5 cm",
+        "place_date": "Persia or Central Asia, Khurasan or Bukhara, 16th century",
+        "estimate": "£12,000-18,000",
+        "ex_collection_chain": "Sotheby's London 27 April 1994 lot 81; Dr. Mark Zebrowski (1944-99) collection, London; private collection London"
+      },
+      {
+        "comparator_id": "sothebys_2003_husayn_bayqara_majalis_al_ushaq",
+        "auction_house": "Sotheby's",
+        "sale_title": "Arts of the Islamic World, L03221 (London, 2003)",
+        "lot_number": 22,
+        "lot_url": "https://www.sothebys.com/en/auctions/ecatalogue/2003/arts-of-the-islamic-world-l03221/lot.22.html",
+        "title_verbatim": "SULTAN HUSAYN BAYQARA. MAJALIS AL-USHAQ, ASSEMBLIES OF LOVERS, ILLUMINATED PERSIAN MANUSCRIPT ON PAPER, ILLUSTRATED WITH ONE DOUBLE-PAGE MINIATURE AND 75 SMALL MINIATURES, PERSIA, PROBABLY QAZWIN, dated 15 Shawwal 984/5th January 1577",
+        "decoration_verbatim": "196 leaves, 17 lines to the page written in one or two columns of fine nasta'liq script in black ink; double intercolumnar rules with gold foliate decoration; margins ruled in blue and gold; one illuminated headpiece; one double-page frontispiece depicting an enthroned prince picnicking; two illuminated central medallions (shamsa); 75 small miniatures executed by more than one artist; modern black shagreen with gilt-stamped central medallions decorated with geese in flight, with flap, doublures and end-leaves of gilt paper",
+        "place_date": "Persia, probably Qazwin, 15 Shawwal 984 AH / 5 January 1577 AD",
+        "scribe": "unidentified",
+        "ex_collection_chain": "Safavid Royal Library; Rajab Quli ibn Mirza Muhammad Ibrahim (June-July 1853); Reza Quli al-Sharif (1853-54); H.P. Kraus, New York",
+        "noted_iconography": "Includes a small miniature depicting Sultan Pir Budaq bin Jahanshah drinking at night with a young prince (per targeted web search result snippet)"
+      },
+      {
+        "comparator_id": "sothebys_2011_welch_nizami_makhzan_late15c",
+        "auction_house": "Sotheby's",
+        "sale_title": "C. Welch Part II, L11227 (London, 2011)",
+        "lot_number": 39,
+        "lot_url": "https://www.sothebys.com/en/auctions/ecatalogue/2011/c-welch-part-ii-l11227/lot.39.html",
+        "title_verbatim": "AN OPENING DOUBLE PAGE FRONTISPIECE FROM A MANUSCRIPT OF NIZAMI'S MAKHZAN AL-ASRAR, PERSIA OR TURKEY, LATE 15TH CENTURY",
+        "decoration_verbatim_paraphrase": "Manuscript bifolium comprising an illuminated frontispiece across folios 1b-2a; folio 2b contains a full page of text with 17 lines of small fine nasta'liq script written horizontally and diagonally in three columns. Ink, color and gold on paper.",
+        "dimensions_verbatim": "5 3/4 x 3 inches",
+        "place_date": "Persia or Turkey, late 15th century, associated with late 15th-century Timurid or Turkman schools (with possible Ottoman origins)",
+        "ex_collection_chain": "Adrienne Minassian, New York, 1955",
+        "estimate": "£4,000-6,000"
+      },
+      {
+        "comparator_id": "bonhams_2026_lot6_navai_khamsa",
+        "auction_house": "Bonhams",
+        "sale_title": "Islamic and Indian Art, sale 32276 (London, 21 May 2026: UPCOMING)",
+        "lot_number": 6,
+        "lot_url": "https://www.bonhams.com/auction/32276/lot/6/mir-ali-shir-navai-khamsa-in-turkish-jaghatai-with-10-illustrations-western-persia-or-ottoman-empire-copied-by-at-least-two-different-scribes-one-named-mahmud-dated-rajab-992july-august-1584-and-wednesday-22nd-dhil-qada-101816th-february-1610/",
+        "title_verbatim": "Mir 'Ali Shir Nava'i, Khamsa, in Turkish Jaghatai, with 10 illustrations Western Persia or Ottoman Empire, copied by at least two different scribes, one named Mahmud, dated Rajab 992/July-August 1584 and Wednesday 22nd Dhi'l-qa'da 1018/16th February 1610",
+        "decoration_verbatim": "Turkish Jaghatai manuscript on paper, 307 leaves, incomplete, 21 lines to the page written in nasta'liq in black ink in four columns, intercolumnar rules in gold, inner margins ruled in gold in two versions, black and blue, headings in gold and blue, five fine illuminated headpieces, ten illustrations in gouache and gold, some spaces left blank for further illustrations, later brown morocco, with stamped central medallions containing painted lacquer 308 x 207 mm.",
+        "place_date": "Western Persia or Ottoman Empire, 1584/1610 AD",
+        "scribe": "two scribes, one named Mahmud"
+      },
+      {
+        "comparator_id": "bonhams_2026_lot7_shahnama_faridun_aqqoyunlu",
+        "auction_house": "Bonhams",
+        "sale_title": "Islamic and Indian Art, sale 32276 (London, 21 May 2026)",
+        "lot_number": 7,
+        "lot_url": "https://www.bonhams.com/auction/32276/lot/7/an-illustrated-leaf-from-a-manuscript-of-firdausis-shahnama-depicting-faridun-catching-zahhak-and-leading-him-off-in-chains-persia-shiraz-aq-qoyunlu-period-circa-1480-90/",
+        "title_verbatim": "An illustrated leaf from a manuscript of Firdausi's Shahnama, depicting Faridun catching Zahhak and leading him off in chains, Persia, Shiraz, Aq-Qoyunlu period, circa 1480-90",
+        "decoration_verbatim": "Persian manuscript on paper, text written in delicate nasta'liq script in black ink in four columns, intercolumnar rules in gold with small floral motifs, inner margins ruled in colours and gold, illustration in gouache and gold visible leaf 275 x 140 mm.",
+        "place_date": "Persia, Shiraz, Aq-Qoyunlu period, circa 1480-90"
+      },
+      {
+        "comparator_id": "bonhams_2026_lot8_shahnama_bahram_aqqoyunlu",
+        "auction_house": "Bonhams",
+        "sale_title": "Islamic and Indian Art, sale 32276 (London, 21 May 2026)",
+        "lot_number": 8,
+        "lot_url": "https://www.bonhams.com/auction/32276/lot/8/an-illustrated-leaf-from-a-manuscript-of-firdausis-shahnama-depicting-bahram-gur-slaying-a-dragon-persia-shiraz-aq-qoyunlu-period-circa-1480-90/",
+        "title_verbatim": "An illustrated leaf from a manuscript of Firdausi's Shahnama, depicting Bahram Gur slaying a dragon, Persia, Shiraz, Aq-Qoyunlu period, circa 1480-90",
+        "decoration_verbatim": "Persian manuscript on paper, text written in delicate nasta'liq script in black ink in four columns, intercolumnar rules in gold with small floral motifs, inner margins ruled in colours and gold, illustration in gouache and gold visible leaf 175 x 270 mm.",
+        "place_date": "Persia, Shiraz, Aq-Qoyunlu period, circa 1480-90"
+      },
+      {
+        "comparator_id": "bonhams_2026_lot10_haft_paykar_turkman_15c",
+        "auction_house": "Bonhams",
+        "sale_title": "Islamic and Indian Art, sale 32276 (London, 21 May 2026)",
+        "lot_number": 10,
+        "lot_url": "https://www.bonhams.com/auction/32276/lot/10/an-illustrated-leaf-from-a-manuscript-of-nizamis-haft-paykar-depicting-bahram-killing-the-dragon-turkman-15th-century/",
+        "title_verbatim": "An illustrated leaf from a manuscript of Nizami's Haft Paykar, depicting Bahram killing the dragon, Turkman, 15th century",
+        "decoration_verbatim": "Persian manuscript on paper, 14 lines, text written in four columns of small nasta'liq in black ink, inner margins ruled in colours and gold, illustration in gouache and gold, pasted down on card, no text visible verso leaf 282 x 167 mm.",
+        "place_date": "Turkman, 15th century"
+      },
+      {
+        "comparator_id": "bonhams_2026_lot14_kamal_khojandi_shiraz_1497",
+        "auction_house": "Bonhams",
+        "sale_title": "Islamic and Indian Art, sale 32276 (London, 21 May 2026)",
+        "lot_number": 14,
+        "lot_url": "https://www.bonhams.com/auction/32276/lot/14/kamal-khojandi-diwan-poetry-copied-by-munim-al-din-al-awhadi-resident-of-shiraz-perhaps-for-a-royal-library-persia-shiraz-dated-the-last-day-of-ramadan-9021st-june-1497/",
+        "title_verbatim": "Kamal Khojandi, Diwan, poetry, copied by Mun'im al-Din al-Awhadi, resident of Shiraz, perhaps for a royal library, Persia, Shiraz, dated the last day of Ramadan 902/1st June 1497",
+        "decoration_verbatim": "Persian manuscript on paper, 255 leaves, 14 lines to the page written in fine nasta'liq in black ink in two columns, intercolumnar rules in gold, inner margins ruled in gold, blue and black, headings written in nasta'liq in gold surrounded by floral illumination, one double-page illuminated frontispiece, preceded by an illuminated shamsa containing a dedication, perhaps contemporary gold embossed covers incorporated in modern binding 240 x 145 mm.",
+        "place_date": "Persia, Shiraz, last day of Ramadan 902 AH / 1 June 1497 AD",
+        "scribe": "Mun'im al-Din al-Awhadi, resident of Shiraz",
+        "patron": "perhaps for a royal library (per Bonhams description)"
+      },
+      {
+        "comparator_id": "bonhams_2026_lot18_jami_haft_awrang_late15c",
+        "auction_house": "Bonhams",
+        "sale_title": "Islamic and Indian Art, sale 32276 (London, 21 May 2026)",
+        "lot_number": 18,
+        "lot_url": "https://www.bonhams.com/auction/32276/lot/18/jami-haft-awrang-four-parts-only-yusuf-and-zulaykha-layla-and-majnun-kheradnameh-ye-iskandari-subhat-al-abrar-persia-second-half-of-the-15th-century/",
+        "title_verbatim": "Jami, Haft Awrang, four parts only (Yusuf and Zulaykha, Layla and Majnun, Kheradnameh-ye Iskandari, Subhat al-abrar), Persia, second half of the 15th century",
+        "decoration_verbatim": "Persian manuscript on paper, 180 leaves, misbound, 21 lines to the pages written in nasta'liq in black ink in four columns, four illuminated headpieces at the beginning of each book with the names of God in kufic, headings in eastern kufic in white, 8 paintings, date AH 813 added crudely at the end of each book at a later date, 18th Century morocco rubbed and tooled in blind with blind-stamped central cartouches 235 x 170 mm.",
+        "place_date": "Persia, second half 15th century"
+      }
+    ],
+    "bl_or_9493_provenance_findings": {
+      "open_internet_evidence": "ZERO direct evidence found in this sweep. targeted web search with site: filters on christies.com, sothebys.com, bonhams.com, britishmuseum.org, fihrist.org.uk, bl.uk, blogs.bl.uk, bl.iro.bl.uk all returned no provenance details for Or 9493 specifically.",
+      "rieu_1888_check": "CONFIRMED via Internet Archive djvu.txt of Rieu 'Catalogue of the Turkish Manuscripts in the British Museum' (1888): Or 9493 NOT in Rieu: confirms post-1888 BM accession, consistent with stated 1923-28 acquisition window.",
+      "meredith_owens_1968_blocked": "Meredith-Owens 1968 'Handlist of Persian manuscripts 1895-1966' (Hathi Trust 001173294): the canonical BM accession-list for the relevant window: returned 403 (institutional access required). This is the SHORTEST PATH to determining Or 9493's accession channel and would settle the auction-vs-direct-purchase question. unresolved question: obtain via UK academic library or BL reading room.",
+      "bl_asian_african_blogs_no_match": "BL Asian and African Studies blog has a published 'Provenance histories of Batak manuscripts' series (2022-23) but no comparable Turkish/Persian-MSS provenance series indexed for the Or 9000-9999 cohort. No precedent series mentions Or 9493.",
+      "kevorkian_intersection_observation": "Sotheby's 2024 Lutfullah Shahnama (lot 74) provenance: 'Sotheby's London, Important Oriental Manuscripts and Miniatures: The Property of The Hagop Kevorkian Fund, 21 April 1976, lot 188'. The Kevorkian Fund/family provenance recurs across mid-20th-c. Sotheby's Persian-Turkish MSS sales; per project notes, 'kevorkian_xxii (safīna)' is a prior open-followup item from the broader project research agenda. The 1920s precursor to the 1976 Kevorkian Fund sale would be Hagop Kevorkian's own 1910s-30s dealing: a plausible-but-unproven candidate for Or 9493's 1920s channel.",
+      "best_remaining_paths": [
+        "Read Meredith-Owens 1968 Handlist via BL reading room or UK academic library: the canonical accession source for Or 9493 ",
+        "Consult BL accession registers directly (records of acquisitions made by the Department of Oriental Printed Books and Manuscripts 1895-1966): physical-archive access only",
+        "Check 1923-28 Sotheby's Catalogue of Oriental Manuscripts and Miniatures sales for any 85-folio Cihanşah-attributable lot: Sotheby's London archive has bound catalogue runs (NOT online)",
+        "Cross-reference with Karabacek / Marteau / Vever / Yates Thompson / Quaritch dealer-catalogue 1910s-20s indexes (offline)"
+      ],
+      "verdict": "INCONCLUSIVE on open-web evidence. Or 9493 was CERTAINLY acquired by the British Museum in or around the 1920s window, but the open-web does not preserve the BM accession-channel. Resolution requires offline catalogue/accession-register access ."
+    },
+    "detached_folios_findings": {
+      "answer": "ZERO detached Cihanşah Hakîkî leaves found across Christie's, Sotheby's, Bonhams open-web indices. [Final register: 14 audited entries / 11 non-rejected / 9 verified-or-with-caveat Jahānşāh witnesses + 1 attribution-disputed candidate + 1 lost-attested entry + 3 rejected; all institutional or private-archive holdings.] NO commercial-market dispersed-folio sales. Cihanşah's divan is rare even in institutional inventories and has never been broken up onto the auction market."
+    },
+    "sister_workshop_summary": {
+      "answer": "YES: 14 STRONG comparator candidates identified, captured in comparator_candidates[] above. Distribution by workshop tier: 4 TIER-1 Pir Budaq direct-kitabkhana mss (Christie's 2019/2024, Sotheby's 2020 + Bonhams 2026 lot 14 royal-library Shiraz 1497); 3 TIER-1 Aqqoyunlu / Türkmen-attribution leaves (Bonhams 2026 lots 7, 8, 10); 4 TIER-2 contemporary 15th-c. Persia comparators (Sotheby's 2023 Aqqoyunlu Quran, Sotheby's 2011 Welch Nizami frontispiece, Sotheby's 2024 Lutfullah Tabriz Shahnama 1506 ex-Kevorkian, Bonhams 2026 lot 18 Jami Haft Awrang); 3 TIER-3 16th-c. context comparators (Sotheby's 2003 Husayn Bayqara Majalis al-Ushaq with Pir Budaq iconography, Sotheby's 2024 Zebrowski Khurasan/Bukhara stencil-margin poetry, Bonhams 2026 lot 6 Nava'i Khamsa). The Sotheby's 2020 Pir Budaq Hafez (£375,000 hammer) carries the most extensive verbatim paper/illumination data and matches BL Or 9493's 23cm height EXACTLY."
+    },
+    "blocked_portals": [
+      {
+        "portal": "christies.com search/results endpoints",
+        "block_type": "Cloudflare bot detection / JS-rendered results",
+        "evidence": "Both /search?entry={q} and /results?searchphrase={q} returned identical 60-64KB landing pages with no result content. direct HTTP fetch separately blocked: 'the archival/web retrieval environment is unable to fetch from www.christies.com'. Direct lot URLs (e.g. christies.com/lot/lot-{ID}) DO work via direct HTTP fetch but require pre-known IDs."
+      },
+      {
+        "portal": "sothebys.com /results endpoint",
+        "block_type": "JS-rendered results",
+        "evidence": "266KB pages contain analytics scripts but no actual lot data; results loaded via XHR after page load. direct HTTP fetch on direct lot URLs works."
+      },
+      {
+        "portal": "Hathi Trust catalog/001173294 (Meredith-Owens 1968 Handlist)",
+        "block_type": "HTTP 403",
+        "evidence": "Institutional-access only. The single most-relevant resource for Or 9493 acquisition channel."
+      }
+    ],
+    "report_summary": {
+      "haqiqi_lots_at_auction": 0,
+      "contemporary_comparators_identified": 14,
+      "blocked_portals": 3,
+      "bl_or_9493_provenance_resolved": false
+    }
+  },
+  "audit_metadata": {
+    "record_type": "catalogue_probe",
+    "record_date": "2026-05-02",
+    "artifact_status": "current",
+    "source_layers": [
+      "catalogue_record",
+      "project_classification",
+      "search_engine_index"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

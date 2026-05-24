@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "session_label": "Tool-shaped gap-fill round: 4 Playwright probes (Caucasus 3 + CBL)",
+  "session_id": "tool-shaped-gaps-playwright-2026-05-11",
+  "date": "2026-05-11",
+  "scope": "Execute approach B from the tool-shaped gap brainstorm: Playwright probes for manuscript.az + ek.anl.az + manuscript.ge + Chester Beatty viewer.cbl.ie (Anubis patient-headless). Remaining 7 gaps formalized separately in gap_disposition.json.",
+  "method_summary": {
+    "playwright_mcp_native_browser": "Playwright MCP browser_navigate/snapshot/evaluate/type/click against each portal. Patient-headless 15s waits for Anubis JS-PoW. Direct fetch-via-evaluate for batch query batteries. Form-field schema inspection before constructing POST bodies.",
+    "scope_clarification": "Caucasus 3 + CBL are the highest-leverage tool-shaped gaps where Playwright is the correct tool and the closure value is materially higher than formalization-only. The other 7 gaps (Milli K + EAP + DLME + OPenn + HathiTrust + NAMAMI + Iranian-5 + Tajik/Beruni/Bukhara + IOM-RAS) are out-of-scope per user-selected approach B; see gap_disposition.json."
+  },
+  "portals": [
+    {
+      "portal": "manuscript.az AMEA Institute of Manuscripts",
+      "scope": "/ek/ electronic database: 2 catalogs (Old printed books 4427 entries; Tədqiqatlar research lit 7805 entries)",
+      "field_name_correction": "Form field is named 'search' (not 'axtar' as initially attempted); first POST attempt returned empty template",
+      "queries_executed": {
+        "old_printed_books_catalog_via_ui_submit": [
+          {
+            "query": "Cihanşah",
+            "hits": 0
+          },
+          {
+            "query": "Həqiqi",
+            "hits": 0
+          }
+        ],
+        "tedqiqatlar_research_catalog_via_post_with_correct_field": [
+          {
+            "query": "Cihanşah",
+            "hits": 0
+          },
+          {
+            "query": "Həqiqi",
+            "hits": 3
+          },
+          {
+            "query": "Cahanşah",
+            "hits": 3,
+            "note": "same 3 records as Həqiqi"
+          },
+          {
+            "query": "Karakoyunlu",
+            "hits": 0
+          },
+          {
+            "query": "Qaraqoyunlu",
+            "hits": 0
+          },
+          {
+            "query": "Hakîkî",
+            "hits": 0
+          }
+        ]
+      },
+      "secondary_lit_hits_3": [
+        {
+          "citation": "Bağırov Əkrəm. 'Cahanşah Həqiqi'. Azərbaycan gəncləri (newspaper) 4 iyun 1987.",
+          "current_scope_status": "NOT in search_keys.json editions list; F-EDITION2 candidate"
+        },
+        {
+          "citation": "Cahanşah Həqiqi. 'Qəzəllər və rübailər' / Tərt. edənlər: Ə. Rəhimov, M. Əliyev. Bakı: Yazıçı, 1987. 118 pp.",
+          "current_scope_status": "NOT in search_keys.json; F-EDITION2 candidate; same editors as 1986 Bakı Yazıçı but without Hüseyinzade and 1 year later"
+        },
+        {
+          "citation": "Əliyev M., Rəhimov Ə. 'Cahanşah Həqiqi'. Keçmişimizdən gələn səslər. II buraxılış. Bakı: 1982. S. 3-4-47.",
+          "current_scope_status": "NOT in search_keys.json editions list; F-EDITION2 candidate; pre-dates 1986 Bakı Yazıçı edition by 4 years"
+        }
+      ],
+      "main_page_finding": "manuscript.az/index.php newly-acquired-manuscripts table mentions 'Jahanshah Hagigi (1405-1467) ... obtained from Istanbul Suleymaniye Library'. Per prior round: this is a copy/microfilm of suleymaniye_fatih_3808 (current poetry-witness register), not an independent witness.",
+      "verdict": "PROBED_NEGATIVE_FOR_MS_WITNESSES; 0 new Cihanşah MSS; 3 secondary-lit citations NEW vs current search_keys.json (F-EDITION2)",
+      "current_register_impact": "ZERO"
+    },
+    {
+      "portal": "ek.anl.az Azerbaijan National Library Electronic Catalogue",
+      "framework": "Apache Wicket; URL pattern /search/query?match_1=PHRASE&field_1=a&term_1=<term>&theme=e-kataloq; field_1=a is author",
+      "cert_issue_resolution": "WebFetch returned 'unable to verify the first certificate'; Playwright browser context handles the cert chain correctly and HTTPS works",
+      "queries_executed_with_de_dup": [
+        {
+          "query": "Cahanşah Həqiqi",
+          "hits": 0
+        },
+        {
+          "query": "Cahanşah",
+          "hits": 4,
+          "note": "4 unique Cihanşah-attributed printed editions"
+        },
+        {
+          "query": "Həqiqi",
+          "hits": 9,
+          "note": "5 false-positive Həqiqi namesakes + 4 Cahanşah records overlapping with the above"
+        },
+        {
+          "query": "Karakoyunlu",
+          "hits": 2,
+          "note": "modern Turkish-form Karakoyunlu hits, not Cihanşah-specific"
+        },
+        {
+          "query": "Qaraqoyunlu",
+          "hits": 131,
+          "note": "Qaraqoyunlu DYNASTIC subject; not surveyed individually"
+        },
+        {
+          "query": "Cihanşah",
+          "hits": 4,
+          "note": "system suggested cahanşah; same 4 records"
+        },
+        {
+          "query": "Hakîkî",
+          "hits": 0,
+          "note": "system suggested hakîkat; no real matches"
+        }
+      ],
+      "4_unique_cihansah_attributed_editions_at_anl_baku": [
+        {
+          "bib_id": "vtls000233714",
+          "title": "Şeirlər",
+          "publisher": "Yerevan: Hayastan 1966",
+          "editor_per_anl": "Ə. Yerevanlı (red.)",
+          "physical": "103 + 4 pp; 17 cm; Cyrillic",
+          "copies_held": 8,
+          "current_scope_status": "v1.0 cites this 1966 Yerevan edition as Hüseyinzade-edited; ANL says editor is Yerevanlı. Possibly Yerevanlı=redaktor while Hüseyinzade=tərtibçi (Soviet editorial-role distinction); F-V1-CORRECTION-1 (attribution clarification)"
+        },
+        {
+          "bib_id": "vtls000216060",
+          "title": "Seçilmiş əsərləri (Selected Works)",
+          "publisher": "Bakı: Yazıçı 1986",
+          "editors_per_anl": "Ə. Rəhimov + L. Hüseyinzadə + M. Əliyev",
+          "physical": "142 + 1 pp; 15 cm; Cyrillic; ill.; Klassik Azərbaycan ədəbiyyatı series",
+          "current_scope_status": "MATCHES current poetry-witness register cite of 'Rahimov, Hüseyinzade & Aliyev 1986'"
+        },
+        {
+          "bib_id": "vtls000293094",
+          "title": "Qəzəllər və rübailər (Ghazals and Rubaiyat)",
+          "publisher": "Bakı: Yazıçı 1988",
+          "editors_per_anl": "Ə. Rəhimov + M. Əliyev (without Hüseyinzade); ön söz Ə. Rəhimov; red. M. Məmmədəli; ill. L. Məmmədova",
+          "physical": "109 + 1 pp; 14 cm; Arabic script",
+          "current_scope_status": "NEW vs current search_keys.json; F-EDITION3 (1988 Arabic-script edition); same as the 1987 Yazıçı edition from manuscript.az/ek/ probe? Possibly the same edition with year discrepancy (1987 vs 1988) OR two separate editions. Disambiguation needed."
+        },
+        {
+          "bib_id": "vtls000039901",
+          "title": "Şeirlər: [qəzəllər, rübailər] (Selected Works series)",
+          "publisher": "Bakı: Şərq-Qərb 2006",
+          "editors_per_anl": "Ə. Rəhimov + L. Hüseynzadə + Hacı Mail (M. Mailoğlu red.)",
+          "physical": "152 pp; 15 cm; Klassik Azərbaycan ədəbiyyatı series",
+          "current_scope_status": "current poetry-witness register cites 'Rahimov, Hüseyinzade & Aliyev 1986/2006 Bakı: Yazıcı' but ANL records show 2006 publisher is Şərq-Qərb (NOT Yazıçı) AND editorial team replaced Əliyev with Hacı Mail. v1.0 CONFLATES the 1986 and 2006 editions. F-V1-CORRECTION-2 (publisher+editorial team correction)"
+        }
+      ],
+      "5_false_positive_haqiqi_namesakes_documented": [
+        {
+          "name": "Kərim Mahmud Həqiqi (b. 1925)",
+          "discipline": "Iranian-Az philosopher",
+          "fp_class": "modern namesake"
+        },
+        {
+          "name": "Kərbəlayi Yaftuməli Həqiri-Həqiqi (Badikubə, Bakı 1916)",
+          "work": "Cənnətül-küşa (Mourning poetry)",
+          "fp_class": "early-20th-c. Bakı Shia mourning-poetry namesake"
+        },
+        {
+          "name": "Ə.Ə. Həqiqi (translator)",
+          "work": "Üzeyir Hacıbəyov tərc., Atatürk nəşr., Təbriz 2019",
+          "fp_class": "modern translator"
+        },
+        {
+          "name": "həqiqi üzvü (academy member of...)",
+          "context": "Krasnov 2023 article (Russian academician)",
+          "fp_class": "common-noun match"
+        },
+        {
+          "name": "Alban Apostol kilsəsi 2017 editor",
+          "fp_class": "common-noun match"
+        }
+      ],
+      "birth_year_discrepancy": "ANL records list Cihanşah's birth as 1397; current poetry-witness register has no explicit birth-year field but implies 1405. Encyclopaedia Iranica supports 1397 as the conventional Iranian-studies date. NOT register-blocking; documented for future future scope reconciliation.",
+      "verdict": "PROBED_RICH; 4 unique Cahanşah Həqiqi printed editions at ANL Baku; 0 MS witnesses (ANL holds printed only); 3 v1.0 bibliographic corrections + 5 namesake-FP documented",
+      "current_register_impact": "ZERO new MS witnesses; THREE bibliographic corrections to search_keys.json + matenadaran_965 + the editions-and-studies backchain"
+    },
+    {
+      "portal": "manuscript.ge Georgian National Centre of Manuscripts (Kekelidze Institute)",
+      "site_state": "Test mode (ვებგვერდი მუშაობს სატესტო რეჟიმში); search input is GET form with field 'search' to action https://manuscript.ge/",
+      "queries_executed": [
+        {
+          "query": "Jahanshah",
+          "result_size": 27971
+        },
+        {
+          "query": "Hakîkî",
+          "result_size": 27978
+        },
+        {
+          "query": "Haqiqi",
+          "result_size": 27968
+        },
+        {
+          "query": "Qaraqoyunlu",
+          "result_size": 27973
+        },
+        {
+          "query": "Karakoyunlu",
+          "result_size": 27973
+        },
+        {
+          "query": "Cihanşah",
+          "result_size": 27975
+        },
+        {
+          "query": "ჯაჰანშაჰი (Mkhedruli)",
+          "result_size": 28043
+        },
+        {
+          "query": "ჰაკიკი (Mkhedruli)",
+          "result_size": 28016
+        },
+        {
+          "query": "ყარაყოიუნლუ (Mkhedruli)",
+          "result_size": 28061
+        }
+      ],
+      "search_response_characterization": "All 9 queries (Latin + Georgian Mkhedruli) returned the same homepage template body (27,968-28,061 bytes; query echoed in URL slot but no filter applied). Site search is client-side JS or not implemented yet (test mode).",
+      "oriental_manuscripts_fund_page": "manuscript.ge/oriental-manuscripts-fund.html returned the homepage template; no Persian-specific catalogue exposed in static HTML",
+      "scope_finding": "Per EAP1526 + prior parallel probe B + prior project notes: GNCM Persian holdings are post-Cihanşah Afshar/Safavid period 1736-1796; out of v1.0 scope. Kostikyan 2017 Persian catalogue is paywalled (Academia.edu). No online search backend exposed.",
+      "verdict": "PROBED_NEGATIVE_VIA_DIRECT_GET; site search non-functional via GET URL parameters in test mode; canonical Persian catalogue is offline-published (Kostikyan 2017); scope mismatch (post-Cihanşah Afshar/Safavid)",
+      "current_register_impact": "ZERO"
+    },
+    {
+      "portal": "Chester Beatty viewer.cbl.ie",
+      "framework": "Goobi viewer + JSF (Java Server Faces) widget search with ViewState-tracked POST",
+      "anubis_resolution": "Anubis JS-PoW challenge resolved via patient-headless 15-second wait per prior project notes's documented pattern; challenge cleared on first navigate",
+      "url_query_slot_finding": "/viewer/search/<query>/<filter>/<page>/<sort>/<facet>/ URL-path query slot does NOT filter results server-side. Control test with 'xqzwvbnonsense' returned identical 'Hits: 272' as 'jahanshah' and 'shahnama'; URL slot is a UI-state token, not a query-filter parameter. Only JSF widget AJAX with ViewState actually filters.",
+      "jsf_widget_form_submit_attempt": "Filled widget search field via Playwright type+submit; JSF AJAX triggered navigation that destroyed JS context; post-navigation state was 'Hits: 4577' (whole CBL collection unfiltered); the JSF AJAX appears to have cleared both query and facet on submit OR the search button is bound to the navigation widget rather than filter-apply",
+      "persian_collection_overview": "DC:persiancollection facet returns 272 Objects; sample titles from random sort: Yūsuf and Zulaykhā by Jāmī (d. 1492) at Per 251; Mīr Khwānd Rawḍat al-ṣafā (d. 1498); Firdausi Shahnama (multiple); zero Cihanşah-attributed titles in sample",
+      "prior_round_findings_corroboration": "Prior 2026-05-11 chunk D residual-gap probe surfaced CBL Per 134 = Pir Budaq majmua (NOT Hakîkî) via Anubis patient-headless; CBL Per 294 = Chinese-paper specimen per prior project notes's Chinese-paper search. Pattern: CBL Persian collection is classical poetry / Pir Budaq atelier / Chinese-paper specimens, no Cihanşah witnesses surfaced via Fihrist or via Anubis-resolved probing.",
+      "verdict": "PROBED_VIA_FACET_INDIRECT; 0 Cihanşah hits in Persian-collection sample; JSF query-filter requires AJAX session orchestration which is out of pragmatic scope; deep query-by-query filtering via Playwright UI form-fill would need session-state persistence across submits",
+      "current_register_impact": "ZERO",
+      "residual_gap_remaining": "Deep Cihanşah-specific query battery against CBL Persian collection via JSF AJAX session orchestration (low expected yield; classical-poetry character + provenance trail at CBL shows no Cihanşah lineage)"
+    }
+  ],
+  "session_totals": {
+    "playwright_probes_completed": 4,
+    "current_register_changes": 0,
+    "current_bibliographic_corrections_to_apply": 2,
+    "new_secondary_lit_editions_to_add_to_search_keys": 4,
+    "ms_witnesses_surfaced_new": 0
+  },
+  "corrections_to_apply": [
+    {
+      "id": "F-V1-CORRECTION-1",
+      "target": "matenadaran_965 register entry + search_keys.json modern_editions_and_studies_for_backchain",
+      "current_v1_text": "Hüseyinzade 1966 Yerevan edition cited as primary editor",
+      "anl_evidence": "ek.anl.az bib_id vtls000233714 records the 1966 Yerevan: Hayastan edition with [red. Ə. Yerevanlı] as the redaktor; 8 copies held at ANL Baku",
+      "correction": "Note possible role distinction (Yerevanlı = redaktor / Hüseyinzade = tərtibçi compiler); add ANL copy availability to follow-up-items as ILL pathway"
+    },
+    {
+      "id": "F-V1-CORRECTION-2",
+      "target": "search_keys.json + matenadaran_965 register entry",
+      "current_v1_text": "'Rahimov, Hüseyinzade & Aliyev 1986/2006 (Bakü: Yazıcı)' citation conflates 1986 and 2006",
+      "anl_evidence": "ek.anl.az bib_id vtls000216060 records 1986 Bakı: Yazıçı 142 pp Cyrillic (Rəhimov+Hüseyinzadə+Əliyev); vtls000039901 records 2006 Bakı: Şərq-Qərb 152 pp (Rəhimov+Hüseynzadə+Hacı Mail; Mailoğlu redaktor; Əliyev REPLACED)",
+      "correction": "Split the citation into TWO entries; 2006 publisher is Şərq-Qərb (NOT Yazıçı); 2006 editorial team replaces Əliyev with Hacı Mail"
+    }
+  ],
+  "new_editions_to_add_to_search_keys": [
+    {
+      "id": "F-EDITION2a",
+      "citation": "Əliyev M., Rəhimov Ə. 'Cahanşah Həqiqi'. Keçmişimizdən gələn səslər. II buraxılış. Bakı: 1982. S. 3-4-47.",
+      "source": "manuscript.az /ek/ Tədqiqatlar probe"
+    },
+    {
+      "id": "F-EDITION2b",
+      "citation": "Cahanşah Həqiqi. Qəzəllər və rübailər / Tərt. ed. Ə. Rəhimov + M. Əliyev. Bakı: Yazıçı 1987 [or 1988? year discrepancy with ANL 1988 record]. 109-118 pp; Arabic script.",
+      "source": "manuscript.az /ek/ + ek.anl.az corroboration"
+    },
+    {
+      "id": "F-EDITION2c",
+      "citation": "Bağırov Əkrəm. 'Cahanşah Həqiqi'. Azərbaycan gəncləri (newspaper) 4 iyun 1987.",
+      "source": "manuscript.az /ek/"
+    },
+    {
+      "id": "F-EDITION3",
+      "citation": "Cahanşah Həqiqi. Şeirlər: [qəzəllər, rübailər]. Tərt., müq. lüğ. Ə. Rəhimov + L. Hüseynzadə + Hacı Mail. Red. M. Mailoğlu. Bakı: Şərq-Qərb 2006. 152 pp; Klassik Azərbaycan ədəbiyyatı series.",
+      "source": "ek.anl.az bib_id vtls000039901 (corrects v1.0 conflation)"
+    }
+  ],
+  "summary": {
+    "current_register_changes": 0,
+    "current_bibliographic_corrections": 2,
+    "new_edition_citations_for_backchain_matrix": 4,
+    "new_false_positive_namesakes_documented": 5,
+    "anubis_patient_headless_pattern_validated": true,
+    "jsf_url_query_slot_decoupling_documented_for_future_goobi_probes": true,
+    "ottoman_avenue_residual_gap_resolved": "yazmalar.gov.tr 'cert-walled' falsified in earlier chunk; ek.anl.az 'cert-issue' falsified in this round (browser handles cert)",
+    "approach_b_recommended_scope": "Caucasus 3 + CBL completed; remaining 7 tool-shaped gaps formalized in companion gap_disposition.json"
+  },
+  "audit_metadata": {
+    "record_type": "access_gap_disposition",
+    "record_date": "2026-05-11",
+    "artifact_status": "current",
+    "source_layers": [
+      "digital_surrogate",
+      "institutional_access_status",
+      "project_classification"
+    ],
+    "access_mode": "blocked_or_down",
+    "disposition": "access_gap_logged",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}

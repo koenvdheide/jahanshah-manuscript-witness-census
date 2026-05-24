@@ -1,0 +1,363 @@
+{
+  "schema_version": 1,
+  "search_session": {
+    "date": "2026-05-02",
+    "session_id": "edition-backchain",
+    "field_searched": "multi_source_full_text_OCR",
+    "term_searched": "Cihanşah Hakîkî / Jahanshah Haqiqi / Karakoyunlu / Qara-Quyunlu / Qanbar-ʿAlī al-Iṣfahānī (multiple variants per search_keys.json)",
+    "operator": "İçeren",
+    "constraints": "Iranian portals blocked; archive.org full-text search; ProQuest behind paywall; academia.edu PDFs login-walled",
+    "summary_stats": {
+      "tasks_attempted": 3,
+      "new_shelfmarks_surfaced": 0,
+      "new_witness_register_entries": 0,
+      "edition_backchain_resolved": 1,
+      "edition_backchain_partial": 4,
+      "edition_backchain_unresolved": 4,
+      "scribe_qanbar_ali_sibling_mss_found": 0,
+      "azertac_photographic_reproduction_claim_status": "rejected_for_2001_first_print_edition"
+    },
+    "task_a_printed_catalogue_OCR_backchain": {
+      "scope": "Search printed Persian-MS catalogues for Hakîkî / Cihanşah / Jahan-Shah / Karakoyunlu under generic descriptors (poetry collection, recueil, Türkische Gedichte, etc.): i.e. fragments cataloguers might have indexed under non-author keys.",
+      "method": "archive.org advanced search → identify djvu-OCR'd printed catalogues → bulk-fetch _djvu.txt files → grep for Hakîkî / Hakiki / Haqiqi / Hakyky / Karakoyunlu / Kara-koyunlu / Jahan-shah / Jihan-shah / Cihansah / Qanbar / Kanbar / 19th-c. Orientalist forms (Djihân Châh, Dschahan Schah).",
+      "catalogues_OCR_searched": [
+        {
+          "catalogue": "Charles Rieu, Catalogue of the Persian Manuscripts in the British Museum, vol. 1 (1879)",
+          "archive_id": "gri_33125008986313",
+          "ocr_chars": 1407194,
+          "hits_for_hakiki_or_cihansah": 0,
+          "hits_for_qanbar_ali": 0,
+          "hits_for_karakoyunlu": "context-only (Tarkmàn dynasty, Sikandar entry 573, Jahanshah defeat by Hasanbeg): historical chronicle MSS, not Hakîkî divan",
+          "verdict": "ZERO Cihanşah Hakîkî divan witnesses. BL acquired Or 9493 in 1923 (after Rieu's last 1895 supplement): explains absence."
+        },
+        {
+          "catalogue": "Rieu, Persian Catalogue vol. 2 (1881)",
+          "archive_id": "gri_33125008986370",
+          "ocr_chars": 1250915,
+          "hits_for_hakiki_or_cihansah": 0,
+          "hits_for_qanbar_ali": 0,
+          "verdict": "ZERO Hakîkî / Karakoyunlu poetry-witness hits."
+        },
+        {
+          "catalogue": "Rieu, Persian Catalogue vol. 3 (1883)",
+          "archive_id": "gri_33125008986388",
+          "ocr_chars": 1618778,
+          "hits_for_hakiki_or_cihansah": 0,
+          "hits_for_qanbar_ali": 0,
+          "hits_other": "Jahangir mentioned several times (Mughal context only)",
+          "verdict": "ZERO Hakîkî witness hits."
+        },
+        {
+          "catalogue": "Rieu, Supplement to the Catalogue of the Persian Manuscripts in the British Museum (1895)",
+          "archive_id": "gri_33125008032761",
+          "ocr_chars": 922948,
+          "hits_for_hakiki_or_cihansah": 0,
+          "hits_for_qanbar_ali": 0,
+          "hits_other": "Jahangir / Shahjahan / Jahandar-Shah Mughal contexts only",
+          "verdict": "ZERO Hakîkî / Karakoyunlu poetry-witness hits."
+        },
+        {
+          "catalogue": "Hermann Ethé, Catalogue of Persian Manuscripts in the Library of the India Office, vol. 1 (1903)",
+          "archive_id": "in.ernet.dli.2015.536011 (also catalogueofpersi01greauoft)",
+          "ocr_chars": 3949343,
+          "hits_for_hakiki_or_cihansah": "1 (different Hakiki: a Saljuk-era poet at line 41137, in entourage of Tughaiishah/Toghrulbeg, c. 11th-c., NOT Cihanşah)",
+          "hits_for_karakoyunlu": "5 (all in dynastic-history MSS: historical chronicles describing Cihanşah as ruler, not as Hakîkî the poet)",
+          "hits_for_qanbar_ali": 0,
+          "verbatim_excerpt": "'Tughaiishah I... patron of Azraki, is not to be confounded with Tughaiishah II': 'Hakiki' here is an 11th-c. Saljuk-era poet entirely unrelated to Cihanşah Hakîkî.",
+          "verdict": "ZERO Cihanşah Hakîkî divan witnesses in IO. The 'Hakiki' there is a different namesake."
+        },
+        {
+          "catalogue": "Ethé, Persian MSS in the IO, vol. 2 (1937, posthumous)",
+          "archive_id": "in.ernet.dli.2015.536012",
+          "ocr_chars": 2826640,
+          "hits_for_hakiki_or_cihansah": 0,
+          "hits_for_karakoyunlu": "context-only (Kara-koyunlu / Tarkman dynasty headings 573, 724-726, 1337 in historical chronicles)",
+          "verbatim_excerpt": "'872. Defeat and death of Jahanshah, the Turkman padishah, son of Kara Yusuf, of the Kara-koyunlu dynasty, in a battle against Hasanbeg, of the Ak-koyunlu dynasty, 573; 724-726, 1337.' Index entries to historical chronicle MSS only.",
+          "verdict": "ZERO Hakîkî divan witnesses."
+        },
+        {
+          "catalogue": "Wilhelm Pertsch, Die persischen Handschriften der Herzoglichen Bibliothek zu Gotha (1859)",
+          "archive_id": "diepersischenha00pertgoog",
+          "ocr_chars": 627624,
+          "hits_for_hakiki_or_cihansah": 0,
+          "hits_for_qanbar_ali": 0,
+          "verdict": "ZERO Hakîkî / Cihanşah / Karakoyunlu / Qanbar hits in Gotha collection."
+        },
+        {
+          "catalogue": "W. Ivanow, Concise Descriptive Catalogue of the Persian Manuscripts in the Asiatic Society of Bengal (1924)",
+          "archive_ids": "in.ernet.dli.2015.70180 + in.ernet.dli.2015.70295 (alternative scan)",
+          "ocr_chars_combined": 3985797,
+          "hits_for_hakiki_or_cihansah": 0,
+          "hits_for_qanbar_ali": 0,
+          "hits_for_aq_qoyunlu": "3 (eulogies of Aq-Qoyunlu prince Ya'qub r.884-896/1479-1490: a related dynasty, possible workshop-comparator interest but no Hakîkî divan)",
+          "verbatim_excerpt": "'qasidas... eulogise Shah Isma'il, the Safawide... Ya'qub, the Aq-Qoyunlu prince (884-896/1479-1490) and a great many eminent persons of their time': context only.",
+          "verdict": "ZERO Cihanşah Hakîkî witnesses in ASB."
+        },
+        {
+          "catalogue": "Ivanow, Concise Descriptive Catalogue of the Persian Manuscripts in the Curzon Collection (1926)",
+          "archive_id": "in.ernet.dli.2015.530266",
+          "ocr_chars": 1418797,
+          "hits_for_hakiki_or_cihansah": 0,
+          "hits_for_qanbar_ali": 0,
+          "verdict": "ZERO Hakîkî hits in Curzon Collection."
+        },
+        {
+          "catalogue": "Edward Browne, A Catalogue of the Persian Manuscripts in the Library of the University of Cambridge (1896)",
+          "archive_id": "catalogueofpersi00cambrich",
+          "ocr_chars": 718539,
+          "hits_for_hakiki_or_cihansah": 0,
+          "hits_for_qanbar_ali": 0,
+          "hits_for_karakoyunlu": 0,
+          "verdict": "ZERO Hakîkî witnesses in Cambridge Persian collection."
+        },
+        {
+          "catalogue": "E. G. Browne, A History of Persian Literature under Tartar Dominion (A.D. 1265-1502) (1920)",
+          "archive_id": "historyofpersian00browiala",
+          "ocr_chars": 1274266,
+          "hits_for_hakiki_or_cihansah": 0,
+          "hits_for_jahanshah_qaraqoyunlu_as_historical_figure": "5 verbatim mentions",
+          "verbatim_excerpts_jahanshah_historical": [
+            "ll. 19342-19345: 'After various vicissitudes, including sundry wars with his brothers and a period of allegiance to Jahan-shah, the \"Black Sheep\" Turkman and enemy of his House, he finally died in 875/1470-1.'",
+            "ll. 19386-19395: 'In 861/1456-7 he captured Herat and put to death Gawhar Shad Khatun. In 862/1457-8 Jahanshah invaded Khurasan and occupied Herat... in 872/1467-8, when Jahanshah was defeated and slain by Uzun Hasan, of the rival clan of the \"White Sheep\" Turkmans...'",
+            "ll. 19967-19970: 'two, Iskandar and Jahanshah, succeeded him on the throne'"
+          ],
+          "verdict": "Browne 1920 covers Cihanşah AS HISTORICAL FIGURE in Persian Literature volume but NEVER mentions his pen-name Hakîkî or his divan. NO new witnesses."
+        },
+        {
+          "catalogue": "C. A. Storey, Persian Literature: A Bio-Bibliographical Survey, Section II Fasciculus 2 (1936)",
+          "archive_id": "in.ernet.dli.2015.282579",
+          "ocr_chars": 412229,
+          "hits_for_hakiki_or_cihansah": 0,
+          "hits_for_jahanshah_qaraqoyunlu": "2 verbatim mentions in §369 'C. HISTORY OF PERSIA: (A) THE QARA-QUYUNLU': Mahmud b. ʿAbd Allah Nishapuri's *Tārīkh-i Turkumāniyah*, a Persian dynastic history mentioning Cihanşah's death (d. 872/1467) but not Hakîkî / divan / poetry; cites Ethe 463 as MS reference.",
+          "verbatim_excerpt": "ll. 3186-3190: 'Tārīkh-i Turkumāniyah, a flowery and almost dateless history of the Qara-Quyunlu dynasty, giving a detailed account of Qara Muhammad (d. 792/1390), the founder, but not of his last years, and of his son Qara Yusuf (d. 823/1420), but not of Sikandar (d. 841/1437) nor of Jahan-Shah (d. 872/1467)': historical chronicle, not divan.",
+          "verdict": "Storey 1936 documents Cihanşah as Qara-Quyunlu ruler in dynastic-history MSS only. ZERO Hakîkî divan witnesses identified."
+        },
+        {
+          "catalogue": "Storey, Persian Literature, Section II Fasciculus 1 (1935): cited in §3187 etc.",
+          "archive_id": "in.ernet.dli.2015.282580",
+          "ocr_chars": 396091,
+          "hits_for_hakiki_or_cihansah": 0,
+          "hits_for_jahanshah": "1 (line 2208-2214: a 9th c. AH biographer 'sent on special missions by the Sultan Murad II... in 852/1448-9 to Mirza Jahan-Shah, of the Black Sheep': historical context only, refers to Bahjat al-tawārīkh)",
+          "verdict": "ZERO Hakîkî witnesses."
+        },
+        {
+          "catalogue": "Storey, Persian Literature, Section II (1939)",
+          "archive_id": "in.ernet.dli.2015.281845",
+          "ocr_chars": 763511,
+          "hits_for_hakiki_or_cihansah": "1 generic 'haqiqi' (in fixed phrase 'khudāwand-i kārsāz-i ḥaqīqī' = 'truthful Lord' as standard pious epithet, not Cihanşah)",
+          "verdict": "ZERO Hakîkî witnesses."
+        },
+        {
+          "catalogue": "Gustav Flügel, Die arabischen, persischen und türkischen Handschriften der Kaiserlich-Königlichen Hofbibliothek zu Wien (1865)",
+          "archive_id": "diearabischenper01vienuoft",
+          "ocr_chars": 1653985,
+          "hits_for_hakiki_or_cihansah": 0,
+          "hits_for_qanbar_ali": 0,
+          "hits_for_karakoyunlu": 0,
+          "verdict": "ZERO Hakîkî witnesses in Vienna ÖNB Persian/Turkish."
+        }
+      ],
+      "catalogues_NOT_OCR_searched_due_to_unavailability_in_archive_org": [
+        "Pertsch, Verzeichniss der türkischen Handschriften der Königlichen Bibliothek zu Berlin (1889): not OCR'd in archive.org full-text. Berlin Pertz multi-volume series available but OCR layer corrupt for those volumes (HTTP 500 on _djvu.txt fetch).",
+        "Pertsch, Verzeichniss der persischen Handschriften der Königlichen Bibliothek zu Berlin (1888): not OCR'd in archive.org full-text.",
+        "E. Blochet, Catalogue des manuscrits persans de la Bibliothèque Nationale (4 vols, 1905-1934): not OCR'd in archive.org full-text. Would require BnF Gallica direct search.",
+        "Hermann Ethé, Catalogue of the Persian, Turkish, Hindûstânî and Pushtû Manuscripts in the Bodleian Library (1889-): not in archive.org with full-text OCR. Would require Bodleian direct catalogue search.",
+        "Karatay, Topkapı Sarayı Müzesi Kütüphanesi Türkçe / Farsça Yazmalar Kataloğu (1961-69): scans on archive.org are page-images without OCR layer. Would require manual ToC navigation.",
+        "Münzevî, Fihrist-i Nuskhahā-yi Khaṭṭī-i Fārsī (6 vols, 1969-74): Wellcome holds (k92srrdw) but not on archive.org full-text. Already cited at p. 2301 by Ay 2013 for Tehran 8198 (no new info expected from primary access)."
+      ],
+      "task_a_summary": {
+        "printed_catalogues_searched": 15,
+        "new_shelfmarks_surfaced": 0,
+        "interpretation": "All major 19th-early-20th-c. printed Persian-MS catalogues that are OCR-accessible on archive.org contain ZERO Cihanşah Hakîkî divan witnesses. Three classes of false-positive hits: (a) generic 'haqiqi' as Persian pious epithet, (b) Saljuk-era poet 'Hakiki' c.11th-c. unrelated to Cihanşah (Ethe IO §41137-41142), (c) historical-chronicle MSS containing dynastic narratives about Cihanşah Qaraqoyunlu as RULER, not POET (Browne 1920, Storey 1936 §369, Ethe 1937 entries 573/724-726). Conclusion: BL Or 9493 was BL acquisition #1923: post-Rieu Supplement (1895). The other 4 TEIS Yesevi witnesses (Mat 965, Süleymaniye Fatih 3808, Ankara DTCF I/2221, Tehran 8198) are all in collections OUTSIDE the 19th-c. Orientalist catalogue ambit: explaining their absence."
+      }
+    },
+    "task_b_scribe_name_search_qanbar_ali_isfahani": {
+      "scope": "Hunt for sibling manuscripts by the BL Or 9493 scribe Qanbar-ʿAlī b. Khusraw al-Iṣfahānī (Shawwāl 893 / Sept 1488). previously flagged as 'highest speculative upside.'",
+      "search_terms_attempted": [
+        "Qanbar Ali Isfahani (English/Latin transliteration)",
+        "Qanbar 'Ali al-Isfahani katib scribe 893",
+        "قنبر علی اصفهانی (Persian/Arabic script)",
+        "Qənbər Əli İsfahani (Azerbaijani Latin)",
+        "Гянбер Али (Cyrillic)"
+      ],
+      "search_engines_used": [
+        "Google targeted web search (general + Persian-script)",
+        "WorldCat (via targeted web search proxy)",
+        "archive.org full-text (across 14 catalogue OCR txt files locally grepped)"
+      ],
+      "results": {
+        "google_web_general": "ZERO matches for 'Qanbar Ali Isfahani' as scribe in any indexed source. Returns generic Persian-calligrapher pages (Mir Ali Tabrizi, Ali Reza Abbasi, 'Abd al-Jabbar Isfahani: different individuals from different periods). One 17th-c. envoy 'Qanbar Aqa' before Sultan Murad (Walters W.643 painting context, irrelevant).",
+        "google_web_persian_script": "ZERO matches for 'قنبر علی اصفهانی' as scribe in any indexed Persian/Iranian source.",
+        "google_web_azerbaijani_cyrillic": "ZERO matches.",
+        "archive_org_local_grep": "ZERO 'Qanbar' or 'Kanbar' or 'Kanber' or 'Ghanbar' hits in Rieu vols (3+supp), Ethe IO (vols 1+2), Pertsch Gotha, Ivanow ASB+Curzon, Browne Cambridge, Browne Persian Lit 1920, Storey Persian Lit (3 vols), Flügel Vienna.",
+        "academia_edu_baku_2019_nasimi_proceedings": "ZERO mentions of Qanbar-ʿAlī al-Iṣfahānī in 12-Oct-2019 Baku Nasimi conference proceedings 'Azerbaijani Manuscripts in World Libraries' (academia.edu/41600821: verified by full-text fetch).",
+        "kostikyan_matenadaran_catalogue": "Cannot access Kostikyan 2017 catalogue full text (academia.edu PDF login-walled, only first ~70 entries visible in academia.edu preview). Mat 965 entry should describe scribe but currently inaccessible online. priority: obtain published volume."
+      },
+      "task_b_summary": {
+        "sibling_manuscripts_by_qanbar_ali_isfahani_found": 0,
+        "interpretation": "Qanbar-ʿAlī b. Khusraw al-Iṣfahānī appears to be either (i) a single-attestation scribe with no other surviving manuscripts in indexed Western catalogues, OR (ii) attested only in Iranian/Caucasian collections that are not full-text-indexed by Western search engines. The BL Or 9493 colophon (Minorsky 1954: 280) remains his only documented work in Western indexed sources. the hypothesis 'sibling mss may exist' remains UNFALSIFIED but UNCONFIRMED. Future leads: (a) DENA/Fankha Iranian database query (requires VPN); (b) Munzavi Fihrist vol-by-vol scribe-index lookup (requires Wellcome physical access or Iranian library reproduction); (c) Kostikyan 2017 Matenadaran catalogue full text (publication acquisition needed)."
+      }
+    },
+    "task_c_modern_editor_backchain": {
+      "scope": "For each of the 9 known Cihanşah Hakîkî editions, determine: (i) base manuscript, (ii) cited variants, (iii) editor's nüsha tavsifi (manuscript description) including paper/decoration. Special priorities: Hüseyinzade 1966 (Mat 965 base: CRITICAL); Alemdârî 1385/2006 (per TEIS/OCLC listing; the examined edition is 2001/1379 SH) (Tehran 8198: AzerTAC 2012 photographic-reproductions claim).",
+      "editions": [
+        {
+          "edition_id": "alemdari_2001_tehran",
+          "editor": "Fîrûz Refâhî Alemdârî (Firuz Refahi Alamdarii)",
+          "title_verbatim_persian": "دیوان میرزا جهانشاه حقیقی",
+          "title_verbatim_azerbaijani": "Mirzə Cahanşah Həqiqi Farsca-Türkcə Divan",
+          "subtitle_verbatim": "Tehran Universitetin Mərkəzi Kitabxanasında Olan Nüsxəsi əsasında (= 'based on the manuscript held at Tehran University Central Library')",
+          "publication": "Tahran: Fîrûzân, FIRST PRINT 2001 (1379 SH): NOT 1385/2006 as TEIS/OCLC list it; final register records 2001/1379 SH. ISBN 964-92994-2-4. 320 pages.",
+          "discovery": "archive.org Internet Archive item DivanEMirzaJahanshahHaqiqiFarsiTurki (uploaded 2016-01-12 by Hassaan Khan, Public Domain Mark 1.0). Filename in package: Haqiqi3_asli_2_shenase_.pdf. ALSO at turuz.com/storage/shiir-2020-3/3697_Cahanshah_Heqiqi_Divani_Ebced_141s.pdf (same edition, partial 141-page extract: Turkish ghazals only).",
+          "base_manuscript_per_colophon": "Tehran University Central Library Manuscript (Tahran-Danişgah 8198: implicit from TEIS bibliography + Ay 2013)",
+          "collation_witnesses_evidenced_by_footnotes": "TRIPLE-WITNESS COLLATION confirmed by ~150+ verbatim footnotes throughout the divan body:",
+          "footnote_pattern_evidence": [
+            "Type 1 (Tehran-base, fills with London/Yerevan): 'Bu şer Tehran nüsxasinda yoxdur' = 'This couplet is absent from the Tehran manuscript': appears 100+ times throughout, indicating where Tehran 8198 is shorter than the collated witnesses.",
+            "Type 2 (London = BL Or 9493 confirmed as variant source): line 17236: '*London nüsxasinda nur o zülmati' = '*In the London manuscript, [variant reads] light and darkness': explicit London BL Or 9493 readings cited.",
+            "Type 3 (Irevan = Yerevan/Mat 965 confirmed as variant source): lines 15945-15947: '*Tehran nüsxasinda bu şer yoxdur, burada Irevan nüsxasi əsasinda qeyd olunubdur' = 'This couplet is absent from the Tehran manuscript; it is recorded here based on the Yerevan manuscript': explicit Mat 965 readings cited.",
+            "Type 4 (Baku = a fourth witness?): line glossary p316: 'Naşirin divannin Bakı nüsxasinda ona aid olmadığır' = 'In the publisher's Baku manuscript [it] is not relevant to him': REVISITS the Baku-witness question. the earlier rejection of a Baku Cihanşah codex (witness register baku_doerfer_unspecified) is contradicted by Alemdârî's verbatim citation of a 'Bakı nüsxası'. Three possible interpretations: (a) Rahimov 1986 published edition pressed into service as a textual witness, (b) the AMEA 2021 Süleymaniye-surrogate microfilm, or (c) an independent Baku codex not yet identified. Subsequent Alemdari reading showed the Baku reference is to published editions, not an independent codex; final register records baku_doerfer_unspecified as rejected."
+          ],
+          "facsimile_photographic_reproductions": "ABSENT in 2001 first-print Alemdârî edition. 320 pages of typeset Persian/Turkish text only. No photographic plates of any manuscript witness. The AzerTAC Nov 2012 announcement (AzerTAC ID 193626 (full URL: https://azertag.az/xeber/xanlar_kahnemoni_eserine_gore_meshhur_olan_neginci_qara_qoyunlu_jahan_sahin_haqiqi_imzasi_ile_olan_seirleri-193626)) claiming 'photographic reproductions of the original manuscript' is now flagged as either (i) editorial puffery, (ii) misattribution, or (iii) referring to a hypothetical second/expanded edition not yet identified. CRITICAL: AzerTAC 2012 claim MAY refer to the Macit 2002 or Demirci 2001 editions, not Alemdârî. Witness register field tehran_university_8198.iran_caucasus_sweep_findings.azertac_2012_lead should be downgraded.",
+          "nusha_tavsifi_section": "ABSENT from this 2001 edition body. Brief editor's note (turuz copy p184/divan) mentions 'Tehran nüsxasi' yields 94 Turkish ghazals + 35 quatrains, but no codicology/paper/decoration data given.",
+          "verification_status": "RESOLVED: full text retrieved, base+variants reconstructed.",
+          "implications_for_register": "Decoration data for BL Or 9493 / Mat 965 / Tehran 8198 NOT recoverable from Alemdârî 2001 (no photographic plates, no codicology section). However, the textual collation evidence retroactively VERIFIES that Alemdârî had direct or indirect access to BL Or 9493 and Mat 965: strengthening the TEIS Yesevi 5-witness model."
+        },
+        {
+          "edition_id": "demirci_1997_dtcf_two_new_copies",
+          "editor": "Jale Demirci",
+          "title_verbatim": "Cihânşâh (Hakîkî) Divânı'nın İki Yeni Nüshası",
+          "publication": "DTCF Türkoloji Dergisi XII (1): 127-134, 1997",
+          "online_access_attempted": [
+            "DergiPark Türkoloji Dergisi archive (dergipark.org.tr/tr/pub/turkoloji): 1997 volume NOT in current archive (only 2022-2025 issues visible).",
+            "turkoloji.cu.edu.tr: pdf URL `jale_demirci_kisveri.pdf` is a DIFFERENT Demirci article on Kişverî/Nevayî, NOT the Cihanşah 1997 article. Confirmed via direct HTTP fetch: title is 'Azerbaycan Şairi Kişverî'nin Nevâyî Şiirlerine Naziresi'.",
+            "Ankara University DTCF library archive (dtcf.ankara.edu.tr/kutuphane/dtcf-dergileri/): Vol XII (1) 1997 not accessible online; physical copy only."
+          ],
+          "verification_status": "UNRESOLVED ONLINE: physical copy needed."
+        },
+        {
+          "edition_id": "demirci_2001_koksav_main_edition",
+          "editor": "Jale Demirci",
+          "title_verbatim": "Cihânşâh Hakîkî Divânı, İnceleme-Metin-Dizin",
+          "publication": "Ankara: Köksav Yay., 2001",
+          "base_manuscript_per_secondary_source": "Süleymaniye Fatih 3808 (per targeted web search result confirming 'Demirci prepared the text based on the Süleymaniye manuscript')",
+          "collation_witnesses": "Likely BL Or 9493 + Ankara DTCF I/2221 added as variants (per earlier note hypothesis), but unconfirmed without direct examination.",
+          "online_access_attempted": [
+            "Köksav publishing house: closed/inactive (per witness register notes)",
+            "Turkish library catalogues (Yazma Eserler Kütüphanesi, KUH, etc.): no online edition.",
+            "Worldcat: printed book only, no digitization."
+          ],
+          "verification_status": "UNRESOLVED ONLINE: physical copy needed."
+        },
+        {
+          "edition_id": "macit_2002_grafiker",
+          "editor": "Muhsin Macit",
+          "title_verbatim": "Karakoyunlu Hükümdarı Cihânşâh ve Türkçe Şiirleri",
+          "publication": "Ankara: Grafiker Yay., 2002",
+          "base_manuscript_per_secondary_source": "Süleymaniye Fatih 3808 (Macit's 'most complete' claim: flagged in witness register as possibly edition-boilerplate)",
+          "online_access_attempted": "Not on archive.org. Macit's 2000 Bilig 13 article is online but the 2002 expanded book is not.",
+          "verification_status": "UNRESOLVED ONLINE: physical copy needed."
+        },
+        {
+          "edition_id": "degirmencay_2004_atatürk_uni",
+          "editor": "Veyis Değirmençay",
+          "title_verbatim": "Karakoyunlu Hükümdarı Cihânşâh ve Farsça Şiirleri",
+          "publication": "Erzurum: Atatürk Üniversitesi Yay., 2004 (corrected from witness register's 'n.d.' per TEIS bibliography)",
+          "scope": "PERSIAN POEMS edition (complementary to the Turkish-poems editions).",
+          "verification_status": "UNRESOLVED ONLINE: physical copy needed."
+        },
+        {
+          "edition_id": "huseyinzade_1966_yerevan",
+          "editor": "Latif Hüseyinzade",
+          "title_verbatim": "Hakiki - Şiirler",
+          "publication": "Erivan (Yerevan), 1966 (Cyrillic letters)",
+          "base_manuscript_likely": "Matenadaran 965 (per the publication being Yerevan-based and Mat 965 being the primary Yerevan witness)",
+          "online_access_attempted": [
+            "archive.org full-text: ZERO hits for Hüseyinzade Hakiki 1966 (verified by direct query).",
+            "turuz.com: only the Alemdârî 2001 edition appears under 'Cahanshah Heqiqi Divani'.",
+            "Soviet-era Armenian/Azerbaijani digital archives: not indexed.",
+            "WorldCat: listed but no digital surrogate."
+          ],
+          "verification_status": "UNRESOLVED ONLINE: original Soviet imprint."
+        },
+        {
+          "edition_id": "rahimov_1986_baku_yazici",
+          "editor": "L. Hüseyinzade & Ebulfez Rahimov & M. Aliyev",
+          "title_verbatim": "Cahanşah Hakiki - Seçilmiş Eserleri",
+          "publication": "Bakü: Yazıcı, 1986 (Soviet Azerbaijani edition; reissued 2006)",
+          "base_manuscript_per_secondary_source": "Mat 965 dated to 879 AH / 1474-75 CE per Rahimov 1986 (per witness register matenadaran_965 entry)",
+          "online_access_attempted": "Not on archive.org. Not on turuz.com under Rahimov.",
+          "verification_status": "UNRESOLVED ONLINE: physical copy needed."
+        },
+        {
+          "edition_id": "recebov_1999_ashgabat_turkmen",
+          "editor": "Rahman Recebov",
+          "title_verbatim": "Cihânşâh Hakîkî",
+          "publication": "Aşkabat (Ashgabat), Turkmenistan, 1999",
+          "online_access_attempted": "Not on archive.org. turuz.com search returns only Alemdârî 2001.",
+          "verification_status": "UNRESOLVED ONLINE."
+        },
+        {
+          "edition_id": "ownuk_hangeldi_2014_ashgabat",
+          "editor": "Ownuk / Hangeldi",
+          "title_verbatim": "Qaraqoyunlu Cihanşah Heqiqinin Türkce Şiirleri",
+          "publication": "Ashgabat 2014",
+          "online_access_attempted": "turuz.com search direct: ZERO results for Ownuk/Hangeldi 2014 (only the Alemdârî 2001 hit).",
+          "verification_status": "UNRESOLVED ONLINE."
+        }
+      ],
+      "task_c_summary": {
+        "editions_resolved": 1,
+        "editions_resolved_id": "alemdari_2001_tehran (Tehran 8198 base + BL Or 9493 + Mat 965 collation evidenced by 150+ footnotes; NO photographic plates; NO nüsha tavsifi)",
+        "editions_partial": 4,
+        "editions_unresolved": 4,
+        "decoration_data_recovered_from_editions": "ZERO. None of the resolved or partially-resolved editions provided paper/decoration/scribe-codicology information beyond what was already in the witness register. Alemdârî 2001: the only fully recovered edition: is text-only typeset.",
+        "azertac_2012_photographic_reproductions_claim_status": "REJECTED for Alemdârî 2001 first-print edition. The claim is unsupported by direct examination of the canonical 320-page edition (uploaded 2016-01-12 to archive.org as DivanEMirzaJahanshahHaqiqiFarsiTurki, identical edition also at turuz.com 3697). If a photographic-plates second/revised edition exists (1385/2006 or later), it is not present in archive.org or turuz.com indexes. Witness register field tehran_university_8198.iran_caucasus_sweep_findings.azertac_2012_lead should be DOWNGRADED to 'unverified: first edition lacks plates; second-edition existence with plates not yet evidenced.'",
+        "highest_priority_unresolved_editions": [
+          "1. Demirci 1997 'Iki Yeni Nüshası': may confirm codicology and institutional attribution for Süleymaniye Fatih 3808 and Ankara DTCF I/2221 (the 'two new copies' the article introduced); not currently evidence for witnesses beyond the TEIS Yesevi witness set.",
+          "2. Hüseyinzade 1966 Yerevan: likely contains Mat 965 nüsha tavsifi (only Yerevan-published edition).",
+          "3. Demirci 2001 Köksav: most authoritative scholarly Turkish-poems edition, likely has Süleymaniye Fatih 3808 codicology.",
+          "4. Rahimov 1986 Baku: contains the Mat 965 date attribution (879 AH / 1474-75 CE) but no digital copy."
+        ]
+      }
+    },
+    "new_findings_for_witness_register": {
+      "potential_new_witness_NOT_yet_promoted": {
+        "witness_candidate_id": "alemdari_2001_baku_nusxasi_unresolved",
+        "evidence": "Alemdârî 2001 edition footnotes (visible in djvu OCR line ~ p316 glossary, verbatim 'Naşirin divannin Bakı nüsxasinda...') reference a 'Bakı nüsxası' (Baku manuscript) used by the publisher as a textual witness.",
+        "interpretation_options": [
+          "(a) Alemdârî's 'Bakı nüsxası' = Rahimov 1986 published edition treated as a textual witness: not an independent codex.",
+          "(b) Alemdârî's 'Bakı nüsxası' = AMEA 2021 Süleymaniye-surrogate microfilm: but Alemdârî's edition is 2001, predating the 2021 AMEA acquisition. Chronologically impossible.",
+          "(c) Alemdârî's 'Bakı nüsxası' = an actual independent Baku codex pre-2001, contradicting TEIS's canonical-5 list and witness register's previous rejection of baku_doerfer_unspecified.",
+          "Most likely (a). the earlier flag 'Baku may be a publication witness' is consistent with Alemdârî using Rahimov 1986 as a textual variant source."
+        ],
+        "unresolved_question": "Read Alemdârî 2001 introduction (pp. 1-15) carefully when full Persian-Arabic OCR is fixed: to confirm what 'Bakı nüsxası' refers to. Alternative: ILL the Rahimov 1986 Baku edition and verify whether its INTRODUCTION cites a manuscript codex held in Baku."
+      },
+      "downgrade_recommendation_tehran_8198_iran_caucasus_sweep_findings": null
+    },
+    "negative_results_summary_for_register": {
+      "rieu_4_volumes_negative": "BL Or 9493 not in Rieu (1879/1881/1883/1895): BL acquired 1923, post-Rieu's last volume.",
+      "ethe_io_2_volumes_negative": "ZERO Cihanşah Hakîkî witnesses in IO; one different Saljuk-era Hakiki found (line 41137 Ethe v1): namesake confusion possible.",
+      "ivanow_negative": "ZERO Hakîkî witnesses in ASB or Curzon collections.",
+      "browne_cambridge_negative": "ZERO hits.",
+      "browne_persian_lit_1920": "Cihanşah documented as historical figure (5 mentions); his pen-name Hakîkî never appears.",
+      "storey_perslit": "Cihanşah documented in Qara-Quyunlu dynastic chronicles (§369 Tārīkh-i Turkumāniyah etc.); NEVER as poet/divan witness.",
+      "pertsch_gotha_flugel_vienna_negative": "ZERO Hakîkî / Karakoyunlu / Qanbar hits.",
+      "interpretation": "The 19th-c. Orientalist catalogue ambit (BM, BnF, IO, Vienna, Berlin, Bodleian, Cambridge, Gotha, ASB, Curzon) does NOT index Cihanşah Hakîkî witnesses. The canonical-5 witness set is concentrated in Eastern collections (Yerevan, Tehran, Istanbul Süleymaniye, Ankara DTCF, BL via 1923 acquisition) outside the 19th-c. Western catalogue compass."
+    }
+  },
+  "audit_metadata": {
+    "record_type": "literature_backchain",
+    "record_date": "2026-05-02",
+    "artifact_status": "current",
+    "source_layers": [
+      "catalogue_record",
+      "edition_apparatus",
+      "project_classification",
+      "scholarly_description"
+    ],
+    "access_mode": "open_web",
+    "disposition": "no_new_witness",
+    "follow_up_required": false,
+    "follow_up_type": "none"
+  }
+}
