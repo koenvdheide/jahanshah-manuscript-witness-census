@@ -1,0 +1,23 @@
+{
+  "title": "Zenodo DOI bootstrap for Jahanshah Qaraqoyunlu Manuscript Witness Census",
+  "upload_type": "dataset",
+  "description": "Temporary GitHub release used only to initialize Zenodo DOI versioning for this repository. Do not cite this release. The public dataset release will be v1.0.0.",
+  "creators": [
+    {
+      "name": "van der Heide, Koen",
+      "orcid": "0009-0008-9855-3848",
+      "affiliation": "Independent Scholar"
+    },
+    {
+      "name": "Kazemipourleilabadi, Negar",
+      "orcid": "0009-0008-2289-7492",
+      "affiliation": "Ludwig-Maximilians-Universitat Munchen, Department of Art History"
+    }
+  ],
+  "version": "0.0.0-zenodo-bootstrap",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Zenodo DOI bootstrap"
+  ]
+}
